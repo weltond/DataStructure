@@ -27,4 +27,5 @@ Remote Repository - GitHub
    	for the first time. 
       After that, type command: git push origin master
 
+WHERE is MY NEW NOTE???
    
