@@ -26,5 +26,14 @@ Remote Repository - GitHub
    3) Type command: git push -u origin master 
    	for the first time. 
       After that, type command: git push origin master
+3. clone from GitHub:
+   Type command: git clone https://github.com/weltond/DataStructure.git
+
+Branch
+1. Create and switch to branch 'dev': git checkout -b dev
+2. Check current branches: git branch
+3. Switch branch (master here): git checkout master
+4. Merge branch('dev') to current branch(master): git merge dev
+5. Delete branch 'dev': git branch -d dev
 
    
