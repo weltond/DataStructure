@@ -16,5 +16,15 @@ Rollback
    2) git reset HEAD <file> 	 --------> to unstage if add but not commit
    3) see No.4			 --------> to rollback version if add and commit
 8. git rm <file>
- 
 
+Remote Repository - GitHub
+1. 1) Type command: ssh-keygen -t rsa -C youremail@example.com     
+	to generate two files: id_rsa and id_rsa.pub under /user/.ssh/
+   2) Copy and add id_rsa.pub content into your github "SSH keys" to make GitHub knows that its your public key 
+2. 1) create a new repo in your GitHub
+   2) Type command: git remote add origin https://github.com/weltond/DataStructure.git
+   3) Type command: git push -u origin master 
+   	for the first time. 
+      After that, type command: git push origin master
+
+   
