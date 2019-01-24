@@ -1,0 +1,20 @@
+Create and commit:
+1. git add .
+2. git commit -m "your update"
+
+Rollback
+3. git log [--pretty=oneline]
+4. git reset --hard HEAD^
+   1) prev version: HEAD^
+   2) one before prev version: HEAD^^
+   3) the last 100th version: HEAD~100
+   4) use version SHA1 number
+5. git reflog ------> to find your commit logs
+6. 1) working directory: your local drive
+   2) Repository(stage)
+7. 1) git checkout -- <file>     --------> to discard changes in working directory if not add yet
+   2) git reset HEAD <file> 	 --------> to unstage if add but not commit
+   3) see No.4			 --------> to rollback version if add and commit
+8. git rm <file>
+ 
+
