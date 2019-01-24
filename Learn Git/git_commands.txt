@@ -34,7 +34,34 @@ Branch
 2. Check current branches: git branch
 3. Switch branch (master here): git checkout master
 4. Merge branch('dev') to current branch(master): git merge dev
+5. Check log: git log --graph --pretty=oneline --abbrev-commit
 5. Delete branch 'dev': git branch -d dev
+6. Save work directory and create a new branch to fix other bugs: 
+   1) git stash (on branch dev)
+   	1.1) git checkout master; git checkout -b issue1; git commit -m ""; git checkout master; git merge --no-ff -m "merge bug fix issue1" issue1; git branch -d issue1
+   	1.2) git checkout dev; git stash list
+   2) git stash pop
+7. Force delete an un-merged branch: git branch -D <name>
+8. git remote -v
+9. git checkout -b dev origin/dev
+10. Set connection between local branch dev and remote origin/dev branch: git branch --set-upstream-to=origin/dev dev
+How to coordinate in a team:
+1) Try to push your code: 
+	git push origin <branch-name>
+2) If fail, because remote branch is ahead of your work directory, type command:
+	git pull
+3) If step 2) also fails, it means your work directory doesn't create a connection with remote branch yet. Type command:
+	git branch --set-upstream-to=origin/branch-name branch-name
+4) Fix conflicts if there is any. 
+5) Push to remote: 
+	git push origin branch-name
 
-WHERE is MY NEW NOTE???
+Tag:
+1. git tag <tag-name> [version number]
+2. git show <tag-name>
+3. git tag -a <tag-name> -m "blablabla..."
+4. git tag -d <tag-name>  	to delete a tag
+5. git push origin <tag-name>/--tags	to push tag/tags to remote repo
+6. git push origin :refs/tags/<tag-name>	to deelte a remote tag
+
    
