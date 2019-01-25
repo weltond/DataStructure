@@ -1,3 +1,56 @@
+// Solution 4 Divide and Conquer
+// Idea:
+//  1. Pair up k lists and merge each pair.
+//  2. After the first pairing, k lists are merged into k/2k/2 lists with average 2N/k2N/k length, then k/4k/4, k/8k/8 and so on.
+//  3. Repeat this procedure until we get the final sorted linked list.
+
+// Time = O(nlogk), Space = O(k)
+class Solution4 {
+    public ListNode mergeKLists(ListNode[] lists) {
+        if (lists == null || lists.length == 0) return null;
+        
+        int len = lists.length;
+        int interval = 1;
+        // e.g. l0, l1, l2, l3, l4, l5
+        // l0, l1 -> l0; l2, l3 -> l2; l4, l5 -> l4;
+        // l0, l2 -> l0; l4 -> l4;
+        // l0, l4 -> l0;
+        while (interval < len) {
+            for (int i = 0; i < len - interval; i += interval * 2) {
+                lists[i] = mergeTwoLists(lists[i], lists[i + interval]);
+            }
+            interval = interval * 2;
+        }
+        
+        return lists[0];
+    }
+    
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        ListNode res = new ListNode(0); // dummy node
+        ListNode cur = res;
+        while (l1 != null && l2 != null) {
+            if (l1.val <= l2.val) {
+                cur.next = l1;
+                l1 = l1.next;
+            } else {
+                cur.next = l2;
+                l2 = l2.next;
+            }
+            cur = cur.next;
+        }
+        
+        if (l1 != null) {
+            cur.next = l1;
+        } 
+        if (l2 != null) {
+            cur.next = l2;
+        }
+        
+        return res.next;
+    }
+}
+
+
 // Solution 3 PriorityQueue
 // Idea:
 //	1. Based on solution 2
