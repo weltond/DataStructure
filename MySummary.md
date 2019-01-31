@@ -152,7 +152,8 @@ stack.push(item);
     - Permutation of factors of a number
     - All valid IP address (4 levels)
     - Generate a random MAZE
-  ` REMIND: Permutation questions, their time complexity must be exponential!!! O(k^n) or O(n!)`
+   
+   ` REMIND: Permutation questions, their time complexity must be exponential!!! O(k^n) or O(n!)`
 
 ## Basic Way to deal with DFS
 1. What does it store on each level? (每一层代表什么意义？一般来讲解题之前就要知道DFS要recurse多少层)
@@ -188,15 +189,17 @@ A2. Two states: either left or right parenthesis.
 
 Q1. What does it store on each level?
 
-A1. a) 4 layers. Each level represents considering one type of coin.
+A1. 
+   a) 4 layers. Each level represents considering one type of coin.
     
-    b) (NOT SUFFICIENT) 99 layers. Each level represents we pick only 1 coin out of hand.
+   b) (NOT SUFFICIENT) 99 layers. Each level represents we pick only 1 coin out of hand.
 
 Q2. How many different states should we try to put on this level?
 
-A2. a) Dynamically changing value. (k-nary tree) -> Time = O(99^4)
-  
-    b) (NOT SUFFICIENT) There are 4 brunches.(25, 10, 5, 1)  -> Time = O(4^99)
+A2. 
+   a) Dynamically changing value. (k-nary tree) -> Time = O(99^4)
+    
+   b) (NOT SUFFICIENT) There are 4 brunches.(25, 10, 5, 1)  -> Time = O(4^99)
 
 ### 4. Given a string with no duplicated letters, how to print out all permutations of the string.
 Q1. What does it store on each level?
