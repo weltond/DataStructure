@@ -138,5 +138,78 @@ stack.push(item);
 
 # Queue
 
+# Depth-First Search
+`Back-tracking is just a behavior`
+- Recall "using pre-order to traverse a tree"
+- Implementation: Easy to use recursion
+- Classic Problems
+  - Print all subsets of a set
+  - 99 cents
+  - Permutation (BFS的queue size在指数增长，所以不用来优先选择Permutation类问题)
+    - Print all valid permutations of `( )`
+    - Permutation of a string w or w/o duplicate letters (str.length as levels)
+    - Permutation of all sub-sequence of a sorted string (= allow set to have duplicate elements)
+    - Permutation of factors of a number
+    - All valid IP address (4 levels)
+    - Generate a random MAZE
+  ` REMIND: Permutation questions, their time complexity must be exponential!!! O(k^n) or O(n!)`
 
+## Basic Way to deal with DFS
+1. What does it store on each level? (每一层代表什么意义？一般来讲解题之前就要知道DFS要recurse多少层)
+2. How many different states should we try to put on this level? (每层有多少个状态/case)
+
+## Problems
+### 1. Print All subsets of a set S = {'a', 'b', 'c'}
+Q1. What does it store on each level?
+
+A1. For each level, it makes the decision on whether to put this element into the final set or not. N elements -> N layers.
+
+Q2. How many different states should we try to put on this level?
+
+A2. Two. Each state(case) considers either select or not select.
+  
+### 2. ()()() Find all valid permutation using the parenthesis provided
+- Restriction here is whenever we insert a new `)` we need to make sure the number of `(` added so far is larger than the number of `)` added so far.
+  - When can we place `(`?
+    - If only there are still `(` left.
+  - When can we palce `)`?
+    - If only the number of `(` added so far is **strictly larger than** the number of `)` added so far.
+    
+Q1. What does it store on each level?
+
+A1. 6 levels. Each level consider one position (in which where will be only one parenthesis added in this position
+
+Q2. How many different states should we try to put on this level?
+
+A2. Two states: either left or right parenthesis.
+
+### 3. Print all combinations of coins that can sum up to a total value K.
+- Example: total value K = 99 cents & coin values = 25, 10, 5, 1 cents.
+
+Q1. What does it store on each level?
+
+A1. a) 4 layers. Each level represents considering one type of coin.
+    
+    b) (NOT SUFFICIENT) 99 layers. Each level represents we pick only 1 coin out of hand.
+
+Q2. How many different states should we try to put on this level?
+
+A2. a) Dynamically changing value. (k-nary tree) -> Time = O(99^4)
+  
+    b) (NOT SUFFICIENT) There are 4 brunches.(25, 10, 5, 1)  -> Time = O(4^99)
+
+### 4. Given a string with no duplicated letters, how to print out all permutations of the string.
+Q1. What does it store on each level?
+
+A1. 3 levels.
+
+Q2. How many different states should we try to put on this level?
+
+A2. Remained not used letter.
+
+`A better solution is in-place swap swap without using extra space to store each output.`
+
+
+  
+  
 
