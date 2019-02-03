@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Head-First-Design-Patterns-master.iml" filepath="$PROJECT_DIR$/.idea/Head-First-Design-Patterns-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/Head-First-Design-Patterns-master.iml" filepath="$PROJECT_DIR$/java/Head-First-Design-Patterns-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/adapter/adapter.iml" filepath="$PROJECT_DIR$/java/adapter/adapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/compound/combined/combined.iml" filepath="$PROJECT_DIR$/java/compound/combined/combined.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/compound/combining/combining.iml" filepath="$PROJECT_DIR$/java/compound/combining/combining.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/command/command.iml" filepath="$PROJECT_DIR$/java/command/command.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/composite/composite.iml" filepath="$PROJECT_DIR$/java/composite/composite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/decorator/decorator.iml" filepath="$PROJECT_DIR$/java/decorator/decorator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/facade/facade.iml" filepath="$PROJECT_DIR$/java/facade/facade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/factory/factory.iml" filepath="$PROJECT_DIR$/java/factory/factory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/iterator/iterator.iml" filepath="$PROJECT_DIR$/java/iterator/iterator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/observer/observer.iml" filepath="$PROJECT_DIR$/java/observer/observer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/proxy/proxy.iml" filepath="$PROJECT_DIR$/java/proxy/proxy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/singleton/singleton.iml" filepath="$PROJECT_DIR$/java/singleton/singleton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/state/state.iml" filepath="$PROJECT_DIR$/java/state/state.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/templatemethod/templatemethod.iml" filepath="$PROJECT_DIR$/java/templatemethod/templatemethod.iml" />
     </modules>
   </component>
 </project>
