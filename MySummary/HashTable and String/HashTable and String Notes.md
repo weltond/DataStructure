@@ -267,3 +267,78 @@ public int strmatch(String s1, String s2) {
     - Step 2: reverse whole sentence: ba | fedc -> cdefab
 
 ### 5. Char Replacement
+#### Q5.1 student -> stuXXt (den -> XX)
+**What if we do not know the size relationship between s1 and s2**
+- Case 1: if s1.length() >= s2.length()
+   - step 1: find every single occurrence of s1 in the original string, and just replace s1 with s2 until we are done
+- Case 2: if s1.length() < s2.length `stu**de**nt**de**nt -> stuXXXntXXXnt`
+   - Step 1: How many extra spaves should we get? -> s1 show up in the original string
+   - Step 2: slow pointer: all letters to the left hand side of it are the results to return
+   - Step 3: fast pointer: current index
+   #### Q5.2 `www.yahoo.com/?q=flower_market#flower_store` s1 = '_', s2 = "20%"
+   - Solution
+   ```
+     - step 1: scan the input from left to right to find all occurrence of s1 = k.
+     - step 2: pre calculate the new size = n + k * (s2.size - s1.size)
+     - step 3: slow pointer: all letters to the right-hand side of it are the final result to return
+     - step 4: fast pointer: current index from **right to left**
+     
+     www.yahoo.com/?q=flower_market#flower_store _ _ _ _
+                                                       s
+                                               F
+   ```
+## Advanced topics
+### 1. Shuffling `ABCD1234 -> A1B2C3D4`
+#### Q1.1 "A1B2C3D4" -> "ABCD1234"
+- Solution: Merge Sort
+#### Q1.2 "ABCDE12345" -> "A1B2C3D4E5"
+- Solution: In place. **Time = O(nlogn)** 
+**Notice: We can turn this problem into a sub problem of Q1.1**
+```
+Chunk1 | Chunk2 | Chunk3 | Chunk4
+------ | ------ | ------ | ------
+AB     | CD     |  12    |  34
+AB     | DC     |  21    |  34
+AB     | 12     |  CD    |  34
+A1     | B2     |  C3    |  D4
+```
+```  
+  - mid = left + size / 2
+  - leftMid = left + size / 4
+  - rightMid = left + 3 * size / 4
+```
+```java
+public void convert(char a[], int left, int right) {
+    if (right - left <= 1) return;
+    
+    int size = right - left + 1;  // check how many element in this section
+    int mid = left + size / 2;  // chunk 3 head addr
+    int leftMid = left + size / 4;  // chunk 2 head addr
+    int rightMid = left + size * 3 / 4;  //chunk 4 head addr
+    
+    // JUST LIKE "I LOVE YAHOO" -> "YAHOO LOVE I"
+    reverse(a, leftMid, mid - 1); // CD -> DC
+    reverse(a, mid, rightMid - 1); // 12 -> 21
+    reverse(a, leftMid, rightMid - 1); //CD12 -> 12CD
+    
+    convert(a, left, left + 2 * (leftMid - left) - 1);
+    convert(a, left + 2 * (leftMid - left), right);
+}
+
+public void reverse(char a[], int left, int right) {
+    if (left >= right) return;
+    
+    swap(a, left, right);
+    
+    reverse(a, left + 1, right - 1);
+}
+
+public void swap(char[] a, int left, int right) {
+   char tmp = a[left];
+   a[left] = a[right];
+   a[right] = tmp;
+}
+```
+### 2. Permutation (DFS)
+### 3. Decoding/encoding `aaaabcc -> a4b1c2` (Run Length Encoding)
+### 4. Sliding windows (two pointers) `Longest substring that contains only unique chars`
