@@ -339,6 +339,14 @@ public void swap(char[] a, int left, int right) {
    a[right] = tmp;
 }
 ```
-### 2. Permutation (DFS)
+### 2. Permutation (DFS classical problems)
+#### Q2.1 No duplicate letters in input string
+#### Q2.2 Have duplicated letters in input string
 ### 3. Decoding/encoding `aaaabcc -> a4b1c2` (Run Length Encoding)
+#### Q3.1 "aaaabccaaaaa" -> "a4b1c2a5" Restriction: In place
+- Solution: Similar to char replacement
+```
+  - slow: left side of slow is the final (excluding slow); fast: current index
+  - step 1: left to right, we only deal with the pattern that become shorter, and in the meantime, we count how many times only 1 copy of char occurred in the string.
+```
 ### 4. Sliding windows (two pointers) `Longest substring that contains only unique chars`
