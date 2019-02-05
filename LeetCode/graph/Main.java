@@ -1,5 +1,7 @@
 package com.weltond.graph;
 
+import com.weltond.graph.topological.TopologicalSort;
+
 /**
  * @author weltond
  * @project LeetCode
@@ -7,6 +9,8 @@ package com.weltond.graph;
  */
 public class Main {
     public static void main(String[] args) {
-        DetectCycleInUnGraph.test();
+        //DetectCycleInUnGraph.test();
+        DetectCycleInDirGraph.test();
+        TopologicalSort.test();
     }
 }
