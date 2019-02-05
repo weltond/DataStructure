@@ -1,7 +1,7 @@
 **My data structure learning progress!
 Keep learning!**
 
-# Table Of Content
+## Table Of Content
 - [Learn Git Commands](https://github.com/weltond/DataStructure/tree/master/Learn%20Git)
   - [Git Commands](https://github.com/weltond/DataStructure/blob/master/Learn%20Git/git_commands.txt)
   - [MarkDown](https://github.com/weltond/DataStructure/blob/master/Learn%20Git/MarkDown.md)
