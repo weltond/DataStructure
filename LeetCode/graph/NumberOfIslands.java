@@ -120,6 +120,7 @@ class NumberOfIslands {
 				}
 			}
 		}
+		return cnt;
 	}
 	
 	public static void test() {
