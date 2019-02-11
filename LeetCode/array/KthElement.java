@@ -48,7 +48,7 @@ public class KthElement {
      * @param k required k-th element
      * @return
      */
-    // ================== WRONG ===========================
+    // ================== TO DO... ===========================
     public static int kthSmallest2(Integer[] arr, int l, int r, int k) {
         if (arr == null || arr.length == 0) return 0;
 
@@ -81,11 +81,19 @@ public class KthElement {
             }
         }
 
-        swap(arr, right++, r);
-        System.out.println(right);
+        swap(arr, ++right, r);
+        System.out.println("pivot: " + right);
+        printArray(arr);
         return right;
     }
-    // ================== END ======================
+
+    public static void printArray(Integer[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+
+    // ============= Above is my code ==============
 
 
     public static int kthSmallest(Integer[] arr, int l,
