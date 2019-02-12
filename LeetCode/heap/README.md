@@ -62,3 +62,11 @@ void heapSort(int[] arr, int n) {
     }
 }
 ```
+## Applications for Heap Data Structure
+### Priority Queue
+- It can be efficiently implemented using Binary Heap because it supports insert, delete, extract max operations in O(logn) time.
+  - Binomoial heap and Fibonacci Heap are variations of Binary Heap. These variations perform union also in O(logn) time which is a O(n) operation in Binary Heap.
+  - Heap implemented priority queues are used in Graph algorithms like [Prim's Algorithm](https://github.com/weltond/DataStructure/blob/master/LeetCode/greedy/minimum/spaning/tree/PrimMST.java) and [Dijkstra's Algorithm](https://github.com/weltond/DataStructure/tree/master/LeetCode/greedy/dijkstra)
+  
+### Order Statistics
+- The heap data structure can be used to efficiently find the k-th smallest (largest) element in an array.
