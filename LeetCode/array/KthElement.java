@@ -55,9 +55,9 @@ public class KthElement {
         if (k > 0 && k <= r - l + 1) {
             // Partition the array around last element and
             // get position of pivot element in sorted array
-            int pos = partition2(arr, l, r);
-            if (pos - l < k - 1) return kthSmallest2(arr, pos + 1, r, k - pos + l - 1);
-            else if (pos - l > k - 1) return kthSmallest2(arr, l, pos - 1, k);
+            int pos = partition2(arr, l, r) + l;
+            if (pos < k - 1) return kthSmallest2(arr, pos + 1, r, k);
+            else if (pos  > k - 1) return kthSmallest2(arr, l, pos - 1, k);
 
             return arr[pos];
         }
@@ -83,7 +83,7 @@ public class KthElement {
 
         swap(arr, ++right, r);
         System.out.println("pivot: " + right);
-        printArray(arr);
+//        printArray(arr);
         return right;
     }
 
@@ -159,7 +159,7 @@ public class KthElement {
 
     public static void test() {
         Integer[] arr = new Integer[]{12, 3, 5, 7, 4, 19, 6};
-        int k = 3;
+        int k = 2;
         System.out.print( "K'th smallest element is " +
                 kthSmallest2(arr, 0, arr.length - 1, k) );
     }
