@@ -48,3 +48,17 @@ Applying heapify procedure to index 0:
 The heapify procedure calls itself recursively to build heap
  in top down manner.
 ```
+**Sudo Code**
+```java
+void heapSort(int[] arr, int n) {
+    for (int i = n / 2 - 1; i >= 0; i--) {
+        heapify(arr, n, i); // create max heap
+    }
+    
+    for (int i = n - 1; i >= 0; i--) {
+        swap(arr[0], arr[i]); // swap first and last node
+       
+        heapify(arr, i, 0);   // create max heap on reduced array
+    }
+}
+```
