@@ -7,6 +7,7 @@ package com.weltond.heap;
  */
 public class HeapMain {
     public static void main(String[] args) {
-        HeapSort.test();
+        //HeapSort.test();
+        isBinaryTreeMaxHeap.test();
     }
 }
