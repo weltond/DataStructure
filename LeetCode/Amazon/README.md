@@ -29,7 +29,7 @@
 | <ul><li>- [ ] 167</li></ul>| Two Sum II - Input array is sorted | Easy | |
 | <ul><li>- [ ] 189</li></ul>| Rotate Array | Easy | |
 | <ul><li>- [ ] 199</li></ul>| Binary Tree Right Side View | Medium | |
-| <ul><li>- [ ] 200</li></ul>| Number of Islands | Medium | DFS / BFS / Union Find | Y
+| <ul><li>- [X] 200</li></ul>| [Number of Islands](https://github.com/weltond/DataStructure/blob/master/LeetCode/Amazon/Lc200NumberOfIslands.java) | Medium | DFS / BFS / Union Find | Y
 | <ul><li>- [ ] 204</li></ul>| Count Primes | Easy
 | <ul><li>- [ ] 206</li></ul>| Reverse Linked List | Easy
 | <ul><li>- [ ] 212</li></ul>| Word Search II | Hard | Backtracking / Trie | Y
