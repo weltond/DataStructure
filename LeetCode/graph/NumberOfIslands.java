@@ -83,22 +83,22 @@ class NumberOfIslands {
 				if (a[j][k] == 0) continue;
 				
 				// check all 8 neighbors and do a union with neighbors' set if neighbors are also 1
-                if (j + 1 < n && a[j + 1][k] == 1)
-                    dus.union(j * m + k, (j + 1) * m + k);
-                if (j - 1 >= 0 && a[j - 1][k] == 1)
-                    dus.union(j * m + k, (j - 1) * m + k);
-                if (k + 1 < m && a[j][k + 1] == 1)
-                    dus.union(j * m + k, j * m + k + 1);
-                if (k - 1 >= 0 && a[j][k - 1] == 1)
-                    dus.union(j * m + k, j * m + k - 1);
-                if (j + 1 < n && k + 1 < m && a[j + 1][k + 1] == 1)
-                    dus.union(j * m + k, (j + 1) * m + (k + 1));
-                if (j + 1 < n && k - 1 >= 0 && a[j + 1][k - 1] == 1)
-                    dus.union(j * m + k, (j + 1) * m + (k - 1));
-                if (j - 1 >= 0 && k + 1 < m && a[j - 1][k + 1] == 1)
-                    dus.union(j * m + k, (j - 1) * m + (k + 1));
-                if (j - 1 >= 0 && k - 1 >= 0 && a[j - 1][k - 1] == 1)
-                    dus.union(j * m + k, (j - 1) * m + (k - 1));
+				if (j + 1 < n && a[j + 1][k] == 1)
+				    dus.union(j * m + k, (j + 1) * m + k);
+				if (j - 1 >= 0 && a[j - 1][k] == 1)
+				    dus.union(j * m + k, (j - 1) * m + k);
+				if (k + 1 < m && a[j][k + 1] == 1)
+				    dus.union(j * m + k, j * m + k + 1);
+				if (k - 1 >= 0 && a[j][k - 1] == 1)
+				    dus.union(j * m + k, j * m + k - 1);
+				if (j + 1 < n && k + 1 < m && a[j + 1][k + 1] == 1)
+				    dus.union(j * m + k, (j + 1) * m + (k + 1));
+				if (j + 1 < n && k - 1 >= 0 && a[j + 1][k - 1] == 1)
+				    dus.union(j * m + k, (j + 1) * m + (k - 1));
+				if (j - 1 >= 0 && k + 1 < m && a[j - 1][k + 1] == 1)
+				    dus.union(j * m + k, (j - 1) * m + (k + 1));
+				if (j - 1 >= 0 && k - 1 >= 0 && a[j - 1][k - 1] == 1)
+				    dus.union(j * m + k, (j - 1) * m + (k - 1));
 			}
 		}
 		
@@ -110,13 +110,13 @@ class NumberOfIslands {
 				if (a[j][k] == 1) {
 					int x = dus.find(j * m + k);
 					// if frequency of set is 0
-                    // increment cnt
-                    if (c[x] == 0) {
-                        cnt++;
-                        c[x]++;
-                    } else {
-                        c[x]++;
-                    } 
+					    // increment cnt
+					    if (c[x] == 0) {
+						cnt++;
+						c[x]++;
+					    } else {
+						c[x]++;
+					    } 
 				}
 			}
 		}
