@@ -12,3 +12,5 @@
 | LeetCode 450 | [Delete Node In BST](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/LC450DeleteNodeInBST_2.java) | |
 | LeetCode 109 | [Convert Sorted List To BST](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc109ConvertSortedListToBST.java) | |
 | LeetCode 124 | [Binary Tree Max Path Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc124BinaryTreeMaxPathSum.java) | |
+| LeetCode 973 | [K Closest Points to Origin](https://github.com/weltond/DataStructure/blob/master/LeetCode/Amazon/Lc973KClosestPointsToOrigin.java) | Easy | Math / Divide and Conquer / Sort
+
