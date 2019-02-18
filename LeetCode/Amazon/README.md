@@ -57,4 +57,4 @@
 | <ul><li>- [ ] 771</li></ul>| Jewels and Stones | Easy | |
 | <ul><li>- [ ] 819</li></ul>| Most Common Word | Easy | | Y
 | <ul><li>- [ ] 895</li></ul>| Maximum Frequency Stack | Hard | Hash Table / Stack | Y
-| <ul><li>- [ ] 973</li></ul>| K Closest Points to Origin | Easy | Math / Devide and Conquer / Sort | Y
+| <ul><li>- [ ] 973</li></ul>| [K Closest Points to Origin](https://github.com/weltond/DataStructure/blob/master/LeetCode/Amazon/Lc973KClosestPointsToOrigin.java) | Easy | Math / Devide and Conquer / Sort | Y
