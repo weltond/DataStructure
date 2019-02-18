@@ -7,6 +7,8 @@ package com.weltond.backtracking;
  */
 public class BackTrackingMain {
     public static void main(String[] args) {
-        NQueen.test();
+        //NQueen.test();
+        //KnightsTour.test();
+        RatInMaze.test();
     }
 }
