@@ -31,7 +31,8 @@ Problems which are typically solved using **backtracking** technique have follow
 **如果你想得到所有解，那么可以在不在当前层判断下一层返回的结果，在下一层返回后，做BACKTRACKING，在base case的终点处做处理得到所有想要的结果。**
   - 这种情况下，你给recursion传递的`solution[][]`在过程结束后会是**空的**， 因为你做了backtracking。你的所有解都是在base case里得到并处理。
 
-# Permutation
+# Permutation and Combination
+### Permutation
 ```
 P(nums, d, n, used, curr, ans):
     if d == n:
@@ -59,7 +60,7 @@ P(nums, d, n, used, curr, ans):
 
 [[1,2],[1,3],[2,1],[2,3],[3,1],[3,2]]
 
-# Combination
+### Combination
 ```
 C(nums, d, n, s, curr, ans):
     if d == n:
@@ -80,3 +81,15 @@ C(nums, d, n, s, curr, ans):
 - C([1,2,3], 0, 2, [], ans)
 
 [[1,2],[1,3],[2,3]]
+
+### 我的思考
+无论是Combination还是Permutation，我们都使用了`d`来代表当前层数（DFS),当层数满足条件时（等于最终打印的个数`n`）才得到解。
+
+- 在Permutation中，因为需要排列所有元素，所以我们每层遍历都从0开始，并利用一个boolean数组保存已访问过的节点， 这样保证了：
+  - 下一层元素不重复
+  - 所有recursion都会到达最终层
+  
+- 在Combination中，为了保证不出现Permutation的情况，多加了一个`s`变量，并使每层都从`s`开始遍历，这样保证了：
+  - 下一层元素不重复
+  - 如果元素个数不够无法达到最终层
+  
