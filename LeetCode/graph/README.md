@@ -21,7 +21,7 @@ DFS is an algorithm for traversing a graph
 - **Solving Puzzles with only one solution**
   - **Maze**. DFS can be adapted to find all solutions to a maze by only including nodes on the current path in the visited set.
 
-### Permutation P(l, n)
+### Permutation
 ```
 P(nums, d, n, used, curr, ans):
     if d == n:
@@ -39,16 +39,17 @@ P(nums, d, n, used, curr, ans):
         used[i] = false
 ```
 
-```
-P([1,2,3], 0, 3, [false] * 3, [], ans)
+- P([1,2,3], 0, 3, [false] * 3, [], ans)
+
 [[1,2,3], [1,3,2], 
  [2,1,3], [2,3,1],
  [3,1,2], [3,2,1]]
 
-P([1,2,3], 0, 2, [false] * 3, [], ans)
+- P([1,2,3], 0, 2, [false] * 3, [], ans)
+
 [[1,2],[1,3],[2,1],[2,3],[3,1],[3,2]]
-```
-### Combination C(l, n)
+
+### Combination
 ```
 C(nums, d, n, s, curr, ans):
     if d == n:
@@ -61,13 +62,15 @@ C(nums, d, n, s, curr, ans):
         curr.remove()
 ```
 
-```
-C([1,2,3], 0, 3, [], ans)
+
+- C([1,2,3], 0, 3, [], ans)
+
 [[1,2,3]]
 
-C([1,2,3], 0, 2, [], ans)
+- C([1,2,3], 0, 2, [], ans)
+
 [[1,2],[1,3],[2,3]]
-```
+
 
 ## Breadth First Search (BFS)
 ### Applications
