@@ -18,7 +18,7 @@ Problems which are typically solved using **backtracking** technique have follow
     - 对于Number Of Islands，Word Search来说，recursion进入点就是碰到的第一个1 或者第一个满足条件的word的第一个字符， 那么在主函数中就需要遍历原矩阵来找到第一个1.
     - 对于Knites Tour 或者 Rat In Maze来说，进入点是单个的（左上角），那么在主函数中只需要给recursion函数一个(0,0)的坐标就行了
   - 一旦找到进入点后，进入recursion函数后
-    - 先找到base case也就是recursion的终点条件。这里不先判断边界条件因为终点超出边界。
+    - 先找到base case也就是recursion的终点条件。这里不先判断边界条件因为终点超出边界或者已满足所需解。
     - 再可以进行判断满不满足边界条件
     - 然后根据题目需求假定当前点满足条件并存储相对应的值/set visited
     - 进入recursion function的下一层
