@@ -17,3 +17,4 @@
 | LeetCode 37 | [Sudoku Solver](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc37SudokuSolver.java) | Hard | Hash Table / Backtracking
 |LeetCode 79 | [Word Search](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc79WordSearch.java) | Medium | Array / Backtracking 
 |LeetCode 200 | [Numbser of Islands](https://github.com/weltond/DataStructure/blob/master/LeetCode/Amazon/Lc200NumberOfIslands.java) | Medium | DFS / BFS / Union Find
+| LeetCode 973 | [K Closest Points to Origin](https://github.com/weltond/DataStructure/blob/master/LeetCode/Amazon/Lc973KClosestPointsToOrigin.java) | Easy | Math / Divide and Conquer / Sort
