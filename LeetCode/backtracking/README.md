@@ -27,5 +27,6 @@ Problems which are typically solved using **backtracking** technique have follow
 ### Note
 **注意，如果你只需要其中一种解，可以给recursion函数一个返回值（通常是boolean），这样可以在当前层判断下一层返回的结果为true时直接返回true。**
   - 这种情况下，你给recursion传递的`solution[][]`在过程结束后会保存这种解。
+
 **如果你想得到所有解，那么可以在不在当前层判断下一层返回的结果，在下一层返回后，做BACKTRACKING，在base case的终点处做处理得到所有想要的结果。**
   - 这种情况下，你给recursion传递的`solution[][]`在过程结束后会是**空的**， 因为你做了backtracking。你的所有解都是在base case里得到并处理。
