@@ -19,3 +19,4 @@
 | 200 | [Numbser of Islands](https://github.com/weltond/DataStructure/blob/master/LeetCode/Amazon/Lc200NumberOfIslands.java) | Medium | DFS / BFS / Union Find
 |  973 | [K Closest Points to Origin](https://github.com/weltond/DataStructure/blob/master/LeetCode/Amazon/Lc973KClosestPointsToOrigin.java) | Easy | Math / Divide and Conquer / Sort
 | [39](https://leetcode.com/problems/combination-sum/) | [Combination Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc39CombinationSum.java) | Medium | Array / Backtracking
+|[40](https://leetcode.com/problems/combination-sum-ii/) | [Combination Sum II](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc40CombinationSumII.java) | Medium | Array / Backtracking
