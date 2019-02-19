@@ -31,9 +31,11 @@ P(nums, d, n, used, curr, ans):
     for i = 0 to len(nums):
         if used[i]: continue
         used[i] = true
+        
         curr.add(nums[i])
         P(nums, d + 1, n, curr, ans)
         curr.remove()
+        
         used[i] = false
 ```
 
