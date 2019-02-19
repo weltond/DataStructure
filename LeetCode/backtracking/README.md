@@ -30,3 +30,53 @@ Problems which are typically solved using **backtracking** technique have follow
 
 **如果你想得到所有解，那么可以在不在当前层判断下一层返回的结果，在下一层返回后，做BACKTRACKING，在base case的终点处做处理得到所有想要的结果。**
   - 这种情况下，你给recursion传递的`solution[][]`在过程结束后会是**空的**， 因为你做了backtracking。你的所有解都是在base case里得到并处理。
+
+# Permutation
+```
+P(nums, d, n, used, curr, ans):
+    if d == n:
+        ans.append(curr)
+        return
+    
+    for i = 0 to len(nums):
+        if used[i]: continue
+        used[i] = true
+        
+        curr.add(nums[i])
+        P(nums, d + 1, n, curr, ans)
+        curr.remove()
+        
+        used[i] = false
+```
+
+- P([1,2,3], 0, 3, [false] * 3, [], ans)
+
+[[1,2,3], [1,3,2], 
+ [2,1,3], [2,3,1],
+ [3,1,2], [3,2,1]]
+
+- P([1,2,3], 0, 2, [false] * 3, [], ans)
+
+[[1,2],[1,3],[2,1],[2,3],[3,1],[3,2]]
+
+# Combination
+```
+C(nums, d, n, s, curr, ans):
+    if d == n:
+        ans.append(curr)
+        return
+    
+    for i = s to len(nums):
+        curr.add(nums[i])
+        C(nums, d + 1, n, i + 1, curr, ans)
+        curr.remove()
+```
+
+
+- C([1,2,3], 0, 3, [], ans)
+
+[[1,2,3]]
+
+- C([1,2,3], 0, 2, [], ans)
+
+[[1,2],[1,3],[2,3]]
