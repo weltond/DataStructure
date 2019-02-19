@@ -22,4 +22,5 @@
 |[40](https://leetcode.com/problems/combination-sum-ii/) | [Combination Sum II](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc40CombinationSumII.java) | Medium | Array / Backtracking
 |[77](https://leetcode.com/problems/combinations/) | [Combinations](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc77Combinations.java) | Medium | Backtracking
 |[46](https://leetcode.com/problems/permutations/) | [Permutations](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc46Permutations.java) | Medium | Backtracking
+|[47](https://leetcode.com/problems/permutations-ii/) | [Permutations II](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc47PermutationsII.java) | Medium | Backtracking
 
