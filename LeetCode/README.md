@@ -14,4 +14,4 @@
 | LeetCode 124 | [Binary Tree Max Path Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc124BinaryTreeMaxPathSum.java) | |
 | LeetCode 973 | [K Closest Points to Origin](https://github.com/weltond/DataStructure/blob/master/LeetCode/Amazon/Lc973KClosestPointsToOrigin.java) | Easy | Math / Divide and Conquer / Sort
 |LeetCode 51 | [N-Queens](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc51NQueens.java) | Hard | Backtracking
-| LeetCode 37 | [Sudoku Solver]() | Hard | Hash Table / Backtracking
+| LeetCode 37 | [Sudoku Solver](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc37SudokuSolver.java) | Hard | Hash Table / Backtracking
