@@ -16,3 +16,4 @@
 |LeetCode 51 | [N-Queens](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc51NQueens.java) | Hard | Backtracking
 | LeetCode 37 | [Sudoku Solver](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc37SudokuSolver.java) | Hard | Hash Table / Backtracking
 |LeetCode 79 | [Word Search](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc79WordSearch.java) | Medium | Array / Backtracking 
+|LeetCode 200 | [Numbser of Islands](https://github.com/weltond/DataStructure/blob/master/LeetCode/Amazon/Lc200NumberOfIslands.java) | Medium | DFS / BFS / Union Find
