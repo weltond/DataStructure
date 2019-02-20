@@ -24,3 +24,4 @@
 |[46](https://leetcode.com/problems/permutations/) | [Permutations](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc46Permutations.java) | Medium | Backtracking
 |[47](https://leetcode.com/problems/permutations-ii/) | [Permutations II](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc47PermutationsII.java) | Medium | Backtracking
 |[216](https://leetcode.com/problems/combination-sum-iii/) | [Combination Sum III](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc216CombinationSumIII.java) | Medium |  Array / Backtracking
+| [131](https://leetcode.com/problems/palindrome-partitioning/) | [Palindrome Partitioning](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc131PalindromePartitioning.java) | Medium | Backtracking
