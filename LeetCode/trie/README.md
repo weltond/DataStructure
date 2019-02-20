@@ -47,5 +47,12 @@ N is number of keys in Trie.
 There are efficient representation of Trie Nodes (e.g. **compressed trie**, **ternary search tree**, etc) to minimize memory requirements of trie
 
 ## Delete
+During delete operation, we delete the key in bottom up manner using recursion. 
 
+The following are possible conditions when deleting key from Trie:
+
+1. Key may not be there in Trie. Delete operation should not modify Trie.
+2. Key present as unique key (no part of key contains another key(prefix), nor the key itself is prefix of another key in Trie). Delete all the nodes.
+3. Key is prefix key of another long key in Trie, Unmark the leaf node.
+4. Key present in Trie, having at least one other key as prefix key. Delete nodes from end of key until first leaf node of longest prefix key.
 ## Applications
