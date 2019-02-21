@@ -108,7 +108,7 @@ Given a query prefix, we search for all words having this query:
 * How can we improve this?
 
     - The number of matches might just be too large so we have to be selective while displaying them.
-    - We can restric ourselves to diplay only relevant results. By relevant, we can consider the past search history and show only the most searched matching strings as relevant results.
+    - We can restrict ourselves to diplay only relevant results. By relevant, we can consider the past search history and show only the most searched matching strings as relevant results.
     - Store another value for the each node where `isLeaf` is true which contains the number of hits for that query search. 
       - E.g. If "hat" is searched for 10 times, then we store this `10` at the last node for "hat". Now when we want to show the recommandations, we display the top k matches with the highest hits.
 ### Word Break
