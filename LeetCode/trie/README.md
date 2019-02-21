@@ -1,4 +1,15 @@
-# Trie
+Table of Content
+================
+  * [Introduction](##Introduction)
+  * [Insert](##Insert)
+  * [Search](##Search)
+  * [Time & Space Complexity](##Time and Space Complexity)
+  * [Delete](##Delete)
+  * [Efficient Way](##Efficient Way)
+  * [Advantages of Trie Data Structure](##Advantages)
+  * [Applications](##Applications)
+  
+## Introduction
 Trie is an efficient information re**Trie**val data structure.
 
 Using Trie, seach complexities can be broght to optimal limit (key length). 
@@ -60,6 +71,31 @@ The following are possible conditions when deleting key from Trie:
 ## Efficient Way
 The implementation above uses an array of alphabet size with every node. We can use a `Hash Map` to store children of nodes. Now we allocate memory only for alphabets in used, and don't waste space storing `null pointers`.
 
+## Advantages
+**Trie** is a tree that stores Strings. Maximum number of children of a node is equal to size of alphabet. Trie supports search, insert and delete operations in O(L) time where L is length of key.
+
+#### Hashing
+In hashing, we convert key to a small value and the value is used to index data. Hashing supports search, insert and delete operations in *O(L)* time on average.
+
+#### Self Balancing BST
+The time complexity of search, insert and delete oprations in a **self-balancing Binary Search Tree(BST)** (like **Red-Black Tree**, **AVL Tree**, **Splay Tree**, etc) is *O(Llogn)* where `n` is total number words and `L` is length of a word.
+
+The advantage of self-balancing BSTs is that they maintain order which makes operations like **minimum, maximum, closest(floor or ceiling) and K-th largest** FASTER. 
+
+Please refer to [Advantages of BST over Hash Table](https://www.geeksforgeeks.org/advantages-of-bst-over-hash-table/) for details.
+
+#### Trie
+- Why Trie?
+  - With Trie, we can insert and find Strings in *O(L)* time where `L` is the length of a word. This is obviously faster than BST. This is also faster than Hashing because of the ways it is implemented: we don't need to compute any hash function. No collision handling is required(like **open addressing** and **separate chaining**)
+  - Another advantage of Trie is, we can [easily print all words in alphabetical order]() which is not easily possible with hashing.
+  - We can efficiently do [prefix seach (or auto-complete)]() with Trie.
+
+- Issues with Trie
+  - The main **disadvantage** of Trie is that they need lot of memory for storing the string. For each node we have too many node pointers(equal to number of characters of alphabet), If space is concern, then **Ternary Search Tree** can be preffered for dictionary implementations.
+    - Ternary Search Tree
+      - Time complexity of search is O(h) where `h` is height of the tree.
+      - It also supports other operations supported by Trie like prefix search, alphabetical order printing and nearest neighbor search.
+  
 ## Applications
 ### Auto Complete
 Given a query prefix, we search for all words having this query:
