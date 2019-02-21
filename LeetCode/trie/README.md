@@ -87,8 +87,8 @@ Please refer to [Advantages of BST over Hash Table](https://www.geeksforgeeks.or
 #### Trie
 - Why Trie?
   - With Trie, we can insert and find Strings in *O(L)* time where `L` is the length of a word. This is obviously faster than BST. This is also faster than Hashing because of the ways it is implemented: we don't need to compute any hash function. No collision handling is required(like **open addressing** and **separate chaining**)
-  - Another advantage of Trie is, we can [easily print all words in alphabetical order]() which is not easily possible with hashing.
-  - We can efficiently do [prefix seach (or auto-complete)]() with Trie.
+  - Another advantage of Trie is, we can [easily print all words in alphabetical order](https://github.com/weltond/DataStructure/blob/master/LeetCode/trie/SortArrayOfStrings.java) which is not easily possible with hashing.
+  - We can efficiently do [prefix seach (or auto-complete)](https://github.com/weltond/DataStructure/blob/master/LeetCode/trie/AutoComplete.java) with Trie.
 
 - Issues with Trie
   - The main **disadvantage** of Trie is that they need lot of memory for storing the string. For each node we have too many node pointers(equal to number of characters of alphabet), If space is concern, then **Ternary Search Tree** can be preffered for dictionary implementations.
@@ -97,7 +97,7 @@ Please refer to [Advantages of BST over Hash Table](https://www.geeksforgeeks.or
       - It also supports other operations supported by Trie like prefix search, alphabetical order printing and nearest neighbor search.
   
 ## Applications
-### Auto Complete
+### [Auto Complete](https://github.com/weltond/DataStructure/blob/master/LeetCode/trie/AutoComplete.java)
 Given a query prefix, we search for all words having this query:
 1. Search for given query using standard Trie seach algorithm.
 2. If query prefix itself is not present, return -1 to indicate the same.
@@ -111,3 +111,6 @@ Given a query prefix, we search for all words having this query:
     - We can restric ourselves to diplay only relevant results. By relevant, we can consider the past search history and show only the most searched matching strings as relevant results.
     - Store another value for the each node where `isLeaf` is true which contains the number of hits for that query search. 
       - E.g. If "hat" is searched for 10 times, then we store this `10` at the last node for "hat". Now when we want to show the recommandations, we display the top k matches with the highest hits.
+### Word Break
+
+### [Print Sorted String Array](https://github.com/weltond/DataStructure/blob/master/LeetCode/trie/SortArrayOfStrings.java)
