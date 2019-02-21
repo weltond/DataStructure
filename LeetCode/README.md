@@ -28,3 +28,4 @@
 | [78](https://leetcode.com/problems/subsets/) | [Subsets](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc78Subsets.java) | Medium | Array / Backtracking / Bit Manipulation
 |[90](https://leetcode.com/problems/subsets-ii/) | [Subsets II](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc90SubsetsII.java) | Medium | Array / Backtracking
 |[980](https://leetcode.com/problems/unique-paths-iii/) | [Unique Paths III](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc980UniquePathsIII.java) | Hard | Backtracking / DP
+|[212](https://leetcode.com/problems/word-search-ii/) | [Word Search II](https://github.com/weltond/DataStructure/blob/master/LeetCode/Amazon/Lc212WordSearchII.java) | Hard | Backtracking / Trie
