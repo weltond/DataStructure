@@ -41,6 +41,7 @@ The search can terminate due to end of string or lack of key in Trie. In the for
 then the key exists in Trie. In the second case, the search terminates without examining all the characters of key, since the key
 is not present in Trie.
 
+## Time and Space Complexity
 Insert and Search costs **O(key_length)**, however, the memory requirements of Trie is **O(ALPHABET_SIZE * key_length * N) where
 N is number of keys in Trie. 
 
@@ -56,3 +57,10 @@ The following are possible conditions when deleting key from Trie:
 3. Key is prefix key of another long key in Trie, Unmark the leaf node.
 4. Key present in Trie, having at least one other key as prefix key. Delete nodes from end of key until first leaf node of longest prefix key.
 ## Applications
+### Auto Complete
+Given a query prefix, we search for all words having this query:
+1. Search for given query using standard Trie seach algorithm.
+2. If query prefix itself is not present, return -1 to indicate the same.
+3. If query is present and is end of word in Trie, print query. This can quickly checked by seeing if last matching node has `isEndWord`flag set. We use this flag in Trie to mark end of word nodes for purpose of searching.
+4. If last matching node of query has no children, return.
+5. Else recursively print all nodes under subtree of last matching node.
