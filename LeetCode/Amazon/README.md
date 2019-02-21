@@ -14,7 +14,7 @@
 | <ul><li>- [ ] 48</li></ul>| Rotate Image | Medium | |
 | <ul><li>- [ ] 49</li></ul>| Group Anagrams | Medium | |
 | <ul><li>- [ ] 73</li></ul>| Set Matrix Zeroes | Medium | |
-| <ul><li>- [ ] 78</li></ul>| Subsets | Medium | |
+| <ul><li>- [X] [78](https://leetcode.com/problems/subsets/)</li></ul>| [Subsets](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc78Subsets.java) | Medium | Array / Backtracking / Bit|
 | <ul><li>- [ ] 102</li></ul>| Binary Tree Level Order Traversal | Medium | |
 | <ul><li>- [ ] 119</li></ul>| Pascal's Triangle II | Easy | |
 | <ul><li>- [ ] 121</li></ul>| Best Time to Buy and Sell Stock | Easy
