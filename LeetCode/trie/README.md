@@ -3,9 +3,9 @@ Table of Content
   * [Introduction](##Introduction)
   * [Insert](##Insert)
   * [Search](##Search)
-  * [Time & Space Complexity](##Time and Space Complexity)
+  * [Time & Space Complexity](##Time-and-Space-Complexity)
   * [Delete](##Delete)
-  * [Efficient Way](##Efficient Way)
+  * [Efficient Way](##Efficient-Way)
   * [Advantages of Trie Data Structure](##Advantages)
   * [Applications](##Applications)
   
