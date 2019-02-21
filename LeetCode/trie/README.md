@@ -56,6 +56,10 @@ The following are possible conditions when deleting key from Trie:
 2. Key present as unique key (no part of key contains another key(prefix), nor the key itself is prefix of another key in Trie). Delete all the nodes.
 3. Key is prefix key of another long key in Trie, Unmark the leaf node.
 4. Key present in Trie, having at least one other key as prefix key. Delete nodes from end of key until first leaf node of longest prefix key.
+
+## Efficient Way
+The implementation above uses an array of alphabet size with every node. We can use a `Hash Map` to store children of nodes. Now we allocate memory only for alphabets in used, and don't waste space storing `null pointers`.
+
 ## Applications
 ### Auto Complete
 Given a query prefix, we search for all words having this query:
