@@ -1,13 +1,13 @@
 Table of Content
 ================
-  * [Introduction](##Introduction)
-  * [Insert](##Insert)
-  * [Search](##Search)
-  * [Time & Space Complexity](##Time-and-Space-Complexity)
-  * [Delete](##Delete)
-  * [Efficient Way](##Efficient-Way)
-  * [Advantages of Trie Data Structure](##Advantages)
-  * [Applications](##Applications)
+  * [Introduction](#Introduction)
+  * [Insert](#Insert)
+  * [Search](#Search)
+  * [Time & Space Complexity](#Time-and-Space-Complexity)
+  * [Delete](#Delete)
+  * [Efficient Way](#Efficient-Way)
+  * [Advantages of Trie Data Structure](#Advantages)
+  * [Applications](#Applications)
   
 ## Introduction
 Trie is an efficient information re**Trie**val data structure.
