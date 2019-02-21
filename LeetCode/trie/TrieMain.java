@@ -7,6 +7,9 @@ package com.weltond.trie;
  */
 public class TrieMain {
     public static void main(String[] args) {
-        Trie.test();
+        //Trie.test();
+        //AutoComplete.test();
+        //TrieWithHashMap.test();
+        SortArrayOfStrings.test();
     }
 }

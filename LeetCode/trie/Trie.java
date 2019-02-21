@@ -17,11 +17,15 @@ public class Trie {
         // is true if the node represents end of a word
         boolean isEndOfWord;
 
-        TrieNode() {
+        // we can also store the String word here.
+        String word;
+
+        public TrieNode() {
             isEndOfWord = false;
             for (int i = 0; i < ALPHABET_SIZE; i++) {
                 children[i] = null;
             }
+            word = null;
         }
     }
 
@@ -46,6 +50,8 @@ public class Trie {
 
         // mark last node as leaf
         pCrawl.isEndOfWord = true;
+
+        pCrawl.word = key;
     }
 
     // Return true if key presents in Trie, else false
@@ -86,8 +92,10 @@ public class Trie {
         // If last character of key is being processed
         if (depth == key.length()) {
             // This node is no more end of word after removal of given key
-            if (root.isEndOfWord)
+            if (root.isEndOfWord) {
                 root.isEndOfWord = false;
+                root.word = null;
+            }
 
             // If given is not prefix of any other word
             if (isEmpty(root)) {
