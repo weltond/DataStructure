@@ -32,7 +32,7 @@
 | <ul><li>- [X] 200</li></ul>| [Number of Islands](https://github.com/weltond/DataStructure/blob/master/LeetCode/Amazon/Lc200NumberOfIslands.java) | Medium | DFS / BFS / Union Find | Y
 | <ul><li>- [ ] 204</li></ul>| Count Primes | Easy
 | <ul><li>- [ ] 206</li></ul>| Reverse Linked List | Easy
-| <ul><li>- [ ] 212</li></ul>| Word Search II | Hard | Backtracking / Trie | Y
+| <ul><li>- [X] [212](https://leetcode.com/problems/word-search-ii/)</li></ul>| [Word Search II](https://github.com/weltond/DataStructure/blob/master/LeetCode/Amazon/Lc212WordSearchII.java) | Hard | Backtracking / Trie | Y
 | <ul><li>- [ ] 215</li></ul>| Kth Largest Element in an array | Medium
 | <ul><li>- [ ] 234</li></ul>| Palindrome Linked List | Easy | |
 | <ul><li>- [ ] 235</li></ul>| LCA of a Binary Search Tree | Easy | |
