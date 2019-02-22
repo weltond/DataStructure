@@ -30,3 +30,4 @@
 |[980](https://leetcode.com/problems/unique-paths-iii/) | [Unique Paths III](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc980UniquePathsIII.java) | Hard | Backtracking / DP
 |[212](https://leetcode.com/problems/word-search-ii/) | [Word Search II](https://github.com/weltond/DataStructure/blob/master/LeetCode/Amazon/Lc212WordSearchII.java) | Hard | Backtracking / Trie
 | [720](https://leetcode.com/problems/longest-word-in-dictionary/) | [Longest Word In Dictionary](https://github.com/weltond/DataStructure/blob/master/LeetCode/trie/Lc720LongestWordInDictionary.java) | Easy | Hash Table / Trie 
+| [211](https://leetcode.com/problems/add-and-search-word-data-structure-design/) | [Add and Search Word - Data Structure Design](https://github.com/weltond/DataStructure/blob/master/LeetCode/trie/Lc211AddAndSearchWord.java) | Medium |  Backtracking / Trie / Design 
