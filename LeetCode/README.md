@@ -32,3 +32,4 @@
 | [720](https://leetcode.com/problems/longest-word-in-dictionary/) | [Longest Word In Dictionary](https://github.com/weltond/DataStructure/blob/master/LeetCode/trie/Lc720LongestWordInDictionary.java) | Easy | Hash Table / Trie 
 | [211](https://leetcode.com/problems/add-and-search-word-data-structure-design/) | [Add and Search Word - Data Structure Design](https://github.com/weltond/DataStructure/blob/master/LeetCode/trie/Lc211AddAndSearchWord.java) | Medium |  Backtracking / Trie / Design 
 | [677](https://leetcode.com/problems/map-sum-pairs/) | [Map Sum Pairs](https://github.com/weltond/DataStructure/blob/master/LeetCode/trie/Lc677MapSumPairs.java) | Medium | Trie
+| [8](https://leetcode.com/problems/string-to-integer-atoi/) | [String to Integer (atoi)](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc8StringToInteger.java) | Medium | Math / String
