@@ -35,3 +35,4 @@
 | [8](https://leetcode.com/problems/string-to-integer-atoi/) | [String to Integer (atoi)](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc8StringToInteger.java) | Medium | Math / String
 |[50](https://leetcode.com/problems/powx-n/) | [Pow(x,n)](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/Pow.java) | Medium | Math / Binary Search
 | [74](https://leetcode.com/problems/search-a-2d-matrix/) | [Search a 2D Matrix](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/Lc74SearchA2DMatrix.java) | Medium | Array / Binary Search
+| [33]() | [Search in Rotated Sorted Array](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/Lc33SearchInRotatedSortedArray.java) | Medium | Array / Binary Search
