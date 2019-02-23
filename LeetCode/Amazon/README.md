@@ -4,7 +4,7 @@
 | <ul><li>- [ ] 2</li></ul>| Add Two Numbers | Medium | Linked List / Math | Y
 | <ul><li>- [ ] 3</li></ul>| Longest Substring Without Repeating Characters | Medium
 | <ul><li>- [ ] 5</li></ul>| Longest Palindromic Substring | Medium | String / DP | Y
-| <ul><li>- [ ] 8</li></ul>| String to Integer (atoi) | Medium
+| <ul><li>- [X] [8](https://leetcode.com/problems/string-to-integer-atoi/)</li></ul>| [String to Integer (atoi)](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc8StringToInteger.java) | Medium | Math / String
 | <ul><li>- [ ] 15</li></ul>| 3 Sum | Medium
 | <ul><li>- [ ] 17</li></ul>| Letter Combinations of a Phone Number | Medium
 | <ul><li>- [ ] 20</li></ul>| Valid Parenthese | Easy
