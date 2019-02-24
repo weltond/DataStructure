@@ -48,6 +48,7 @@ getDiedSlaves(42)
 ```
 
 ## Raw Code
+```java
 public class HeartBeat {
     public HeartBeat() {
         // do intialization if necessary
@@ -79,3 +80,4 @@ public class HeartBeat {
         // write your code here
     }
 }
+```
