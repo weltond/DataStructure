@@ -2,7 +2,7 @@
 Implement a memcache which support the following features:
 
 1. `get(curtTime, key)`. Get the key's value, return 2147483647 if key does not exist.
-2. `set(curtTime, key, value, ttl)`. Set the key-value pair in memcache with a **time to live (ttl)**. 
+2. `set(curtTime, key, value, ttl)`. Set the **key**-**value** pair in memcache with a **time to live (ttl)**. 
 The **key** will be valid from **curtTime** to **curtTime + ttl - 1** and it will be expired after **ttl** seconds. 
 if **ttl** is 0, the **key** lives forever until out of memory.
 3. `delete(curtTime, key)`. Delete the **key**.
