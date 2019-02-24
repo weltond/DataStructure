@@ -41,3 +41,4 @@
 | [154](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/) | [Find Min in Rotated Sorted Array II](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/Lc154FindMinInRotatedSortedArrayII.java) | Hard | Array / Binary Search
 | [134](https://leetcode.com/problems/gas-station/) | [Gas Station](https://github.com/weltond/DataStructure/blob/master/LeetCode/greedy/Lc134GasStation.java) | Medium | Geedy
 | [301](https://leetcode.com/problems/remove-invalid-parentheses/) | [Remove Invalid Parentheses]() | Hard | BFS / DFS
+|[332](https://leetcode.com/problems/reconstruct-itinerary/) | [Reconstruct Itinerary](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/Lc332ReconstructItinerary.java) | Medium | DFS / Graph
