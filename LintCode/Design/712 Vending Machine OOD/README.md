@@ -18,7 +18,7 @@ Current selection is: Sprite, current inserted money: 500, current state is : In
 Current selection is: null, current inserted money: 0, current state is : NoSelection
 ```
 
-## Raw Code
+## TO DO
 ```java
 public class VendingMachine {
     /**
