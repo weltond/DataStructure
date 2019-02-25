@@ -18,7 +18,7 @@ In our case, let's make it simple, we can assume that we have enough memory and 
 
 Search "LRU" & "LFU" on google to get more information about how memcache evict data.
 
-- [Implement LRU cache]()
+- [Implement LRU cache](https://github.com/weltond/DataStructure/tree/master/LintCode/Design/134%20LRU%20Cache)
 
 - [Implement LFU cache]()
 
