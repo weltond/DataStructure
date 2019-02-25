@@ -47,7 +47,7 @@ getDiedSlaves(42)
 >> ["10.173.0.2"]
 ```
 
-## Raw Code
+## TO DO
 ```java
 public class HeartBeat {
     public HeartBeat() {
