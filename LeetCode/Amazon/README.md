@@ -23,7 +23,7 @@
 | <ul><li>- [ ] 138</li></ul>| Copy List with Random Pointer | Medium | Hash Table / Linked List| Y
 | <ul><li>- [ ] 139</li></ul>| Word Break | Medium
 | <ul><li>- [ ] 141</li></ul>| Linked List Cycle | Easy
-| <ul><li>- [ ] 146</li></ul>| LRU Cache | Hard | | Y
+| <ul><li>- [X] [146](https://leetcode.com/problems/lru-cache/)</li></ul>| [LRU Cache](https://github.com/weltond/DataStructure/tree/master/LintCode/Design/134%20LRU%20Cache) | Hard | Design | Y
 | <ul><li>- [ ] 155</li></ul>| Min Stack | Easy
 | <ul><li>- [ ] 160</li></ul>| Intersection of Two Linked List | Easy
 | <ul><li>- [ ] 167</li></ul>| Two Sum II - Input array is sorted | Easy | |
