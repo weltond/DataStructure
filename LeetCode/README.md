@@ -45,6 +45,8 @@
 | [329](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/) | [Longest Increasing Path in a Matrix](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/Lc329LongestIncreasingPathInAMatrix.java) | Hard | DFS / Topological Sort / Memoization
 | [399](https://leetcode.com/problems/evaluate-division/) | [Evaluate Division](https://github.com/weltond/DataStructure/blob/master/LeetCode/unionfind/Lc399EvaluateDivision.java) | Medium | Graph / Union Find
 | [128](https://leetcode.com/problems/longest-consecutive-sequence/) | [Longest Consecutive Sequence](https://github.com/weltond/DataStructure/blob/master/LeetCode/unionfind/Lc128LongestConsecutiveSequence.java) | Hard | Array / Union Find
+| [803](https://leetcode.com/problems/bricks-falling-when-hit/) | [Bricks Falling When Hit](https://github.com/weltond/DataStructure/blob/master/LeetCode/unionfind/Lc803BricksFallingWhenHit.java) | Hard | Union Find
+
 
 
 
