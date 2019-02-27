@@ -7,7 +7,7 @@
 public class TinyUrl {
 	private Map<String, String> long2short;
 	private Map<String, String> short2long;
-	
+
 	public TinyUrl() {
 		long2short = new HashMap<String, String>();
 		short2long = new HashMap<String, String>();
