@@ -46,7 +46,7 @@
 | [399](https://leetcode.com/problems/evaluate-division/) | [Evaluate Division](https://github.com/weltond/DataStructure/blob/master/LeetCode/unionfind/Lc399EvaluateDivision.java) | Medium | Graph / Union Find
 | [128](https://leetcode.com/problems/longest-consecutive-sequence/) | [Longest Consecutive Sequence](https://github.com/weltond/DataStructure/blob/master/LeetCode/unionfind/Lc128LongestConsecutiveSequence.java) | Hard | Array / Union Find
 | [803](https://leetcode.com/problems/bricks-falling-when-hit/) | [Bricks Falling When Hit](https://github.com/weltond/DataStructure/blob/master/LeetCode/unionfind/Lc803BricksFallingWhenHit.java) | Hard | Union Find
-
+| [3](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [Longest Substring Without Repeating Chars](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc3LongestSubstringWithoutRepeatingChars.java) | Medium | Hash Table / Two Pointers / String
 
 
 
