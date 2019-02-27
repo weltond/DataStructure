@@ -27,16 +27,12 @@ class Solution {
     
     // ==== Sol 2: More Elegant =====
     public int pivotIndex(int[] nums) {
-        int sum = 0;
-		for(int i = 0; i<nums.length; i++) sum +=nums[i];
-		int pivotSum = 0;
-		for(int i = 0; i<nums.length; i++) {
-			if(sum - pivotSum - nums[i] == pivotSum) {
-				return i;
-			}
-			pivotSum = pivotSum + nums[i];
-		}
-		 
-		return -1;
+        int sum = 0, leftsum = 0;
+        for (int x: nums) sum += x;
+        for (int i = 0; i < nums.length; ++i) {
+            if (leftsum == sum - leftsum - nums[i]) return i;
+            leftsum += nums[i];
+        }
+        return -1;
     }
 }
