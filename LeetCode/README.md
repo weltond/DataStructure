@@ -48,7 +48,7 @@
 | [803](https://leetcode.com/problems/bricks-falling-when-hit/) | [Bricks Falling When Hit](https://github.com/weltond/DataStructure/blob/master/LeetCode/unionfind/Lc803BricksFallingWhenHit.java) | Hard | Union Find
 | [3](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [Longest Substring Without Repeating Chars](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc3LongestSubstringWithoutRepeatingChars.java) | Medium | Hash Table / Two Pointers / String
 | [724](https://leetcode.com/problems/find-pivot-index/) | [Find Pivot Index](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc724FindPivotIndex.java) | Easy | Array
-
+| [66](https://leetcode.com/problems/plus-one/) | [Plus One](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc66PlusOne.java) | Easy | Array / Math
 
 
 
