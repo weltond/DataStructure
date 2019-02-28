@@ -2,7 +2,7 @@
 | :--------: | :-------: | :---------: | :------: | :-----:
 | <ul><li>- [ ] 1</li></ul>| Two Sum | Easy | | Y
 | <ul><li>- [ ] 2</li></ul>| Add Two Numbers | Medium | Linked List / Math | Y
-| <ul><li>- [ ] 3</li></ul>| Longest Substring Without Repeating Characters | Medium
+| <ul><li>- [X] [3](https://leetcode.com/problems/longest-substring-without-repeating-characters/)</li></ul>| [Longest Substring Without Repeating Characters](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc3LongestSubstringWithoutRepeatingChars.java) | Medium | Hash Table / Two Pointers / String
 | <ul><li>- [ ] 5</li></ul>| Longest Palindromic Substring | Medium | String / DP | Y
 | <ul><li>- [X] [8](https://leetcode.com/problems/string-to-integer-atoi/)</li></ul>| [String to Integer (atoi)](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc8StringToInteger.java) | Medium | Math / String
 | <ul><li>- [ ] 15</li></ul>| 3 Sum | Medium
