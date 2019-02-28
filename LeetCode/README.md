@@ -52,5 +52,5 @@
 |[498](https://leetcode.com/problems/diagonal-traverse/) | [Diagonal Traverse](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc498DiagonalTraverse.java) | Medium | Array
 | [67](https://leetcode.com/problems/add-binary/) | [Add Binary](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc67AddBinary.java) | Easy | Math / String
 | [28](https://leetcode.com/problems/implement-strstr/) | [Implement strStr()](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc28ImplementStrStr.java) | Easy | Two Pointers / String
-
+| [14](https://leetcode.com/problems/longest-common-prefix/) | [Longest Common Prefix](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc14LongestCommonPrefix.java) | Easy | String / 
 
