@@ -50,6 +50,6 @@
 | [724](https://leetcode.com/problems/find-pivot-index/) | [Find Pivot Index](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc724FindPivotIndex.java) | Easy | Array
 | [66](https://leetcode.com/problems/plus-one/) | [Plus One](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc66PlusOne.java) | Easy | Array / Math
 |[498](https://leetcode.com/problems/diagonal-traverse/) | [Diagonal Traverse](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc498DiagonalTraverse.java) | Medium | Array
-
+| [67](https://leetcode.com/problems/add-binary/) | [Add Binary](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc67AddBinary.java) | Easy | Math / String
 
 
