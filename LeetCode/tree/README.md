@@ -1,7 +1,7 @@
 ## Solve Tree Problems Recursively
 
- - ["Top-Down" solution](#top-down-solution)
- - ["Bottom-Up" solution](#bottom-up-solution)
+ - [Top-Down solution](#top-down-solution)
+ - [Bottom-Up solution](#bottom-up-solution)
  - [Conclusion](#conclusion)
  
 As we know, a tree can be defined recursively. Recursion is one of the nature features of a tree.
