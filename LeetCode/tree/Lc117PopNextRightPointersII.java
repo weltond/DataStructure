@@ -51,35 +51,35 @@ class Solution {
     }
     
     // Unlike perfect tree
-    // CANNOT do DFS this way because right sub-tree's next pointer comes later than left subtree
-//     public Node connect(Node root) {
-//         if (root == null) return root;
+    // do dfs for root.right first this way because right sub-tree's next pointer comes later than left subtree !
+    public Node connect(Node root) {
+        if (root == null) return root;
         
-//         if (root.left == null && root.right == null) return root;
+        if (root.left == null && root.right == null) return root;
         
-//         if (root.left != null) {
-//             root.left.next = root.right;
-//             System.out.println("CO: " + root.left.val + ", " + (root.left.next == null ? null : root.left.next.val) );
-//         }
+        if (root.left != null) {
+            root.left.next = root.right;
+            System.out.println("CO: " + root.left.val + ", " + (root.left.next == null ? null : root.left.next.val) );
+        }
         
-//         if (root.next != null) {
-//             Node cur = root.next;
-//             while (cur != null) {
-//                 if (cur.left != null || cur.right != null) {
-//                     break;
-//                 }
-//                 cur = cur.next;
-//             }
-//             Node tmp = root.right == null ? root.left : root.right;
+        if (root.next != null) {
+            Node cur = root.next;
+            while (cur != null) {
+                if (cur.left != null || cur.right != null) {
+                    break;
+                }
+                cur = cur.next;
+            }
+            Node tmp = root.right == null ? root.left : root.right;
             
-//             Node nextTmp = cur == null ? null : cur.left == null ? cur.right : cur.left;
-//             tmp.next = nextTmp;
-//             System.out.println(tmp.val + ", " + (nextTmp == null ? null : nextTmp.val));
-//         }
+            Node nextTmp = cur == null ? null : cur.left == null ? cur.right : cur.left;
+            tmp.next = nextTmp;
+            System.out.println(tmp.val + ", " + (nextTmp == null ? null : nextTmp.val));
+        }
         
-//         connect(root.left);
-//         connect(root.right);
+        connect(root.right);
+        connect(root.left);
         
-//         return root;
-//     }
+        return root;
+    }
 }
