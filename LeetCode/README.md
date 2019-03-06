@@ -60,5 +60,8 @@
 | [209](https://leetcode.com/problems/minimum-size-subarray-sum/) | [Minimum Size Subarray Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc209MinSizeSubarraySum.java) | Medium | Array / Two Pointers / Binary Search
 |[116](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/) | [Populate Next Right Pointers](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc116PopulateNextRightPointers.java) | Medium | Tree / DFS
 | [117](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/) | [Populate Next Right Pointers II](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc117PopNextRightPointersII.java) | Medium | Tree / DFS
+|[236](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) | [LCA of a Binary Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc236LCAofBinaryTree.java) | Medium | Tree
+
+
 
 
