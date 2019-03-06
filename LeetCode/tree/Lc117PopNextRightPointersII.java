@@ -19,6 +19,7 @@ class Node {
 };
 */
 class Solution {
+    // ======== Method 1: BFS =============
     public Node connect(Node root) {
         Node head = root;
         
@@ -50,6 +51,7 @@ class Solution {
         return dummy.next;
     }
     
+    // ======== Method 2: DFS =============
     // Unlike perfect tree
     // do dfs for root.right first this way because right sub-tree's next pointer comes later than left subtree !
     public Node connect(Node root) {
