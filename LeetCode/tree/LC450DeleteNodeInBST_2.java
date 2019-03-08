@@ -55,3 +55,49 @@ class TreeNode {
         this.val = val;
     }
 }
+
+/**
+Implementation 2: we DONOT swap value, but swap NODE
+*/
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public TreeNode deleteNode(TreeNode root, int key) {
+        if (root == null) return null;
+        
+        if (root.val > key) root.left = deleteNode(root.left, key);
+        else if (root.val < key) root.right = deleteNode(root.right, key);
+        else {
+            // if no right and left 
+            //if (root.right == null && root.left == null) return null;
+            if (root.left == null) return root.right;
+            else if (root.right == null) return root.left;
+            
+            // has two children
+            TreeNode cur = root.right;
+            TreeNode prev = root;
+            while (cur.left != null) {
+                prev = cur;
+                cur = cur.left;
+            }
+            // we swap node instead of value!
+            if (prev != root) {
+                prev.left = cur.right;
+                cur.right = root.right;
+            }
+            cur.left = root.left;
+            
+            
+            return cur;
+        }
+        
+        return root;
+    }
+}
