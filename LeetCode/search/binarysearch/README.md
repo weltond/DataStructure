@@ -82,6 +82,7 @@ in the array
 - First Bad Version
 - Find Peak Element
 - Find Minimum in Rotated Sorted Array
+- Find Smallest Letter Greater than Target
 
 # Binary Search Template III
 
