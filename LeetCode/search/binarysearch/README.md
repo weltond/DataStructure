@@ -129,3 +129,8 @@ in the array
 - Termination: `left == right - 1`
 - Searching Left: `right = mid`
 - Searching Right: `left = mid`
+
+### Problems
+- Search for a Range
+- Find K Closest Element
+- Find Peak Element
