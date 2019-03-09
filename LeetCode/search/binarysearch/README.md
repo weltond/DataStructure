@@ -78,6 +78,11 @@ in the array
 - Searching Left: `right = mid`
 - Searching Right: `left = mid + 1`
 
+### Problems
+- First Bad Version
+- Find Peak Element
+- Find Minimum in Rotated Sorted Array
+
 # Binary Search Template III
 
 ### Template #3
