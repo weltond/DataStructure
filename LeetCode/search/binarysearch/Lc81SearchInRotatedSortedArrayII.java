@@ -1,6 +1,9 @@
 // https://leetcode.com/problems/search-in-rotated-sorted-array-ii/
 
-// Since we will have some duplicate elements in this problem, it is a little tricky because sometimes we cannot decide whether to go to the left side or right side. So for this condition, I have to probe both left and right side simultaneously to decide which side we need to find the number. Only in this condition, the time complexity may be O(n). The rest conditions are always O(log n).
+// Since we will have some duplicate elements in this problem, 
+// it is a little tricky because sometimes we cannot decide whether to go to the left side or right side. 
+// So for this condition, I have to probe both left and right side simultaneously to decide which side we need to find the number. 
+// Only in this condition, the time complexity may be O(n). The rest conditions are always O(log n).
 
 // For example:
 
