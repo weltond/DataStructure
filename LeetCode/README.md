@@ -70,4 +70,4 @@
 | [133](https://leetcode.com/problems/clone-graph/) | [Clone Graph](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/Lc133CloneGraph.java) | Medium | DFS / BFS / Graph
 | [895](https://leetcode.com/problems/maximum-frequency-stack/) | [Maximum Frequency Stack](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/Lc895MaxFreqStack.java) | Hard | Hash Table / Stack
 | [706](https://leetcode.com/problems/design-hashmap/) | [Design HashMap](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc706DesignHashMap.java) | Easy | Hash Table / Design
-
+| [136](https://leetcode.com/problems/single-number/) | [Single Number](https://github.com/weltond/DataStructure/blob/master/LeetCode/bit/Lc136SingleNumber.java) | Easy | Hash Table / Bit
