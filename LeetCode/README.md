@@ -69,4 +69,5 @@
 | [739](https://leetcode.com/problems/daily-temperatures/) | [Daily Temperatures](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/Lc739DailyTemperatures.java) | Medium | Hash Table / Stack
 | [133](https://leetcode.com/problems/clone-graph/) | [Clone Graph](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/Lc133CloneGraph.java) | Medium | DFS / BFS / Graph
 | [895](https://leetcode.com/problems/maximum-frequency-stack/) | [Maximum Frequency Stack](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/Lc895MaxFreqStack.java) | Hard | Hash Table / Stack
+| [706](https://leetcode.com/problems/design-hashmap/) | [Design HashMap](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc706DesignHashMap.java) | Easy | Hash Table / Design
 
