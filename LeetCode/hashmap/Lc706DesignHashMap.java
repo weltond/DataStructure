@@ -7,13 +7,15 @@ Data Structure
 lookup table. An array of bucket, each bucket is associated with a linked list
 
 How to index bucket
-Step 1. Key could be arbitrary type, we have to translate the key to an interger. Fortunately, each java object has a hashCode() function, need only call Key's hashCode().
+Step 1. Key could be arbitrary type, we have to translate the key to an interger. Fortunately, 
+each java object has a hashCode() function, need only call Key's hashCode().
 
 Step 2. The interger obtained in the previous step may have bad quality. Amelirate with HashMap's internal hash().
 
 Step 3. mod by table length.
 
-hash(): XORs with higher 16 bits. Rationale: spread the impact of higher bits downward. Otherwise higher bits would never be used in index calculations if the table length is small;
+hash(): XORs with higher 16 bits. Rationale: spread the impact of higher bits downward. 
+Otherwise higher bits would never be used in index calculations if the table length is small;
 
 When to resize
 number of entries > loadFactor * capacity, where capacity is consistent to the table length.
@@ -21,7 +23,9 @@ number of entries > loadFactor * capacity, where capacity is consistent to the t
 How to resize
 Prerequisite: power of two table length, power of tow expansion.
 
-Observation: For each bucket in the old table, associated elements must either stay at same index or move forward with a fixed offset in the new table. The offset equals to old table length. In short, one old bucket is splitted into two new bucket, the index difference is exactly old table length.
+Observation: For each bucket in the old table, associated elements must either stay at same index or move forward 
+with a fixed offset in the new table. The offset equals to old table length. 
+In short, one old bucket is splitted into two new bucket, the index difference is exactly old table length.
 
 Advantage: each bucket is independent to each other. Parallelization is feasible.
 */
