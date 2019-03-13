@@ -30,6 +30,7 @@ class Solution {
         Map<Character, Integer> map = new HashMap();    // current index of character
         for (int i = 0; i < s.length(); i++) {
             if (map.containsKey(s.charAt(i))) {
+                // make sure j is not going back. Consider "abba".
                 left = Math.max(left, map.get(s.charAt(i)));
             }
             res = Math.max(res, i - left);
