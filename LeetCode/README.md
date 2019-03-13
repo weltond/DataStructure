@@ -75,3 +75,4 @@
 | [136](https://leetcode.com/problems/single-number/) | [Single Number](https://github.com/weltond/DataStructure/blob/master/LeetCode/bit/Lc136SingleNumber.java) | Easy | Hash Table / Bit
 | [205](https://leetcode.com/problems/isomorphic-strings/) | [Isomorphic Strings](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc205IsomorphicStrings.java) | Easy | Hash Table
 | [599](https://leetcode.com/problems/minimum-index-sum-of-two-lists/) | [Min Index Sum Of Two Lists](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc599MinIndexSumofTwoList.java) | Easy | Hash Table
+| [652](https://leetcode.com/problems/find-duplicate-subtrees/) | [Find Duplicate Subtrees](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc652FindDuplicateSubtree.java) | Medium | Tree
