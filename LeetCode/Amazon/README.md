@@ -54,7 +54,7 @@
 | <ul><li>- [ ] 682</li></ul>| Baseball Game | Easy | |
 | <ul><li>- [ ] 746</li></ul>| Min Cost Climbning Stairs | Easy |
 | <ul><li>- [ ] 763</li></ul>| Partition Labels | Medium | |
-| <ul><li>- [ ] 771</li></ul>| Jewels and Stones | Easy | |
+| <ul><li>- [X] [771](https://leetcode.com/problems/jewels-and-stones/)</li></ul>| [Jewels and Stones](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc771JewelsAndStones.java) | Easy | Hash Table |
 | <ul><li>- [ ] 819</li></ul>| Most Common Word | Easy | | Y
 | <ul><li>- [ ] 895</li></ul>| Maximum Frequency Stack | Hard | Hash Table / Stack | Y
 | <ul><li>- [X] 973</li></ul>| [K Closest Points to Origin](https://github.com/weltond/DataStructure/blob/master/LeetCode/Amazon/Lc973KClosestPointsToOrigin.java) | Easy | Math / Devide and Conquer / Sort | Y
