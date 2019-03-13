@@ -22,8 +22,8 @@ In a sudoku, you can combine the row index and the column index to identify whic
 (i, j) -> (i / 3) * 3 + j / 3
 ```
 
-###
-Sometimes, in a matrix, you might want to aggregate the values in the same **diagnoal line**.
+### Diagonal
+Sometimes, in a matrix, you might want to aggregate the values in the same **diagonal line**.
 ```
 Anti-Diagonal Order: (i, j) -> i + j
 
