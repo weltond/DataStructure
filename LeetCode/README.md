@@ -54,6 +54,7 @@
 | [3](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [Longest Substring Without Repeating Chars](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc3LongestSubstringWithoutRepeatingChars.java) | Medium | Hash Table / Two Pointers / String
 | [724](https://leetcode.com/problems/find-pivot-index/) | [Find Pivot Index](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc724FindPivotIndex.java) | Easy | Array
 | [66](https://leetcode.com/problems/plus-one/) | [Plus One](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc66PlusOne.java) | Easy | Array / Math
+| [350](https://leetcode.com/problems/intersection-of-two-arrays-ii/) | [Intersection of Two Arrayss II](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc350IntersectionOfTwoArraysII.java) | Easy | Hash / Two Pointers / Binary Search / Sort
 |[498](https://leetcode.com/problems/diagonal-traverse/) | [Diagonal Traverse](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc498DiagonalTraverse.java) | Medium | Array
 | [67](https://leetcode.com/problems/add-binary/) | [Add Binary](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc67AddBinary.java) | Easy | Math / String
 | [28](https://leetcode.com/problems/implement-strstr/) | [Implement strStr()](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc28ImplementStrStr.java) | Easy | Two Pointers / String
