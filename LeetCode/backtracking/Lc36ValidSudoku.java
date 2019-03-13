@@ -1,5 +1,81 @@
 // https://leetcode.com/problems/valid-sudoku/
 class Solution {
+    // ========== Method 3: Array =============
+    // 12ms
+    // Idea is: each row, col and cube is 3 different things. Calculate each by using its coordinates.
+    //      For row and col is easy, as to 9 cubes: they are mapped by -> (i / 3) * 3 + j / 3
+    public boolean isValidSudoku(char[][] board) {
+        if (board == null) return false;
+        
+        int[][] row = new int[9][9];
+        int[][] col = new int[9][9];
+        int[][] cube = new int[9][9];
+        
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[0].length; j++) {
+                if (board[i][j] == '.') continue;
+                
+                int num = board[i][j] - '0' - 1;
+                
+                if (row[i][num] == 1 || col[j][num] == 1 || cube[(i / 3) * 3 + (j / 3)][num] == 1) return false;
+                
+                row[i][num] = 1;
+                col[j][num] = 1;
+                // (i / 3) * 3 + (j / 3) is the k-th cube number where k = 0 ~ 9 
+                cube[(i / 3) * 3 + (j / 3)][num] = 1;
+            }
+        }
+        
+        return true;
+    }
+    
+    // ========== Method 2: Hash Style ===========
+    // 16ms
+    public boolean isValidSudoku(char[][] board) {
+        if (board == null) return false;
+        
+        for (int i = 0; i < board.length; i++) {
+            Set<Character> setRow = new HashSet();
+            for (int j = 0; j < board[0].length; j++) {
+                if (board[i][j] == '.') continue;
+                
+                if (setRow.contains(board[i][j]) || checkCube(board, i, j)) return false;
+                
+                setRow.add(board[i][j]);
+            }
+        }
+        
+        for (int i = 0; i < board[0].length; i++) {
+            Set<Character> setCol = new HashSet();
+            for (int j = 0; j < board.length; j++) {
+                if (board[j][i] == '.') continue;
+                
+                if (setCol.contains(board[j][i])) return false;
+                
+                setCol.add(board[j][i]);
+            }
+        }
+        
+        return true;
+    }
+    
+    private boolean checkCube(char[][] board, int x, int y) {
+        Set<Character> setCube = new HashSet();
+        int startX = x - x % 3;
+        int startY = y - y % 3;
+        for (int i = startX; i < 3 + startX; i++) {
+            for (int j = startY; j < 3 + startY; j++) {
+                if (setCube.contains(board[i][j])) return true;
+                if (board[i][j] != '.') {
+                    setCube.add(board[i][j]);
+                }
+            }
+        }
+        return false;
+    }
+    
+    // ========== Method 1: Backtracking Style ==========
+    // 14ms
     char[][] board;
     public boolean isValidSudoku(char[][] board) {
         if (board == null || board.length == 0) return true;
