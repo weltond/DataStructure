@@ -80,6 +80,6 @@
 | [347](https://leetcode.com/problems/top-k-frequent-elements/) | [Top K Frequent Elements](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc347TopKFrequentElements.java) | Medium | Hash Table / Heap
 | [652](https://leetcode.com/problems/find-duplicate-subtrees/) | [Find Duplicate Subtrees](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc652FindDuplicateSubtree.java) | Medium | Tree
 |[380](https://leetcode.com/problems/insert-delete-getrandom-o1/) | [Insert Delete GetRandom O(1)](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc380InsertDeleteRandomO1.java) | Medium | Array / Hash Table / Design
-
+|[56](https://leetcode.com/problems/merge-intervals/) | [Merge Intervals](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/Lc56MergeIntervals.java) | Medium | Array / Sort
 
 
