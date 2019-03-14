@@ -53,7 +53,7 @@
 | <ul><li>- [ ] 675</li></ul>| Cut Off Trees for Golf Event | Hard | BFS | Y
 | <ul><li>- [ ] 682</li></ul>| Baseball Game | Easy | |
 | <ul><li>- [ ] 746</li></ul>| Min Cost Climbning Stairs | Easy |
-| <ul><li>- [ ] 763</li></ul>| Partition Labels | Medium | |
+| <ul><li>- [X] [763](https://leetcode.com/problems/partition-labels/)</li></ul>| [Partition Labels](https://github.com/weltond/DataStructure/blob/master/LeetCode/greedy/Lc763PartitionLabels.java) | Medium | Two Pointers / Greedy|
 | <ul><li>- [X] [771](https://leetcode.com/problems/jewels-and-stones/)</li></ul>| [Jewels and Stones](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc771JewelsAndStones.java) | Easy | Hash Table |
 | <ul><li>- [ ] 819</li></ul>| Most Common Word | Easy | | Y
 | <ul><li>- [X] [895](https://leetcode.com/problems/maximum-frequency-stack/)</li></ul>| [Maximum Frequency Stack](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/Lc895MaxFreqStack.java) | Hard | Hash Table / Stack | Y
