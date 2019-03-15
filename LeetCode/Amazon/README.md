@@ -47,7 +47,7 @@
 | <ul><li>- [X] [380](https://leetcode.com/problems/insert-delete-getrandom-o1/)</li></ul>| [Insert Delete GetRandom O(1)](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc380InsertDeleteRandomO1.java) | Medium | Array / Hash Table / Design
 | <ul><li>- [ ] 387</li></ul>| First Unique Character in a String | Easy | |
 | <ul><li>- [ ] 535</li></ul>| Encode and Decode TinyURL | Medium | |
-| <ul><li>- [ ] 543</li></ul>| Diameter of Binary Tree | Easy | Tree | Y
+| <ul><li>- [X] [543](https://leetcode.com/problems/diameter-of-binary-tree/)</li></ul>| [Diameter of Binary Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc543DiameterOfBinaryTree.java) | Easy | Tree | Y
 | <ul><li>- [ ] 617</li></ul>| Merge Two Binary Trees | Easy | |
 | <ul><li>- [ ] 642</li></ul>| Design Search Autocomplete System | Hard | | Y
 | <ul><li>- [ ] 675</li></ul>| Cut Off Trees for Golf Event | Hard | BFS | Y
