@@ -48,7 +48,7 @@
 | <ul><li>- [ ] 387</li></ul>| First Unique Character in a String | Easy | |
 | <ul><li>- [ ] 535</li></ul>| Encode and Decode TinyURL | Medium | |
 | <ul><li>- [X] [543](https://leetcode.com/problems/diameter-of-binary-tree/)</li></ul>| [Diameter of Binary Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc543DiameterOfBinaryTree.java) | Easy | Tree | Y
-| <ul><li>- [ ] 617</li></ul>| Merge Two Binary Trees | Easy | |
+| <ul><li>- [X] [617](https://leetcode.com/problems/merge-two-binary-trees/)</li></ul>| [Merge Two Binary Trees](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc617MergeTwoBinaryTrees.java) | Easy | Tree |
 | <ul><li>- [ ] 642</li></ul>| Design Search Autocomplete System | Hard | | Y
 | <ul><li>- [ ] 675</li></ul>| Cut Off Trees for Golf Event | Hard | BFS | Y
 | <ul><li>- [ ] 682</li></ul>| Baseball Game | Easy | |
