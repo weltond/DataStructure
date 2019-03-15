@@ -33,7 +33,7 @@
 | <ul><li>- [ ] 204</li></ul>| Count Primes | Easy
 | <ul><li>- [ ] 206</li></ul>| Reverse Linked List | Easy
 | <ul><li>- [X] [212](https://leetcode.com/problems/word-search-ii/)</li></ul>| [Word Search II](https://github.com/weltond/DataStructure/blob/master/LeetCode/Amazon/Lc212WordSearchII.java) | Hard | Backtracking / Trie | Y
-| <ul><li>- [ ] 215</li></ul>| Kth Largest Element in an array | Medium
+| <ul><li>- [X] [215](https://leetcode.com/problems/kth-largest-element-in-an-array/)</li></ul> | [Kth Largest Element in Array](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/Lc215KthLargestEleInArray.java) | Medium | Divide and Conquer / Heap
 | <ul><li>- [ ] 234</li></ul>| Palindrome Linked List | Easy | |
 | <ul><li>- [ ] 235</li></ul>| LCA of a Binary Search Tree | Easy | |
 | <ul><li>- [X] [236](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)</li></ul>| [Lowest Common Ancestor of a Binary Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc236LCAofBinaryTree.java) | Medium | Tree
