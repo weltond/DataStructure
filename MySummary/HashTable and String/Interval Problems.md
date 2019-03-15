@@ -78,3 +78,9 @@ SO-> We need a data structure that keeps elements sorted and supports fast inser
     - key : start / end
     - value : +1 / -1
     - If there are triple booking, their start1, start2, start3 will be all greater than min(end1, end2, end3). We can easily get their values by using BST(TreeMap)
+
+### 4.3 [My Calendar III](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc732MyCalendarIII.java)
+
+- Approaches
+  - BST(TreeMap): same as My Calendar II
+  - Segment Tree: **TO DO**
