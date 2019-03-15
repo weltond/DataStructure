@@ -84,7 +84,7 @@
 |[763](https://leetcode.com/problems/partition-labels/) | [Partition Labels](https://github.com/weltond/DataStructure/blob/master/LeetCode/greedy/Lc763PartitionLabels.java) | Medium | Two Pointers / Greedy
 |[986](https://leetcode.com/problems/interval-list-intersections/) | [Interval List Intersections](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc986IntervalListIntersections.java) | Medium | Two Pointers
 |[729](https://leetcode.com/problems/my-calendar-i/) | [My Calendar I](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc729MyCalendarI.java) | Medium | Array / TreeMap
-
+|[731](https://leetcode.com/problems/my-calendar-ii/) | [My Calendar II](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc731MyCalendarII.java) | Medium | Array / BST
 
 
 
