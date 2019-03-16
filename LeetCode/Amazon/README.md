@@ -31,7 +31,7 @@
 | <ul><li>- [X] [199](https://leetcode.com/problems/binary-tree-right-side-view/)</li></ul>| [Binary Tree Right Side View](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc199BinaryTreeRightView.java) | Medium | Tree / DFS / BFS|
 | <ul><li>- [X] 200</li></ul>| [Number of Islands](https://github.com/weltond/DataStructure/blob/master/LeetCode/Amazon/Lc200NumberOfIslands.java) | Medium | DFS / BFS / Union Find | Y
 | <ul><li>- [ ] 204</li></ul>| Count Primes | Easy
-| <ul><li>- [ ] 206</li></ul>| Reverse Linked List | Easy
+| <ul><li>- [X] [206](https://leetcode.com/problems/reverse-linked-list/)</li></ul>| [Reverse Linked List](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc206ReverseLinkedList.java) | Easy | LinkedList
 | <ul><li>- [X] [212](https://leetcode.com/problems/word-search-ii/)</li></ul>| [Word Search II](https://github.com/weltond/DataStructure/blob/master/LeetCode/Amazon/Lc212WordSearchII.java) | Hard | Backtracking / Trie | Y
 | <ul><li>- [X] [215](https://leetcode.com/problems/kth-largest-element-in-an-array/)</li></ul> | [Kth Largest Element in Array](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/Lc215KthLargestEleInArray.java) | Medium | Divide and Conquer / Heap
 | <ul><li>- [ ] 234</li></ul>| Palindrome Linked List | Easy | |
