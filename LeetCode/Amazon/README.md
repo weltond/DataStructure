@@ -20,7 +20,7 @@
 | <ul><li>- [ ] 121</li></ul>| Best Time to Buy and Sell Stock | Easy
 | <ul><li>- [ ] 126</li></ul>| Word Ladder II | Hard | |
 | <ul><li>- [ ] 127</li></ul>| Word Ladder | Medium | BFS | Y
-| <ul><li>- [ ] 138</li></ul>| Copy List with Random Pointer | Medium | Hash Table / Linked List| Y
+| <ul><li>- [X] [138](https://leetcode.com/problems/copy-list-with-random-pointer/)</li></ul> | [Copy List With Random Pointer](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc138CopyListWithRandomPointer.java) | Medium | Hash Table / LinkedList | Y
 | <ul><li>- [ ] 139</li></ul>| Word Break | Medium
 | <ul><li>- [X] [141](https://leetcode.com/problems/linked-list-cycle/)</li></ul>| [Linked List Cycle](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc141LinkedListCycle.java) | Easy
 | <ul><li>- [X] [146](https://leetcode.com/problems/lru-cache/)</li></ul>| [LRU Cache](https://github.com/weltond/DataStructure/tree/master/LintCode/Design/134%20LRU%20Cache) | Hard | Design | Y
