@@ -99,3 +99,4 @@
 |[38](https://leetcode.com/problems/count-and-say/) | [Count and Say](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc38CountAndSay.java) | Easy | String
 |[121](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [Best Time to Buy and Sell Stock](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc121BestTimeToBuyStock.java) | Easy | Array / DP
 |[53](https://leetcode.com/problems/maximum-subarray/) | [Maximum Subarray](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc53MaximumSubarray.java) | Easy | Array / DP / Divide and Conquer
+| [139](https://leetcode.com/problems/word-break/) | [Word Break](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc139WordBreak.java) | Medium | DP
