@@ -42,7 +42,7 @@
 | <ul><li>- [ ] 240</li></ul>| Search a 2D matrix II | Medium | |
 | <ul><li>- [ ] 242</li></ul>| Valid Anagram | Easy | |
 | <ul><li>- [ ] 295</li></ul>| Find Median from Data Stream | Hard | Heap / Design | Y
-| <ul><li>- [ ] 297</li></ul>| Serialize and Deserialize Binary Tree | Hard
+| <ul><li>- [X] [297](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)</li></ul> | [Seriallize and DeSerialize Binary Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc297SerialAndDeBinaryTree.java) | Hard | Tree / Design
 | <ul><li>- [ ] 322</li></ul>| Coin Change | Medium | DP | Y
 | <ul><li>- [X] [380](https://leetcode.com/problems/insert-delete-getrandom-o1/)</li></ul>| [Insert Delete GetRandom O(1)](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc380InsertDeleteRandomO1.java) | Medium | Array / Hash Table / Design
 | <ul><li>- [ ] 387</li></ul>| First Unique Character in a String | Easy | |
