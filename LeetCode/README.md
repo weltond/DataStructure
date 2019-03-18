@@ -96,3 +96,4 @@
 | [234](https://leetcode.com/problems/palindrome-linked-list/) | [Palindrome LinkedList](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc234PalindromeLinkedList.java) | Easy | LinkedList / Two Pointers
 | [297](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | [Seriallize and DeSerialize Binary Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc297SerialAndDeBinaryTree.java) | Hard | Tree / Design
 |[138](https://leetcode.com/problems/copy-list-with-random-pointer/) | [Copy List With Random Pointer](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc138CopyListWithRandomPointer.java) | Medium | Hash Table / LinkedList
+|[38](https://leetcode.com/problems/count-and-say/) | [Count and Say](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc38CountAndSay.java) | Easy | String
