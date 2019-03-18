@@ -21,7 +21,7 @@
 | <ul><li>- [ ] 126</li></ul>| Word Ladder II | Hard | |
 | <ul><li>- [ ] 127</li></ul>| Word Ladder | Medium | BFS | Y
 | <ul><li>- [X] [138](https://leetcode.com/problems/copy-list-with-random-pointer/)</li></ul> | [Copy List With Random Pointer](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc138CopyListWithRandomPointer.java) | Medium | Hash Table / LinkedList | Y
-| <ul><li>- [ ] 139</li></ul>| Word Break | Medium
+| <ul><li>- [X] [139](https://leetcode.com/problems/word-break/)</li></ul> | [Word Break](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc139WordBreak.java) | Medium | DP
 | <ul><li>- [X] [141](https://leetcode.com/problems/linked-list-cycle/)</li></ul>| [Linked List Cycle](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc141LinkedListCycle.java) | Easy
 | <ul><li>- [X] [146](https://leetcode.com/problems/lru-cache/)</li></ul>| [LRU Cache](https://github.com/weltond/DataStructure/tree/master/LintCode/Design/134%20LRU%20Cache) | Hard | Design | Y
 | <ul><li>- [X] [155](https://leetcode.com/problems/min-stack/)</li></ul>| [Min Stack](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/Lc155MinStack.java) | Easy | Stack / Design
