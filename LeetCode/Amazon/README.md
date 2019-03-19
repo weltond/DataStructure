@@ -17,7 +17,7 @@
 | <ul><li>- [X] [78](https://leetcode.com/problems/subsets/)</li></ul>| [Subsets](https://github.com/weltond/DataStructure/blob/master/LeetCode/Amazon/Lc78Subsets.java) | Medium | Array / Backtracking / Bit|
 | <ul><li>- [ ] 102</li></ul>| Binary Tree Level Order Traversal | Medium | |
 | <ul><li>- [ ] 119</li></ul>| Pascal's Triangle II | Easy | |
-| <ul><li>- [ ] 121</li></ul>| Best Time to Buy and Sell Stock | Easy
+| <ul><li>- [X] [121](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)</li></ul>| [Best Time to Buy and Sell Stock](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc121BestTimeToBuyStock.java) | Easy | Array / DP
 | <ul><li>- [ ] 126</li></ul>| Word Ladder II | Hard | |
 | <ul><li>- [ ] 127</li></ul>| Word Ladder | Medium | BFS | Y
 | <ul><li>- [X] [138](https://leetcode.com/problems/copy-list-with-random-pointer/)</li></ul> | [Copy List With Random Pointer](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc138CopyListWithRandomPointer.java) | Medium | Hash Table / LinkedList | Y
