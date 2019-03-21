@@ -25,7 +25,7 @@
 | <ul><li>- [X] [141](https://leetcode.com/problems/linked-list-cycle/)</li></ul>| [Linked List Cycle](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc141LinkedListCycle.java) | Easy
 | <ul><li>- [X] [146](https://leetcode.com/problems/lru-cache/)</li></ul>| [LRU Cache](https://github.com/weltond/DataStructure/tree/master/LintCode/Design/134%20LRU%20Cache) | Hard | Design | Y
 | <ul><li>- [X] [155](https://leetcode.com/problems/min-stack/)</li></ul>| [Min Stack](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/Lc155MinStack.java) | Easy | Stack / Design
-| <ul><li>- [ ] 160</li></ul>| Intersection of Two Linked List | Easy
+| <ul><li>- [X] [160](https://leetcode.com/problems/intersection-of-two-linked-lists/)</li></ul> | [Intersection of Two LinkedLists](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc160IntersectionOfTwoLinkedList.java) | Easy | LinkedList
 | <ul><li>- [X] [167](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)</li></ul>| [Two Sum II - Input array is sorted](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc167TwoSumII.java) | Easy | Array / Two Pointers / Binary Search |
 | <ul><li>- [ ] 189</li></ul>| Rotate Array | Easy | |
 | <ul><li>- [X] [199](https://leetcode.com/problems/binary-tree-right-side-view/)</li></ul>| [Binary Tree Right Side View](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc199BinaryTreeRightView.java) | Medium | Tree / DFS / BFS|
