@@ -107,3 +107,4 @@
 |[647](https://leetcode.com/problems/palindromic-substrings/) | [Palindromic Substrings](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc647PalindromicSubstrings.java) | Medium | String / DP
 |[322](https://leetcode.com/problems/coin-change/) | [Coin Change](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc322CoinChange.java) | Medium | DP
 |[746](https://leetcode.com/problems/min-cost-climbing-stairs/) | [Min Cost Climbing Stairs](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc746MinCostClimbingStairs.java) | Easy | DP
+| [675](https://leetcode.com/problems/cut-off-trees-for-golf-event/) | [Cut Off Trees for Golf Event](https://github.com/weltond/DataStructure/blob/master/LeetCode/queue/Lc675CutOffTreesforGolfEvent.java) | Hard | BFS
