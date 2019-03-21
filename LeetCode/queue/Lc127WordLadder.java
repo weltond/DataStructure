@@ -34,13 +34,16 @@ class Solution {
                         if (c == ch) continue;
                         arr[j] = c;
                         String s = new String(arr);
+                        
+                        // return if found a matching word in end set
                         if (end.contains(s)) {
                             return steps + 1;
                         }
+                        // otherwise add it to tmp(next round of end)
                         if (list.contains(s)) {
                             //System.out.println("?" + s);
                             tmp.add(s);
-                            list.remove(s);
+                            list.remove(s); // remove it from wordList to avoid re-traverse
                         }
                     }
                     arr[j] = ch;
@@ -54,6 +57,7 @@ class Solution {
 
         }
         
+        // no matching found
         return 0;
     }
 }
