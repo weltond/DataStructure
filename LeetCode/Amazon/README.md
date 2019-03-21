@@ -50,7 +50,7 @@
 | <ul><li>- [X] [543](https://leetcode.com/problems/diameter-of-binary-tree/)</li></ul>| [Diameter of Binary Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc543DiameterOfBinaryTree.java) | Easy | Tree | Y
 | <ul><li>- [X] [617](https://leetcode.com/problems/merge-two-binary-trees/)</li></ul>| [Merge Two Binary Trees](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc617MergeTwoBinaryTrees.java) | Easy | Tree |
 | <ul><li>- [ ] 642</li></ul>| Design Search Autocomplete System | Hard | | Y
-| <ul><li>- [ ] 675</li></ul>| Cut Off Trees for Golf Event | Hard | BFS | Y
+| <ul><li>- [X] [675](https://leetcode.com/problems/cut-off-trees-for-golf-event/)</li></ul> | [Cut Off Trees for Golf Event](https://github.com/weltond/DataStructure/blob/master/LeetCode/queue/Lc675CutOffTreesforGolfEvent.java) | Hard | BFS | Y
 | <ul><li>- [ ] 682</li></ul>| Baseball Game | Easy | |
 | <ul><li>- [X] [746](https://leetcode.com/problems/min-cost-climbing-stairs/)</li></ul> | [Min Cost Climbing Stairs](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc746MinCostClimbingStairs.java) | Easy | DP
 | <ul><li>- [X] [763](https://leetcode.com/problems/partition-labels/)</li></ul>| [Partition Labels](https://github.com/weltond/DataStructure/blob/master/LeetCode/greedy/Lc763PartitionLabels.java) | Medium | Two Pointers / Greedy|
