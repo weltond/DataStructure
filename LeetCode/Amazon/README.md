@@ -18,7 +18,7 @@
 | <ul><li>- [ ] 102</li></ul>| Binary Tree Level Order Traversal | Medium | |
 | <ul><li>- [ ] 119</li></ul>| Pascal's Triangle II | Easy | |
 | <ul><li>- [X] [121](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)</li></ul>| [Best Time to Buy and Sell Stock](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc121BestTimeToBuyStock.java) | Easy | Array / DP
-| <ul><li>- [ ] 126</li></ul>| Word Ladder II | Hard | |
+| <ul><li>- [X] [126](https://leetcode.com/problems/word-ladder-ii/)</li></ul> | [Word Ladder II](https://github.com/weltond/DataStructure/blob/master/LeetCode/queue/Lc126WordLadderII.java) | Hard | Array / String / Backtracking / BFS
 | <ul><li>- [X] [127](https://leetcode.com/problems/word-ladder/)</li></ul> | [Word Ladder](https://github.com/weltond/DataStructure/blob/master/LeetCode/queue/Lc127WordLadder.java) | Medium | BFS | Y
 | <ul><li>- [X] [138](https://leetcode.com/problems/copy-list-with-random-pointer/)</li></ul> | [Copy List With Random Pointer](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc138CopyListWithRandomPointer.java) | Medium | Hash Table / LinkedList | Y
 | <ul><li>- [X] [139](https://leetcode.com/problems/word-break/)</li></ul> | [Word Break](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc139WordBreak.java) | Medium | DP
