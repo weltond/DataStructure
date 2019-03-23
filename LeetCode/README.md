@@ -114,3 +114,4 @@
 | [239](https://leetcode.com/problems/sliding-window-maximum/) | [Sliding Window Maximum](https://github.com/weltond/DataStructure/blob/master/LeetCode/queue/Lc239SlidingWindowMaximum.java) | Hard | Heap / Sliding Window
 | [340]() | [Longest Substring with At Most K Distinct](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc340LongestSubstringWithAtMostKDistinctChar.java) | Hard | 
 | [535](https://leetcode.com/problems/encode-and-decode-tinyurl/) | [Encode and Decode TinyURL](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc535EncodeAndDecodeTinyURL.java) | Medium | Hash Table / Math
+| [189](https://leetcode.com/problems/rotate-array/) | [Rotate Array](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc189RotateArray.java) | Easy | Array
