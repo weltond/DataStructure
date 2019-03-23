@@ -16,7 +16,7 @@
 | <ul><li>- [ ] 73</li></ul>| Set Matrix Zeroes | Medium | |
 | <ul><li>- [X] [78](https://leetcode.com/problems/subsets/)</li></ul>| [Subsets](https://github.com/weltond/DataStructure/blob/master/LeetCode/Amazon/Lc78Subsets.java) | Medium | Array / Backtracking / Bit|
 | <ul><li>- [ ] 102</li></ul>| Binary Tree Level Order Traversal | Medium | |
-| <ul><li>- [ ] 119</li></ul>| Pascal's Triangle II | Easy | |
+| <ul><li>- [X] [119](https://leetcode.com/problems/pascals-triangle-ii/)</li></ul> | [Pascal's Triangle II](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc119PascalTriangleII.java) | Easy | Array
 | <ul><li>- [X] [121](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)</li></ul>| [Best Time to Buy and Sell Stock](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc121BestTimeToBuyStock.java) | Easy | Array / DP
 | <ul><li>- [X] [126](https://leetcode.com/problems/word-ladder-ii/)</li></ul> | [Word Ladder II](https://github.com/weltond/DataStructure/blob/master/LeetCode/queue/Lc126WordLadderII.java) | Hard | Array / String / Backtracking / BFS
 | <ul><li>- [X] [127](https://leetcode.com/problems/word-ladder/)</li></ul> | [Word Ladder](https://github.com/weltond/DataStructure/blob/master/LeetCode/queue/Lc127WordLadder.java) | Medium | BFS | Y
