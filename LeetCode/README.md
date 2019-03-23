@@ -115,3 +115,4 @@
 | [340]() | [Longest Substring with At Most K Distinct](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc340LongestSubstringWithAtMostKDistinctChar.java) | Hard | 
 | [535](https://leetcode.com/problems/encode-and-decode-tinyurl/) | [Encode and Decode TinyURL](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc535EncodeAndDecodeTinyURL.java) | Medium | Hash Table / Math
 | [189](https://leetcode.com/problems/rotate-array/) | [Rotate Array](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc189RotateArray.java) | Easy | Array
+| [119](https://leetcode.com/problems/pascals-triangle-ii/) | [Pascal's Triangle II](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc119PascalTriangleII.java) | Easy | Array
