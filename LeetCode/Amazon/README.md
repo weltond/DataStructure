@@ -27,7 +27,7 @@
 | <ul><li>- [X] [155](https://leetcode.com/problems/min-stack/)</li></ul>| [Min Stack](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/Lc155MinStack.java) | Easy | Stack / Design
 | <ul><li>- [X] [160](https://leetcode.com/problems/intersection-of-two-linked-lists/)</li></ul> | [Intersection of Two LinkedLists](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc160IntersectionOfTwoLinkedList.java) | Easy | LinkedList
 | <ul><li>- [X] [167](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)</li></ul>| [Two Sum II - Input array is sorted](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc167TwoSumII.java) | Easy | Array / Two Pointers / Binary Search |
-| <ul><li>- [ ] 189</li></ul>| Rotate Array | Easy | |
+| <ul><li>- [X] [189](https://leetcode.com/problems/rotate-array/)</li></ul> | [Rotate Array](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc189RotateArray.java) | Easy | Array
 | <ul><li>- [X] [199](https://leetcode.com/problems/binary-tree-right-side-view/)</li></ul>| [Binary Tree Right Side View](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc199BinaryTreeRightView.java) | Medium | Tree / DFS / BFS|
 | <ul><li>- [X] 200</li></ul>| [Number of Islands](https://github.com/weltond/DataStructure/blob/master/LeetCode/Amazon/Lc200NumberOfIslands.java) | Medium | DFS / BFS / Union Find | Y
 | <ul><li>- [ ] 204</li></ul>| Count Primes | Easy
