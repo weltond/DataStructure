@@ -119,3 +119,4 @@
 | [118](https://leetcode.com/problems/pascals-triangle/) | [Pascal's Triangle](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc118PascalTriangle.java) | Easy | Array
 |[62](https://leetcode.com/problems/unique-paths/) | [Unique Paths](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc62UniquePaths.java) | Medium | Array / DP
 | [63](https://leetcode.com/problems/unique-paths-ii/) | [Unique Paths II](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc63UniquePathsII.java) | Medium | Array / DP
+| [207](https://leetcode.com/problems/course-schedule/) | [Course Schedule](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/Lc207CourseSchedule.java) | 
