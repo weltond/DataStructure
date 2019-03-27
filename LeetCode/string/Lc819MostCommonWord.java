@@ -4,6 +4,7 @@ class Solution {
     public String mostCommonWord(String paragraph, String[] banned) {
         if (paragraph == null || paragraph.length() == 0) return "";
         
+        // NOTICE No.1
         paragraph += ".";   // in order to avoid missing the last word
         
         Set<String> set = new HashSet();
@@ -17,9 +18,12 @@ class Solution {
         for (char c : paragraph.toCharArray()) {
             if (Character.isLetter(c)) {
                 word.append(Character.toLowerCase(c));
-            } else if (word.length() > 0) { // avoid empty string
+            } 
+            // NOTICE No.2
+            else if (word.length() > 0) { // avoid empty string
                 String str = word.toString();
                 if (set.contains(str)) {
+                    // NOTICE No.3
                     word = new StringBuilder();
                     continue;
                 }
