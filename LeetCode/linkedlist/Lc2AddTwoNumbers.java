@@ -40,7 +40,7 @@ class Solution {
             cur = cur.next;
         }
         
-        if (factor == 1) cur.next = new ListNode(1);
+        if (factor > 0) cur.next = new ListNode(factor);
         
         return dummy.next;
     }
