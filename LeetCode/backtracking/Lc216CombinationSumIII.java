@@ -39,3 +39,33 @@ class Solution {
         }
     }
 }
+
+
+class Solution {
+    public List<List<Integer>> combinationSum3(int k, int n) {
+        List<List<Integer>> res = new ArrayList();
+        
+        bt(k, 1, 0, n, new ArrayList(), res);
+        
+        return res;
+    }
+    
+    private void bt(int totalNum, int lvl, int cnt, int rem, List list, List res) {
+        if (cnt > totalNum) return;
+        
+        if (rem == 0 && cnt == totalNum) {
+            res.add(new ArrayList(list));
+            return;
+        }
+        
+        for (int i = lvl; i <= 9; i++) {
+            if (rem < i) break;     // pruning
+            
+            list.add(i);
+            
+            bt(totalNum, i + 1, cnt + 1, rem - i, list, res);
+            
+            list.remove(list.size() - 1);
+        }
+    }
+}
