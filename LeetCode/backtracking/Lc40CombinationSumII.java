@@ -1,6 +1,8 @@
 // https://leetcode.com/problems/combination-sum-ii/
 
 class Solution {
+    // ============ Backtracking ==========
+    // 4ms (99.74%)
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         List<List<Integer>> res = new ArrayList();
         
@@ -8,34 +10,32 @@ class Solution {
         
         Arrays.sort(candidates);
         
-        List<Integer> list = new ArrayList();
-        bt(candidates, target, 0, list, res);
+        bt(candidates, 0, target, new ArrayList(), res);
         
         return res;
     }
     
-    private void bt(int[] arr, int target, int start, List<Integer> list, List<List<Integer>> res) {
-        if (target == 0) {
+    private void bt(int[] arr, int level, int rem, List list, List res) {
+        if (rem == 0) {
             res.add(new ArrayList(list));
             return;
         }
+        
+        
         Set<Integer> set = new HashSet();
-        for (int i = start; i < arr.length; i++) {
-            
-            // avoid duplicate numbers in arr
+        for (int i = level; i < arr.length; i++) {
+            // skip same value on the same level
             if (!set.add(arr[i])) continue;
+            // NOT compare with the next or previous one.
+            //if (arr[i] == arr[level - 1]) continue;    
             
-            // cut(early stop) if current doesn't match
-            // we can do this because the array is sorted
-            if (target < arr[i]) break;
+            if (rem - arr[i] < 0) break;    // stop early if rem is smaller than current
             
             list.add(arr[i]);
             
-            // next level(depth) should start with the next element (i + 1)
-            bt(arr, target - arr[i], i + 1, list, res);
+            bt(arr, i + 1, rem - arr[i], list, res);
             
             list.remove(list.size() - 1);
-            
         }
     }
 }
