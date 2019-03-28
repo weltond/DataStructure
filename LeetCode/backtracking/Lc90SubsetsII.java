@@ -66,9 +66,12 @@ class Solution {
     }
     private void dfs(int[] nums, int index, List<List<Integer>> res, List<Integer> curr){
         res.add(new ArrayList<>(curr));
+        
+        // we actually don't need this if statement.
         if(index == nums.length){
             return;
         }
+        
         Set<Integer> visited = new HashSet<Integer>();
         for(int i = index; i < nums.length; i++){
             if(visited.add(nums[i])){
