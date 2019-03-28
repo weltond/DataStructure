@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/subsets-ii/
-class Solution {
-    /**
+
+/**
     Input: [1,2,2]
     Output:
     [
@@ -11,7 +11,10 @@ class Solution {
       [1,2],
       []
     ]
-    */
+*/
+class Solution {
+    // on each level, add or not add
+    // output is : [[1,2,2],[1,2],[1],[2,2],[2],[]]
     public List<List<Integer>> subsetsWithDup(int[] nums) {
         List<List<Integer>> res = new ArrayList();
         
@@ -49,6 +52,8 @@ class Solution {
 
 /*Another Solution*/
 class Solution {
+    // like combination sum.
+    // output is : [[],[1],[1,2],[1,2,2],[2],[2,2]]
     public List<List<Integer>> subsetsWithDup(int[] nums) {
         List<List<Integer>> res = new ArrayList<>();
         if(nums == null || nums.length == 0){
