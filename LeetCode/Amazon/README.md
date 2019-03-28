@@ -4,8 +4,8 @@
 | <ul><li>- [X] [2](https://leetcode.com/problems/add-two-numbers/)</li></ul> | [Add Two Numbers](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc2AddTwoNumbers.java) | Medium | LinkedList / Math | Y
 | <ul><li>- [X] [3](https://leetcode.com/problems/longest-substring-without-repeating-characters/)</li></ul>| [Longest Substring Without Repeating Characters](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc3LongestSubstringWithoutRepeatingChars.java) | Medium | Hash Table / Two Pointers / String
 | <ul><li>- [X] [5](https://leetcode.com/problems/longest-palindromic-substring/)</li></ul>| [Longest Palindromic Substring](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc5LongestPalindromicSubstring.java) | Medium | String / DP | Y
-| <ul><li>- [X] [8](https://leetcode.com/problems/string-to-integer-atoi/)</li></ul>| [String to Integer (atoi)](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc8StringToInteger.java) | Medium | Math / String
-| <ul><li>- [ ] 15</li></ul>| 3 Sum | Medium
+| <ul><li>- [X] [8](https://leetcode.com/problems/string-to-integer-atoi/)</li></ul>| [String to Integer (atoi)](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc8StringToInteger.java) | Medium | Math / String<ul><li>- [ ] 
+| <ul><li>- [X] [15](https://leetcode.com/problems/3sum/) | [3 Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc15ThreeSum.java)</li></ul> | Medium | Array / Two Pointers
 | <ul><li>- [X] [17](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)</li></ul> | [Letter Combinations of a Phone Number](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc17LettersCombinationsofPhone.java) | Medium | String / Backtracking
 | <ul><li>- [ ] 20</li></ul>| Valid Parenthese | Easy
 | <ul><li>- [ ] 21</li></ul>| Merge Two Sorted List | Easy | Linked List| Y
