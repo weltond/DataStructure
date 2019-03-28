@@ -124,3 +124,4 @@
 | [238](https://leetcode.com/problems/product-of-array-except-self/) | [Product of Array Except Self](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc238ProductOfArrayExceptSelf.java) | Medium | Array
 | [2](https://leetcode.com/problems/add-two-numbers/) | [Add Two Numbers](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc2AddTwoNumbers.java) | Medium | LinkedList / Math
 | [17](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | [Letter Combinations of a Phone Number](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc17LettersCombinationsofPhone.java) | Medium | String / Backtracking
+| [140](https://leetcode.com/problems/word-break-ii/) | [Word Break II](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc140WordBreakII.java) | Hard | DP / Backtracking
