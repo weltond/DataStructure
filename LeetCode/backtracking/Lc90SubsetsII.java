@@ -1,5 +1,17 @@
 // https://leetcode.com/problems/subsets-ii/
 class Solution {
+    /**
+    Input: [1,2,2]
+    Output:
+    [
+      [2],
+      [1],
+      [1,2,2],
+      [2,2],
+      [1,2],
+      []
+    ]
+    */
     public List<List<Integer>> subsetsWithDup(int[] nums) {
         List<List<Integer>> res = new ArrayList();
         
