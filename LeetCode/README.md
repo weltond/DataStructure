@@ -125,3 +125,4 @@
 | [2](https://leetcode.com/problems/add-two-numbers/) | [Add Two Numbers](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc2AddTwoNumbers.java) | Medium | LinkedList / Math
 | [17](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | [Letter Combinations of a Phone Number](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc17LettersCombinationsofPhone.java) | Medium | String / Backtracking
 | [140](https://leetcode.com/problems/word-break-ii/) | [Word Break II](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc140WordBreakII.java) | Hard | DP / Backtracking
+| [377](https://leetcode.com/problems/combination-sum-iv/) | [Combination Sum IV](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc377CombinationSumIV.java) | Medium | DP / DFS
