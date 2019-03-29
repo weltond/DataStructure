@@ -67,7 +67,9 @@ void bt(int k, int lvl, int cnt, int n） {
 ```
   - 6.4 Combination Sum IV: Given array Non-duplicate. Find number of combinations that add up to target.
     - DFS + Memoization
+    - DP. dp[i] represents how many combinations to get to sum i.
 ```java
+// ============== DFS + Memoization ===============
 int dfs(int[] nums, int rem, int[] memo) {
     // SHOULDN'T use 0 as default
     // Otherwise we won't know whether is no result or not visited yet.
@@ -81,8 +83,9 @@ int dfs(int[] nums, int rem, int[] memo) {
     return sum;
 }
 ``` 
-    - DP。 dp[i] represents how many combinations to get to sum i.
 ```java
+
+// ============== DP ===============
 int[] dp = int[target + 1];
 dp[0] = 1;
 for (int i = 0; i <= target) {
