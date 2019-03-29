@@ -65,7 +65,18 @@ void bt(int k, int lvl, int cnt, int n） {
     }
 }
 ```
-  - 6.4 Combination Sum IV: Given array Non-duplicate. Find number of combinations that add up to target.
+  - 6.4 Combination: Return all possible combinations of `k` numbers out of 1...n. 
+```java
+dfs(int start, int end, int depth) {
+    if (depth == 0) {}  // base case
+    for (int i = start; i <= end - depth + 1) {
+        list.add();
+        dfs(i + 1, end, depth - 1);
+        list.remove();
+    }
+}
+```
+  - 6.5 Combination Sum IV: Given array Non-duplicate. Find number of combinations that add up to target.
     - DFS + Memoization
     - DP. dp[i] represents how many combinations to get to sum i.
 ```java
