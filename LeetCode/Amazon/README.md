@@ -8,7 +8,7 @@
 | <ul><li>- [X] [15](https://leetcode.com/problems/3sum/) | [3 Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc15ThreeSum.java)</li></ul> | Medium | Array / Two Pointers
 | <ul><li>- [X] [17](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)</li></ul> | [Letter Combinations of a Phone Number](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc17LettersCombinationsofPhone.java) | Medium | String / Backtracking
 | <ul><li>- [ ] 20</li></ul>| Valid Parenthese | Easy
-| <ul><li>- [ ] 21</li></ul>| Merge Two Sorted List | Easy | Linked List| Y
+| <ul><li>- [X] [21](https://leetcode.com/problems/merge-two-sorted-lists/)</li></ul> | [Merge Two Sorted Lists](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc21MergeTwoSortedLists.java) | Easy | LinkedList | Y
 | <ul><li>- [X] 23</li></ul>| Merge k Sorted List | Hard |Linked List / Divide and Conquer / Heap | Y
 | <ul><li>- [ ] 42</li></ul>| Trapping Rain Water | Hard | Array / Two Pointers / Stack | Y
 | <ul><li>- [ ] 48</li></ul>| Rotate Image | Medium | |
