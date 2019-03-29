@@ -21,3 +21,75 @@ A solution set is:
  a(a) |  aa() |    a()     |              | a()   |            |                              <---- lvl 3
 a()   |       |                                                                               <---- lvl 4
 ```
+5. 对于2sum，3sum，4sum基本就两种做法：
+  - Two Pointers：固定前1个或2个，然后对剩下的两个做双指针。注意必须**排序**。
+  - Hash Table： 存储之前的和，再在后面查找map中的值。无需排序。
+
+6. Combination Sum相关问题。想清楚recursion时候从哪里作为起始点。注意必须先**排序**。
+  - 6.1 Combination Sum: Given Non-Duplicate array and target, return solution set. **Each number can be used unlimited**.
+```java
+void bt(int[] arr, int level, int rem){
+    for (int i = level) {
+        list.add();
+        bt(arr, i, rem - arr[i]); // next level start from i, NOT level + 1, to 1) reuse number; 2) avoid duplicate result
+        list.remove();
+    }
+}
+```
+  - 6.2 Combination Sum II: Given Duplicate array and target, return solution set. **Each number can ONLY be used once**.
+```java
+void bt(int[] arr, int level, int rem) {
+    Set<Integer> set = new HashSet();
+    for (int i = level) {
+        if (!set.add(arr[i])) continue; // skip same value on the same level
+        if (rem - arr[i] < 0) break;  // pruning
+        
+        list.add();
+        bt(arr, i + 1, rem - arr[i]); // next level start from i + 1 becuase each number can only be used once.
+        list.remove();
+    }
+}
+```
+  - 6.3 Combintaion Sum III: Find all set combinations of `k` numbers that add up to a number `n`.
+```java
+void bt(int k, int lvl, int cnt, int n） {
+    if (cnt > k) return;  // pruning
+    if (rem == 0 && cnt == k) {} // base case
+    
+    for (int i = lvl) {
+        if (n < i) break; // pruning
+        
+        list.add();
+        bt(k, i + 1, cnt + 1);  // next level obviously starts from i + 1 because each number is unique
+        list.remove();
+    }
+}
+```
+  - 6.4 Combination Sum IV: Given array Non-duplicate. Find number of combinations that add up to target.
+    - DFS + Memoization
+```java
+int dfs(int[] nums, int rem, int[] memo) {
+    // SHOULDN'T use 0 as default
+    // Otherwise we won't know whether is no result or not visited yet.
+    if (memo[rem] != -1) return memo[rem];  
+    if (rem == 0) return 1; // base case
+    for (int i = 0) {
+        if (rem < nums[i]) break; // pruning
+        sum += dfs(nums, rem- nums[i], memo);
+    }
+    memo[rem] = sum;
+    return sum;
+}
+``` 
+    - DP。 dp[i] represents how many combinations to get to sum i.
+```java
+int[] dp = int[target + 1];
+dp[0] = 1;
+for (int i = 0; i <= target) {
+    for (int j = 0; j < nums.length) {
+        if (i < nums[j]) continue;
+        dp[i] += dp[i - nums[j]];
+    }
+}
+return dp[target];
+```
