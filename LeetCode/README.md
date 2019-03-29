@@ -129,3 +129,4 @@
 | [22](https://leetcode.com/problems/generate-parentheses/) | [Generate Parentheses](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc22GenerateParentheses.java) | Medium | String / Backtracking
 | [15](https://leetcode.com/problems/3sum/) | [3 Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc15ThreeSum.java) | Medium | Array / Two Pointers
 | [16](https://leetcode.com/problems/3sum-closest/) | [3 Sum Closest](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc16ThreeSumClosest.java) | Medium | Array / Two Pointers
+| [21](https://leetcode.com/problems/merge-two-sorted-lists/) | [Merge Two Sorted Lists](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc21MergeTwoSortedLists.java) | Easy | LinkedList
