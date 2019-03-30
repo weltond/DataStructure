@@ -28,7 +28,26 @@ class Solution4 {
     }
 	
 	// Approach 2: Recursion
+	// 3ms (99.42%)
+    public ListNode mergeKLists(ListNode[] lists) {
+        if (lists == null || lists.length == 0) return null;
+        
+        mergeSort(lists, 0, lists.length - 1);
+        
+        return lists[0];
+    }
     
+    private void mergeSort(ListNode[] lists, int start, int end) {
+        if (start >= end) return;
+        
+        int mid = start + ((end - start) >> 1);
+
+        mergeSort(lists, start, mid);
+        mergeSort(lists, mid + 1, end);
+        
+        lists[start] = merge(lists[start], lists[mid + 1]);
+    }
+	
 	private ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if (l1 == null || l2 == null) return l1 == null ? l2 : l1;
         
