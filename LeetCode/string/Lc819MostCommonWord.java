@@ -1,5 +1,11 @@
 // https://leetcode.com/problems/most-common-word/
 
+/**
+Input: 
+paragraph = "Bob hit a ball, the hit BALL flew far after it was hit."
+banned = ["hit"]
+Output: "ball"
+*/
 class Solution {
     public String mostCommonWord(String paragraph, String[] banned) {
         if (paragraph == null || paragraph.length() == 0) return "";
