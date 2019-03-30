@@ -6,6 +6,8 @@
 
 // Time = O(nlogk), Space = O(k)
 class Solution4 {
+	// Approach 1: Iteration
+	// 2ms (99.98%)
     public ListNode mergeKLists(ListNode[] lists) {
         if (lists == null || lists.length == 0) return null;
         
@@ -24,30 +26,43 @@ class Solution4 {
         
         return lists[0];
     }
+	
+	// Approach 2: Recursion
     
-    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        ListNode res = new ListNode(0); // dummy node
-        ListNode cur = res;
-        while (l1 != null && l2 != null) {
-            if (l1.val <= l2.val) {
-                cur.next = l1;
-                l1 = l1.next;
-            } else {
-                cur.next = l2;
-                l2 = l2.next;
-            }
-            cur = cur.next;
-        }
+	private ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        if (l1 == null || l2 == null) return l1 == null ? l2 : l1;
         
-        if (l1 != null) {
-            cur.next = l1;
-        } 
-        if (l2 != null) {
-            cur.next = l2;
+        if (l1.val < l2.val) {
+            l1.next = mergeTwoLists(l1.next, l2);
+            return l1;
+        } else {
+            l2.next = mergeTwoLists(l1, l2.next);
+            return l2;
         }
-        
-        return res.next;
     }
+//     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+//         ListNode res = new ListNode(0); // dummy node
+//         ListNode cur = res;
+//         while (l1 != null && l2 != null) {
+//             if (l1.val <= l2.val) {
+//                 cur.next = l1;
+//                 l1 = l1.next;
+//             } else {
+//                 cur.next = l2;
+//                 l2 = l2.next;
+//             }
+//             cur = cur.next;
+//         }
+        
+//         if (l1 != null) {
+//             cur.next = l1;
+//         } 
+//         if (l2 != null) {
+//             cur.next = l2;
+//         }
+        
+//         return res.next;
+//     }
 }
 
 
@@ -59,37 +74,61 @@ class Solution4 {
 
 // Time = O(nlogk), Space = O(k)
 class Solution3 {
-	static class MyComparator implements Comparator<ListNode> {
-		public int compare(ListNode l1, ListNode l2) {
-			return l1.val - l2.val;
-		}
-	}
+	// ============ Method 2: PriorityQueue =============
+    // 34ms (40.66%)
+    public ListNode mergeKLists(ListNode[] lists) {
+         if (lists == null || lists.length == 0) return null;
+        
+        ListNode dummy = new ListNode(0);
+        ListNode cur = dummy;
+        
+        PriorityQueue<ListNode> pq = new PriorityQueue<>(lists.length + 1, (o1, o2) -> (o1.val - o2.val));  // min heap
+        
+        for (int i = 0; i <lists.length; i++) {
+            if (lists[i] == null) continue;
+            pq.offer(lists[i]);
+        }
+        
+        while (!pq.isEmpty()) {
+            ListNode node = pq.poll();
+            cur.next = node;
+            if (node.next != null) pq.offer(node.next);
+            cur = cur.next;
+        }
+        
+        return dummy.next;
+    }
+// 	static class MyComparator implements Comparator<ListNode> {
+// 		public int compare(ListNode l1, ListNode l2) {
+// 			return l1.val - l2.val;
+// 		}
+// 	}
 	
-	public ListNode mergeKList(ListNode[] lists) {
-		if (lists == null || lists.length == 0) return;
+// 	public ListNode mergeKList(ListNode[] lists) {
+// 		if (lists == null || lists.length == 0) return;
 		
-		ListNode res = new ListNode(0);	// dummy node
-		ListNode cur = res;
-		PriorityQueue<ListNode> heap = new PriorityQueue(lists.length, new MyComparator());
+// 		ListNode res = new ListNode(0);	// dummy node
+// 		ListNode cur = res;
+// 		PriorityQueue<ListNode> heap = new PriorityQueue(lists.length, new MyComparator());
 		
-		// Insert the head of all lists
-		for (ListNode listHead: lists) {
-			if (listHead != null) {
-				heap.add(listHead);
-			}
-		}
+// 		// Insert the head of all lists
+// 		for (ListNode listHead: lists) {
+// 			if (listHead != null) {
+// 				heap.add(listHead);
+// 			}
+// 		}
 		
-		while (!heap.isEmpty()) {
-			ListNode popNode = heap.poll();
-			cur.next = popNode;
-			cur = cur.next;
-			if (popNode.next != null) {
-				heap.add(popNode.next);
-			}
-		}
+// 		while (!heap.isEmpty()) {
+// 			ListNode popNode = heap.poll();
+// 			cur.next = popNode;
+// 			cur = cur.next;
+// 			if (popNode.next != null) {
+// 				heap.add(popNode.next);
+// 			}
+// 		}
 		
-		return res.next;
-	}
+// 		return res.next;
+// 	}
 }
 
 // Solution 2 Comparison/Pointers
@@ -100,19 +139,25 @@ class Solution3 {
 // Time = O(nk), Space = O(1)
 
 class Solution2 {
+	// 133ms (15.81%)
 	public ListNode mergeKList(ListNode[] lists) {
 		if (lists == null || lists.length == 0) return;
 		
 		ListNode res = new ListNode(0);	// dummy node
 		ListNode cur = res;
-		ListNode tmp = null;
+		//ListNode tmp = null;
 		
 		// tmp is for checking whether all list nodes are traversed.
-		do {
-			tmp = findMinAndMove(lists);
-			cur.next = tmp;
-			cur = cur.next;
-		} while (tmp != null);
+// 		do {
+// 			tmp = findMinAndMove(lists);
+// 			cur.next = tmp;
+// 			cur = cur.next;
+// 		} while (tmp != null);
+		
+		while (cur != null) {
+            cur.next = findMinAndMove(lists);
+            cur = cur.next;
+        }
 		
 		return res.next;
 	}
