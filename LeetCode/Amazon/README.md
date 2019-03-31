@@ -7,7 +7,7 @@
 | <ul><li>- [X] [8](https://leetcode.com/problems/string-to-integer-atoi/)</li></ul>| [String to Integer (atoi)](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc8StringToInteger.java) | Medium | Math / String
 | <ul><li>- [X] [15](https://leetcode.com/problems/3sum/) | [3 Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc15ThreeSum.java)</li></ul> | Medium | Array / Two Pointers
 | <ul><li>- [X] [17](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)</li></ul> | [Letter Combinations of a Phone Number](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc17LettersCombinationsofPhone.java) | Medium | String / Backtracking
-| <ul><li>- [ ] 20</li></ul>| Valid Parenthese | Easy
+| <ul><li>- [X] [20](https://leetcode.com/problems/valid-parentheses/)</li></ul> | [Valid Parentheses](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/Lc20ValidParentheses.java) | Easy | String / Stack
 | <ul><li>- [X] [21](https://leetcode.com/problems/merge-two-sorted-lists/)</li></ul> | [Merge Two Sorted Lists](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc21MergeTwoSortedLists.java) | Easy | LinkedList | Y
 | <ul><li>- [X] 23</li></ul>| Merge k Sorted List | Hard |Linked List / Divide and Conquer / Heap | Y
 | <ul><li>- [ ] 42</li></ul>| Trapping Rain Water | Hard | Array / Two Pointers / Stack | Y
