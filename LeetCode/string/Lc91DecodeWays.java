@@ -1,3 +1,85 @@
+// https://leetcode.com/problems/decode-ways/
+
+class Solution {
+	// ======================= DP ===========================
+	// 1ms(84.40%)
+    // ======== DP 2 with O(1) space ==========
+    public int numDecodings(String s) {
+        if (s == null || s.charAt(0) == '0') return 0;
+        if (s.length() == 1) return 1;
+        
+        int len = s.length();
+        
+        // dp[i] is ways to decode s[0..i]
+        // dp[i] = dp[i-1] + dp[i-2]
+        // int[] dp = new int[len];
+        int w1 = 1; //dp[0] = 1;  // first letter is covered in base case if is '0'
+        int w2 = 1;
+        
+        char[] arr = s.toCharArray();
+        for (int i = 1; i < len; i++) {
+            int w = 0;
+            // 1 letter
+            if (isValid(arr, i)) {
+                w += w1; //dp[i] += dp[i - 1]; 
+            }
+            // 2 letters
+            if (isValid(arr, i, i - 1)) {
+                w += w2;
+                // if (i - 2 <= 0) {
+                //     dp[i] += 1;
+                // } else {
+                //     dp[i] += dp[i - 2];
+                // }
+            }
+            w2 = w1;
+            w1 = w;
+        }
+        
+        return w1; //return dp[len - 1];
+    }
+    
+    // ========= DP 2 with O(n) Space ==========
+    public int numDecodings(String s) {
+        if (s == null || s.charAt(0) == '0') return 0;
+        if (s.length() == 1) return 1;
+        
+        int len = s.length();
+        // dp[i] is ways to decode s[0..i]
+        // dp[i] = dp[i-1] + dp[i-2]
+        int[] dp = new int[len];
+        dp[0] = 1;  // first letter is covered in base case if is '0'
+        
+        char[] arr = s.toCharArray();
+        for (int i = 1; i < len; i++) {
+            // 1 letter
+            if (isValid(arr, i)) {
+                dp[i] += dp[i - 1];
+            }
+            // 2 letters
+            if (isValid(arr, i, i - 1)) {
+                if (i - 2 <= 0) {
+                    dp[i] += 1;
+                } else {
+                    dp[i] += dp[i - 2];
+                }
+            }
+        }
+        
+        return dp[len - 1];
+    }
+    
+    private boolean isValid(char[] arr, int start, int end) {
+        int prefix = (arr[start - 1] - '0') * 10 + (arr[start] - '0');
+        
+        return prefix >= 10 && prefix <= 26;
+    }
+    
+    private boolean isValid(char[] arr, int start) {
+        return arr[start] != '0';
+    }
+}
+
 class Solution {
     public int numDecodings(String s) {
         if (s == null || s.length() == 0) return 0;
