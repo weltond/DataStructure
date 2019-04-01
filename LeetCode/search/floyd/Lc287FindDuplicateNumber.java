@@ -55,7 +55,7 @@ class Solution {
                 if (a <= mid) ++cnt;    // cnt numbers that value < mid
             }
             if (cnt <= mid) low = mid + 1;  // if cnt <= mid, it means there is no duplicate on mid's left side
-            else high = mid - 1;    // if cnt > mid, it means there exist duplicate value on mid's right side
+            else high = mid - 1;    // if cnt > mid, it means there no duplicate value on mid's right side
         }
         return low;
     }
