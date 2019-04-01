@@ -11,7 +11,7 @@
 | <ul><li>- [X] [21](https://leetcode.com/problems/merge-two-sorted-lists/)</li></ul> | [Merge Two Sorted Lists](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc21MergeTwoSortedLists.java) | Easy | LinkedList | Y
 | <ul><li>- [X] 23</li></ul>| Merge k Sorted List | Hard |Linked List / Divide and Conquer / Heap | Y
 | <ul><li>- [ ] 42</li></ul>| Trapping Rain Water | Hard | Array / Two Pointers / Stack | Y
-| <ul><li>- [ ] 48</li></ul>| Rotate Image | Medium | |
+| <ul><li>- [X] [48](https://leetcode.com/problems/rotate-image/)</li></ul> | [Rotate Image](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc48RotateImage.java) | Medium | Array
 | <ul><li>- [X] [49](https://leetcode.com/problems/group-anagrams/)</li></ul> | [Group Anagram](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc49GroupAnagram.java) | Medium | HashTable / String
 | <ul><li>- [ ] 73</li></ul>| Set Matrix Zeroes | Medium | |
 | <ul><li>- [X] [78](https://leetcode.com/problems/subsets/)</li></ul>| [Subsets](https://github.com/weltond/DataStructure/blob/master/LeetCode/Amazon/Lc78Subsets.java) | Medium | Array / Backtracking / Bit|
