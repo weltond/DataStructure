@@ -134,3 +134,4 @@
 | [20](https://leetcode.com/problems/valid-parentheses/) | [Valid Parentheses](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/Lc20ValidParentheses.java) | Easy | String / Stack
 | [242](https://leetcode.com/problems/valid-anagram/) | [Valid Anagram](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc242ValidAnagram.java) | Easy | Hashmap / Sort
 | [49](https://leetcode.com/problems/group-anagrams/) | [Group Anagram](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc49GroupAnagram.java) | Medium | HashTable / String
+| [48](https://leetcode.com/problems/rotate-image/) | [Rotate Image](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc48RotateImage.java) | Medium | Array
