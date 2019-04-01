@@ -132,3 +132,4 @@
 | [21](https://leetcode.com/problems/merge-two-sorted-lists/) | [Merge Two Sorted Lists](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc21MergeTwoSortedLists.java) | Easy | LinkedList
 | [82](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/) | [Remove Duplicates from Sorted List II](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc82RemoveDupfromSortedListII.java) | Medium | LinkedList
 | [20](https://leetcode.com/problems/valid-parentheses/) | [Valid Parentheses](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/Lc20ValidParentheses.java) | Easy | String / Stack
+| [242](https://leetcode.com/problems/valid-anagram/) | [Valid Anagram](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc242ValidAnagram.java) | Easy | Hashmap / Sort
