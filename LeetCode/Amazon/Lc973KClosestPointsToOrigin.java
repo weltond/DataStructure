@@ -29,6 +29,90 @@ Note:
 -10000 < points[i][0] < 10000
 -10000 < points[i][1] < 10000
 */
+
+class Solution {
+    int[] ori = new int[]{0, 0} ;
+    // =========== Method 2: Divide and Conquer ===========
+    // 6ms (99.04%)
+    public int[][] kClosest(int[][] points, int K) {
+        if (points == null || points.length == 0) return new int[][]{};
+        
+        findMatch(points, 0, points.length - 1, K);
+        int[][] res = new int[K][];
+        for (int i = 0; i < res.length; i++) {
+            res[i] = points[i];
+        }
+        return res;
+    }
+    
+    private void findMatch(int[][] arr, int start, int end, int K) {
+        if (start >= end) return;
+        
+        int pos = findPos(arr, start, end);
+        
+        if (pos < K) findMatch(arr, pos + 1, end, K);
+        else if (pos > K) findMatch(arr, start, pos - 1, K);
+    }
+    
+    private int findPos(int[][] arr, int start, int end) {
+        int tmp = end;
+        int pivotDist = distance(arr[end], ori);
+        end--;
+        // ascending order
+        while (start <= end) {
+            while (start <= end && distance(arr[start], ori) < pivotDist) {
+                start++;
+            }
+            while (start <= end && distance(arr[end], ori) >= pivotDist) {
+                end--;
+            }
+            
+            if (start <= end) {
+                swap(arr, start, end);
+            }
+        }
+        
+        swap(arr, start, tmp);
+        
+        return start;
+    }
+    
+    private void swap(int[][] arr, int l, int r) {
+        int[] tmp = arr[l];
+        arr[l] = arr[r];
+        arr[r] = tmp;
+    }
+    // =========== Method 1: PriorityQueue =============
+    // 61ms (35.09%)
+    public int[][] kClosest(int[][] points, int K) {
+        if (points == null || points.length == 0) return new int[][]{};
+        
+        PriorityQueue<int[]> pq = new PriorityQueue<>(K + 1, (o1, o2) -> {
+            return distance(o2, new int[]{0, 0}) - distance(o1, new int[]{0, 0});
+        }); // max heap
+        
+        for (int i = 0; i < points.length; i++) {
+            pq.offer(points[i]);
+            if (pq.size() > K) {
+                pq.poll();
+            }
+        }
+        
+        int[][] res = new int[K][];
+        int j = 0;
+        while (!pq.isEmpty()) {
+            res[j++] = pq.poll();
+        }
+        
+        return res;
+    }
+    
+    private int distance(int[] a, int[] b) {
+        return a[0] * a[0] + a[1] * a[1] - b[0] * b[0] - b[1] * b[1];
+    }
+}
+
+// ====================== OLD ==================================
 class Solution {
     
     /* Method 2: Divide and Conquer (Quick Partition)*/
