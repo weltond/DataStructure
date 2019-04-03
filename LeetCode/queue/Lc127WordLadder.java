@@ -2,8 +2,8 @@
 
 
 class Solution {
-    // ========= Method 1: Bidirectional BFS
-    // 37ms
+    // ========= Method 1: Bidirectional BFS ============
+    // 36ms (90.59%)
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
         Set<String> list = new HashSet();
         for (String str : wordList) {
