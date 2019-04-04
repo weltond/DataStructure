@@ -136,3 +136,4 @@
 | [49](https://leetcode.com/problems/group-anagrams/) | [Group Anagram](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc49GroupAnagram.java) | Medium | HashTable / String
 | [48](https://leetcode.com/problems/rotate-image/) | [Rotate Image](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc48RotateImage.java) | Medium | Array
 | [490]() | [The Maze](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/Lc490TheMaze.java) | Medium | BFS
+| [505]() | [The Maze II](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/Lc505TheMazeII.java) | Medium | DFS / BFS
