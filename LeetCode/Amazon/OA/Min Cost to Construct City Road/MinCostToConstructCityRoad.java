@@ -102,8 +102,8 @@ public class MinCostToConstructCityRoad {
                                      int numNewRoadsConstruct,
                                      List<List<Integer>> costNewRoadsConstruct) {
         int res = 0;
-        // corner case
-        if (numTotalAvailableCities < 2 || numTotalAvailableRoads >= numTotalAvailableCities - 1) return res;
+        // corner case depends on how you define the meaning of input. Not applicable here.
+        // if (numTotalAvailableCities < 2 || numTotalAvailableRoads >= numTotalAvailableCities - 1) return res;
 
         // 0. initialize unionfind
         DisJoint dj = new DisJoint(numTotalAvailableCities);
