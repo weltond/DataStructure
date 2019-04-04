@@ -7,6 +7,15 @@ import java.util.List;
 /**
  * @author weltond
  * @project LeetCode
+ * @date 4/4/2019
+ */
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+/**
+ * @author weltond
+ * @project LeetCode
  * @date 3/23/2019
  *
  * Input:
@@ -104,6 +113,10 @@ public class MinCostToConstructCityRoad {
         for (List<Integer> pair : roadsAvailable) {
             int src = pair.get(0) - 1;
             int dest = pair.get(1) - 1;
+            // NOTICE: Update existEdges only if two are not connected before!!
+            int rs = dj.find(src);
+            int rd = dj.find(dest);
+            if (rs == rd) continue;
             dj.union(src, dest);
             existEdges++;
         }
@@ -158,6 +171,9 @@ public class MinCostToConstructCityRoad {
         List<Integer> road3 = new ArrayList<>();
         road3.add(2); road3.add(3);
         roadsAvailable.add(road3);
+        List<Integer> road4 = new ArrayList<>();
+        road4.add(2); road4.add(3);
+        roadsAvailable.add(road4);
 
 
         List<List<Integer>> costNewRoadsConstruct = new ArrayList<>();
@@ -173,8 +189,14 @@ public class MinCostToConstructCityRoad {
         List<Integer> new4 = new ArrayList<>();
         new4.add(5); new4.add(6);new4.add(5);
         costNewRoadsConstruct.add(new4);
+        List<Integer> new5 = new ArrayList<>();
+        new5.add(1); new5.add(4);new5.add(2);
+        costNewRoadsConstruct.add(new5);
+        List<Integer> new6 = new ArrayList<>();
+        new6.add(2); new6.add(3);new6.add(7);
+        costNewRoadsConstruct.add(new6);
 
-        int res = graph.getMinCostToConstruct(6, 3, roadsAvailable, 4, costNewRoadsConstruct);
+        int res = graph.getMinCostToConstruct(6, 4, roadsAvailable, 6, costNewRoadsConstruct);
 
         System.out.println(res);
     }
