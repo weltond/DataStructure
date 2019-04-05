@@ -51,7 +51,7 @@
 | <ul><li>- [X] [617](https://leetcode.com/problems/merge-two-binary-trees/)</li></ul>| [Merge Two Binary Trees](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc617MergeTwoBinaryTrees.java) | Easy | Tree |
 | <ul><li>- [ ] 642</li></ul>| Design Search Autocomplete System | Hard | | Y
 | <ul><li>- [X] [675](https://leetcode.com/problems/cut-off-trees-for-golf-event/)</li></ul> | [Cut Off Trees for Golf Event](https://github.com/weltond/DataStructure/blob/master/LeetCode/queue/Lc675CutOffTreesforGolfEvent.java) | Hard | BFS | Y
-| <ul><li>- [ ] 682</li></ul>| Baseball Game | Easy | |
+| <ul><li>- [X] [682](https://leetcode.com/problems/baseball-game/)</li></ul> | [Baseball Game](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/Lc682BaseballGame.java) | Easy | Stack
 | <ul><li>- [X] [746](https://leetcode.com/problems/min-cost-climbing-stairs/)</li></ul> | [Min Cost Climbing Stairs](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc746MinCostClimbingStairs.java) | Easy | DP
 | <ul><li>- [X] [763](https://leetcode.com/problems/partition-labels/)</li></ul>| [Partition Labels](https://github.com/weltond/DataStructure/blob/master/LeetCode/greedy/Lc763PartitionLabels.java) | Medium | Two Pointers / Greedy|
 | <ul><li>- [X] [771](https://leetcode.com/problems/jewels-and-stones/)</li></ul>| [Jewels and Stones](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc771JewelsAndStones.java) | Easy | Hash Table |
