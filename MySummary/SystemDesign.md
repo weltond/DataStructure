@@ -35,7 +35,13 @@
   - Sharding: shard data and save them onto different machines. NoSQL is auto while SQL is not.
     - Vertical: based on column
     - Horizontal: based on row
-      - Consistant Hashing
+      - **Consistant Hashing**
         - Data structure: TreeMap
         - Micro shards / Virtual nodes. Numbers of them are traded off for search efficientcy.
-  - Replica: NoSQL is auto while SQL is not.
+  - Replica
+    - MySQL:
+      - "auto": Master - slave
+      - "Manual": clock-wise 3 nodes in consistent hashing circle
+    - NoSQL:
+      - "auto": clock-wise 3 nodes in consistent hashing circle
+      - "manual": no need
