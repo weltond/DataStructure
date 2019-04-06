@@ -141,3 +141,4 @@
 | [103](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/) | [Binary Tree Zigzag Level Traversal](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc103BTZigzagLevelOrder.java) | Medium | Tree / Stack / BFS
 | [295](https://leetcode.com/problems/find-median-from-data-stream/) | [Find Median from Data Stream](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/Lc295FindMedianFromStream.java) | Hard | Heap / Design
 | [147](https://leetcode.com/problems/insertion-sort-list/) | [Insertion Sort List](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc147InsertionSortList.java) | Medium | LinkedList / Sort
+| [708](https://leetcode.com/problems/insert-into-a-cyclic-sorted-list/)| [Insert into a Cyclic Sorted List](https://github.com/weltond/DataStructure/tree/master/LeetCode/linkedlist) | Medium | LinkedList
