@@ -1,6 +1,6 @@
 public class Solution {
 
-    public int n, k;
+    public int n, k;    // k is micro shard / virtual nodes number (could be 1000)
     public Set<Integer> ids = null;
     public Map<Integer, List<Integer>> machines = null;
 
