@@ -142,3 +142,4 @@
 | [295](https://leetcode.com/problems/find-median-from-data-stream/) | [Find Median from Data Stream](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/Lc295FindMedianFromStream.java) | Hard | Heap / Design
 | [147](https://leetcode.com/problems/insertion-sort-list/) | [Insertion Sort List](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc147InsertionSortList.java) | Medium | LinkedList / Sort
 | [708](https://leetcode.com/problems/insert-into-a-cyclic-sorted-list/)| [Insert into a Cyclic Sorted List](https://github.com/weltond/DataStructure/tree/master/LeetCode/linkedlist) | Medium | LinkedList
+| [404](https://leetcode.com/problems/sum-of-left-leaves/) | [Sum of Left Leaves](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc404SumOfLeftLeaves.java) | Easy | Tree
