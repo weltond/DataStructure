@@ -8,6 +8,10 @@
  *     ListNode(int x) { val = x; }
  * }
  */
+/**
+Input: 1->2->3->3->4->4->5
+Output: 1->2->5
+*/
 class Solution {
     // ================ Method 2: Recursion =================
     // 1ms (36.98%)
