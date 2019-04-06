@@ -42,7 +42,7 @@
 | <ul><li>- [X] [239](https://leetcode.com/problems/sliding-window-maximum/)</li></ul> | [Sliding Window Maximum](https://github.com/weltond/DataStructure/blob/master/LeetCode/queue/Lc239SlidingWindowMaximum.java) | Hard | Heap / Sliding Window
 | <ul><li>- [ ] 240</li></ul>| Search a 2D matrix II | Medium | |
 | <ul><li>- [X] [242](https://leetcode.com/problems/valid-anagram/)</li></ul> | [Valid Anagram](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc242ValidAnagram.java) | Easy | Hashmap / Sort
-| <ul><li>- [ ] 295</li></ul>| Find Median from Data Stream | Hard | Heap / Design | Y
+| <ul><li>- [X] [295](https://leetcode.com/problems/find-median-from-data-stream/)</li></ul> | [Find Median from Data Stream](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/Lc295FindMedianFromStream.java) | Hard | Heap / Design | Y
 | <ul><li>- [X] [297](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)</li></ul> | [Seriallize and DeSerialize Binary Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc297SerialAndDeBinaryTree.java) | Hard | Tree / Design
 | <ul><li>- [X] [322](https://leetcode.com/problems/coin-change/)</li></ul> | [Coin Change](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc322CoinChange.java) | Medium | DP | Y
 | <ul><li>- [X] [380](https://leetcode.com/problems/insert-delete-getrandom-o1/)</li></ul>| [Insert Delete GetRandom O(1)](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc380InsertDeleteRandomO1.java) | Medium | Array / Hash Table / Design
