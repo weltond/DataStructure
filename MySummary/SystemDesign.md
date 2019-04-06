@@ -15,11 +15,18 @@
   - Memcached (does not support persistency) : Cache-aside -> usually used?
   - Redis (support persistency): Cache-through
 
-#### SQL vs NoSQL
+#### SQL vs NoSQL 
 1. In general case, both are OK.
 2. SQL if need **Transaction**
 3. SQL can help you do a lot like **Serialization** and **Secondary Index** while NoSQL is done by developer
 4. disk NoSQL is 10 times faster than SQL
+
+1. Transaction ? -> SQL
+2. SQL Query? -> SQL
+3. Lazy developer? -> SQL. Most web framework is compatible with SQL.
+4. Sequential ID ? -> SQL. NoSQL doesn't support sequential.
+5. High QPS? -> NoSQL
+6. Scalability? -> NoSQL. It helps you do the rest.
 
 - Cassandra
   - row key: aka **hash key**. Doesn't support range query. Usually is used as `user_id`
