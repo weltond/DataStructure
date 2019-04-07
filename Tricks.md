@@ -107,3 +107,14 @@ for (int i = 0; i <= target) {
 }
 return dp[target];
 ```
+7. 降维。
+  - 7.1 一维dp
+  - 7.2 二维dp。
+    - 如[Unique Path](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc62UniquePaths.java). 因为每个格子只等于其上面和左面的数值之和，我们就可以已第一列为起始，对剩余的每列进行处理。
+    ```
+    dp[i][j] = dp[i-1][j] + dp[i][j-1]
+    ===>
+    for (int i = 1 ~ cols)
+      for (int j = 1 ~ rows)
+        dp[j] = dp[j] + dp[j-1]
+    ```
