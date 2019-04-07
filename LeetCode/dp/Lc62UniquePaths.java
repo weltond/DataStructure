@@ -24,6 +24,31 @@ class Solution {
     
     // ========== Method 1: Backtracking =========
     // 0ms
+    // Approach 2:
+    int m, n;
+    public int uniquePaths(int m, int n) {
+        int[][] memo = new int[m][n];
+        this.m = m;
+        this.n = n;
+        //Arrays.fill(memo, -1);
+        return dfs(0, 0, memo);
+    }
+    
+    private int dfs(int x, int y, int[][] memo) {
+        if (x >= m || y >= n || x < 0 || y < 0) return 0;
+        
+        if (memo[x][y] != 0) return memo[x][y];
+        
+        if (x == m - 1 && y == n - 1) return 1;
+        
+        int sum = dfs(x + 1, y, memo) + dfs(x, y + 1, memo);
+        
+        memo[x][y] = sum;
+        
+        return sum;
+    }
+    
+    // Approach 1:
     int m, n;
     public int uniquePaths(int m, int n) {
         this.m = m; this.n = n;
