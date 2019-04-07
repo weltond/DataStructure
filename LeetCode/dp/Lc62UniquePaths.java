@@ -3,6 +3,25 @@
 class Solution {
     // ========== Method 2: DP ============
     // 0ms
+    // Approach 3: Space = O(n)
+    public int uniquePaths(int m, int n) {
+        int[] arr = new int[m]; // arr represents each col value
+        
+        // first col are all 1s.
+        for (int i = 0; i < m; i++) {
+            arr[i] = 1;
+        }
+        
+        // for the rest cols, arr[j] = arr[j] + arr[j-1].
+        // e.g a 3*3 matrix, [1,1,1] -> [1,2,3] -> [1,3,6]
+        for (int i = 1; i < n; i++) {   // number of cols
+            for (int j = 1; j < m; j++) {   // number of each row's value
+                arr[j] = arr[j] + arr[j-1];
+            }
+        }
+        return arr[m-1];
+    }
+    
     // Approach 2:
     public int uniquePaths(int m, int n) {
         // dp[i][j] means how many possible unique paths to reach position (i,j)
