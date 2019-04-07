@@ -3,7 +3,23 @@
 class Solution {
     // ========== Method 2: DP ============
     // 0ms
+    // Approach 2:
+    public int uniquePaths(int m, int n) {
+        // dp[i][j] means how many possible unique paths to reach position (i,j)
+        // dp[i][j] = dp[i - 1][j] + dp[i][j - 1]
+        
+        int[][] dp = new int[m + 1][n + 1]; // edges are 0
+        dp[0][1] = 1;
+        for (int i = 1; i <= m; i++) {
+            for (int j = 1; j <= n; j++) {
+                dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
+            }
+        }
+        
+        return dp[m][n];
+    }
     
+    // Approach 1: 
     // dp[m][n] = dp[m+1][n] + dp[m][n+1]
     public int uniquePaths(int m, int n) {
         
