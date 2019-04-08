@@ -11,13 +11,13 @@ class Solution {
         return res;
     }
     
-    private void dfs (int[] nums, int cnt, List list, List res) {
-        // if (cnt == nums.length) {
+    private void dfs (int[] nums, int start, List list, List res) {
+        // if (start == nums.length) {
         //     res.add(new ArrayList(list));
         //     return;
         // }    // WRONG. This is Binary Tree style.
         res.add(new ArrayList(list));
-        for (int i = cnt; i < nums.length; i++) {
+        for (int i = start; i < nums.length; i++) {
             list.add(nums[i]);
             dfs(nums, i + 1, list, res);
             list.remove(list.size() - 1);
