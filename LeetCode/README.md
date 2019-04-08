@@ -144,3 +144,4 @@
 | [708](https://leetcode.com/problems/insert-into-a-cyclic-sorted-list/)| [Insert into a Cyclic Sorted List](https://github.com/weltond/DataStructure/tree/master/LeetCode/linkedlist) | Medium | LinkedList
 | [404](https://leetcode.com/problems/sum-of-left-leaves/) | [Sum of Left Leaves](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc404SumOfLeftLeaves.java) | Easy | Tree
 | [916](https://leetcode.com/problems/word-subsets/) | [Word Subsets](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc916WordSubsets.java) | Medium | String
+| [496](https://leetcode.com/problems/next-greater-element-i/) | [Next Greater Element I](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/Lc496NextGreaterElementI.java) | Easy | Stack
