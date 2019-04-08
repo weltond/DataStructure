@@ -1,28 +1,50 @@
 // https://leetcode.com/problems/subsets/
 class Solution {
+    // =========== Method 2: (n+1)-ary recursion Tree ===========
+    // 0ms
     public List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> res = new ArrayList();
+        if (nums == null) return res;
         
-        if (nums == null || nums.length == 0) return res;
-        
-        dfs(nums, 0, new ArrayList<Integer>(), res);
+        dfs(nums, 0, new ArrayList(), res);
         
         return res;
     }
     
-    private void dfs(int[] nums, int level, List<Integer> l, List<List<Integer>> res) {
-        if (level == nums.length) {
-            res.add(new ArrayList<>(l));
+    private void dfs (int[] nums, int cnt, List list, List res) {
+        // if (cnt == nums.length) {
+        //     res.add(new ArrayList(list));
+        //     return;
+        // }    // WRONG. This is Binary Tree style.
+        res.add(new ArrayList(list));
+        for (int i = cnt; i < nums.length; i++) {
+            list.add(nums[i]);
+            dfs(nums, i + 1, list, res);
+            list.remove(list.size() - 1);
+        }
+    }
+    
+    // =========== Method 1: Binary recursion Tree ===========
+    // 0ms
+    public List<List<Integer>> subsets(int[] nums) {
+        List<List<Integer>> res = new ArrayList();
+        if (nums == null) return res;
+        
+        dfs(nums, 0, new ArrayList(), res);
+        
+        return res;
+    }
+    
+    private void dfs(int[] nums, int lvl, List list, List res) {
+        if (lvl == nums.length) {
+            res.add(new ArrayList(list));
             return;
         }
-
-        l.add(nums[level]);
-
-        dfs(nums, level + 1, l, res);
-
-        l.remove(l.size() - 1);
-
-        dfs(nums, level + 1, l, res);
         
+        list.add(nums[lvl]);
+        dfs(nums, lvl + 1, list, res);
+        list.remove(list.size() - 1);
+        
+        dfs(nums, lvl + 1, list, res);
     }
 }
