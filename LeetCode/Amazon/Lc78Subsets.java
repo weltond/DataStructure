@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/subsets/
 class Solution {
-    // =========== Method 2: (n+1)-ary recursion Tree ===========
+    // =========== Method 2: (n+1)-ary recursion Tree / PRE-ORDER ===========
     // 0ms
     public List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> res = new ArrayList();
