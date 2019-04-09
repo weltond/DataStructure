@@ -1,4 +1,53 @@
 // https://leetcode.com/problems/combinations/
+
+class Solution {
+    // 1ms
+    public List<List<Integer>> combine(int n, int k) {
+        List<List<Integer>> res = new ArrayList();
+        
+        dfs(n, 1, k, new ArrayList(), res);
+        
+        return res;
+    }
+    
+    private void dfs(int n, int start, int k, List list, List res) {
+        if (k == 0) {
+            res.add(new ArrayList(list));
+            return;
+        }
+        
+        for (int i = start; i <= n - k + 1; i++ ) {
+            list.add(i);
+            dfs(n, i + 1, k - 1, list, res);
+            list.remove(list.size() - 1);
+        }
+    }
+}
+
+// 25ms
+class Solution {
+    public List<List<Integer>> combine(int n, int k) {
+        List<List<Integer>> res = new ArrayList();
+        
+        dfs(n, 1, k, new ArrayList(), res);
+        
+        return res;
+    }
+    
+    private void dfs(int n, int start, int k, List list, List res) {
+        if (list.size() == k) {
+            res.add(new ArrayList(list));
+            return;
+        }
+        
+        for (int i = start; i <= n; i++ ) {
+            list.add(i);
+            dfs(n, i + 1, k, list, res);
+            list.remove(list.size() - 1);
+        }
+    }
+}
+
 class Solution {
     /* ==============Elegant==============*/
     public List<List<Integer>> combine(int n, int k) {
