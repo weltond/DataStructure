@@ -1,4 +1,31 @@
 // https://leetcode.com/problems/combination-sum-iii/
+
+// 0ms
+class Solution {
+    public List<List<Integer>> combinationSum3(int k, int n) {
+        List<List<Integer>> res = new ArrayList();
+        
+        dfs(n, k, 1, new ArrayList(), res);
+    
+        return res;
+    }
+    
+    private void dfs(int rem, int k, int start, List list, List res) {
+        if (rem == 0 && k == 0) {
+            res.add(new ArrayList(list));
+            return;
+        }
+        
+        for (int i = start; i <= 9 - k + 1; i++) {
+            if (rem < i) break;
+            
+            list.add(i);
+            dfs(rem - i, k - 1, i + 1, list, res);
+            list.remove(list.size() - 1);
+        }
+    }
+}
+
 class Solution {
     public List<List<Integer>> combinationSum3(int k, int n) {
         List<List<Integer>> res = new ArrayList();
