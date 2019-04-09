@@ -14,7 +14,8 @@
 */
 class Solution {
     // on each level, add or not add
-    // output is : [[1,2,2],[1,2],[1],[2,2],[2],[]]
+    // output is :      [[1,2,2],[1,2],[1],[2,2],[2],[]]
+    //     if not skip: [[1,2,2],[1,2],[1,2],[1],[2,2],[2],[2],[]]
     public List<List<Integer>> subsetsWithDup(int[] nums) {
         List<List<Integer>> res = new ArrayList();
         
