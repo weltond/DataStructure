@@ -8,6 +8,16 @@
  *     ListNode(int x) { val = x; }
  * }
  */
+/**
+Example 1:
+
+Input: 1->2->3->4->5->NULL
+Output: 1->3->5->2->4->NULL
+Example 2:
+
+Input: 2->1->3->5->6->4->7->NULL
+Output: 2->3->6->7->1->5->4->NULL
+*/
 class Solution {
     // 0ms
     public ListNode oddEvenList(ListNode head) {
