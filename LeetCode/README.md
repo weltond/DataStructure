@@ -148,3 +148,4 @@
 | [503](https://leetcode.com/problems/next-greater-element-ii/) | [Next Greater Element II](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/Lc503NextGreaterElementII.java) | Medium | Stack
 | [556](https://leetcode.com/problems/next-greater-element-iii/) | [Next Greater Element III](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc556NextGreaterElementIII.java) | Medium | String
 | [31](https://leetcode.com/problems/next-permutation/) | [Next Permutation](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc31NextPermutation.java) | Medium | Array
+| [1019](https://leetcode.com/problems/next-greater-node-in-linked-list/) | [Next Greater Node in LinkedList](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/Lc1019NextGreaterNodeInLinkedList.java) | Medium | Linked List / Stack 
