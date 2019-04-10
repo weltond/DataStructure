@@ -151,4 +151,4 @@
 | [1019](https://leetcode.com/problems/next-greater-node-in-linked-list/) | [Next Greater Node in LinkedList](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/Lc1019NextGreaterNodeInLinkedList.java) | Medium | Linked List / Stack 
 | [61](https://leetcode.com/problems/rotate-list/) | [Rotate List](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc61RotateList.java) | Medium | Linked List / Two Pointers
 | [725](https://leetcode.com/problems/split-linked-list-in-parts/) | [Split LinkedList in Parts](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc725SplitLinkedListsinParts.java) | Medium | Linked List
-| [328](https://leetcode.com/problems/odd-even-linked-list/) | [328](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc328OddEvenLinkedList.java) | Medium | Linked List
+| [328](https://leetcode.com/problems/odd-even-linked-list/) | [Odd Even Linked List](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc328OddEvenLinkedList.java) | Medium | Linked List
