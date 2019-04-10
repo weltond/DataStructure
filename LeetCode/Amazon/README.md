@@ -58,6 +58,7 @@
 | <ul><li>- [X] [746](https://leetcode.com/problems/min-cost-climbing-stairs/)</li></ul> | [Min Cost Climbing Stairs](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc746MinCostClimbingStairs.java) | Easy | DP
 | <ul><li>- [X] [763](https://leetcode.com/problems/partition-labels/)</li></ul>| [Partition Labels](https://github.com/weltond/DataStructure/blob/master/LeetCode/greedy/Lc763PartitionLabels.java) | Medium | Two Pointers / Greedy|
 | <ul><li>- [X] [771](https://leetcode.com/problems/jewels-and-stones/)</li></ul>| [Jewels and Stones](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc771JewelsAndStones.java) | Easy | Hash Table |
+| <ul><li>- [X] [791](https://leetcode.com/problems/custom-sort-string/)</li></ul> | [Custom Sort String](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc791CustomSortString.java) | Medium | String
 | <ul><li>- [X] [819](https://leetcode.com/problems/most-common-word/)</li></ul>| [Most Common Word](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc819MostCommonWord.java) | Easy | String | Y
 | <ul><li>- [X] [895](https://leetcode.com/problems/maximum-frequency-stack/)</li></ul>| [Maximum Frequency Stack](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/Lc895MaxFreqStack.java) | Hard | Hash Table / Stack | Y
 | <ul><li>- [X] [937](https://leetcode.com/problems/reorder-log-files/)</li></ul> | [Reorder Log Files](https://github.com/weltond/DataStructure/blob/master/LeetCode/Amazon/Lc937ReorderLogFiles.java) | Easy | String
