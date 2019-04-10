@@ -16,17 +16,20 @@ class Solution {
     // 0ms
     public String customSortString(String s, String t) {
         int[] cnts = new int[26];
+        // count each char in t
         for (char c: t.toCharArray()) {
             cnts[c - 'a']++;
         }
         
         StringBuilder res = new StringBuilder();
+        // sort chars both in t and s by the order of s
         for (char c : s.toCharArray()) {
             while (cnts[c - 'a']-- > 0) {
                 res.append(c);
             }
         }
         
+        // group chars in t but not in s
         for (int i = 0; i < 26; i++) {
             while (cnts[i]-- > 0) {
                 res.append((char)(i + 'a'));
