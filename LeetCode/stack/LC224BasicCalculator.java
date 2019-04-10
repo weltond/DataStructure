@@ -5,6 +5,38 @@ import java.util.Deque;
 import java.util.StringTokenizer;
 
 
+class Solution {
+    // ========== Method 3: Recursion + No stack ==========
+    // 2ms (99.77%)
+    int index = 0;
+    public int calculate(String s) {
+        int res = 0, sign = 1, len = s.length(), tmp = 0;
+        
+        while (index < len) {
+            char c = s.charAt(index++);
+            if (Character.isDigit(c)) {
+                tmp = tmp * 10 + c - '0';
+            } else if (c == '+') {
+                res += tmp * sign;
+                sign = 1;
+                tmp = 0;
+            } else if (c == '-') {
+                res += tmp * sign;
+                sign = -1;
+                tmp = 0;
+            } else if (c == '(') {
+                tmp = calculate(s);
+            } else if (c == ')') {
+                res += tmp * sign;
+                return res;
+            }
+        }
+        
+        res += tmp * sign;
+        return res;
+    }
+
+}
 
 class Solution {
     // ========== Method 2: One stack ==========
