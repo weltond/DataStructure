@@ -4,6 +4,69 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.StringTokenizer;
 
+
+
+
+class Solution {
+    // ========== Method 1: Naive ==========
+    // 18ms (32.65%)
+    public int calculate(String s) {
+        if (s == null) return 0;
+        Deque<Integer> numStack = new LinkedList();
+        Deque<Character> opStack = new LinkedList();
+        
+        int i = 0, len = s.length();
+        while (i < len) {
+            char c = s.charAt(i);
+            
+            if (Character.isDigit(c)) {
+                int num = 0;
+                while (i < len && Character.isDigit(s.charAt(i))) {
+                    num = num * 10 + s.charAt(i++) - '0';
+                }
+                numStack.push(num);
+                
+                //System.out.println("num: " + num);
+                if (!opStack.isEmpty() && opStack.peek() != '(') {
+                    evaluate(numStack, opStack);
+                }
+                i--;
+            } else if (c == '+' || c == '-' || c == '(') {
+                //System.out.println("operator: " + c);
+                opStack.push(c);
+            } else if (c == ')') {
+                while (opStack.peek() != '(') {
+                    evaluate(numStack, opStack);    // "(1-(3-4))"
+                }
+                opStack.pop();
+                while (!opStack.isEmpty() && opStack.peek() != '(') {
+                    evaluate(numStack, opStack);    // "(7)-(0)+(4)"
+                }
+            }
+            
+            i++;
+        }
+        
+        while (!opStack.isEmpty()) {
+            evaluate(numStack, opStack);
+        }
+        return numStack.pop();
+    }
+    
+    private void evaluate(Deque<Integer> numStack, Deque<Character> opStack) {
+        int rightnum = numStack.pop();
+        int leftnum = numStack.pop();
+        char op = opStack.pop();
+        if (op == '-') {
+            rightnum = leftnum - rightnum;
+        } else {
+            rightnum = rightnum + leftnum;
+        }
+        numStack.push(rightnum);
+    }
+}
+
+
 /**
  * @author weltond
  * @project LeetCode
