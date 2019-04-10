@@ -6,6 +6,41 @@ import java.util.StringTokenizer;
 
 
 
+class Solution {
+    // ========== Method 2: One stack ==========
+    // 13ms (54.05%)
+    public int calculate(String s) {
+        Deque<Integer> stack = new LinkedList();
+        int res = 0, sign = 1, len = s.length(), tmp = 0;
+        
+        for (int i = 0; i < len; i++) {
+            char c = s.charAt(i);
+            if (Character.isDigit(c)) {
+                tmp = c - '0';
+                while (i + 1 < len && Character.isDigit(s.charAt(i + 1))) {
+                    tmp = tmp * 10 + s.charAt(i + 1) - '0';
+                    i++;
+                }
+                
+                res += tmp * sign;
+            } else if (c == '+') {
+                sign = 1;
+            } else if (c == '-') {
+                sign = -1;
+            } else if (c == '(') {
+                stack.push(res);
+                stack.push(sign);
+                sign = 1;
+                res = 0;
+            } else if (c == ')') {
+                res = res * stack.pop() + stack.pop();
+            }
+        }
+        
+        return res;
+    }
+
+}
 
 class Solution {
     // ========== Method 1: Naive ==========
