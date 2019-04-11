@@ -157,3 +157,4 @@
 | [224](https://leetcode.com/problems/basic-calculator/) | [Basic Calculator](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/LC224BasicCalculator.java) | Hard | Stack / Math
 | [277](https://leetcode.com/problems/basic-calculator-ii/) | [Basic Calculator II](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc227BasicCalculatorII.java) | Medium | String
 | [991](https://leetcode.com/problems/broken-calculator/) | [Broken Calculator](https://github.com/weltond/DataStructure/blob/master/LeetCode/greedy/Lc991BrokenCalculator.java) | Medium | Math / Greedy
+| [572](https://leetcode.com/problems/subtree-of-another-tree/) | [Subtree of Another Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc572SubtreeOfAnotherTree.java) | Easy | 
