@@ -51,6 +51,7 @@
 | <ul><li>- [X] [412](https://leetcode.com/problems/fizz-buzz/)</li></ul> | [Fizz Buzz](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc412FizzBuzz.java) | Easy 
 | <ul><li>- [X] [535](https://leetcode.com/problems/encode-and-decode-tinyurl/)</li></ul> | [Encode and Decode TinyURL](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc535EncodeAndDecodeTinyURL.java) | Medium | Hash Table / Math
 | <ul><li>- [X] [543](https://leetcode.com/problems/diameter-of-binary-tree/)</li></ul>| [Diameter of Binary Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc543DiameterOfBinaryTree.java) | Easy | Tree | Y
+| <ul><li>- [X] [572](https://leetcode.com/problems/subtree-of-another-tree/)</li></ul> | [Subtree of Another Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc572SubtreeOfAnotherTree.java) | Easy | 
 | <ul><li>- [X] [617](https://leetcode.com/problems/merge-two-binary-trees/)</li></ul>| [Merge Two Binary Trees](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc617MergeTwoBinaryTrees.java) | Easy | Tree |
 | <ul><li>- [ ] 642</li></ul>| Design Search Autocomplete System | Hard | | Y
 | <ul><li>- [X] [675](https://leetcode.com/problems/cut-off-trees-for-golf-event/)</li></ul> | [Cut Off Trees for Golf Event](https://github.com/weltond/DataStructure/blob/master/LeetCode/queue/Lc675CutOffTreesforGolfEvent.java) | Hard | BFS | Y
