@@ -28,7 +28,7 @@ class RandomizedSet {
         map.put(lastVal, idx);
         arr.set(idx, lastVal);
         arr.remove(arr.size() - 1); // remove the old last one
-        map.remove(val);
+        map.remove(val);    // IMPORTANT! Remove at last step because the val and last val maybe the same.
         return true;
     }
     
