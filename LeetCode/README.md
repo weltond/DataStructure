@@ -161,3 +161,4 @@
 | [508](https://leetcode.com/problems/most-frequent-subtree-sum/) | [Most Frequent Subtree Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc508MostFrequentSubtreeSum.java) | Medium | Tree / Hash Table
 | [381](https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed/) | [Insert Delete GetRandom O(1) - Duplicates](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc381InsertDeleteRandomO1WithDuplicate.java) | Hard | Array / Hash Table / Design
 | [26](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | [Remove Duplicates from Sorted Array](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc26RemoveDuplicatesfromSortedArray.java) | Easy | Array / Two Pointers
+| [27](https://leetcode.com/problems/remove-element/) | [Remove Element](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc27RemoveElement.java) | Easy | Array / Two Pointers
