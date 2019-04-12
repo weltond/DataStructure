@@ -45,6 +45,37 @@ class RandomizedCollection {
     }
     
     /** Removes a value from the collection. Returns true if the collection contained the specified element. */
+    // ===== Approach 2: List =========
+    public boolean remove(int val) {
+        boolean contains = map.containsKey(val);
+        if (!contains) {
+            return false;
+        }
+        
+        List<Integer> posList = map.get(val);
+        int pos = posList.get(posList.size() -1);
+        posList.remove(posList.size() -1);
+        
+        if (posList.size() ==0) {
+            map.remove(val);
+        }
+        if (pos == list.size() -1) {
+            list.remove(pos);
+            return true;
+        }
+        
+        int last = list.get(list.size() -1);
+        List<Integer> lastList= map.get(last);
+        lastList.remove(lastList.size() -1);
+        lastList.add(0, pos);
+        Collections.sort(lastList);
+        list.set(pos, last);
+        list.remove(list.size() -1);     
+        
+        return contains;
+        
+    }
+    // ===== Approach 1: HashSet ==========
     public boolean remove(int val) {
         if (!map.containsKey(val)) return false;
         
