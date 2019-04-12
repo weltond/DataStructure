@@ -163,3 +163,4 @@
 | [26](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | [Remove Duplicates from Sorted Array](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc26RemoveDuplicatesfromSortedArray.java) | Easy | Array / Two Pointers
 | [27](https://leetcode.com/problems/remove-element/) | [Remove Element](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc27RemoveElement.java) | Easy | Array / Two Pointers
 | [80](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/) | [Remove Duplicates from Sorted Array II](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc80RemoveDuplicatesfromSortedArrayII.java) | Medium | Array / Two Pointers
+| [532](https://leetcode.com/problems/k-diff-pairs-in-an-array/) | [K-diff Pairs in an Array](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc532K-diffPairsinArray.java) | Easy | Array / Two Pointers
