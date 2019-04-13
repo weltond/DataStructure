@@ -165,3 +165,4 @@
 | [80](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/) | [Remove Duplicates from Sorted Array II](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc80RemoveDuplicatesfromSortedArrayII.java) | Medium | Array / Two Pointers
 | [532](https://leetcode.com/problems/k-diff-pairs-in-an-array/) | [K-diff Pairs in an Array](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc532K-diffPairsinArray.java) | Easy | Array / Two Pointers
 | [530](https://leetcode.com/problems/minimum-absolute-difference-in-bst/) | [Min Absolute Difference in BST](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc530MinAbsoluteDiffinBST.java) | Easy | BST
+| [19](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | [Remove Nth Node from End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | Medium | Linked List / Two Pointers
