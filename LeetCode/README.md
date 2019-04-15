@@ -167,3 +167,4 @@
 | [530](https://leetcode.com/problems/minimum-absolute-difference-in-bst/) | [Min Absolute Difference in BST](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc530MinAbsoluteDiffinBST.java) | Easy | BST
 | [19](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | [Remove Nth Node from End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | Medium | Linked List / Two Pointers
 | [114](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/) | [Flatten Binary Tree to Linked List](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc114FlattenBinaryTreetoLinkedList.java) | Medium | Tree / DFS
+| [430](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/) | [Flatten a Multilevel Doubly LinkedList](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc430FlattenMultiDoublyLinkedList.java) | Medium | Linked List / DFS
