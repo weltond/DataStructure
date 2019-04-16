@@ -37,6 +37,7 @@
 | <ul><li>- [X] [215](https://leetcode.com/problems/kth-largest-element-in-an-array/)</li></ul> | [Kth Largest Element in Array](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/Lc215KthLargestEleInArray.java) | Medium | Divide and Conquer / Heap
 | <ul><li>- [X] [224](https://leetcode.com/problems/basic-calculator/)</li></ul>  | [Basic Calculator](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/LC224BasicCalculator.java) | Hard | Stack / Math
 | <ul><li>- [X] [225](https://leetcode.com/problems/implement-stack-using-queues/)</li></ul> | [Implement Stack Using Queues](https://github.com/weltond/DataStructure/blob/master/LeetCode/queue/Lc225ImplementStackUseQueue.java) | Easy | Stack | Design
+| <ul><li>- [X] [226](https://leetcode.com/problems/invert-binary-tree/)</li></ul> | [Invert Binary Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc226InvertBinaryTree.java) | Easy | Tree / DFS / BFS
 | <ul><li>- [X] [234](https://leetcode.com/problems/palindrome-linked-list/)</li></ul> | [Palindrome LinkedList](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc234PalindromeLinkedList.java) | Easy | LinkedList / Two Pointers
 | <ul><li>- [ ] 235</li></ul>| LCA of a Binary Search Tree | Easy | |
 | <ul><li>- [X] [236](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)</li></ul>| [Lowest Common Ancestor of a Binary Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc236LCAofBinaryTree.java) | Medium | Tree
