@@ -2,6 +2,7 @@
 
 
 class MyStack {
+    // 43ms (97.98%)
     Queue<Integer> q1;
     Queue<Integer> q2;   // always push to empty q2
     //int cnt;
