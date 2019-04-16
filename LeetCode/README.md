@@ -171,3 +171,4 @@
 | [226](https://leetcode.com/problems/invert-binary-tree/) | [Invert Binary Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc226InvertBinaryTree.java) | Easy | Tree / DFS / BFS
 | [1028](https://leetcode.com/problems/recover-a-tree-from-preorder-traversal/) | [Recover Tree from Preorder Traversal](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc1028RecoverTreeFromPreorder.java) | Hard | Tree / DFS
 | [225](https://leetcode.com/problems/implement-stack-using-queues/) | [Implement Stack Using Queues](https://github.com/weltond/DataStructure/blob/master/LeetCode/queue/Lc225ImplementStackUseQueue.java) | Easy | Stack | Design
+| [105](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | [Construct BT from Preorder and Inorder](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc105ConstructBTfromPreAndInorder.java) | Medium | Array / Tree / DFS
