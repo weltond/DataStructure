@@ -41,6 +41,44 @@ class Solution {
     }
     
     // ========= Method 1: Recursion ========
+    // Approach 2: char array. 
+    // 5ms (76.76%)
+    public boolean wordBreak(String s, List<String> wordDict) {
+        if (wordDict == null || wordDict.size() == 0) return false;
+        
+        Set<String> dict = new HashSet();
+        for (String str : wordDict) {
+            dict.add(str);
+        }
+        Map<String, Boolean> memo = new HashMap();
+        
+        return helper(s.toCharArray(), 0, dict, memo);
+    }
+    
+    private boolean helper(char[] arr, int start, Set<String> dict, Map<String, Boolean> memo) {
+        if (start == arr.length) return true;
+
+        String s = new String(arr, start, arr.length - start);
+        if (memo.containsKey(s)) return memo.get(s);
+        
+        boolean flag = false;
+        String tmp = "";
+        for (int i = start; i < arr.length; i++) {
+            tmp = new String(arr, start, i - start + 1);
+
+            if (dict.contains(tmp)) {
+                if (helper(arr, i + 1, dict, memo)) {
+                    memo.put(tmp, true);
+                    return true;
+                }
+            }
+        }
+        
+        memo.put(s, false);
+        
+        return false;
+    }
+    // Appraoch 1: substring
     // 7ms
     public boolean wordBreak(String s, List<String> wordDict) {
         if (wordDict == null || wordDict.size() == 0) return false;
