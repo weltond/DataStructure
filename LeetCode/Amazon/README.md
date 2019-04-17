@@ -45,6 +45,7 @@
 | <ul><li>- [X] [239](https://leetcode.com/problems/sliding-window-maximum/)</li></ul> | [Sliding Window Maximum](https://github.com/weltond/DataStructure/blob/master/LeetCode/queue/Lc239SlidingWindowMaximum.java) | Hard | Heap / Sliding Window
 | <ul><li>- [ ] 240</li></ul>| Search a 2D matrix II | Medium | |
 | <ul><li>- [X] [242](https://leetcode.com/problems/valid-anagram/)</li></ul> | [Valid Anagram](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc242ValidAnagram.java) | Easy | Hashmap / Sort
+| <ul><li>- [273](https://leetcode.com/problems/integer-to-english-words/)</li></ul>  | [Integer to English Words](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc273IntegerToEnglishWords.java) | Hard | Math / String
 | <ul><li>- [X] [295](https://leetcode.com/problems/find-median-from-data-stream/)</li></ul> | [Find Median from Data Stream](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/Lc295FindMedianFromStream.java) | Hard | Heap / Design | Y
 | <ul><li>- [X] [297](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)</li></ul> | [Seriallize and DeSerialize Binary Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc297SerialAndDeBinaryTree.java) | Hard | Tree / Design
 | <ul><li>- [X] [322](https://leetcode.com/problems/coin-change/)</li></ul> | [Coin Change](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc322CoinChange.java) | Medium | DP | Y
@@ -68,3 +69,4 @@
 | <ul><li>- [X] [895](https://leetcode.com/problems/maximum-frequency-stack/)</li></ul>| [Maximum Frequency Stack](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/Lc895MaxFreqStack.java) | Hard | Hash Table / Stack | Y
 | <ul><li>- [X] [937](https://leetcode.com/problems/reorder-log-files/)</li></ul> | [Reorder Log Files](https://github.com/weltond/DataStructure/blob/master/LeetCode/Amazon/Lc937ReorderLogFiles.java) | Easy | String
 | <ul><li>- [X] [973](https://leetcode.com/problems/k-closest-points-to-origin/)</li></ul>| [K Closest Points to Origin](https://github.com/weltond/DataStructure/blob/master/LeetCode/Amazon/Lc973KClosestPointsToOrigin.java) | Easy | Math / Devide and Conquer / Sort | Y
+| <ul><li>- [X] [983](https://leetcode.com/problems/minimum-cost-for-tickets/)</li></ul>  | [Minimum Costs for Tickets](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc983MinCostForTickets.java) | Medium | DP
