@@ -1,6 +1,7 @@
 // https://leetcode.com/problems/search-in-rotated-sorted-array/
 class Solution {
     // ======= Implement 2 ===========
+    // 0ms
     public int search(int[] nums, int target) {
         if (nums == null || nums.length == 0) return -1;
         
@@ -8,7 +9,11 @@ class Solution {
         
         while (left <= right) {
             int mid = left + (right - left) / 2;
+            
             if (target == nums[mid]) return mid;
+            if (nums[right] == target) return right;
+            if (nums[left] == target) return left;
+            
             else if (nums[mid] < nums[right]) { // mid's right is sorted
                 if (nums[mid] < target && nums[right] >= target) {
                     left = mid + 1;
