@@ -177,3 +177,4 @@
 | [12](https://leetcode.com/problems/integer-to-roman/) | [Integer to Roman](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc12IntegerToRoman.java) | Medium | Math / String
 | [273](https://leetcode.com/problems/integer-to-english-words/) | [Integer to English Words](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc273IntegerToEnglishWords.java) | Hard | Math / String
 | [983](https://leetcode.com/problems/minimum-cost-for-tickets/) | [Minimum Costs for Tickets](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc983MinCostForTickets.java) | Medium | DP
+| [1026](https://leetcode.com/problems/maximum-difference-between-node-and-ancestor/) | [Maximum Diff between Node and Ancestor](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc1026MaxDiffBetweenNodeandAncestor.java) | Medium | Tree / DFS
