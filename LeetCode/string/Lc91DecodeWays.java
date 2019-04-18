@@ -1,5 +1,18 @@
 // https://leetcode.com/problems/decode-ways/
 
+/**
+Example 1:
+
+Input: "12"
+Output: 2
+Explanation: It could be decoded as "AB" (1 2) or "L" (12).
+Example 2:
+
+Input: "226"
+Output: 3
+Explanation: It could be decoded as "BZ" (2 26), "VF" (22 6), or "BBF" (2 2 6).
+
+*/
 class Solution {
 	// ======================= DP ===========================
 	// 1ms(84.40%)
