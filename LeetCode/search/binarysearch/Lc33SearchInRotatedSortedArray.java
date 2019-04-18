@@ -9,13 +9,13 @@ class Solution {
         while (left <= right) {
             int mid = left + (right - left) / 2;
             if (target == nums[mid]) return mid;
-            else if (nums[mid] < nums[right]) {
+            else if (nums[mid] < nums[right]) { // mid's right is sorted
                 if (nums[mid] < target && nums[right] >= target) {
                     left = mid + 1;
                 } else {
                     right = mid - 1;
                 }
-            } else {
+            } else {    // mid's left is sorted
                 if (nums[left] <= target && nums[mid] > target) {
                     right = mid - 1;
                 } else {
