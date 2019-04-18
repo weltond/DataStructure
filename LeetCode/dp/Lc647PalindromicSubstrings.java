@@ -1,5 +1,19 @@
 // https://leetcode.com/problems/palindromic-substrings/
 
+/**
+Example 1:
+
+Input: "abc"
+Output: 3
+Explanation: Three palindromic strings: "a", "b", "c".
+ 
+
+Example 2:
+
+Input: "aaa"
+Output: 6
+Explanation: Six palindromic strings: "a", "a", "a", "aa", "aa", "aaa".
+*/
 class Solution {
     
     // ========= Method 3: Manacher =========
