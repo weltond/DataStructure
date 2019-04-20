@@ -179,3 +179,4 @@
 | [983](https://leetcode.com/problems/minimum-cost-for-tickets/) | [Minimum Costs for Tickets](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc983MinCostForTickets.java) | Medium | DP
 | [1026](https://leetcode.com/problems/maximum-difference-between-node-and-ancestor/) | [Maximum Diff between Node and Ancestor](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc1026MaxDiffBetweenNodeandAncestor.java) | Medium | Tree / DFS
 | [670](https://leetcode.com/problems/maximum-swap/) | [Maximum Swap](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc670MaximumSwap.java) | Medium | Array / Math
+| [75](https://leetcode.com/problems/sort-colors/) | [Sort Colors](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc75SortColors.java) | Medium | Array / Two Pointers / Sort
