@@ -120,5 +120,8 @@ return dp[target];
     ```
 
 8. Coin Change 
-- I: 求最少数量。用一维dp
-- II: 求unique ways，用二维dp然后降维
+- I: 求最少数量。
+  - 用一维dp： `dp[i] = Math.min(dp[i], dp[i - coins[j]] + 1);`
+  - Recursion: `count[rem] = (min == Integer.MAX_VALUE) ? -1 : min;`
+- II: 求unique ways。用二维dp然后降维。
+  - 注意此题与Combination Sum IV的区别。此题需要unique而IV不需要unique
