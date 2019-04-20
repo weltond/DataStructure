@@ -118,3 +118,7 @@ return dp[target];
       for (int j = 1 ~ rows)
         dp[j] = dp[j] + dp[j-1]
     ```
+
+8. Coin Change 
+- I: 求最少数量。用一维dp
+- II: 求unique ways，用二维dp然后降维
