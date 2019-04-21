@@ -124,4 +124,12 @@ return dp[target];
   - 用一维dp： `dp[i] = Math.min(dp[i], dp[i - coins[j]] + 1);`
   - Recursion: `count[rem] = (min == Integer.MAX_VALUE) ? -1 : min;`
 - II: 求unique ways。用二维dp然后降维。
-  - 注意此题与Combination Sum IV的区别。此题需要unique而IV不需要unique
+  - 注意此题与Combination Sum IV的区别。此题需要unique而CS IV不需要unique
+9. Palindrom
+- [Longest Substring](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc5LongestPalindromicSubstring.java)
+  - boolean dp[i][j]: `dp[i][j] = s.charAt(i) == s.charAt(j) && ( j <= i + 2 || dp[i + 1][j - 1]);`
+- [Longest Subsequence](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc516LongestPalindromicSubsequence.java)
+  - int dp[i][j]: `dp[i][j] = s.charAt(i) == s.charAt(j) ? (2 + dp[i + 1][j - 1]) : (Math.max(dp[i + 1][j], dp[i][j - 1]));`
+- [Substrings](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc647PalindromicSubstrings.java)
+  - Same as **Longest Substring**
+- [Longest Palindrome - Math problem](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc409LongestPalindrome.java)
