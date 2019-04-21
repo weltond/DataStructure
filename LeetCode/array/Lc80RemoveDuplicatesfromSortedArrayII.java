@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/
 /**
+Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.
+
 Given nums = [0,0,1,1,1,1,2,3,3],
 
 Your function should return length = 7, with the first seven elements of nums being modified to 0, 0, 1, 1, 2, 3 and 3 respectively.
