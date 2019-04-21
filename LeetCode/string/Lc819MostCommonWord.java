@@ -7,6 +7,7 @@ banned = ["hit"]
 Output: "ball"
 */
 class Solution {
+    // 4ms
     public String mostCommonWord(String paragraph, String[] banned) {
         if (paragraph == null || paragraph.length() == 0) return "";
         
@@ -44,6 +45,54 @@ class Solution {
                 }
                 
                 word = new StringBuilder();
+            }
+        }
+        
+        return ans;
+    }
+}
+
+class Solution {
+    // ============ Approach 1: My code =============
+    // 5ms (96.84%)
+    public String mostCommonWord(String paragraph, String[] banned) {
+        if (paragraph == null || banned == null) return null;
+        
+        Map<String, Integer> map = new HashMap();
+        Set<String> set = new HashSet();
+        
+        for (String s : banned) {
+            set.add(s);
+        }
+        int max = 0;
+        String ans = null;
+        StringBuilder sb = new StringBuilder();
+        
+        paragraph += ".";
+        for (int i = 0, len = paragraph.length(); i < len; i++) {
+            char c = paragraph.charAt(i);
+            if (c > 'z' || c < 'A') {
+                String tmp = sb.toString().toLowerCase();
+                
+                /**
+                "Bob. hIt, baLl"
+                ["bob", "hit"]
+                tmp could be "" 
+                */
+                if (set.contains(tmp) || tmp.equals("")) {  
+                    sb = new StringBuilder();
+                    continue;
+                }
+                int freq = map.getOrDefault(tmp, 0) + 1;
+                if (freq > max) {
+                    max = freq;
+                    ans = tmp;
+                }
+                map.put(tmp, freq);
+                sb = new StringBuilder();
+                //System.out.println(tmp + ", " + freq + ", " + max);
+            } else {
+                sb.append(c);
             }
         }
         
