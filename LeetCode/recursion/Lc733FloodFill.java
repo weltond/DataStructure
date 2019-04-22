@@ -36,3 +36,41 @@ class Solution {
         }
     }
 }
+
+class Solution {
+    public int[][] floodFill(int[][] image, int sr, int sc, int newColor) {
+        if (image == null) return new int[][]{};
+        
+        if (newColor == image[sr][sc]) return image;
+        
+        Queue<int[]> q = new LinkedList();
+        
+        q.offer(new int[]{sr, sc});
+        
+        int old = image[sr][sc];
+        while (!q.isEmpty()) {
+            int size = q.size();
+            for (int i = 0; i < size; i++) {
+                int[] cur = q.poll();
+                
+                int s = cur[0], e = cur[1];
+                image[s][e] = newColor;
+                
+                int[] dir = {-1, 0, 1, 0, -1};
+                for (int j = 0; j < 4; j++) {
+                    int nx = dir[j] + s;
+                    int ny = dir[j + 1] + e;
+                    if (nx < 0 || ny < 0 || nx >= image.length || ny >= image[0].length || image[nx][ny] != old) continue;
+                    //image[nx][ny] = newColor;     // DO NOT Set HERE!
+                    //System.out.println(nx + ", " + ny);
+                    q.offer(new int[]{nx, ny});
+                }
+                //System.out.println("= ===");
+            }
+            
+        }
+           
+        
+        return image;
+    }
+}
