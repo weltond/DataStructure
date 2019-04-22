@@ -188,3 +188,4 @@
 | [703](https://leetcode.com/problems/kth-largest-element-in-a-stream/) | [Kth Largest Element in Stream](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/Lc703KLargestElementInStream) | Easy | Heap
 | [355](https://leetcode.com/problems/design-twitter/) | [Design Twitter](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc355DesignTwitter.java) | Medium | Hash Table / Design / Heap
 | [547](https://leetcode.com/problems/friend-circles/) | [Friend Circles](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/Lc547FriendCircles.java) | Medium | DFS / Union Find
+| [622](https://leetcode.com/problems/design-circular-queue/) | [Design Circular Queue](https://github.com/weltond/DataStructure/blob/master/LeetCode/queue/Lc622DesignCircularQueue.java) | Medium | Design / Queue
