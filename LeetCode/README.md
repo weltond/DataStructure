@@ -193,3 +193,4 @@
 | [146](https://leetcode.com/problems/lru-cache/) | [LRU Cache](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc146LRUCache.java) | Hard | Design
 | [794](https://leetcode.com/problems/valid-tic-tac-toe-state/) | [Valid Tic-Tac-Toe](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/Lc794ValidTicTacToeState.java) | Medium | Math / Recursion?
 | [95](https://leetcode.com/problems/unique-binary-search-trees-ii/) | [Unique BST II](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc95UniqueBSTII.java) | Medium | DP / Tree
+| [230](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | [Kth Smallest Element in a BST](https://github.com/weltond/DataStructure/blob/bb06bc9cae43f33951932ecb3722fb614e51a638/LeetCode/tree/Lc230KthSmallestElementInBST.java) | Medium | Binary Search / Tree
