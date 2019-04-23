@@ -192,3 +192,4 @@
 | [300](https://leetcode.com/problems/longest-increasing-subsequence/) | [Longest Increasing Subsequence](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc300LongestIncreasingSubsequence.java) | Medium | DP / Binary Search
 | [146](https://leetcode.com/problems/lru-cache/) | [LRU Cache](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc146LRUCache.java) | Hard | Design
 | [794](https://leetcode.com/problems/valid-tic-tac-toe-state/) | [Valid Tic-Tac-Toe](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/Lc794ValidTicTacToeState.java) | Medium | Math / Recursion?
+| [95](https://leetcode.com/problems/unique-binary-search-trees-ii/) | [Unique BST II](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc95UniqueBSTII.java) | Medium | DP / Tree
