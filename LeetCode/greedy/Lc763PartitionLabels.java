@@ -1,6 +1,34 @@
 // https://leetcode.com/problems/partition-labels/
 
 class Solution {
+    // 2ms (99.74%)
+    public List<Integer> partitionLabels(String s) {
+        List<Integer> res = new ArrayList();
+        if (s == null) return res;
+        
+        int i = 0, len = s.length();
+        int[] arr = new int[26];
+        for (; i < len; i++) {
+            char c = s.charAt(i);
+            arr[c - 'a'] = i;
+        }
+        
+        int left = 0, right = 0;
+        i = 0;
+        for (; i < len; i++) {
+            char c = s.charAt(i);
+            right = Math.max(right, arr[c - 'a']);
+            if (right == i) {
+                res.add(i - left + 1);
+                left = i + 1;
+            }
+        }
+        
+        return res;
+    }
+}
+
+class Solution {
     // Idea:
     //      Need an arry last[char] -> index of S where char occur last
     //      Then, we have pointers left, right -> parition; i -> cur index of S
