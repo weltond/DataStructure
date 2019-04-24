@@ -198,3 +198,4 @@
 | [658](https://leetcode.com/problems/find-k-closest-elements/) | [Find K Closest Elements](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/Lc658FindKClosestElements.java) | Medium | Binary Search
 | [35](https://leetcode.com/problems/search-insert-position/) | [Search Insert Position](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/Lc35SearchInsertPosition.java) | Easy | Array / Binary Search
 | [528](https://leetcode.com/problems/random-pick-with-weight/) | [Random Pick With Weight](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/Lc528RandomPickWithWeight.java) | Medium | Random / Binary Search
+| [384](https://leetcode.com/problems/shuffle-an-array/) | [Shuffle An Array](https://github.com/weltond/DataStructure/blob/master/LeetCode/Sampling/Lc384ShuffleAnArray.java) | Medium | Random
