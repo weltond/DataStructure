@@ -201,3 +201,4 @@
 | [384](https://leetcode.com/problems/shuffle-an-array/) | [Shuffle An Array](https://github.com/weltond/DataStructure/blob/master/LeetCode/Sampling/Lc384ShuffleAnArray.java) | Medium | Random
 | [588]() | [Design In-Memory File System](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/Lc588DesignInMemoryFileSystem.java) | Medium | Design
 | [92](https://leetcode.com/problems/reverse-linked-list-ii/) | [Reverse Linked List II](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc92ReverseLinkedListII.java) | Medium | Linked List
+| [55](https://leetcode.com/problems/jump-game/) | [Jump Game](https://github.com/weltond/DataStructure/blob/master/LeetCode/greedy/Lc55JumpGame.java) | Medium | Array / Greedy
