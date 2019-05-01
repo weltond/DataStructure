@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [567](https://leetcode.com/problems/permutation-in-string/) | [Permutation In String](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc567PermutationInString.java) | Medium | Two Pointers / Sliding Window
 |[684](https://leetcode.com/problems/redundant-connection/) | [Redundant Connection](https://github.com/weltond/DataStructure/blob/master/LeetCode/unionfind/Lc684RedundantConnection.java) | Medium | Tree / Graph / Union Find 
 |  130 | [Surronded Regions](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/Lc130SurroundedRegions.java) | Medium | 
 |  695 | [Max Area Of Island](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/Lc695MaxAreaOfIsland.java) | Medium |
