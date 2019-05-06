@@ -1,9 +1,9 @@
 Head First Servlet and JSP notes
 ==========================
-* [Chapter 2: Web App Architechture: High-level Overview](#chapter-2)
-* [Chapter 3 Mini MVC Tutorial: hands-on MVC](#chapter-3-mini-mvc-tutorial-:-hands-on-mvc)
+* [Chapter 2: Web App Architechture: High-level Overview](#chapter-2-web-app-architechture)
+* [Chapter 3 Mini MVC Tutorial: hands-on MVC](#chapter-3-mini-mvc-tutorial)
 
-## Chapter 2 Web App Architechture: High-level Overview
+## Chapter 2 Web App Architechture
 ### MVC
 MVC takes the businuess logic out of the servlet, and puts it in a **model** - a resuable plain old Java class. The *Model* is a combination
 of the business data (like the state of a Shopping Cart) and the methods (rules) that operate on that data.
@@ -39,4 +39,4 @@ of the business data (like the state of a Shopping Cart) and the methods (rules)
 - A J2EE application server includes both a **web container** AND an **EJB Container**.
 - Tomcat is a web container, but not a full J2EE application server.
 
-## Chapter 3 Mini MVC Tutorial: hands-on MVC
+## Chapter 3 Mini MVC Tutorial
