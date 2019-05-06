@@ -44,6 +44,7 @@ of the business data (like the state of a Shopping Cart) and the methods (rules)
 1. The client makes a request for the `form.html` page.
 2. The **Container** retreives the `form.html` page.
 3. The **Container** returns the page to the browser, where the user anwers the questions on the form and ...
+![Architecture 1]()
 4. The browser sends the request data to the container.
 5. The **Container** finds the correct **servlet** based on the URL, and passes the request to the **servlet**.
 6. The **servlet** calls the `BeerExpert class` for help.
@@ -52,3 +53,4 @@ of the business data (like the state of a Shopping Cart) and the methods (rules)
 9. The **JSP** gets the answer from the request object.
 10. The **JSP** generates a page for the **Container**.
 11. The **Container** returns the page to the happy user.
+![Architecture 2]()
