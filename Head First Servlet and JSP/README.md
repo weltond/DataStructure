@@ -45,7 +45,7 @@ of the business data (like the state of a Shopping Cart) and the methods (rules)
 2. The **Container** retreives the `form.html` page.
 3. The **Container** returns the page to the browser, where the user anwers the questions on the form and ...
 
-![Architecture 1]()
+![Architecture 1](https://github.com/weltond/DataStructure/blob/master/Head%20First%20Servlet%20and%20JSP/Chapter3/architecture_1.PNG)
 4. The browser sends the request data to the container.
 5. The **Container** finds the correct **servlet** based on the URL, and passes the request to the **servlet**.
 6. The **servlet** calls the `BeerExpert class` for help.
@@ -55,6 +55,6 @@ of the business data (like the state of a Shopping Cart) and the methods (rules)
 10. The **JSP** generates a page for the **Container**.
 11. The **Container** returns the page to the happy user.
 
-![Architecture 2]()
+![Architecture 2](https://github.com/weltond/DataStructure/blob/master/Head%20First%20Servlet%20and%20JSP/Chapter3/architecture_2.PNG)
 
 
