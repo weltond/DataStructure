@@ -1,6 +1,6 @@
 # Head First Servlet and JSP notes
 
-# Chapter 2 
+## Chapter 2 
 ### MVC
 MVC takes the businuess logic out of the servlet, and puts it in a **model** - a resuable plain old Java class. The *Model* is a combination
 of the business data (like the state of a Shopping Cart) and the methods (rules) that operate on that data.
