@@ -2,6 +2,7 @@ Head First Servlet and JSP notes
 ==========================
 * [Chapter 2 Web App Architechture: High-level Overview](#chapter-2-web-app-architechture)
 * [Chapter 3 Mini MVC Tutorial: hands-on MVC](#chapter-3-mini-mvc-tutorial)
+* [Chapter 4 Being a Servlet: request AND response](#chapter-4-being-a-servlet)
 
 ## Chapter 2 Web App Architechture
 ### MVC
@@ -44,8 +45,8 @@ of the business data (like the state of a Shopping Cart) and the methods (rules)
 1. The client makes a request for the `form.html` page.
 2. The **Container** retreives the `form.html` page.
 3. The **Container** returns the page to the browser, where the user anwers the questions on the form and ...
-
 ![Architecture 1](https://github.com/weltond/DataStructure/blob/master/Head%20First%20Servlet%20and%20JSP/Chapter3/architecture_1.PNG)
+
 4. The browser sends the request data to the container.
 5. The **Container** finds the correct **servlet** based on the URL, and passes the request to the **servlet**.
 6. The **servlet** calls the `BeerExpert class` for help.
@@ -57,4 +58,5 @@ of the business data (like the state of a Shopping Cart) and the methods (rules)
 
 ![Architecture 2](https://github.com/weltond/DataStructure/blob/master/Head%20First%20Servlet%20and%20JSP/Chapter3/architecture_2.PNG)
 
+## Chapter 4 Being a Servlet
 
