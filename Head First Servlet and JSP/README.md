@@ -1,6 +1,6 @@
 Head First Servlet and JSP notes
 ==========================
-* [Chapter 2: Web App Architechture: High-level Overview](#chapter-2-web-app-architechture)
+* [Chapter 2 Web App Architechture: High-level Overview](#chapter-2-web-app-architechture)
 * [Chapter 3 Mini MVC Tutorial: hands-on MVC](#chapter-3-mini-mvc-tutorial)
 
 ## Chapter 2 Web App Architechture
@@ -40,3 +40,15 @@ of the business data (like the state of a Shopping Cart) and the methods (rules)
 - Tomcat is a web container, but not a full J2EE application server.
 
 ## Chapter 3 Mini MVC Tutorial
+### Architecture
+1. The client makes a request for the `form.html` page.
+2. The **Container** retreives the `form.html` page.
+3. The **Container** returns the page to the browser, where the user anwers the questions on the form and ...
+4. The browser sends the request data to the container.
+5. The **Container** finds the correct **servlet** based on the URL, and passes the request to the **servlet**.
+6. The **servlet** calls the `BeerExpert class` for help.
+7. The `expert` class returns an answer, which the **servlet** adds to the reqeuest object.
+8. The **servlet** forwards the request to the **JSP**.
+9. The **JSP** gets the answer from the request object.
+10. The **JSP** generates a page for the **Container**.
+11. The **Container** returns the page to the happy user.
