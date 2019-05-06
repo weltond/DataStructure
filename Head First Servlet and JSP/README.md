@@ -2,8 +2,8 @@ Head First Servlet and JSP notes
 ==========================
 * [Chapter 2](#chapter-2)
 
-# Chapter 2 
-## MVC
+## Chapter 2 
+### MVC
 MVC takes the businuess logic out of the servlet, and puts it in a **model** - a resuable plain old Java class. The *Model* is a combination
 of the business data (like the state of a Shopping Cart) and the methods (rules) that operate on that data.
 - Controller (Servlet)
@@ -19,7 +19,21 @@ of the business data (like the state of a Shopping Cart) and the methods (rules)
   - A shopping cart's contents (and the rules for that to do with it) would be part of the **Model** in **MVC**.
   - It's the only part of the system that talks to the database (although it probably uses another object for the actual DB communication, but we'll save that pattern for later)
 
+### Web Server, Container and Servlet
 | Task | Web Server | Container | Servlet 
 | :--------: | :-------: | :---------: | :------:
 | Creates the request & response objects | | Just before starting the thread | |
 | Calls the **service()** method | | Then **service()** method calls **doGet()** or **doPost()** | |
+| Start a new thread to handle request | | Starts a servlet thread| |
+| Converts a response object to an HTTP response | | Generates the HTTP response stream from the data in response object | 
+| Knows HTTP | Uses it to talk to the client browser | | |
+| Adds HTML to the response object | | | The dynamic content for the client |
+| Has a reference to the response object | | Container gives it the servlet | Uses it to print a response |
+| Finds URLs in the DD | | To find the correct servlet for the request | |
+|Deletes the request and response objects | | Once the servlet is finished | 
+| Coordinates making dynamic content | Knows how to forward to the **Container** | Knows who to call |
+| Manages lifecycles | | Calls **service()** method (and others) | |
+
+### J2EE Application Server
+- A J2EE application server includes both a **web container** AND an **EJB Container**.
+- Tomcat is a web container, but not a full J2EE application server.
