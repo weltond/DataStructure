@@ -1,6 +1,6 @@
 # Head First Servlet and JSP notes
-
-* [Chapter 2](chapter-2)
+==========================
+* [Chapter 2](#chapter-2)
 
 ## Chapter 2 
 ### MVC
