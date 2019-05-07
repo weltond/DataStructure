@@ -3,6 +3,9 @@ Head First Servlet and JSP notes
 * [Chapter 2 Web App Architechture: High-level Overview](#chapter-2-web-app-architechture)
 * [Chapter 3 Mini MVC Tutorial: hands-on MVC](#chapter-3-mini-mvc-tutorial)
 * [Chapter 4 Being a Servlet: request AND response](#chapter-4-being-a-servlet)
+  * [Servlets are controlled by Container](#servlets-are-controller-by-container)
+  * [Servlet Life](#servlet-life)
+  * [Inherits](#inherits)
 
 ## Chapter 2 Web App Architechture
 ### MVC
@@ -73,4 +76,4 @@ The client sent an HTTP `GET` request, so the `service()` method calls the **ser
 The client gets the response.
 ### Servlet Life
 ![Life Cycle](https://github.com/weltond/DataStructure/blob/master/Head%20First%20Servlet%20and%20JSP/Chapter%204/lifecycle.PNG)
-
+### Inherits
