@@ -1,7 +1,11 @@
 Head First Servlet and JSP notes
 ==========================
 * [Chapter 2 Web App Architechture: High-level Overview](#chapter-2-web-app-architechture)
+  * [MVC](#MVC)
+  * [Web Server, Container and Servlet](#web-server-container-and-servlet)
+  * [J2EE Application Server](#j2ee-application-server)
 * [Chapter 3 Mini MVC Tutorial: hands-on MVC](#chapter-3-mini-mvc-tutorial)
+  * [Architecture](#architecture)
 * [Chapter 4 Being a Servlet: request AND response](#chapter-4-being-a-servlet)
   * [Servlets are controlled by Container](#servlets-are-controller-by-container)
   * [Servlet Life](#servlet-life)
