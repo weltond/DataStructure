@@ -81,3 +81,21 @@ The client gets the response.
 ### Servlet Life
 ![Life Cycle](https://github.com/weltond/DataStructure/blob/master/Head%20First%20Servlet%20and%20JSP/Chapter%204/lifecycle.PNG)
 ### Inherits
+- Servlet Interface (javax.servlet.Servlet)
+
+  The Servlet interface says that all servlets have these five methods (the first three are lifecycle methods)
+  - `service(ServletReuqest, ServletResponse)`
+  - `init(ServletConfig)`
+  - `destroy()`
+  - `getServletConfig()`
+  - `getServletInfo()`
+- GenericServlet class (javax.servlet.GenericServlet)
+
+  **GenericServlet** is an **abstract** class that impements most of the basic servlet methods you'll need, including those from the **Servlet interface**. You will probably NEVER extend this class yourself. Most of your servlet's "servlet behavior" comes from this class.
+- HttpServlet class (javax.servlet.http.HttpServlet)
+
+  **HttpServlet** (also an **abstract** class) implements the `service()` method to reflect the HTTPness of the servlet -- the `service()` method doesn't take just ANY old servlet request and response, but an HTTP-specific request and response.
+  
+- MyServlet class
+
+  Most of your servletness is handled by superclass methods. All you do is override the HTTP methods you need.
