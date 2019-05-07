@@ -71,4 +71,6 @@ The client sent an HTTP `GET` request, so the `service()` method calls the **ser
 5. The **servlet** uses the response object to write out the response to the client. The response goes back through the **Container**.
 6. The `service()` method completes, so the **thread** either dies or returns to a **Container-managed thread pool**. The request and response object references fall out of scope, so these objects are toast (ready for garbage collection).
 The client gets the response.
+### Servlet Life
+![Life Cycle](https://github.com/weltond/DataStructure/blob/master/Head%20First%20Servlet%20and%20JSP/Chapter%204/lifecycle.PNG)
 
