@@ -99,3 +99,15 @@ The client gets the response.
 #### MyServlet class
 
   Most of your servletness is handled by superclass methods. All you do is override the HTTP methods you need.
+
+### Servlet config and context
+- ServletConfig object
+  - One `ServletConfig` object per servlet.
+  - Use it to pass deploy-time information to the servlet (a database or enterprise bean lookup name, for example) that you don’t want to hard-code into the servlet (servlet init parameters).
+  - Use it to access the ServletContext.
+  - Parameters are confi gured in the Deployment Descriptor.
+- ServletContext
+  - One ServletContext per web app.
+  - Use it to access web app parameters (also confi gured in the Deployment Descriptor).
+  - Use it as a kind of application bulletin-board, where you can put up messages (called attributes) that other parts of the application can access.
+  - Use it to get server info, including the name and version of the Container, and the version of the API that’s supported.
