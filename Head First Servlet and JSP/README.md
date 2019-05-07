@@ -59,4 +59,16 @@ of the business data (like the state of a Shopping Cart) and the methods (rules)
 ![Architecture 2](https://github.com/weltond/DataStructure/blob/master/Head%20First%20Servlet%20and%20JSP/Chapter3/architecture_2.PNG)
 
 ## Chapter 4 Being a Servlet
+### Servlets are controlled by **Container**
+1. User clicks a link that has a URL to a **servlet**.
+2. The **Container** "sees" that the request is for a **servlet**, so the contianer creates two objects:
+  - `HttpServletResponse`
+  - `HttpServletRequest`
+3. The **Container** finds the correct **servlet** based on the URL in the request, creates or allocates a thread for that request, 
+and calls the servlet's `service()` method, passing the request and response objects as arguments.
+4. The `service()` method figures out which servlet method to call based on the HTTP method (`GET`, `POST`, ect) sent by the client.
+The client sent an HTTP `GET` request, so the `service()` method calls the **servlet's** `doGet()` method, passing the request and response objects as arguments.
+5. The **servlet** uses the response object to write out the response to the client. The response goes back through the **Container**.
+6. The `service()` method completes, so the **thread** either dies or returns to a **Container-managed thread pool**. The request and response object references fall out of scope, so these objects are toast (ready for garbage collection).
+The client gets the response.
 
