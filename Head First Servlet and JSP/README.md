@@ -7,7 +7,7 @@ Head First Servlet and JSP notes
 * [Chapter 3 Mini MVC Tutorial: hands-on MVC](#chapter-3-mini-mvc-tutorial)
   * [Architecture](#architecture)
 * [Chapter 4 Being a Servlet: request AND response](#chapter-4-being-a-servlet)
-  * [Servlets are controlled by Container](#servlets-are-controller-by-container)
+  * [Servlets are controlled by Container](#servlets-are-controlled-by-container)
   * [Servlet Life](#servlet-life)
   * [Inherits](#inherits)
 
