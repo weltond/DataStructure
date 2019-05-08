@@ -111,3 +111,9 @@ The client gets the response.
   - Use it to access web app parameters (also confi gured in the Deployment Descriptor).
   - Use it as a kind of application bulletin-board, where you can put up messages (called attributes) that other parts of the application can access.
   - Use it to get server info, including the name and version of the Container, and the version of the API that’s supported.
+### Redirect
+- `response.sendRedirect("...URL...");
+- Relative URLs
+  - Original typed in: `http://www.wickedlysmart.com/myApp/cool/bar.do`
+    - `sendRedirect("foo/stuff.html")`Container will build: `http://www.wickedlysmart.com/myApp/cool/foo/stuff.html`
+    - `sendRedirect("/foo/stuff.html")` Container will build: `http://www.wickedlysmart.com/foo/stuff.html`
