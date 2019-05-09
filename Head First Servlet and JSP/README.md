@@ -135,3 +135,8 @@ The client gets the response.
 ```java
 out.println(getServletConfig().getInitParameter("adminEmail"));
 ```
+- You CAN'T use servlet init parameters until the servlet is **initialized**, which means you cannot call it from your constructor!
+ - When the container initializes a servlet, it makes a unique **ServletConfig** for the servlet.
+ - The Container "reads" the servlet init parameters from the DD and gives them to the **ServletConfig**, then passes the **ServletConfig** to the servlet's `init()` method.
+ 
+
