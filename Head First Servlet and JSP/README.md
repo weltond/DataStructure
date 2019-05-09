@@ -117,3 +117,21 @@ The client gets the response.
   - Original typed in: `http://www.wickedlysmart.com/myApp/cool/bar.do`
     - `sendRedirect("foo/stuff.html")`Container will build: `http://www.wickedlysmart.com/myApp/cool/foo/stuff.html`
     - `sendRedirect("/foo/stuff.html")` Container will build: `http://www.wickedlysmart.com/foo/stuff.html`
+
+## Chapter 5 Being a Web App
+### Init Parameters
+- In the **DD** (web.xml) file:
+```xml
+<servlet>
+  <servlet-name>BeerParamTests</servlet-name>
+  <servlet-class>TestInitParams</servlet-class>
+  <init-param>
+    <param-name>adminEmail</param-name>
+    <param-value>likewecare@wickedlysmart.com</param-value>
+  </init-param>
+</servlet>
+```
+- In the **servlet** class code:
+```java
+out.println(getServletConfig().getInitParameter("adminEmail"));
+```
