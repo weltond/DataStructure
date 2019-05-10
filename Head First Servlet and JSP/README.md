@@ -143,6 +143,10 @@ out.println(getServletConfig().getInitParameter("adminEmail"));
  - The Container "reads" the servlet init parameters from the DD and gives them to the **ServletConfig**, then passes the **ServletConfig** to the servlet's `init()` method.
  
 ### ServletConfig and ServletContext
+ServletConfig is **ONE PER Servlet**. ServletContext is **ONE PER Web App**.
+
+If the app is distributed, there's **ONE ServletContext per JVM**.
+
 - Servlet Context
   - DD
     - Within the `<web-app>` element but NOT within a specific `<servlet>` element
