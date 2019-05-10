@@ -10,7 +10,10 @@ Head First Servlet and JSP notes
   * [Servlets are controlled by Container](#servlets-are-controlled-by-container)
   * [Servlet Life](#servlet-life)
   * [Inherits](#inherits)
-
+* [Chapter 5 Being a Webapp](#chapter-5-being-a-webapp)
+  * [Init Parameters](#init-parameters)
+  * [ServletConfig and ServletContext](#servletconfig-and-servletcontext)
+  
 ## Chapter 2 Web App Architechture
 ### MVC
 MVC takes the businuess logic out of the servlet, and puts it in a **model** - a resuable plain old Java class. The *Model* is a combination
@@ -139,4 +142,45 @@ out.println(getServletConfig().getInitParameter("adminEmail"));
  - When the container initializes a servlet, it makes a unique **ServletConfig** for the servlet.
  - The Container "reads" the servlet init parameters from the DD and gives them to the **ServletConfig**, then passes the **ServletConfig** to the servlet's `init()` method.
  
-
+### ServletConfig and ServletContext
+- Servlet Context
+  - DD
+    - Within the `<web-app>` element but NOT within a specific `<servlet>` element
+```xml
+<web-app ...>
+   <context-param>
+      <param-name>foo</param-name>
+      <param-value>bar</param-value>
+   </context-param>
+</web-app>
+```
+  - Servlet Code
+  ```java
+  getServletContext().getInitParameter("foo");
+  ```
+  - Availability
+    - To any servlets and JSPs that are part of this web app.
+- Servlet Config
+  - DD
+    - Within the `<servlet>` element for each specific servlet.
+```xml
+<servlet>
+  <servlet-name>
+    BeerParamTests
+  </servlet-name>
+  <servlet-class>
+    TestInitParams
+  </servlet-class>
+  <init-param>
+    <param-name>foo</param-name>
+    <param-value>bar</param-value>
+  </init-param>
+  <!-- other stuff -->
+</servlet>
+```
+  - Servlet code
+  ```java
+  getServletConfig().getInitParameter("foo");
+  ```
+  - Availaibility
+    - To only the servlet for which the `<init-param>` was configured. (Although the servlet can choose to make it more widely available by storing it in an attribute.)  
