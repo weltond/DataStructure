@@ -146,14 +146,14 @@ out.println(getServletConfig().getInitParameter("adminEmail"));
 - Servlet Context
   - DD
     - Within the `<web-app>` element but NOT within a specific `<servlet>` element
-```xml
-<web-app ...>
-   <context-param>
-      <param-name>foo</param-name>
-      <param-value>bar</param-value>
-   </context-param>
-</web-app>
-```
+  ```xml
+  <web-app ...>
+     <context-param>
+        <param-name>foo</param-name>
+        <param-value>bar</param-value>
+     </context-param>
+  </web-app>
+  ```
   - Servlet Code
   ```java
   getServletContext().getInitParameter("foo");
@@ -163,21 +163,21 @@ out.println(getServletConfig().getInitParameter("adminEmail"));
 - Servlet Config
   - DD
     - Within the `<servlet>` element for each specific servlet.
-```xml
-<servlet>
-  <servlet-name>
-    BeerParamTests
-  </servlet-name>
-  <servlet-class>
-    TestInitParams
-  </servlet-class>
-  <init-param>
-    <param-name>foo</param-name>
-    <param-value>bar</param-value>
-  </init-param>
-  <!-- other stuff -->
-</servlet>
-```
+  ```xml
+  <servlet>
+    <servlet-name>
+      BeerParamTests
+    </servlet-name>
+    <servlet-class>
+      TestInitParams
+    </servlet-class>
+    <init-param>
+      <param-name>foo</param-name>
+      <param-value>bar</param-value>
+    </init-param>
+    <!-- other stuff -->
+  </servlet>
+  ```
   - Servlet code
   ```java
   getServletConfig().getInitParameter("foo");
