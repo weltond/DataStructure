@@ -10,7 +10,7 @@ Head First Servlet and JSP notes
   * [Servlets are controlled by Container](#servlets-are-controlled-by-container)
   * [Servlet Life](#servlet-life)
   * [Inherits](#inherits)
-* [Chapter 5 Being a Webapp](#chapter-5-being-a-webapp)
+* [Chapter 5 Being a Web App](#chapter-5-being-a-web-app)
   * [Init Parameters](#init-parameters)
   * [ServletConfig and ServletContext](#servletconfig-and-servletcontext)
   
