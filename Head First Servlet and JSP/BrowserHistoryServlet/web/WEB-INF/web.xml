@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <servlet>
+    <servlet-name>showAllBooksServlet</servlet-name>
+    <servlet-class>com.weltond.historyServlet.ShowAllBooksServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    <servlet-name>showAllBooksServlet</servlet-name>
+    <url-pattern>/servlet/showAllBook</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+    <servlet-name>showBookDetail</servlet-name>
+    <servlet-class>com.weltond.historyServlet.ShowBookDetail</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    <servlet-name>showBookDetail</servlet-name>
+    <url-pattern>/servlet/showBookDetail</url-pattern>
+    </servlet-mapping>
+</web-app>
