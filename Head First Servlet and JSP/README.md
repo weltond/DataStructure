@@ -13,12 +13,13 @@ Head First Servlet and JSP notes
 * [Chapter 5 Being a Web App](#chapter-5-being-a-web-app)
   * [Init Parameters](#init-parameters)
   * [ServletConfig and ServletContext](#servletconfig-and-servletcontext)
-  
+    
 ## Chapter 2 Web App Architechture
 ### MVC
 MVC takes the businuess logic out of the servlet, and puts it in a **model** - a resuable plain old Java class. The *Model* is a combination
 of the business data (like the state of a Shopping Cart) and the methods (rules) that operate on that data.
 - **Controller** (Servlet)
+  - 获取表单数据/处理业务逻辑/分发转向
   - Takes user input from the request and figures out what it means to the model.
   - Tells the **model** to update itself, and makes the new model state available for the **view** (JSP)
 - **View** (JSP)
