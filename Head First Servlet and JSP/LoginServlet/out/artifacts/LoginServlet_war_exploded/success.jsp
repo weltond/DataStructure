@@ -18,7 +18,9 @@
     %>
 
     <br>
-
+    Password: ${param["pwd"]}
+    <br>
+    Wrong Msg: ${el}
     <!-- A NEW REQUEST!!!!
             Cannot get above request parameters!!!!
             BUT, can get session attribute!!!!

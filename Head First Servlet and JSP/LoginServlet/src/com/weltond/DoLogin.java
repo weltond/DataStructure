@@ -25,7 +25,7 @@ public class DoLogin extends HttpServlet {
         System.out.println(userName + ", " + pwd);
         // business logic
         if ("weltond".equals(userName) && "123".equals(pwd)) {
-
+            request.setAttribute("el", "el msg");
             request.getSession().setAttribute("name", userName);
             // dispatch
             request.getRequestDispatcher("/success.jsp").forward(request, response);
