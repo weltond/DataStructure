@@ -11,6 +11,7 @@
     <title>$Title$</title>
   </head>
   <body>
-  $END$
+    <a href="">LogIn</a>
+    <a href="reg.jsp">Register</a>
   </body>
 </html>

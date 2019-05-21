@@ -7,6 +7,11 @@
         <element id="directory" name="classes">
           <element id="module-output" name="MyLoginMVC" />
         </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="E:/Jar/mysql-connector-java-8.0.13.jar" />
+          <element id="file-copy" path="E:/Jar/commons-beanutils-1.9.3-bin/commons-beanutils-1.9.3/commons-beanutils-1.9.3.jar" />
+          <element id="file-copy" path="E:/Jar/commons-logging-1.2-bin/commons-logging-1.2/commons-logging-1.2.jar" />
+        </element>
       </element>
     </root>
   </artifact>
