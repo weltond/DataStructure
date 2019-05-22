@@ -14,4 +14,11 @@ public interface UserService {
      * @throws Exception
      */
     public void register(User user) throws Exception;
+
+    /**
+     * Log in
+     * @param user
+     * @return
+     */
+    public User login(User user);
 }

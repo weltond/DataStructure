@@ -15,4 +15,12 @@ public interface UserDao {
      */
     public void addUser(User user) throws Exception;
 
+    /**
+     * Find User from DB based on username and password
+     * @param user
+     * @return
+     * @throws Exception
+     */
+    public User findUser(User user) throws Exception;
+
 }
