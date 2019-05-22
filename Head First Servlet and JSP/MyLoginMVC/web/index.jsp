@@ -20,7 +20,7 @@
   </c:if>
 
   <c:if test="${not empty user}">
-    Welcome: ${user.username}  <a href="${pageContext.request.contextPath}/login.jsp">Log Out</a>
+    Welcome: ${user.username}  <a href="${pageContext.request.contextPath}/servlet/logoutServlet">Log Out</a>
 
   </c:if>
 
