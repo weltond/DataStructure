@@ -6,6 +6,7 @@ import com.weltond.service.impl.UserServiceImpl;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.beanutils.ConvertUtils;
 import org.apache.commons.beanutils.Converter;
+import org.apache.commons.beanutils.locale.converters.DateLocaleConverter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -35,21 +36,23 @@ public class RegServlet extends HttpServlet {
         // Get form data
         User user = new User();
         try {
-            ConvertUtils.register(new Converter() {
-                @Override
-                public Object convert(Class type, Object value) {
-                    Date date = null;
-                    if (value instanceof String) {
-                        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-                        try {
-                            date = sdf.parse((String)value);
-                        } catch (ParseException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                    return date;
-                }
-            }, Date.class);
+            // add a date converter
+//            ConvertUtils.register(new Converter() {
+//                @Override
+//                public Object convert(Class type, Object value) {
+//                    Date date = null;
+//                    if (value instanceof String) {
+//                        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+//                        try {
+//                            date = sdf.parse((String)value);
+//                        } catch (ParseException e) {
+//                            e.printStackTrace();
+//                        }
+//                    }
+//                    return date;
+//                }
+//            }, Date.class);
+            ConvertUtils.register(new DateLocaleConverter(), Date.class);
             BeanUtils.populate(user,request.getParameterMap() );
         } catch (IllegalAccessException e) {
             e.printStackTrace();
