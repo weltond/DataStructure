@@ -13,11 +13,16 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.beans.IntrospectionException;
+import java.beans.PropertyDescriptor;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Enumeration;
+import java.util.Map;
 
 /**
  * @author Weltond Ning
@@ -35,7 +40,24 @@ public class RegServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         // Get form data
         User user = new User();
+        setUser(request, user);
+
+        // Call logic
+        UserService us = new UserServiceImpl();
         try {
+            us.register(user);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        // Dispatch
+        response.getWriter().write("Register Successful!\n Return to LogIn page in 3 seconds");
+        response.setHeader("refresh", "3;url=" + request.getContextPath() + "/index.jsp");
+    }
+
+    private void setUser(HttpServletRequest request, User user) {
+        try {
+            /* Method 1 (Not working though) */
             // add a date converter
 //            ConvertUtils.register(new Converter() {
 //                @Override
@@ -52,23 +74,52 @@ public class RegServlet extends HttpServlet {
 //                    return date;
 //                }
 //            }, Date.class);
-            ConvertUtils.register(new DateLocaleConverter(), Date.class);
-            BeanUtils.populate(user,request.getParameterMap() );
+            // ConvertUtils.register(new DateLocaleConverter(), Date.class); // not working
+//            user.setBirthday(new SimpleDateFormat("yyyy-MM-dd").parse(request.getParameter("birthday")));
+//            BeanUtils.populate(user,request.getParameterMap() );    // need collections version 3
+
+            /*Method 2*/
+            Map<String, String[]> map = request.getParameterMap();
+
+            for (Map.Entry<String, String[]> m : map.entrySet()) {
+                String name = m.getKey();
+                //String[] value = m.getValue();
+
+                if (name.equals("repassword")) continue;
+
+                // create property descriptor
+                PropertyDescriptor pd = new PropertyDescriptor(name, User.class);
+                // get property "setter"
+                Method setter = pd.getWriteMethod();
+
+                if (name.equals("birthday")) {
+                    Date date = null;
+                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                    try {
+                        date = sdf.parse(m.getValue()[0]);
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+                    if (date != null) {
+                        setter.invoke(user, date);
+                    }
+                } else {
+                    setter.invoke(user, (Object)m.getValue()[0]);
+                }
+
+
+//                if (value.length == 1) {
+//                    setter.invoke(user, value[0]);
+//                } else {
+//                    setter.invoke(user, (Object)value);
+//                }
+            }
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InvocationTargetException e) {
             e.printStackTrace();
-        }
-        // Call logic
-        UserService us = new UserServiceImpl();
-        try {
-            us.register(user);
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        // Dispatch
-        response.getWriter().write("Register Successful!\n Return to LogIn page in 3 seconds");
-        response.setHeader("refresh", "3;url=" + request.getContextPath() + "/index.jsp");
     }
 }
