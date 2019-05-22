@@ -13,12 +13,17 @@
 </head>
 <body>
 
+<%--<%--%>
+    <%--String msg = (String) request.getAttribute("wrongUser");--%>
+    <%--if (msg != null) {--%>
+        <%--out.print("wrong");--%>
+    <%--}--%>
+<%--%>--%>
+<c:if test="${not empty wrongUser}">
+    ${wrongUser}
+</c:if>
 
 <form action="${pageContext.request.contextPath}/servlet/loginServlet" method="post">
-
-    <c:if test="${wrongUser}">
-        WRONG: ${wrongUser}
-    </c:if>
 
     User Name : <input type="text" name="username"/>
 
