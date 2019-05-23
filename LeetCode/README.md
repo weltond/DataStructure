@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [988](https://leetcode.com/problems/smallest-string-starting-from-leaf/) | [Smallest String Starting from Leaf](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc988SmallestStringStartingFromLeaf.java) | Medium | Tree / DFS
 | [1017](https://leetcode.com/problems/convert-to-base-2/) | [Convert to Base -2](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/Lc1017ConvertBaseNegative2.java) | Medium | Math
 | [89](https://leetcode.com/problems/gray-code/) | [Gray Code](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc89GrayCode.java) | Medium | Backtracking
 | [567](https://leetcode.com/problems/permutation-in-string/) | [Permutation In String](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc567PermutationInString.java) | Medium | Two Pointers / Sliding Window
