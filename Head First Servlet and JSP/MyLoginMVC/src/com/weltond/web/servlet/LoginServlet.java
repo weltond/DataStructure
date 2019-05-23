@@ -1,6 +1,7 @@
 package com.weltond.web.servlet;
 
 import com.weltond.domain.User;
+import com.weltond.exceptions.UsersException;
 import com.weltond.service.UserService;
 import com.weltond.service.impl.UserServiceImpl;
 import org.apache.commons.beanutils.BeanUtils;
@@ -35,8 +36,18 @@ public class LoginServlet extends HttpServlet {
             e.printStackTrace();
         }
         UserService us = new UserServiceImpl();
-        user = us.login(user);
-
+        try {
+            user = us.login(user);
+            if (user != null) {
+                request.getSession().setAttribute("user", user);
+                request.getRequestDispatcher("/index.jsp").forward(request, response);
+            }
+        } catch (UsersException e) {
+            e.printStackTrace();
+            request.setAttribute("wrongUser", e.getMessage());
+            request.getRequestDispatcher("/login.jsp").forward(request, response);
+        }
+        ///*
         if (user == null) {
             request.setAttribute("wrongUser", "User name or Password WRONG. Please re-enter");
             request.getRequestDispatcher("/login.jsp").forward(request, response);
@@ -44,6 +55,7 @@ public class LoginServlet extends HttpServlet {
             request.getSession().setAttribute("user", user);
             request.getRequestDispatcher("/index.jsp").forward(request, response);
         }
+        //*/
 
     }
 }

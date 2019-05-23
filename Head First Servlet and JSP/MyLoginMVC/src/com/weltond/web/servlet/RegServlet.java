@@ -1,6 +1,7 @@
 package com.weltond.web.servlet;
 
 import com.weltond.domain.User;
+import com.weltond.domain.UserForm;
 import com.weltond.service.UserService;
 import com.weltond.service.impl.UserServiceImpl;
 import org.apache.commons.beanutils.BeanUtils;
@@ -39,6 +40,23 @@ public class RegServlet extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=UTF-8");
         // Get form data
+
+        /*Verify form data*/
+        UserForm uf = new UserForm();
+        try {
+            BeanUtils.populate(uf, request.getParameterMap());
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        }
+
+        if (!uf.validate()) {   // form not valid
+            request.setAttribute("uf", uf);
+            request.getRequestDispatcher("/reg.jsp").forward(request, response);
+            return;
+        }
+
         User user = new User();
         setUser(request, user);
 

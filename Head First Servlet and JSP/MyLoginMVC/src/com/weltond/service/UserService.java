@@ -1,6 +1,7 @@
 package com.weltond.service;
 
 import com.weltond.domain.User;
+import com.weltond.exceptions.UsersException;
 
 /**
  * @author Weltond Ning
@@ -20,5 +21,5 @@ public interface UserService {
      * @param user
      * @return
      */
-    public User login(User user);
+    public User login(User user) throws UsersException;
 }

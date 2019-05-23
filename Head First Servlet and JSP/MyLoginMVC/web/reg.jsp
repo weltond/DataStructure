@@ -12,11 +12,11 @@
 </head>
 <body>
     <form action="${pageContext.request.contextPath}/servlet/regServlet" method="post">
-        User Name : <input type="text" name="username"/><br>
-        Password  : <input type="password" name="password"/><br>
-        Confirm   : <input type="password" name="repassword"/><br>
-        Email     : <input type="text" name="email"/><br>
-        Birthday  : <input type="text" name="birthday"/><br>
+        User Name : <input type="text" name="username" value="${uf.username}"/>${uf.msg.username}<br>
+        Password  : <input type="password" name="password" value="${uf.password}"/>${uf.msg.password}<br>
+        Confirm   : <input type="password" name="repassword"/>${uf.msg.repassword}<br>
+        Email     : <input type="text" name="email" value="${uf.email}"/>${uf.msg.email}<br>
+        Birthday  : <input type="text" name="birthday" value="${uf.birthday}"/>${uf.msg.birthday}<br>
         <input type="submit" value="Register">
     </form>
 </body>

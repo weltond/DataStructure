@@ -1,6 +1,7 @@
 package com.weltond.service.impl;
 
 import com.weltond.dao.UserDao;
+import com.weltond.exceptions.UsersException;
 import com.weltond.service.UserService;
 import com.weltond.dao.impl.UserDaoImpl;
 import com.weltond.domain.User;
@@ -19,12 +20,17 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User login(User user) {
+    public User login(User user) throws UsersException{
         User u = null;
         try {
             u = userDao.findUser(user);
+//            if (u == null) {
+//                throw new UsersException("Username or Password is wrong!");
+//            }
         } catch (Exception e) {
             e.printStackTrace();
+            // write logs
+
         }
         return u;
     }
