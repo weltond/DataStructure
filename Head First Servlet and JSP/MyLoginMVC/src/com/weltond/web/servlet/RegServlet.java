@@ -2,6 +2,7 @@ package com.weltond.web.servlet;
 
 import com.weltond.domain.User;
 import com.weltond.domain.UserForm;
+import com.weltond.exceptions.UserExistException;
 import com.weltond.service.UserService;
 import com.weltond.service.impl.UserServiceImpl;
 import org.apache.commons.beanutils.BeanUtils;
@@ -62,6 +63,16 @@ public class RegServlet extends HttpServlet {
 
         // Call logic
         UserService us = new UserServiceImpl();
+
+        /*Verify if user already exists*/
+        try {
+            us.findUserByName(user.getUsername());
+        } catch (UserExistException e) {
+            request.setAttribute("userExists", e.getMessage());
+            request.getRequestDispatcher("/reg.jsp").forward(request, response);
+        }
+
+        /*Register*/
         try {
             us.register(user);
         } catch (Exception e) {

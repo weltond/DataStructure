@@ -1,6 +1,7 @@
 package com.weltond.service;
 
 import com.weltond.domain.User;
+import com.weltond.exceptions.UserExistException;
 import com.weltond.exceptions.UsersException;
 
 /**
@@ -22,4 +23,12 @@ public interface UserService {
      * @return
      */
     public User login(User user) throws UsersException;
+
+    /**
+     * Find if user exists based on user name
+     * @param name
+     * @return
+     * @throws UserExistException
+     */
+    public boolean findUserByName(String name) throws UserExistException;
 }

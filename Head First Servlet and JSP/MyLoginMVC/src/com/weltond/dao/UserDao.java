@@ -23,4 +23,10 @@ public interface UserDao {
      */
     public User findUser(User user) throws Exception;
 
+    /**
+     * Find if user exists based on user name
+     * @param name
+     * @return
+     */
+    public boolean findUserByName(String name);
 }

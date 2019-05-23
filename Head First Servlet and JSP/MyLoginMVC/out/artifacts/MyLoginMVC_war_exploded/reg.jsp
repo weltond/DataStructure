@@ -12,7 +12,7 @@
 </head>
 <body>
     <form action="${pageContext.request.contextPath}/servlet/regServlet" method="post">
-        User Name : <input type="text" name="username" value="${uf.username}"/>${uf.msg.username}<br>
+        User Name : <input type="text" name="username" value="${uf.username}"/>${uf.msg.username}${userExists}<br>
         Password  : <input type="password" name="password" value="${uf.password}"/>${uf.msg.password}<br>
         Confirm   : <input type="password" name="repassword"/>${uf.msg.repassword}<br>
         Email     : <input type="text" name="email" value="${uf.email}"/>${uf.msg.email}<br>

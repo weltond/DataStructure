@@ -1,6 +1,7 @@
 package com.weltond.service.impl;
 
 import com.weltond.dao.UserDao;
+import com.weltond.exceptions.UserExistException;
 import com.weltond.exceptions.UsersException;
 import com.weltond.service.UserService;
 import com.weltond.dao.impl.UserDaoImpl;
@@ -33,5 +34,14 @@ public class UserServiceImpl implements UserService {
 
         }
         return u;
+    }
+
+    @Override
+    public boolean findUserByName(String name) throws UserExistException {
+        boolean isExists = userDao.findUserByName(name);
+        if (isExists) {
+            throw new UserExistException("User already EXISTS!");
+        }
+        return isExists;
     }
 }
