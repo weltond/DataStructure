@@ -7,7 +7,7 @@ https://www.cnblogs.com/ibook360/p/5674541.html
 - HBase单机读写性能不超过1,000 ops/s，时延 1 - 5 毫秒
 2. 功能：
 - Redis没有WAH,采用异步复制的方式
-- HBase有WAH
+- HBase有WAH。他是Hadoop的DB。当你需要随机/实时读写大数据时使用
 3. 总结：
 - 当用来支撑简单的“消息类”应用（FaceBook消息，Web版阿里旺旺，米聊）时，如果数据失败是不能容忍的，则只能用HBase；如果需要一个高性能的环境，而且能够容忍
 一定的数据丢失，那完全可以考虑使用Redis。
