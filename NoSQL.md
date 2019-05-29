@@ -3,6 +3,10 @@ https://www.cnblogs.com/ibook360/p/5674541.html
 
 ## HBase vs Redis
 ### HBase
+HBase是Apache Hadoop中的一个子项目，属于BigTable开源版。HBase依托于Hadoop的HDFS作为最基本存储基础单元。
+
+HBase在列上实现了压缩算法，内存操作和BloomFilter。HBase的表能够作为MapReduce任务的输入和输出。
+
 CP
 - 优势
   - 存储容量大，一个表可以容纳上亿行，上百万列
@@ -18,6 +22,8 @@ CP
   - 对数据有版本查询需求
   - 应对超大数据量有扩展简单的需求
 ### Redis
+Redis是一个开源的使用ANSI C语言编写，支持网络，可基于内存亦可持久化的日志型key-value数据库，并提供多种语言的API。
+
 CP
 - 优势
   - 丰富的数据结构
