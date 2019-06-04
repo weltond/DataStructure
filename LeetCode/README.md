@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [987](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/) | [Vertical Order Traversal of Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc987VerticalOrderTraversal.java) | Medium | Tree / Hash Table
 | [1022](https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers/) | [Sum Of Root to Leaf Binary Numbers](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc1022SumOfRootToLeafBinaryNumbers.java) | Easy | Tree
 | [1071](https://leetcode.com/problems/greatest-common-divisor-of-strings/) | [Greatest Common Divisor of Strings](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc1071GreatestCommonDivisorOfStrings.java) | Easy | String / Recursion
 | [988](https://leetcode.com/problems/smallest-string-starting-from-leaf/) | [Smallest String Starting from Leaf](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc988SmallestStringStartingFromLeaf.java) | Medium | Tree / DFS
