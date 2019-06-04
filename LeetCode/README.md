@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [998](https://leetcode.com/problems/maximum-binary-tree-ii/) | [Maximum Binary Tree II](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc998MaximumBinaryTreeII.java) | Medium | Tree
 | [654](https://leetcode.com/problems/maximum-binary-tree/) | [Maximum Binary Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc654MaximumBinaryTree.java) | Medium | Tree
 | [1008](https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/) | [Construct BST From Preorder Traversal](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc1008ConstructBSTfromPreorder.java) | Medium | Tree
 | [987](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/) | [Vertical Order Traversal of Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc987VerticalOrderTraversal.java) | Medium | Tree / Hash Table
