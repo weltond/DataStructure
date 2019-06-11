@@ -55,6 +55,9 @@ How to coordinate in a team:
 4) Fix conflicts if there is any. 
 5) Push to remote: 
 	git push origin branch-name
+11. Teamate: Teammates can reach your branch, by doing:
+git fetch
+git checkout origin/your_branch
 
 Tag:
 1. git tag <tag-name> [version number]
