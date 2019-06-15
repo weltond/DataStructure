@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [241](https://leetcode.com/problems/different-ways-to-add-parentheses/) | [Different Ways to Add Parentheses](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/Lc241DiffWaysToAddParentheses.java) | Medium | Divide and Conquer
 | [814](https://leetcode.com/problems/binary-tree-pruning/) | [Binary Tree Pruning](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc814BinaryTreePruning.java) | Medium | Tree
 | [863](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/) | [All Nodes Distance K in Binary Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc863AllNodesDistanceKinBinaryTree.java) | Medium | Tree / DFS / BFS
 | [951](https://leetcode.com/problems/flip-equivalent-binary-trees/) | [Flip Equivalent Binary Trees](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc951FlipEquivalentBinaryTrees.java) | Medium | Tree
