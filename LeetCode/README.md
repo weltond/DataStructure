@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [1003](https://leetcode.com/problems/check-if-word-is-valid-after-substitutions/) | [Check Word Valid after Substituions](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc1003CheckWordValidAfterSubstitution.java) | Medium | String / Stack
 | [809](https://leetcode.com/problems/expressive-words/) | [Expressive Words](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc809ExpressiveWords.java) | Medium | String
 | [169](https://leetcode.com/problems/majority-element/) | [Majority Element](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc169MajorityElement.java) | Easy | Array / Divide and Conquer / Bit 
 | [240](https://leetcode.com/problems/search-a-2d-matrix-ii/) | [Search a 2D Matrix II](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/Lc240Search2DMatrixII.java) | Medium | Binary Search / Divide and COnquer
