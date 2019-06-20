@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [515](https://leetcode.com/problems/find-largest-value-in-each-tree-row/) | [Find Largest Value in Each Tree Row](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc515FindLargestValueinTreeEachRow.java) | Medium | Tree / BFS / DFS
 | [820](https://leetcode.com/problems/short-encoding-of-words/) | [Short Encoding of Words](https://github.com/weltond/DataStructure/blob/master/LeetCode/trie/Lc820ShortEncodingOfWords.java) | Medium | Trie / String
 | [524](https://leetcode.com/problems/longest-word-in-dictionary-through-deleting/) | [Longest Word in Dict through Delete](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc524LongestWordInDictThroughDelete.java) | Medium | Two Pointer / Sort
 | [1003](https://leetcode.com/problems/check-if-word-is-valid-after-substitutions/) | [Check Word Valid after Substituions](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc1003CheckWordValidAfterSubstitution.java) | Medium | String / Stack
