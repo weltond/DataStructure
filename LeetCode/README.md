@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [524](https://leetcode.com/problems/longest-word-in-dictionary-through-deleting/) | [Longest Word in Dict through Delete](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc524LongestWordInDictThroughDelete.java) | Medium | Two Pointer / Sort
 | [1003](https://leetcode.com/problems/check-if-word-is-valid-after-substitutions/) | [Check Word Valid after Substituions](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc1003CheckWordValidAfterSubstitution.java) | Medium | String / Stack
 | [809](https://leetcode.com/problems/expressive-words/) | [Expressive Words](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc809ExpressiveWords.java) | Medium | String
 | [169](https://leetcode.com/problems/majority-element/) | [Majority Element](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc169MajorityElement.java) | Easy | Array / Divide and Conquer / Bit 
