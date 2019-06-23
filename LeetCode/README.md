@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [41](https://leetcode.com/problems/first-missing-positive/) | [First Missing Positive](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc41FirstMissingPositive.java) | Hard | Array
 | [11](https://leetcode.com/problems/container-with-most-water/) | [Container With Most Water](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc11ContainerWithMostWater.java) | Medium | Two Pointer
 | [1089](https://leetcode.com/problems/duplicate-zeros/) | [Duplicate Zeros](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc1089DuplicateZeros.java) | Easy | Array 
 | [932](https://leetcode.com/problems/beautiful-array/) | [Beautiful Array](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/Lc932BeautifulArray.java) | Medium | Divide and Conquer
