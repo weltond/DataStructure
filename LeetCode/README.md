@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [43](https://leetcode.com/problems/multiply-strings/) | [Multiply Strings](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc43MultiolyStrings.java) | Medium | String / Math
 | [208](https://leetcode.com/problems/implement-trie-prefix-tree/) | [Implement Trie (Prefix Tree)](https://github.com/weltond/DataStructure/blob/master/LeetCode/trie/Lc208ImplementTrie.java) | Medium | Design / Trie
 | [41](https://leetcode.com/problems/first-missing-positive/) | [First Missing Positive](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc41FirstMissingPositive.java) | Hard | Array
 | [11](https://leetcode.com/problems/container-with-most-water/) | [Container With Most Water](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc11ContainerWithMostWater.java) | Medium | Two Pointer
