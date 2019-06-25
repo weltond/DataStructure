@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [45](https://leetcode.com/problems/jump-game-ii/) | [Jump Game II](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc45JumpGameII.java) | Hard | Array / Greedy
 | [42](https://leetcode.com/problems/trapping-rain-water/) | [Trapping Rain Water](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc42TrappingRainWater.java) | Hard | Array / Two Pointer / Stack
 | [43](https://leetcode.com/problems/multiply-strings/) | [Multiply Strings](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc43MultiolyStrings.java) | Medium | String / Math
 | [208](https://leetcode.com/problems/implement-trie-prefix-tree/) | [Implement Trie (Prefix Tree)](https://github.com/weltond/DataStructure/blob/master/LeetCode/trie/Lc208ImplementTrie.java) | Medium | Design / Trie
