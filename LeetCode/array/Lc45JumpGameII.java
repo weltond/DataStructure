@@ -20,7 +20,43 @@ You can assume that you can always reach the last index.
 
 class Solution {
     
+    // ============ Method 3: Greedy ==============
+    // 1ms (100%)
+    public int jump(int[] nums) {
+        int jumps = 0, curEnd = 0, curFarthest = 0;
+        
+        for (int i = 0; i < nums.length - 1; i++) {
+            curFarthest = Math.max(curFarthest, i + nums[i]);
+            
+            if (i == curEnd) {
+                jumps++;
+                curEnd = curFarthest;
+            }
+        }
+        
+        return jumps;
+    }
     // ============ Method 2: BFS ==============
+    // Approach 2: start from head: 1ms (100%)
+    public int jump(int[] nums) {
+        if (nums.length < 2) return 0;
+        
+        int curMax = 0, i = 0, nextMax = 0, res = 0;
+        
+        while (curMax - i + 1 > 0) {    // nodes of current level > 0
+            res++;
+            
+            for (; i <= curMax; i++) {  // traverse current level, and update the max reach of next level
+                nextMax = Math.max(nextMax, i + nums[i]);
+                if (nextMax >= nums.length - 1) return res;
+            }
+            
+            curMax = nextMax;
+        }
+        
+        return 0;
+    }
+    
     // Approach 1: start from end. 121ms(25.98%)
     public int jump(int[] nums) {
         int pos = nums.length - 1;
