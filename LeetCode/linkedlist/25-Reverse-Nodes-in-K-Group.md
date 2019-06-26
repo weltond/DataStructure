@@ -29,6 +29,14 @@ Note:
  *     ListNode(int x) { val = x; }
  * }
  */
+
+/**
+e.g. 1->2->3->4->5->6->7->8, k = 3
+
+1->2->3->   4->5->6->             7->8
+            |     |               |
+          head   newH/tail/tmp    tmp/head
+*/
 class Solution {
     // ============ Method 1: Recursion ===========
     // 0ms 
