@@ -19,6 +19,54 @@ Note:
 
 ## Answer
 ### Method 1 - Recursion
+#### Approach 2
+:rocket: 0ms (100%)
+```
+Example: 
+e.g. 1->2->3->4->5->6->7->8, k = 3
+
+1->2->3->   4->5->6->             7->8
+            |     |               |
+          head   cur              cur
+```
+```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public ListNode reverseKGroup(ListNode head, int k) {
+        ListNode cur = head;
+        int cnt = 0;
+        
+        // find the k+1 node
+        while (cur != null && cnt != k) {
+            cur = cur.next;
+            cnt++;
+        }
+        
+        if (cnt != k) return head;
+        
+        cur = reverseKGroup(cur, k);    // reverse list with k+1 node as head
+        // head - head to direct part
+        // cur  - head to reversed part
+        while (cnt-- > 0) { // reverse current k-group
+            ListNode tmp = head.next;   // tmp - next head in direct part
+            head.next = cur;
+            
+            cur = head; // move head of reversed part to a new node
+            head = tmp; // move 'direct' head to the next node in direct part
+        }
+        
+        return cur;
+    }
+}
+```
+#### Approach 1
 :rocket: 0ms (100%)
 ```
 Example: 
