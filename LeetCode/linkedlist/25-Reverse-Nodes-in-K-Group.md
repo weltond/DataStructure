@@ -20,6 +20,14 @@ Note:
 ## Answer
 ### Method 1 - Recursion
 :rocket: 0ms (100%)
+```
+Example: 
+e.g. 1->2->3->4->5->6->7->8, k = 3
+
+1->2->3->   4->5->6->             7->8
+            |     |               |
+          head   newH/tail/tmp    tmp/head
+```
 ```java
 /**
  * Definition for singly-linked list.
@@ -30,13 +38,7 @@ Note:
  * }
  */
 
-/**
-e.g. 1->2->3->4->5->6->7->8, k = 3
 
-1->2->3->   4->5->6->             7->8
-            |     |               |
-          head   newH/tail/tmp    tmp/head
-*/
 class Solution {
     // ============ Method 1: Recursion ===========
     // 0ms 
