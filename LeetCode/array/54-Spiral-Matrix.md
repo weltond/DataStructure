@@ -28,8 +28,8 @@ Output: [1,2,3,4,8,12,11,10,9,5,6,7]
 ## Answer
 ### Method 3 - Layer By Layer
 :rocket: 0ms 
-- Time: O(n)
-- Space: O(n)
+- Time: O(m * n)
+- Space: O(m * n)
 ```java
 class Solution {
     // ========= Method 3 Layer by Layer =========
@@ -64,8 +64,8 @@ class Solution {
 ```
 ### Method 2 - Simulation
 :rocket: **0ms**
-- Time: O(n)
-- Space: O(n)
+- Time: O(m * n)
+- Space: O(m * n)
 ```java
 class Solution {
     // ======= Method 2: Simulation ========
