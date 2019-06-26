@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [86](https://leetcode.com/problems/partition-list/) | [Partition List](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc86PartitionList.java) | Medium | LinkedList / Two Pointers
 | [57](https://leetcode.com/problems/insert-interval/) |[Insert Interval](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc57InsertInterval.java) | Hard | Array / Sort
 | [52](https://leetcode.com/problems/n-queens-ii/) | [N-Queens II](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc52NQueensII.java) | Hard | Backtracking
 | [45](https://leetcode.com/problems/jump-game-ii/) | [Jump Game II](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc45JumpGameII.java) | Hard | Array / Greedy
