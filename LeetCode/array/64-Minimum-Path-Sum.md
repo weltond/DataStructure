@@ -53,3 +53,39 @@ class Solution {
     }
 }
 ```
+### Method 2 - DP
+:rabbit: 3ms (21.22%) 
+```java
+class Solution {
+    // ======== Method 2 : DP =========
+    // 3ms (21.22%)
+    public int minPathSum(int[][] grid) {
+        if (grid == null || grid.length == 0) return 0;
+        
+        int m = grid.length, n = grid[0].length;
+        
+        int[][] arr = new int[m][n];
+        
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i == 0 && j == 0) {
+                    arr[i][j] = grid[0][0];
+                    continue;
+                } 
+                
+                arr[i][j] = Math.min(getDist(arr, i - 1, j), getDist(arr, i, j - 1)) + grid[i][j];
+            }
+        }
+        
+        return arr[m - 1][n - 1];
+    }
+    
+    private int getDist(int[][] arr, int x, int y) {
+        if (x < 0 || y < 0) {
+            return Integer.MAX_VALUE;
+        }
+        
+        return arr[x][y];
+    }
+}
+```
