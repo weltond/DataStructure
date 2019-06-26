@@ -28,6 +28,8 @@ Output: [1,2,3,4,8,12,11,10,9,5,6,7]
 ## Answer
 ### Method 2 - Simulation
 :rocket: **0ms**
+- Time: O(n)
+- Space: O(n)
 ```java
 class Solution {
     // ======= Method 2: Simulation ========
