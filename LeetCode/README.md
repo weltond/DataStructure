@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [64](https://leetcode.com/problems/minimum-path-sum/) | [Minimum Path Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/64-Minimum-Path-Sum.md) | Medium | Array / DP
 | [59](https://leetcode.com/problems/spiral-matrix-ii/) | [Spiral Matrix II](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/59-Spiral-Matrix-II.md) | Medium | Array
 | [54](https://leetcode.com/problems/spiral-matrix/) | [Spiral Matrix](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/54-Spiral-Matrix.md) | Medium | Array
 | [86](https://leetcode.com/problems/partition-list/) | [Partition List](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc86PartitionList.java) | Medium | LinkedList / Two Pointers
