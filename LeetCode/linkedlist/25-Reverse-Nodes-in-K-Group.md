@@ -18,6 +18,43 @@ Note:
 - You may not alter the values in the list's nodes, only nodes itself may be changed.
 
 ## Answer
+### Method 2 - Iteration
+:rabbit: 1ms (44.67%)
+```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    // ========= Method 2: Iterative ==========
+    // 1ms (44.67%)
+    public ListNode reverseKGroup(ListNode head, int k) {
+        int n = 0;
+        for (ListNode i = head; i != null; n++, i = i.next);    // find total nodes
+        
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        
+        for (ListNode prev = dummy, tail = head; n >= k; n -= k) {  // connect each group
+            for (int i = 1; i < k; i++) {   // reverse each group
+                ListNode tmp = tail.next.next;
+                tail.next.next = prev.next;
+                prev.next = tail.next;
+                tail.next = tmp;
+            }
+            
+            prev = tail;
+            tail = tail.next;
+        }
+        
+        return dummy.next;
+    }
+}
+```
 ### Method 1 - Recursion
 #### Approach 2
 :rocket: 0ms (100%)
