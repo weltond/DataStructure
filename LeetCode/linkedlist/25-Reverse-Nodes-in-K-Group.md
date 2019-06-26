@@ -14,8 +14,8 @@ For k = 3, you should return: 3->2->1->4->5
 ```
 Note:
 
-Only constant extra memory is allowed.
-You may not alter the values in the list's nodes, only nodes itself may be changed.
+- Only constant extra memory is allowed.
+- You may not alter the values in the list's nodes, only nodes itself may be changed.
 
 ## Answer
 ### Method 1 - Recursion
