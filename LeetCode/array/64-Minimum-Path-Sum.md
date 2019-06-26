@@ -54,7 +54,7 @@ class Solution {
 }
 ```
 ### Method 2 - DP
-:rabbit: 3ms (21.22%) 
+:turtle: 3ms (21.22%) 
 ```java
 class Solution {
     // ======== Method 2 : DP =========
