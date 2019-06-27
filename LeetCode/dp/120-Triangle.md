@@ -19,8 +19,7 @@ Note:
 
 ## Answer
 ### Method 2 - Dynamic Programming (Bottom-Up)
-#### Approach 2
-:rocket: 2ms (87.88%)
+#### Approach 2 :rocket: 2ms (87.88%)
 - Time: O(n^2)
 - Space: O(n)
 ```java
@@ -49,8 +48,7 @@ class Solution {
     }
 }
 ```
-#### Approach 1
-:rocket: 2ms (87.88%)
+#### Approach 1 :rocket: 2ms (87.88%)
 - Time: O(n^2)
 - Space: O(n^2)
 ```java
@@ -79,8 +77,7 @@ class Solution {
     }
 }
 ```
-### Method 1 - DFS + Memoization (Top-Down)
-:rocket: 1ms (99.84%)
+### Method 1 - DFS + Memoization (Top-Down) :rocket: 1ms (99.84%)
 - Time:  O(n^2)
 - Space: O(n^2)
 ```java
