@@ -16,7 +16,7 @@ Given 1->2->3->4->5, reorder it to 1->5->2->4->3.
 ```
 
 ## Answer
-### Method 1 - Create a new reversed LinkedList :turtle: 33ms (21.37%) 
+### Method 1 - Create a new reversed LinkedList :turtle: 3ms (21.37%) 
 ```java
 /**
  * Definition for singly-linked list.
