@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [120]() | [Triangle](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/120-Triangle.md) | Medium | Array / DP
 | [171](https://leetcode.com/problems/excel-sheet-column-number/) | [Excel Sheet Column Number](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/171-Excel-Sheet-Column-Number.md) | Easy | Math
 | [168](https://leetcode.com/problems/excel-sheet-column-title/) | [Excel Sheet Column Title](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/168-Excel-Sheet-Column-Title.md) | Easy | Math
 | [25](https://leetcode.com/problems/reverse-nodes-in-k-group/) | [Reverse Nodes in K-Group](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/25-Reverse-Nodes-in-K-Group.md) | Hard | LinkedList
