@@ -1,4 +1,4 @@
-## [LeetCode 143.Reorder List](https://leetcode.com/problems/reorder-list/)
+## [143. Reorder List](https://leetcode.com/problems/reorder-list/)
 
 Given a singly linked list L: L0→L1→…→Ln-1→Ln,
 
@@ -20,7 +20,52 @@ Given 1->2->3->4->5, reorder it to 1->5->2->4->3.
 #### Approach 2
 **Different operation on Step 2 and Step 3.**
 ```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    // ========= Method 2 =========
+    // Approach 2: 1ms (100%)
+    public void reorderList(ListNode head) {
+        if (head == null || head.next == null) return;
+        // e.g. 1->2->3->4->5->6
+        // 1. find middle
+        ListNode h1 = head, h2 = head;
+        while (h2.next != null && h2.next.next != null) {
+            h1 = h1.next;
+            h2 = h2.next.next;
+        }
+        // preMid -> 3, preCur -> 4
+        ListNode preMid = h1;
+        ListNode preCur = h1.next;
 
+        // 2. reverse the second half to 1->2->3->6->5->4
+        while (preCur.next != null) {
+            ListNode tmp = preCur.next;
+            preCur.next = tmp.next;
+            tmp.next = preMid.next;
+            preMid.next = tmp;
+        }
+
+        // 3. Start reorder one by one
+        h1 = head;
+        h2 = preMid.next;
+        while (h1 != preMid) {
+            preMid.next = h2.next;
+            h2.next = h1.next;
+            h1.next = h2;
+            
+            h1 = h2.next;
+            h2 = preMid.next;
+        }
+        
+    }
+}
 ```
 #### Approach 1
 ```java
