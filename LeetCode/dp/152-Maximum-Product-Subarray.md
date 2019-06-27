@@ -17,9 +17,7 @@ Explanation: The result cannot be 2, because [-2,-1] is not a subarray.
 ## Answer
 ### WRONG Method
 
-**Wrong when input is: ** 
-
-`[-2,3,-4]`
+**Wrong** when input is `[-2,3,-4]`
 ```java
 class Solution {
     public int maxProduct(int[] nums) {
