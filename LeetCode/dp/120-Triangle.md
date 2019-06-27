@@ -18,7 +18,68 @@ Note:
 - Bonus point if you are able to do this using only O(n) extra space, where n is the total number of rows in the triangle.
 
 ## Answer
-### Method 1 - DFS + Memoization
+### Method 2 - Dynamic Programming (Bottom-Up)
+#### Approach 2
+:rocket: 2ms (87.88%)
+- Time: O(n^2)
+- Space: O(n)
+```java
+class Solution {
+    // ============ Method 2: DP =============
+    // 2ms (87.88%)
+    public int minimumTotal(List<List<Integer>> triangle) {
+        if (triangle == null || triangle.size() == 0) return 0;
+        
+        int n = triangle.size();
+        int[] dp = new int[n];
+        
+        // base case: last row
+        for (int i = 0; i < n; i++) {
+            dp[i] = triangle.get(n - 1).get(i);
+        }
+        
+        // induction rule: dp[i][j] = t[i][j] + Math.min(dp[i+1][j], dp[i+1][j+1])
+        for (int i = n - 2; i >= 0; i--) {
+            for (int j = 0; j <= i; j++) {
+                dp[j] = triangle.get(i).get(j) + Math.min(dp[j], dp[j + 1]);
+            }
+        }
+        
+        return dp[0];
+    }
+}
+```
+#### Approach 1
+:rocket: 2ms (87.88%)
+- Time: O(n^2)
+- Space: O(n^2)
+```java
+class Solution {
+    // ============ Method 2: DP =============
+    // 2ms(87.88%)
+    public int minimumTotal(List<List<Integer>> triangle) {
+        if (triangle == null || triangle.size() == 0) return 0;
+        
+        int n = triangle.size();
+        int[][] dp = new int[n][n];
+        
+        // base case: last row
+        for (int i = 0; i < n; i++) {
+            dp[n - 1][i] = triangle.get(n - 1).get(i);
+        }
+        
+        // induction rule: dp[i][j] = t[i][j] + Math.min(dp[i+1][j], dp[i+1][j+1])
+        for (int i = n - 2; i >= 0; i--) {
+            for (int j = 0; j <= i; j++) {
+                dp[i][j] = triangle.get(i).get(j) + Math.min(dp[i + 1][j], dp[i + 1][j+1]);
+            }
+        }
+        
+        return dp[0][0];
+    }
+}
+```
+### Method 1 - DFS + Memoization (Top-Down)
 :rocket: 1ms (99.84%)
 - Time:  O(n^2)
 - Space: O(n^2)
