@@ -46,6 +46,11 @@ Follow up:
 - Could you devise a constant space solution?
 
 ## Answer
+### Method 2 - Morris Traversal
+- Space: O(1)
+```java
+// TO DO...
+```
 ### Method 1 - Inorder :turtle: 11ms (9.38%) 
 ```java
 /**
