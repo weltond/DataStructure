@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [383](https://leetcode.com/problems/ransom-note/) | [Ransom Note](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/383-Ransom-Note.md) | Easy | String
 | [461](https://leetcode.com/problems/hamming-distance/) | [Hamming Distance](https://github.com/weltond/DataStructure/blob/master/LeetCode/bit/461-Hamming-Distance.md) | Easy | Bit
 | [174](https://leetcode.com/problems/dungeon-game/) | [Dungeon Game](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/174-Dungeon-Game.md) | Hard | Binary Search / DP
 | [152](https://leetcode.com/problems/maximum-product-subarray/) | [Maximum Product Subarray](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/152-Maximum-Product-Subarray.md) | Medium | Array / DP
