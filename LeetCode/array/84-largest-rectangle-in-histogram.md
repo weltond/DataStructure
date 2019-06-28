@@ -14,7 +14,7 @@ Output: 10
 
 ## Answer
 ### Method 1 - Brute Force - :turtle: 470ms (7.97%)
-- Time: O(n * m)
+- Time: O(n ^ 2)
 - Space: O(1)
 ```java
 class Solution {
