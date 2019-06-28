@@ -46,7 +46,7 @@ Follow up:
 - Could you devise a constant space solution?
 
 ## Answer
-### Method 2 - Morris Traversal
+### Method 2 - [Morris Traversal](https://leetcode.com/problems/recover-binary-search-tree/discuss/32559/Detail-Explain-about-How-Morris-Traversal-Finds-two-Incorrect-Pointer)
 - Space: O(1)
 ```java
 // TO DO...
