@@ -1,0 +1,40 @@
+## [84. Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)
+
+Given n non-negative integers representing the histogram's bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.
+
+Above is a histogram where width of each bar is 1, given height = [2,1,5,6,2,3].
+
+The largest rectangle is shown in the shaded area, which has area = 10 unit.
+
+Example:
+```
+Input: [2,1,5,6,2,3]
+Output: 10
+```
+
+## Answer
+### Method 1 - Brute Force - :turtle: 470ms (7.97%)
+- Time: O(n * m)
+- Space: O(1)
+```java
+class Solution {
+    // ========== Method 1: Brute Force ========
+    // 470ms (7.97%)
+    public int largestRectangleArea(int[] heights) {
+        if (heights == null || heights.length == 0) return 0;
+        
+        int n = heights.length;
+        int res = 0;
+        
+        for (int i = 0; i < n; i++) {
+            int minVal = heights[i];
+            for (int j = i; j < n; j++) {
+                minVal = Math.min(minVal, heights[j]);  // get min height from i-th to end
+                res = Math.max(res, (j - i + 1) * minVal);
+            }
+        }
+        
+        return res;
+    }
+}
+```
