@@ -25,6 +25,38 @@ Note:
 - Any room can contain threats or power-ups, even the first room the knight enters and the bottom-right room where the princess is imprisoned.
 
 ## Answer
+### Method 2 - DFS + Memo - :rocket: 0ms (100%)
+```java
+class Solution {
+    // =========== Method 2: DFS + Memo ===========
+    // 0ms (100%)
+    public int calculateMinimumHP(int[][] dungeon) {
+        if(dungeon == null || dungeon.length == 0) return 0;
+        
+        int m = dungeon.length, n = dungeon[0].length;
+        int[][] memo = new int[m][n];
+        
+        return dfs(dungeon, 0, 0, memo);
+    }
+    
+    private int dfs(int[][] d, int x, int y, int[][] memo) {
+        if (x >= d.length || y >= d[0].length || x < 0 || y < 0) return Integer.MAX_VALUE;
+        
+        if (memo[x][y] != 0) return memo[x][y];
+        
+        int res = Integer.MAX_VALUE;
+        
+        res = Math.min(res, dfs(d, x, y + 1, memo));
+        res = Math.min(res, dfs(d, x + 1, y, memo));
+        
+        res = res == Integer.MAX_VALUE ? 1 : res;   // only happens on the bottom-right corner(P)
+        
+        memo[x][y] = Math.max(1, res - d[x][y]);
+        
+        return memo[x][y];
+    }
+}
+```
 ### Method 1 - DP - :rocket: 1ms (98.03%)
 #### Approach 2
 - Time: O(m * n)
