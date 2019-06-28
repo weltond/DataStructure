@@ -26,6 +26,40 @@ Note:
 
 ## Answer
 ### Method 1 - DP - :rocket: 1ms (98.03%)
+#### Approach 2
+- Time: O(m * n)
+- Space: O(n)
+```java
+class Solution {
+    // ======= Method 1: DP ======
+    // Approach 2: O(n) Space. 1ms (98.03%)
+    public int calculateMinimumHP(int[][] dungeon) {
+        if (dungeon == null || dungeon.length == 0) return 0;
+        
+        int m = dungeon.length, n = dungeon[0].length;
+        int[] dp = new int[n + 1];
+        
+        // base case: Outer are MAX except for the last corner's right and down which is 1.
+        for (int c = 0; c <= n; c++) {
+            dp[c] = Integer.MAX_VALUE;
+        }
+        dp[n - 1] = 1;
+        
+        // induction rule:
+        // dp[i][j] = max(1, min(dp[i+1][j], dp[i][j+1]) - dungeon[i][j])
+        for (int i = m - 1; i >= 0; i--) {
+            for (int j = n - 1; j >= 0; j--) {
+                dp[j] = Math.max(1, Math.min(dp[j + 1], dp[j]) - dungeon[i][j]);
+            }
+        }
+        
+        return dp[0];
+    }
+}
+```
+#### Approach 1
+- Time: O(m * n)
+- Space: O(m * n)
 ```java
 class Solution {
     // ======= Method 1: DP ======
