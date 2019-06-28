@@ -21,6 +21,24 @@ Explanation:
 The above arrows point to positions where the corresponding bits are different.
 
 ## Answer
+### Method 2 - :rocket: 0ms (100%)
+```java
+class Solution {
+    // 0ms
+    public int hammingDistance(int x, int y) {
+        int res = 0;
+        
+        while (x > 0 || y > 0) {
+            if (x % 2 != y % 2) res++;
+            
+            x = x / 2;
+            y = y / 2;
+        }
+        
+        return res;
+    }
+}
+```
 ### Method 1 - :rocket: 0ms (100%)
 ```java
 class Solution {
