@@ -21,6 +21,37 @@ Explanation:
 The above arrows point to positions where the corresponding bits are different.
 
 ## Answer
+### Method 3 - :rocket: 0ms (100%)
+```java
+class Solution {
+    public int hammingDistance(int x, int y) {
+        int diff = x ^ y;   // xor for the difference of x and y. same = 0, diff = 1
+        return countOne(diff);
+    }
+    
+    private int countOne(int diff) {
+        int cnt = 0;
+        
+        while (diff != 0) {
+            diff = diff & (diff - 1);
+            cnt++;
+        }
+        
+        return cnt;
+    }
+    
+    private int countOneV2(int diff) {
+        int cnt = 0;
+        
+        while (diff != 0) {
+            cnt += diff & 1;
+            diff >>= 1;
+        }
+        
+        return cnt;
+    }
+}
+```
 ### Method 2 - :rocket: 0ms (100%)
 ```java
 class Solution {
