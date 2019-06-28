@@ -1,6 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
-| [99](https://leetcode.com/problems/recover-binary-search-tree/) | [Recover Binary Search Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/99-Recover-Binary-Search-Tree.md) | Hard | Tree
+| [99](https://leetcode.com/problems/recover-binary-search-tree/) | [Recover Binary Search Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/99-Recover-Binary-Search-Tree.md) | Hard | Tree / DFS
 | [383](https://leetcode.com/problems/ransom-note/) | [Ransom Note](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/383-Ransom-Note.md) | Easy | String
 | [461](https://leetcode.com/problems/hamming-distance/) | [Hamming Distance](https://github.com/weltond/DataStructure/blob/master/LeetCode/bit/461-Hamming-Distance.md) | Easy | Bit
 | [174](https://leetcode.com/problems/dungeon-game/) | [Dungeon Game](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/174-Dungeon-Game.md) | Hard | Binary Search / DP
