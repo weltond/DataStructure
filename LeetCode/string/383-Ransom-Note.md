@@ -18,10 +18,10 @@ canConstruct("aa", "aab") -> true
 public class Solution {
     public boolean canConstruct(String ransomNote, String magazine) {
         int[] arr = new int[26];
-        for (int i = 0; i < magazine.length(); i++) {
+        for (int i = 0, len = magazine.length(); i < len; i++) {
             arr[magazine.charAt(i) - 'a']++;
         }
-        for (int i = 0; i < ransomNote.length(); i++) {
+        for (int i = 0, len = ransomNote.length(); i < len; i++) {
             if(--arr[ransomNote.charAt(i)-'a'] < 0) {
                 return false;
             }
