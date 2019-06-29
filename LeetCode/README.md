@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [190](https://leetcode.com/problems/reverse-bits/) | [Reverse Bits](https://github.com/weltond/DataStructure/blob/master/LeetCode/bit/190-Reverse-Bits.md) | Easy | Bit
 | [172](https://leetcode.com/problems/factorial-trailing-zeroes/) | [Factorial Trailing Zeroes](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/172-Factorial-Trailing-Zeroes.md) | Easy | Math
 | [125](https://leetcode.com/problems/valid-palindrome/) | [Valid Palindrome](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/125-Valid-Palindrome.md) | Easy | String / Two Pointer
 | [84](https://leetcode.com/problems/largest-rectangle-in-histogram/) | [Largest Rectangle in Histogram](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/84-largest-rectangle-in-histogram.md) | Hard | Array / Stack
