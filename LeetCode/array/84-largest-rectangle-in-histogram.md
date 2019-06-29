@@ -14,10 +14,12 @@ Output: 10
 
 ## Answer
 ### Method 3 - Stack
+- Time: O(n)
 ```java
 // TO DO...
 ```
 ### Method 2 - Pruning - :rocket: 3ms (89.36%)
+- Time: O(n^2)
 ```java
 class Solution {
     // ====== Method 2: Pruning. Find peak =======
