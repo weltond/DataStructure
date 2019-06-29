@@ -13,6 +13,10 @@ Output: 10
 ```
 
 ## Answer
+### Method 3 - Stack
+```java
+// TO DO...
+```
 ### Method 2 - Pruning - :rocket: 3ms (89.36%)
 ```java
 class Solution {
