@@ -16,7 +16,29 @@ Output: 10
 ### Method 3 - Stack
 - Time: O(n)
 ```java
-// TO DO...
+class Solution {
+    // ========= Method 3: Stack ===========
+    // 9ms (76.25%) O(n)
+    public int largestRectangleArea(int[] heights) {
+        Deque<Integer> stack = new LinkedList();    // index of array
+        int res = 0, i = 0;
+        if (heights == null) return res;
+        
+        int[] h = new int[heights.length + 1];  //add a 0 at the end
+        h = Arrays.copyOf(heights, heights.length + 1);
+        
+        while (i < h.length) {
+            if (stack.isEmpty() || h[stack.peek()] <= h[i]) {
+                stack.push(i++);
+            } else {
+                int idx = stack.pop();
+                res = Math.max(res, h[idx] * (stack.isEmpty() ? i: i - stack.peek() - 1));
+            }
+        }
+        
+        return res;
+    }
+}
 ```
 ### Method 2 - Pruning - :rocket: 3ms (89.36%)
 - Time: O(n^2)
