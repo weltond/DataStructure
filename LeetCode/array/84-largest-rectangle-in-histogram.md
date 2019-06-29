@@ -13,6 +13,33 @@ Output: 10
 ```
 
 ## Answer
+### Method 2 - Pruning - :rocket: 3ms (89.36%)
+```java
+class Solution {
+    // ====== Method 2: Pruning. Find peak =======
+    // 3ms (89.36%)
+    public int largestRectangleArea(int[] heights) {
+        int n = heights.length;
+        if (n == 0) return 0;
+        int res = 0;
+        
+        for (int i = 0; i < n; i++) {
+            //pruning. Because higher height after current will contribute to the final result
+            if (i + 1 < n  && heights[i] <= heights[i + 1]) continue;
+            
+            int minVal = heights[i];
+
+            // j starts from the peek
+            for (int j = i; j >= 0; j--) {
+                minVal = Math.min(minVal, heights[j]);
+                res = Math.max(res, (i - j + 1) * minVal);
+            }
+        }
+        
+        return res;
+    }
+}
+```
 ### Method 1 - Brute Force - :turtle: 470ms (7.97%)
 - Time: O(n ^ 2)
 - Space: O(1)
