@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [258](https://leetcode.com/problems/add-digits/) | [Add Digits](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/258-Add-Digits.md) | Easy | Math
 | [68](https://leetcode.com/problems/text-justification/) | [Text Justification](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/68-Text-Justification.md) | Hard | String
 | [85](https://leetcode.com/problems/maximal-rectangle/) | [Maximal Rectangle](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/85-Maximal-Rectangle.md) | Hard | Array / Hash Table / DP / Stack
 | [190](https://leetcode.com/problems/reverse-bits/) | [Reverse Bits](https://github.com/weltond/DataStructure/blob/master/LeetCode/bit/190-Reverse-Bits.md) | Easy | Bit
