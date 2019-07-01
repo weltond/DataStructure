@@ -21,6 +21,25 @@ Explanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (m
 
 ## Answer
 ### Method 2 - DP - :rocket: 0ms
+#### Approach 3
+```java
+class Solution {
+    public int rob(int[] nums) {
+        if (nums == null) return 0;
+        
+        int rob = 0, notRob = 0, n = nums.length;
+        
+        for (int i = 0; i < n; i++) {
+            int preRob = rob, preNotRob = notRob;
+            
+            rob = preNotRob + nums[i];
+            notRob = Math.max(preRob, preNotRob);
+        }
+        
+        return Math.max(rob, notRob);
+    }
+}
+```
 #### Approach 2: O(1) Space
 ```java
 class Solution {
