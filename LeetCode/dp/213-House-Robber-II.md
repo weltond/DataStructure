@@ -24,6 +24,8 @@ Explanation: Rob house 1 (money = 1) and then rob house 3 (money = 3).
 ```
 ## Answer
 ### Method 1 - DP - :rocket: 0ms
+Since House[1] and House[n] are adjacent, they cannot be robbed together. Therefore, the problem becomes to rob either `House[1] to House[n-1]` or `House[2] to House[n]`, depending on which choice offers more money. Now the problem has degenerated to the House Robber, which is already been solved.
+
 ```java
 class Solution {
     // 0ms
