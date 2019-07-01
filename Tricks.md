@@ -134,3 +134,16 @@ return dp[target];
   - Same as **Longest Substring**
 - [Longest Palindrome - Math problem](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc409LongestPalindrome.java)
 10. [K sum 通用代码](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/18-4-Sum.md)
+11. DP vs Search vs Greedy
+**一个问题是该用递推、贪心、搜索还是动态规划，完全是由这个问题本身阶段间状态的转移方式决定的！**
+
+- 每个阶段只有一个状态->**递推**；
+- 每个阶段的最优状态都是由上一个阶段的最优状态得到的->**贪心**；
+- 每个阶段的最优状态是由之前所有阶段的状态的组合得到的->**搜索**；
+- 每个阶段的最优状态可以从之前某个阶段的某个或某些状态直接得到而不管之前这个状态是如何得到的->**动态规划**。
+
+`每个阶段的最优状态可以从之前某个阶段的某个或某些状态直接得到, 这个性质叫做最优子结构`；
+
+`而不管之前这个状态是如何得到的这个性质叫做无后效性。`
+
+另：其实动态规划中的最优状态的说法容易产生误导，以为只需要计算最优状态就好，LIS问题确实如此，转移时只用到了每个阶段“选”的状态。但实际上有的问题往往需要对每个阶段的所有状态都算出一个最优值，然后根据这些最优值再来找最优状态。比如背包问题就需要对前i个包（阶段）容量为j时（状态）计算出最大价值。然后在最后一个阶段中的所有状态种找到最优值。
