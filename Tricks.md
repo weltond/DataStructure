@@ -135,6 +135,7 @@ return dp[target];
 - [Longest Palindrome - Math problem](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc409LongestPalindrome.java)
 10. [K sum 通用代码](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/18-4-Sum.md)
 11. DP vs Search vs Greedy
+
 **一个问题是该用递推、贪心、搜索还是动态规划，完全是由这个问题本身阶段间状态的转移方式决定的！**
 
 - 每个阶段只有一个状态->**递推**；
