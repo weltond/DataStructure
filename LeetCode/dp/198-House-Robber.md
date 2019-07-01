@@ -20,6 +20,72 @@ Explanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (m
 ```
 
 ## Answer
+### Method 2 - DP - :rocket: 0ms
+#### Approach 2: O(1) Space
+```java
+class Solution {
+    // ======== Method 2: DP ===========
+    // Approach 2: O(1) space 0ms
+    public int rob(int[] nums) {
+        if (nums == null || nums.length < 1) return 0;
+        
+        if (nums.length == 1) return nums[0];
+        
+        // base case
+        int p2 = nums[0];
+        int p1 = Math.max(nums[0], nums[1]);
+        // induction rule: dp[i] = Math.max(dp[i - 2] + nums[i], dp[i - 1])
+        for (int i = 2; i < nums.length; i++) {
+            int tmp = p1;
+            p1 = Math.max(p2 + nums[i], p1);
+            p2 = tmp;
+        }
+        
+        return p1;    
+    }
+}
+```
+#### Approach 1: O(n) Space
+```java
+class Solution {
+    // ======== Method 2: DP ===========
+    // Approach 1: O(n) space 0ms
+    public int rob(int[] nums) {
+        if (nums == null || nums.length < 1) return 0;
+        
+        if (nums.length == 1) return nums[0];
+        
+        int[] dp = new int[nums.length];
+        
+        // base case
+        dp[0] = nums[0];
+        dp[1] = Math.max(nums[0], nums[1]);
+        // induction rule: dp[i] = Math.max(dp[i - 2] + nums[i], dp[i - 1])
+        for (int i = 2; i < nums.length; i++) {
+            dp[i] = Math.max(dp[i - 2] + nums[i], dp[i - 1]);
+        }
+        
+        return dp[nums.length - 1];    
+    }
+    
+    // Or
+    public int rob(int[] nums) {
+        if (nums == null || nums.length < 1) return 0;
+        
+        int[] dp = new int[nums.length + 1];
+        
+        // base case
+        dp[0] = 0;
+        dp[1] = nums[0];
+        // induction rule: dp[i] = Math.max(dp[i - 2] + nums[i], dp[i - 1])
+        for (int i = 1; i < nums.length; i++) {
+            dp[i + 1] = Math.max(dp[i - 1] + nums[i], dp[i]);
+        }
+        
+        return dp[nums.length];    
+    }
+}
+```
 ### Method 1 - DFS + Memo - :rocket: 0ms
 ```java
 class Solution {
