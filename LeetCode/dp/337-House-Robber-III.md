@@ -32,7 +32,8 @@ Explanation: Maximum amount of money the thief can rob = 4 + 5 = 9.
 ```
 
 ## Answer
-### Method 1 - DFS - :rabbit: 1ms (72.83%)
+### Method 1 - DFS
+#### Approach 2 - :rabbit: 1ms (72.83%)
 ```java
 /**
  * Definition for a binary tree node.
@@ -69,6 +70,47 @@ class Solution {
         ret[1] = notRobCurr;
         
         return ret;
+    }
+}
+```
+#### Approach 1 - :rabbit: 4ms (53.11%)
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    // ============= Method 2 ==============
+    // 4ms (53.11%)
+    Map<TreeNode, Integer> map;
+    public int rob(TreeNode root) {
+        map = new HashMap();
+        return dfs(root);
+    }
+    
+    private int dfs(TreeNode root) {
+        if (root == null) return 0;
+        if (map.containsKey(root)) return map.get(root);
+        
+        int val = 0;
+        
+        if (root.left != null) {
+            val += dfs(root.left.left) + dfs(root.left.right);
+        }
+        if (root.right != null) {
+            val += dfs(root.right.left) + dfs(root.right.right);
+        }
+        
+        val = Math.max(val + root.val, dfs(root.left) + dfs(root.right));
+        
+        map.put(root, val);
+        
+        return val;
     }
 }
 ```
