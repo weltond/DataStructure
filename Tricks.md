@@ -158,3 +158,12 @@ return dp[target];
 `而不管之前这个状态是如何得到的这个性质叫做无后效性。`
 
 另：其实动态规划中的最优状态的说法容易产生误导，以为只需要计算最优状态就好，LIS问题确实如此，转移时只用到了每个阶段“选”的状态。但实际上有的问题往往需要对每个阶段的所有状态都算出一个最优值，然后根据这些最优值再来找最优状态。比如背包问题就需要对前i个包（阶段）容量为j时（状态）计算出最大价值。然后在最后一个阶段中的所有状态种找到最优值。
+13. **DP Galleries**
+- 1D, 2 Sets of sub-problems
+  - [926. Flip String to Monotone Increasing]()
+  - [845. Longest Mountain in Array]()
+- 1D w/ multiple states/ `dp[i][0], dp[i][1], dp[i][2]...` (i is the problem size, usually 3 at most)
+  - [801. Minimum Swaps To Make Sequence Increasing]()
+  - [790. Domino and Tromino Tiling]()
+  - [926. Flip String to Monotone Increasing]()
+  - [818. Race Car]()
