@@ -134,7 +134,17 @@ return dp[target];
   - Same as **Longest Substring**
 - [Longest Palindrome - Math problem](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc409LongestPalindrome.java)
 10. [K sum 通用代码](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/18-4-Sum.md)
-11. [DP vs Search vs Greedy](https://www.zhihu.com/question/23995189/answer/35429905)
+11. **DP is a programming method**.
+- Optimal Substructure
+  - Can be solved optimally by breaking it into sub-problems and then recursively finding the optimal solutions to the sub-problems.
+- Overlapping sub-problems
+  - Sub-problems are overlapped such that we can compute only once and store the solution for future use
+  - Reduce time complexity (Exponential to polynomial)
+  - If sub-problem do not overlap ----> Divide and conquer
+- No-after effect
+  - The optimal solution of a subproblem will not change when it was used to solve a bigger problem optimally
+  
+12. [DP vs Search vs Greedy](https://www.zhihu.com/question/23995189/answer/35429905)
 
 **一个问题是该用递推、贪心、搜索还是动态规划，完全是由这个问题本身阶段间状态的转移方式决定的！**
 
