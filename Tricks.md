@@ -168,4 +168,91 @@ return dp[target];
   - [790. Domino and Tromino Tiling]()
   - [926. Flip String to Monotone Increasing]()
   - [818. Race Car]()
+
+14. **DP Template** (From Hua Hua)
 ![DP](https://github.com/weltond/DataStructure/blob/master/Learn%20Git/dp.PNG)
+
+14.1 1-D DP
+- Input O(n)
+  - dp[i] = (opt-) sol of a subproblem (`A[0->i]`). **Only depends on const smaller problems.**
+  - Time: O(n), Space: O(n)
+  - Examples: [70. Climbing Stairs](), [198. House Robber](), [801. Minimum Swaps To Make Sequences Increasing](), [790. Domino and Tromino Tiling](), [746. Min Cost Climbing Stairs]()
+  - **Template**
+  ```python
+  dp = [0] * n    # init DP array
+  for i = 1 to n:
+    dp[i] = f(dp[i - 1], dp[i - 2]...)
+  
+  return dp[n]
+  ```
+- Input O(n)
+  - dp[i] = (-opt) sol of a subproblem (`A[0->i]`). ** Depends on all smaller problems.** (`dp[0],...dp[i-1]`)
+  - Time: O(n^2), Space: O(n)
+  - Examples: [139. Word Break](), [818. Race Cars]()
+  - **Template**
+  ```python
+  dp = new int[n]                         # init DP array
+  for i = 1 to n:                         # problem size
+    for j = 1 to l - 1:                   # sub-problem size
+      dp[i] = max/min(dp[i], f(dp[j])     # find the opt sol from all opt sols of smaller problems
+      
+  return dp[n]
+  ```
+- Input O(m) + O(n), two arrays / Strings
+  - dp[i][j] = (-opt) sol of a subproblem (`A[0->i], B[0->j]`). **Depends on const smaller problems.** (`dp[i-1][j], dp[i][j-1], dp[i-1][j-1]`)
+  - Time: O(mn), Space: O(mn)
+  - Examples: [72. Edit Distance](), [712. Minimum ASCII Delete Sum for Two Strings]()
+  - **Template**
+  ```python
+  dp = new int[n][m]                        # init DP array
+  for i = 1 to n:                           # problem size of input 1
+    for j = 1 to m:                         # problem size of input 2
+      dp[i][j] = f(dp[i-1][j-1], dp[i-1][j], dp[i][j-1])
+      
+  return dp[n][m]
+  ```
+- Input O(n)
+  - dp[i][j] = (opt-) sol of a subproblem (`A[i->j]`), a sub-array of the input. **Each subproblem depends on O(n) smaller problems.**
+  - Time: O(n^3), Space: O(n)
+  - Exapmles: [312. Burst Ballons](), [664. Strange Pointer]()
+  - Template:
+  ```python
+  dp = new int[m][n]                        # init DP array
+  for l = 1 to n:                           # problem size
+    for i = 1 to n - l:                     # Sub-problem start
+      j = i + l - 1                         # Sub-problem end
+      for k = i to j:                       # try all possible break points
+        dp[i][j] = max(dp[i][j], f(dp[i][k], dp[k][j]))  # merge two subproblems
+      
+  return dp[1][n]
+  ```
+  
+14.2 2-D DP
+- Input O(mn)
+  - dp[i][j] = sol of (`A[0->i][0->j]`). **Each subproblem depends on O(1) subproblem**.
+  - Time: O(mn), Space: O(mn)
+  - Examples: [62. Unique Paths](), [64. Minimum Path Sum]()
+  - **Template**
+  ```python
+  dp = new int[n][m]                        # init 2D array
+  for i = 1 to n:                           # row top->down
+    for j = 1 to m:                         # col left->right
+      dp[i][j] = f(dp[i-1][j], dp[i][j-1])
+      
+  return dp[n][m] / max(dp[n])
+  ```
+
+- Input O(mn)
+  - dp[k][i][j] = sol of (`A[0->i][0->j]`) after k steps. **Each subproblem depends on O(1) subproblems**.
+  - Time: O(kmn), Space: O(kmn) -> O(mn)
+  - Examples: [576. Out of Boundary Paths](), [688. Knight Probability in Chessboard]()
+  - **Template**
+  ```python 
+  dp = new int[K][n][m]                         # init 3D array
+  for k = 1 to K:                               # steps / problem size
+    for i = 1 to n:
+      for j = 1 to m:                         
+       dp[k][i][j] = f(dp[k-1][i+di][j+dj])
+      
+  return dp[K][n][m] / g(dp[K])
+  ```
