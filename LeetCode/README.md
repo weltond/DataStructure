@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [392](https://leetcode.com/problems/is-subsequence/) | [Is Subsequence](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/392-Is-Subsequence.md) | Medium | Binary Search / DP / Greedy
 | [801](https://leetcode.com/problems/minimum-swaps-to-make-sequences-increasing/) | [Minimum Swap To Make Sequence Increasing](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/801-Minimum-Swaps-to-Make-Sequences-Increasing.md) | Medium | DP
 | [787](https://leetcode.com/problems/cheapest-flights-within-k-stops/) | [Cheapest Flights Within K Stops](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/787-Cheapest-Flights-Within-K-Stops.md) | Medium | DP / Heap / BFS
 | [303](https://leetcode.com/problems/range-sum-query-immutable/) | [Range Sum Query - Immutable](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/303-Range-Sum-Query-Immutable.md) | Easy | DP
