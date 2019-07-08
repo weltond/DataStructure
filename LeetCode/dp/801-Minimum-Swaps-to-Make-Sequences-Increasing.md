@@ -23,6 +23,37 @@ Note:
 - A[i], B[i] are integer values in the range [0, 2000].
 
 ## Answer
+### Method 2 - DP
+#### Approach 1 - :turtle: 6ms (6.97%)
+```java
+class Solution {
+    // ======= Method 2: DP =======
+    // 68ms (6.97%)
+    public int minSwap(int[] a, int[] b) {
+        int[] swap = new int[a.length];
+        int[] keep = new int[a.length];
+        Arrays.fill(swap, Integer.MAX_VALUE);
+        Arrays.fill(keep, Integer.MAX_VALUE);
+        swap[0] = 1;
+        keep[0] = 0;
+        
+        for (int i = 1; i < a.length; i++) {
+            if (a[i] > a[i - 1] && b[i] > b[i - 1]) {
+                swap[i] = swap[i - 1] + 1;
+                keep[i] = keep[i - 1];
+            }
+            
+            if (a[i] > b[i - 1] && b[i] > a[i - 1]) {
+                swap[i] = Math.min(swap[i], keep[i - 1] + 1);
+                keep[i] = Math.min(keep[i], swap[i - 1]);
+            }
+            System.out.println(i +","+swap[i]+","+keep[i]);
+        }
+        
+        return Math.min(swap[a.length - 1], keep[a.length - 1]);
+    }
+}
+```
 ### Method 1 - DFS - TLE(84 / 102 test cases passed.)
 ```java
 class Solution {
