@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [338](https://leetcode.com/problems/counting-bits/) | [Counting Bits](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/338-Counting-Bits.md) | Medium | DP / Bit 
 | [926](https://leetcode.com/problems/flip-string-to-monotone-increasing/) | [Flip String to Monotone Increasing](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/926-Flip-String-to-Monotone-Increasing.md) | Medium | Array / DP
 | [714](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/) | [Best Time to Buy and Sell Stock with Transaction Fee](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/714-Best-Time-to-Buy-and-Sell-Stock-with-Transaction-Fee.md) | Medium | DP / Array / Greedy
 | [392](https://leetcode.com/problems/is-subsequence/) | [Is Subsequence](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/392-Is-Subsequence.md) | Medium | Binary Search / DP / Greedy
