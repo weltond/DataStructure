@@ -24,7 +24,31 @@ Note:
 - 0 <= fee < 50000.
 
 ## Answer
-### Method 1 - DP - :turtle: 6ms (39.89%)
+### Method 1 - DP
+#### Approach 2 :rabbit: 5ms (84.13%)
+```java
+class Solution {
+    // ======== Method 1: DP ==========
+    // 5ms (84.13%)
+    public int maxProfit(int[] prices, int fee) {
+        if (prices == null) return 0;
+        
+        int n = prices.length;
+        
+        int sell = 0;
+        int buy = -prices[0];
+        
+        for (int i = 1; i < n; i++) {
+            int tmp = sell;
+            sell = Math.max(sell, buy + prices[i] - fee);
+            buy = Math.max(buy, tmp - prices[i]);
+        }
+        
+        return Math.max(buy, sell);
+    }
+}
+```
+#### Approach 1 :turtle: 6ms (39.89%)
 ```java
 class Solution {
     // ======== Method 1: DP ==========
