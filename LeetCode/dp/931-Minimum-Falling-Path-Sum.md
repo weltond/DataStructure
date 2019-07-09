@@ -24,8 +24,40 @@ Note:
 
 ## Answer
 ### Method 2 - DP
+**Easy to downgrade from O(n^2) to O(n).**
+#### Approach 1: Top-down :turtule: 4ms (39.20%)
 ```java
-
+class Solution {
+    // ========= Approach 1: Top-down =========
+    // 4ms (39.20%)
+    public int minFallingPathSum(int[][] a) {
+        if (a == null) return 0;
+        
+        int m = a.length, n = a[0].length;
+        int[][] dp = new int[m + 1][n + 2];
+        for (int[] row : dp) {
+            Arrays.fill(row, Integer.MAX_VALUE);
+        }
+        
+        for (int i = 1; i <= m; i++) {
+            for (int j = 1; j <= n; j++) {
+                if (i == 1) {
+                    dp[i][j] = a[i - 1][j - 1];
+                    continue;
+                }
+                dp[i][j] = Math.min(dp[i - 1][j - 1], dp[i - 1][j]);
+                dp[i][j] = Math.min(dp[i][j], dp[i - 1][j + 1]) + a[i - 1][j - 1];
+            }
+        }
+        
+        int ans = Integer.MAX_VALUE;
+        for (int i = 1; i <= n; i++) {
+            ans = Math.min(ans, dp[m][i]);
+        }
+        
+        return ans;
+    }
+}
 ```
 ### Method 1 - DFS + Memo - :rocket: 1ms (100%)
 ```java
