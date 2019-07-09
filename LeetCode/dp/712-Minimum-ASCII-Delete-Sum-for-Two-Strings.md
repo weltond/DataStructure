@@ -32,6 +32,8 @@ class Solution {
     // 12ms (79.42%)
     public int minimumDeleteSum(String s1, String s2) {
         int len1 = s1.length(), len2 = s2.length();
+        
+        // dp[i][j] is the answer for input s1[i:] and s2[j:]
         int[][] dp = new int[len1 + 1][len2 + 1];
         
         // base case
