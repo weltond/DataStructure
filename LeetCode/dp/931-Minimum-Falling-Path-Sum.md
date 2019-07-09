@@ -24,7 +24,7 @@ Note:
 
 ## Answer
 ### Method 2 - DP
-**Easy to downgrade from O(n^2) to O(n).**
+**Easy to downgrade Space Complexity from O(n^2) to O(n).**
 #### Approach 1: Top-down :turtule: 4ms (39.20%)
 ```java
 class Solution {
