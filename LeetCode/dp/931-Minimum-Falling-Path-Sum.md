@@ -25,8 +25,43 @@ Note:
 ## Answer
 ### Method 2 - DP
 **Easy to downgrade Space Complexity from O(n^2) to O(n).**
-#### Approach 1: Top-down :turtule: 4ms (39.20%)
+#### Approach 1: Top-down :rabbit: 3ms (89.17%)
 ```java
+class Solution {
+    // ========= Approach 1: Top-down =========
+    // 3ms (89.17%)
+    public int minFallingPathSum(int[][] a) {
+        if (a == null) return 0;
+        
+        int m = a.length, n = a[0].length;
+        int[][] dp = new int[m][n];
+        
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i == 0) {
+                    dp[i][j] = a[i][j];
+                    continue;
+                }
+                int minVal = dp[i - 1][j];
+                if (j >= 1) {
+                    minVal = Math.min(minVal, dp[i - 1][j - 1]);
+                }
+                if (j <= n - 2) {
+                    minVal = Math.min(minVal, dp[i - 1][j + 1]);
+                }
+                
+                dp[i][j] = minVal + a[i][j];
+            }
+        }
+        
+        int ans = Integer.MAX_VALUE;
+        for (int i = 0; i < n; i++) {
+            ans = Math.min(ans, dp[m - 1][i]);
+        }
+        
+        return ans;
+    }
+}
 class Solution {
     // ========= Approach 1: Top-down =========
     // 4ms (39.20%)
