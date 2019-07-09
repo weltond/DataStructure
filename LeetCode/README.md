@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [712](https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/) | [Minimum ASCII Delete Sum for Two Strings](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/712-Minimum-ASCII-Delete-Sum-for-Two-Strings.md) | Medium | DP
 | [931](https://leetcode.com/problems/minimum-falling-path-sum/) | [Minimum Falling Path Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/931-Minimum-Falling-Path-Sum.md) | Medium | DP
 | [338](https://leetcode.com/problems/counting-bits/) | [Counting Bits](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/338-Counting-Bits.md) | Medium | DP / Bit 
 | [926](https://leetcode.com/problems/flip-string-to-monotone-increasing/) | [Flip String to Monotone Increasing](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/926-Flip-String-to-Monotone-Increasing.md) | Medium | Array / DP
