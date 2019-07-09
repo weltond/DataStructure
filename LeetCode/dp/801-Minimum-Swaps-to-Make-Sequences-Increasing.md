@@ -36,12 +36,15 @@ class Solution {
         for (int i = 1; i < a.length; i++) {
             
             if (a[i] <= b[i - 1] || b[i] <= a[i - 1]) {
+                // In this case, the ith manipulation should be same as the i-1th manipulation
                 swap[i] = swap[i - 1] + 1;
                 keep[i] = keep[i - 1];
             } else if (a[i] <= a[i - 1] || b[i] <= b[i - 1]) {
+                // In this case, the ith manipulation should be the opposite of the i-1th manipulation
                 swap[i] = keep[i - 1] + 1;
                 keep[i] = swap[i - 1];
             } else {
+                // Either swap or fix is OK. Let's keep the minimum one
                 int tmp = Math.min(swap[i - 1], keep[i - 1]);
                 swap[i] = tmp + 1;
                 keep[i] = tmp;
@@ -58,7 +61,7 @@ class Solution {
 ```java
 class Solution {
     // ======= Method 2: DP =======
-    // 68ms (6.97%)
+    // 1ms (100%)
     public int minSwap(int[] a, int[] b) {
         int[] swap = new int[a.length];
         int[] keep = new int[a.length];
