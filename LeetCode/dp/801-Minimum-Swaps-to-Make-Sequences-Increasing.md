@@ -24,7 +24,7 @@ Note:
 
 ## Answer
 ### Method 2 - DP
-#### Approach 1 - :turtle: 6ms (6.97%)
+#### Approach 1 - :rocket: 1ms （100%）
 ```java
 class Solution {
     // ======= Method 2: DP =======
@@ -47,7 +47,6 @@ class Solution {
                 swap[i] = Math.min(swap[i], keep[i - 1] + 1);
                 keep[i] = Math.min(keep[i], swap[i - 1]);
             }
-            System.out.println(i +","+swap[i]+","+keep[i]);
         }
         
         return Math.min(swap[a.length - 1], keep[a.length - 1]);
