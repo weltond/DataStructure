@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [714](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/) | [Best Time to Buy and Sell Stock with Transaction Fee](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/714-Best-Time-to-Buy-and-Sell-Stock-with-Transaction-Fee.md) | Medium | DP / Array / Greedy
 | [392](https://leetcode.com/problems/is-subsequence/) | [Is Subsequence](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/392-Is-Subsequence.md) | Medium | Binary Search / DP / Greedy
 | [801](https://leetcode.com/problems/minimum-swaps-to-make-sequences-increasing/) | [Minimum Swap To Make Sequence Increasing](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/801-Minimum-Swaps-to-Make-Sequences-Increasing.md) | Medium | DP
 | [787](https://leetcode.com/problems/cheapest-flights-within-k-stops/) | [Cheapest Flights Within K Stops](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/787-Cheapest-Flights-Within-K-Stops.md) | Medium | DP / Heap / BFS
