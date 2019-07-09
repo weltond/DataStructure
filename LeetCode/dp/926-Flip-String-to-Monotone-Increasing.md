@@ -31,6 +31,29 @@ Note:
 - S only consists of '0' and '1' characters.
 
 ## Answer
+### Method 2 - Prefix Sum - :turtle: 8ms (30.17%)
+```java
+class Solution {
+    // =========== Method 2: Prefix Sum ==========
+    // 8ms (30.17%)
+    public int minFlipsMonoIncr(String s) {
+        int len = s.length();
+        int[] prefix = new int[len + 1];    // calculate how many 1s
+        for (int i = 0; i < len; i++) {
+            prefix[i + 1] = prefix[i] + (s.charAt(i) == '1' ? 1 : 0);
+        }
+        
+        int ans = Integer.MAX_VALUE;
+        for (int i = 0; i <= len; i++) {
+            int firstHalfOneToZero = prefix[i];
+            int secondHalfZeroToOne = (len - i) - (prefix[len] - prefix[i]);
+            ans = Math.min(ans, firstHalfOneToZero + secondHalfZeroToOne);
+        }
+        
+        return ans;
+    }
+}
+```
 ### Method 1 - DP - :turtle: 8ms (30.17%)
 ```java
 class Solution {
