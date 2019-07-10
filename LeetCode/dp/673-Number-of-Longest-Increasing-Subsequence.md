@@ -36,6 +36,7 @@ class Solution {
         int[] len = new int[nums.length];   // len[i]: max length of LIS from nums[0:i]
         int[] cnt = new int[nums.length];   // cnt[i]: number of LIS from nums[0:i]
         
+        // result is the sum of each cnt[i] while its corresponding len[i] is the maximum length
         int maxLen = 0, res = 0;
         for (int i = 0; i < nums.length; i++) {
             len[i] = 1;
