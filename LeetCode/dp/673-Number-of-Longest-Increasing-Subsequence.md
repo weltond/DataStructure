@@ -27,7 +27,7 @@ for each element in the array or on in the tree, they all carry three fields :
 3) the total number of maximum length,
 
 and each time when we visit a element, we will use its 2) to update 1) and 3), the only difference is for array we use iteration while for tree we use recursion......
-Also, for substring problem, we usually use only one for loop because for each index, we only care about the relationship between its two neighbors, while for subsequence problem, we use two for loops , because for each index, any other indexes can do something...
+**Also, for substring problem, we usually use only one for loop because for each index, we only care about the relationship between its two neighbors, while for subsequence problem, we use two for loops , because for each index, any other indexes can do something...**
 
 ### Method 1 - DP - :rabbit: 9ms (51.80%)
 ```java
