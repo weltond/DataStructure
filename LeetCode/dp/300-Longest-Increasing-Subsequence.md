@@ -16,6 +16,11 @@ Note:
 **Follow up: Could you improve it to O(n log n) time complexity?**
 
 ## Answer
+### Method 2 - DP with Binary Search
+- Time: O(nlogn)
+```java
+// TO DO...
+```
 ### Method 1 - DP - :rabbit: 8ms (64.68%)
 - Time: O(n^2)
 ```java
