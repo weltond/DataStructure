@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [673](https://leetcode.com/problems/number-of-longest-increasing-subsequence/) | [Number of Longest Increasing Subsequence](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/673-Number-of-Longest-Increasing-Subsequence.md) | Medium | DP
 | [300](https://leetcode.com/problems/longest-increasing-subsequence/) | [Longest Increasing Subsequence](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/300-Longest-Increasing-Subsequence.md) | Medium | DP / Binary Search
 | [712](https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/) | [Minimum ASCII Delete Sum for Two Strings](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/712-Minimum-ASCII-Delete-Sum-for-Two-Strings.md) | Medium | DP
 | [931](https://leetcode.com/problems/minimum-falling-path-sum/) | [Minimum Falling Path Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/931-Minimum-Falling-Path-Sum.md) | Medium | DP
