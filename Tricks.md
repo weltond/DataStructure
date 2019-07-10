@@ -256,3 +256,7 @@ return dp[target];
       
   return dp[K][n][m] / g(dp[K])
   ```
+
+15. DP Subsequence V.S. Substring
+- for substring problem, we usually use only one for loop because for each index, we only care about the relationship between its two neighbors 
+- for subsequence problem, we use two for loops , because for each index, any other indexes can do something. 
