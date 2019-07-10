@@ -18,6 +18,15 @@ Explanation: The length of longest continuous increasing subsequence is 1, and t
 Note: Length of the given array will be not exceed 2000 and the answer is guaranteed to be fit in 32-bit signed int.
 
 ## Answer
+**Similar to [549. Binary Tree Longest Consecutive Sequence II]()**
+`
+for each element in the array or on in the tree, they all carry three fields :
+1) the maximum increasing / decreasing length ends at the current element,
+2) its own value ,
+3) the total number of maximum length,
+and each time when we visit a element, we will use its 2) to update 1) and 3), the only difference is for array we use iteration while for tree we use recursion......
+Also, for substring problem, we usually use only one for loop because for each index, we only care about the relationship between its two neighbors, while for subsequence problem, we use two for loops , because for each index, any other indexes can do something...
+`
 ### Method 1 - DP - :rabbit: 9ms (51.80%)
 ```java
 class Solution {
