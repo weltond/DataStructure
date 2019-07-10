@@ -259,4 +259,4 @@ return dp[target];
 
 15. DP Subsequence V.S. Substring
 - for substring problem, we usually use only one for loop because for each index, we only care about the relationship between its two neighbors 
-- for subsequence problem, we use two for loops , because for each index, any other indexes can do something. 
+- for subsequence problem, we use two for loops , because for each index, any other indexes can do something. [300. LIS](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/300-Longest-Increasing-Subsequence.md) && [673. Number of LIS](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/673-Number-of-Longest-Increasing-Subsequence.md)  
