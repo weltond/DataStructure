@@ -21,28 +21,36 @@ Note: Length of the given array will be not exceed 2000 and the answer is guaran
 ### Method 1 - DP - :rabbit: 9ms (51.80%)
 ```java
 class Solution {
-    // 9ms (51.80%)
-    public int minSwap(int[] a, int[] b) {
-        int[] swap = new int[a.length];
-        int[] keep = new int[a.length];
-        Arrays.fill(swap, Integer.MAX_VALUE);
-        Arrays.fill(keep, Integer.MAX_VALUE);
-        swap[0] = 1;
-        keep[0] = 0;
+    public int findNumberOfLIS(int[] nums) {
+        if (nums == null) return 0;
         
-        for (int i = 1; i < a.length; i++) {
-            if (a[i] > a[i - 1] && b[i] > b[i - 1]) {
-                swap[i] = swap[i - 1] + 1;
-                keep[i] = keep[i - 1];
+        int[] len = new int[nums.length];   // len[i]: max length of LIS from nums[0:i]
+        int[] cnt = new int[nums.length];   // cnt[i]: number of LIS from nums[0:i]
+        
+        int maxLen = 0, res = 0;
+        for (int i = 0; i < nums.length; i++) {
+            len[i] = 1;
+            cnt[i] = 1;
+            for (int j = i - 1; j >= 0; j--) {
+                if (nums[i] <= nums[j]) continue;
+                
+                if (len[i] == len[j] + 1) cnt[i] += cnt[j];
+                else if (len[i] < len[j] + 1) {
+                    len[i] = len[j] + 1;
+                    cnt[i] = cnt[j];
+                }
             }
             
-            if (a[i] > b[i - 1] && b[i] > a[i - 1]) {
-                swap[i] = Math.min(swap[i], keep[i - 1] + 1);
-                keep[i] = Math.min(keep[i], swap[i - 1]);
+            if (maxLen == len[i]) res += cnt[i];
+            else if (maxLen < len[i]) {
+                maxLen = len[i];
+                res = cnt[i];
             }
+            
         }
         
-        return Math.min(swap[a.length - 1], keep[a.length - 1]);
+        return res;
+        
     }
 }
 ```
