@@ -32,6 +32,34 @@ Note:
 - `0 <= A[i] <= 10000`
 ## Answer
 ### Method 1 - DP
+#### Approach 2 :rabbit: 363ms (50.82%)
+```java
+class Solution {
+    // =========== Method 1: DP ============
+    // 363ms (50.82%)
+    public int longestArithSeqLength(int[] a) {
+        if (a == null) return 0;
+        
+        HashMap<Integer, Integer>[] dp = new HashMap[a.length];
+        dp[0] = new HashMap();
+        int res = 1;
+        for (int i = 1; i < a.length; i++) {
+            dp[i] = new HashMap();
+            for (int j = i - 1; j >= 0; j--) {
+                int diff = a[i] - a[j];
+                int prev = dp[j].getOrDefault(diff, 0) + 1;
+                int cur = Math.max(dp[i].getOrDefault(diff, 0), prev);
+                
+                dp[i].put(diff, cur);
+                
+                res = Math.max(res, cur);
+            }
+        }
+
+        return res + 1;
+    }
+}
+```
 #### Approach 1 :rocket: 77ms (91.66%)
 ```java
 class Solution {
