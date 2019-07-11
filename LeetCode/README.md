@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [343](https://leetcode.com/problems/integer-break/) | [Integer Break](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/343-Integer-Break.md) | Medium | Math / DP
 | [638](https://leetcode.com/problems/shopping-offers/) | [Shopping Offers](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/638-Shopping-Offers.md) | Medium | DP / DFS
 | [718](https://leetcode.com/problems/maximum-length-of-repeated-subarray/) | [Maximum Length of Repeated Subarray](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/718-Maximum-Length-of-Repeated-Subarray.md) | Medium | Array / HashMap / Binary Search / DP
 | [1025](https://leetcode.com/problems/divisor-game/) | [Divisor Game](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/1025-Divisor-Game.md) | Easy | Math / DP
