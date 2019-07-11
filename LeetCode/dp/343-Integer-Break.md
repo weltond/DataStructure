@@ -17,7 +17,6 @@ Explanation: 10 = 3 + 3 + 4, 3 × 3 × 4 = 36.
 Note: You may assume that n is not less than 2 and not larger than 58.
 
 ## Answer
-```
 ### Method 1 - DP
 #### Approach 1 :rabbit: 1ms (51.69%)
 ```java
