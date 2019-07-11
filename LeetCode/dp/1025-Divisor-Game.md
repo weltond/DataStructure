@@ -28,8 +28,15 @@ Note:
 - `1 <= N <= 1000`
 
 ## Answer
-### Method 1 - DP
-#### Approach 1 :turtle: 4ms (25.14%)
+### Method 2 - Math - :rocket: 0ms
+```java
+class Solution {
+    public boolean divisorGame(int N) {
+        return N % 2 == 0;
+    }
+}
+```
+### Method 1 - DP - :turtle: 4ms (25.14%)
 ```java
 class Solution {
     // ============== Approach 1 =============
