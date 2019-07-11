@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [1025](https://leetcode.com/problems/divisor-game/) | [Divisor Game](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/1025-Divisor-Game.md) | Easy | Math / DP
 | [1027](https://leetcode.com/problems/longest-arithmetic-sequence/) | [Longest Arithmetic Sequence](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/1027-Longest-Arithmetic-Sequence.md) | Medium | DP
 | [673](https://leetcode.com/problems/number-of-longest-increasing-subsequence/) | [Number of Longest Increasing Subsequence](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/673-Number-of-Longest-Increasing-Subsequence.md) | Medium | DP
 | [300](https://leetcode.com/problems/longest-increasing-subsequence/) | [Longest Increasing Subsequence](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/300-Longest-Increasing-Subsequence.md) | Medium | DP / Binary Search
