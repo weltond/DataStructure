@@ -24,8 +24,49 @@ We then think can we apply the divide and conquer technique? After all there see
 - Well, the nature way to divide the problem is burst one balloon and separate the balloons into 2 sub sections one on the left and one one the right. However, in this problem the left and right become adjacent and have effects on the maxCoins in the future.
 - Then another interesting idea come up. Which is quite often seen in dp problem analysis. That is **reverse thinking**. Like I said **the coins you get for a balloon does not depend on the balloons already burst**. Therefore instead of divide the problem by the first balloon to burst, we divide the problem by the last balloon to burst. Why is that? **Because only the first and last balloons we are sure of their adjacent balloons before hand!**
 
-### Method 2 - DP
+### Method 3 - DP -
+- Time: O(n^3)
 ```java
+
+```
+### Method 2 - Divide and Conquer - :rocket: 4ms (99.47%)
+- Time: O(n^3) (?)
+```java
+class Solution {
+    // ======== Method 2: Divide and Conquer ==========
+    // 4ms (99.47%)
+    public int maxCoins(int[] nums) {
+        if (nums == null) return 0;
+        
+        int[] arr = new int[nums.length + 2];
+        
+        int n = 1;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] > 0) {  // to remove 0 values in the array 
+                arr[n++] = nums[i];
+            }
+        }
+        
+        arr[0] = arr[n++] = 1;
+        int[][] memo = new int[n][n];
+        
+        return dfs(arr, 0, n - 1, memo);
+    }
+    // reverse thinking. Pick the last one first.
+    private int dfs(int[] nums, int left, int right, int[][] memo) {
+        if (left + 1 == right) return 0;
+        if (memo[left][right] != 0) return memo[left][right];
+        
+        int ans = 0;
+        for (int i = left + 1; i < right; i++) {
+            ans = Math.max(ans, nums[left] * nums[i] * nums[right] + dfs(nums, left, i, memo) + dfs(nums, i, right, memo));
+        }
+        
+        memo[left][right] = ans;
+        
+        return ans;
+    }
+}
 ```
 ### Method 1 - DFS + Memo 
 
