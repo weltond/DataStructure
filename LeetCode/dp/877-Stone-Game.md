@@ -28,6 +28,14 @@ Note:
 - `sum(piles) is odd.`
 
 ## Answer
+### Method 2 - Math - :rocket: 0ms
+```java
+class Solution {
+    public boolean stoneGame(int[] piles) {
+        return true;
+    }
+}
+```
 ### Method 1 - DP
 #### Approach 1 :rabbit: 4ms (50.91%)
 ```java
