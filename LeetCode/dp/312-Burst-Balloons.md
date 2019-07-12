@@ -26,8 +26,39 @@ We then think can we apply the divide and conquer technique? After all there see
 
 ### Method 3 - DP -
 - Time: O(n^3)
+#### Approach 1 :rabbit: 6ms (51.48%)
 ```java
+class Solution {
+    // ======== Method 3: DP =========
+    // 6ms (51.48%)
+    public int maxCoins(int[] nums) {
+        if (nums == null) return 0;
+        
+        int[] arr = new int[nums.length + 2];
+        
+        int n = 1;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] > 0) {  // to remove 0 values in the array 
+                arr[n++] = nums[i];
+            }
+        }
+        
+        arr[0] = arr[n++] = 1;
+        int[][] dp = new int[n][n];
+        // dp[i][j] means coins obtained from bursting all balloons between nums[i...j] (not including i and j)
+        // dp[i][j] = max(arr[i]*arr[j]*arr[k] + dp[i][k] + dp[k][j])
+        for (int i = n - 1; i >= 0; i--) {
+            for (int j = i + 2; j < n; j++) {
+                for (int k = i + 1; k < j; k++) {
+                    dp[i][j] = Math.max(dp[i][j], arr[i] * arr[k] * arr[j] + dp[i][k] + dp[k][j]);
+                }
+            }
+        }
+        
+        return dp[0][n - 1];
+    }
 
+}
 ```
 ### Method 2 - Divide and Conquer - :rocket: 4ms (99.47%)
 - Time: O(n^3) (?)
