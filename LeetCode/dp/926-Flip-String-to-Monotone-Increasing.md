@@ -31,6 +31,7 @@ Note:
 - S only consists of '0' and '1' characters.
 
 ## Answer
+Divide the String into 2 parts: **"000..." & "...111"**
 ### Method 2 - Prefix Sum - :turtle: 8ms (30.17%)
 ```java
 class Solution {
