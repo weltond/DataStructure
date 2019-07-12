@@ -37,6 +37,7 @@ dp:
 ### Method 3 - DP
 - Time: O(n^3)
 #### Approach 2 :rabbit: 5ms (89.96%)
+**Approach 2 matches the way we want to solve the problem while Approach 1 is just an implementation.**
 ```
 input:  1  [3,  1,  5,  8]    1
         
@@ -48,6 +49,8 @@ dp:                                     \
         0   0   0   0   0     0          
         0   0   0   0   0     0         
         -------------------------------------->
+        
+        [3] -> [1] -> [5] -> [8] -> [3, 1] -> [1, 5] -> [5, 8] -> [3, 1, 5] -> [1, 5, 8] -> [3, 1, 5, 8]
 ```
 ```java
 class Solution {
