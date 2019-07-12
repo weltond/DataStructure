@@ -31,6 +31,7 @@ Note:
 - `Each element nums[i] is an integer in the range [1, 10000].`
 
 ## Answer
+Just like [LC 198. House Robber](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/198-House-Robber.md)
 ### Method 1 - DP - :rabbit: 2ms (76.46%)
 ```java
 class Solution {
