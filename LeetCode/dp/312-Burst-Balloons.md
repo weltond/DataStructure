@@ -25,14 +25,14 @@ We then think can we apply the divide and conquer technique? After all there see
 - Then another interesting idea come up. Which is quite often seen in dp problem analysis. That is **reverse thinking**. Like I said **the coins you get for a balloon does not depend on the balloons already burst**. Therefore instead of divide the problem by the first balloon to burst, we divide the problem by the last balloon to burst. Why is that? **Because only the first and last balloons we are sure of their adjacent balloons before hand!**
 
 ```
-input: [3,1,5,8]
+input:    1   [3,   1,   5,   8]   1
 dp:
-      0    0    0    0    0    0
-      0    3    30   159  167  0
-      0    0    15   135  159  0
-      0    0    0    40   48   0
-      0    0    0    0    40   0
-      0    0    0    0    0    0
+          0    0    0    0    0    0
+          0    3    30   159  167  0
+          0    0    15   135  159  0
+          0    0    0    40   48   0
+          0    0    0    0    40   0
+          0    0    0    0    0    0
 ```
 ### Method 3 - DP -
 - Time: O(n^3)
