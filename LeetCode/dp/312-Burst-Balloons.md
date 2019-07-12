@@ -24,6 +24,16 @@ We then think can we apply the divide and conquer technique? After all there see
 - Well, the nature way to divide the problem is burst one balloon and separate the balloons into 2 sub sections one on the left and one one the right. However, in this problem the left and right become adjacent and have effects on the maxCoins in the future.
 - Then another interesting idea come up. Which is quite often seen in dp problem analysis. That is **reverse thinking**. Like I said **the coins you get for a balloon does not depend on the balloons already burst**. Therefore instead of divide the problem by the first balloon to burst, we divide the problem by the last balloon to burst. Why is that? **Because only the first and last balloons we are sure of their adjacent balloons before hand!**
 
+```
+input: [3,1,5,8]
+dp:
+      0    0    0    0    0    0
+      0    3    30   159  167  0
+      0    0    15   135  159  0
+      0    0    0    40   48   0
+      0    0    0    0    40   0
+      0    0    0    0    0    0
+```
 ### Method 3 - DP -
 - Time: O(n^3)
 #### Approach 1 :rabbit: 6ms (51.48%)
