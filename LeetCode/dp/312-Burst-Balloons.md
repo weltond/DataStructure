@@ -46,7 +46,7 @@ class Solution {
         arr[0] = arr[n++] = 1;
         int[][] dp = new int[n][n];
         // dp[i][j] means coins obtained from bursting all balloons between nums[i...j] (not including i and j)
-        // dp[i][j] = max(arr[i]*arr[j]*arr[k] + dp[i][k] + dp[k][j])
+        // dp[i][j] = max(arr[i]*arr[j]*arr[k] + dp[i][k] + dp[k][j]), i < k < j. j > i + 1
         for (int i = n - 1; i >= 0; i--) {
             for (int j = i + 2; j < n; j++) {
                 for (int k = i + 1; k < j; k++) {
