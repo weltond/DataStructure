@@ -26,16 +26,73 @@ We then think can we apply the divide and conquer technique? After all there see
 
 ```
 input:    1   [3,   1,   5,   8]   1
-dp:                                       ^
-          0    0    0    0    0    0      |
-          0    3    30   159  167  0      |
-          0    0    15   135  159  0      |
-          0    0    0    40   48   0      |
-          0    0    0    0    40   0      |
-          0    0    0    0    0    0      |
+dp:                                       
+          0    0    0    0    0    0      
+          0    3    30   159  167  0      
+          0    0    15   135  159  0      
+          0    0    0    40   48   0      
+          0    0    0    0    40   0      
+          0    0    0    0    0    0      
 ```
-### Method 3 - DP -
+### Method 3 - DP
 - Time: O(n^3)
+#### Approach 2 :rabbit: 5ms (89.96%)
+```
+input:  1  [3,  1,  5,  8]    1
+        
+dp:                                     \
+        0   0   3   30  159   167        \
+        0   0   0   15  135   159         \
+        0   0   0   0   40    48           \
+        0   0   0   0   0     40            \
+        0   0   0   0   0     0          --->
+        0   0   0   0   0     0         
+        
+```
+```java
+class Solution {
+    // ======== Method 3: DP =========
+    // 5ms (89.96%)
+    public int maxCoins(int[] nums) {
+        if (nums == null) return 0;
+        
+        int[] arr = new int[nums.length + 2];
+        
+        int n = 1;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] > 0) {  // to remove 0 values in the array 
+                arr[n++] = nums[i];
+            }
+        }
+        
+        arr[0] = arr[n++] = 1;
+        int[][] dp = new int[n][n];
+        // dp[i][j] means coins obtained from bursting all balloons between nums[i...j] (not including i and j)
+        // dp[i][j] = max(arr[i]*arr[j]*arr[k] + dp[i][k] + dp[k][j])
+        for (int len = 2; len < n; len++) {
+            for (int i = 0; i < n - len; i++) {
+                int j = i + len;
+                for (int k = i + 1; k < j; k++) {
+                    dp[i][j] = Math.max(dp[i][j], arr[i] * arr[k] * arr[j] + dp[i][k] + dp[k][j]);
+                }
+
+            }
+        }
+        
+        return dp[0][n - 1];
+    }
+    
+    // private void print(int[][] dp) {
+    //     for (int i = 0; i < dp.length; i++) {
+    //         for (int j = 0; j < dp[0].length; j++) {
+    //             System.out.print(dp[i][j] + " ");
+    //         }
+    //         System.out.println();
+    //     }
+    // }
+
+}
+```
 #### Approach 1 :rabbit: 6ms (51.48%)
 ```
 input:  1  [3,  1,  5,  8]    1
