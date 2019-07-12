@@ -37,6 +37,35 @@ class Solution {
 }
 ```
 ### Method 1 - DP
+#### Approach 2 :turtle: 6ms (40.56%)
+```java
+class Solution {
+    // 6ms
+    public boolean stoneGame(int[] piles) {
+        int n = piles.length;
+        
+        int[][] dp = new int[n][n];
+        
+        // dp[i][j] largest score Alex can achieve from piles[i...j]
+        for (int len = 1; len < n; len++) {
+            for (int i = 0; i < n - len; i++) {
+                int j = i + len;
+                int parity = (j - i) % 2;
+                // Alex
+                if (parity == 1) {
+                    dp[i][j] = Math.max(dp[i + 1][j] + piles[i], dp[i][j - 1] + piles[j]);
+                }
+                // Lee
+                else {
+                    dp[i][j] = Math.max(dp[i + 1][j] - piles[i], dp[i][j - 1] - piles[j]);
+                }
+            }
+        }
+        
+        return dp[0][n - 1] > 0;
+    }
+}
+```
 #### Approach 1 :rabbit: 4ms (50.91%)
 ```java
 class Solution {
