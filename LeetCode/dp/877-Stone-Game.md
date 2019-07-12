@@ -50,7 +50,7 @@ class Solution {
         for (int len = 1; len < n; len++) {
             for (int i = 0; i < n - len; i++) {
                 int j = i + len;
-                int parity = (j - i) % 2;
+                int parity = (j - i) % 2;   // this is tricky because initial length is always even.
                 // Alex
                 if (parity == 1) {
                     dp[i][j] = Math.max(dp[i + 1][j] + piles[i], dp[i][j - 1] + piles[j]);
