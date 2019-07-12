@@ -20,7 +20,9 @@ Explanation: nums = [3,1,5,8] --> [3,5,8] -->   [3,8]   -->  [8]  --> []
 ### Method 2 - DP
 ```java
 ```
-### Method 1 - DFS + Memo - TLE(34 / 70 test cases passed.)
+### Method 1 - DFS + Memo 
+#### Approach 1 : - TLE(34 / 70 test cases passed)
+- Time: O(n!) (?)
 ```java
 class Solution {
     // ======== Method 1: DFS + Memo =========
