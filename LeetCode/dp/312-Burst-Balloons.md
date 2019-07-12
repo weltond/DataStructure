@@ -17,10 +17,16 @@ Explanation: nums = [3,1,5,8] --> [3,5,8] -->   [3,8]   -->  [8]  --> []
 ```
 
 ## Answer
+We then think can we apply the divide and conquer technique? After all there seems to be many self similar sub problems from the previous analysis.
+
+- Well, the nature way to divide the problem is burst one balloon and separate the balloons into 2 sub sections one on the left and one one the right. However, in this problem the left and right become adjacent and have effects on the maxCoins in the future.
+- Then another interesting idea come up. Which is quite often seen in dp problem analysis. That is **reverse thinking**. Like I said **the coins you get for a balloon does not depend on the balloons already burst**. Therefore instead of divide the problem by the first balloon to burst, we divide the problem by the last balloon to burst. Why is that? **Because only the first and last balloons we are sure of their adjacent balloons before hand!**
+
 ### Method 2 - DP
 ```java
 ```
 ### Method 1 - DFS + Memo 
+
 #### Approach 1 : - TLE(34 / 70 test cases passed)
 - Time: O(n!) (?)
 ```java
