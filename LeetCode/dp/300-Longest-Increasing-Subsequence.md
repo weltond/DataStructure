@@ -16,6 +16,7 @@ Note:
 **Follow up: Could you improve it to O(n log n) time complexity?**
 
 ## Answer
+LIS subsequence depends on all its subproblem results.
 ### Method 2 - DP with Binary Search
 - Time: O(nlogn)
 ```java
