@@ -17,6 +17,8 @@ Explanation: nums = [3,1,5,8] --> [3,5,8] -->   [3,8]   -->  [8]  --> []
 ```
 
 ## Answer
+*Inspired by this [post](https://leetcode.com/problems/burst-balloons/discuss/76228/Share-some-analysis-and-explanations).*
+
 We then think can we apply the divide and conquer technique? After all there seems to be many self similar sub problems from the previous analysis.
 
 - Well, the nature way to divide the problem is burst one balloon and separate the balloons into 2 sub sections one on the left and one one the right. However, in this problem the left and right become adjacent and have effects on the maxCoins in the future.
