@@ -50,7 +50,7 @@ class Solution {
         int res = 0;
         for (int i = minNum; i <= maxNum; i++) {
             use[i] = (count[i - 1] == 0 ? Math.max(skip[i - 1], use[i - 1]) : skip[i - 1]) + i * count[i];
-            skip[i] = Math.max(skip[i - 1], use[i - 1]);  // we can either use pick prev or use prev if we choose to skip current
+            skip[i] = Math.max(skip[i - 1], use[i - 1]);  // we can either pick prev or skip prev if we choose to skip current
             
             res = Math.max(res, Math.max(use[i], skip[i]));
         }
