@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [650](https://leetcode.com/problems/2-keys-keyboard/) | [2 Keys Keyboard](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/650-2-Keys-Keyboard.md) | Medium | DP
 | [312](https://leetcode.com/problems/burst-balloons/) | [Burst Balloons](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/312-Burst-Balloons.md) | Hard | Divide and Conquer / DP
 | [740](https://leetcode.com/problems/delete-and-earn/) | [Delete and Earn](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/740-Delete-and-Earn.md) | Medium | DP
 | [877](https://leetcode.com/problems/stone-game/) | [Stone Game](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/877-Stone-Game.md) | Medium | Math / DP
