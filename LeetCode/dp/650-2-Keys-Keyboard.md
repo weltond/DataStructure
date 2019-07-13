@@ -23,6 +23,29 @@ Note:
 - The n will be in the range [1, 1000].
 
 ## Answer
+### Method 2 - DP - :turtle: 34ms (14.08%)
+```java
+class Solution {
+    // ======= Method2 : DP ========
+    // 34ms (14.08%)
+    public int minSteps(int n) {
+        if (n == 1) return 0;
+        
+        int[] dp = new int[n + 1];
+        
+        for (int i = 1; i <= n; i++) {
+            dp[i] = i;
+            for (int j = i - 1; j > 1; j--) {
+                if (i % j == 0) {
+                    dp[i] = Math.min(dp[i], dp[i / j] + j);
+                }
+            }
+        }
+        
+        return dp[n];
+    }
+}
+```
 ### Method 1 - DFS - :rabbit: 1ms (63.41%)
 ```java
 class Solution {
