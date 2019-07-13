@@ -23,6 +23,24 @@ Note:
 - The n will be in the range [1, 1000].
 
 ## Answer
+### Method 3 :rocket: 0ms
+```java
+class Solution {
+    // ======= Method3 : DP ========
+    public int minSteps(int n) {
+        int res = 0;
+        
+        for (int i = 2; i <= n; i++) {
+            while (n % i == 0) {
+                res += i;
+                n /= i;
+            }
+        }
+        
+        return res;
+    }
+}
+```
 ### Method 2 - DP - :turtle: 34ms (14.08%)
 ```java
 class Solution {
