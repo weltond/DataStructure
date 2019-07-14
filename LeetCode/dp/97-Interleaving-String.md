@@ -14,6 +14,44 @@ Output: false
 ```
 
 ## Answer
+### Method 2 - DFS + Memo - :rocket: 0ms
+```java
+class Solution {
+    // =========== Method 2 : DFS + Memo ============
+    // 0ms 
+    int[][] memo;
+    public boolean isInterleave(String s1, String s2, String s3) {
+        int len1 = s1.length(), len2 = s2.length(), len3 = s3.length();
+        if (len3 != len1 + len2) return false;
+        
+        memo = new int[len1][len2];
+
+        return dfs(s1, s2, s3, 0, 0, 0);
+    }
+    
+    private boolean dfs(String s1, String s2, String s3, int l1, int l2, int l3) {
+        if (l1 == s1.length()) {
+            return s2.substring(l2).equals(s3.substring(l3));
+        }
+        if (l2 == s2.length()) {
+            return s1.substring(l1).equals(s3.substring(l3));
+        }
+        
+        if (memo[l1][l2] != 0) {
+            return memo[l1][l2] == 1 ? true : false;
+        }
+        boolean res = false;
+        if (s1.charAt(l1) == s3.charAt(l3) && dfs(s1, s2, s3, l1 + 1, l2, l3 + 1) || 
+           s2.charAt(l2) == s3.charAt(l3) && dfs(s1, s2, s3, l1, l2 + 1, l3 + 1)) {
+            res = true;
+        }
+        
+        memo[l1][l2] = res ? 1 : 2;
+        
+        return res;
+    }
+}
+```
 ### Method 1 - DP
 #### Approach 2 :turtle: 5ms (37.18%)
 ```java
