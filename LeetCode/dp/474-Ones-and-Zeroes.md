@@ -30,6 +30,13 @@ Explanation: You could form "10", but then you'd have nothing left. Better form 
 
 ## Answer
 ### Method 1 - Brute Force - :rabbit: 4ms (83.17%)
+ `dp[i][j]` = the max number of strings that can be formed with i 0's and j 1's from the first few strings up to the current string s
+ 
+ **Catch: have to go from bottom right to top left**
+ 
+ Why? If a cell in the `dp[][]` is updated(because s is selected), we should be adding 1 to `dp[i][j]` from the previous iteration (when we were not considering s)
+ 
+ If we go from top left to bottom right, we would be using results from this iteration => overcounting
 ```java
 class Solution {
     // ============ DP ==============
