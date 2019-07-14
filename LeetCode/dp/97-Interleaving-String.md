@@ -53,6 +53,7 @@ class Solution {
 }
 ```
 ### Method 1 - DP
+**dp[i][j] represents is s1[0...i] and s2[0...j] can be formed to s3[0...i+j].
 #### Approach 2 :turtle: 5ms (37.18%)
 ```java
 class Solution {
