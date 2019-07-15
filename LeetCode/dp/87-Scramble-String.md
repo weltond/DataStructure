@@ -53,6 +53,7 @@ Output: false
 
 ## Answer
 ### Method 2 - DP
+The iterative version of the idea is considerably slower than the recursive simply because here we consider all possible states, while the recursive will only compute required states as it founds them. Time complexity of both is, in any case, the same.
 ```java
 
 ```
