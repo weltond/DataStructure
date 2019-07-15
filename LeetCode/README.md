@@ -1,6 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
-| [87](https://leetcode.com/problems/scramble-string/) | [Scramble String](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/87-Scramble-String.md) | String / DP
+| [87](https://leetcode.com/problems/scramble-string/) | [Scramble String](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/87-Scramble-String.md) | Hard | String / DP
 | [97](https://leetcode.com/problems/interleaving-string/) | [Interleaving String](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/97-Interleaving-String.md) | Hard | String / DP
 | [474](https://leetcode.com/problems/ones-and-zeroes/) | [Ones and Zeros](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/474-Ones-and-Zeroes.md) | Medium | DP
 | [808](https://leetcode.com/problems/soup-servings/) | [Soup Servings](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/808-Soup-Servings.md) | Medium | DP
