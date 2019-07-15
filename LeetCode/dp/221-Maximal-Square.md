@@ -16,6 +16,43 @@ Output: 4
 
 ## Answer
 ### Method 1 - DP - :rocket: 4ms (95.34%)
+#### Approach 2
+- Space: O(n)
+```java
+class Solution {
+    // ============ Method 1: DP ===============
+    // 
+    public int maximalSquare(char[][] matrix) {
+        if (matrix == null || matrix.length <= 0) return 0;
+        
+        int m = matrix.length, n = matrix[0].length;
+        int[] dp = new int[n + 1];
+        
+        int res = 0, prev = 0;
+        
+        for (int i = m - 1; i >= 0; i--) {
+            for (int j = n - 1; j >= 0; j--) {
+                int tmp = dp[j];
+                if (matrix[i][j] == '1') {
+                    int right = dp[j + 1];
+                    int down = dp[j];
+                    int diag = prev;
+                    
+                    dp[j] = Math.min(right, Math.min(down, diag)) + 1;
+                    res = Math.max(dp[j], res);
+                } else {
+                    dp[j] = 0;
+                }
+                prev = tmp;
+            }
+        }
+        
+        return res * res;
+    }
+}
+```
+#### Approach 1
+- Space: O(n^2)
 ```java
 class Solution {
     // ============ Method 1: DP ===============
