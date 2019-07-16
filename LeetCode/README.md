@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [304](https://leetcode.com/problems/range-sum-query-2d-immutable/) | [Range Sum Query 2D - Immutable](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/304-Range-Sum-Query-2D-Immutable.md) | Medium | DP
 | [523](https://leetcode.com/problems/continuous-subarray-sum/) | [Continuous Subarray Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/523-Continuous-Subarray-Sum.md) | Medium | Math / DP
 | [221](https://leetcode.com/problems/maximal-square/) | [Maximal Square](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/221-Maximal-Square.md) | Medium | DP
 | [87](https://leetcode.com/problems/scramble-string/) | [Scramble String](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/87-Scramble-String.md) | Hard | String / DP
