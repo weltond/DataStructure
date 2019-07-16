@@ -21,13 +21,37 @@ Note:
 - You may assume the sum of all the numbers is in the range of a signed 32-bit integer.
 
 ## Answer
-### Method 2 - Math - 
+### Method 2 - Math - :rocket: 2ms (99.78%)
+- Time: O(n)
 - Running sum from first element to index i : sum_i. If we mod k, it will be some format like : `sum_i = k * x + modk_1`
 - Running sum from first element to index j : sum_j. If we mod k, it will be some format like : `sum_j = k * y + modk_2`
 
 If they have the same mod, which is `modk_1 == modk_2`, subtracting these two running sum we get the difference `sum_i - sum_j = (x - y) * k = constant * k`, and the difference is the sum of elements between index i and j, and the value is a multiple of k.
 
 ```java
+class Solution {
+    // 2ms (99.78%)
+    public boolean checkSubarraySum(int[] nums, int k) {
+        int sum = 0;
+        if (nums == null) return false;
+        
+        Map<Integer, Integer> map = new HashMap();  // <mod, index>
+        map.put(0, -1); // to cover [0,0] 0
+        for (int i = 0; i < nums.length; i++) {
+            sum += nums[i];
+            if (k != 0) sum %= k;
+            
+            Integer prev = map.get(sum);
+            if (prev != null) {
+                if (i - prev > 1) return true;
+            } else {
+                map.put(sum, i);
+            }
+        }
+        
+        return false;
+    }
+}
 ```
 ### Method 1 - DP - :turtle: 35ms (6.83)
 ```java
