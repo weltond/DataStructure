@@ -10,7 +10,7 @@
 | [650](https://leetcode.com/problems/2-keys-keyboard/) | [2 Keys Keyboard](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/650-2-Keys-Keyboard.md) | Medium | DP
 | [312](https://leetcode.com/problems/burst-balloons/) | [Burst Balloons](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/312-Burst-Balloons.md) | Hard | Divide and Conquer / DP
 | [740](https://leetcode.com/problems/delete-and-earn/) | [Delete and Earn](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/740-Delete-and-Earn.md) | Medium | DP
-| [877](https://leetcode.com/problems/stone-game/) | [Stone Game](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/877-Stone-Game.md) | Medium | Math / DP
+| [877](https://leetcode.com/problems/stone-game/) | [Stone Game](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/877-Stone-Game.md) | Medium | Math / DP / Minimax
 | [343](https://leetcode.com/problems/integer-break/) | [Integer Break](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/343-Integer-Break.md) | Medium | Math / DP
 | [638](https://leetcode.com/problems/shopping-offers/) | [Shopping Offers](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/638-Shopping-Offers.md) | Medium | DP / DFS
 | [718](https://leetcode.com/problems/maximum-length-of-repeated-subarray/) | [Maximum Length of Repeated Subarray](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/718-Maximum-Length-of-Repeated-Subarray.md) | Medium | Array / HashMap / Binary Search / DP
