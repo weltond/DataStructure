@@ -26,7 +26,43 @@ Note:
 - You may assume that `row1 ≤ row2` and `col1 ≤ col2`.
 
 ## Answer
-### Method 1 - DP - :rabbit: 57ms (57.82%)
+### Method 1 - DP
+#### Approach 2 :rocket: 55ms (96.73%)
+- Time: O(1) per query, O(mn) pre-computation.
+- Space: O(mn)
+We notice that the cumulative sum is computed with respect to the origin at index 0. Extending this analogy to the 2D case, we could pre-compute a cumulative region sum with respect to the origin at `(0, 0)(0,0)`.
+```java
+class NumMatrix {
+    // ========== Method 2: Smarter DP =============
+    // 55ms (96.73%)
+    int[][] dp;
+    public NumMatrix(int[][] matrix) {
+        if (matrix == null || matrix.length == 0) return;
+        
+        // dp[i][j] is sum from (-1,-1) to (i,j)
+        dp = new int[matrix.length + 1][matrix[0].length + 1];
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
+                dp[i + 1][j + 1] = dp[i + 1][j] + dp[i][j + 1] + matrix[i][j] - dp[i][j];
+            }
+        }
+    }
+    
+    public int sumRegion(int row1, int col1, int row2, int col2) {
+        return dp[row2 + 1][col2 + 1] - dp[row2 + 1][col1 + 1 - 1] - dp[row1 + 1 - 1][col2 + 1] + dp[row1 + 1 - 1][col1 + 1 - 1];
+    }
+    
+}
+
+/**
+ * Your NumMatrix object will be instantiated and called as such:
+ * NumMatrix obj = new NumMatrix(matrix);
+ * int param_1 = obj.sumRegion(row1,col1,row2,col2);
+ */
+```
+#### Approach 1 :rabbit: 57ms (57.82%)
+- Time: O(m) per query, O(mn) per pre-computation.
+- Space: O(mn)
 ```java
 class NumMatrix {
     // ========== Method 1: Naive DP =============
@@ -35,6 +71,7 @@ class NumMatrix {
     public NumMatrix(int[][] matrix) {
         if (matrix == null || matrix.length == 0) return;
         
+        // dp[i][j] represents each i-th row sum from (j, matrix[0].length - 1)
         dp = new int[matrix.length][matrix[0].length + 1];
         for (int i = 0; i < matrix.length; i++) {
             for (int j = matrix[0].length - 1; j >= 0; j--) {
