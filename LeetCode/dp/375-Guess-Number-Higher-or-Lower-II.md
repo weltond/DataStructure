@@ -24,6 +24,13 @@ Given a particular n ≥ 1, **find out how much money you need to have to guaran
 
 ## Answer
 **Minimax**
+Our goal is try all possible guesses at every stage and choose the minimum. 
+
+But remember every time we guess, we are diving the search space, [i..j], into two parts, the target could be anywhere (obvioulsy except our current guess). 
+
+So we solve each part with the assumption that target could be anywhere and see the cost at each possible k in [i..j]. We take the max cost out of two parts because target could be anywhere and we need to cover the cost for that. (i.e. If we take minimum say that is from left part, what if the target is in right part).
+
+Example:
 1. If there is only 1 number, our cost would be `0` without any doubt.
 2. If two numbers: `[1,2]`:
   - choose 1: cost `1`. And then we are sure we can get the correct result. `Total cost = 1`.
