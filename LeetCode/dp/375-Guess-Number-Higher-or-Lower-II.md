@@ -23,6 +23,7 @@ You end up paying $5 + $7 + $9 = $21.
 Given a particular n ≥ 1, **find out how much money you need to have to guarantee a win.**
 
 ## Answer
+**Minimax**
 1. If there is only 1 number, our cost would be `0` without any doubt.
 2. If two numbers: `[1,2]`:
   - choose 1: cost `1`. And then we are sure we can get the correct result. `Total cost = 1`.
