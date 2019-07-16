@@ -24,6 +24,7 @@ Given a particular n ≥ 1, **find out how much money you need to have to guaran
 
 ## Answer
 **Minimax**
+
 Our goal is try all possible guesses at every stage and choose the minimum. 
 
 But remember every time we guess, we are diving the search space, `[i..j]`, into two parts, the target could be anywhere (obvioulsy except our current guess). 
