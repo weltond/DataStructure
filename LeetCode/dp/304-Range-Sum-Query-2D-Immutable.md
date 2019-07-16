@@ -28,8 +28,8 @@ Note:
 ## Answer
 ### Method 1 - DP
 #### Approach 2 :rocket: 55ms (96.73%)
-- Time: O(1) per query, O(mn) pre-computation.
-- Space: O(mn)
+- Time: **O(1) per query, O(mn) pre-computation.**
+- Space: **O(mn)**
 We notice that the cumulative sum is computed with respect to the origin at index 0. Extending this analogy to the 2D case, we could pre-compute a cumulative region sum with respect to the origin at `(0, 0)(0,0)`.
 ```java
 class NumMatrix {
@@ -61,8 +61,8 @@ class NumMatrix {
  */
 ```
 #### Approach 1 :rabbit: 57ms (57.82%)
-- Time: O(m) per query, O(mn) per pre-computation.
-- Space: O(mn)
+- Time: **O(m) per query, O(mn) per pre-computation.**
+- Space: **O(mn)**
 ```java
 class NumMatrix {
     // ========== Method 1: Naive DP =============
