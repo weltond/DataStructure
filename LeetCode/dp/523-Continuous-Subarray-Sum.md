@@ -53,7 +53,8 @@ class Solution {
     }
 }
 ```
-### Method 1 - DP - :turtle: 35ms (6.83)
+### Method 1 - DP - :turtle: 35ms (6.83%)
+- Time: O(n^2)
 ```java
 class Solution {
     public boolean checkSubarraySum(int[] nums, int k) {
