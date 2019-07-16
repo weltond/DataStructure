@@ -21,7 +21,15 @@ Note:
 - You may assume the sum of all the numbers is in the range of a signed 32-bit integer.
 
 ## Answer
-### Method 1 - DP- :turtle: 35ms (6.83)
+### Method 2 - Math - 
+- Running sum from first element to index i : sum_i. If we mod k, it will be some format like : `sum_i = k * x + modk_1`
+- Running sum from first element to index j : sum_j. If we mod k, it will be some format like : `sum_j = k * y + modk_2`
+
+If they have the same mod, which is `modk_1 == modk_2`, subtracting these two running sum we get the difference `sum_i - sum_j = (x - y) * k = constant * k`, and the difference is the sum of elements between index i and j, and the value is a multiple of k.
+
+```java
+```
+### Method 1 - DP - :turtle: 35ms (6.83)
 ```java
 class Solution {
     public boolean checkSubarraySum(int[] nums, int k) {
