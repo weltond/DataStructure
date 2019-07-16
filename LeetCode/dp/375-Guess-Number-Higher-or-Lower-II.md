@@ -45,7 +45,31 @@ So `total cost = min(choose 1, choose 2, choose 3) = 2`.
 
 ### Method 2 - DP
 
-### Method 1 - DFS - 
+### Method 1 - DFS + Memo - :turtle: 8ms (25.67%)
 ```java
-
+class Solution {
+    // =========== Method 1: DFS + Memo ==========
+    // 8ms (25.67%)
+    public int getMoneyAmount(int n) {
+        Integer[][] memo = new Integer[n + 1][n + 1];
+        
+        return dfs(1, n, memo);
+    }
+    
+    private int dfs(int i, int j, Integer[][] memo) {
+        if (i >= j) return 0;   // if i == j, we return 0 because we don't have to pay for the only guess.
+        if (memo[i][j] != null) return memo[i][j];
+        
+        int res = Integer.MAX_VALUE;
+        // divide [i...j] into two part, and get min val from the max([i..k-1], [k+1..j])
+        for (int k = i; k <= j; k++) {
+            int localMax = Math.max(dfs(i, k - 1, memo), dfs(k + 1, j, memo)) + k;
+            res = Math.min(res, localMax);
+        }
+        
+        memo[i][j] = res;
+        
+        return res;
+    }
+}
 ```
