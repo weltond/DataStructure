@@ -30,6 +30,7 @@ Note:
 #### Approach 2 :rocket: 55ms (96.73%)
 - Time: **O(1) per query, O(mn) pre-computation.**
 - Space: **O(mn)**
+
 We notice that the cumulative sum is computed with respect to the origin at index 0. Extending this analogy to the 2D case, we could pre-compute a cumulative region sum with respect to the origin at `(0, 0)(0,0)`.
 ```java
 class NumMatrix {
