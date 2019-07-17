@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [374](https://leetcode.com/problems/guess-number-higher-or-lower/) | [Guess Number Higher or Lower](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/374-Guess-Number-Higher-or-Lower.md) | Easy | Binary Search
 | [375](https://leetcode.com/problems/guess-number-higher-or-lower-ii/) | [Guess Number Higher or Lower II](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/375-Guess-Number-Higher-or-Lower-II.md) | Medium | DP / Minimax
 | [304](https://leetcode.com/problems/range-sum-query-2d-immutable/) | [Range Sum Query 2D - Immutable](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/304-Range-Sum-Query-2D-Immutable.md) | Medium | DP
 | [523](https://leetcode.com/problems/continuous-subarray-sum/) | [Continuous Subarray Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/523-Continuous-Subarray-Sum.md) | Medium | Math / DP
