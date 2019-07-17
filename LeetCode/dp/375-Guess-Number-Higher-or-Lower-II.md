@@ -43,8 +43,31 @@ So `Total cost = min(choose 1, choose 2) = 1`.
   - If choose `3`, cost `3`. And then we have `1` and `2` left. Based on last discussion, `total cost = 3 + max([1, 2], []) = 4`.
 So `total cost = min(choose 1, choose 2, choose 3) = 2`.
 
-### Method 2 - DP
-
+### Method 2 - DP - :rocket: 4ms (94.44%)
+```java
+class Solution {
+    // ========= Method 2: DP =========
+    // 4ms (94.44%)
+    public int getMoneyAmount(int n) {
+        // dp[i][j] represents minimum cost from i to j.
+        int[][] dp = new int[n + 1][n + 1];
+        
+        for (int j = 2; j <= n; j++) {
+            for (int i = j - 1; i >= 1; i--) {
+                int globalMin = Integer.MAX_VALUE;
+                for (int k = i + 1; k < j; k++) {
+                    int localMax = Math.max(dp[i][k - 1], dp[k + 1][j]) + k;
+                    globalMin = Math.min(globalMin, localMax);
+                }
+                
+                dp[i][j] = i + 1 == j ? i : globalMin;  // if i is next to j, use the smaller one.
+            }
+        }
+        
+        return dp[1][n];
+    }
+}
+```
 ### Method 1 - DFS + Memo - :turtle: 8ms (25.67%)
 ```java
 class Solution {
