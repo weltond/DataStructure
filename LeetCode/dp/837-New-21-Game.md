@@ -32,6 +32,15 @@ Note:
 - The judging time limit has been reduced for this question.
 
 ## Answer
+```
+e.g. N = 2, K = 2, W = 5
+
+    1(0.2)                                  2(0.2)           3(0.2)           4(0.2)           5(0.2)
+2(0.2*0.2) 3(0.2*0.2) 4(0.04) 5(0.04) 6(0.04)
+
+Result = Prob(value <= N) = 0.2 + 0.2*0.2 = 0.24
+
+```
 ### Method 2 - DP
 
 ### Method 1 - DFS - TLE(96 / 146 test cases passed.)
