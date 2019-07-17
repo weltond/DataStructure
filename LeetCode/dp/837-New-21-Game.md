@@ -43,7 +43,35 @@ Result = Prob(value <= N) = 0.2 + 0.2*0.2 = 0.24
 ```
 ### Method 2 - DP
 
-### Method 1 - DFS - TLE(96 / 146 test cases passed.)
+### Method 1 - DFS + Memo - TLE(115 / 146 test cases passed.)
+```java
+class Solution {
+    // ========= Method 1: DFS + Memo ============
+    // TLE (115 / 146 test cases passed.)
+    public double new21Game(int N, int K, int W) {
+        Double[] memo = new Double[K + W];   //<level, max value>
+        return dfs(N, K, W, memo);
+    }
+    
+    private double dfs(int n, int k, int w, Double[] memo) {
+        if (k <= 0) {
+            if (n >= 0) return 1.0;
+            return 0.0;
+        }
+        
+        if (memo[k] != null) return memo[k];
+        
+        double sum = 0;
+        for (int i = 1; i <= w; i++) {
+            sum += dfs(n - i, k - i, w, memo) / w;
+        }
+        
+        memo[k] = sum;
+        
+        return sum;
+    }
+}
+```
 ```java
 class Solution {
     // ========= Method 1: DFS + Memo ============
