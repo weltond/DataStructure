@@ -41,8 +41,19 @@ e.g. N = 2, K = 2, W = 5
 Result = Prob(value <= N) = 0.2 + 0.2*0.2 = 0.24
 
 ```
-### Method 2 - DP
 
+### Method 2 - DP
+[Solution](https://www.cnblogs.com/grandyang/p/10386525.html)
+
+- `P(x) = 1/W * (P(x-1) + P(x-2) + P(x-W))  = 1/W * sumP(x-W, x-1)` where x in `[W, K]`.
+- We need to get answer: `P(<=N | >= K)`
+- Baysian: `P(A | B) = P(AB) / P(B)` ======> `P(<=N | >=K) = P(<=N && >=K) / P(>=K)`
+  - `P(<=N && >=K) = P(K) + P(K+1) + ... + P(N) = sumP(K, N)`
+  - `P(>=K) = sumP(K, +∞) = sumP(K, K+W-1)` because `P(>= K+W) = 0`
+  
+```java
+// TO DO...
+```
 ### Method 1 - DFS + Memo - TLE(115 / 146 test cases passed.)
 ```java
 class Solution {
