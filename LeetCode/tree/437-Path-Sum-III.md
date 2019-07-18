@@ -28,7 +28,7 @@ Return 3. The paths that sum to 8 are:
 ```
 
 ## Answer
-#### Approach 2 - :rabbit: 11ms (45.99%)
+### Approach 2 - :rabbit: 11ms (45.99%)
 ```java
 /**
  * Definition for a binary tree node.
@@ -49,35 +49,6 @@ class Solution {
         if (root == null) return 0;
         
         return (root.val == sum ? 1 : 0) + dfs(root.left, sum - root.val) + dfs(root.right, sum - root.val);
-    }
-}
-```
-#### Approach 1 - :rocket: 1ms （100%）
-```java
-class Solution {
-    // ======= Method 2: DP =======
-    // 1ms (100%)
-    public int minSwap(int[] a, int[] b) {
-        int[] swap = new int[a.length];
-        int[] keep = new int[a.length];
-        Arrays.fill(swap, Integer.MAX_VALUE);
-        Arrays.fill(keep, Integer.MAX_VALUE);
-        swap[0] = 1;
-        keep[0] = 0;
-        
-        for (int i = 1; i < a.length; i++) {
-            if (a[i] > a[i - 1] && b[i] > b[i - 1]) {
-                swap[i] = swap[i - 1] + 1;
-                keep[i] = keep[i - 1];
-            }
-            
-            if (a[i] > b[i - 1] && b[i] > a[i - 1]) {
-                swap[i] = Math.min(swap[i], keep[i - 1] + 1);
-                keep[i] = Math.min(keep[i], swap[i - 1]);
-            }
-        }
-        
-        return Math.min(swap[a.length - 1], keep[a.length - 1]);
     }
 }
 ```
