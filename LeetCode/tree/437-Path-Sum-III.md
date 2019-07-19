@@ -28,6 +28,45 @@ Return 3. The paths that sum to 8 are:
 ```
 
 ## Answer
+### Approach 4 - Prefix Sum - :rocket: 3ms (100%)
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    // prefix sum
+    // 3ms (100%)
+    public int pathSum(TreeNode root, int sum) {
+        Map<Integer, Integer> map = new HashMap();  // <sum, cnt>
+        
+        map.put(0, 1);  // for the first matching.
+        
+        return dfs(root, 0, sum, map);
+    }
+    
+    private int dfs(TreeNode root, int cur, int sum, Map<Integer, Integer> map) {
+        if (root == null) return 0;
+                
+        cur += root.val;
+        
+        int res = map.getOrDefault(cur - sum, 0);
+        
+        map.put(cur, map.getOrDefault(cur, 0) + 1);
+
+        res += dfs(root.left, cur, sum, map) + dfs(root.right, cur, sum, map);
+        
+        map.put(cur, map.getOrDefault(cur, 0) - 1);
+        
+        return res;
+    }
+}
+```
 ### Approach 3 - :turtle: 14ms (11.90%)
 - **Top-down**
 ```java
