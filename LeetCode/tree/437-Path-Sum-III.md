@@ -28,6 +28,49 @@ Return 3. The paths that sum to 8 are:
 ```
 
 ## Answer
+### Approach 3 - :turtle: 14ms (11.90%)
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    // 14ms (11.90%)
+    int res = 0;
+    public int pathSum(TreeNode root, int sum) {
+        List<TreeNode> list = new ArrayList();
+        
+        dfs(root, 0, sum, list);
+        
+        return res;
+    }
+    
+    private void dfs(TreeNode root, int cur, int sum, List<TreeNode> list) {
+        if (root == null) return;
+        
+        list.add(root);
+        
+        cur += root.val;
+        if (sum == cur) res++;
+        
+        int tmp = cur;
+        for (int i = 0, len = list.size() - 1; i < len; i++) { // Be careful of the len. because if sum is 0, the tmp will also lead to 1 answer.
+            tmp -= list.get(i).val;
+            if (tmp == sum) res++;
+        }
+        
+        dfs(root.left, cur, sum, list);
+        dfs(root.right, cur, sum, list);
+        
+        list.remove(list.size() - 1);
+    }
+}
+```
 ### Approach 2 - :rabbit: 11ms (45.99%)
 ```java
 /**
