@@ -29,6 +29,7 @@ Return 3. The paths that sum to 8 are:
 
 ## Answer
 ### Approach 3 - :turtle: 14ms (11.90%)
+- **Top-down**
 ```java
 /**
  * Definition for a binary tree node.
@@ -96,6 +97,7 @@ class Solution {
 }
 ```
 ### Approach 1 :turtle: 52ms (5.05%)
+- **Bottom-Up**
 ```java
 /**
  * Definition for a binary tree node.
