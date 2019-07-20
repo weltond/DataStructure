@@ -13,6 +13,118 @@ cache.get(1);       // returns -1 (not found)
 cache.get(3);       // returns 3
 cache.get(4);       // returns 4
 */
+class LRUCache {
+    Map<Integer, ListNode> map;
+    int cap;
+    ListNode tail, head;
+    public LRUCache(int capacity) {
+        map = new HashMap();
+        cap = capacity;
+        init();
+    }
+    private void init() {
+        head = new ListNode(0, 0);
+        tail = new ListNode(0, 0);
+        head.next = tail;
+        tail.prev = head;
+    }
+    public int get(int key) {
+        if (!map.containsKey(key)) return -1;
+        
+        ListNode node = map.get(key);
+        
+        putToHead(node);
+        
+        return node.val;
+    }
+    
+    public void put(int key, int value) {
+        ListNode node = map.get(key);
+        
+        // if exist, just update its value and put to head.
+        if (node != null) {
+            node.val = value;
+            putToHead(node);
+            return;
+        }
+        
+        // if not exist, put to head
+        node = new ListNode(key, value);
+        node.val = value;
+        node.key = key;
+        putToHead(node);
+        
+        // if cap is full, evict from tail
+        if (cap > 0) {
+            cap--;
+        }else {
+            ListNode delete = tail.prev;
+            evictNodeFrom(tail);
+            map.remove(delete.key);
+        }
+
+    }
+    
+    // private void print() {
+    //     ListNode tmp = head;
+    //     int i = 0;
+    //     while (tmp != null) {
+    //         i++;
+    //         System.out.print(tmp.val + " ");
+    //         tmp = tmp.next;
+    //     }
+    //     System.out.println("total: " + (i - 2));
+    // }
+    
+    private void putToHead(ListNode node) {
+        if (node.prev != null) {
+            node = evictNodeFrom(node.next);
+        }
+        
+        ListNode tmp = head.next;
+        head.next = node;
+        tmp.prev = node;
+        
+        node.next = tmp;
+        node.prev = head;
+        
+        map.put(node.key, node);
+    }
+    
+    private ListNode evictNodeFrom(ListNode node) {
+        ListNode tmp = node.prev;
+        if (tmp == head) return null;    // so if cap is full, we need to insert to head first and then delete from tail
+        
+        tmp.prev.next = node;
+        tmp.next.prev = tmp.prev;
+        
+        tmp.next = null;
+        tmp.prev = null;
+
+        return tmp;
+    }
+}
+
+class ListNode {
+    ListNode prev;
+    ListNode next;
+    int val;
+    int key;
+    public ListNode(int key, int val) {
+        this.val = val;
+        this.key = key;
+        prev = null;
+        next = null;
+    }
+}
+
+/**
+ * Your LRUCache object will be instantiated and called as such:
+ * LRUCache obj = new LRUCache(capacity);
+ * int param_1 = obj.get(key);
+ * obj.put(key,value);
+ */
+
 
 class LRUCache {
     // Push to Tail, Remove from Head
