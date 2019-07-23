@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [10](https://leetcode.com/problems/regular-expression-matching/) | [Regular Expression Matching](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/10-Regular-Expression-Matching.md) | Hard | String / DP / Backtracking
 | [416](https://leetcode.com/problems/partition-equal-subset-sum/) | [Partition Equal Subset Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/416-Partition-Equal-Subset-Sum.md) | Medium | DP 
 | [437](https://leetcode.com/problems/path-sum-iii/) | [Path Sum III](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/437-Path-Sum-III.md) | Easy | Tree
 | [837](https://leetcode.com/problems/new-21-game/) | [New 21 Game](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/837-New-21-Game.md) | Medium | DP
