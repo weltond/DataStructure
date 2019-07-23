@@ -54,6 +54,39 @@ Output: false
 
 ## Answer
 ### Method 2 - DP
+#### Approach 1 - DFS + Memo - :rocket: 2ms (96.17%)
+```java
+class Solution {
+    // ======= Method 2 : DP ==========
+    // 2ms (96.17%)
+    Boolean[][] memo;
+    public boolean isMatch(String s, String p) {
+        memo = new Boolean[s.length() + 1][p.length() + 1];
+        return dp(0, 0, s, p);
+    }
+    
+    private boolean dp(int i, int j, String s, String p) {
+        if (memo[i][j] != null) return memo[i][j];
+        
+        boolean ans = false;
+        
+        if (j == p.length()) {
+            ans = i == s.length();
+        } else {
+            boolean firstMatch = (i < s.length() && (s.charAt(i) == p.charAt(j) || p.charAt(j) == '.'));
+            
+            if (j + 1 < p.length() && p.charAt(j + 1) == '*') {
+                ans = dp(i, j + 2, s, p) || (firstMatch && dp(i + 1, j, s, p));
+            } else {
+                ans = firstMatch && dp(i + 1, j + 1, s, p);
+            }
+        }
+        
+        memo[i][j] = ans;
+        return ans;
+    }
+}
+```
 ### Method 1 - DFS 
 #### Approach 2 :turtle: 58ms (14.34%)
 ```java
