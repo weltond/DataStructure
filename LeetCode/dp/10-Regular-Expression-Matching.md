@@ -54,6 +54,36 @@ Output: false
 
 ## Answer
 ### Method 2 - DP
+#### Approach 2 - Bottom-up :rocket: 2ms (96.17%)
+```java
+class Solution {
+    public boolean isMatch(String s, String p) {
+        int lens = s.length(), lenp = p.length();
+        //dp[i][j] represents if s[i...] matches p[j...]
+        boolean[][] dp = new boolean[lens + 1][lenp + 1];
+        dp[lens][lenp] = true;
+        
+        // dp[i][j] = dp[i+1][j+1] if s[i]==p[j] || p[j]='.'
+        //          = dp[i][j+2] if p[j+1]='*' (zero match)
+        //          = dp[i+1][j] if p[j+1]='*' and s[i]==p[j]||p[j]='.' (1 match)
+        
+        for (int i = lens; i >= 0; i--) {   // i starts from lens! Because if compare last char of s, we would need to compare i+1th with pattern
+            for (int j = lenp - 1; j>= 0; j--) {
+                boolean firstMatch = i < lens && (s.charAt(i) == p.charAt(j) || p.charAt(j) == '.');  // should verify i < lens first!
+                
+                if (j + 1 < lenp && p.charAt(j + 1) == '*') {
+                    dp[i][j] = dp[i][j + 2] || (firstMatch && dp[i + 1][j]);
+                } else {
+                    dp[i][j] = firstMatch && dp[i + 1][j + 1];
+                }
+            }
+        }
+        
+        return dp[0][0];
+    }
+}
+
+```
 #### Approach 1 - DFS + Memo - :rocket: 2ms (96.17%)
 ```java
 class Solution {
