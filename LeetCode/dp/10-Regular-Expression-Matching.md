@@ -54,7 +54,25 @@ Output: false
 
 ## Answer
 ### Method 2 - DP
-### Method 1 - DFS - :rabbit: 3ms (50.07%)
+### Method 1 - DFS 
+#### Approach 2 :turtle: 58ms (14.34%)
+```java
+class Solution {
+    public boolean isMatch(String s, String p) {
+        if (p.isEmpty()) return s.isEmpty();
+        
+        boolean firstMatch = !s.isEmpty() && (p.charAt(0) == s.charAt(0) || p.charAt(0) == '.');
+        
+        // "" , "c*c*"
+        if (p.length() >= 2 && p.charAt(1) == '*') {
+            return isMatch(s, p.substring(2)) || (firstMatch && isMatch(s.substring(1), p));
+        } else {
+            return firstMatch && isMatch(s.substring(1), p.substring(1));
+        }
+    }
+}
+```
+#### Approach 1 :rabbit: 3ms (50.07%)
 ```java
 class Solution {
     // ============ DFS ===========
