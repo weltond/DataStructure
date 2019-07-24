@@ -50,6 +50,62 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 ```
 
 ## Answer
+### Method 2 :rabbit: 3ms 
+```java
+class Solution {
+    public int romanToInt(String s) {
+        char[] arr = s.toCharArray();
+        // * If I comes before V or X, subtract 1 eg: IV = 4 and IX = 9
+        // * If X comes before L or C, subtract 10 eg: XL = 40 and XC = 90
+        // * If C comes before D or M, subtract 100 eg: CD = 400 and CM = 900
+        
+        int sum = 0;
+        for (int i = 0, len = s.length(); i < len; i++) {
+            if (arr[i] == 'I') {
+                if (i + 1 < len && arr[i + 1] == 'V') {
+                    i++;
+                    sum += 4;
+                } else if (i + 1 < len && arr[i + 1] == 'X') {
+                    i++;
+                    sum += 9;
+                } else {
+                    sum += 1;
+                }
+            } else if (arr[i] == 'X') {
+                if (i + 1 < len && arr[i + 1] == 'L') {
+                    i++;
+                    sum += 40;
+                } else if (i + 1 < len && arr[i + 1] == 'C') {
+                    i++;
+                    sum += 90;
+                } else {
+                    sum += 10;
+                }
+            } else if (arr[i] == 'C') {
+                if (i + 1 < len && arr[i + 1] == 'D') {
+                    i++;
+                    sum += 400;
+                } else if (i + 1 < len && arr[i + 1] == 'M') {
+                    i++;
+                    sum += 900;
+                } else {
+                    sum += 100;
+                }
+            } else if (arr[i] == 'L') {
+                sum += 50;
+            } else if (arr[i] == 'V') {
+                sum += 5;
+            } else if (arr[i] == 'D') {
+                sum += 500;
+            } else if (arr[i] == 'M') {
+                sum += 1000;
+            }
+        }
+        
+        return sum;
+    }
+}
+```
 ### Method 1 :rabbit: 6ms (51.87%)
 ```java
 class Solution {
@@ -62,9 +118,6 @@ class Solution {
         map.put('C', 100);
         map.put('D', 500);
         map.put('M', 1000);
-        // * If I comes before V or X, subtract 1 eg: IV = 4 and IX = 9
-        // * If X comes before L or C, subtract 10 eg: XL = 40 and XC = 90
-        // * If C comes before D or M, subtract 100 eg: CD = 400 and CM = 900
         
         int res = 0;
         for (int i = 0, len = s.length(); i < len; i++) {
