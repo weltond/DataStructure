@@ -4,6 +4,46 @@
 //  2. After the first pairing, k lists are merged into k/2k/2 lists with average 2N/k2N/k length, then k/4k/4, k/8k/8 and so on.
 //  3. Repeat this procedure until we get the final sorted linked list.
 
+// Approach 3 - More intuitive
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public ListNode mergeKLists(ListNode[] lists) {
+        if (lists == null || lists.length == 0) return null;
+        
+        return divide(lists, 0, lists.length - 1);
+    }
+    
+    private ListNode divide(ListNode[] lists, int left, int right) {
+        if (left >= right) return lists[left];
+        int mid = left + (right - left) / 2;
+        
+        ListNode l = divide(lists, left, mid);
+        ListNode r = divide(lists, mid + 1, right);
+        
+        ListNode ret = mergeTwo(l, r);
+        
+        return ret;
+    }
+    
+    private ListNode mergeTwo(ListNode l1, ListNode l2) {
+        if (l1 == null || l2 == null) return l1 == null ? l2 : l1;
+        if (l1.val <= l2.val) {
+            l1.next = mergeTwo(l1.next, l2);
+            return l1;
+        } else {
+            l2.next = mergeTwo(l1, l2.next);
+            return l2;
+        }
+    }
+}
+
 // Time = O(nlogk), Space = O(k)
 class Solution4 {
 	// Approach 1: Iteration
