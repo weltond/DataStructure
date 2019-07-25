@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [29](https://leetcode.com/problems/divide-two-integers/) | [Divide Two Integers](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/29-Divide-Two-Integers.md) | Medium | Math / Binary Search
 | [24](https://leetcode.com/problems/swap-nodes-in-pairs/) | [Swap Nodes in Pairs](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/24-Swap-Nodes-in-Pairs.md) | Medium | LinkedList
 | [19](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | [Remove Nth Node From End of List](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/19-Remove-Nth-Node-From-End-of-List.md) | Medium | Linked List / Two Pointers
 | [14](https://leetcode.com/problems/longest-common-prefix/) | [Longest Common Prefix](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/14-Longest-Common-Prefix.md) | Easy | String
