@@ -58,7 +58,7 @@ class Solution {
 ### Method 1 - Recursion
 #### Approach 3
 :rocket: 0ms 
-- like **Approach 2**
+- like **Approach 1**
 ```java
 /**
  * Definition for singly-linked list.
