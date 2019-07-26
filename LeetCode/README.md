@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [34](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | [Find First and Last Pos in Sorted Array](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/34-Find-First-and-Last-Position-of-Element-in-Sorted-Array.md) | Medium | Array / Binary Search
 | [32](https://leetcode.com/problems/longest-valid-parentheses/) | [Longest Valid Parentheses](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/32-Longest-Valid-Parentheses.md) | Hard | String / DP / Stack
 | [443](https://leetcode.com/problems/string-compression/) | [String Compression](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/443-String-Compression.md) | Easy | String
 | [29](https://leetcode.com/problems/divide-two-integers/) | [Divide Two Integers](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/29-Divide-Two-Integers.md) | Medium | Math / Binary Search
@@ -296,7 +297,6 @@
 | [794](https://leetcode.com/problems/valid-tic-tac-toe-state/) | [Valid Tic-Tac-Toe](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/Lc794ValidTicTacToeState.java) | Medium | Math / Recursion?
 | [95](https://leetcode.com/problems/unique-binary-search-trees-ii/) | [Unique BST II](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc95UniqueBSTII.java) | Medium | DP / Tree
 | [230](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | [Kth Smallest Element in a BST](https://github.com/weltond/DataStructure/blob/bb06bc9cae43f33951932ecb3722fb614e51a638/LeetCode/tree/Lc230KthSmallestElementInBST.java) | Medium | Binary Search / Tree
-| [34](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | [Find First and Last Pos in Sorted Array](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/Lc34FindFirstAndLastPosOfElementInSortedArray.java) | Medium | Array / Binary Search
 | [658](https://leetcode.com/problems/find-k-closest-elements/) | [Find K Closest Elements](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/Lc658FindKClosestElements.java) | Medium | Binary Search
 | [35](https://leetcode.com/problems/search-insert-position/) | [Search Insert Position](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/Lc35SearchInsertPosition.java) | Easy | Array / Binary Search
 | [528](https://leetcode.com/problems/random-pick-with-weight/) | [Random Pick With Weight](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/Lc528RandomPickWithWeight.java) | Medium | Random / Binary Search
