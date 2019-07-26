@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [32](https://leetcode.com/problems/longest-valid-parentheses/) | [Longest Valid Parentheses](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/32-Longest-Valid-Parentheses.md) | Hard | String / DP / Stack
 | [443](https://leetcode.com/problems/string-compression/) | [String Compression](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/443-String-Compression.md) | Easy | String
 | [29](https://leetcode.com/problems/divide-two-integers/) | [Divide Two Integers](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/29-Divide-Two-Integers.md) | Medium | Math / Binary Search
 | [24](https://leetcode.com/problems/swap-nodes-in-pairs/) | [Swap Nodes in Pairs](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/24-Swap-Nodes-in-Pairs.md) | Medium | LinkedList
