@@ -150,3 +150,40 @@ class Solution {
         return true;
     }
 }
+
+class Solution {
+    // 2ms (90.03%)
+    public boolean isValidSudoku(char[][] board) {
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                if (board[i][j] == '.') continue;
+                if (!isValid(board, i, j, board[i][j])) return false;
+            }
+        }
+        
+        return true;
+    }
+    
+    private boolean isValid(char[][] board, int x, int y, char num) {
+        if (x >= board.length || y >= board[0].length || x < 0 || y < 0) return false;
+        
+        // row
+        for (int i = 0; i < board[0].length; i++) {
+            if(y != i && board[x][i] == num) return false;
+        }
+        // col
+        for (int i = 0; i < board.length; i++) {
+            if (x != i && board[i][y] == num) return false;
+        }
+        
+        // cube
+        int sx = x / 3 * 3, sy = y / 3 * 3;
+        for (int i = sx; i < sx + 3; i++) {
+            for (int j = sy; j < sy + 3; j++) {
+                if (i != x && j != y && board[i][j] == num) return false;
+            }
+        }
+        
+        return true;
+    }
+}
