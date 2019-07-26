@@ -18,7 +18,94 @@ Explanation: The longest valid parentheses substring is "()()"
 
 ## Answer
 ### Method 3 - Stack
-
+#### Approach 2 :1ms (100%)
+- Space: O(1)
+```java
+class Solution {
+    // ========= Method 3 : Stack ============
+    // Approach 2： O(1) space 1ms(100%)
+    public int longestValidParentheses(String s) {
+        int ans = 0;
+        if (s == null || s.length() == 0) return ans;
+        
+        int len = s.length(), left = 0, right = 0;
+        /**
+        1. left -> right:
+            if right cnt > left cnt, reset right and left cnt to 0.
+            if right cnt = left cnt, update result
+        2. right -> left:
+            if left cnt > right cnt, reset right and left cnt to 0.
+            if right cnt = left cnt, update result
+        */
+        
+        // left -> right
+        for (int i = 0; i < len; i++) {
+            if (s.charAt(i) == '(') left++;
+            else right++;
+            
+            if (right > left) {
+                left = right = 0;
+            } else if (right == left) {
+                ans = Math.max(ans, 2 * left);
+            }
+        }
+        
+        // right -> left
+        left = right = 0;
+        for (int i = len - 1; i >= 0; i--) {
+            if (s.charAt(i) == '(') left++;
+            else right++;
+            
+            if (left > right) {
+                left = right = 0;
+            } else if (right == left) {
+                ans = Math.max(ans, 2 * left);
+            }
+        }
+        
+        return ans;
+    }
+}
+```
+#### Approach 1 :rabbit: 3ms (63.35%)
+- Space: O(n)
+```java
+class Solution {
+    // ========= Method 3 : Stack ============
+    // Approach 1: O(n) space. 3ms (63.35%)
+    public int longestValidParentheses(String s) {
+        int ans = 0;
+        if (s == null || s.length() == 0) return ans;
+        
+        Deque<Integer> stack = new LinkedList();    // store index
+        
+        /* Because of valid property, when we meet ')', 
+            we pop stack, and then use current index - stack.peek() to get the length, 
+            instead of using (i - stack.pop() + 1) 
+            because we will not be sure if the popped one is '(' or ')'.
+          
+           So we push -1 into the stack as the last invalid index. 
+        */ 
+        stack.push(-1);
+        
+        for (int i = 0, len = s.length(); i < len; i++) {
+            char c = s.charAt(i);
+            if (c == '(') {
+                stack.push(i);
+            } else {
+                stack.pop();
+                if (stack.isEmpty()) {
+                    stack.push(i);
+                } else {
+                    ans = Math.max(ans, i - stack.peek());
+                }
+            }
+        }
+        
+        return ans;
+    }
+}
+```
 ### Method 2 - DP - :rocket: 1ms (100%)
 ```java
 class Solution {
