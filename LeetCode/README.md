@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [41](https://leetcode.com/problems/first-missing-positive/) | [First Missing Positive](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/41-First-Missing-Positive.md) | Hard | Array
 | [34](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | [Find First and Last Pos in Sorted Array](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/34-Find-First-and-Last-Position-of-Element-in-Sorted-Array.md) | Medium | Array / Binary Search
 | [32](https://leetcode.com/problems/longest-valid-parentheses/) | [Longest Valid Parentheses](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/32-Longest-Valid-Parentheses.md) | Hard | String / DP / Stack
 | [443](https://leetcode.com/problems/string-compression/) | [String Compression](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/443-String-Compression.md) | Easy | String
