@@ -64,7 +64,67 @@ Output: false
 ```java
 
 ```
-### Method 0 - DFS - TLE (1714 / 1809 test cases passed.)
+### Method 0 - DFS 
+#### Approach 2 - :turtle: 1002ms (5.04%)
+- pruning here is once `s` reaches end, the following `j` values should be the same, either `true` or `false`.
+```java
+class Solution {
+    Boolean[][] memo;
+    public boolean isMatch(String s, String p) {
+        if (s == null || p == null) return false;
+        memo = new Boolean[s.length() + 1][p.length() + 1];
+        return dfs(s, p, 0, 0);
+    }
+    
+    private boolean dfs(String s, String p, int i, int j) {
+        if (memo[i][j] != null) return memo[i][j];
+        
+        if (j == p.length()) {
+            memo[i][j] = i == s.length();
+            return memo[i][j];
+        }
+        if (i == s.length()) {
+            int plen = p.length();
+            boolean flag = false;
+            for (int t = j; t < plen; t++) {
+                if (p.charAt(t) != '*') {
+                    flag = true;
+                    for (int k = j; k < plen; k++) memo[i][k] = false;
+                }
+            }
+            
+            if (!flag) 
+                for (int t = j; t < plen; t++) {
+                    memo[i][t] = true;
+                }
+            return memo[i][j];
+        }
+
+        char cp = p.charAt(j), cs = s.charAt(i);
+        boolean ans = false;
+        
+        if (cp == cs || cp == '?') {
+            ans = dfs(s, p, i + 1, j + 1);
+        } else if (cp == '*') {
+            if (j + 1 < p.length() && p.charAt(j + 1) == '*') {
+                ans = dfs(s, p, i, j + 1);
+            }
+            
+            for (int k = 0, len = s.length(); k <= len - i; k++) {
+                if (dfs(s, p, i + k, j + 1)) {
+                    ans = true;
+                    break;
+                }
+            }
+        }
+        
+        memo[i][j] = ans;
+        
+        return ans;
+    }
+}
+```
+#### Approach 1 - TLE (1714 / 1809 test cases passed.)
 TLE:
 `"baaabbabbbaabbbbbbabbbaaabbaabbbbbaaaabbbbbabaaaaabbabbaabaaababaabaaabaaaabbabbbaabbbbbaababbbabaaabaabaaabbbaababaaabaaabaaaabbabaabbbabababbbbabbaaababbabbaabbaabbbbabaaabbababbabababbaabaabbaaabbba"`
 `"*b*ab*bb***abba*a**ab***b*aaa*a*b****a*b*bb**b**ab*ba**bb*bb*baab****bab*bbb**a*a*aab*b****b**ba**abba"`
