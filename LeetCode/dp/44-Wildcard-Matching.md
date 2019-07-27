@@ -52,19 +52,47 @@ Output: false
 ```
 
 ## Answer
-### Method 3 - DP -
+### Method 2 - DP -
 ```java
 
 ```
-### Method 2 - DFS + Memo -
+### Method 1 - DFS + Memo
+#### Approach 4 - :rocket: 3ms (81.87%)
 ```java
-
+class Solution {
+    // ===== DFS =====
+    // 3ms (81.87%)
+    public boolean isMatch(String s, String p) {
+        return dfs(s, p, 0, 0) > 1;
+    }
+    
+    private int dfs(String s, String p, int i, int j) {
+        // if matched, return 2
+        if (i == s.length() && j == p.length()) return 2;
+        // if s at the end but p doesn't match, the rest of index after current j won't match either. return 0.
+        if (i == s.length() && p.charAt(j) != '*') return 0;
+        // if p at the end, s doesn't match. return 1
+        if (j == p.length()) return 1;
+        
+        if (p.charAt(j) == '*') {
+            if (j + 1 < p.length() && p.charAt(j + 1) == '*') {
+                return dfs(s, p, i, j + 1);
+            }
+            
+            for (int k = 0, len = s.length(); k <= len - i; k++) {
+                int res = dfs(s, p, i + k, j + 1);
+                if (res == 0 || res == 2) return res;
+            }
+            
+        } else if (i < s.length() && (s.charAt(i) == p.charAt(j) || p.charAt(j) == '?')) {
+            return dfs(s, p, i + 1, j + 1);
+        }
+        
+        // if current doesn't match, return 1.
+        return 1;
+    }
+}
 ```
-### Method 1 - 
-```java
-
-```
-### Method 0 - DFS 
 #### Appraoch 3 - :turtle: 43ms (10.03%)
 ```java
 class Solution {
