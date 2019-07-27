@@ -64,3 +64,57 @@ Output: false
 ```java
 
 ```
+### Method 0 - DFS - TLE (1714 / 1809 test cases passed.)
+```java
+class Solution {
+    Boolean[][] memo;
+    public boolean isMatch(String s, String p) {
+        if (s == null || p == null) return false;
+        memo = new Boolean[s.length() + 1][p.length() + 1];
+        return dfs(s, p, 0, 0);
+    }
+    
+    private boolean dfs(String s, String p, int i, int j) {
+        if (memo[i][j] != null) return memo[i][j];
+        
+        if (j == p.length()) {
+            return i == s.length();
+        }
+        if (i == s.length()) {
+            for(int len = p.length(); j < len; j++) {
+                if (p.charAt(j) != '*') return false;
+            }
+            return true;
+        }
+
+        char cp = p.charAt(j), cs = s.charAt(i);
+        boolean ans = false;
+        
+        if (cp == cs || cp == '?') {
+            ans = dfs(s, p, i + 1, j + 1);
+        } else if (cp == '*') {
+            List<Integer> l = new ArrayList();
+            int plen = p.length();
+            for (int t = i, len = s.length(); t < len; t++) {
+                while (j < plen && p.charAt(j) == '*') j++;
+                if (j < plen && (s.charAt(t) == p.charAt(j) || p.charAt(j) == '?')) l.add(t);
+            }
+
+            if (j == p.length()) {
+                ans = true;
+            } else {
+                for (int n : l) {
+                    // if (dfs(s, p, n + 1, j + 2))
+                    //     return true;
+                    ans = ans || dfs(s, p, n + 1, j + 1);
+                }
+            }
+                
+        }
+        
+        memo[i][j] = ans;
+        
+        return ans;
+    }
+}
+```
