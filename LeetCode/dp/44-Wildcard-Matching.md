@@ -65,6 +65,60 @@ Output: false
 
 ```
 ### Method 0 - DFS 
+#### Appraoch 3 - :turtle: 43ms (10.03%)
+```java
+class Solution {
+    Boolean[][] memo;
+    public boolean isMatch(String s, String p) {
+        if (s == null || p == null) return false;
+        memo = new Boolean[s.length() + 1][p.length() + 1];
+        return dfs(s, p, 0, 0);
+    }
+    
+    private boolean dfs(String s, String p, int i, int j) {
+        if (memo[i][j] != null) return memo[i][j];
+        
+        if (j == p.length() && i == s.length()) {
+            memo[i][j] = true;
+            return memo[i][j];
+        }
+        if (i == s.length() && p.charAt(j) != '*') {
+            int plen = p.length();
+            for (int k = j; k < plen; k++) memo[i][k] = false;
+
+            return memo[i][j];
+        }
+        
+        if (j == p.length()) {
+            memo[i][j] = false;
+            return memo[i][j];
+        }
+
+        char cp = p.charAt(j);
+        boolean ans = false;
+        
+        // verify cp first because i might be greater than s.length().
+        if (cp == '*') {
+            if (j + 1 < p.length() && p.charAt(j + 1) == '*') {
+                ans = dfs(s, p, i, j + 1);
+            }
+            
+            for (int k = 0, len = s.length(); k <= len - i; k++) {
+                if (dfs(s, p, i + k, j + 1)) {
+                    ans = true;
+                    break;
+                }
+            }
+        } else if (i < s.length() && (cp == s.charAt(i) || cp == '?')) {
+            ans = dfs(s, p, i + 1, j + 1);
+        }
+        
+        memo[i][j] = ans;
+        
+        return ans;
+    }
+}
+```
 #### Approach 2 - :turtle: 1002ms (5.04%)
 - pruning here is once `s` reaches end, the following `j` values should be the same, either `true` or `false`.
 ```java
