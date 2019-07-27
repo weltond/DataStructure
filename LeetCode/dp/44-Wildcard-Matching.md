@@ -96,13 +96,16 @@ class Solution {
             List<Integer> l = new ArrayList();
             int plen = p.length();
             for (int t = i, len = s.length(); t < len; t++) {
+                // find next non '*' char
                 while (j < plen && p.charAt(j) == '*') j++;
+                // add matched index to list
                 if (j < plen && (s.charAt(t) == p.charAt(j) || p.charAt(j) == '?')) l.add(t);
             }
 
             if (j == p.length()) {
                 ans = true;
             } else {
+                // recurse for every possible index
                 for (int n : l) {
                     // if (dfs(s, p, n + 1, j + 2))
                     //     return true;
