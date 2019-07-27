@@ -95,10 +95,9 @@ class Solution {
             }
             
             if (!flag) 
-                for (int t = j; t < plen; t++) {
-                    // PRUNING!
+                // PRUNING!
+                for (int t = j; t < plen; t++) 
                     memo[i][t] = true;
-                }
             return memo[i][j];
         }
 
