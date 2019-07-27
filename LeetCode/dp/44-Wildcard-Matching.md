@@ -89,12 +89,14 @@ class Solution {
             for (int t = j; t < plen; t++) {
                 if (p.charAt(t) != '*') {
                     flag = true;
+                    // PRUNING!
                     for (int k = j; k < plen; k++) memo[i][k] = false;
                 }
             }
             
             if (!flag) 
                 for (int t = j; t < plen; t++) {
+                    // PRUNING!
                     memo[i][t] = true;
                 }
             return memo[i][j];
