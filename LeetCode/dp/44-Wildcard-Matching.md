@@ -65,6 +65,11 @@ Output: false
 
 ```
 ### Method 0 - DFS - TLE (1714 / 1809 test cases passed.)
+```
+TLE:
+"baaabbabbbaabbbbbbabbbaaabbaabbbbbaaaabbbbbabaaaaabbabbaabaaababaabaaabaaaabbabbbaabbbbbaababbbabaaabaabaaabbbaababaaabaaabaaaabbabaabbbabababbbbabbaaababbabbaabbaabbbbabaaabbababbabababbaabaabbaaabbba"
+"*b*ab*bb***abba*a**ab***b*aaa*a*b****a*b*bb**b**ab*ba**bb*bb*baab****bab*bbb**a*a*aab*b****b**ba**abba"
+```
 ```java
 class Solution {
     Boolean[][] memo;
