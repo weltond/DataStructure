@@ -81,6 +81,8 @@ class Solution {
             
             for (int k = 0, len = s.length(); k <= len - i; k++) {
                 int res = dfs(s, p, i + k, j + 1);
+                // If res = 0 or 2, based on definition, we just return, no need to furthur investigate the rest of string p.
+                // because s has been at the end.
                 if (res == 0 || res == 2) return res;
             }
             
