@@ -27,6 +27,7 @@ Output: [1,2,3,4,8,12,11,10,9,5,6,7]
 ```
 ## Answer
 ### Method 3 - Layer By Layer
+#### Approach 2
 :rocket: 0ms 
 - Time: O(m * n)
 - Space: O(m * n)
@@ -59,6 +60,42 @@ class Solution {
             c2--;
         }
         return ans;
+    }
+}
+```
+#### Approach 1
+```java
+class Solution {
+    public List<Integer> spiralOrder(int[][] matrix) {
+        List<Integer> res = new ArrayList();
+        
+        if (matrix == null || matrix.length == 0) return res;
+        
+        dfs(matrix, 0, 0, matrix.length - 1, matrix[0].length - 1, res);
+        
+        return res;
+    }
+    
+    private void dfs(int[][] matrix, int sr, int sc, int er, int ec, List<Integer> list) {
+        if (sr > er || sc > ec) return;
+        
+        for (int col = sc; col <= ec; col++) {
+            list.add(matrix[sr][col]);
+        }
+        for (int row = sr + 1; row <= er; row++) {
+            list.add(matrix[row][ec]);
+        }
+        
+        if (sr < er && sc < ec) {
+            for (int col = ec - 1; col > sc; col--) {
+                list.add(matrix[er][col]);
+            }
+            for (int row = er; row > sr; row--) {
+                list.add(matrix[row][sc]);
+            }
+        
+        }
+        dfs(matrix, sr + 1, sc + 1, er - 1, ec - 1, list);
     }
 }
 ```
