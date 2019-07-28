@@ -86,7 +86,43 @@ private void backtrack(List<List<Integer>> list, List<Integer> tempList, int [] 
     }
 }
 ```
-
+```java
+class Solution {
+    boolean[] visited;
+    public List<List<Integer>> permuteUnique(int[] nums) {
+        List<List<Integer>> res = new ArrayList();
+        
+        visited = new boolean[nums.length];
+        Arrays.sort(nums);
+        
+        dfs(nums, 0, new ArrayList(), res);
+        
+        return res;
+    }
+    
+    private void dfs(int[] nums, int lvl, List<Integer> list, List<List<Integer>> res) {
+        if (lvl == nums.length) {
+            res.add(new ArrayList(list));
+            return;
+        }
+        
+        Set<Integer> set = new HashSet();
+        for (int i = 0; i < nums.length; i++) {
+            // visited[i] should be determined before set.add(nums[i])!
+            if (visited[i]) continue;
+            if (!set.add(nums[i])) continue;
+            
+            visited[i] = true;
+            list.add(nums[i]);
+            
+            dfs(nums, lvl + 1, list, res);
+            
+            list.remove(list.size() - 1);
+            visited[i] = false;
+        }
+    }
+}
+```
 ### [Combination Sum](https://leetcode.com/problems/combination-sum/)
 ```java
 public List<List<Integer>> combinationSum(int[] nums, int target) {
