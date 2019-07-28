@@ -1,4 +1,42 @@
 // https://leetcode.com/problems/rotate-image/
+class Solution {
+    public void rotate(int[][] matrix) {
+        if (matrix == null || matrix.length == 0) return;
+        
+        int n = matrix.length;
+        /**
+        [
+          [1,2,3],              [1,4,7]
+          [4,5,6],      ===>    [2,5,8]
+          [7,8,9]               [3,6,9]
+        ],
+        */
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                swap(matrix, i, j, j, i);
+            }
+        }
+        
+        /**
+        [
+          [1,4,7],              [7,4,1]
+          [2,5,8],      ===>    [8,5,2]
+          [3,6,9]               [9,6,3]
+        ],
+        */
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n / 2; j++) { 
+                swap(matrix, i, j, i, n - j - 1);
+            }
+        }
+    }
+    
+    private void swap(int[][] arr, int x1, int y1, int x2, int y2) {
+        int tmp = arr[x1][y1];
+        arr[x1][y1] = arr[x2][y2];
+        arr[x2][y2] = tmp;
+    }
+}
 
 class Solution {
     // ============= Iteration ==================
