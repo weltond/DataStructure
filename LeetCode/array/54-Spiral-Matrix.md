@@ -26,9 +26,11 @@ Input:
 Output: [1,2,3,4,8,12,11,10,9,5,6,7]
 ```
 ## Answer
-### Method 3 - Layer By Layer
+### Method 3 - Layer By Layer - :rocket: 0ms 
+**Unlike Method 1, since it is not a square matrix, we need to take care of edge cases like [1,2,3] or [[1],[2],[3]].**
+
+**So we change the strategy to `sc -> ec`,`sr + 1 -> er`, `ec - 1 -> sc - 1`, `er -> sr + 1`.**
 #### Approach 2
-:rocket: 0ms 
 - Time: O(m * n)
 - Space: O(m * n)
 ```java
