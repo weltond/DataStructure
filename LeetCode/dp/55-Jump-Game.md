@@ -33,7 +33,24 @@ Explanation: You will always arrive at index 3 no matter what. Its maximum
 ```java
 
 ```
-### Method 1 - Backtracking -
+### Method 1 - Backtracking - TLE (74 / 75 test cases passed.)
 ```java
-
+class Solution {
+    // === Method 1: Backtracking ====
+    // 
+    public boolean canJump(int[] nums) {
+        return bt(nums, 0);
+    }
+    
+    private boolean bt(int[] nums, int lvl) {
+        if (lvl >= nums.length - 1) return true;
+        
+        for (int i = lvl + 1; i <= Math.min(nums.length - 1, lvl + nums[lvl]); i++) {
+            if (bt(nums, i))
+                return true;
+        }
+        
+        return false;
+    }
+}
 ```
