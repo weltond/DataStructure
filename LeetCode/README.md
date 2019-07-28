@@ -1,6 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
-| [55]() | [Jump Game](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/55-Jump-Game.md) | Medium | Array / DP / Greedy
+| [55](https://leetcode.com/problems/jump-game/) | [Jump Game](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/55-Jump-Game.md) | Medium | Array / DP / Greedy
 | [44](https://leetcode.com/problems/wildcard-matching/) | [Wildcard Matching](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/44-Wildcard-Matching.md) | Hard | String / DP / Backtracking / Greedy
 | [41](https://leetcode.com/problems/first-missing-positive/) | [First Missing Positive](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/41-First-Missing-Positive.md) | Hard | Array
 | [34](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | [Find First and Last Pos in Sorted Array](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/34-Find-First-and-Last-Position-of-Element-in-Sorted-Array.md) | Medium | Array / Binary Search
