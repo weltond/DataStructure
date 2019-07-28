@@ -32,16 +32,20 @@ class Solution {
         if(n < 0) return ret;
         ret = new ArrayList<>();
         nQueens = new char[n][n];
+	    
         for(int i = 0; i < nQueens.length; i++){
             for(int j = 0; j < nQueens[0].length; j++){
                 nQueens[i][j] = '.';
             }
         }
+	    
         colUsed = new boolean[n];
         diagonals45Used = new boolean[2*n-1];
         diagonals135Used = new boolean[2*n-1];
         this.n = n;
+	    
         backstracking(0);
+	    
         return ret;
     }
     private void backstracking(int row){
@@ -55,10 +59,14 @@ class Solution {
         for(int col = 0; col < n; col++){
             int diagonals45Idx = col + row;
             int diagonals135Idx = n - 1 -(row - col);
+		
             if(colUsed[col] || diagonals45Used[diagonals45Idx] || diagonals135Used[diagonals135Idx])continue;
+		
             nQueens[row][col] = 'Q';
             colUsed[col] = diagonals45Used[diagonals45Idx] = diagonals135Used[diagonals135Idx] = true;
+		
             backstracking(row + 1);
+		
             colUsed[col] = diagonals45Used[diagonals45Idx] = diagonals135Used[diagonals135Idx] = false;
             nQueens[row][col] = '.';
             
