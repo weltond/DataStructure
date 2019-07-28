@@ -25,7 +25,9 @@ a()   |       |                                                                 
   - Two Pointers：固定前1个或2个，然后对剩下的两个做双指针。注意必须**排序**。
   - Hash Table： 存储之前的和，再在后面查找map中的值。无需排序。
 
-6. Combination Sum相关问题。想清楚recursion时候从哪里作为起始点。注意必须先**排序**。
+6. Combination Sum相关问题。可以参考[这里](https://leetcode.com/problems/permutations/discuss/18239/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partioning))
+
+想清楚recursion时候从哪里作为起始点。注意必须先**排序**。
   - 6.1 Combination Sum: Given Non-Duplicate array and target, return solution set. **Each number can be used unlimited**.
 ```java
 void bt(int[] arr, int level, int rem){
