@@ -22,6 +22,63 @@ Output: [
 Explanation: There exist two distinct solutions to the 4-queens puzzle as shown above.
 */
 class Solution {
+    char[][] board;
+    boolean[] col;
+    public List<List<String>> solveNQueens(int n) {
+        List<List<String>> res = new ArrayList();
+        if (n == 0) return res;
+        
+        board = new char[n][n];
+        
+        for (int i = 0; i < n; i++) {
+            Arrays.fill(board[i], '.');
+        }
+        col = new boolean[n];
+        bt(0, n, board, res);
+        
+        return res;
+    }
+    private void bt(int i, int n, char[][] board, List<List<String>> res) { 
+        if (i == n) {
+            List<String> list = new ArrayList();
+            for (int t = 0; t < board.length; t++) {
+                list.add(new String(board[t]));
+            }
+            res.add(new ArrayList(list));
+            return;
+        }
+    
+        for (int k = 0; k < n; k++) {
+            if (col[k] || !isValid(board, i, k)) continue;
+            
+            col[k] = true;
+            board[i][k] = 'Q';
+            
+            bt(i + 1, n, board, res);
+            
+            col[k] = false;
+            board[i][k] = '.';
+        }
+    }
+    
+    private boolean isValid(char[][] board, int i, int j) {
+        int x = i - 1, y = j - 1;
+        while (x >= 0 && y >= 0) {
+            if (board[x][y] == 'Q') return false;
+            x--; y--;
+        }
+        
+        x = i - 1; y = j + 1;
+        while (x >= 0 && y < board[0].length) {
+            if (board[x][y] == 'Q') return false;
+            x--; y++;
+        }
+        
+        return true;
+    }
+}
+
+class Solution {
     public List<List<String>> solveNQueens(int n) {
         List<List<String>> res = new ArrayList<>();
         
