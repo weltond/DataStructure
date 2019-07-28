@@ -1,4 +1,39 @@
 // https://leetcode.com/problems/maximum-subarray/
+class Solution {
+    public int maxSubArray(int[] nums) {
+        if(nums == null || nums.length == 0) return 0;
+        
+        int res = Integer.MIN_VALUE;
+        int cur = 0;
+        for (int i = 0; i < nums.length; i++) {
+            cur = (cur >= 0) ? cur + nums[i]: nums[i];
+            
+            res = Math.max(res, cur);
+        }
+        
+        return res;
+    }
+}
+
+class Solution {
+    public int maxSubArray(int[] nums) {
+        if(nums == null || nums.length == 0) return 0;
+        
+        int res = Integer.MIN_VALUE;
+        int[] dp = new int[nums.length];
+        for (int i = 0; i < nums.length; i++) {
+            if (i == 0) {
+                dp[i] = nums[i];
+            } else {
+                dp[i] = (dp[i - 1] >= 0) ? dp[i - 1] + nums[i]: nums[i];
+            }
+            
+            res = Math.max(res, dp[i]);
+        }
+        
+        return res;
+    }
+}
 
 class Solution {
     // ======== Approach 2: DP =========
