@@ -26,8 +26,28 @@ Explanation: You will always arrive at index 3 no matter what. Its maximum
 
 ```
 ### Method 3 - DP Bottom-up - 
+Approach 1 - Left to Right
 ```java
+class Solution {
+    public boolean canJump(int[] nums) {
+        if (nums == null || nums.length == 0) return true;
+        
+        boolean[] dp = new boolean[nums.length];
+        dp[0] = true;
+        
+        for (int i = 1; i < nums.length; i++) {
+            for (int j = i - 1; j >= 0; j--) {
+                if (dp[j] && (i - j <= nums[j])) {
+                    dp[i] = true;
+                    break;
+                }
+            }
+        }
+        
+        return dp[nums.length - 1];
+    }
 
+}
 ```
 ### Method 2 - DP Top-down - 
 ```java
