@@ -26,7 +26,7 @@ Explanation: You will always arrive at index 3 no matter what. Its maximum
 
 ```
 ### Method 3 - DP Bottom-up 
-#### Approach 2 - Right to Left - 174ms (25.76%)
+#### Approach 2 - Right to Left - :turtle: 174ms (25.76%)
 ```java
 class Solution {
     public boolean canJump(int[] nums) {
@@ -50,7 +50,7 @@ class Solution {
 
 }
 ```
-#### Approach 1 - Left to Right - 1ms (99.46%)
+#### Approach 1 - Left to Right - :rocket: 1ms (99.46%)
 ```java
 class Solution {
     public boolean canJump(int[] nums) {
@@ -73,9 +73,33 @@ class Solution {
 
 }
 ```
-### Method 2 - DP Top-down - 
+### Method 2 - DP Top-down - :turtle: 743ms (7.34%)
 ```java
-
+class Solution {
+    Boolean[] memo;
+    public boolean canJump(int[] nums) {
+        memo = new Boolean[nums.length];
+        return bt(nums, 0);
+    }
+    
+    private boolean bt(int[] nums, int lvl) {
+        if (lvl >= nums.length - 1) return true;
+        
+        if (memo[lvl] != null) return memo[lvl];
+        
+        int fur = Math.min(nums.length - 1, lvl + nums[lvl]);
+        for (int i = fur ; i >= lvl + 1; i--) {
+            if (bt(nums, i)) {
+                memo[lvl] = true;
+                return true;
+            }
+                
+        }
+        
+        memo[lvl] = false;
+        return false;
+    }
+}
 ```
 ### Method 1 - Backtracking - TLE (74 / 75 test cases passed.)
 ```java
