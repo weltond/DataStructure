@@ -17,9 +17,45 @@ Explanation: Intervals [1,4] and [4,5] are considered overlapping.
 NOTE: input types have been changed on April 15, 2019. Please reset to default code definition to get new method signature.
 
 ## Answer
-### Method 2 - 
+### Method 2 - :rocket: 3ms (95.70%)
 ```java
-
+class Solution {
+    public int[][] merge(int[][] intervals) {
+        if (intervals == null || intervals.length == 0) return new int[][]{};
+        
+        LinkedList<int[]> res = new LinkedList();
+        
+        int[] start = new int[intervals.length];
+        int[] end = new int[intervals.length];
+        
+        for (int i = 0; i < intervals.length; i++) {
+            start[i] = intervals[i][0];
+            end[i] = intervals[i][1];
+        }
+        
+        Arrays.sort(start);
+        Arrays.sort(end);
+        
+        // [1,2,8,15]
+        // [3,6,10,18]
+        // j is the start pos, i is end pos
+        for (int i = 0, j = 0; i < intervals.length; i++) {
+            if (i + 1 == intervals.length || start[i + 1] > end[i]) {
+                res.add(new int[]{start[j], end[i]});
+                j = i + 1;
+            }
+        }
+        
+        
+        int[][] ret = new int[res.size()][2];
+        int i = 0;
+        for (int[] arr : res) {
+            ret[i++] = arr;
+        }
+        
+        return ret;
+    }
+}
 ```
 ### Method 1 - Sorting - :rabbit: 37ms (35.82%)
 - Time: O(nlogn)
