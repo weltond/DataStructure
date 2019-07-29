@@ -29,7 +29,56 @@ Note: It is intended for the problem statement to be ambiguous. You should gathe
 
 ## Answer
 
-### Method 1
+### Method 1  - :rocket: 1ms (100%)
 ```java
-
+class Solution {
+    // 1ms (100%)
+    public boolean isNumber(String s) {
+        if (s == null || s.length() == 0) return false;
+        int len = s.length();
+    
+        int i = 0, head = 0, j = len - 1;
+        
+        while (i < len && s.charAt(i) == ' ') i++;
+        if (i == len) return false; // " "
+        int start = i;
+        while (j >= i && s.charAt(j) == ' ') j--;
+        len = j + 1;
+        
+        boolean hasE = false, hasDot = false, hasNum = false, numAfterE = false;
+        while (i < len) {
+            char c = s.charAt(i);
+            // num
+            if ('0' <= c && c <= '9') {
+                hasNum = true;
+                numAfterE = true;
+            }    
+            
+            // '.' 
+            else if (c == '.') {
+                if (hasDot || hasE) return false;   //"." return false as well
+                hasDot = true;
+            } 
+            
+            // 'e'
+            else if (c == 'e') {
+                if (hasE || !hasNum) return false;
+                hasE = true;
+                numAfterE = false;
+            }
+            
+            // '+-'
+            else if (c == '+' || c == '-') {    // '+' or '-' can be before num or after e
+                if (i != start && s.charAt(i - 1) != 'e') return false;
+            }
+            
+            // char or space
+            else return false;
+            
+            i++;
+        }
+        
+        return hasNum && numAfterE;
+    }
+}
 ```
