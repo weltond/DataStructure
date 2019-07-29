@@ -54,7 +54,49 @@ class Solution {
 }
 ```
 ### Method 2 - DP
-:turtle: 3ms (21.22%) 
+#### Approach 3 :rocket: 2ms (89.92%)
+- Space: O(n)
+```java
+class Solution {
+    public int minPathSum(int[][] grid) {
+        if (grid == null || grid.length == 0) return 0;
+        
+        int m = grid.length, n = grid[0].length;
+        int[] dp = new int[n];
+        
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i == 0 && j == 0) dp[j] = grid[i][j];
+                else dp[j] = grid[i][j] + Math.min(i == 0 ? Integer.MAX_VALUE: dp[j], j == 0 ? Integer.MAX_VALUE : dp[j - 1]);
+            }
+        }
+        
+        return dp[n - 1];
+    }
+}
+```
+#### Approach 2 :rocket: 2ms (89.92%)
+- Space: O(n^2)
+```java
+class Solution {
+    public int minPathSum(int[][] grid) {
+        if (grid == null || grid.length == 0) return 0;
+        
+        int m = grid.length, n = grid[0].length;
+        int[][] dp = new int[m][n];
+        
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i == 0 && j == 0) dp[i][j] = grid[i][j];
+                else dp[i][j] = grid[i][j] + Math.min(i == 0 ? Integer.MAX_VALUE: dp[i - 1][j], j == 0 ? Integer.MAX_VALUE : dp[i][j - 1]);
+            }
+        }
+        
+        return dp[m - 1][n - 1];
+    }
+}
+```
+#### Approach 1 :turtle: 3ms (21.22%) 
 ```java
 class Solution {
     // ======== Method 2 : DP =========
