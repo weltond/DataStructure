@@ -25,8 +25,32 @@ Explanation: You will always arrive at index 3 no matter what. Its maximum
 ```java
 
 ```
-### Method 3 - DP Bottom-up - 
-Approach 1 - Left to Right
+### Method 3 - DP Bottom-up 
+#### Approach 2 - Right to Left - 174ms (25.76%)
+```java
+class Solution {
+    public boolean canJump(int[] nums) {
+        if (nums == null || nums.length == 0) return true;
+        
+        boolean[] dp = new boolean[nums.length];
+        dp[nums.length - 1] = true;
+        
+        for (int i = nums.length - 2; i >= 0; i--) {
+            int fur = Math.min(nums.length - 1, i + nums[i]);
+            for (int j = i + 1; j <= fur; j++) {
+                if (dp[j]) {
+                    dp[i] = true;
+                    break;
+                }
+            }
+        }
+        
+        return dp[0];
+    }
+
+}
+```
+#### Approach 1 - Left to Right - 1ms (99.46%)
 ```java
 class Solution {
     public boolean canJump(int[] nums) {
