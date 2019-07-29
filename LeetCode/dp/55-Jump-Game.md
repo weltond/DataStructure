@@ -21,9 +21,20 @@ Explanation: You will always arrive at index 3 no matter what. Its maximum
 ```
 
 ## [Answer](https://leetcode.com/problems/jump-game/solution/)
-### Method 4 - Greedy - 
+### Method 4 - Greedy - :rocket: 1ms (99.46%)
 ```java
-
+class Solution {
+    public boolean canJump(int[] nums) {
+        int last = nums.length - 1;
+        for (int i = nums.length - 1; i >= 0; i--) {
+            if (i + nums[i] >= last) {
+                last = i;
+            }
+        }
+        
+        return last == 0;
+    }
+}
 ```
 ### Method 3 - DP Bottom-up 
 #### Approach 2 - Right to Left - :turtle: 174ms (25.76%)
