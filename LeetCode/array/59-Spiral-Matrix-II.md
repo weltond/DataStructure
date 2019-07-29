@@ -15,7 +15,39 @@ Output:
 ```
 
 ## Answer
-Just like [54-Spiral-Matrix Method 3](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/54-Spiral-Matrix.md) 
+**Just like** [54-Spiral-Matrix](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/54-Spiral-Matrix.md) 
+### Method 2 - Simulation - :rocket: 0ms
+```java
+class Solution {
+    public int[][] generateMatrix(int n) {
+        int[][] arr = new int[n][n];
+        int cnt = 1, r = 0, c = 0;
+        int dir = 0;
+        int[] d1 = {0, 1, 0, -1};
+        int[] d2 = {1, 0, -1, 0};
+        boolean[][] seen = new boolean[n][n];
+        
+        for (int i = 0, size = n * n; i < size; i++) {
+            arr[r][c] = cnt++;
+            seen[r][c] = true;
+            
+            int nr = r + d1[dir];
+            int nc = c + d2[dir];
+            
+            if (nr >= 0 && nr < n && nc >= 0 && nc < n && !seen[nr][nc]) {
+                r = nr;
+                c = nc;
+            } else {
+                dir = (dir + 1) % 4;
+                r += d1[dir];
+                c += d2[dir];
+            }
+        }
+        
+        return arr;
+    }
+}
+```
 ### Method 1 - Layer By Layer
 :rocket: 0ms 
 - Time: O(m * n)
