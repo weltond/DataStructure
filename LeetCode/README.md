@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [56](https://leetcode.com/problems/merge-intervals/) | [Merge Intervals](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/56-Merge-Intervals.md) | Medium | Array / Sort
 | [55](https://leetcode.com/problems/jump-game/) | [Jump Game](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/55-Jump-Game.md) | Medium | Array / DP / Greedy
 | [44](https://leetcode.com/problems/wildcard-matching/) | [Wildcard Matching](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/44-Wildcard-Matching.md) | Hard | String / DP / Backtracking / Greedy
 | [41](https://leetcode.com/problems/first-missing-positive/) | [First Missing Positive](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/41-First-Missing-Positive.md) | Hard | Array
