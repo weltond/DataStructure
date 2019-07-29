@@ -23,7 +23,41 @@ class Solution {
     }
     
     // ================ Method 1: Recursion + Memo ==================
-    // TLE
+    // 0ms
+    int[][] memo;
+    public int uniquePathsWithObstacles(int[][] obstacleGrid) {
+        if (obstacleGrid == null || obstacleGrid.length == 0) return 0;
+        
+        memo = new int[obstacleGrid.length][obstacleGrid[0].length];
+    
+        for (int[] a: memo) {
+            Arrays.fill(a, -1);
+        }
+        
+        return dfs(obstacleGrid, 0, 0);
+    }
+    
+    private int dfs(int[][] arr, int x, int y) {
+        if (x >= arr.length || y >= arr[0].length || x < 0 || y < 0) {
+            return 0;
+        }
+            
+        if (arr[x][y] == 1) {
+            memo[x][y] = 0;
+            return 0;
+        }
+        
+        if (x == arr.length - 1 && y == arr[0].length - 1) return 1;
+        
+        if (memo[x][y] != -1) return memo[x][y];
+        
+        memo[x][y] = dfs(arr, x + 1, y) + dfs(arr, x, y + 1);
+        
+        return memo[x][y];
+    }
+    
+    // TLE. Because if obstacleGrid[x][y] = 1 we don't store it in the memo. We should initialize memo to -1. 
+    //       and then store 0 as return value if there is an obstacle.
     int m;
     int n;
     public int uniquePathsWithObstacles(int[][] obstacleGrid) {
