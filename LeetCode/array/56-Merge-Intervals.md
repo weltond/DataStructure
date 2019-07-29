@@ -50,3 +50,4 @@ class Solution {
     }
 }
 ```
+### Method 0 - Priority Queue - [this](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/Lc56MergeIntervals.java) 
