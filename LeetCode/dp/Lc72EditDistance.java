@@ -17,6 +17,40 @@ rose -> ros (remove 'e')
 */
 
 class Solution {
+    int[][] memo;
+    public int minDistance(String word1, String word2) {
+        memo = new int[word1.length()][word2.length()];
+        
+        return dfs(word1, word2, 0, 0);
+    }
+    
+    private int dfs(String w1, String w2, int i, int j) {
+        if (w1.length() == i) {
+            return w2.length() - j;
+        }
+        if (w2.length() == j) {
+            return w1.length() - i;
+        }
+        
+        if (memo[i][j] != 0) return memo[i][j];
+        
+        int ans = -23;
+        if (w1.charAt(i) == w2.charAt(j)) {
+            ans = dfs(w1, w2, i + 1, j + 1);
+        } else {
+            int delete = 1 + dfs(w1, w2, i + 1, j);
+            int insert = 1 + dfs(w1, w2, i, j + 1);
+            int replace = 1 + dfs(w1, w2, i + 1, j + 1);
+            ans = Math.min(replace, Math.min(delete, insert));
+        }
+        
+        memo[i][j] = ans;
+        
+        return ans;
+    }
+}
+
+class Solution {
     // ============== Method 2: DP ================
     // Approach 2: 1-D array
     // 6ms (68.6%)
