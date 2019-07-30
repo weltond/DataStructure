@@ -22,8 +22,22 @@ Explanation: The square root of 8 is 2.82842..., and since
 ### Method 1 - Binary Search - :rocket: 1ms (100%)
 #### Approach 2
 **Mid is Mid+1**
-```java
 
+**But need to use long instead of int.**
+```java
+class Solution {
+    public int mySqrt(int x) {
+        long l = 0, r = x;
+        
+        while (l < r) {
+            long mid = l + (r - l + 1) / 2;
+            if (mid * mid == x) return (int)mid;
+            else if (mid * mid > x) r = mid - 1;
+            else l = mid;
+        }
+        return (int)l;
+    }
+}
 ```
 #### Approach 1
 **Normal Mid**.
