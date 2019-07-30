@@ -54,6 +54,27 @@ class Solution {
 
 /*Another Solution*/
 class Solution {
+    public List<List<Integer>> subsetsWithDup(int[] nums) {
+        List<List<Integer>> res = new ArrayList();
+        Arrays.sort(nums);
+        dfs(nums, 0, new ArrayList(), res);
+        
+        return res;
+    }
+    
+    private void dfs(int[] nums, int start, List<Integer> list, List res) {
+        res.add(new ArrayList(list));
+        
+        for (int i = start; i < nums.length; i++) {
+            if (i > start && nums[i] == nums[i - 1]) continue;
+            list.add(nums[i]);
+            dfs(nums, i + 1, list, res);
+            list.remove(list.size() - 1);
+        }
+    }
+}
+
+class Solution {
     // like combination sum.
     // output is : [[],[1],[1,2],[1,2,2],[2],[2,2]]
     public List<List<Integer>> subsetsWithDup(int[] nums) {
