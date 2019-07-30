@@ -58,11 +58,11 @@ Output:
 ]
 ```
 ## Answer
-### Method 1 - Brute Force - :rabbit: 4ms (83.17%)
+### Method 1 - Brute Force - :rocket: 0ms
 ```java
 class Solution {
     // ======= Method 1 ==========
-    // 1ms (39.47%)
+    // 0ms 
     public List<String> fullJustify(String[] words, int maxWidth) {
         List<String> res = new ArrayList();
         if (words == null || words.length == 0) return res;
@@ -90,7 +90,9 @@ class Solution {
                     // not the last row
                     else {
                         if (k < j - 1) {
+                            // can be assigned evenly
                             if (space % (j - k - 1) == 0) cnt = space / (j - k - 1);    
+                            // CANNOT be assigned evenly, then left will be assigned one more space between two words
                             else cnt = space / (j - k - 1) + 1;
                         } 
                         else {    // if only one word or last word
