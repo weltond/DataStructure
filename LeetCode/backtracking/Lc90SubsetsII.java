@@ -16,6 +16,7 @@ class Solution {
     // on each level, add or not add
     // output is :      [[1,2,2],[1,2],[1],[2,2],[2],[]]
     //     if not skip: [[1,2,2],[1,2],[1,2],[1],[2,2],[2],[2],[]]
+    // We SKIP the FIRST Duplicating one.
     public List<List<Integer>> subsetsWithDup(int[] nums) {
         List<List<Integer>> res = new ArrayList();
         
