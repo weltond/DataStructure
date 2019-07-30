@@ -85,8 +85,9 @@ class Solution {
                     // last row is different
                     if (j == words.length) {
                         if (k == j - 1) cnt = space;    // last word
-                        else cnt = 1;
+                        else cnt = 1; // space of words before last word is 1
                     }
+                    // not the last row
                     else {
                         if (k < j - 1) {
                             if (space % (j - k - 1) == 0) cnt = space / (j - k - 1);    
