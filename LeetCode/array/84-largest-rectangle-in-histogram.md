@@ -32,6 +32,8 @@ class Solution {
                 stack.push(i++);
             } else {
                 int idx = stack.pop();
+                // consider [0, 3, 2, 5]
+                // i-stack.peek()-1 means the length that has a height equal or greater than current height.
                 res = Math.max(res, h[idx] * (stack.isEmpty() ? i: i - stack.peek() - 1));
             }
         }
