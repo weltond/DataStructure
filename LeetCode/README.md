@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [83](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | [Remove Duplicates from Sorted List](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/83-Remove-Duplicates-from-Sorted-List.md) | Easy | LinkedList
 | [71](https://leetcode.com/problems/simplify-path/) | [Simplify Path](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/71-Simplify-Path.md) | Medium | String / Stack
 | [70](https://leetcode.com/problems/climbing-stairs/) | [Climbing Stairs](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/70-Climbing-Stairs.md) | Easy | DP
 | [69](https://leetcode.com/problems/sqrtx/) | [Sqrt(x)](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/69-Sqrt(x).md) | Easy | Math / Binary Search
