@@ -12,6 +12,47 @@
 Input: 1->2->3->3->4->4->5
 Output: 1->2->5
 */
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public ListNode deleteDuplicates(ListNode head) {
+        if (head == null || head.next == null) return head;
+        
+        ListNode dummy = new ListNode(-1);
+        ListNode prev = dummy;
+        dummy.next = head;
+        
+        ListNode cur = head;
+        int value = head.val;
+        
+        while (cur != null) {
+            int cnt = 0;
+            ListNode tmp = cur;
+            while (cur != null && cur.val == value) {
+                cnt++;
+                cur = cur.next;
+            }
+            
+            if (cnt > 1) {
+                prev.next = cur;
+            } else {
+                prev = tmp;
+            }
+            
+            if (cur != null)
+                value = cur.val;
+        }
+        
+        return dummy.next;
+    }
+}
+
 class Solution {
     // ================ Method 2: Recursion =================
     // 1ms (36.98%)
