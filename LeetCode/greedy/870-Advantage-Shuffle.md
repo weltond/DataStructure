@@ -25,6 +25,12 @@ Note:
 ## Answer
 ### Method 1 - PQ - :rabbit: 63ms (53.56%)
 - Time: O(nlogn)
+
+**Two Rules:**
+- We should always first satisfy the biggest of B, because they are the hardest to satisfy.
+- If the biggest value of A cannot satisfy current value B, nothing can satisfy.
+
+
 ```java
 class Solution {
     /**
