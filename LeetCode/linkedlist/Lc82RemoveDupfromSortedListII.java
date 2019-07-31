@@ -72,6 +72,7 @@ class Solution {
         }
         
         int dupVal = head.val;
+        // this is garunteed that there would be duplicate values
         while (head != null && head.val == dupVal) {
             head = head.next;
         }
