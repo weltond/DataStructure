@@ -13,7 +13,7 @@ Input: 1->1->2->3->3
 Output: 1->2->3
 ```
 ## Answer
-### Method 2 - Recursion
+### Method 2 - Recursion - :rocket: 0ms
 ```java
 /**
  * Definition for singly-linked list.
