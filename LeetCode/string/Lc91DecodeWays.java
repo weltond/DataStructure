@@ -13,7 +13,41 @@ Output: 3
 Explanation: It could be decoded as "BZ" (2 26), "VF" (22 6), or "BBF" (2 2 6).
 
 */
-
+class Solution {
+    public int numDecodings(String s) {
+        if (s == null) return 0;
+        
+        int len = s.length();
+        // dp[i] is total ways from s(0...i)
+        
+        if (s.charAt(0) == '0') return 0;
+        int prev = 0, cur = 1;
+        
+        for (int i = 2; i <= len; i++) {
+            char c = s.charAt(i - 1);
+            int total = 0;
+            // one
+            if (c != '0') total = cur;
+            // two
+            char p = s.charAt(i - 2);
+            if (isMatch(p - '0', c - '0')) total += i - 2 <= 0 ? 1 : prev;
+            
+            prev = cur;
+            cur = total;
+        }
+        
+        return cur;
+    }
+    
+    private boolean isMatch(int n1, int n2) {
+        if (n1 == 0) return false; 
+        
+        int res = 10 * n1 + n2;
+        if (10 <= res && res <= 26) return true;
+        
+        return false;
+    }
+}
 class Solution {
     public int numDecodings(String s) {
         if (s == null) return 0;
