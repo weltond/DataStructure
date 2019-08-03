@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [93](https://leetcode.com/problems/restore-ip-addresses/) | [Restore IP Address](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/93-Restore-IP-Addresses.md) | Medium | String / Backtracking
 | [88](https://leetcode.com/problems/merge-sorted-array/) | [Merge Sorted Array](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/88-Merge-Sorted-Array.md) | Easy | Array / Two pointer
 | [870](https://leetcode.com/problems/advantage-shuffle/) | [Advantage Shuffle](https://github.com/weltond/DataStructure/blob/master/LeetCode/greedy/870-Advantage-Shuffle.md) | Medium | Array / Greedy
 | [83](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | [Remove Duplicates from Sorted List](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/83-Remove-Duplicates-from-Sorted-List.md) | Easy | LinkedList
