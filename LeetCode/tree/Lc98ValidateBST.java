@@ -10,6 +10,35 @@
  * }
  */
 class Solution {
+    long prev;
+    public boolean isValidBST(TreeNode root) {
+       prev = Long.MIN_VALUE;
+        
+        return inorder(root);
+    }
+    
+    private boolean inorder(TreeNode root) {
+        if (root == null) return true;
+        
+        if (!inorder(root.left)) return false;
+        if (root.val <= prev) return false;
+        prev = root.val;
+        if (!inorder(root.right)) return false;
+        
+        return true;
+    }
+}
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
     // ============ Method 3: InOrder ==============
     public boolean isValidBST(TreeNode root) {
         Stack<TreeNode> stack = new Stack();
