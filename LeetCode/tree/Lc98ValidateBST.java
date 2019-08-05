@@ -10,6 +10,8 @@
  * }
  */
 class Solution {
+    // ===== In order Recursion ====
+    // 0ms
     long prev;
     public boolean isValidBST(TreeNode root) {
        prev = Long.MIN_VALUE;
