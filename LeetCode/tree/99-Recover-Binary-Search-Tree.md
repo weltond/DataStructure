@@ -67,13 +67,15 @@ class Solution {
         TreeNode first = null, second = null;
         while (root != null) {
             if (root.left == null) {
-                // check if cur is greater than prev
+                // == check if cur is greater than prev ==
                 if (first == null && root.val < prev.val) {
                     first = prev;
                 }
                 if (first != null && root.val < prev.val) {
                     second = root;
                 }
+                // == end ==
+                
                 prev = root;
                 
                 root = root.right;
@@ -91,13 +93,15 @@ class Solution {
                     // reset 
                     tmp.right = null;
                     
-                    // check if cur is greater than prev
+                    // == check if cur is greater than prev ==
                     if (first == null && root.val < prev.val) {
                         first = prev;
                     }
                     if (first != null && root.val < prev.val) {
                         second = root;
                     }
+                    // == end ==
+                    
                     prev = root;
                     
                     root = root.right;
