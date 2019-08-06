@@ -269,3 +269,5 @@ return dp[target];
 - 在`shiftUp(k,x)`中，会`while(k>0)`，在循环中拿对象`x`与其`parent`(`parent = (k-1)>>>1`)的对象`e`比较: `comparator.compare(x, e) >= 0`.如果满足则退出循环，代表整个PQ满足"最小堆"(上面的元素都**逻辑小于**下面的元素).
 - trick就在这里的**逻辑小于**。默认情况下，`x.compareTo(e)`的意思是如果`x < e` 则返回负数。那么为了让`comparator.compare(x,e)`一直**小于0**的话，就可以让对象`x`一直shiftUp到堆顶。因此，为了实现最大堆，意即让最大的对象`x`放到堆顶，我们需要使`comparator.compare(x, e)`一直**小于0**. 已知`x`是最大的，要让其一直小于0（返回负数）,则可以让其`return e - x;`，这样可以保证`x`出现在堆顶。
 - 根据以上，可以用**lambda**来实现最大堆：`(o1, o2) -> o2 - o1`. 这里，在前面的元素代表我们上面提到的`x`。
+
+17. 中序遍历树的时候，用BFS或者DFS都会有`O(n)`的extra space，用**Morris Traversal**可以只用`O(1)`的空间。
