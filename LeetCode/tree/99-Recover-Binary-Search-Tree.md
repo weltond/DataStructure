@@ -49,7 +49,68 @@ Follow up:
 ### Method 2 - [Morris Traversal](https://leetcode.com/problems/recover-binary-search-tree/discuss/32559/Detail-Explain-about-How-Morris-Traversal-Finds-two-Incorrect-Pointer)
 - Space: O(1)
 ```java
-// TO DO...
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    // ===== Method 2: Morris Traversal =====
+    
+    public void recoverTree(TreeNode root) {
+        if (root == null) return;
+        TreeNode prev = new TreeNode(Integer.MIN_VALUE);
+        TreeNode first = null, second = null;
+        while (root != null) {
+            if (root.left == null) {
+                // check if cur is greater than prev
+                if (first == null && root.val < prev.val) {
+                    first = prev;
+                }
+                if (first != null && root.val < prev.val) {
+                    second = root;
+                }
+                prev = root;
+                
+                root = root.right;
+            } else {
+                // Morris traversal
+                TreeNode tmp = root.left;
+                while (tmp.right != null && tmp.right != root) {
+                    tmp = tmp.right;
+                }
+                
+                if (tmp.right == null) {
+                    tmp.right = root;
+                    root = root.left;
+                } else {
+                    // reset 
+                    tmp.right = null;
+                    
+                    // check if cur is greater than prev
+                    if (first == null && root.val < prev.val) {
+                        first = prev;
+                    }
+                    if (first != null && root.val < prev.val) {
+                        second = root;
+                    }
+                    prev = root;
+                    
+                    root = root.right;
+                }
+            }
+        }
+        
+        // swap
+        int tmp = first.val;
+        first.val = second.val;
+        second.val = tmp;
+    }
+}
 ```
 ### Method 1 - Inorder :turtle: 11ms (9.38%) 
 ```java
