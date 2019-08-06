@@ -10,6 +10,42 @@
  * }
  */
 class Solution {
+    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+        List<List<Integer>> res = new ArrayList();
+        
+        dfs(root, 0, res);
+        
+        return res;
+    }
+    
+    private void dfs(TreeNode root, int lvl, List<List<Integer>> res) {
+        if (root == null) return;
+        
+        if (lvl == res.size()) {
+            res.add(new ArrayList());
+        }
+        
+        if (lvl % 2 == 0) {
+            res.get(lvl).add(root.val);
+        } else {
+            res.get(lvl).add(0, root.val);
+        }
+        
+        dfs(root.left, lvl + 1, res);
+        dfs(root.right, lvl + 1, res);
+    }
+}
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
     // ============= Method 2: Iteration ================
     // 1ms (74.29%)
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
