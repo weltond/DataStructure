@@ -10,6 +10,41 @@
  * }
  */
 class Solution {
+    // 2ms (96.90%)
+    Map<Integer,Integer> map;
+    int idx = 0;
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+        map = new HashMap();
+        for (int i = 0; i < inorder.length; i++)
+            map.put(inorder[i], i);
+        
+        return dfs(preorder, inorder, 0, inorder.length - 1);
+    }
+    
+    private TreeNode dfs(int[] pre, int[] in, int start, int end) {
+        if (start > end) return null;
+        
+        TreeNode root = new TreeNode(pre[idx]);
+        
+        int pos = map.get(pre[idx++]);
+        
+        root.left = dfs(pre, in, start, pos - 1);
+        root.right = dfs(pre, in, pos + 1, end);
+        
+        return root;
+    }
+}
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
     // ============= Method 1: DFS ==============
     // 8ms (43.32%)
     private int idx = 0;
