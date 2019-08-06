@@ -13,6 +13,37 @@ class Solution {
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> res = new ArrayList();
         
+        if (root == null) return res;
+        
+        Queue<TreeNode> q = new LinkedList();
+        q.offer(root);
+        
+        while (!q.isEmpty()) {
+            int size = q.size();
+            List<Integer> l = new ArrayList();
+            int sizeRes = res.size();
+            for(int i = 0; i < size; i++) {
+                TreeNode n = q.poll();
+                if (sizeRes % 2 == 0) {
+                    l.add(n.val);
+                } else {
+                    l.add(0, n.val);
+                }
+                
+                if (n.left != null) q.offer(n.left);
+                if (n.right != null) q.offer(n.right);
+            }
+            
+            res.add(l);
+        }
+        
+        return res;
+    }
+}
+class Solution {
+    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+        List<List<Integer>> res = new ArrayList();
+        
         dfs(root, 0, res);
         
         return res;
