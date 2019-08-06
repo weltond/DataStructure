@@ -64,13 +64,13 @@ Follow up:
  */
 class Solution {
     // ===== Method 1: Inorder ======
-    // 11ms (9.38%)
+    // 2ms (98.13%)
     TreeNode first = null, second = null, prev = new TreeNode(Integer.MIN_VALUE);
     public void recoverTree(TreeNode root) {
         dfs(root);
         
         if (first == null) return;
-        System.out.println(first.val + ","+second.val);
+        //System.out.println(first.val + ","+second.val);
         swap(first, second);
     }
     
