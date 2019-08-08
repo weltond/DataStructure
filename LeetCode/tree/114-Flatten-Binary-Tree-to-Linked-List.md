@@ -28,7 +28,28 @@ The flattened tree should look like:
 ## Answer
 ### Method 2 - Post order
 ```java
-
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    TreeNode prev = null;
+    public void flatten(TreeNode root) {
+        if (root == null) return;
+        
+        flatten(root.right);    //right first
+        flatten(root.left);
+        
+        root.left = null;
+        root.right = prev;
+        prev = root;
+    }
+}
 ```
 ### Method 1 - Pre order
 #### Approach 2
