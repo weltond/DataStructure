@@ -18,7 +18,7 @@ Note:
 - Bonus point if you are able to do this using only O(n) extra space, where n is the total number of rows in the triangle.
 
 ## Answer
-### Method 3 - DP (Top-Down)
+### Method 3 - DP (Top-Down) :rocket: 2ms
 ```java
 class Solution {
     public int minimumTotal(List<List<Integer>> triangle) {
