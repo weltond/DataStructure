@@ -18,6 +18,33 @@ Note:
 - Bonus point if you are able to do this using only O(n) extra space, where n is the total number of rows in the triangle.
 
 ## Answer
+### Method 3 - DP (Top-Down)
+```java
+class Solution {
+    public int minimumTotal(List<List<Integer>> triangle) {
+        if (triangle == null) return 0;
+        int size = triangle.size();
+        
+        int[][] dp = new int[size][size];
+        for (int[] a : dp) {
+            Arrays.fill(a, Integer.MAX_VALUE);
+        }
+        
+        dp[0][0] = triangle.get(0).get(0);
+        int res = Integer.MAX_VALUE;
+        for (int i = 1; i < size; i++) {
+            for (int j = 0; j <= i; j++) {
+                dp[i][j] = triangle.get(i).get(j) + Math.min(dp[i - 1][j], j == 0 ? Integer.MAX_VALUE : dp[i - 1][j - 1]);
+                if (i == size - 1) {
+                    res = Math.min(res, dp[i][j]);
+                }
+            }
+        }
+        return res == Integer.MAX_VALUE ? dp[0][0] : res;
+        
+    }
+}
+```
 ### Method 2 - Dynamic Programming (Bottom-Up)
 #### Approach 2 :rocket: 2ms (87.88%)
 - Time: O(n^2)
