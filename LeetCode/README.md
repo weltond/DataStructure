@@ -1,7 +1,7 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
 | [135](https://leetcode.com/problems/candy/) | [Candy](https://github.com/weltond/DataStructure/blob/master/LeetCode/greedy/135-Candy.md) | Hard | Greedy
-| [129](https://leetcode.com/problems/sum-root-to-leaf-numbers/) | [Sum Root to Leaf Numbers](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/129-Sum-Root-to-Leaf-Numbers.md) | Tree / DFS
+| [129](https://leetcode.com/problems/sum-root-to-leaf-numbers/) | [Sum Root to Leaf Numbers](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/129-Sum-Root-to-Leaf-Numbers.md) | Medium | Tree / DFS
 | [114](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/) | [Flatten Binary Tree to LinkedList](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/114-Flatten-Binary-Tree-to-Linked-List.md) | Medium | Tree / DFS
 | [101](https://leetcode.com/problems/symmetric-tree/) | [Symmetric Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/101-Symmetric-Tree.md) | Easy | Tree
 | [93](https://leetcode.com/problems/restore-ip-addresses/) | [Restore IP Address](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/93-Restore-IP-Addresses.md) | Medium | String / Backtracking
