@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [149](https://leetcode.com/problems/max-points-on-a-line/) | [Max Points on a Line](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/149-Max-Points-on-a-Line.md) | Hard | HashTable / Array
 | [135](https://leetcode.com/problems/candy/) | [Candy](https://github.com/weltond/DataStructure/blob/master/LeetCode/greedy/135-Candy.md) | Hard | Greedy
 | [129](https://leetcode.com/problems/sum-root-to-leaf-numbers/) | [Sum Root to Leaf Numbers](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/129-Sum-Root-to-Leaf-Numbers.md) | Medium | Tree / DFS
 | [114](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/) | [Flatten Binary Tree to LinkedList](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/114-Flatten-Binary-Tree-to-Linked-List.md) | Medium | Tree / DFS
