@@ -1,6 +1,91 @@
 // https://leetcode.com/problems/lru-cache/
 
+class LRUCache {
+    ListNode head, tail;
+    int size;
+    Map<Integer, ListNode> map;
+    public LRUCache(int capacity) {
+        size = capacity;
+        head = new ListNode(0, 0);
+        tail = new ListNode(0, 0);
+        
+        head.next = tail;
+        tail.prev = head;
+        map = new HashMap();
+    }
+    
+    public int get(int key) {
+        if (!map.containsKey(key)) return -1;
+        
+        ListNode n = map.get(key);
+        
+        pushToHead(n);
+        
+        return n.val;
+    }
+    
+    // 1. not exist
+    //      1) full: put to head and then remove tail
+    //      2) not full: put to head
+    // 2. exist: update and then put to head.
+    public void put(int key, int value) {
+        ListNode n = null;
+        boolean isFull = false;
+        if (map.containsKey(key)) {
+            n = map.get(key);
+            n.val = value;
+        } else {
+            n = new ListNode(key, value);
+            size -= 1;
+            if (size < 0) isFull = true;
+            map.put(key, n);
+        }
+        pushToHead(n);
+        
+        if (isFull) {
+            removeTail();
+        }
+        
+    }
+    
+    private void pushToHead(ListNode node) {
+        if (node.next != null) {
+            node.prev.next = node.next;
+            node.next.prev = node.prev;
+        } 
+        ListNode tmp = head.next;
+        head.next = node;
+        node.next = tmp;
+        node.prev = head;
+        tmp.prev = node;
+    }
+    
+    private void removeTail() {
+        ListNode n = tail.prev;
+        map.remove(n.key);
+        n.prev.next = tail;
+        tail.prev = n.prev;
+    }
+}
 
+class ListNode {
+    int key;
+    int val;
+    ListNode prev;
+    ListNode next;
+    public ListNode(int k, int v) {
+        key = k;
+        val = v;
+        prev = null;
+        next = null;
+    }
+}
+/**
+ * Your LRUCache object will be instantiated and called as such:
+ * LRUCache obj = new LRUCache(capacity);
+ * int param_1 = obj.get(key);
+ * obj.put(key,value);
+ */
 //LRUCache cache = new LRUCache( 2 /* capacity */ );
 /**
 cache.put(1, 1);
