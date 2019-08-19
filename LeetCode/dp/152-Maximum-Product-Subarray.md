@@ -16,6 +16,7 @@ Explanation: The result cannot be 2, because [-2,-1] is not a subarray.
 ```
 ## Answer
 ### Method 1 - Keep track of min and max - :rocket: 1ms (99.11%)
+#### Approach 2
 ```java
 class Solution {
     // 1ms (99.11%)
@@ -43,6 +44,33 @@ class Solution {
             maxVal = Math.max(nums[i], nums[i] * maxVal);
             
             res = Math.max(res, maxVal);
+        }
+        
+        return res;
+    }
+}
+```
+#### Approach 1 - :rocket: 1ms
+```java
+class Solution {
+    public int maxProduct(int[] nums) {
+        if (nums == null || nums.length == 0) return 0;
+        
+        // int[] min = new int[nums.length];
+        // int[] max = new int[nums.length];
+        
+        int min = nums[0], max = nums[0], res = nums[0];
+        
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] > 0) {
+                max = Math.max(nums[i], nums[i] * max);
+                min = nums[i] * min;  
+            } else {
+                int tmp = max;
+                max = Math.max(nums[i], nums[i] * min);
+                min = Math.min(nums[i], nums[i] * tmp);
+            }
+            res = Math.max(res, max);
         }
         
         return res;
