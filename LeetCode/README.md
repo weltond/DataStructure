@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [204](https://leetcode.com/problems/count-primes/) | [Count Primes](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/204-Count-Primes.md) | Easy | Hash Table / Math
 | [203](https://leetcode.com/problems/remove-linked-list-elements/) | [Remove Linked List Elements](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/203-Remove-Linked-List-Elements.md) | Easy | Linked List
 | [201](https://leetcode.com/problems/bitwise-and-of-numbers-range/) | [Bitwise AND of Numbers Range](https://github.com/weltond/DataStructure/blob/master/LeetCode/bit/201-Bitwise-AND-of-Numbers-Range.md) | Medium | Bit
 | [188](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv) | [Best time to Buy and Sell Stock IV](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/188-Best-Time-to-Buy-and-Sell-Stock-IV.md) | Hard | DP
