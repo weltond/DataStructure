@@ -1,6 +1,7 @@
 // https://leetcode.com/problems/isomorphic-strings/
 
 class Solution {
+    // 3ms
     public boolean isIsomorphic(String s, String t) {
         if (s == null) return true;
 
