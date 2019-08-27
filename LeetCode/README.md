@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [214](https://leetcode.com/problems/shortest-palindrome/) | [Shortest Palindrome](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/214-Shortest-Palindrome.md) | Hard | String
 | [204](https://leetcode.com/problems/count-primes/) | [Count Primes](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/204-Count-Primes.md) | Easy | Hash Table / Math
 | [203](https://leetcode.com/problems/remove-linked-list-elements/) | [Remove Linked List Elements](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/203-Remove-Linked-List-Elements.md) | Easy | Linked List
 | [201](https://leetcode.com/problems/bitwise-and-of-numbers-range/) | [Bitwise AND of Numbers Range](https://github.com/weltond/DataStructure/blob/master/LeetCode/bit/201-Bitwise-AND-of-Numbers-Range.md) | Medium | Bit
