@@ -18,6 +18,10 @@ Input: nums = [1,5,9,1,5,9], k = 2, t = 3
 Output: false
 ```
 ## Answer
+### Method 2 - Bucket - 
+```java
+// TO DO..
+```
 ### Method 1 - TreeSet - :turtle: 24ms (32.80%)
 - Time: O(nlogk)
 ```java
