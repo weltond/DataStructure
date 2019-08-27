@@ -13,6 +13,10 @@ Input: "abcd"
 Output: "dcbabcd"
 ```
 ## Answer
+### Method 2 - [KMP](https://www.cnblogs.com/grandyang/p/4523624.html) -
+```java
+// TO DO...
+```
 ### Method 1 - String - :rocket: 1ms (100%)
 - Time: O(n^2)
 ```java
