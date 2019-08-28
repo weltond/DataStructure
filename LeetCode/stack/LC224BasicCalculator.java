@@ -4,7 +4,38 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.StringTokenizer;
 
-
+class Solution {
+    // 2ms
+    int idx = 0;
+    public int calculate(String s) {
+        int res = 0, sign = 1, len = s.length(), tmp = 0;
+        
+       while (idx < len) {
+            char c = s.charAt(idx++);
+            if (Character.isDigit(c)) {
+                tmp = c - '0';
+                while (idx < len && Character.isDigit(s.charAt(idx))) {
+                    tmp = tmp * 10 + s.charAt(idx++) - '0';
+                }
+                
+                res += tmp * sign;
+            } else if (c == '+') {
+                sign = 1;
+            } else if (c == '-') {
+                sign = -1;
+            } else if (c == '(') {
+                tmp = calculate(s);
+                res += tmp * sign;
+            } else if (c == ')') {
+                return res;
+            }
+           
+        }
+        
+        
+        return res;
+    }
+}
 class Solution {
     // ========== Method 3: Recursion + No stack ==========
     // 2ms (99.77%)
