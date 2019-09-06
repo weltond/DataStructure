@@ -26,6 +26,17 @@ Follow up:
 - Could you do it without using any loop / recursion?
 
 ## Answer
+### Method 2 - Limit Iteration - :rocket: 10ms (100%)
+```java
+class Solution {
+    // ======== Method 2 ======
+    // MAX_VALUE = 2147483647. 3^|log3MAX_VALUE| = 3 ^ (19.65) = 3^19 = 1162261467
+    // 10ms (100%)
+    public boolean isPowerOfThree(int n) {
+        return n > 0 && 1162261467 % n == 0;   
+    }
+}
+```
 ### Method 1 - Naive - :rabbit: 11ms (77.09%)
 ```java
 class Solution {
