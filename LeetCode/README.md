@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [231](https://leetcode.com/problems/power-of-two/) | [Power of Two](https://github.com/weltond/DataStructure/blob/master/LeetCode/bit/231-Power-of-Two.md) | Easy | Bit / Math
 | [229](https://leetcode.com/problems/majority-element-ii/) | [Majority Element II](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/229-Majority-Element-II.md) | Medium | Array
 | [227](https://leetcode.com/problems/basic-calculator-ii/) | [Basic Calculator II](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/227-Basic-Calculator-II.md) | Medium | String
 | [220](https://leetcode.com/problems/contains-duplicate-iii/) | [Contains Duplicate III](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/220-Contains-Duplicate-III.md) | Medium | Sort / Ordered Map
