@@ -20,3 +20,28 @@ class Solution {
         return result;
     }
 }
+
+class Solution {
+    public int[] productExceptSelf(int[] nums) {
+        if (nums == null) return null;
+        
+        int[] res = new int[nums.length];
+        int[] prev = new int[nums.length];
+        prev[0] = 1;
+        for (int i = 1; i < nums.length; i++) {
+            prev[i] = nums[i - 1] * prev[i - 1];
+        }
+        
+        int[] suf = new int[nums.length];
+        suf[nums.length - 1] = 1;
+        for (int i = nums.length - 2; i >= 0; i--) {
+            suf[i] = suf[i + 1] * nums[i + 1];
+        }
+        
+        for (int i = 0; i < nums.length; i++) {
+            res[i] = suf[i] * prev[i];
+        }
+        
+        return res;
+    }
+}
