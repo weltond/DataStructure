@@ -16,6 +16,38 @@ Note:
 - n does not exceed 1690.
 
 ## Answer
+### Method 2 -
+```java
+public int nthUglyNumber(int n) {
+    if(n==0 || n==1)return n;
+    int i2 = 0, i3 = 0, i5 = 0;  // current index for 2n, 3n, 5n
+    int[] u = new int[n];
+    int next2 = 2;
+    int next3 = 3;
+    int next5 = 5;
+    u[0] = 1;
+
+    for (int i = 1; i < n; i++) {
+        int minV = Math.min(Math.min(next2, next3), next5);
+        u[i] = minV;
+
+        if (minV == next2) {
+            next2 = u[++i2] * 2;    // update i2 to point to next num to multiply by 2
+        }
+        // continue check minV to skip same value
+        if (minV == next3) {
+            next3 = u[++i3] * 3;
+        }
+
+        if (minV == next5) {
+            next5 = u[++i5] * 5;
+        }
+
+    }
+
+    return u[n - 1];
+}
+```
 ### Method 1 - Heap - :turtle: 67ms (11.71%)
 ```java
 class Solution {
