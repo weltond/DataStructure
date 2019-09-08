@@ -16,7 +16,7 @@ Note:
 - n does not exceed 1690.
 
 ## Answer
-### Method 2 -
+### Method 2 - DP - :rocket: 2ms (98.37%)
 ```java
 public int nthUglyNumber(int n) {
     if(n==0 || n==1)return n;
