@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [282](https://leetcode.com/problems/expression-add-operators/) | [Expression Add Operators](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/282-Expression-Add-Operators.md) | Hard | Divide and Conquer
 | [284](https://leetcode.com/problems/peeking-iterator/) | [Peeking Iterator](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/284-Peeking-Iterator.md) | Medium | Design
 | [283](https://leetcode.com/problems/move-zeroes/) | [Move Zeros](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/283-Move-Zeroes.md) | Easy | Array / Two Pointers
 | [275](https://leetcode.com/problems/h-index-ii/) | [H-Index II](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/275-H-Index-II.md) | Medium | Binary Search
