@@ -2,6 +2,7 @@
 | :-------- | :-------: | :---------: | :------:
 | [284](https://leetcode.com/problems/peeking-iterator/) | [Peeking Iterator](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/284-Peeking-Iterator.md) | Medium | Design
 | [283](https://leetcode.com/problems/move-zeroes/) | [Move Zeros](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/283-Move-Zeroes.md) | Easy | Array / Two Pointers
+| [275](https://leetcode.com/problems/h-index-ii/) | [H-Index II](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/275-H-Index-II.md) | Medium | Binary Search
 | [264](https://leetcode.com/problems/ugly-number-ii/) | [Ugly Number II](https://github.com/weltond/DataStructure/blob/master/LeetCode/math/264-Ugly-Number-II.md) | Medium | Math / DP / Heap
 | [263](https://leetcode.com/problems/ugly-number/) | [Ugly Number](https://github.com/weltond/DataStructure/blob/master/LeetCode/math/263-Ugly-Number.md) | Easy | Math
 | [326](https://leetcode.com/problems/power-of-three/) | [Power of Three](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/326-Power-of-Three.md) | Easy | Math
