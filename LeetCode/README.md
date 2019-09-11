@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [393](https://leetcode.com/problems/utf-8-validation/) | [UTF-8 Validation](https://github.com/weltond/DataStructure/blob/master/LeetCode/bit/393-UTF-8-Validation.md) | Medium | Bit
 | [336](https://leetcode.com/problems/palindrome-pairs/) | [Palindrome Pairs](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/336-Palindrome-Pairs.md) | Hard | String / HashMap / Trie
 | [282](https://leetcode.com/problems/expression-add-operators/) | [Expression Add Operators](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/282-Expression-Add-Operators.md) | Hard | Divide and Conquer
 | [284](https://leetcode.com/problems/peeking-iterator/) | [Peeking Iterator](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/284-Peeking-Iterator.md) | Medium | Design
