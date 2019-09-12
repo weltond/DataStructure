@@ -41,6 +41,70 @@ Note:
 5. TimeMap.set and TimeMap.get functions will be called a total of 120000 times (combined) per test case.
 
 ## Answer
+### Method 2 - Binary Search - :rocket: 181ms (97.26%)
+```java
+/**
+ * Your TimeMap object will be instantiated and called as such:
+ * TimeMap obj = new TimeMap();
+ * obj.set(key,value,timestamp);
+ * String param_2 = obj.get(key,timestamp);
+ */
+
+// 181ms (97.26%)
+class TimeMap {
+
+    Map<String, LinkedList<ValTime>> map;
+    public TimeMap() {
+        map = new HashMap();
+    }
+    
+    public void set(String key, String value, int timestamp) {
+        
+        ValTime vt = new ValTime(value, timestamp);
+        
+        map.computeIfAbsent(key, o -> new LinkedList<ValTime>()).add(vt);
+    }
+    
+    public String get(String key, int timestamp) {
+        if (!map.containsKey(key)) return "";
+        LinkedList<ValTime> list = map.get(key);
+        int size = list.size();
+        
+        int lastTime = list.get(size - 1).getT();
+        if (timestamp > lastTime) return list.get(size - 1).getV();
+        
+        int firstTime = list.get(0).getT();
+        if (firstTime > timestamp) return "";
+        
+        int l = 0, r = size - 1;
+        while (l < r) {
+            int mid = l + (r - l) / 2;
+            ValTime vt = list.get(mid);
+            if (vt.getT() == timestamp) return vt.getV();
+            else if (vt.getT() < timestamp) l = mid + 1;
+            else r = mid;
+        }
+        
+        int lt = list.get(l).getT(), rt = list.get(r).getT();
+        return lt == timestamp ? list.get(l).getV() : list.get(l - 1).getV();
+    }
+}
+
+class ValTime {
+    String val;
+    int t;
+    public ValTime(String val, int t) {
+        this.val = val;
+        this.t = t;
+    }
+    public int getT() {
+        return this.t;
+    }
+    public String getV() {
+        return this.val;
+    }
+}
+```
 ### Method 1 - TreeMap - :turtle: 265ms (19.42%)
 ```java
 class TimeMap {
