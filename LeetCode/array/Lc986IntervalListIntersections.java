@@ -9,6 +9,41 @@
  *     Interval(int s, int e) { start = s; end = e; }
  * }
  */
+
+class Solution {
+    public int[][] intervalIntersection(int[][] a, int[][] b) {
+        List<int[]> ans = new ArrayList();
+        
+        int i = 0, j = 0;
+        
+        while (i < a.length && j < b.length) {
+            // Let's check if A[i] intersects B[j].
+            // lo - the startpoint of the intersection
+            // hi - the endpoint of the intersection
+            int lo = Math.max(a[i][0], b[j][0]);
+            int hi = Math.min(a[i][1], b[j][1]);
+            // System.out.println(lo+","+hi);
+            if (lo <= hi) {
+                ans.add(new int[]{lo, hi});
+            }
+            
+            if (a[i][1] < b[j][1])
+                i++;
+            else 
+                j++;
+        }
+        
+        int len = ans.size();
+        int[][] res = new int[len][];
+        
+        for (int k = 0; k < len; k++) {
+            res[k] = ans.get(k);
+        }
+        
+        return res;
+    }
+}
+
 class Solution {
     // Idea:
     //      If A[0] has smallest endpoint, it can only intersect B[0]. After, we can discard A[0] since it cannot intersect anything.
