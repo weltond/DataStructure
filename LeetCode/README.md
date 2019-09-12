@@ -2,6 +2,7 @@
 | :-------- | :-------: | :---------: | :------:
 | [981](https://leetcode.com/problems/time-based-key-value-store/) | [Time Based key-value Store](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/981-Time-Based-Key-Value-Store.md) | Medium | Hash Table / Binary Search
 | [393](https://leetcode.com/problems/utf-8-validation/) | [UTF-8 Validation](https://github.com/weltond/DataStructure/blob/master/LeetCode/bit/393-UTF-8-Validation.md) | Medium | Bit
+| [341](https://leetcode.com/problems/flatten-nested-list-iterator/) | [Flatten Nested List Iterator](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/341-Flatten-Nested-List-Iterator.md) | Medium | Design / Stack
 | [336](https://leetcode.com/problems/palindrome-pairs/) | [Palindrome Pairs](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/336-Palindrome-Pairs.md) | Hard | String / HashMap / Trie
 | [282](https://leetcode.com/problems/expression-add-operators/) | [Expression Add Operators](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/282-Expression-Add-Operators.md) | Hard | Divide and Conquer
 | [284](https://leetcode.com/problems/peeking-iterator/) | [Peeking Iterator](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/284-Peeking-Iterator.md) | Medium | Design
