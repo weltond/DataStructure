@@ -1,6 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
-| [621](https://leetcode.com/problems/task-scheduler/) | [Task Scheduler]() | Medium | Greedy / Array / Queue
+| [621](https://leetcode.com/problems/task-scheduler/) | [Task Scheduler](https://github.com/weltond/DataStructure/blob/master/LeetCode/greedy/621-Task-Scheduler.md) | Medium | Greedy / Array / Queue
 | [410](https://leetcode.com/problems/split-array-largest-sum/) | [Split Array Largest Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/410-Split-Array-Largest-Sum.md) | Hard | Binary Search / DP
 | [981](https://leetcode.com/problems/time-based-key-value-store/) | [Time Based key-value Store](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/981-Time-Based-Key-Value-Store.md) | Medium | Hash Table / Binary Search
 | [393](https://leetcode.com/problems/utf-8-validation/) | [UTF-8 Validation](https://github.com/weltond/DataStructure/blob/master/LeetCode/bit/393-UTF-8-Validation.md) | Medium | Bit
