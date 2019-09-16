@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [953](https://leetcode.com/problems/verifying-an-alien-dictionary/) | [Verifying an Alien Dictionary](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/953-Verifying-an-Alien-Dictionary.md) | Easy | Hash Map
 | [621](https://leetcode.com/problems/task-scheduler/) | [Task Scheduler](https://github.com/weltond/DataStructure/blob/master/LeetCode/greedy/621-Task-Scheduler.md) | Medium | Greedy / Array / Queue
 | [410](https://leetcode.com/problems/split-array-largest-sum/) | [Split Array Largest Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/410-Split-Array-Largest-Sum.md) | Hard | Binary Search / DP
 | [981](https://leetcode.com/problems/time-based-key-value-store/) | [Time Based key-value Store](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/981-Time-Based-Key-Value-Store.md) | Medium | Hash Table / Binary Search
