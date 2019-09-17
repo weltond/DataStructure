@@ -34,6 +34,7 @@ Note:
 
 ## Answer
 ### Method 1 - Naive - :1ms (42.07%)
+**Wrong Solution below when two words are the same. However, LeetCode accepted the following code......**
 ```java
 class Solution {
     public boolean isAlienSorted(String[] words, String order) {
