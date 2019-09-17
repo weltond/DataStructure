@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [529](https://leetcode.com/problems/minesweeper/) | [Minesweeper](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/529-Minesweeper.md) | Medium | DFS / BFS
 | [315](https://leetcode.com/problems/count-of-smaller-numbers-after-self/) | [Count of Smaller Nums After Self](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/315-Count-of-Smaller-Numbers-After-Self.md) | Hard | BS / D&C / Sort / Binary Indexed Tree / Segment Tree
 | [953](https://leetcode.com/problems/verifying-an-alien-dictionary/) | [Verifying an Alien Dictionary](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/953-Verifying-an-Alien-Dictionary.md) | Easy | Hash Map
 | [621](https://leetcode.com/problems/task-scheduler/) | [Task Scheduler](https://github.com/weltond/DataStructure/blob/master/LeetCode/greedy/621-Task-Scheduler.md) | Medium | Greedy / Array / Queue
