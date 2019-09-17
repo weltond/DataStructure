@@ -1,7 +1,7 @@
 Among all leetcode questions, I find that there are at least 5 substring search problem which could be solved by the sliding window algorithm.
 so I sum up the algorithm template here. wish it will help you!
 
-## Template:
+## Template
 ```java
 public class Solution {
     public List<Integer> slidingWindowTemplateByHarryChaoyangHe(String s, String t) {
@@ -57,7 +57,7 @@ public class Solution {
 
 Firstly, here is my sliding solution this question. I will sum up the template below this code.
 
-## Similar questions:
+## Similar questions
 
 - [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
 - [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
