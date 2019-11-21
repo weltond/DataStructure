@@ -1,4 +1,88 @@
 // https://leetcode.com/problems/lru-cache/
+// 20ms (90.74%)
+class LRUCache {
+
+    Node head, tail;
+    int cap;
+    Map<Integer, Node> map; // key, node
+    public LRUCache(int capacity) {
+        head = new Node(0, 0);
+        tail = new Node(0, 0);
+        head.next = tail;
+        tail.pre = head;
+        cap = capacity;
+        map = new HashMap();
+    }
+    
+    public int get(int key) {
+        if (!map.containsKey(key)) return -1;
+        
+        Node n = map.get(key);
+        
+        putToHead(n, true);
+        
+        return n.val;
+    }
+    
+    public void put(int key, int value) {
+        if (cap <= 0) return;
+        
+        Node n = null;
+        if (map.containsKey(key)) {
+            // update value in map
+            n = map.get(key);
+            n.val = value;
+            // use get() to update its position (latest to head)
+            get(key);
+            return;
+        }
+        
+        if (map.size() >= cap) {
+            // remove last element (tail's prev) out of the list
+            Node evict = tail.pre;
+            evict.pre.next = tail;
+            tail.pre = evict.pre;
+            
+            map.remove(evict.key);
+        }
+        
+        n = new Node(key, value);
+        map.put(key, n);
+        
+        putToHead(n, false);
+    }
+    
+    private void putToHead(Node n, boolean isExist) {
+        if (isExist) {
+            Node prev = n.pre;
+            prev.next = n.next;
+            n.next.pre = prev;
+        }
+        
+        Node move = head.next;
+        head.next = n;
+        n.pre = head;
+        n.next = move;
+        move.pre = n;
+    }
+}
+
+class Node {
+    Node pre, next;
+    int key, val;
+    public Node(int key, int val) {
+        this.key = key;
+        this.val = val;
+        pre = null;
+        next = null;
+    }
+}
+/**
+ * Your LRUCache object will be instantiated and called as such:
+ * LRUCache obj = new LRUCache(capacity);
+ * int param_1 = obj.get(key);
+ * obj.put(key,value);
+ */
 
 class LRUCache {
     ListNode head, tail;
