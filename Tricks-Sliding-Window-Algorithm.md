@@ -4,7 +4,7 @@ so I sum up the algorithm template here. wish it will help you!
 ## Template
 ```java
 public class Solution {
-    public List<Integer> slidingWindowTemplateByHarryChaoyangHe(String s, String t) {
+    public List<Integer> slidingWindowTemplate(String s, String t) {
         //init a collection or int value to save the result according the question.
         List<Integer> result = new LinkedList<>();
         if(t.length()> s.length()) return result;
