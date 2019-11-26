@@ -57,3 +57,35 @@ class Solution {
         return res;
     }
 }
+
+class Solution {
+  // ============ Sliding Window ============
+  // 10ms (slower than array algorithm above)
+    public int lengthOfLongestSubstring(String s) {
+        if (s == null) return 0;
+        int res = 0;
+        
+        int begin = 0, end = 0, cnt = 0;
+        int len = s.length();
+        Map<Character, Integer> map = new HashMap();
+        while (end < len) {
+            char c = s.charAt(end);
+            map.put(c, map.getOrDefault(c, 0) + 1);
+            if (map.get(c) > 1) cnt++;
+            end++;
+            
+            while (cnt > 0) {
+                char t = s.charAt(begin);
+                int f = map.get(t);
+                if (f == 2) cnt--;
+                map.put(t, f - 1);
+                
+                begin++;
+            }
+            
+            res = Math.max(res, end - begin);
+        }
+        
+        return res;
+    }
+}
