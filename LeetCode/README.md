@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [30](https://leetcode.com/problems/substring-with-concatenation-of-all-words/) | [Substring with Concatenation of All words](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/30-Substring-with-Concatenation-of-All-Words.md) | Hard | HashMap / Two Pointers / String
 | [438](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | [Find All Anagrams in a String](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/438-Find-All-Anagrams-in-a-String.md) | Medium | HashTable
 | [529](https://leetcode.com/problems/minesweeper/) | [Minesweeper](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/529-Minesweeper.md) | Medium | DFS / BFS
 | [315](https://leetcode.com/problems/count-of-smaller-numbers-after-self/) | [Count of Smaller Nums After Self](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/315-Count-of-Smaller-Numbers-After-Self.md) | Hard | BS / D&C / Sort / Binary Indexed Tree / Segment Tree
