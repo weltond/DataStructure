@@ -17,6 +17,36 @@ Note:
 - The string will only contain lowercase characters a-z. The maximum length of the string is 50000.
 
 ## Answer
+### Method 2 - Greedy - :turtle: 9ms (43.69%)
+```java
+class Solution {
+    // ========== Method 2: Greedy ============
+    // 9ms (43.69%)
+    public boolean validPalindrome(String s) {
+        if (s == null) return true;
+        
+        int l = 0, r = s.length() - 1;
+        
+        while (l < r) {
+            if (s.charAt(l) != s.charAt(r)) {
+                return isPal(s, l + 1, r) || isPal(s, l, r - 1);
+            }
+            l++;
+            r--;
+        }
+        
+        return true;
+    }
+    
+    private boolean isPal(String s, int from, int to) {
+        while (from < to) {
+            if (s.charAt(from++) != s.charAt(to--)) return false;
+        }
+        
+        return true;
+    }
+}
+```
 ### Method 1 - DFS - :rocket: 6ms (92.49%)
 ```java
 class Solution {
