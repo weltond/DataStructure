@@ -19,29 +19,60 @@ Input:
 Output: []
 ```
 ## Answer
-### Method 1 - Sliding Window - 
+### Method 1 - Sliding Window - :rabbit: 8ms (93.48%)
 ```java
 class Solution {
-    public List<Integer> countSmaller(int[] nums) {
-        List<Integer> l = new ArrayList();
-        if (nums == null || nums.length == 0) return l;
+    public List<Integer> findSubstring(String s, String[] words) {
+        List<Integer> res = new LinkedList();
+        int lens = s.length();
+        if (lens == 0 || words.length == 0 || lens < words[0].length() * words.length) return res;
         
-        int[] a = new int[nums.length];
+        int lenm = words.length;
+        int w1 = words[0].length();
         
-        for (int i = nums.length - 2; i >= 0; i--) {
-            int cnt = 0;
-            for (int j = i + 1; j < nums.length; j++) {
-                if (nums[j] < nums[i]) cnt++;
-            }
-            a[i] = cnt;
+        Map<String, Integer> map = new HashMap(), curMap = new HashMap();
+        
+        for (String x : words) {
+            map.put(x, map.getOrDefault(x, 0) + 1);
         }
         
+        String str = null, tmp = null;
+
+        for (int i = 0; i < w1; i++) {
+            int cnt = 0;
+            int start = i;
+            for (int r = i; r + w1 <= lens; r += w1) {
+                str = s.substring(r, r + w1);
+                
+                if (map.containsKey(str)) {
+                    curMap.put(str, curMap.getOrDefault(str, 0) +1);
+                    if (curMap.get(str) <= map.get(str)) cnt++;
+                    
+                    while (curMap.get(str) > map.get(str)){
+                        tmp = s.substring(start, start + w1);                        
+                        start += w1;
+                        curMap.put(tmp, curMap.get(tmp) - 1);
+
+                        if (curMap.get(tmp) < map.get(tmp)) cnt--;
+                    }
+                    
+                    if (cnt == lenm) {
+                        res.add(start);
+                        tmp = s.substring(start, start + w1);
+                        curMap.put(tmp, curMap.get(tmp) - 1);
+                        start += w1;
+                        cnt--;
+                    }
+                } else {
+                    curMap.clear();
+                    cnt = 0;
+                    start = r + w1;
+                }
+            }
+            curMap.clear();
+        }
         
-        
-        for (int i = 0; i < nums.length; i++) 
-            l.add(a[i]);
-        
-        return l;
+        return res;
     }
 }
 ```
