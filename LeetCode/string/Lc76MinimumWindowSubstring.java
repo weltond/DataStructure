@@ -1,5 +1,45 @@
 class Solution {
     public String minWindow(String s, String t) {
+        if (s == null || t == null || t.length() == 0 || s.length() == 0) return "";
+        
+        Map<Character, Integer> map = new HashMap();
+        for (char c : t.toCharArray()) {
+            map.put(c, map.getOrDefault(c, 0) + 1);
+        }
+        
+        int start = 0, end = 0, lens = s.length(), len = Integer.MAX_VALUE, ts = 0, te = 0, cnt = 0;
+        
+        while (end < lens) {
+            char c = s.charAt(end);
+            if (map.containsKey(c)) {
+                int f = map.get(c);
+                if (f == 1) cnt++;
+                map.put(c, f - 1);
+            }
+            end++;
+            while (cnt == map.size()) {
+                char tmp = s.charAt(start);
+                if (map.containsKey(tmp)) {
+                    int freq = map.get(tmp);
+                    if (freq == 0) cnt--;
+                    map.put(tmp, freq + 1);
+                }
+                
+                if (end - start < len) {
+                    len = end - start;
+                    ts = start;
+                    te = end;
+                }
+                start++;
+            }
+        }
+        
+        return s.substring(ts, te);
+    }
+}
+
+class Solution {
+    public String minWindow(String s, String t) {
         // corner case
         if (s.length() < t.length()) return "";
         
