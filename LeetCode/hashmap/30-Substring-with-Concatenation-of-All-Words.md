@@ -44,18 +44,25 @@ class Solution {
             for (int r = i; r + w1 <= lens; r += w1) {
                 str = s.substring(r, r + w1);
                 
+                // if substring is in the list
                 if (map.containsKey(str)) {
                     curMap.put(str, curMap.getOrDefault(str, 0) +1);
+                    
+                    // increase cnt if list has not been fully used
                     if (curMap.get(str) <= map.get(str)) cnt++;
                     
+                    // sliding window
                     while (curMap.get(str) > map.get(str)){
+                        // get substring from start and remove
                         tmp = s.substring(start, start + w1);                        
                         start += w1;
                         curMap.put(tmp, curMap.get(tmp) - 1);
 
+                        // if tmp substring that is in the list is removed by sliding window, decrease cnt
                         if (curMap.get(tmp) < map.get(tmp)) cnt--;
                     }
                     
+                    // do something after sliding window stopped (match requirement)
                     if (cnt == lenm) {
                         res.add(start);
                         tmp = s.substring(start, start + w1);
@@ -63,7 +70,9 @@ class Solution {
                         start += w1;
                         cnt--;
                     }
-                } else {
+                } 
+                // if substring not in the list, clear curMap and reset cnt, move start to next substring
+                else {    
                     curMap.clear();
                     cnt = 0;
                     start = r + w1;
