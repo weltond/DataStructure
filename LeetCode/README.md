@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [223](https://leetcode.com/problems/rectangle-area/) | [Rectangle Area](https://github.com/weltond/DataStructure/blob/master/LeetCode/math/223-Rectangle-Area.md) | Medium | Math
 | [836](https://leetcode.com/problems/rectangle-overlap/) | [Rectangle Overlap](https://github.com/weltond/DataStructure/blob/master/LeetCode/math/836-Rectangle-Overlap.md) | Easy | Math
 | [680](https://leetcode.com/problems/valid-palindrome-ii/) | [Valid Palidrome II](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/680-Valid-Palindrome-II.md) | Easy | String / DFS / Greedy
 | [415](https://leetcode.com/problems/add-strings/) | [Add Strings](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/415-Add-Strings.md) | Easy | String
