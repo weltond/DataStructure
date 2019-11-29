@@ -17,6 +17,17 @@ Note:
 - Assume that the total area is never beyond the maximum possible value of int.
 
 ## Answer
+### Approach 2 - :rocket: 2ms (100%)
+```java
+class Solution {
+    public int computeArea(int A, int B, int C, int D, int E, int F, int G, int H) {
+        int left = Math.max(A, E), right = Math.max(Math.min(C, G), left);
+        int bot = Math.max(B, F), top = Math.max(Math.min(D, H), bot);
+        
+        return (C - A) * (D - B) - (right - left) * (top - bot) + (G - E) * (H - F);
+    }
+}
+```
 ### Approach 1 - :rocket: 2ms (100%)
 ```java
 class Solution {
