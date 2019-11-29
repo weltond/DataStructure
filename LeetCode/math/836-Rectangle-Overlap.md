@@ -23,7 +23,7 @@ Notes:
 
 ## Answer
 ### Method 1 - Math - :rocket: 0ms
-**Just like [LeetCode 223]().**
+**Just like [LeetCode 223](https://github.com/weltond/DataStructure/blob/master/LeetCode/math/223-Rectangle-Area.md).**
 ```java
 class Solution {
     public boolean isRectangleOverlap(int[] rec1, int[] rec2) {
