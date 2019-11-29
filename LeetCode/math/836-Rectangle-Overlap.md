@@ -23,7 +23,7 @@ Notes:
 
 ## Answer
 ### Method 1 - Math - :rocket: 0ms
-**Just like [223]().
+**Just like [LeetCode 223]().**
 ```java
 class Solution {
     public boolean isRectangleOverlap(int[] rec1, int[] rec2) {
