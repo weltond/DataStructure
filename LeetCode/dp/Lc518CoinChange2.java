@@ -22,6 +22,8 @@ Explanation: there are four ways to make up the amount:
 For recursion, if we only use dp[rem], when rem = 3 at first, dp[rem] = 2. However, the next time
 when rem = 3, there should be only one result which means dp[rem = 3] cannot be used here.
 Hence, we need a 2-d array to store dp[rem][first/last i coins are used]
+
+Note: Be careful dp[][] can be 0. So we need to initialize the array or make it Integer. 
 */
 class Solution {
     
