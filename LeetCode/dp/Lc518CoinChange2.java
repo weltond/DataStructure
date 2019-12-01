@@ -25,6 +25,9 @@ Hence, we need a 2-d array to store dp[rem][first/last i coins are used]
 
 Note: Be careful dp[][] can be 0. So we need to initialize the array or make it Integer. 
 */
+
+
+
 class Solution {
     
     // =========== Method 2: DP =============
@@ -59,7 +62,28 @@ class Solution {
     }
     
     // Approach 1: 2D array: 8ms (32.35%)
+  class Solution {
     public int change(int amount, int[] coins) {
+        if (amount == 0) return 1;
+        
+        if (coins == null || coins.length == 0) return 0;
+        int[][] dp = new int[amount + 1][coins.length];
+        
+        for (int i = 0; i < coins.length; i++) {
+            dp[0][i] = 1;
+        }
+        
+        for (int i = 1; i <= amount; i++) {
+            for (int j = 0; j < coins.length; j++) {
+                dp[i][j] = (j - 1 < 0 ? 0 : dp[i][j - 1]) + (i - coins[j] < 0 ? 0 : dp[i - coins[j]][j]);
+            }
+        }
+        
+        return dp[amount][coins.length - 1];
+    }
+}
+  
+  public int change(int amount, int[] coins) {
         if (amount == 0) return 1;
         if (coins == null || coins.length < 1) return 0;
         
