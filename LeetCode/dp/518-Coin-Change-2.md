@@ -40,7 +40,7 @@ You can assume that
 
 ## Answer
 ### Method 2 - DP
-#### Approach 2 - 1D Array - :rocket: 1ms (100%)
+#### Approach 2 - 1D Array 
 
 ```
 input: 5 [5,1,2]
@@ -57,7 +57,7 @@ However, if 1D Array, it's better to iterate from left to right!
 
 ```
 
-- Left to right
+- Left to right - :rocket: 1ms (100%)
 ```java
 public int change(int amount, int[] coins) {
         int[] dp = new int[amount + 1];
@@ -70,6 +70,8 @@ public int change(int amount, int[] coins) {
         return dp[amount];
     }
 ```
+
+- Left to right 2 - :rocket: 3ms (50.90%)
 
 ```java
 class Solution {
