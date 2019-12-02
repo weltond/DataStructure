@@ -338,7 +338,7 @@
 | [670](https://leetcode.com/problems/maximum-swap/) | [Maximum Swap](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc670MaximumSwap.java) | Medium | Array / Math
 | [75](https://leetcode.com/problems/sort-colors/) | [Sort Colors](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc75SortColors.java) | Medium | Array / Two Pointers / Sort
 | [137](https://leetcode.com/problems/single-number-ii/) | [Single Number II](https://github.com/weltond/DataStructure/blob/master/LeetCode/bit/Lc137SingleNumberII.java) | Medium | Bit
-| [518](https://leetcode.com/problems/coin-change-2/) | [Coin Change 2](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc518CoinChange2.java) | Medium | DP 
+| [518](https://leetcode.com/problems/coin-change-2/) | [Coin Change 2](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/518-Coin-Change-2.md) | Medium | DP 
 | [409](https://leetcode.com/problems/longest-palindrome/) | [Longest Palindrome](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc409LongestPalindrome.java) | Easy | Hash Table
 | [733](https://leetcode.com/problems/flood-fill/) | [Flood Fill](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/Lc733FloodFill.java) | Easy | DFS
 | [819](https://leetcode.com/problems/most-common-word/) | [Most Common Word](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc819MostCommonWord.java) | Easy | String
