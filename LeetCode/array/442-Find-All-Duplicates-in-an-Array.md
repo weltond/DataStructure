@@ -37,3 +37,9 @@ class Solution {
     }
 }
 ```
+
+### Method 1 - HashSet - :turtle: 28ms
+
+```java
+
+```
