@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [315](https://leetcode.com/problems/count-of-smaller-numbers-after-self/) | [Count of Smaller Numbers After self](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/315-Count-of-Smaller-Numbers-After-Self.md) | BS / D&C / Sort / Segment Tree / Binary Indexed Tree
 |[406](https://leetcode.com/problems/queue-reconstruction-by-height/) | [Queue Reconstruction by Height](https://github.com/weltond/DataStructure/blob/master/LeetCode/greedy/406-Queue-Reconstruction-by-Height.md) | Medium | Greedy
 | [698](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/) | [Partition to K Equal Sum Subsets](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/698-Partition-to-K-Equal-Sum-Subsets.md) | Medium | DP / Recursion
 | [442](https://leetcode.com/problems/find-all-duplicates-in-an-array/) | [Find All Duplicates in Array](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/442-Find-All-Duplicates-in-an-Array.md) | Medium | Array
