@@ -38,7 +38,70 @@ Note:
 - There will not be any duplicated flights or self cycles.
 
 ## Answer
+### Method 2 - BFS - :rabbit: 8ms (80.89%)
+
+```java
+class Solution {
+    int res;
+    public int findCheapestPrice(int n, int[][] flights, int src, int dst, int k) {
+        res = Integer.MAX_VALUE;
+        
+        Map<Integer, List<int[]>> map = new HashMap();
+        
+        for (int[] arr : flights) {
+            int start = arr[0];
+            int end = arr[1];
+            int cost = arr[2];
+            map.computeIfAbsent(start, o -> new LinkedList<int[]>()).add(new int[]{end, cost});
+        }
+        
+        Queue<int[]> q = new LinkedList();
+        q.offer(new int[]{src, 0});
+        
+        // Set<Integer> seen = new HashSet();
+        
+        while (!q.isEmpty()) {
+            int size = q.size();
+            k--;
+            for (int i = 0; i < size; i++) {
+                int[] array = q.poll();
+                int cur = array[0];
+                int curCost = array[1];
+                
+                // ==== SAME ====
+                /**
+                if (cur == dst) {
+                    res = Math.min(res, curCost);
+                } 
+                */
+                
+                if (!map.containsKey(cur)) continue;
+                
+                //seen.add(cur);
+                
+                for (int[] a : map.get(cur)) {
+                    
+                    if (a[0] == dst) {
+                        res = Math.min(res, a[1] + curCost);
+                    }
+
+                    if (a[1] + curCost > res) continue;
+
+                    q.offer(new int[]{a[0], a[1] + curCost});
+                }
+            }
+            
+            if (k == -1) break;
+        }
+        
+        return res == Integer.MAX_VALUE ? -1 : res;
+    }
+    
+}
+```
+
 ### Method 1 - DFS - :turtle: 145ms (5.00%)
+
 ```java
 class Solution {
     // ========= Method 1 : DFS ==========
