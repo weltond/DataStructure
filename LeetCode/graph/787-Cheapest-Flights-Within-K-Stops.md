@@ -38,6 +38,47 @@ Note:
 - There will not be any duplicated flights or self cycles.
 
 ## Answer
+### Method 3 - Dijkstra - :rabbit: 12ms (61.72%)
+
+```java
+class Solution {
+    public int findCheapestPrice(int n, int[][] flights, int src, int dst, int k) {
+        Map<Integer, List<int[]>> map = new HashMap();
+        
+        for (int[] arr : flights) {
+            int start = arr[0];
+            int end = arr[1];
+            int cost = arr[2];
+            map.computeIfAbsent(start, o -> new LinkedList<int[]>()).add(new int[]{end, cost});
+        }
+        
+        PriorityQueue<int[]> pq = new PriorityQueue<int[]>((o1, o2) -> o1[1] - o2[1]);
+        pq.offer(new int[]{src, 0, k + 1});
+                
+        while (!pq.isEmpty()) {
+            int[] top = pq.remove();
+            int cur = top[0];
+            int curCost = top[1];
+            int stops = top[2];
+
+            if (cur == dst) return curCost;    
+            
+            if (stops > 0) {
+                if (!map.containsKey(cur)) continue;
+                for (int[] nexts : map.get(cur)) {
+                    int next = nexts[0];
+                    int cost = nexts[1];
+                    pq.offer(new int[]{next, curCost + cost, stops - 1});
+                }
+            }
+        }
+        
+        return -1;
+    }
+    
+}
+```
+
 ### Method 2 - BFS - :rabbit: 8ms (80.89%)
 
 ```java
