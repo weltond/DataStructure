@@ -40,6 +40,8 @@ Note:
 ## Answer
 ### Method 3 - Dijkstra - :rabbit: 12ms (61.72%)
 
+It's like default Dijkstra, but we need to throw those `out-of-stops` distance away.
+
 ```java
 class Solution {
     public int findCheapestPrice(int n, int[][] flights, int src, int dst, int k) {
