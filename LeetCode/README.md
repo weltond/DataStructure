@@ -166,8 +166,8 @@
 |  695 | [Max Area Of Island](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/Lc695MaxAreaOfIsland.java) | Medium |
 |  630 | [Course Schedule III](https://github.com/weltond/DataStructure/blob/master/LeetCode/greedy/Lc630CourseScheduleIII.java) | 
 | [373](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/) | [Find K Pairs With Smallest Sums](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/Lc373FindKPiarsWithSmallestSums.java) | Medium | Heap
-|  767 | [Reorganize String](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/Lc767ReorganizeString.java) | |
-|  23 | [Merge K Sorted Lists](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc23MergeKSortedLists.java) | |
+|  [767](https://leetcode.com/problems/reorganize-string/) | [Reorganize String](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/767-Reorganize-String.md) | |
+|  23 | [Merge K Sorted Lists](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc23MergeKSortedLists.java) | Medium | String / Heap / Greedy / Sort
 |  224 | [Basic Calculator](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/LC224BasicCalculator.java) | |
 |  76 | [Minimum Window Substring](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc76MinimumWindowSubstring.java) | |
 |  91 | [DecodeWays](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc91DecodeWays.java) | |
