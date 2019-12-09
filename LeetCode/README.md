@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [636](https://leetcode.com/problems/exclusive-time-of-functions/) | [Exclusive Time of Functions](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/636-Exclusive-Time-of-Functions.md) | Medium | Stack
 | [432](https://leetcode.com/problems/all-oone-data-structure/) | [All O(1) Data Structure](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/432-All-O-one-Data-Structure.md) | Hard | Design
 | [315](https://leetcode.com/problems/count-of-smaller-numbers-after-self/) | [Count of Smaller Numbers After self](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/315-Count-of-Smaller-Numbers-After-Self.md) | Hard | Binary Search / D&C / Sort / Segment Tree / Binary Indexed Tree
 |[406](https://leetcode.com/problems/queue-reconstruction-by-height/) | [Queue Reconstruction by Height](https://github.com/weltond/DataStructure/blob/master/LeetCode/greedy/406-Queue-Reconstruction-by-Height.md) | Medium | Greedy
