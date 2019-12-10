@@ -35,6 +35,42 @@ Note:
 We do not know how the threads will be scheduled in the operating system, even though the numbers in the input seems to imply the ordering. The input format you see is mainly to ensure our tests' comprehensiveness.
 
 ## Answer
+### Method 2 - AtomicInteger - :rocket: 8ms (98.15%)
+
+```java
+class Foo {
+    private AtomicInteger jobDone;
+    public Foo() {
+        jobDone = new AtomicInteger(0);
+    }
+
+    public void first(Runnable printFirst) throws InterruptedException {
+        
+        // printFirst.run() outputs "first". Do not change or remove this line.
+        printFirst.run();
+        
+        jobDone.getAndIncrement();
+    }
+
+    public void second(Runnable printSecond) throws InterruptedException {
+        while (jobDone.get() != 1)  ;
+        
+        // printSecond.run() outputs "second". Do not change or remove this line.
+        printSecond.run();
+        
+        jobDone.getAndIncrement();
+    }
+
+    public void third(Runnable printThird) throws InterruptedException {
+        while (jobDone.get() != 2)  ;
+        
+        // printThird.run() outputs "third". Do not change or remove this line.
+        printThird.run();
+        
+    }
+}
+```
+
 ### Method 1 - Semaphore - :turtle: 24ms (5.73%)
 
 ```java
