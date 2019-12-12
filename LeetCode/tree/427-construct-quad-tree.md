@@ -31,6 +31,59 @@ Note:
 ## Answer
 ### Method 1 - DFS - :rocket: 1ms (99.75%)
 
+#### Precise Approach
+
+```java
+/*
+// Definition for a QuadTree node.
+class Node {
+    public boolean val;
+    public boolean isLeaf;
+    public Node topLeft;
+    public Node topRight;
+    public Node bottomLeft;
+    public Node bottomRight;
+
+    public Node() {}
+
+    public Node(boolean _val,boolean _isLeaf,Node _topLeft,Node _topRight,Node _bottomLeft,Node _bottomRight) {
+        val = _val;
+        isLeaf = _isLeaf;
+        topLeft = _topLeft;
+        topRight = _topRight;
+        bottomLeft = _bottomLeft;
+        bottomRight = _bottomRight;
+    }
+};
+*/
+class Solution {
+    public Node construct(int[][] grid) {
+        return constructQuad(grid, 0, 0, grid.length);
+    }
+    
+    private Node constructQuad(int[][] grid, int i, int j, int len){
+        if(len == 1){
+            return new Node(grid[i][j] == 1, true, null, null, null, null);
+        }
+        Node topLeft = constructQuad(grid, i, j, len/2);
+        Node topRight = constructQuad(grid, i, j+len/2, len/2);
+        Node bottomLeft = constructQuad(grid, i+len/2, j, len/2);
+        Node bottomRight = constructQuad(grid, i+len/2, j + len/2, len/2);
+        
+        if(topLeft.isLeaf && topRight.isLeaf 
+           && bottomLeft.isLeaf && bottomRight.isLeaf 
+           && topLeft.val==topRight.val && topRight.val==bottomLeft.val 
+           && bottomLeft.val == bottomRight.val){
+            return new Node(topLeft.val, true, null, null, null, null);
+        }
+        return (new Node(true, false, topLeft, topRight, bottomLeft, bottomRight));
+    }
+}
+```
+
+
+#### My Approach
+
 ```java
 /*
 // Definition for a QuadTree node.
