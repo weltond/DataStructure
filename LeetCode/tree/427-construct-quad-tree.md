@@ -31,7 +31,7 @@ Note:
 ## Answer
 ### Method 1 - DFS - :rocket: 1ms (99.75%)
 
-#### Precise Approach
+- Precise Approach
 
 ```java
 /*
@@ -82,7 +82,7 @@ class Solution {
 ```
 
 
-#### My Approach
+- My Approach
 
 ```java
 /*
