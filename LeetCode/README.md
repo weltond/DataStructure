@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [977](https://leetcode.com/problems/squares-of-a-sorted-array/) | [Squares of a Sorted Array](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/977-squares-of-a-sorted-array.md) | Easy | Array / Two Pointer
 | [316](https://leetcode.com/problems/remove-duplicate-letters/) | [Remove Duplicate Letters](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/316-remove-duplicate-letters.md) | Hard | Stack
 | [419](https://leetcode.com/problems/battleships-in-a-board/) | [Battleships in a Board](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/419-battleships-in-a-board.md) | Medium | DFS
 [ 417](https://leetcode.com/problems/pacific-atlantic-water-flow/) | [Pacific Atlantic Water Flow](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/417-pacific-atlantic-water-flow.md) | Medium | DFS / BFS
