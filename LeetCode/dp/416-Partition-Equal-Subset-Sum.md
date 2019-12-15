@@ -27,7 +27,57 @@ Explanation: The array cannot be partitioned into equal sum subsets.
 ```
 
 ## Answer
+### Method 2 - DFS - :rocket: 4ms(87.33%)
+
+```java
+class Solution {
+    Boolean[][] memo;
+    public boolean canPartition(int[] nums) {
+        if (nums == null || nums.length == 0) return false;
+        
+        
+        
+        int sum = 0;
+        
+        for (int i = 0; i < nums.length; i++) {
+            sum += nums[i];
+        }
+        
+        if (sum % 2 != 0) return false;
+        
+        int each = sum / 2;
+        memo = new Boolean[nums.length][each + 1];
+
+        return dfs(nums, each, 0, 2, each, new boolean[nums.length]);
+    }
+    
+    private boolean dfs(int[] nums, int subSum, int start, int k, int sum, boolean[] used) {
+        if (memo[start][subSum] != null) return memo[start][subSum];
+        
+        if (k == 0) return true;
+        
+        if (subSum == 0) {
+            return dfs(nums, sum, 0, k - 1, sum, used);
+        }
+        
+        for (int i = start; i < nums.length; i++) {
+            if (used[i] || subSum < nums[i]) continue;
+            
+            used[i] = true;
+            
+            if (dfs(nums, subSum - nums[i], i, k, sum, used)) return true;
+            
+            used[i] = false;
+        }
+        
+        memo[start][subSum] = false;
+        return false;
+    }
+}
+```
+
 ### Method 1 - DP - :rabbit: 17ms (43.08%)
+
 ```java
 class Solution {
     // ======== Method 1: DP =========
