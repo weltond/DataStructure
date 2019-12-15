@@ -6,6 +6,49 @@ paragraph = "Bob hit a ball, the hit BALL flew far after it was hit."
 banned = ["hit"]
 Output: "ball"
 */
+
+// 3ms (99.75%)
+class Solution {
+    public String mostCommonWord(String paragraph, String[] banned) {
+        Set<String> set = new HashSet();
+        for (String s : banned) 
+            set.add(s);
+        
+        paragraph += ".";
+        String ret = "";
+        int max = 0;
+        Map<String, Integer> map = new HashMap();
+        StringBuilder sb = new StringBuilder();
+        
+        for (char c : paragraph.toCharArray()) {
+            c = Character.toLowerCase(c);
+            if (c < 'a' || c > 'z') {
+                if (sb.length() != 0) {
+                    String tmp = sb.toString();
+                    if (set.contains(tmp)) {
+                        sb = new StringBuilder();
+                        continue;
+                    }
+                    
+                    int freq = map.getOrDefault(tmp, 0) + 1;
+                    map.put(tmp, freq);
+                    if (freq > max) {
+                        ret = tmp;
+                        max = freq;
+                    }
+                    
+                    sb = new StringBuilder();
+                }
+            } else {
+                sb.append(c);
+            }
+            
+        }
+        //System.out.println(map);
+        return ret;
+    }
+}
+
 class Solution {
     // 4ms
     public String mostCommonWord(String paragraph, String[] banned) {
