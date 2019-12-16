@@ -27,6 +27,36 @@ Note:
 - The knight always initially starts on the board.
 
 ## Answer
+### Method 2 - DP - :turtle: 8ms (22.72%)
+
+```java
+class Solution {
+    int[][] dir = {{-1, 2}, {-2, 1}, {-2, -1}, {-1, -2}, {1, -2}, {2, -1}, {2, 1}, {1, 2}};
+    
+    public double knightProbability(int N, int K, int r, int c) {
+        double[][][] dp = new double[N][N][K + 1];
+        dp[r][c][0] = 1.0;
+        
+        for (int k = 0; k <= K; k++) {
+            for (int x = 0; x < N; x++) {
+                for (int y = 0; y < N; y++) {
+                    for (int d = 0; d < 8; d++) {
+                        int nx = x + dir[d][0];
+                        int ny = y + dir[d][1];
+                        if (nx < 0 || ny < 0 || nx >= N || ny >= N) continue;
+                        if (k == 0) dp[nx][ny][k] = 1.0;
+                        else dp[nx][ny][k] += dp[x][y][k - 1] / 8;
+                    }
+                }
+            }
+        }
+        
+        return dp[r][c][K];
+    }
+    
+}
+```
+
 ### Method 1 - DFS + memo - :rocket: 4ms (83.09%)
 
 ```java
