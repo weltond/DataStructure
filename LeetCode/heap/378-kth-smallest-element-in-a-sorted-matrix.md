@@ -21,10 +21,31 @@ Note:
 - You may assume k is always valid, 1 ≤ k ≤ n2.
 
 ## Answer
-### Method 2 - Binary Search - 
+### Method 2 - Binary Search - :rocket: 1ms (85.71%)
 
 ```java
-
+class Solution {
+    public int kthSmallest(int[][] matrix, int k) {
+        int row = matrix.length, col = matrix[0].length;
+        int lo = matrix[0][0], hi = matrix[row - 1][col - 1];
+        
+        while (lo < hi) {
+            int mid = lo + (hi - lo) / 2;
+            int cnt = 0, j = col - 1;
+            
+            for (int i = 0; i < row; i++) {
+                while (j >= 0 && matrix[i][j] > mid) j--;
+                
+                cnt += (j + 1); // how many is greater than mid
+            }
+            
+            if (cnt < k) lo = mid + 1;
+            else hi = mid;
+        }
+        
+        return lo;
+    }
+}
 ```
 
 ### Method 1 - Heap - :turtle: 19ms (41.38%)
