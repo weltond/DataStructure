@@ -16,7 +16,9 @@ Input: grid =
  [0,1,0,0,0,0,0,1],
  [0,0,0,0,0,0,0,1],
  [0,0,0,0,0,0,0,0]]
+ 
 Output: 10
+
 Explanation:
 There are 2 contaminated regions.
 On the first day, add 5 walls to quarantine the viral region on the left. The board after the virus spreads is:
@@ -36,7 +38,9 @@ Input: grid =
 [[1,1,1],
  [1,0,1],
  [1,1,1]]
+ 
 Output: 4
+
 Explanation: Even though there is only one cell saved, there are 4 walls built.
 Notice that walls are only built on the shared boundary of two different cells.
 ```
@@ -48,7 +52,9 @@ Input: grid =
 [[1,1,1,0,0,0,0,0,0],
  [1,0,1,0,1,1,1,1,1],
  [1,1,1,0,0,0,0,0,0]]
+ 
 Output: 13
+
 Explanation: The region on the left only builds two new walls.
 ```
 
