@@ -42,6 +42,42 @@ Constraints:
 - `1 <= k <= nums.length`
 
 ## Answer
+### Method 3 - Greedy - 
+
+```java
+// TO DO...
+```
+
+### Method 2 - PriorityQueue - :rabbit: 76ms (69.97%)
+
+```java
+class Solution {
+    public boolean isPossibleDivide(int[] nums, int k) {
+        if (nums.length % k != 0) return false;
+        
+        Map<Integer, Integer> map = new HashMap(); // val, freq
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        
+        for (int n : nums) map.put(n, map.getOrDefault(n, 0) + 1);
+        
+        for (int n : map.keySet()) pq.offer(n);
+        
+        while (!pq.isEmpty()) {
+            int val = pq.poll();
+            if (map.get(val) == 0) continue;    // means the val is used.
+            int freq = map.get(val);
+            
+            for (int i = 0; i < k; i++) {
+                if (!map.containsKey(val + i) || map.get(val + i) < freq) return false;
+                map.put(val + i, map.get(val + i) - freq);
+            }
+        }
+        
+        return true;
+    }
+}
+```
+
 ### Method 1 - Sort - :turtle: 886ms (5.07%)
 
 ```java
