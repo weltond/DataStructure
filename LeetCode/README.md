@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [1302](https://leetcode.com/problems/deepest-leaves-sum/) | [Deepest Leaves Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/1302-deepest-leaves-sum.md) | Medium | Tree / DFS
 | [1306](https://leetcode.com/problems/jump-game-iii/) | [Jump Game III](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/1306-jump-game-iii.md) | Medium | BFS / Graph
 | [472](https://leetcode.com/problems/concatenated-words/) | [Concatenated Words](https://github.com/weltond/DataStructure/blob/master/LeetCode/trie/472-concatenated-words.md) | Hard | DP / DFS / Trie
 | [749](https://leetcode.com/problems/contain-virus/) | [Contain Virus](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/749-contain-virus.md) | Hard | DFS
