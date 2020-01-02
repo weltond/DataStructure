@@ -45,7 +45,7 @@ Constraints:
 - Each node's value is between [-10^5, 10^5].
 
 ## Answer
-### Method 1 - DFS + Two pointers - :turtle: 1051ms (5.20%)
+### Method 1 - DFS + Two pointers - :turtle: 766ms (5.20%)
 
 ```java
 /**
