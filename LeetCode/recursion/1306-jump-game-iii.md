@@ -42,7 +42,31 @@ Constraints:
 - `0 <= start < arr.length`
 
 ## Answer
+### Method 2 - BFS - :rocket: 0ms
+
+```java
+class Solution {
+    public boolean canReach(int[] arr, int start) {
+        Queue<Integer> q = new LinkedList();
+        q.offer(start);
+        boolean[] seen = new boolean[arr.length];
+        while (!q.isEmpty()) {
+            int idx = q.poll();
+            if (arr[idx] == 0) return true;
+            seen[idx] = true;
+            
+            if (idx + arr[idx] < arr.length && !seen[idx + arr[idx]]) q.offer(idx + arr[idx]);
+            if (idx - arr[idx] >= 0 && !seen[idx - arr[idx]]) q.offer(idx - arr[idx]);
+        }
+        
+        return false;
+    }
+
+}
+```
+
 ### Method 1 - DFS - :rocket: 0ms
+
 ```java
 class Solution {
     //boolean[] seen;
