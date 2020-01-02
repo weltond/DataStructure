@@ -47,6 +47,8 @@ Constraints:
 ## Answer
 ### Method 1 - DFS + Two pointers - :turtle: 766ms (5.20%)
 
+- See other posts at 01/02/2020 have the same approach. Need to verify the reason my approach takes much time than others.
+
 ```java
 /**
  * Definition for a binary tree node.
