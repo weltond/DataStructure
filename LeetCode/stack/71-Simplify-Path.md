@@ -43,7 +43,38 @@ Output: "/a/b/c"
 ```
 
 ## Answer
+### Method 2 - O(1) space - :rocket: 4ms (90.44%)
+
+```java
+class Solution {
+    public String simplifyPath(String path) {
+        if (path == null || path.length() == 0) return "";
+        
+        String[] strs = path.split("/");
+        StringBuilder sb = new StringBuilder();
+        
+        int skip = 0;
+        for (int i = strs.length - 1; i >= 0; i--) {
+            String s = strs[i];
+            if (s.equals("") || s.equals(".")) continue;
+            else if (s.equals("..")) {
+                skip++;
+            } else {
+                if (skip > 0) {
+                    skip--;
+                    continue;
+                }
+                sb.insert(0, s).insert(0, "/");
+            }
+        }
+        
+        return sb.length() == 0 ? "/" : sb.toString();
+    }
+}
+```
+
 ### Method 1 - Stack - :rocket: 4ms (90.44%)
+
 ```java
 class Solution {
     // 4ms (90.44%)
