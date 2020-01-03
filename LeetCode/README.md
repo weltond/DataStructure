@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [72](https://leetcode.com/problems/edit-distance/) | [Edit Distance](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/72-Edit-Distance.md) | Hard | String / DP
 | [1296](https://leetcode.com/problems/divide-array-in-sets-of-k-consecutive-numbers/) | [Divide Array in Sets of K Consecutive Numbers](https://github.com/weltond/DataStructure/blob/master/LeetCode/greedy/1296-divide-array-in-sets-of-k-consecutive-numbers.md) | Medium | Array / Greedy
 | [1305](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/) | [All Elements in Two BST](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/1305-all-elements-in-two-binary-search-trees.md) | Medium | Tree / Sort
 | [1302](https://leetcode.com/problems/deepest-leaves-sum/) | [Deepest Leaves Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/1302-deepest-leaves-sum.md) | Medium | Tree / DFS
