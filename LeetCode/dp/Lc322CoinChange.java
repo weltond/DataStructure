@@ -3,6 +3,8 @@
 
 class Solution {
     // =========== Method 4: DFS + greedy + pruning ==========
+    // PROBLEM!!!! TLE for this test case: 
+    // [8,7,4,3,90,8,7,4,3,90,8,7,4,3,90,8,7,4,3,90,8,7,4,3,90,8,7,4,3,90,8,7,4,3,90,8,7,4,3,90,8,7,4,3,90,8,7,4,3,90,8,7,4,3,90,8,7,4,3,90,8,7,4,3,90,8,7,4,3,90,8,7,4,3,90,8,7,4,3,90,8,7,4,3,90,8,7,4,3,90,8,7,4,3,90,8,7,4,3,90] 1905
     // if [1,2,5], upper bound of time complexicity is 3 ^ m, where m is max(amount / coins[i]).
     // 7ms
     public int coinChange(int[] coins, int amount) {
