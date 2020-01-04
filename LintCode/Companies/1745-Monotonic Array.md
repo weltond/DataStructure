@@ -27,6 +27,32 @@ Notice
 - -100000 \leq A[i] \leq 100000−100000≤A[i]≤100000
 
 ## Answer
+### Method 2 :rabbit: 423ms (88.81%)
+
+```java
+public class Solution {
+    /**
+     * @param A: a array
+     * @return: is it monotonous
+     */
+    public boolean isMonotonic(int[] a) {
+        if (a == null || a.length <= 2) return true;
+        
+        int inc = 1;
+        
+        if (a[a.length - 1] - a[0] < 0) inc = -1;
+        
+        int i = 1;
+        while (i < a.length) {
+            if (a[i - 1] * inc > a[i] * inc) return false;
+            i++;
+        }
+        
+        return true;
+    }
+}
+```
+
 ### Method 1 - Naive - :rabbit: 427ms (82.09%)
 
 ```java
