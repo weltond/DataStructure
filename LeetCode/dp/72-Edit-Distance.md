@@ -1,4 +1,4 @@
-## [72. Edit Distance](https://leetcode.com/problems/edit-distance/)
+# [72. Edit Distance](https://leetcode.com/problems/edit-distance/)
 
 Given two words word1 and word2, find the minimum number of operations required to convert word1 to word2.
 
@@ -34,6 +34,41 @@ exection -> execution (insert 'u')
 
 ## Answer
 ### Method 2 - DP -
+#### Approach 2 - 1D array - :rocket:3ms (99.82%)
+
+```java
+class Solution {
+    public int minDistance(String word1, String word2) {
+        int len1 = word1.length(), len2 = word2.length();
+        int[] dp = new int[len2 + 1];
+        
+        for (int i = 1; i <= len2; i++) {
+            dp[i] = i;
+        }
+        
+        for (int i = 1; i <= len1; i++) {
+            int topleft = dp[0];
+            dp[0] += 1;
+            for (int j = 1; j <= len2; j++) {
+                int cur = dp[j];
+                if (word1.charAt(i - 1) == word2.charAt(j - 1)) {
+                    dp[j] = topleft;
+                } else {
+                    int del = dp[j] + 1;
+                    int add = dp[j - 1] + 1;
+                    int rep = topleft + 1;
+                    
+                    dp[j] = Math.min(del, Math.min(add, rep));
+                }
+                topleft = cur;
+            }
+        }
+        
+        return dp[len2];
+    }
+}
+```
+
 #### Approach 1 - 2D array - :turtle:7ms (42.13%)
 
 ```java
