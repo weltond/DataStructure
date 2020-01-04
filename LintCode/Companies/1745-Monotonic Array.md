@@ -23,8 +23,8 @@ Output: false
 ```
 
 Notice
-- 1 \leq A.length \leq 500001≤A.length≤50000
-- -100000 \leq A[i] \leq 100000−100000≤A[i]≤100000
+- 1≤A.length≤50000
+- −100000≤A[i]≤100000
 
 ## Answer
 ### Method 2 :rabbit: 423ms (88.81%)
