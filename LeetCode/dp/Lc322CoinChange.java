@@ -18,12 +18,19 @@ class Solution {
     
     private void helper(int level, int[] coins, int rem, int cnt, int[] ans) {
         // last element
-        if (level == 0) {
-            if (rem % coins[level] == 0) {
-                ans[0] = Math.min(ans[0], cnt + rem / coins[level]);
-            }
+//         if (level == 0) {
+//             if (rem % coins[level] == 0) {
+//                 ans[0] = Math.min(ans[0], cnt + rem / coins[level]);
+//             }
+//             return;
+//         }
+        
+        if (rem == 0) {
+            ans[0] = Math.min(ans[0], cnt);
             return;
         }
+        
+        if (level == -1) return;
         
         int maxVal = rem / coins[level];
         
