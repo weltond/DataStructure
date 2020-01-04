@@ -1,5 +1,42 @@
 // https://leetcode.com/problems/coin-change/
+// Compare the following DFS + memo with Method 2 below.
+// 69ms (6.52%)
+public class Solution {
+    int ans = Integer.MAX_VALUE;
+    int[][] memo;
+    public int coinChange(int[] coins, int amount) {
+        // write your code here
+        if (coins == null || coins.length == 0) return 0;
+        
+        Arrays.sort(coins);
 
+        memo = new int[amount + 1][coins.length];
+        
+        ans = dfs(coins, amount, coins.length - 1);
+
+        return ans == Integer.MAX_VALUE ? -1 : ans;
+    }
+    
+    private int dfs(int[] coins, int rem, int lvl) {
+        if (rem == 0) {
+            return 0;
+        }
+        if (memo[rem][lvl] != 0) return memo[rem][lvl];
+        
+        int ret = Integer.MAX_VALUE;
+        for (int i = lvl; i >= 0; i--) {
+            if (rem < coins[i] || coins[i] == 0) continue;
+            int r = dfs(coins, rem - coins[i], i);
+            if (r >= 0 && r < ret) {
+                ret = r + 1;
+            }
+        }
+        
+        memo[rem][lvl] = ret == Integer.MAX_VALUE ? -1 : ret;
+        
+        return ret;
+    }
+}
 
 class Solution {
     // =========== Method 4: DFS + greedy + pruning ==========
