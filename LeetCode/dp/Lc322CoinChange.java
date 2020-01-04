@@ -3,6 +3,7 @@
 
 class Solution {
     // =========== Method 4: DFS + greedy + pruning ==========
+    // if [1,2,5], upper bound of time complexicity is 3 ^ m, where m is max(amount / coins[i]).
     // 7ms
     public int coinChange(int[] coins, int amount) {
         Arrays.sort(coins); // greedy. Iterate from largest value
