@@ -21,7 +21,8 @@ Note:
 - The integer n is in the range [0, 100].
 
 ## Answer
-### Method 1 - Greedy - :rocket: 2ms (100%)
+### Method 2 - Greedy - :rocket: 2ms (100%)
+
 ```java
 class Solution {
     public int leastInterval(char[] tasks, int n) {
@@ -49,6 +50,57 @@ class Solution {
         int res = (maxcnt - 1) * (n + 1) + cnt;
         
         return Math.max(res, tasks.length);
+    }
+}
+```
+
+### Method 1 - PriorityQueue - :turtle: 52ms (11.95%)
+
+```java
+class Solution {
+    public int leastInterval(char[] tasks, int n) {
+        int[] map = new int[26];
+        for (int i = 0; i < tasks.length; i++) {
+            map[tasks[i] - 'A']++;
+        }
+        // max heap
+        PriorityQueue<Integer> pq = new PriorityQueue(Collections.reverseOrder());
+    
+        for (int i : map) {
+            if (i > 0)
+                pq.offer(i);
+        }
+        
+        int res = 0;
+        while (!pq.isEmpty()) {
+            int i = 0;
+            List<Integer> tmp = new LinkedList();
+            
+            // extract 
+            while (i <= n) {
+                // if have remaining elements
+                if (!pq.isEmpty()) {
+                    if (pq.peek() > 1) {
+                        tmp.add(pq.poll() - 1); // add for later put into pq
+                    } else {
+                        pq.poll();
+                    }
+                }
+                
+                res++;
+                
+                // if no more remaining, just return
+                if (pq.isEmpty() && tmp.size() == 0) break;
+                
+                i++;
+            }
+            
+            for (int t : tmp) {
+                pq.offer(t);
+            }
+        }
+        
+        return res;
     }
 }
 ```
