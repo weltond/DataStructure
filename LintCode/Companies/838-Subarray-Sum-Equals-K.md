@@ -23,6 +23,7 @@ subarray [0,1], [1,4], [0,3] and [3,4]
 ## Answer
 ### Method 1 - Prefix Sum - :rabbit: 485ms (84.20%)
 
+```java
 public class Solution {
     /**
      * @param nums: a list of integer
