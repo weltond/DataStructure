@@ -111,6 +111,40 @@ class Solution {
         return dp[0][amount] == Integer.MAX_VALUE ? -1 : dp[0][amount];
     }
     
+    // 972ms
+    public int coinChange(int[] coins, int amount) {
+        // write your code here
+                // write your code here
+        if (coins == null || coins.length == 0) return 0;
+
+        int[][] dp = new int[amount + 1][coins.length + 1];
+        for (int i = 0; i < dp.length; i++)
+            dp[i][0] = Integer.MAX_VALUE;
+        dp[0][0] = 0;
+        for (int i = 0; i < amount + 1; i++) {
+            for (int j = 1; j <= coins.length; j++) {
+                dp[i][j] = dp[i][j - 1];
+                if (coins[j - 1] == 0) continue;
+                for (int k = 0; k <= i / coins[j - 1]; k++) {
+                    if (i < k * coins[j - 1]) continue;
+                    int prev = dp[i - k * coins[j - 1]][j - 1];
+
+                    if (prev < Integer.MAX_VALUE) {
+                        dp[i][j] = Math.min(dp[i][j], prev + k);
+                    }
+
+                }
+            }
+        }
+        // for (int i = 0; i <= amount; i++) {
+        //     for (int j = 0; j <= coins.length; j++) {
+        //         System.out.print(dp[i][j] + " ");
+        //     }
+        //     System.out.println();
+        // }
+        return dp[amount][coins.length] == Integer.MAX_VALUE ? -1 : dp[amount][coins.length];
+    }
+    
     // =====
     // Approach 2. Time = O(n * amount) 19ms 
     /**
