@@ -2,6 +2,7 @@
 
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [945](https://www.lintcode.com/problem/task-scheduler/description?_from=ladder&&fromId=130) | [Task Scheduler]() | Medium | Greedy / Queue / Array
 | [1041](https://www.lintcode.com/problem/reorganize-string/description?_from=ladder&&fromId=130) | [Reorganize String]() | Medium | String
 | [1217](https://www.lintcode.com/problem/total-hamming-distance/description?_from=ladder&&fromId=130) | [Total Hamming Distance]() | Medium | Bit
 | [1506](https://www.lintcode.com/problem/all-nodes-distance-k-in-binary-tree/description?_from=ladder&&fromId=130) | [All Nodes Distance K in BT]() | Medium | Tree / BFS
