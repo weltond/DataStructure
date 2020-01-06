@@ -23,6 +23,47 @@ Only need one meeting room
 ```
 
 ## Answer
+### Method 3 - TreeMap - :rabbit: 302ms (41.80%)
+
+- Same as [My Calendar]()
+
+```java
+/**
+ * Definition of Interval:
+ * public classs Interval {
+ *     int start, end;
+ *     Interval(int start, int end) {
+ *         this.start = start;
+ *         this.end = end;
+ *     }
+ * }
+ */
+
+public class Solution {
+    /**
+     * @param intervals: an array of meeting time intervals
+     * @return: the minimum number of conference rooms required
+     */
+    public int minMeetingRooms(List<Interval> intervals) {
+        // Write your code here
+        TreeMap<Integer, Integer> map = new TreeMap();
+        
+        for (Interval i : intervals) {
+            map.put(i.start, map.getOrDefault(i.start, 0) + 1);
+            map.put(i.end, map.getOrDefault(i.end, 0) - 1);
+        }
+        
+        int res = 0, cnt = 0;
+        for (int k : map.keySet()) {
+            cnt += map.get(k);
+            res = Math.max(res, cnt);
+        }
+        
+        return res;
+    }
+}
+```
+
 ### Method 2 - Sort - :rabbit: 236ms (79.00%)
 
 - Same as [Merge Intervals]()
