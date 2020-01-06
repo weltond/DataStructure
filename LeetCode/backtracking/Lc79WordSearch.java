@@ -18,6 +18,50 @@ Given word = "ABCB", return false.
 */
 
 // DFS backtracking
+public class Solution {
+    int[] dir = new int[]{-1, 0, 1, 0, -1};
+    /**
+     * @param board: A list of lists of character
+     * @param word: A string
+     * @return: A boolean
+     */
+    public boolean exist(char[][] board, String word) {
+        // write your code here
+        if (board == null || board.length == 0) return false;
+        
+        char[] arr = word.toCharArray();
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[0].length; j++) {
+                if (dfs(board, arr, 0, i, j)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    
+    private boolean dfs(char[][] board, char[] word, int lvl, int x, int y) {
+        if (word.length == lvl) return true;
+        
+        if (x >= board.length || y >= board[0].length || x < 0 || y < 0 || board[x][y]== '.') return false;
+        
+        if (board[x][y] != word[lvl]) return false;
+        
+        char c = board[x][y];
+        board[x][y] = '.';
+        for (int i = 0; i < 4; i++) {
+            int nx = x + dir[i];
+            int ny = y + dir[i + 1];
+            
+            if (dfs(board, word, lvl + 1, nx, ny)) {
+                return true;
+            }
+        }
+        board[x][y] = c;
+        
+        return false;
+    }
+}
 
 // Approach 2: 4ms (100%)
 class Solution {
