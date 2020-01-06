@@ -25,7 +25,7 @@ Only need one meeting room
 ## Answer
 ### Method 2 - Sort - :rabbit: 236ms (79.00%)
 
-- Same as [Merge Intervals]
+- Same as [Merge Intervals]()
 
 ```java
 /**
