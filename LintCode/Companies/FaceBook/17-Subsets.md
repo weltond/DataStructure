@@ -37,6 +37,46 @@ Notice
 - The solution set must not contain duplicate subsets.
 
 ## Answer
+### Method 3 - Bit - :rabbit: 251ms (51.40%)
+
+```java
+public class Solution {
+    /**
+     * @param nums: A set of numbers
+     * @return: A list of lists
+     */
+    public List<List<Integer>> subsets(int[] nums) {
+        // write your code here
+        List<List<Integer>> res = new LinkedList();
+        if (nums == null || nums.length == 0) {
+            res.add(new ArrayList());
+            return res;
+        }
+        Arrays.sort(nums);
+        
+        // 1 << n is 2^n
+        // each subset equals to an binary integer between 0 .. 2^n - 1
+        // 0 -> 000 -> []
+        // 1 -> 001 -> [1]
+        // 2 -> 010 -> [2]
+        // ..
+        // 7 -> 111 -> [1,2,3]
+        for (int i = 0; i < (1 << nums.length); i++) {
+            List<Integer> subset = new LinkedList();
+            for (int j = 0; j < nums.length; j++) {
+                // check whether the j-th digit in i's binary representation is 1
+                if ((i & (1 << j)) != 0) {
+                    subset.add(nums[j]);
+                }
+            }
+            res.add(subset);
+        }
+        
+        return res;
+    }
+}
+```
+
 ### Method 2 - BFS - :turtle: 258ms (25.00%)
 
 ```java
