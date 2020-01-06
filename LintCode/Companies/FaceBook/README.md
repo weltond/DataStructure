@@ -2,6 +2,7 @@
 
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [62](https://www.lintcode.com/problem/search-in-rotated-sorted-array/description?_from=ladder&&fromId=130) | [Search in Rotated Sorted Array](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/62-Search-in-Rotated-Sorted-Array.md) | Medium | Binary Search
 | [74](https://www.lintcode.com/problem/first-bad-version/description?_from=ladder&&fromId=130) | [First Bad Version]() | Medium | Binary Search
 | [95](https://www.lintcode.com/problem/validate-binary-search-tree/description?_from=ladder&&fromId=130) | [Validate BST](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/95-Validate-Binary-Search-Tree.md) | Medium | Tree / Divide and Conquer
 | [105](https://www.lintcode.com/problem/copy-list-with-random-pointer/description?_from=ladder&&fromId=130) | [Copy List with Random Pointer](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/105-Copy-List-with-Random-Pointer.md) | Medium | HashTable / LinkedList
