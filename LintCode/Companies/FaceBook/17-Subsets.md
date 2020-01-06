@@ -38,10 +38,37 @@ Notice
 
 ## Answer
 ### Method 1 - DFS - 
-#### Approach 2 -
+#### Approach 2 - :rabbit: 243ms (60.60%)
 
 ```java
-
+public class Solution {
+    /**
+     * @param nums: A set of numbers
+     * @return: A list of lists
+     */
+    public List<List<Integer>> subsets(int[] nums) {
+        // write your code here
+        List<List<Integer>> res = new LinkedList();
+        if (nums == null || nums.length == 0) {
+            res.add(new ArrayList());
+            return res;
+        }
+        Arrays.sort(nums);
+        dfs(nums, 0, new ArrayList(), res);
+        
+        return res;
+    }
+    
+    private void dfs(int[] nums, int lvl, List<Integer> l, List<List<Integer>> res) {
+        res.add(new ArrayList(l));
+        
+        for (int i = lvl; i < nums.length; i++) {
+            l.add(nums[i]);
+            dfs(nums, i + 1, l, res);
+            l.remove(l.size() - 1);
+        }
+    }
+}
 ```
 
 #### Approach 1 - :turtle: 302ms (15.00%)
