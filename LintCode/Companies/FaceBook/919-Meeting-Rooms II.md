@@ -23,6 +23,56 @@ Only need one meeting room
 ```
 
 ## Answer
+### Method 2 - Sort - :rabbit: 236ms (79.00%)
+
+```java
+/**
+ * Definition of Interval:
+ * public classs Interval {
+ *     int start, end;
+ *     Interval(int start, int end) {
+ *         this.start = start;
+ *         this.end = end;
+ *     }
+ * }
+ */
+
+public class Solution {
+    /**
+     * @param intervals: an array of meeting time intervals
+     * @return: the minimum number of conference rooms required
+     */
+    public int minMeetingRooms(List<Interval> intervals) {
+        // Write your code here
+        if (intervals == null || intervals.size() == 0) return 0;
+        
+        int len = intervals.size();
+        int[] start = new int[len];
+        int[] end = new int[len];
+        int t = 0;
+        for (Interval i : intervals) {
+            start[t] = i.start;
+            end[t++] = i.end;
+        }
+        
+        Arrays.sort(start);
+        Arrays.sort(end);
+        
+        int pre = 0, res = 0;
+        
+        for (int i = 0; i < len; i++) {
+            res++;
+            if (start[i] > end[pre]) {
+                res--;
+                pre++;
+            }
+        }
+        
+        return res;
+    }
+}
+```
+
 ### Method 1 - PriorityQueue - :rabbit: 244ms (70.60%)
 
 ```java
