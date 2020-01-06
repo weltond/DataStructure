@@ -2,6 +2,7 @@
 
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [17](https://www.lintcode.com/problem/subsets/description?_from=ladder&&fromId=130) | [Subsets](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/17-Subsets.md) | Medium | Recursion / BFS / Bit
 | [32](https://www.lintcode.com/problem/minimum-window-substring/description?_from=ladder&&fromId=130) | [Minimum Window Substring](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/32-Minimum-Window-Substring.md) | Medium | Two Pointers / HashTable
 | [62](https://www.lintcode.com/problem/search-in-rotated-sorted-array/description?_from=ladder&&fromId=130) | [Search in Rotated Sorted Array](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/62-Search-in-Rotated-Sorted-Array.md) | Medium | Binary Search
 | [74](https://www.lintcode.com/problem/first-bad-version/description?_from=ladder&&fromId=130) | [First Bad Version]() | Medium | Binary Search
