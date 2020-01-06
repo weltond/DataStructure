@@ -37,6 +37,44 @@ Notice
 - The solution set must not contain duplicate subsets.
 
 ## Answer
+### Method 2 - BFS - :turtle: 258ms (25.00%)
+
+```java
+public class Solution {
+    /**
+     * @param nums: A set of numbers
+     * @return: A list of lists
+     */
+    public List<List<Integer>> subsets(int[] nums) {
+        // write your code here
+        List<List<Integer>> res = new LinkedList();
+        if (nums == null || nums.length == 0) {
+            res.add(new ArrayList());
+            return res;
+        }
+        Arrays.sort(nums);
+        
+        Queue<List<Integer>> q = new LinkedList();
+        q.offer(new LinkedList());
+        
+        while (!q.isEmpty()) {
+            List<Integer> subset = q.poll();
+            res.add(subset);
+            
+            for (int i = 0; i < nums.length; i++) {
+                if (subset.size() == 0 || subset.get(subset.size() - 1) < nums[i]) {
+                    List<Integer> next = new LinkedList(subset);
+                    next.add(nums[i]);
+                    q.offer(next);
+                }
+            }
+        }
+        
+        return res;
+    }
+}
+```
+
 ### Method 1 - DFS - 
 #### Approach 2 - :rabbit: 243ms (60.60%)
 
