@@ -2,6 +2,7 @@
 
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [123](https://www.lintcode.com/problem/word-search/description?_from=ladder&&fromId=130) | [Word Search]() | Medium | DFS / Backtracking
 | [137](https://www.lintcode.com/problem/clone-graph/description?_from=ladder&&fromId=130) | [Clone Graph]() | Medium | DFS / HashTable / BFS
 | [190](https://www.lintcode.com/problem/next-permutation-ii/description) | [Next Permutation II]() | Medium | Array
 | [421](https://www.lintcode.com/problem/simplify-path/description?_from=ladder&&fromId=130) | [Simplify Path]() | Medium | String / Stack
