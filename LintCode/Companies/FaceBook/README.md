@@ -2,6 +2,7 @@
 
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [74](https://www.lintcode.com/problem/first-bad-version/description?_from=ladder&&fromId=130) | [First Bad Version]() | Medium | Binary Search
 | [95](https://www.lintcode.com/problem/validate-binary-search-tree/description?_from=ladder&&fromId=130) | [Validate BST](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/95-Validate-Binary-Search-Tree.md) | Medium | Tree / Divide and Conquer
 | [105](https://www.lintcode.com/problem/copy-list-with-random-pointer/description?_from=ladder&&fromId=130) | [Copy List with Random Pointer](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/105-Copy-List-with-Random-Pointer.md) | Medium | HashTable / LinkedList
 | [123](https://www.lintcode.com/problem/word-search/description?_from=ladder&&fromId=130) | [Word Search]() | Medium | DFS / Backtracking
