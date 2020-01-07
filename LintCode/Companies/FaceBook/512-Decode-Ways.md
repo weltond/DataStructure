@@ -30,6 +30,53 @@ Notice
 - 我们不能解码空串，因此若消息为空，你应该返回0。
 
 ## Answer
+### Method 2 - DP - :rocket: 201ms (75.00%)
+
+```java
+public class Solution {
+    /**
+     * @param s: a string,  encoded message
+     * @return: an integer, the number of ways decoding
+     */
+     
+    public int numDecodings(String s) {
+        // write your code here
+        if (s == null || s.length() == 0) return 0;
+        
+        int len = s.length();
+        int[] dp = new int[len + 1];   // from 0th - ith (exclude i), total ways
+        dp[0] = 1;
+        
+        for (int i = 1; i <= len; i++) {
+            if (oneValid(s, i - 1)) {
+                dp[i] += dp[i - 1];
+            }
+            if (twoValid(s, i - 1)) {
+                dp[i] += dp[i - 2];
+            }
+        }
+        
+        return dp[len];
+    }
+    
+    private boolean oneValid(String s, int i) {
+        char c = s.charAt(i);
+        if (c > '0' && c <= '9') return true;
+        return false;
+    }
+    
+    private boolean twoValid(String s, int i) {
+        if (i == 0) return false;
+        
+        char c1 = s.charAt(i - 1), c2 = s.charAt(i);
+        
+        if (c1 == '1' || (c1 == '2' && (c2 >= '0' && c2 <= '6'))) return true;
+    
+        return false;
+    }
+}
+```
+
 ### Method 1 - Recursion 
 
 - If memo[] is initialized as -1 -> :rocket: 201ms (75.00%)
