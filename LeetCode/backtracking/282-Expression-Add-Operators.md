@@ -30,6 +30,56 @@ Output: []
 
 ## Answer
 ### Method 1 - Backtracking - :turtle: 248ms (5.25%)
+#### Approach 2
+
+```java
+public class Solution {
+    /**
+     * @param num: a string contains only digits 0-9
+     * @param target: An integer
+     * @return: return all possibilities
+     */
+    public List<String> addOperators(String num, int target) {
+        // write your code here
+        List<String> res = new LinkedList();
+        dfs(num, target, 0, 0, 0, new String(), res);
+        
+        return res;
+    }
+    
+    private void dfs(String num, long target, int lvl, long pre, long last, String s, List<String> res) {
+        int len = num.length();
+        
+        if (lvl == len) {
+            if (last == target) {
+                res.add(s);
+            }
+            return;
+        }
+        
+        for (int i = lvl; i < len; i++) {
+            String sv = num.substring(lvl, i + 1);
+            if (sv.length() > 1 && sv.charAt(0) == '0') return;
+            long val = Long.valueOf(sv);
+            
+            // dfs(num, target, 1 + i, val, lvl == 0 ? val : last + val, lvl == 0 ? s + sv : s + "+" + sv, res);
+            // dfs(num, target, 1 + i, -val, lvl == 0 ? val : last - val, lvl == 0 ? s + sv : s + "-" + sv, res);
+            // dfs(num, target, 1 + i, pre * val, lvl == 0 ? val : last - pre + pre * val, lvl == 0 ? s + sv : s + "*" + sv, res);
+            
+            if (lvl == 0) {
+                dfs(num, target, i + 1, val, val, "" + sv, res);
+            } else {
+                dfs(num, target, 1 + i, val, last + val, s + "+" + sv, res);
+                dfs(num, target, 1 + i, -val, last - val,  s + "-" + sv, res);
+                dfs(num, target, 1 + i, pre * val, last - pre + pre * val, s + "*" + sv, res);
+            }
+        }
+    }
+}
+```
+
+#### Approach 1
+
 ```java
 class Solution {
     // ======== Method 1: Back tracking ==========
