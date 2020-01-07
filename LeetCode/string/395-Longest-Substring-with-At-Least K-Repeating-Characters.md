@@ -27,7 +27,7 @@ The longest substring is "ababb", as 'a' is repeated 2 times and 'b' is repeated
 ```
 
 ## Answer
-### Method 1 - Prefix Sum - :rabbit: 485ms (84.20%)
+### Method 1 - Divide and Conquer - :turtle: 104ms (7.78%)
 
 ```java
 class Solution {
