@@ -1,4 +1,5 @@
 ## [395. Longest Substring with At Least K Repeating Characters](https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/)
+![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
 
 Find the length of the longest substring T of a given string (consists of lowercase letters only) such that every character in T appears no less than k times.
 
