@@ -30,9 +30,10 @@ Notice
 - 我们不能解码空串，因此若消息为空，你应该返回0。
 
 ## Answer
-### Method 1 - Recursion -
+### Method 1 - Recursion 
 
-#### Approach 1 :turtle: 252ms (8.60%)
+- If memo[] is initialized as -1 -> :rocket: 201ms (75.00%)
+- If memo[] is initialized as 0 -> :turtle: 252ms (8.60%)
 
 ```java
 public class Solution {
