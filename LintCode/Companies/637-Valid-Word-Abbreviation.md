@@ -1,5 +1,7 @@
 ## [637. Valid Word Abbreviation](https://www.lintcode.com/problem/valid-word-abbreviation/description?_from=ladder&&fromId=14)
 
+![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
+
 Given a non-empty string word and an abbreviation abbr, return whether the string matches with the given abbreviation.
 
 A string such as `"word"` contains only the following valid abbreviations:
