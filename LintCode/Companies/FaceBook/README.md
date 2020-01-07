@@ -2,6 +2,7 @@
 
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [653](https://www.lintcode.com/problem/expression-add-operators/description) | [Expression Add Operators](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/282-Expression-Add-Operators.md) | Hard | DFS / D&C
 | [892](https://www.lintcode.com/problem/alien-dictionary/description?_from=ladder&&fromId=130) | [Alien Dictionary](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/892-Alien-Dictionary.md) | Hard | Topological Sort
 | [17](https://www.lintcode.com/problem/subsets/description?_from=ladder&&fromId=130) | [Subsets](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/17-Subsets.md) | Medium | Recursion / BFS / Bit
 | [32](https://www.lintcode.com/problem/minimum-window-substring/description?_from=ladder&&fromId=130) | [Minimum Window Substring](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/32-Minimum-Window-Substring.md) | Medium | Two Pointers / HashTable
