@@ -31,7 +31,56 @@ Notice
 
 ## Answer
 ### Method 2 - DP - :rocket: 201ms (75.00%)
+#### Approach 2 - O(1) space
 
+```java
+public class Solution {
+    /**
+     * @param s: a string,  encoded message
+     * @return: an integer, the number of ways decoding
+     */
+     
+    public int numDecodings(String s) {
+        // write your code here
+        if (s == null || s.length() == 0) return 0;
+        
+        int len = s.length();
+        int pre = 1, cur = 1;
+        
+        for (int i = 1; i <= len; i++) {
+            int res = 0;
+            if (oneValid(s, i - 1)) {
+                res += cur;
+            }
+            if (twoValid(s, i - 1)) {
+                res += pre;
+            }
+            pre = cur;
+            cur = res;
+        }
+        
+        return cur;
+    }
+    
+    private boolean oneValid(String s, int i) {
+        char c = s.charAt(i);
+        if (c > '0' && c <= '9') return true;
+        return false;
+    }
+    
+    private boolean twoValid(String s, int i) {
+        if (i == 0) return false;
+        
+        char c1 = s.charAt(i - 1), c2 = s.charAt(i);
+        
+        if (c1 == '1' || (c1 == '2' && (c2 >= '0' && c2 <= '6'))) return true;
+    
+        return false;
+    }
+}
+```
+
+#### Approach 1 - O(n) Space 
 ```java
 public class Solution {
     /**
