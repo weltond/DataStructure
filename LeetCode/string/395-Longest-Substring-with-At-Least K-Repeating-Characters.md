@@ -28,7 +28,46 @@ The longest substring is "ababb", as 'a' is repeated 2 times and 'b' is repeated
 ```
 
 ## Answer
-### Method 1 - Divide and Conquer - :turtle: 104ms (7.78%)
+### Method 1 - Divide and Conquer :rabbit:
+#### Approach 2 
+
+```java
+public class Solution {
+    /**
+     * @param s: a string
+     * @param k: an integer
+     * @return: return an integer
+     */
+    public int longestSubstring(String s, int k) {
+        // write your code here
+        if (s == null || s.length() == 0 || k > s.length()) return 0;
+        int[] counts = new int[26];
+        char[] sArr = s.toCharArray();
+        for (char c : sArr) {
+            counts[c - 'a']++;
+        }
+        boolean fullValid = true;
+        for (int i = 0; i < 26; ++i) {
+            if (counts[i] > 0 && counts[i] < k) {
+                fullValid = false;
+                break;
+            }
+        }
+        if (fullValid) return s.length();
+        int left = 0, res = 0;
+        for (int right = 0; right < s.length(); ++right) {
+            if (counts[sArr[right] - 'a'] < k && counts[sArr[right] - 'a'] > 0) {
+                res = Math.max(res, longestSubstring(s.substring(left, right), k));
+                left = right + 1;
+            }
+        }
+        res = Math.max(res, longestSubstring(s.substring(left, s.length()), k));
+        return res;
+    }
+}
+```
+
+#### Approach 1 - :turtle: 104ms (7.78%)
 
 ```java
 class Solution {
