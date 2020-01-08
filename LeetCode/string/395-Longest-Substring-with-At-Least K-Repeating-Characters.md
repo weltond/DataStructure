@@ -39,29 +39,33 @@ public class Solution {
      * @return: return an integer
      */
     public int longestSubstring(String s, int k) {
-        // write your code here
-        if (s == null || s.length() == 0 || k > s.length()) return 0;
-        int[] counts = new int[26];
-        char[] sArr = s.toCharArray();
-        for (char c : sArr) {
-            counts[c - 'a']++;
+        return dc(s, k);
+    }
+    
+    private int dc(String s, int k) {
+        int len = s.length();
+        if (len == 0) return 0;
+        
+        int breakIdx = -1;
+        
+        // need to re-check frequency for every new string.
+        int[] arr = new int[26];
+        for (char c : s.toCharArray()) {
+            arr[c - 'a']++;
         }
-        boolean fullValid = true;
-        for (int i = 0; i < 26; ++i) {
-            if (counts[i] > 0 && counts[i] < k) {
-                fullValid = false;
-                break;
+        
+        int res = 0, left = 0;
+        for (int i = 0; i < len; i++) {
+            if (arr[s.charAt(i) - 'a'] < k) {
+                res = Math.max(res, dc(s.substring(left, i), k));
+                left = i + 1;
+                breakIdx = i;
             }
         }
-        if (fullValid) return s.length();
-        int left = 0, res = 0;
-        for (int right = 0; right < s.length(); ++right) {
-            if (counts[sArr[right] - 'a'] < k && counts[sArr[right] - 'a'] > 0) {
-                res = Math.max(res, longestSubstring(s.substring(left, right), k));
-                left = right + 1;
-            }
-        }
-        res = Math.max(res, longestSubstring(s.substring(left, s.length()), k));
+        
+        if (breakIdx == -1) return len;
+        
+        res = Math.max(res, dc(s.substring(left, len), k));
         return res;
     }
 }
