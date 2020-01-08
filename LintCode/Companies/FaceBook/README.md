@@ -32,6 +32,7 @@
 
 # 2020 FaceBook Onsite (pw: edcwsx)
 [Lc 91, 273, 143,328,350, 1027](https://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=580775&extra=page%3D1%26filter%3Dsortid%26sortid%3D311%26searchoption%5B3046%5D%5Bvalue%5D%3D2%26searchoption%5B3046%5D%5Btype%5D%3Dradio%26sortid%3D311%26orderby%3Ddateline)
+[high freq xmlx && same system design as above: online contest](https://www.1point3acres.com/bbs/forum.php?mod=viewthread&tid=580299&extra=page%3D1%26filter%3Dsortid%26sortid%3D311%26searchoption%5B3046%5D%5Bvalue%5D%3D2%26searchoption%5B3046%5D%5Btype%5D%3Dradio%26sortid%3D311%26orderby%3Ddateline)
 
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
