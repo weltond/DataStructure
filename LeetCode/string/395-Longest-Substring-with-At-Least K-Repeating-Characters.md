@@ -69,6 +69,8 @@ public class Solution {
 
 #### Approach 1 - :turtle: 104ms (7.78%)
 
+- Could cause **Memory Limit Exceed**
+
 ```java
 class Solution {
     
