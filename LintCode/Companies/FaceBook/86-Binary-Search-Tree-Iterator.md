@@ -43,6 +43,58 @@ Notice
 - Notice that only the above abbreviations are valid abbreviations of the string word. Any other string is not a valid abbreviation of word.
 
 ## Answer
+### Method 2 - Morris - :turtle: 3023ms (5.20%)
+
+```java
+public class BSTIterator {
+    TreeNode pre;
+    TreeNode current;
+    /*
+     * @param root: The root of binary tree.
+     */
+    public BSTIterator(TreeNode root) {
+        current = root;
+    }
+
+    /*
+     * @return: True if there has next node, or false
+     */
+    public boolean hasNext() {
+        // write your code here
+        return current != null;
+    }
+
+    /*
+     * @return: return next node
+     */
+    public TreeNode next() {
+        TreeNode res = null;
+        while (current != null) {
+            if (current.left == null) {     // current has reached the left most node
+            	res = current;              // find the required node
+            	current = current.right;    // update current and break
+            	break;
+            } else {
+            	pre = current.left;
+            	while (pre.right != null && pre.right != current) {
+            		pre = pre.right;
+            	}
+            	if (pre.right == null) {    // pre.right has not yet linked to its successor
+            		pre.right = current;    // link to current
+            		current = current.left; // update current and continue;
+            	} else {
+            		pre.right = null;       // pre.right = current, therefore, set it to null to restore the tree
+    	        	res = current;          // find the required node.
+    	        	current = current.right;    // update the current and break;
+    	        	break;
+            	}
+            }
+        }
+        return res;
+    }
+}
+```
+
 ### Method 1 - Stack - :turtle: 2671ms (8.20%)
 
 ```java
