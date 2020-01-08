@@ -34,6 +34,7 @@
 
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [86](https://www.lintcode.com/problem/binary-search-tree-iterator/description) | [Binary Search Tree Iterator](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/86-Binary-Search-Tree-Iterator.md) | Hard | BST / Stack
 | [529](https://www.lintcode.com/problem/geohash/description?_from=ladder&&fromId=130) | [Geohash](https://github.com/weltond/DataStructure/tree/master/LintCode/Design/529%20Geohash) | Medium | Math
 | [1261](https://www.lintcode.com/problem/longest-substring-with-at-least-k-repeating-characters/description?_from=ladder&&fromId=130) | [Longest Substring with At Least K Repeating Chars](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/395-Longest-Substring-with-At-Least%20K-Repeating-Characters.md) | Medium | String / Divide and Conquer
 | [450](https://www.lintcode.com/problem/reverse-nodes-in-k-group/description?_from=ladder&&fromId=130) | [Reverse Nodes in k-Group](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/450-Reverse-Nodes-in-k-Group.md) | Hard | LinkedList
