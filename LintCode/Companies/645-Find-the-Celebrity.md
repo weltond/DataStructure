@@ -43,6 +43,8 @@ Notice
 - There will be exactly one celebrity if he/she is in the party. Return the celebrity's label if there is a celebrity in the party. If there is no celebrity, return `-1`.
 
 ## Answer
+[More Solution here](https://www.geeksforgeeks.org/the-celebrity-problem/)
+
 ### Method 1 - Recursion - :rabbit: 2534ms (70.00%)
 
 ```java
