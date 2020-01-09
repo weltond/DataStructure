@@ -19,6 +19,7 @@
 # Basic Algo & Data structure High Frequency II
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [526](https://www.lintcode.com/problem/load-balancer/description?_from=ladder&&fromId=14) | [Load Balancer](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/526-Load-Balancer.md) | Medium | Design / Hash Table
 | [158](https://www.lintcode.com/problem/valid-anagram/description?_from=ladder&&fromId=14) | [Valid Anagram](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/158-Valid-Anagram.md) | Easy | String
 | [647](https://www.lintcode.com/problem/find-all-anagrams-in-a-string/description?_from=ladder&&fromId=14) | [Find All Anagrams in String](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/438-Find-All-Anagrams-in-a-String.md) | Easy | HashTable
 
