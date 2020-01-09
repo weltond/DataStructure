@@ -5,6 +5,34 @@ Input: 1994
 Output: "MCMXCIV"
 Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 */
+
+public class Solution {
+    /**
+     * @param n: The integer
+     * @return: Roman representation
+     */
+    public String intToRoman(int n) {
+        int[] values = new int[]{1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+        String[] romans = new String[]{"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+        
+        int idx = 0;
+        
+        StringBuilder sb = new StringBuilder();
+        while (n > 0) {
+            int times = n / values[idx];
+            n -= times * values[idx];
+            
+            for (; times > 0; times--) {
+                sb.append(romans[idx]);
+            }
+            
+            idx++;
+        }
+        
+        return sb.toString();
+    }
+}
+
 class Solution {
     // ========== Method 2 ===========
     // 3ms (100%)
