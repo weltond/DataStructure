@@ -9,6 +9,7 @@
 # Basic Algo & Data structure High Frequency I
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [654](https://www.lintcode.com/problem/sparse-matrix-multiplication/description?_from=ladder&&fromId=14) | [Sparse Matrix Multiplication](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/654-Sparse-Matrix-Multiplication.md) | Medium | HashTable
 | [417]() | [Valid Number](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/65-Valid-Number.md) | Easy | String
 
 # Basic Algo & Data structure High Frequency II
