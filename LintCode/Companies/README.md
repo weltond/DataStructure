@@ -9,6 +9,7 @@
 # Basic Algo & Data structure High Frequency I
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [418](https://www.lintcode.com/problem/integer-to-roman/description) | [Integer to Roman](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc12IntegerToRoman.java) | Medium | String
 | [428](https://www.lintcode.com/problem/powx-n/description?_from=ladder&&fromId=14) | [Pow(x, n)](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/428-Pow(x%2C%20n).md) | Medium | Binary Search / Divide and Conquer
 | [641](https://www.lintcode.com/problem/missing-ranges/description?_from=ladder&&fromId=14) | [Missing Ranges](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/641-Missing-Ranges.md) | Medium | Array
 | [645](https://www.lintcode.com/problem/find-the-celebrity/description) | [Find the Celebrity](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/645-Find-the-Celebrity.md) | Medium | Graph / Recursion / Stack
