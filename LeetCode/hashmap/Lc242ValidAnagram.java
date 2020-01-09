@@ -1,4 +1,29 @@
 // https://leetcode.com/problems/valid-anagram/
+// O(1) space
+public class Solution {
+    /**
+     * @param s: The first string
+     * @param t: The second string
+     * @return: true or false
+     */
+    public boolean anagram(String s, String t) {
+        int cor = 0;
+        // System.out.println(97 ^ 98); //3
+        // System.out.println(121 ^ 122);   //3
+        int hash = 0;
+        for (char c : s.toCharArray()) {
+            cor ^= c;
+            hash += c * c % 26;
+        }
+        
+        for (char c : t.toCharArray()) {
+            cor ^= c;
+            hash -= c * c % 26;
+        }
+        
+        return cor == 0 && hash == 0;
+    }
+}
 
 class Solution {
     // 4ms (71.32%)
