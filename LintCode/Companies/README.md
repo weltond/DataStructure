@@ -9,6 +9,7 @@
 # Basic Algo & Data structure High Frequency I
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [417]() | [Valid Number](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/65-Valid-Number.md) | Easy | String
 
 # Basic Algo & Data structure High Frequency II
 | LintCode No. | Problem | Difficulty | Tag 
