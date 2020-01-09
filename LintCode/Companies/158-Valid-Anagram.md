@@ -29,6 +29,38 @@ Output: false
 
 ## Answer
 ### Method 1 - Hash Table - :rocket: 201ms (99.80%)
+#### Approach 2
+
+```java
+public class Solution {
+    /**
+     * @param s: The first string
+     * @param t: The second string
+     * @return: true or false
+     */
+    public boolean anagram(String s, String t) {
+        if (s == null || t == null || s.length() != t.length()) {
+            return false;
+        }
+        
+        int[] freq = new int[256];
+        int len = s.length();
+        for (int i = 0; i < len; i++) {
+            freq[s.charAt(i)]++;
+            freq[t.charAt(i)]--;
+        }
+        
+        for (int i = 0; i < 256; i++) {
+            if (freq[i] != 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+````
+
+#### Approach 1
 
 ```java
 public class Solution {
