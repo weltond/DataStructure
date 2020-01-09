@@ -19,6 +19,7 @@
 # Basic Algo & Data structure High Frequency II
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [647](https://www.lintcode.com/problem/find-all-anagrams-in-a-string/description?_from=ladder&&fromId=14) | [Find All Anagrams in String](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/438-Find-All-Anagrams-in-a-String.md) | Easy | HashTable
 
 # BFS
 | LintCode No. | Problem | Difficulty | Tag 
