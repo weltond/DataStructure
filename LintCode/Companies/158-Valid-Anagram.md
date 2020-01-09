@@ -28,6 +28,35 @@ Output: false
 - Challenge: **O(n) time, O(1) extra space**
 
 ## Answer
+### Method 2 - XOR - :rocket: 201ms
+
+```java
+public class Solution {
+    /**
+     * @param s: The first string
+     * @param t: The second string
+     * @return: true or false
+     */
+    public boolean anagram(String s, String t) {
+        int cor = 0;
+        // System.out.println(97 ^ 98); //3
+        // System.out.println(121 ^ 122);   //3
+        int hash = 0;
+        for (char c : s.toCharArray()) {
+            cor ^= c;
+            hash += c * c % 26;
+        }
+        
+        for (char c : t.toCharArray()) {
+            cor ^= c;
+            hash -= c * c % 26;
+        }
+        
+        return cor == 0 && hash == 0;
+    }
+}
+```
+
 ### Method 1 - Hash Table - :rocket: 201ms (99.80%)
 #### Approach 2
 
