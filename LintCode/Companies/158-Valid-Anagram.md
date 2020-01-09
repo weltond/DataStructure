@@ -1,6 +1,6 @@
 ## [158. Valid Anagram](https://www.lintcode.com/problem/valid-anagram/description?_from=ladder&&fromId=14)
 
-![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
+![](https://github.com/weltond/DataStructure/blob/master/easy.PNG)
 
 Write a method anagram(s,t) to decide if two strings are anagrams or not.
 
