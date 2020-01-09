@@ -9,6 +9,7 @@
 # Basic Algo & Data structure High Frequency I
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [641](https://www.lintcode.com/problem/missing-ranges/description?_from=ladder&&fromId=14) | [Missing Ranges](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/641-Missing-Ranges.md) | Medium | Array
 | [645](https://www.lintcode.com/problem/find-the-celebrity/description) | [Find the Celebrity](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/645-Find-the-Celebrity.md) | Medium | Graph / Recursion / Stack
 | [654](https://www.lintcode.com/problem/sparse-matrix-multiplication/description?_from=ladder&&fromId=14) | [Sparse Matrix Multiplication](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/654-Sparse-Matrix-Multiplication.md) | Medium | HashTable
 | [417]() | [Valid Number](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/65-Valid-Number.md) | Easy | String
