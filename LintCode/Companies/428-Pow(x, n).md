@@ -28,6 +28,41 @@ O(logn) time
 - Notice: You don't need to care about the precision of your answer, it's acceptable if the expected answer and your answer 's difference is smaller than `1e-3`.
 
 ## Answer
+### Method 2 - Binary Search 
+
+```java
+public class Solution {
+    /**
+     * @param x the base number
+     * @param n the power number
+     * @return the result
+     */
+    public double myPow(double x, int n) {
+        boolean isNegative = false;
+        if (n < 0) {
+            x = 1 / x;
+            isNegative = true;
+            n = -(n + 1);       // Avoid overflow when n == MIN_VALUE
+        }
+
+        double ans = 1, tmp = x;
+
+        while (n != 0) {
+            if (n % 2 == 1) {
+                ans *= tmp;
+            }
+            tmp *= tmp;
+            n /= 2;
+        }
+        
+        if (isNegative) {
+            ans *= x;
+        }
+        return ans;
+    }
+}
+```
+
 ### Method 1 - Divide and Conquer - :rocket: 3322ms (99.80%)
 
 ```java
