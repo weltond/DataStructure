@@ -34,6 +34,7 @@ The substring with start index = 2 is "ab", which is an anagram of "ab".
 
 ## Answer
 ### Method 2 - Sliding Window - :rabbit:24ms (42.50%)
+#### Approach 1
 ```java
 class Solution {
     public List<Integer> findAnagrams(String s, String p) {
@@ -76,6 +77,49 @@ class Solution {
     }
 }
 ```
+
+#### Approach 2
+
+```java
+public class Solution {
+    /**
+     * @param s: a string
+     * @param p: a string
+     * @return: a list of index
+     */
+    public List<Integer> findAnagrams(String s, String p) {
+        // Write your code here
+        List<Integer> ans = new ArrayList <Integer>();
+        int[] sum = new int[30];
+
+        int plength = p.length(), slength = s.length();
+        for(char c : p.toCharArray()){
+            sum[c - 'a'] ++;
+        }
+        
+        int start = 0, end = 0, matched = 0;
+        while(end < slength){
+            if(sum[s.charAt(end) - 'a'] >= 1){
+                matched ++;
+            }
+            sum[s.charAt(end) - 'a'] --;
+            end ++;
+            if(matched == plength) {
+                ans.add(start);
+            }
+            if(end - start == plength){
+                if(sum[s.charAt(start) - 'a'] >= 0){
+                    matched --;
+                }
+                sum[s.charAt(start) - 'a'] ++;
+                start ++;
+            }
+        }
+        return ans;
+    }
+}
+```
+
 ### Method 1 - Naive - :turtle: 492ms (13.20%)
 ```java
 class Solution {
