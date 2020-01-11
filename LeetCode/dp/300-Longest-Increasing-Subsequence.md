@@ -1,4 +1,5 @@
 ## [300. Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
+![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
 
 Given an unsorted array of integers, find the length of longest increasing subsequence.
 
