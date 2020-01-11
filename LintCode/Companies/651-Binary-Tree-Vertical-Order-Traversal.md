@@ -37,10 +37,79 @@ Explanation:
 ```
 
 ## Answer
-### Method 1 - DFS
+### Method 1 - DFS - :turtle: 402ms (6.40%)
+
+```java
+/**
+ * Definition of TreeNode:
+ * public class TreeNode {
+ *     public int val;
+ *     public TreeNode left, right;
+ *     public TreeNode(int val) {
+ *         this.val = val;
+ *         this.left = this.right = null;
+ *     }
+ * }
+ */
+
+public class Solution {
+    /**
+     * @param root: the root of tree
+     * @return: the vertical order traversal
+     */
+    int offset, time;
+    PriorityQueue<Element> pq;
+    public List<List<Integer>> verticalOrder(TreeNode root) {
+        // write your code here
+        List<List<Integer>> res = new LinkedList();
+        if (root == null) return res;
+        
+        offset = 0;
+        time = 0;
+        pq = new PriorityQueue<Element>((o1, o2) -> o1.x == o2.x ? (o1.y == o2.y ? o1.timestamp - o2.timestamp: (o1.y - o2.y)) : o1.x - o2.x);
+        
+        dfs(root, 0, 0);
+        
+        while (!pq.isEmpty()) {
+            Element e = pq.poll();
+            int idx = e.x - offset;
+            if (res.size() == idx) {
+                res.add(new ArrayList());
+            }
+            res.get(idx).add(e.val);
+        }
+        
+        return res;
+    }
+    
+    private void dfs(TreeNode root, int x, int y) {
+        if (root == null) return;
+        
+        offset = Math.min(offset, x);
+        pq.offer(new Element(x, y, time++, root.val));
+        dfs(root.left, x - 1, y + 1);
+        dfs(root.right, x + 1, y + 1);
+    }
+}
+
+class Element {
+    int x;
+    int y;
+    int timestamp;
+    int val;
+    public Element(int x, int y, int t, int v) {
+        this.x = x;
+        this.y = y;
+        timestamp = t;
+        val = v;
+    }
+}
+```
+
 
 ### Wrong Solution
 - **WRONG** because the vertical order is not garunteed.
+
 ```java
 /**
  * Definition of TreeNode:
