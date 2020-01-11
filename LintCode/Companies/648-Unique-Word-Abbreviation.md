@@ -56,6 +56,9 @@ Dictionary's abbreviation is ["d2r", "d2r", "c2e", "c2d"].
 ## Answer
 ### Method 1 - HashMap - :rabbit: 3653ms (41.40%)
 
+– 单词在字典中出现次数 等于 对应缩写在字典中出现次数 -> unique
+– 单词在字典中出现次数 不等于 对应缩写在字典中出现次数 -> not unique
+
 ```java
 public class ValidWordAbbr {
     Map<String, Integer> dict = new HashMap<>();
