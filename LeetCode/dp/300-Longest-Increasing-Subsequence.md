@@ -38,6 +38,7 @@ class Solution {
             }else if(nums[i] > tailTable[len -1]){
                 tailTable[len++] = nums[i];
             }else{
+                // nums[i] < tailTable[len-1] && nums[i] > tailTable[0]
                 tailTable[findPosition(tailTable, -1, len -1, nums[i])] = nums[i];
             }
         }
