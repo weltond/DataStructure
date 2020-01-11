@@ -1,7 +1,8 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [247](https://www.lintcode.com/problem/strobogrammatic-number-ii/description) | [Strobogrammatic Number II](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/776-Strobogrammatic-Number-II.md) | Medium | Recursion
 | [246](https://www.lintcode.com/problem/strobogrammatic-number/description) | [Strobogrammatic Number](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/246-Strobogrammatic-Number.md) | Easy | HashTable
-| [395](https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/) | [Longest Substring at least K Repeating Chars](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/395-Longest-Substring-with-At-Least%20K-Repeating-Characters.md) | Medium | 
+| [395](https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/) | [Longest Substring at least K Repeating Chars](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/395-Longest-Substring-with-At-Least%20K-Repeating-Characters.md) | Medium | Divide and Conquer
 | [72](https://leetcode.com/problems/edit-distance/) | [Edit Distance](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/72-Edit-Distance.md) | Hard | String / DP
 | [1296](https://leetcode.com/problems/divide-array-in-sets-of-k-consecutive-numbers/) | [Divide Array in Sets of K Consecutive Numbers](https://github.com/weltond/DataStructure/blob/master/LeetCode/greedy/1296-divide-array-in-sets-of-k-consecutive-numbers.md) | Medium | Array / Greedy
 | [1305](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/) | [All Elements in Two BST](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/1305-all-elements-in-two-binary-search-trees.md) | Medium | Tree / Sort
