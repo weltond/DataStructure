@@ -19,6 +19,49 @@ Note:
 LIS subsequence depends on all its subproblem results.
 ### Method 2 - DP with Binary Search
 - Time: O(nlogn)
+
+#### Approach 2
+
+```java
+class Solution {
+    public int lengthOfLIS(int[] nums) {
+        if(nums == null || nums.length == 0){
+            return 0;
+        }
+        int n = nums.length;
+        int len = 1;
+        int[] tailTable = new int[n];
+        tailTable[0] = nums[0];
+        for(int i = 1; i < n; i++){
+            if(tailTable[0] > nums[i]){
+                tailTable[0] = nums[i];
+            }else if(nums[i] > tailTable[len -1]){
+                tailTable[len++] = nums[i];
+            }else{
+                tailTable[findPosition(tailTable, -1, len -1, nums[i])] = nums[i];
+            }
+        }
+        return len;
+        
+    }
+    
+    private int findPosition(int[] tailTable, int left, int right, int cur){
+        while(left + 1 < right){
+            int mid = left + (right - left) / 2;
+            
+            if(tailTable[mid] >= cur){
+                right = mid;
+            }else{
+                left = mid;
+            }
+        }
+        return right;
+    }
+}
+```
+
+#### Approach 1
+
 ```java
 class Solution {
     // =========== Method 2: DP with BS ============
