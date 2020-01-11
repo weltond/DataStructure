@@ -17,7 +17,11 @@ Note:
 **Follow up: Could you improve it to O(n log n) time complexity?**
 
 ## Answer
+### Idea
 LIS subsequence depends on all its subproblem results.
+1. Using **DP**, for each current element, compare it with **ALL** its previous element.
+2. Using **Binary Search**, store each element into an array that is going to be sorted. And the final result would be the last element's index (not the array length).
+
 ### Method 2 - DP with Binary Search
 - Time: O(nlogn)
 
