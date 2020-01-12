@@ -24,6 +24,11 @@ Output: [1,3],[2,3]
 Explanation: All possible pairs are returned from the sequence: [1,3],[2,3]
 */
 
+/**
+Idea: For every numbers in nums2, its best partner(yields min sum) always strats from nums1[0] since arrays are all sorted; 
+And for a specific number in nums1, its next candidate sould be its current idx + 1 and current idx2.
+*/
+
 // Approach 1:
 class Solution {
     public List<int[]> kSmallestPairs(int[] nums1, int[] nums2, int k) {
