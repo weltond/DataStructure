@@ -96,7 +96,7 @@ class Solution {
 }
 ```
 
-### Wrong Solution
+### Wrong Solution (104/126 Passed)
 
 - TLE. `")()m)(((()((()(((("`
 
