@@ -33,6 +33,44 @@ Output: []
 #### Approach 2
 
 ```java
+class Solution {
+    public List<String> addOperators(String num, int target) {
+        List<String> res = new LinkedList();
+        if (num == null || num.length() == 0) return res;
+        
+        dfs(num, 0, target, 0, 0, "", res);
+        
+        return res;
+    }
+    
+    private void dfs(String num, int lvl, int target, long curSum, long last, String s, List<String> res) {
+        if (lvl == num.length()) {
+            if (curSum == target) {
+                res.add(s);
+            }
+            return;
+        }        
+        
+        for (int i = lvl, len = num.length(); i < len; i++) {
+            String sv = num.substring(lvl, i + 1);
+            if (sv.length() > 1 && sv.charAt(0) == '0') continue;
+            
+            long val = Long.valueOf(sv);
+        
+            if (lvl == 0) {
+                dfs(num, i + 1, target, val, val, "" + val, res);
+            } else {
+                dfs(num, i + 1, target, curSum + val, val, s + "+" + val, res);
+                dfs(num, i + 1, target, curSum - val, -val, s + "-" + val, res);
+                dfs(num, i + 1, target, curSum - last + last * val, val * last, s + "*" + val, res);
+        }
+        }
+        
+    }
+}
+```
+
+```java
 public class Solution {
     /**
      * @param num: a string contains only digits 0-9
