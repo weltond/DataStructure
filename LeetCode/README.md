@@ -228,7 +228,7 @@
 | [744](https://leetcode.com/problems/find-smallest-letter-greater-than-target/) | [Find Smallest Letter Greater than Target](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/Lc744SmallestGreaterThanTarget.java) | Easy | Binary Search
 | [287](https://leetcode.com/problems/find-the-duplicate-number/) | [Find the Duplicate Number](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/floyd/Lc287FindDuplicateNumber.java) | Medium | Array / Two Pointers / Binary Search
 | [134](https://leetcode.com/problems/gas-station/) | [Gas Station](https://github.com/weltond/DataStructure/blob/master/LeetCode/greedy/Lc134GasStation.java) | Medium | Geedy
-| [301](https://leetcode.com/problems/remove-invalid-parentheses/) | [Remove Invalid Parentheses](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/Lc301RemoveInvalidParenthesis.java) | Hard | BFS / DFS
+| [301](https://leetcode.com/problems/remove-invalid-parentheses/) | [Remove Invalid Parentheses](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/301-remove-invalid-parentheses.md) | Hard | BFS / DFS
 |[332](https://leetcode.com/problems/reconstruct-itinerary/) | [Reconstruct Itinerary](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/Lc332ReconstructItinerary.java) | Medium | DFS / Graph
 | [785](https://leetcode.com/problems/is-graph-bipartite/) | [Is Graph Bipartite](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/Lc785IsGraphBipartite.java) | Medium | DFS / BFS / Graph
 | [886](https://leetcode.com/problems/possible-bipartition/) | [Possible Bipartition](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/Lc886PossibleBipartition.java) | Meidum | DFS
