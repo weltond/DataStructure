@@ -19,6 +19,65 @@ s = "2[abc]3[cd]ef", return "abcabccdcdcdef".
 ```
 
 ## Answer
+### Method 2 - Stack - :rocket: 0ms
+
+```java
+class Solution {
+    
+    public String decodeString(String s) {
+        if (s == null || s.length() == 0) return s;
+
+        Deque<Integer> nstack = new LinkedList();
+        Deque<String> cstack = new LinkedList();
+        
+        String res = "";
+        int len = s.length(), idx = 0;
+        
+        while (idx < len) {
+            char c = s.charAt(idx);
+            // if is digit. put it to number stack.
+            if (Character.isDigit(c)) {
+                int val = 0;
+                while ((c = s.charAt(idx)) >= '0' && c <= '9') {
+                    val = val * 10 + c - '0';
+                    idx++;
+                }
+                
+                nstack.push(val);
+                idx--;
+            }
+            // if see a [, push previous string into cstack
+            else if (c == '[') {
+                cstack.push(res);
+                res = "";
+            } 
+            // if see a ], pop num and prev string from two stacks
+            else if (c == ']') {
+                int rec = nstack.pop();
+                String pre = cstack.pop();
+                
+                StringBuilder sb = new StringBuilder(pre);
+                for (int k = 0; k < rec; k++) {
+                    sb.append(res);
+                }
+                
+                res = sb.toString();
+            }
+            // else, it is char, store it in res.
+            else {
+                res += c;
+            }
+            // don't forget to inc idx.
+            idx++;
+        }
+        
+        return res;
+    }
+    
+    
+}
+```
+
 ### Method 1 - Recursion - :rabbit: 1ms (58.75%)
 
 - Every time we meet a `[`, we treat it as a subproblem so call our recursive function to get the content in that `[` and `]`. After that, repeat that content for `val` times.
