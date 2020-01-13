@@ -1,5 +1,7 @@
 | No. | Problem | Difficulty | Tag | Top 20
 | :--------: | :-------: | :---------: | :------: | :-----:
+| [140](https://leetcode.com/problems/word-break-ii/) | [Word Break II](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc140WordBreakII.java) | Hard | DP / Backtracking
+| [139](https://leetcode.com/problems/word-break/) | [Word Break](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc139WordBreak.java) | Medium | DP
 | [273](https://leetcode.com/problems/integer-to-english-words/) | [Integer to English Words](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/273-Integer-To-English-Words.md) | Hard | Math / String
 | [301](https://leetcode.com/problems/remove-invalid-parentheses/) | [Remove Invalid Parentheses](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/301-remove-invalid-parentheses.md) | Hard | BFS / DFS
 | [282](https://leetcode.com/problems/expression-add-operators/) | [Expression Add Operators](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/282-Expression-Add-Operators.md) | Hard | Divide and Conquer
