@@ -21,6 +21,10 @@ s = "2[abc]3[cd]ef", return "abcabccdcdcdef".
 ## Answer
 ### Method 1 - Recursion - :rabbit: 1ms (58.75%)
 
+- Every time we meet a `[`, we treat it as a subproblem so call our recursive function to get the content in that `[` and `]`. After that, repeat that content for `val` times.
+- Every time we meet a `]`, we know a subproblem finished and just return the 'word' we got in this subproblem.
+- `i` is global
+
 ```java
 class Solution {
     int i = 0;
