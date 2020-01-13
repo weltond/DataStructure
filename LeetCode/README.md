@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [1143](https://leetcode.com/problems/longest-common-subsequence/) | [Longest Common Subsequence](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/1143-longest-common-subsequence.md) | Medium | DP 
 | [247](https://www.lintcode.com/problem/strobogrammatic-number-ii/description) | [Strobogrammatic Number II](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/776-Strobogrammatic-Number-II.md) | Medium | Recursion
 | [246](https://www.lintcode.com/problem/strobogrammatic-number/description) | [Strobogrammatic Number](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/246-Strobogrammatic-Number.md) | Easy | HashTable
 | [395](https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/) | [Longest Substring at least K Repeating Chars](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/395-Longest-Substring-with-At-Least%20K-Repeating-Characters.md) | Medium | Divide and Conquer
