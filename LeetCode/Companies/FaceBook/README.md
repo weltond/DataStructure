@@ -1,5 +1,6 @@
 | No. | Problem | Difficulty | Tag | Top 20
 | :--------: | :-------: | :---------: | :------: | :-----:
+| [721](https://leetcode.com/problems/accounts-merge/) | [Account Merge](https://github.com/weltond/DataStructure/blob/master/LeetCode/unionfind/Lc721AccountsMerge.java) | Medium | DFS / Union Find
 | [785](https://leetcode.com/problems/is-graph-bipartite/) | [Is Graph Bipartite](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/Lc785IsGraphBipartite.java) | Medium | DFS / BFS / Graph
 | [1143](https://leetcode.com/problems/longest-common-subsequence/) | [Longest Common Subsequence](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/1143-longest-common-subsequence.md) | Medium | DP 
 | [416](https://leetcode.com/problems/partition-equal-subset-sum/) | [Partition Equal Subset Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/416-Partition-Equal-Subset-Sum.md) | Medium | DP / DFS
