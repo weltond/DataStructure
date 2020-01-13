@@ -1,5 +1,6 @@
 | No. | Problem | Difficulty | Tag | Top 20
 | :--------: | :-------: | :---------: | :------: | :-----:
+| [211](https://leetcode.com/problems/add-and-search-word-data-structure-design/) | [Add and Search Word - Data Structure Design](https://github.com/weltond/DataStructure/blob/master/LeetCode/trie/211-Add-And-Search-Word.md) | Medium |  Backtracking / Trie / Design 
 | [394](https://leetcode.com/problems/decode-string/) | [Decode String](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/394-decode-string.md) | Medium | Stack / DFS
 | [721](https://leetcode.com/problems/accounts-merge/) | [Account Merge](https://github.com/weltond/DataStructure/blob/master/LeetCode/unionfind/Lc721AccountsMerge.java) | Medium | DFS / Union Find
 | [785](https://leetcode.com/problems/is-graph-bipartite/) | [Is Graph Bipartite](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/Lc785IsGraphBipartite.java) | Medium | DFS / BFS / Graph
