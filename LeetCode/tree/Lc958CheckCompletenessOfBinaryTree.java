@@ -15,7 +15,7 @@ Given a binary tree, determine if it is a complete binary tree.
  */
 class Solution {
     // =========== Method 1: BFS ==============
-    // Approach 2: 1ms (94.44%)
+    // Approach 3: 1ms (94.44%)
     public boolean isCompleteTree(TreeNode root) {
         boolean end = false;
         Queue<TreeNode> queue = new LinkedList<>();
@@ -29,6 +29,35 @@ class Solution {
                 queue.add(cur.right);
             }
         }
+        return true;
+    }
+    // Approach 2
+    public boolean isCompleteTree(TreeNode root) {
+        if (root == null) return true;
+        
+        Queue<TreeNode> q = new LinkedList();
+        
+        q.offer(root);
+        boolean isEnd = false;
+        
+        while (!q.isEmpty()) {
+            TreeNode node = q.poll();
+            
+            if (node.left != null) {
+                if (isEnd) return false;
+                q.offer(node.left);
+            } else {
+                isEnd = true;
+            }
+            
+            if (node.right != null) {
+                if (isEnd) return false;
+                q.offer(node.right);
+            } else {
+                isEnd = true;
+            }
+        }
+        
         return true;
     }
     
