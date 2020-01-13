@@ -1,5 +1,6 @@
 | No. | Problem | Difficulty | Tag | Top 20
 | :--------: | :-------: | :---------: | :------: | :-----:
+| [958](https://leetcode.com/problems/check-completeness-of-a-binary-tree/) | [Check Completeness of Binary Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc958CheckCompletenessOfBinaryTree.java) | Medium | Tree / BFS
 | [269](https://www.cnblogs.com/grandyang/p/5250200.html) | [Alien Dictionary](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/892-Alien-Dictionary.md) | Hard | Topological Sort
 | [71](https://leetcode.com/problems/simplify-path/) | [Simplify Path](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/71-Simplify-Path.md) | Medium | String / Stack
 | [211](https://leetcode.com/problems/add-and-search-word-data-structure-design/) | [Add and Search Word - Data Structure Design](https://github.com/weltond/DataStructure/blob/master/LeetCode/trie/211-Add-And-Search-Word.md) | Medium |  Backtracking / Trie / Design 
