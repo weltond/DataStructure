@@ -75,6 +75,37 @@ class Solution {
 
 ### Method 1 - Stack - :rocket: 4ms (90.44%)
 
+#### Approach 2
+
+```java
+class Solution {
+    public String simplifyPath(String path) {
+        if (path == null || path.length() == 0) return "/";
+        
+        Deque<String> stack = new LinkedList();
+        
+        String[] strs = path.split("/");
+        
+        for (int i = 0; i < strs.length; i++) {
+            if (!stack.isEmpty() && strs[i].equals("..")) stack.pop();
+            else if (strs[i].equals("") || strs[i].equals(".") || strs[i].equals("..")) continue;
+            else stack.push(strs[i]);
+        }
+        
+        if (stack.isEmpty()) return "/";
+        
+        StringBuilder sb = new StringBuilder();
+        
+        while (!stack.isEmpty()) {
+            sb.insert(0, stack.pop()).insert(0, "/");
+        }
+        
+        return sb.toString();
+    }
+}
+```
+
+#### Approach 1
 ```java
 class Solution {
     // 4ms (90.44%)
