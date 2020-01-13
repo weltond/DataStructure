@@ -42,7 +42,7 @@ Explanation: There is no such common subsequence, so the result is 0.
 - `1 <= text2.length <= 1000`
 - The input strings consist of lowercase English characters only.
 
-## Answer
+## [Answer](https://leetcode.com/problems/longest-common-subsequence/discuss/398711/ALL-4-ways-Recursion-greater-Top-down-greaterBottom-Up-greater-Efficient-Solution-O(N)-including-VIDEO-TUTORIAL)
 ### Method 1 - DP - :rocket: 7ms (89.26%)
 
 #### Approach 1 - 2D array -
