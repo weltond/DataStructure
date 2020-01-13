@@ -1,5 +1,6 @@
 | No. | Problem | Difficulty | Tag | Top 20
 | :--------: | :-------: | :---------: | :------: | :-----:
+| [269](https://www.cnblogs.com/grandyang/p/5250200.html) | [Alien Dictionary](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/892-Alien-Dictionary.md) | Hard | Topological Sort
 | [71](https://leetcode.com/problems/simplify-path/) | [Simplify Path](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/71-Simplify-Path.md) | Medium | String / Stack
 | [211](https://leetcode.com/problems/add-and-search-word-data-structure-design/) | [Add and Search Word - Data Structure Design](https://github.com/weltond/DataStructure/blob/master/LeetCode/trie/211-Add-And-Search-Word.md) | Medium |  Backtracking / Trie / Design 
 | [394](https://leetcode.com/problems/decode-string/) | [Decode String](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/394-decode-string.md) | Medium | Stack / DFS
