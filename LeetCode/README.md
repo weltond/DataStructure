@@ -198,7 +198,7 @@
 |  91 | [DecodeWays](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc91DecodeWays.java) | |
 |  450 | [Delete Node In BST](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/LC450DeleteNodeInBST_2.java) | |
 |  109 | [Convert Sorted List To BST](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc109ConvertSortedListToBST.java) | |
-|  124 | [Binary Tree Max Path Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc124BinaryTreeMaxPathSum.java) | |
+|  [124](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | [Binary Tree Max Path Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc124BinaryTreeMaxPathSum.java) | Hard | Tree / DFS
 |  973 | [K Closest Points to Origin](https://github.com/weltond/DataStructure/blob/master/LeetCode/Amazon/Lc973KClosestPointsToOrigin.java) | Easy | Math / Divide and Conquer / Sort
 | 51 | [N-Queens](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc51NQueens.java) | Hard | Backtracking
 |[36](https://leetcode.com/problems/valid-sudoku/) | [Valid Sudoku](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc36ValidSudoku.java) | Medium | Hash Table
