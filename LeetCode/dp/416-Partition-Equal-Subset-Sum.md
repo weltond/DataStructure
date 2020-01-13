@@ -60,6 +60,7 @@ class Solution {
             return dfs(nums, sum, 0, k - 1, sum, used);
         }
         
+        // for loop can also start from the first element
         for (int i = start; i < nums.length; i++) {
             if (used[i] || subSum < nums[i]) continue;
             
