@@ -28,6 +28,54 @@ Explanation: The array cannot be partitioned into equal sum subsets.
 
 ## Answer
 ### Method 2 - DFS - :rocket: 4ms(87.33%)
+#### Approach 2 
+
+```java
+class Solution {
+    Boolean[][] memo;
+    public boolean canPartition(int[] nums) {
+        if (nums == null || nums.length == 0) return false;
+        int sum = 0;
+        for (int i : nums) {
+            sum += i;
+        }
+        
+        if (sum % 2 != 0) return false;
+        
+        int target = sum / 2;
+        
+        memo = new Boolean[nums.length][target + 1];
+        
+        return dfs(nums, target, 0, 2, target, new boolean[nums.length]);
+    }
+    
+    private boolean dfs(int[] nums, int subSum, int start, int k, int target, boolean[] used) {
+        if (start >= nums.length) return false;
+        
+        if (memo[start][subSum] != null) return memo[start][subSum];
+        
+        if (subSum == 0) {
+            return dfs(nums, target, 0, k - 1, target, used);
+        }
+        
+        if (k == 0) {
+            return true;
+        }
+        
+        for (int i = start; i < nums.length; i++) {
+            if (nums[i] > subSum) continue;
+
+            if (dfs(nums, subSum - nums[i], i + 1, k, target, used)) return true;
+        }
+        
+        memo[start][subSum] = false;
+        
+        return false;
+    }
+}
+```
+
+#### Approach 1
 
 ```java
 class Solution {
@@ -59,8 +107,7 @@ class Solution {
         if (subSum == 0) {
             return dfs(nums, sum, 0, k - 1, sum, used);
         }
-        
-        // for loop can also start from the first element
+    
         for (int i = start; i < nums.length; i++) {
             if (used[i] || subSum < nums[i]) continue;
             
