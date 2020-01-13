@@ -1,4 +1,97 @@
-// https://leetcode.com/problems/add-and-search-word-data-structure-design/
+## [211. Add and Search Word - Data structure design](https://leetcode.com/problems/add-and-search-word-data-structure-design/)
+
+![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
+
+Design a data structure that supports the following two operations:
+
+`void addWord(word)`
+
+`bool search(word)`
+
+`search(word)` can search a literal word or a regular expression string containing only letters `a-z` or `.`. A `.` means it can represent any one letter.
+
+Example:
+
+```
+addWord("bad")
+addWord("dad")
+addWord("mad")
+search("pad") -> false
+search("bad") -> true
+search(".ad") -> true
+search("b..") -> true
+```
+
+- Note: You may assume that all words are consist of lowercase letters `a-z`.
+
+## Answer
+### Method 1 - Trie - :rocket: 32ms (96.01%)
+
+```java
+class WordDictionary {
+
+    Trie root;
+    /** Initialize your data structure here. */
+    public WordDictionary() {
+        root = new Trie();
+    }
+    
+    /** Adds a word into the data structure. */
+    public void addWord(String word) {
+        root.add(word);
+    }
+    
+    /** Returns if the word is in the data structure. A word could contain the dot character '.' to represent any one letter. */
+    public boolean search(String word) {
+        return search(word, 0, root);
+    }
+    
+    private boolean search(String s, int lvl, Trie root) {
+        if (lvl == s.length()) return root.end;
+        
+        char c = s.charAt(lvl);
+        if (c == '.') {
+            for (int i = 0; i < 26; i++) {
+                if (root.children[i] != null && search(s, lvl + 1, root.children[i])) return true;
+            }
+        } else {
+            int idx = c - 'a';
+            if (root.children[idx] != null && search(s, lvl + 1, root.children[idx])) return true;
+        }
+        
+        return false;
+    }
+}
+
+/**
+ * Your WordDictionary object will be instantiated and called as such:
+ * WordDictionary obj = new WordDictionary();
+ * obj.addWord(word);
+ * boolean param_2 = obj.search(word);
+ */
+
+class Trie {
+    Trie[] children;
+    boolean end;
+    public Trie() {
+        children = new Trie[26];
+    }
+    
+    public void add(String s) {
+        Trie tmp = this;
+        for (int i = 0, len = s.length(); i < len; i++) {
+            int idx = s.charAt(i) - 'a';
+            if (tmp.children[idx] == null) {
+                tmp.children[idx] = new Trie();
+            }
+            tmp = tmp.children[idx];
+        }
+        tmp.end = true;
+    }
+}
+```
+
+```java
 class WordDictionary {
     
     Trie root;
@@ -135,3 +228,5 @@ class TrieNode {
  * obj.addWord(word);
  * boolean param_2 = obj.search(word);
  */
+```
+
