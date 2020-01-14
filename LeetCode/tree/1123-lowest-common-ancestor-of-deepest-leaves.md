@@ -58,7 +58,6 @@ class Solution {
     int depth;
     TreeNode res;
     Map<Integer, List<TreeNode>> map = new HashMap();
-    Map<Integer, TreeNode> tree = new HashMap();
     public TreeNode lcaDeepestLeaves(TreeNode root) {
         res = null;
         dfs(root, 1);
@@ -66,8 +65,11 @@ class Solution {
         List<TreeNode> list = map.get(depth);
         
         int size = list.size();
+        
+        // if only one deepest leaf, simply return it.
         if (size == 1) return list.get(0);
         
+        // otherwise, iterate each two nodes to find LCA
         res = list.get(0);
         for (int i = 1; i < size; i++) { 
             res = lca(root, res, list.get(i));
@@ -76,6 +78,7 @@ class Solution {
         return res;
     }
     
+    // find LCA
     private TreeNode lca(TreeNode root, TreeNode r1, TreeNode r2) {
         if (root == null) return null;
 
@@ -90,6 +93,7 @@ class Solution {
         return l == null ? r : l;
     }
     
+    // get depth and store them into a map.
     private void dfs(TreeNode root, int height) {
         if (root == null) return;
         
