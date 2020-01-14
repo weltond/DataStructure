@@ -1,5 +1,7 @@
 | No. | Problem | Difficulty | Tag | Top 20
 | :--------: | :-------: | :---------: | :------: | :-----:
+| [199](https://leetcode.com/problems/binary-tree-right-side-view/) | [Binary Tree Right Side View](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc199BinaryTreeRightView.java) | Medium | Tree / BFS / DFS
+| [98](https://leetcode.com/problems/validate-binary-search-tree/) | [Validate BST](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc98ValidateBST.java) | Medium | Tree / DFS
 | [1123](https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/) | [Lowest Common Ancestor of Deepest Leaves](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/1123-lowest-common-ancestor-of-deepest-leaves.md) | Medium | Tree / DFS
 | [106](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/) | [Construct BT from PostOrder and Inorder](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc106ConstructBTfromInAndPost.java) | Medium | Array / Tree / DFS
 | [105](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | [Construct BT from Preorder and Inorder](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc105ConstructBTfromPreAndInorder.java) | Medium | Array / Tree / DFS
