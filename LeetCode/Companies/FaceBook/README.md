@@ -1,5 +1,6 @@
 | No. | Problem | Difficulty | Tag | Top 20
 | :--------: | :-------: | :---------: | :------: | :-----:
+| [106](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/) | [Construct BT from PostOrder and Inorder](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc106ConstructBTfromInAndPost.java) | Medium | Array / Tree / DFS
 | [105](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | [Construct BT from Preorder and Inorder](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc105ConstructBTfromPreAndInorder.java) | Medium | Array / Tree / DFS
 | [124](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | [Binary Tree Max Path Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc124BinaryTreeMaxPathSum.java) | Hard | Tree / DFS
 | [114](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/) | [Flatten Binary Tree to Linked List](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc114FlattenBinaryTreetoLinkedList.java) | Medium | Tree / DFS
