@@ -45,8 +45,8 @@ Note:
 
 ## Answer
 ### Method 2 - BFS
-
-#### Appraoch 1 - Hash Map - :turtle: 330ms (10.80%)
+- This approach is also for situation where **first seen first out**.
+#### Appraoch 1 - Hash Map - 
 
 ```java
 /**
