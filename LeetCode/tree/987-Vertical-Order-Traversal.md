@@ -1,12 +1,12 @@
-## [651. Binary Tree Vertical Order Traversal](https://www.lintcode.com/problem/binary-tree-vertical-order-traversal/description)
+## [987. Vertical Order Traversal of a Binary Tree](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
 
 ![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
 
 Given a binary tree, return the vertical order traversal of its nodes values.
 
-For each node at position (X, Y), its left and right children respectively will be at positions (X-1, Y-1) and (X+1, Y-1).
+For each node at position `(X, Y)`, its left and right children respectively will be at positions (X-1, Y-1) and (X+1, Y-1).
 
-Running a vertical line from X = -infinity to X = +infinity, whenever the vertical line touches some nodes, we report the values of the nodes in order from top to bottom (decreasing Y coordinates).
+Running a vertical line from `X = -infinity` to `X = +infinity`, whenever the vertical line touches some nodes, we report the values of the nodes in order from top to bottom (decreasing Y coordinates).
 
 If two nodes have the same position, then the value of the node that is reported first is the value that is smaller.
 
@@ -17,7 +17,7 @@ Return an list of non-empty reports in order of X coordinate.  Every report will
 Example 1:
 
 
-
+```
 Input: [3,9,20,null,null,15,7]
 Output: [[9],[3,15],[20],[7]]
 Explanation: 
@@ -26,21 +26,22 @@ Then, the node with value 9 occurs at position (-1, -1);
 The nodes with values 3 and 15 occur at positions (0, 0) and (0, -2);
 The node with value 20 occurs at position (1, -1);
 The node with value 7 occurs at position (2, -2).
+```
+
 Example 2:
 
 
-
+```
 Input: [1,2,3,4,5,6,7]
 Output: [[4],[2],[1,5,6],[3],[7]]
 Explanation: 
 The node with value 5 and the node with value 6 have the same position according to the given scheme.
 However, in the report "[1,5,6]", the node value of 5 comes first since 5 is smaller than 6.
- 
+```
 
 Note:
-
-The tree will have between 1 and 1000 nodes.
-Each node's value will be between 0 and 1000.
+- The tree will have between 1 and 1000 nodes.
+- Each node's value will be between 0 and 1000.
 
 ## Answer
 ### Method 2 - BFS
@@ -110,6 +111,67 @@ public class Solution {
 ```
 
 ### Method 1 - DFS - 
+#### Approach 2 :rabbit: 3ms (68.03%)
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    List<Pair> loc;
+    public List<List<Integer>> verticalTraversal(TreeNode root) {
+        List<List<Integer>> ans = new LinkedList();
+        if (root == null) return ans;
+        
+        loc = new LinkedList();
+        
+        dfs(root, 0, 0);
+        
+        Collections.sort(loc, (o1, o2) -> o1.x == o2.x ? (o1.y == o2.y ? (o1.val - o2.val) : o1.y - o2.y) : o1.x - o2.x);
+        
+        int prev = loc.get(0).x;
+        ans.add(new ArrayList());
+        
+        for (Pair p : loc) {
+            if (p.x != prev) {
+                prev = p.x;
+                ans.add(new ArrayList());
+            }
+            
+            ans.get(ans.size() - 1).add(p.val);
+        }
+        
+        return ans;
+    }
+    
+    private void dfs(TreeNode root, int x, int y) {
+        if (root == null) return;
+        
+        loc.add(new Pair(x, y, root.val));
+        dfs(root.left, x - 1, y + 1);
+        dfs(root.right, x + 1, y + 1);
+    }
+}
+
+class Pair {
+    int x;
+    int y;
+    int val;
+    public Pair(int x, int y, int val) {
+        this.x = x;
+        this.y = y;
+        this.val = val;
+    }
+    
+}
+```
+
 #### Approach 1 :rocket: 2ms (99.10%)
     
 ```java
