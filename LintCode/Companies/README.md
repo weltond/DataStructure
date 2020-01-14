@@ -2,6 +2,7 @@
 
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [1534](https://www.lintcode.com/problem/convert-binary-search-tree-to-sorted-doubly-linked-list/description) | [Convert BST to Sorted Doubly LinkedList](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/1534-convert-binary-search-tree-to-sorted-doubly-linked-list.md) | Medium | Divide and Conquer / BST
 | [651](https://www.lintcode.com/problem/binary-tree-vertical-order-traversal/description) | [Binary Tree Vertical Order Traversal](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/651-Binary-Tree-Vertical-Order-Traversal.md) | Medium | Tree / HashTable
 | [637](https://www.lintcode.com/problem/valid-word-abbreviation/description?_from=ladder&&fromId=14) | [Valid Word Abbreviation](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/637-Valid-Word-Abbreviation.md) | Easy | String
 | [1380](https://www.lintcode.com/problem/log-sorting/description?_from=ladder&&fromId=14) | [Log Sorting](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/1380-Log-Sorting.md) | Easy | Sort / String
