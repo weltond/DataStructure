@@ -31,6 +31,56 @@ Note:
 - `p` and `q` are different and both values will exist in the binary tree.
 
 ## Answer
+### Method 2 - BFS - :turtle: 12ms (15.81%)
+- See notes in original post.
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        Queue<TreeNode> queue = new LinkedList();
+        Map<TreeNode, TreeNode> map = new HashMap();
+        
+        map.put(root, null);
+        queue.offer(root);
+        
+        while (!map.containsKey(p) || !map.containsKey(q)) {
+            TreeNode n = queue.poll();
+            
+            if (n.left != null) {
+                map.put(n.left, n);
+                queue.offer(n.left);
+            }
+            if (n.right != null) {
+                map.put(n.right, n);
+                queue.offer(n.right);
+            }
+        }
+        
+        Set<TreeNode> set = new HashSet();
+        
+        while (p != null) {
+            set.add(p);
+            p = map.get(p);
+        }
+        
+        while (!set.contains(q)) {
+            q = map.get(q);
+        }
+        
+        return q;
+    }
+}
+```
+
 ### Method 1 - DFS - :rockt: 5ms (99.88%)
 
 - Only return `p` or `q` or their `root` if `root`'s left and right are not `null`.
