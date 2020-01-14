@@ -47,6 +47,57 @@ Output: "left:1->3->2  right:1->2->3"
 ```
 
 ## Answer
+
+### Method 2 - Divide and Conquer :rabbit: 201ms (49.60%)
+
+- Remeber to make self (root) also as a DLL before merge.
+
+```java
+/**
+ * Definition of TreeNode:
+ * public class TreeNode {
+ *     public int val;
+ *     public TreeNode left, right;
+ *     public TreeNode(int val) {
+ *         this.val = val;
+ *         this.left = this.right = null;
+ *     }
+ * }
+ */
+
+public class Solution {
+    /**
+     * @param root: root of a tree
+     * @return: head node of a doubly linked list
+     */
+    public TreeNode treeToDoublyList(TreeNode root) {
+        // Write your code here.
+        if (root == null) return null;
+        
+        TreeNode leftHead = treeToDoublyList(root.left);
+        TreeNode rightHead = treeToDoublyList(root.right);
+        
+        root.left = root;
+        root.right = root;
+        
+        return merge(merge(leftHead, root), rightHead);
+    }
+    
+    private TreeNode merge(TreeNode n1, TreeNode n2) {
+        if (n1 == null || n2 == null) return n1 == null ? n2 : n1;
+        
+        TreeNode tail1 = n1.left, tail2 = n2.left;
+        tail1.right = n2;
+        n2.left = tail1;
+        
+        tail2.right = n1;
+        n1.left = tail2;
+        
+        return n1;
+    }
+}
+```
+
 ### Method 1 - Inorder - :rabbit: 201ms (49.60%)
 
 ```java
