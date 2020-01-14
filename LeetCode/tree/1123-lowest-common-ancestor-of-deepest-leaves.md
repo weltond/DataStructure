@@ -41,7 +41,7 @@ Constraints:
 - The given tree will have between 1 and 1000 nodes.
 - Each node of the tree will have a distinct value between 1 and 1000.
 
-## Answer
+## [Answer](https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/discuss/334577/JavaC%2B%2BPython-Two-Recursive-Solution)
 ### Method 1 - DFS - :turtle: 2ms (22.87%)
 
 ```java
