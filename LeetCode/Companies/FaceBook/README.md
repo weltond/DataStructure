@@ -1,5 +1,6 @@
 | No. | Problem | Difficulty | Tag | Top 20
 | :--------: | :-------: | :---------: | :------: | :-----:
+| [987](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/) | [Vertical Order Traversal of Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/987-Vertical-Order-Traversal.md) | Medium | Tree / Hash Table
 | [863](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/) | [All Nodes Distance K in Binary Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/863-All-Nodes-Distance-K-BinaryTree.md) | Medium | Tree / DFS / BFS
 | [426](https://www.cnblogs.com/grandyang/p/9615871.html) | [Convert BST to Sorted Doubly LinkedList](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/426-Convert-BST-to-Sorted-Doubly-LinkedList.md) | Medium | 
 | [199](https://leetcode.com/problems/binary-tree-right-side-view/) | [Binary Tree Right Side View](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc199BinaryTreeRightView.java) | Medium | Tree / BFS / DFS
