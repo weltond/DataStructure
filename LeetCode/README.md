@@ -254,7 +254,7 @@
 | [209](https://leetcode.com/problems/minimum-size-subarray-sum/) | [Minimum Size Subarray Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc209MinSizeSubarraySum.java) | Medium | Array / Two Pointers / Binary Search
 |[116](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/) | [Populate Next Right Pointers](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc116PopulateNextRightPointers.java) | Medium | Tree / DFS
 | [117](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/) | [Populate Next Right Pointers II](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc117PopNextRightPointersII.java) | Medium | Tree / DFS
-|[236](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) | [LCA of a Binary Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc236LCAofBinaryTree.java) | Medium | Tree
+|[236](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) | [LCA of a Binary Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/236-LCA-of-Binary-Tree.md) | Medium | Tree
 | [98](https://leetcode.com/problems/validate-binary-search-tree/) | [Validate BST](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc98ValidateBST.java) | Medium | Tree / DFS
 |[155](https://leetcode.com/problems/min-stack/) | [Min Stack](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/Lc155MinStack.java) | Easy | Stack / Design
 | [739](https://leetcode.com/problems/daily-temperatures/) | [Daily Temperatures](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/Lc739DailyTemperatures.java) | Medium | Hash Table / Stack
