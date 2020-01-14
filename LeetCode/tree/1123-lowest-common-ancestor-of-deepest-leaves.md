@@ -42,7 +42,47 @@ Constraints:
 - Each node of the tree will have a distinct value between 1 and 1000.
 
 ## [Answer](https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/discuss/334577/JavaC%2B%2BPython-Two-Recursive-Solution)
-### Method 1 - DFS - :turtle: 2ms (22.87%)
+### Method 1 - DFS - 
+
+#### Approach 2 :rocket: 0ms 
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    int depth = 0;
+    TreeNode res;
+    public TreeNode lcaDeepestLeaves(TreeNode root) {
+        dfs(root, 0);
+        
+        return res;
+    }
+    
+    private int dfs(TreeNode root, int height) {
+        depth = Math.max(depth, height);
+        
+        if (root == null) return height;
+        
+        int l = dfs(root.left, height + 1);
+        int r = dfs(root.right, height + 1);
+        
+        if (l == depth && r == depth) {
+            res = root;
+        }
+        
+        return Math.max(l, r);
+    }
+}
+```
+
+#### Approach 1 :turtle: 2ms (22.87%)
 
 ```java
 /**
