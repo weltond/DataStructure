@@ -1,6 +1,6 @@
 ## [349. Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)
 
-![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
+![](https://github.com/weltond/DataStructure/blob/master/easy.PNG)
 
 Given two arrays, write a function to compute their intersection.
 
@@ -46,6 +46,7 @@ class Solution {
         int[] res = new int[nums1.length];
         
         while (i < nums1.length && j < nums2.length) {
+            /**
             while (i > 0 && nums1[i] == nums1[i - 1]) {
                 i++;
                 if (i >= nums1.length) break;
@@ -55,6 +56,10 @@ class Solution {
                 if (j >= nums2.length) break;
             }
             if (i >= nums1.length || j >= nums2.length) break;
+            */
+            
+            while (i + 1 < nums1.length && nums1[i] == nums1[i + 1]) i++;
+            while (j + 1 < nums2.length && nums2[j] == nums2[j + 1]) j++;
             
             if (nums1[i] == nums2[j]) {
                 res[idx++] = nums1[i];
