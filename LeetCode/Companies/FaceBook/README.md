@@ -1,5 +1,6 @@
-| No. | Problem | Difficulty | Tag | Top 20
-| :--------: | :-------: | :---------: | :------: | :-----:
+| No. | Problem | Difficulty | Tag 
+| :--------: | :-------: | :---------: | :------: 
+| [350](https://leetcode.com/problems/intersection-of-two-arrays-ii/) | [Intersection of Two Arrays II](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/350-intersection-of-two-arrays-ii.md) | Easy | HashTable / Two Pointer / BS / Sort
 | [349](https://leetcode.com/problems/intersection-of-two-arrays/) | [Intersection of Two Arrays](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/349-intersection-of-two-arrays.md) | Easy | HashTable / BS / Sort / Two Pointer
 | [34](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | [Find First and Last Pos in Sorted Array](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/34-Find-First-and-Last-Position-of-Element-in-Sorted-Array.md) | Medium | Array / Binary Search
 | [971](https://leetcode.com/problems/flip-binary-tree-to-match-preorder-traversal/) | [Flip BT to Match Preorder](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/971-flip-binary-tree-to-match-preorder-traversal.md) | Medium | Tree / DFS
