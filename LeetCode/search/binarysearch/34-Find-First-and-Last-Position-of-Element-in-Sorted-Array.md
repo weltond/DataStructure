@@ -19,7 +19,77 @@ Output: [-1,-1]
 
 ## Answer
 ### Method 1 - Binary Search - :rocket: 0ms
+#### Approach 4
+- Two BS
+- For right side BS, we play a trick to make `m = (l + r + 1) / 2` to make sure that `mid` is always closer to `right`.
+
+```java
+class Solution {
+    public int[] searchRange(int[] nums, int target) {
+        int[] res = new int[2];
+        if (nums == null || nums.length == 0) return new int[]{-1, -1};
+        
+        int l = 0, r = nums.length - 1;
+        
+        // find the left most one
+        while (l < r) {
+            int m = l + (r - l) / 2;
+            if (nums[m] >= target) r = m;
+            else l = m + 1;
+        }
+        
+        if (nums[l] != target) return new int[]{-1, -1};
+        
+        res[0] = l;
+        
+        // find the right most one
+        r = nums.length - 1;
+        while (l < r) {
+            int m = l + (r - l + 1) / 2;    // trick here. make the mid closer to right
+            if (target == nums[m]) l = m;
+            else r = m - 1;
+        }
+        
+        res[1] = r;
+        
+        return res;
+    }
+}
+```
+
+#### Approach 3
+
+```java
+class Solution {
+    public int[] searchRange(int[] nums, int target) {
+        int[] res = new int[2];
+        if (nums == null || nums.length == 0) return new int[]{-1, -1};
+        
+        int l = 0, r = nums.length - 1;
+        
+        while (l < r) {
+            int m = l + (r - l) / 2;
+            if (nums[m] >= target) r = m;
+            else l = m + 1;
+        }
+        
+        if (nums[l] != target) return new int[]{-1, -1};
+        
+        res[0] = l;
+        
+        while (r < nums.length && nums[l] == nums[r]) {
+            r++;
+        }
+        
+        res[1] = r - 1;
+        
+        return res;
+    }
+}
+```
+
 #### Approach 2
+
 ```java
 class Solution {
     public int[] searchRange(int[] nums, int target) {
