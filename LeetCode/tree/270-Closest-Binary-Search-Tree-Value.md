@@ -37,7 +37,7 @@ Binary tree {3,2,4,1},  denote the following structure:
 ## Answer
 
 ### Method 2 - DFS - :turtle: 302ms (39.80%)
-
+- O(n)
 ```java
 /**
  * Definition of TreeNode:
@@ -84,7 +84,7 @@ public class Solution {
 ```
 
 ### Method 1 - DFS - :rocket: 277ms (87.20%)
-
+- O(height)
 ```java
 /**
  * Definition of TreeNode:
