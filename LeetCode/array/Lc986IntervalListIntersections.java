@@ -9,7 +9,32 @@
  *     Interval(int s, int e) { start = s; end = e; }
  * }
  */
-
+class Solution {
+    public int[][] intervalIntersection(int[][] a, int[][] b) {
+        int i = 0, j = 0;
+        
+        int[][] res = new int[a.length + b.length][];
+        int idx = 0;
+        while (i < a.length && j < b.length) {
+            int start = Math.max(a[i][0], b[j][0]);
+            if (a[i][1] == b[j][1]) {
+                res[idx++] = new int[]{start, a[i][1]};
+                i++;
+                j++;
+            } else if (a[i][1] > b[j][1]) {
+                if (start <= b[j][1])
+                    res[idx++] = new int[]{start, b[j][1]};
+                j++;
+            } else {
+                if (start <= a[i][1])
+                    res[idx++] = new int[]{start, a[i][1]};
+                i++;
+            }
+        }
+        
+        return Arrays.copyOf(res, idx);
+    }
+}
 class Solution {
     public int[][] intervalIntersection(int[][] a, int[][] b) {
         List<int[]> ans = new ArrayList();
