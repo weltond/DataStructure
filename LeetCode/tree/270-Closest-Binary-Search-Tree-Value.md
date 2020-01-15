@@ -35,6 +35,54 @@ Binary tree {3,2,4,1},  denote the following structure:
 - Notice: Given target value is a floating point. You are guaranteed to have only one unique value in the BST that is closest to the target.
 
 ## Answer
+
+### Method 2 - DFS - :turtle: 302ms (39.80%)
+
+```java
+/**
+ * Definition of TreeNode:
+ * public class TreeNode {
+ *     public int val;
+ *     public TreeNode left, right;
+ *     public TreeNode(int val) {
+ *         this.val = val;
+ *         this.left = this.right = null;
+ *     }
+ * }
+ */
+
+public class Solution {
+    /**
+     * @param root: the given BST
+     * @param target: the given target
+     * @return: the value in the BST that is closest to the target
+     */
+     double res = Integer.MAX_VALUE;
+     int ret = 0;
+    public int closestValue(TreeNode root, double target) {
+        // write your code here
+        dfs(root, target);
+        
+        return ret;
+    }
+    
+    private void dfs(TreeNode root, double target) {
+        if (root == null) return;
+        
+        if (res > Math.abs(root.val - target)) {
+            res = Math.abs(root.val - target);
+            ret = root.val;
+        }
+        
+        if (target > root.val) {
+            dfs(root.right, target);
+        } else if (target < root.val) {
+            dfs(root.left, target);
+        }
+    }
+}
+```
+
 ### Method 1 - DFS - :rocket: 277ms (87.20%)
 
 ```java
