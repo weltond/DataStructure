@@ -1,6 +1,6 @@
 ## [270. Closest Binary Search Tree Value](https://www.cnblogs.com/grandyang/p/5237170.html)
 
-![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
+![](https://github.com/weltond/DataStructure/blob/master/easy.PNG)
 
 Given a non-empty binary search tree and a target value, find the value in the BST that is closest to the target.
 
