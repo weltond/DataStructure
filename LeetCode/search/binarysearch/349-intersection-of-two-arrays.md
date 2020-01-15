@@ -26,7 +26,39 @@ Note:
 ### Method 2 - HashTable - 
 
 ```java
-
+class Solution {
+    public int[] intersection(int[] nums1, int[] nums2) {
+        if (nums1 == null || nums2 == null) return new int[]{};
+        
+        if (nums1.length > nums2.length) return intersection(nums2, nums1);
+        
+        int min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
+        
+        for (int i : nums1) {
+            min = Math.min(min, i);
+            max = Math.max(max, i);
+        }
+        for (int i : nums2) {
+            min = Math.min(min, i);
+            max = Math.max(max, i);
+        }
+        
+        boolean[] arr = new boolean[max - min + 1];
+        int[] ans = new int[nums1.length];
+        int idx = 0;
+        
+        for (int i : nums1) arr[i - min] = true;
+        
+        for (int i : nums2) {
+            if (arr[i - min]) {
+                ans[idx++] = i;
+                arr[i - min] = false;
+            }
+        }
+        
+        return Arrays.copyOf(ans, idx);
+    }
+}
 ```
 
 ### Method 1 - Two Pointers - :rocket: 1ms (99.88%)
