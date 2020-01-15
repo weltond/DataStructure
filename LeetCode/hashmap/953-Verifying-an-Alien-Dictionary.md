@@ -34,7 +34,94 @@ Note:
 
 ## Answer
 ### Method 1 - Naive - :1ms (42.07%)
+
+#### Approach 3
+
+```java
+class Solution {
+    public boolean isAlienSorted(String[] words, String order) {
+        if (words.length <= 1) return true;
+        
+        int[] arr = new int[26];
+        for (int i = 0, len = order.length(); i < len; i++) {
+            arr[order.charAt(i) - 'a'] = i;
+        }
+        
+        int i = 0;
+        while (i < words.length - 1) {
+            String w1 = words[i];
+            String w2 = words[i + 1];
+            int l1 = w1.length(), l2 = w2.length();
+            boolean isEnd = true;
+            
+            for (int k = 0; k < Math.min(l1, l2); k++) {
+                char c1 = w1.charAt(k), c2 = w2.charAt(k);
+                if (c1 != c2) {
+                    if (arr[c1 - 'a'] > arr[c2 - 'a']) {
+                        return false;
+                    } else {
+                        isEnd = false;
+                        break;
+                    }
+                }
+            }
+            
+            if (isEnd && l1 > l2) return false;
+            
+            i++;
+        }
+        
+        return true;
+    }
+}
+```
+
+#### Approach 2
+
+```java
+class Solution {
+    public boolean isAlienSorted(String[] words, String order) {
+        int[] arr = new int[26];
+        int pos = 1;
+        for (char c : order.toCharArray()) {
+            arr[c - 'a'] = pos++;
+        }
+        // 1. compare each char from first to end.
+        // 2. if prev word reach end but cur not. return false
+        String pre = words[0];
+        
+        int idx = 1;
+        
+        while (idx < words.length) {
+            String cur = words[idx++];
+            
+            int i = 0, j = 0, len1 = pre.length(), len2 = cur.length();
+            
+            boolean notEqual = false;
+            while (i < len1 && j < len2) {
+                char c1 = pre.charAt(i++), c2 = cur.charAt(j++);
+                if (c1 != c2) {
+                    if (arr[c1 - 'a'] > arr[c2 - 'a']) return false;
+                    else {
+                        notEqual = true;
+                        break;
+                    }
+                }
+            }
+            
+            if (!notEqual && i != len1 && j == len2) return false;
+            
+            pre = cur;
+        }
+        
+        return true;
+    }
+}
+```
+
+#### Approach 1
 **Wrong Solution below when two words are the same. However, LeetCode accepted the following code......**
+
 ```java
 class Solution {
     public boolean isAlienSorted(String[] words, String order) {
