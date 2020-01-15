@@ -36,7 +36,38 @@ Note:
 3. Processing the Strings by streaming, then check.
 
 ## Answer
-### Method 2 - Two pointer - 
+### Method 2 - Two pointer - :rocket: 1ms (100%)
+
+```java
+class Solution {
+    public int[] intersect(int[] nums1, int[] nums2) {
+        if (nums1 == null || nums2 == null) return new int[]{};
+
+        int[] ans = new int[nums1.length];
+        int idx = 0;
+        
+        Arrays.sort(nums1);
+        Arrays.sort(nums2);
+        
+        int i = 0, j = 0;
+        
+        while (i < nums1.length && j < nums2.length) {
+            if (nums1[i] == nums2[j]) {
+                ans[idx++] = nums1[i];
+                i++;
+                j++;
+            } else if (nums1[i] > nums2[j]) {
+                j++;
+            } else {
+                i++;
+            }
+        }
+        
+        return Arrays.copyOf(ans, idx);
+    }
+}
+```
+
 ### Method 1 - HashTable - :rabbit: 2ms (88.41%)
 
 ```java
