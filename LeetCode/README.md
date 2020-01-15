@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [953](https://leetcode.com/problems/verifying-an-alien-dictionary/) | [Verifying an Alien Dictionary](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/953-Verifying-an-Alien-Dictionary.md) | Easy | Hash Map
 | [1060]() | [Missing Element in Sorted Array](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/1060-Missing-Element-In-Sorted-Array.md) | Medium | Binary Search
 | [289](https://leetcode.com/problems/game-of-life/) | [Game of Life](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/289-game-of-life.md) | Medium | Array
 | [350](https://leetcode.com/problems/intersection-of-two-arrays-ii/) | [Intersection of Two Arrays II](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/350-intersection-of-two-arrays-ii.md) | Easy | HashTable / Two Pointer / BS / Sort
