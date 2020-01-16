@@ -26,7 +26,7 @@ Note:
 - The length of both given strings is in range `[1, 10,000]`.
 
 ## Answer
-### Method 3 - Efficient Sliding Window - 
+### Method 3 - Efficient Sliding Window - :rocket: 4ms (91.03%)
 
 ```java
 class Solution {
