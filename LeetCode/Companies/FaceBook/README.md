@@ -1,5 +1,6 @@
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------: 
+| [15](https://leetcode.com/problems/3sum/) | [3 Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc15ThreeSum.java) | Medium | Array / Two Pointers
 | [166](https://leetcode.com/problems/fraction-to-recurring-decimal/) | [Fraction to Recurring Decimal](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/166-fraction-to-recurring-decimal.md) | Medium | HashTable / Math
 |[986](https://leetcode.com/problems/interval-list-intersections/) | [Interval List Intersections](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc986IntervalListIntersections.java) | Medium | Two Pointers
 | [162](https://leetcode.com/problems/find-peak-element/) | [Find Peak Element](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/162-Find-Peak-Element.md) | Medium | Array / Binary Search
