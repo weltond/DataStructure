@@ -104,3 +104,50 @@ class Solution {
     }
 }
 ```
+
+## Followup
+- Print out the order
+
+```java
+class Solution {
+    public int leastInterval(char[] tasks, int n) {
+        Map<Character, Integer> map = new HashMap();
+        for (int i = 0; i < tasks.length; i++) {
+            map.put(tasks[i], map.getOrDefault(tasks[i], 0) + 1);
+        }
+        
+        int res = 0;
+        PriorityQueue<Character> pq = new PriorityQueue((o1, o2) -> (map.get(o2) - map.get(o1)));
+        for (char c : map.keySet()) {
+            pq.offer(c);
+        }
+        StringBuilder sb = new StringBuilder();
+        
+        while (!pq.isEmpty()) {
+            int i = 0;
+            List<Character> list = new ArrayList();
+            while (i <= n) {
+                if (!pq.isEmpty()) {
+                    char c = pq.poll();
+                    sb.append(c).append("->");
+                    int freq = map.get(c);
+                    if (freq > 1) list.add(c);
+                    map.put(c, freq - 1);
+                } else {
+                    sb.append("idle").append("->");
+                }
+                res += 1;
+                i++;
+                
+                if (pq.isEmpty() && list.size() == 0) break;
+            }
+            
+            for (char c : list) {
+                pq.offer(c);
+            }
+        }
+        System.out.println(sb.toString());  // A->B->idle->A->B->idle->A->B->
+        return res;
+    }
+}
+```
