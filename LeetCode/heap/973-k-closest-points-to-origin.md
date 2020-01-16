@@ -37,6 +37,64 @@ Note:
 - `-10000 < points[i][1] < 10000`
 
 ## Answer
+### Method 2 - Quick Selection - :rocket: 4ms (99.40%)
+
+- Like Quick sort.
+- Continously find the k-th position.
+
+```java
+class Solution {
+    public int[][] kClosest(int[][] points, int K) {
+        dc(points, 0, points.length - 1, K);
+         
+        return Arrays.copyOf(points, K);
+    }
+    // divide and conquer
+    private void dc(int[][] arr, int left, int right, int k) {
+        if (right < left) return;
+        
+        int pos = findPos(arr, left, right);
+        
+        if (pos > k) {
+            dc(arr, left, pos - 1, k);
+        } else if (pos < k) {
+            dc(arr, pos + 1, right, k);
+        }
+    }
+    
+    // find k position
+    private int findPos(int[][] arr, int left, int right) {
+        int pivot = dist(arr[right]);
+        int tmp = right;
+        right--;
+        
+        while (left <= right) {
+            while (left <= right && dist(arr[left]) <= pivot) left++;
+            while (left <= right && dist(arr[right]) > pivot) right--;
+            
+            if (left <= right)
+                swap(arr, left, right);
+        }
+        
+        // post processing
+        swap(arr, left, tmp);
+        
+        return left;
+    }
+    
+    private void swap(int[][] arr, int left, int right) {
+        int[] tmp = arr[left];
+        arr[left] = arr[right];
+        arr[right] = tmp;
+    }
+    
+    private int dist(int[] d) {
+        int x = d[0], y = d[1];
+        return x * x + y * y;
+    }
+}
+```
+
 ### Method 1 - PQ - :turtle: 37ms (14.44%)
 
 ```java
