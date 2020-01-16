@@ -1,5 +1,6 @@
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------: 
+|  [973](https://leetcode.com/problems/k-closest-points-to-origin/) | [K Closest Points to Origin](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/973-k-closest-points-to-origin.md) | Easy | Math / Divide and Conquer / Sort
 | [621](https://leetcode.com/problems/task-scheduler/) | [Task Scheduler](https://github.com/weltond/DataStructure/blob/master/LeetCode/greedy/621-Task-Scheduler.md) | Medium | Greedy / Array / Queue
 | [358]() | [Rearrange String k Distance Apart](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/358-Rearrage-String-K-Distance-Apart.md) | Hard | Heap
 |  [767](https://leetcode.com/problems/reorganize-string/) | [Reorganize String](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/767-Reorganize-String.md) | Medium | String / Heap / Greedy / Sort
