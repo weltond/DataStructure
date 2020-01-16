@@ -1,5 +1,6 @@
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------: 
+| [567](https://leetcode.com/problems/permutation-in-string/) | [Permutation In String](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/567-Permutation-In-String.md) | Medium | Two Pointers / Sliding Window
 | [1027](https://leetcode.com/problems/longest-arithmetic-sequence/) | [Longest Arithmetic Sequence](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/1027-Longest-Arithmetic-Sequence.md) | Medium | DP
 | [133](https://leetcode.com/problems/clone-graph/) | [Clone Graph](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/Lc133CloneGraph.java) | Medium | DFS / BFS / Graph
 | [523](https://leetcode.com/problems/continuous-subarray-sum/) | [Continuous Subarray Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/523-Continuous-Subarray-Sum.md) | Medium | Math / DP
