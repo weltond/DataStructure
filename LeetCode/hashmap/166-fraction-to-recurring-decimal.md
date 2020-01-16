@@ -30,6 +30,7 @@ Output: "0.(6)"
 ## Answer
 ### Method 1 -HashTable - :rocket: 1ms (100%)
 
+- Be aware of edge case such as **negative**, **0**, **possible overflow** and etc.
 - Use current sb's length as indicator for repeating part.
 
 ```java
