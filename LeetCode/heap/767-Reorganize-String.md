@@ -25,6 +25,9 @@ Note:
 ## Answer
 ### Method 2 - Heap - :rabbit: 6ms (48%)
 
+- PQ to store chars based on max freq.
+- If next poll is the same as prev, keep poll next if exists, otherwise return "".
+
 ```java
 class Solution {
     public String reorganizeString(String s) {
