@@ -25,7 +25,7 @@ Only need one meeting room
 ## Answer
 ### Method 3 - TreeMap - :rabbit: 302ms (41.80%)
 
-- Same as [My Calendar]()
+- Same as [My Calendar](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc729MyCalendarI.java)
 
 ```java
 /**
