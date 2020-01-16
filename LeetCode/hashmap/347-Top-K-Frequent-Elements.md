@@ -24,6 +24,45 @@ Note:
 - Your algorithm's time complexity **must be** better than `O(n log n)`, where n is the array's size.
 
 ## Answer
+### Method 2 - Bucket Sort - :rocket: 11ms (90.84%)
+
+```java
+class Solution {
+    public List<Integer> topKFrequent(int[] nums, int k) {
+        List<Integer> res = new LinkedList();
+        Map<Integer, Integer> map = new HashMap();
+        
+        for (int i : nums) {
+            map.put(i, map.getOrDefault(i, 0) + 1); 
+        }
+        
+        List[] bucket = new List[nums.length + 1];
+        for (int key : map.keySet()) {
+            int freq = map.get(key);
+            if (bucket[freq] == null) {
+                bucket[freq] = new ArrayList();
+            }
+            
+            bucket[freq].add(key);
+        }
+        
+        int cnt = 0;
+        for (int i = bucket.length - 1; i >= 0 && cnt < k; i--) {
+            if (bucket[i] != null) {
+                List<Integer> list = bucket[i];
+                for (int num : list) {
+                    cnt += 1;
+                    res.add(num);
+                }
+            }
+        }
+        
+        return res;
+    }
+    
+}
+```
+
 ### Method 1 - PriorityQueue - :rabbit: 14ms (54.92%)
 
 ```java
