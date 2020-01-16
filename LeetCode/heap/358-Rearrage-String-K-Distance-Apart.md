@@ -1,6 +1,6 @@
 ## [358. Rearrange String k Distance Apart](https://www.cnblogs.com/grandyang/p/5586009.html)
 
-![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
+![](https://github.com/weltond/DataStructure/blob/master/hard.PNG)
 
 Given a non-empty string str and an integer k, rearrange the string such that the same characters are at least distance k from each other.
 
@@ -33,7 +33,7 @@ Another possible answer is: "abcabcda". The same letters are at least distance 2
 ## Answer
 ### Method 1 - Heap -
 
-- Just like []().
+- Just like [767. Reorganize String](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/767-Reorganize-String.md).
 
 ```java
 public String rearrangeString(String str, int k) {
