@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [358]() | [Rearrange String k Distance Apart](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/358-Rearrage-String-K-Distance-Apart.md) | Hard | Heap
 | [825](https://leetcode.com/problems/friends-of-appropriate-ages/) | [Friends of Appropriate Ages](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/825-friends-of-appropriate-ages.md) | Medium | Array
 | [166](https://leetcode.com/problems/fraction-to-recurring-decimal/) | [Fraction to Recurring Decimal](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/166-fraction-to-recurring-decimal.md) | Medium | HashTable / Math
 | [953](https://leetcode.com/problems/verifying-an-alien-dictionary/) | [Verifying an Alien Dictionary](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/953-Verifying-an-Alien-Dictionary.md) | Easy | Hash Map
