@@ -197,7 +197,7 @@
 | [988](https://leetcode.com/problems/smallest-string-starting-from-leaf/) | [Smallest String Starting from Leaf](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc988SmallestStringStartingFromLeaf.java) | Medium | Tree / DFS
 | [1017](https://leetcode.com/problems/convert-to-base-2/) | [Convert to Base -2](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/Lc1017ConvertBaseNegative2.java) | Medium | Math
 | [89](https://leetcode.com/problems/gray-code/) | [Gray Code](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc89GrayCode.java) | Medium | Backtracking
-| [567](https://leetcode.com/problems/permutation-in-string/) | [Permutation In String](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc567PermutationInString.java) | Medium | Two Pointers / Sliding Window
+| [567](https://leetcode.com/problems/permutation-in-string/) | [Permutation In String](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/567-Permutation-In-String.md) | Medium | Two Pointers / Sliding Window
 |[684](https://leetcode.com/problems/redundant-connection/) | [Redundant Connection](https://github.com/weltond/DataStructure/blob/master/LeetCode/unionfind/Lc684RedundantConnection.java) | Medium | Tree / Graph / Union Find 
 |  130 | [Surronded Regions](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/Lc130SurroundedRegions.java) | Medium | 
 |  695 | [Max Area Of Island](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/Lc695MaxAreaOfIsland.java) | Medium |
