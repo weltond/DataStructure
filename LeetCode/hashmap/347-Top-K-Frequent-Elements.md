@@ -1,30 +1,27 @@
-## [637. Valid Word Abbreviation](https://www.lintcode.com/problem/valid-word-abbreviation/description?_from=ladder&&fromId=14)
+## [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
 
 ![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
 
-Given a non-empty string word and an abbreviation abbr, return whether the string matches with the given abbreviation.
+Given a non-empty array of integers, return the k most frequent elements.
 
-A string such as `"word"` contains only the following valid abbreviations:
-
-`["word", "1ord", "w1rd", "wo1d", "wor1", "2rd", "w2d", "wo2", "1o1d", "1or1", "w1r1", "1o2", "2r1", "3d", "w3", "4"]`
-
-Example
 Example 1:
 
 ```
-Input : s = "internationalization", abbr = "i12iz4n"
-Output : true
+Input: nums = [1,1,1,2,2,3], k = 2
+Output: [1,2]
 ```
 
 Example 2:
 
 ```
-Input : s = "apple", abbr = "a2e"
-Output : false
+Input: nums = [1], k = 1
+Output: [1]
 ```
 
-Notice
-- Notice that only the above abbreviations are valid abbreviations of the string word. Any other string is not a valid abbreviation of word.
+Note:
+
+- You may assume k is always valid, `1 ≤ k ≤ number of unique elements`.
+- Your algorithm's time complexity **must be** better than `O(n log n)`, where n is the array's size.
 
 ## Answer
 ### Method 1 - PriorityQueue - :rabbit: 14ms (54.92%)
