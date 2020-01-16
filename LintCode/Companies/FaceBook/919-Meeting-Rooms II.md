@@ -136,6 +136,43 @@ public class Solution {
      * @return: the minimum number of conference rooms required
      */
     public int minMeetingRooms(List<Interval> intervals) {
+        // Write your code here
+        Collections.sort(intervals, (o1, o2) -> o1.start - o2.start);
+        PriorityQueue<Integer> pq = new PriorityQueue();   // offer end into pq. min heap
+        
+        int i = 0, len = intervals.size();
+        int res = 0;
+        while (i < len) {
+            Interval cur = intervals.get(i++);
+            if (!pq.isEmpty() && pq.peek() <= cur.start) {
+                pq.poll();
+            } 
+            
+            pq.offer(cur.end);
+        }
+        
+        return pq.size();
+    }
+}
+```
+```java
+/**
+ * Definition of Interval:
+ * public classs Interval {
+ *     int start, end;
+ *     Interval(int start, int end) {
+ *         this.start = start;
+ *         this.end = end;
+ *     }
+ * }
+ */
+
+public class Solution {
+    /**
+     * @param intervals: an array of meeting time intervals
+     * @return: the minimum number of conference rooms required
+     */
+    public int minMeetingRooms(List<Interval> intervals) {
         if (intervals == null || intervals.size() == 0) {
             return 0;
         }
