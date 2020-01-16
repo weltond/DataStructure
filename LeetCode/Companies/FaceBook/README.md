@@ -1,5 +1,6 @@
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------: 
+| [56](https://leetcode.com/problems/merge-intervals/) | [Merge Intervals](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/56-Merge-Intervals.md) | Medium | Array / Sort
 | [825](https://leetcode.com/problems/friends-of-appropriate-ages/) | [Friends of Appropriate Ages](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/825-friends-of-appropriate-ages.md) | Medium | Array / HashTable
 | [567](https://leetcode.com/problems/permutation-in-string/) | [Permutation In String](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/567-Permutation-In-String.md) | Medium | Two Pointers / Sliding Window
 | [1027](https://leetcode.com/problems/longest-arithmetic-sequence/) | [Longest Arithmetic Sequence](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/1027-Longest-Arithmetic-Sequence.md) | Medium | DP
