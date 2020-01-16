@@ -1,5 +1,6 @@
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------: 
+| [621](https://leetcode.com/problems/task-scheduler/) | [Task Scheduler](https://github.com/weltond/DataStructure/blob/master/LeetCode/greedy/621-Task-Scheduler.md) | Medium | Greedy / Array / Queue
 | [358]() | [Rearrange String k Distance Apart](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/358-Rearrage-String-K-Distance-Apart.md) | Hard | Heap
 |  [767](https://leetcode.com/problems/reorganize-string/) | [Reorganize String](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/767-Reorganize-String.md) | Medium | String / Heap / Greedy / Sort
 | [253](https://www.lintcode.com/problem/meeting-rooms-ii/description?_from=ladder&&fromId=130) | [Meeting Room II](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/919-Meeting-Rooms%20II.md) | Medium | Sort / Greedy / Sweep line / Heap
