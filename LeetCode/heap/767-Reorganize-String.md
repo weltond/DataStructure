@@ -23,6 +23,18 @@ Note:
 - S will consist of lowercase letters and have length in range [1, 500].
 
 ## Answer
+### Method 3 
+- **Time O(N)**: fill hash[] + find the letter + write results into char array
+- **Space O(N + 26)**: result + hash[]
+- count letter appearance and store in hash[i]
+- find the letter with largest occurence.
+- put the letter into even index numbe (0, 2, 4 ...) char array
+- put the rest into the array
+
+```java
+
+```
+
 ### Method 2 - Heap - :rabbit: 6ms (48%)
 
 - PQ to store chars based on max freq.
