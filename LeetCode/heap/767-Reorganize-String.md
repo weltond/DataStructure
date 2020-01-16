@@ -23,7 +23,7 @@ Note:
 - S will consist of lowercase letters and have length in range [1, 500].
 
 ## Answer
-### Method 3 
+### Method 3 - :rocket: 0ms 
 - **Time O(N)**: fill hash[] + find the letter + write results into char array
 - **Space O(N + 26)**: result + hash[]
 - count letter appearance and store in hash[i]
@@ -32,7 +32,50 @@ Note:
 - put the rest into the array
 
 ```java
-
+class Solution {
+    public String reorganizeString(String S) {
+        int[] map = new int[26];
+        for (char c : S.toCharArray()) {
+            map[c - 'a']++;
+        }
+        
+        int maxV = 0, letter = 0;
+        for (int i = 0; i < 26; i++) {
+            if (map[i] > maxV) {
+                maxV = map[i];
+                letter = i;
+            }
+        }           
+        
+        int len = S.length();
+        if (maxV > (len + 1) / 2) return "";
+        
+        // fill the largest one
+        int idx = 0;
+        char[] res = new char[len];
+        while (map[letter] > 0) {
+            res[idx] = (char) (letter + 'a');
+            idx += 2;
+            map[letter] -= 1;
+        }
+        
+        // fill the rest
+        for (int i = 0; i < 26; i++) {
+            while (map[i] > 0) {
+                if (idx >= res.length) {
+                    idx = 1;
+                }
+                
+                res[idx] = (char) (i + 'a');
+                idx += 2;
+                map[i] -= 1;
+            }
+        }
+        
+        return String.valueOf(res);
+                                                          
+    }
+}
 ```
 
 ### Method 2 - Heap - :rabbit: 6ms (48%)
