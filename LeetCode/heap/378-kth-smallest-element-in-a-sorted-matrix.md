@@ -21,7 +21,7 @@ Note:
 - You may assume k is always valid, 1 ≤ k ≤ n2.
 
 ## Answer
-### Method 2 - Binary Search - :rocket: 1ms (85.71%)
+### Method 3 - Binary Search - :rocket: 1ms (85.71%)
 
 ```java
 class Solution {
@@ -44,6 +44,22 @@ class Solution {
         }
         
         return lo;
+    }
+}
+```
+### Method 2 - Heap - :rabbit: 16ms (56.43%)
+
+```java
+class Solution {
+    public int kthSmallest(int[][] matrix, int k) {
+        PriorityQueue<Integer> pq = new PriorityQueue<Integer>((o1,o2)->(o2-o1));
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
+                pq.offer(matrix[i][j]);
+                if (pq.size() > k) pq.poll();
+            }
+        }
+        return pq.peek();
     }
 }
 ```
