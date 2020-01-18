@@ -36,6 +36,7 @@
 
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [386](https://www.lintcode.com/problem/longest-substring-with-at-most-k-distinct-characters/description) | [Longest Substring At Most K Distinct Chars](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/386-longest-substring-with-at-most-k-distinct-characters.md) | Medium | HashTable / Two pointer
 | [780](https://www.lintcode.com/problem/remove-invalid-parentheses/description?_from=ladder&&fromId=130) | [Remove Invalid Parenthese](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/Lc301RemoveInvalidParenthesis.java) | Hard | DFS / String
 | [86](https://www.lintcode.com/problem/binary-search-tree-iterator/description) | [Binary Search Tree Iterator](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/86-Binary-Search-Tree-Iterator.md) | Hard | BST / Stack
 | [529](https://www.lintcode.com/problem/geohash/description?_from=ladder&&fromId=130) | [Geohash](https://github.com/weltond/DataStructure/tree/master/LintCode/Design/529%20Geohash) | Medium | Math
