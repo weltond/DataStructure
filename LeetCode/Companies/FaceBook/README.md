@@ -1,5 +1,6 @@
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------: 
+|  [76](https://leetcode.com/problems/minimum-window-substring/) | [Minimum Window Substring](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc76MinimumWindowSubstring.java) | Hard | HashTable / Two Pointers / Window
 | [340]() | [Longest Substring At Most K Distinct Chars](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/340-longest-substring-with-at-most-k-distinct-characters.md) | Hard | HashTable / Two Pointers
 |  [23](https://leetcode.com/problems/merge-k-sorted-lists/) | [Merge K Sorted Lists](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc23MergeKSortedLists.java) | Hard | Divide and Conquer / LinkedList / Heap
 | [378](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/) | [Kth Smallest in Sorted Matrix](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/378-kth-smallest-element-in-a-sorted-matrix.md) | Medium | Binary Search / Heap
