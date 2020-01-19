@@ -14,6 +14,25 @@ Note:
 - Minimize the total number of operations.
 
 ## Answer
+### Method 3 - Two Pointer - :rocket: 0ms
+
+```java
+class Solution {
+    public void moveZeroes(int[] nums) {
+        if (nums == null || nums.length == 0) return;
+        int j = 0;  // means slot to fill in non-zero
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != 0) {
+                nums[j++] = nums[i];
+            }
+        }
+        for (; j < nums.length; j++) {
+            nums[j] = 0;
+        }
+    }
+}
+```
+
 ### Method 2 - :rocket: 0ms
 ```java
 class Solution {
