@@ -1,7 +1,7 @@
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------: 
 | [28](https://leetcode.com/problems/implement-strstr/) | [Implement strStr()](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc28ImplementStrStr.java) | Easy | Two Pointers / String
-| [438](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | [Find All Anagrams in a String](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/438-Find-All-Anagrams-in-a-String.md) | Medium | HashTable
+| [438](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | [Find All Anagrams in a String](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/438-Find-All-Anagrams-in-a-String.md) | Medium | HashTable / Sliding Window
 |  [76](https://leetcode.com/problems/minimum-window-substring/) | [Minimum Window Substring](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc76MinimumWindowSubstring.java) | Hard | HashTable / Two Pointers / Window
 | [340]() | [Longest Substring At Most K Distinct Chars](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/340-longest-substring-with-at-most-k-distinct-characters.md) | Hard | HashTable / Two Pointers
 |  [23](https://leetcode.com/problems/merge-k-sorted-lists/) | [Merge K Sorted Lists](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc23MergeKSortedLists.java) | Hard | Divide and Conquer / LinkedList / Heap
