@@ -210,7 +210,7 @@
 |  [767](https://leetcode.com/problems/reorganize-string/) | [Reorganize String](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/767-Reorganize-String.md) | Medium | String / Heap / Greedy / Sort
 |  23 | [Merge K Sorted Lists](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc23MergeKSortedLists.java) | 
 |  224 | [Basic Calculator](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/LC224BasicCalculator.java) | |
-|  76 | [Minimum Window Substring](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc76MinimumWindowSubstring.java) | |
+|  [76](https://leetcode.com/problems/minimum-window-substring/) | [Minimum Window Substring](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc76MinimumWindowSubstring.java) | Hard | HashTable / Two Pointers / Window
 |  91 | [DecodeWays](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc91DecodeWays.java) | |
 |  450 | [Delete Node In BST](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/LC450DeleteNodeInBST_2.java) | |
 |  109 | [Convert Sorted List To BST](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc109ConvertSortedListToBST.java) | |
