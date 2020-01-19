@@ -1,5 +1,6 @@
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------: 
+| [42](https://leetcode.com/problems/trapping-rain-water/) | [Trapping Rain Water](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc42TrappingRainWater.java) | Hard | Array / Two Pointer / Stack
 | [125](https://leetcode.com/problems/valid-palindrome/) | [Valid Palindrome](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/125-Valid-Palindrome.md) | Easy | String / Two Pointer
 | [31](https://leetcode.com/problems/next-permutation/) | [Next Permutation](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc31NextPermutation.java) | Medium | Array
 | [283](https://leetcode.com/problems/move-zeroes/) | [Move Zeros](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/283-Move-Zeroes.md) | Easy | Array / Two Pointers
