@@ -11,6 +11,30 @@ Note:
 
 ## Answer
 ### Method 1 - String - :rocket: 2ms (96.04%)
+
+- `sb.insert()` takes more time than `sb.append()` then `sb.reverse()`
+```java
+class Solution {
+    public String addStrings(String num1, String num2) {
+        int len1 = num1.length(), len2 = num2.length();
+        int i = len1 - 1, j = len2 - 1;
+        int add = 0;
+        StringBuilder sb = new StringBuilder();
+        while (i >= 0 || j >= 0) {
+            int v1 = i < 0 ? 0 : num1.charAt(i--) - '0';
+            int v2 = j < 0 ? 0 : num2.charAt(j--) - '0';
+            int val = v1 + v2 + add;
+            sb.append(val % 10);
+            add = val / 10;
+        }
+        
+        if (add != 0) sb.append(add);
+        
+        return sb.reverse().toString();
+    }
+}
+```
+
 ```java
 class Solution {
     public String addStrings(String num1, String num2) {
