@@ -1,5 +1,6 @@
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------: 
+| [340]() | [Longest Substring At Most K Distinct Chars](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/340-longest-substring-with-at-most-k-distinct-characters.md) | Hard | HashTable / Two Pointers
 |  [23](https://leetcode.com/problems/merge-k-sorted-lists/) | [Merge K Sorted Lists](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc23MergeKSortedLists.java) | Hard | Divide and Conquer / LinkedList / Heap
 | [378](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/) | [Kth Smallest in Sorted Matrix](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/378-kth-smallest-element-in-a-sorted-matrix.md) | Medium | Binary Search / Heap
 |[215](https://leetcode.com/problems/kth-largest-element-in-an-array/) | [Kth Largest Element in Array](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/Lc215KthLargestEleInArray.java) | Medium | Divide and Conquer / Heap
