@@ -30,9 +30,39 @@ Output: [1,2,3,4,8,12,11,10,9,5,6,7]
 **Unlike Method 1, since it is not a square matrix, we need to take care of edge cases like [1,2,3] or [[1],[2],[3]].**
 
 **So we change the strategy to `sc -> ec`,`sr + 1 -> er`, `ec - 1 -> sc - 1`, `er -> sr + 1`.**
+
 #### Approach 2
 - Time: O(m * n)
 - Space: O(m * n)
+
+```java
+class Solution {
+    public List<Integer> spiralOrder(int[][] matrix) {
+        List<Integer> res = new LinkedList();
+        if (matrix == null || matrix.length == 0) return res;
+        
+        int toprow = 0, botrow = matrix.length - 1, lcol = 0, rcol = matrix[0].length - 1;
+        
+        while (toprow <= botrow && lcol <= rcol) {
+            for (int c = lcol; c <= rcol; c++) res.add(matrix[toprow][c]);
+            for (int r = toprow + 1; r <= botrow; r++) res.add(matrix[r][rcol]);
+            
+            if (toprow != botrow)
+                for (int c = rcol - 1; c > lcol; c--) res.add(matrix[botrow][c]);
+            if (rcol != lcol)
+                for (int r = botrow; r > toprow; r--) res.add(matrix[r][lcol]);
+            
+            toprow++;
+            lcol++;
+            rcol--;
+            botrow--;
+        }
+        
+        return res;
+    }
+}
+```
+
 ```java
 class Solution {
     // ========= Method 3 Layer by Layer =========
