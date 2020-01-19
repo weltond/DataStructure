@@ -1,6 +1,6 @@
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------: 
-| [54](https://leetcode.com/problems/spiral-matrix/) | [Spiral Matrix](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/54-Spiral-Matrix.md) | Medium | Array
+| [54](https://leetcode.com/problems/spiral-matrix/) | [Spiral Matrix](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/54-Spiral-Matrix.md) | Medium | Array / Four Pointer
 | [680](https://leetcode.com/problems/valid-palindrome-ii/) | [Valid Palidrome II](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/680-Valid-Palindrome-II.md) | Easy | String / DFS / Greedy
 | [42](https://leetcode.com/problems/trapping-rain-water/) | [Trapping Rain Water](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc42TrappingRainWater.java) | Hard | Array / Two Pointer / Stack
 | [125](https://leetcode.com/problems/valid-palindrome/) | [Valid Palindrome](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/125-Valid-Palindrome.md) | Easy | String / Two Pointer
