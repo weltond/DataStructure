@@ -1,5 +1,44 @@
 // https://leetcode.com/problems/next-permutation/
 
+// 1ms (76.70%)
+class Solution {
+    public void nextPermutation(int[] nums) {
+        // fing the first decreasing
+        int idx = -1;
+        for (int i = nums.length - 2; i >= 0; i--) {
+            if (nums[i] < nums[i + 1]) {
+                idx = i;
+                break;
+            }
+        }
+        
+        if (idx == -1) {
+            Arrays.sort(nums);
+            return;
+        }
+        
+        int cur = nums[idx];
+        int k = nums.length - 1;
+        // find the one that is just larger than it
+        for (; k >= idx; k--) {
+            if (nums[k] > cur) {
+                break;
+            }
+        }
+        
+        swap(nums, idx, k);
+        
+        Arrays.sort(nums, idx + 1, nums.length);
+        
+    }
+    
+    private void swap(int[] arr, int i, int j) {
+        int t = arr[i];
+        arr[i] = arr[j];
+        arr[j] = t;
+    }
+}
+
 public void reverse(int[] num, int start, int end) {
         for (int i = start, j = end; i < j; i++, j--) {
             int temp = num[i];
