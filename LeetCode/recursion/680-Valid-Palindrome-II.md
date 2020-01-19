@@ -48,6 +48,33 @@ class Solution {
 }
 ```
 ### Method 1 - DFS - :rocket: 6ms (92.49%)
+#### Approach 2
+
+```java
+class Solution {
+    public boolean validPalindrome(String s) {
+        if (s == null) return true;
+        
+        return dfs(s, 0, s.length() - 1, false);
+    }
+    private boolean dfs(String s, int left, int right, boolean isUsed) {
+        while (left < right) {
+            if (s.charAt(left) != s.charAt(right)) {
+                if (isUsed) return false;
+                
+                return dfs(s, left + 1, right, !isUsed) || dfs(s, left, right - 1, !isUsed);
+            }
+            left++;
+            right--;
+        }
+        
+        return true;
+    }
+}
+```
+
+#### Approach 1
+
 ```java
 class Solution {
     // ========== Method 1: DFS ============
