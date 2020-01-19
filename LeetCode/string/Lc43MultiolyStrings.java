@@ -19,7 +19,32 @@ Both num1 and num2 do not contain any leading zero, except the number 0 itself.
 You must not use any built-in BigInteger library or convert the inputs to integer directly.
 */
 
-
+class Solution {
+    public String multiply(String num1, String num2) {
+        int len1 = num1.length(), len2 = num2.length();
+        int[] res = new int[len1 + len2];
+        
+        for (int i = len1 - 1; i >= 0; i--) {
+            for (int j = len2 - 1; j >= 0; j--) {
+                char c1 = num1.charAt(i), c2 = num2.charAt(j);
+                int v1 = (int)(c1 - '0'), v2 = (int) (c2 - '0');
+                
+                int total = v1 * v2 + res[i + j + 1];
+                
+                res[i + j + 1] = total % 10;
+                res[i + j] += total / 10;
+            }
+        }
+        
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < res.length; i++) {
+            if (sb.length() == 0 && res[i] == 0) continue;
+            sb.append(res[i]);
+        }
+        
+        return sb.length() == 0 ? "0" : sb.toString();
+    }
+}
 class Solution {
     // Start from right to left, perform multiplication on every pair of digits, and add them together.
     // 4ms (89.98%)
