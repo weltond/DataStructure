@@ -1,5 +1,6 @@
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [560](https://leetcode.com/problems/subarray-sum-equals-k/) | [Subarray Sum Equals K](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc560SubarraySumEqualsK.java) | Medium | Array / Hash Table
 | [304](https://leetcode.com/problems/range-sum-query-2d-immutable/) | [Range Sum Query 2D - Immutable](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/304-Range-Sum-Query-2D-Immutable.md) | Medium | DP
 | [69](https://leetcode.com/problems/sqrtx/) | [Sqrt(x)](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/69-Sqrt(x).md) | Easy | Math / Binary Search
 |[50](https://leetcode.com/problems/powx-n/) | [Pow(x,n)](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/Pow.java) | Medium | Math / Binary Search
