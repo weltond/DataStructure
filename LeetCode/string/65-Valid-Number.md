@@ -82,3 +82,49 @@ class Solution {
     }
 }
 ```
+
+### Method 2 - Math - :turtle: 5ms (26.92%)
+
+```java
+class Solution {
+    public boolean isNumber(String s) {
+        if (s == null || s.length() == 0) return false;
+        s = s.trim() + " "; // space for dummy
+        
+        char[] arr = s.toCharArray();
+        // symbol + "." / num + "e" + symbol + num
+        int i = 0, len = arr.length - 1;
+        
+        // + or -
+        if (arr[i] == '+' || arr[i] == '-') i++;
+        
+        // calc how many point and numbers
+        int nPoint = 0, nNum = 0;
+        while (Character.isDigit(arr[i]) || arr[i] == '.') {
+            if (Character.isDigit(arr[i])) nNum++;
+            else nPoint++;
+            i++;
+        }
+        
+        if (nPoint > 1 || nNum <= 0) return false;
+        
+        // after e
+        if (arr[i] == 'e') {
+            i++;
+            if (arr[i] == '+' || arr[i] == '-') {
+                i++;
+            }
+            
+            // no number after e
+            if (len == i) return false;
+            
+            for (; i < len; i++) {
+                if (!Character.isDigit(arr[i])) return false;
+            }
+        }
+        
+        return i == len;
+        
+    }
+}
+```
