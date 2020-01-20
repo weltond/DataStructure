@@ -1,5 +1,6 @@
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [69](https://leetcode.com/problems/sqrtx/) | [Sqrt(x)](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/69-Sqrt(x).md) | Easy | Math / Binary Search
 |[50](https://leetcode.com/problems/powx-n/) | [Pow(x,n)](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/Pow.java) | Medium | Math / Binary Search
 | [29](https://leetcode.com/problems/divide-two-integers/) | [Divide Two Integers](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/29-Divide-Two-Integers.md) | Medium | Math / Binary Search
 | [65](https://leetcode.com/problems/valid-number/) | [Valid Number](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/65-Valid-Number.md) | Hard | String / Math
