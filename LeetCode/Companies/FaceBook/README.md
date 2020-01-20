@@ -1,5 +1,6 @@
 | No. | Problem | Difficulty | Tag 
-| :--------: | :-------: | :---------: | :------: 
+| :--------: | :-------: | :---------: | :------:
+| [65](https://leetcode.com/problems/valid-number/) | [Valid Number](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/65-Valid-Number.md) | Hard | String / Math
 | [67](https://leetcode.com/problems/add-binary/) | [Add Binary](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc67AddBinary.java) | Easy | Math / String
 | [415](https://leetcode.com/problems/add-strings/) | [Add Strings](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/415-Add-Strings.md) | Easy | String
 | [43](https://leetcode.com/problems/multiply-strings/) | [Multiply Strings](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc43MultiolyStrings.java) | Medium | String / Math
