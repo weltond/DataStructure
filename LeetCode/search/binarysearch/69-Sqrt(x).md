@@ -23,7 +23,26 @@ Explanation: The square root of 8 is 2.82842..., and since
 #### Approach 2
 **Mid is Mid+1**
 
-**But need to use long instead of int.**
+```java
+class Solution {
+    public int mySqrt(int x) {
+        if (x == 0) return 0;
+        
+        int l = 1, r = x;
+        
+        while (l < r) {
+            int mid = l + (r - l + 1) / 2;
+            if (x / mid == mid) return mid;
+            else if (x / mid > mid) l = mid;
+            else r = mid - 1;
+        }
+        
+        return l;
+    }
+}
+```
+
+~~But need to use long instead of int.~~
 ```java
 class Solution {
     public int mySqrt(int x) {
