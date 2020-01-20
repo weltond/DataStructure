@@ -5,6 +5,35 @@ package com.weltond.search.binarysearch;
  * @project LeetCode
  * @date 2/22/2019
  */
+public class Solution {
+    /**
+     * @param x: the base number
+     * @param n: the power number
+     * @return: the result
+     */
+    public double myPow(double x, int n) {
+        // write your code here
+        if (n == Integer.MIN_VALUE) n /= 2;
+        
+        if (Math.abs(x) < 1e-10) return 0;
+        
+        if (n < 0) {
+            x = 1 / x;
+            n = -n;
+        }
+        double ans = 1, tmp = x;    // tmp is x^1, x^2, x^4, x^8...
+        while (n != 0) {
+            if (n % 2 == 1) {
+                ans *= tmp;
+            }
+            tmp *= tmp;
+            n /= 2;
+        }
+        
+        return ans;
+    }
+}
+
 public class Pow {
 class Solution {
     public double myPow(double x, int n) {
