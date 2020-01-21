@@ -1,5 +1,6 @@
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [636](https://leetcode.com/problems/exclusive-time-of-functions/) | [Exclusive Time of Functions](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/636-Exclusive-Time-of-Functions.md) | Medium | Stack
 | [238](https://leetcode.com/problems/product-of-array-except-self/) | [Product of Array Except Self](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc238ProductOfArrayExceptSelf.java) | Medium | Array
 | [560](https://leetcode.com/problems/subarray-sum-equals-k/) | [Subarray Sum Equals K](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc560SubarraySumEqualsK.java) | Medium | Array / Hash Table
 | [304](https://leetcode.com/problems/range-sum-query-2d-immutable/) | [Range Sum Query 2D - Immutable](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/304-Range-Sum-Query-2D-Immutable.md) | Medium | DP
