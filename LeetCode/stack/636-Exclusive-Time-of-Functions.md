@@ -40,53 +40,37 @@ Note:
 
 ```java
 class Solution {
-    public String reorganizeString(String s) {
-        Map<Character, Integer> map = new HashMap();
+    public int[] exclusiveTime(int n, List<String> logs) {
+        Deque<Integer> stack = new LinkedList();
+        int[] res = new int[n];
+        if (logs == null) return res;
         
-        // store char-freq pair into map
-        for (char c : s.toCharArray()) {
-            map.put(c, map.getOrDefault(c, 0) + 1);
-        }
+        // pre means the start of interval
+        int pre = 0;
         
-        // max heap
-        PriorityQueue<Character> pq = new PriorityQueue<Character>((o1, o2) -> map.get(o2) - map.get(o1));
-        
-        // push all to pq
-        for (Map.Entry<Character, Integer> e : map.entrySet()) {
-            pq.offer(e.getKey());
-        }
-        
-        StringBuilder sb = new StringBuilder();
-        
-        while (!pq.isEmpty()) {
-            char c = pq.poll();
-            int len = sb.length();
-            // if character is diff with tail char in sb
-            if (len == 0 || c != sb.charAt(len - 1)) {
-                sb.append(c);
-                int freq = map.get(c);
-                if (freq > 1) pq.offer(c);
-                map.put(c, freq - 1);
-            } 
-            // if last char is the same
-            else {
-                if (pq.isEmpty()) return "";
-                
-                char c2 = pq.poll();
-                                
-                sb.append(c2);
-                int freq2 = map.get(c2);
-                if (freq2 > 1) pq.offer(c2);
-                map.put(c2, freq2 - 1);
-                
-                // DO NOT FORGET to push top frequency entry into queue as well
-                pq.offer(c);
-            }
+        for (int i = 0, len = logs.size(); i < len; i++) {
+            String[] log = logs.get(i).split(":");
+            int idx = Integer.valueOf(log[0]);
+            String word = log[1];
+            int time = Integer.valueOf(log[2]);
             
+            if (word.equals("start")) {
+                // time is the start of next interval, doesn't belong to stack's peek interval.
+                // pre is the start of stack's peek interval
+                if (!stack.isEmpty()) res[stack.peek()] += time - pre;
+                
+                stack.push(idx);
+                pre = time;
+            } else {
+                // time is end of current interval
+                res[stack.pop()] += time - pre + 1;
+                
+                // pre is the start of next interval
+                pre = time + 1;
+            }
         }
         
-        return sb.toString();
-        
+        return res;
     }
 }
 ```
