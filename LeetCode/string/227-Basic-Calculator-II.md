@@ -28,6 +28,8 @@ Note:
 
 ### Method 3 :rabbit: 19ms (50.00%)
 
+-Like [282. Expression Add Operators](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/282-Expression-Add-Operators.md)
+
 ```java
 class Solution {
     public int calculate(String s) {
