@@ -28,7 +28,7 @@ Note:
 
 ### Method 3 :rabbit: 19ms (50.00%)
 
--Like [282. Expression Add Operators](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/282-Expression-Add-Operators.md)
+- Like [282. Expression Add Operators](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/282-Expression-Add-Operators.md)
 - calculate sum at each number. Unlike method 1, it DOESNOT need post-processing.
 
 ```java
