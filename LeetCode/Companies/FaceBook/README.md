@@ -1,5 +1,6 @@
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [727]() | [Basic Calculator III](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/727-Basic-Calculator-III.md) | Hard | Stack / Recursion / Math
 | [227](https://leetcode.com/problems/basic-calculator-ii/) | [Basic Calculator II](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/227-Basic-Calculator-II.md) | Medium | String
 | [224](https://leetcode.com/problems/basic-calculator/) | [Basic Calculator](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/224-Basic-Calculator.md) | Hard | Stack / Math
 | [1249](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/) | [Min Remove to Make Valid Parentheses](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/1249-minimum-remove-to-make-valid-parentheses.md) | Medium | String / Stack
