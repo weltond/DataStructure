@@ -1,71 +1,76 @@
-## [637. Valid Word Abbreviation](https://www.lintcode.com/problem/valid-word-abbreviation/description?_from=ladder&&fromId=14)
+## [224. Basic Calculator](https://leetcode.com/problems/basic-calculator/)
 
-![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
+![](https://github.com/weltond/DataStructure/blob/master/hard.PNG)
 
-Given a non-empty string word and an abbreviation abbr, return whether the string matches with the given abbreviation.
+Implement a basic calculator to evaluate a simple expression string.
 
-A string such as `"word"` contains only the following valid abbreviations:
+The expression string may contain open `(` and closing parentheses `)`, the plus `+` or minus sign `-`, non-negative integers and empty spaces ` `.
 
-`["word", "1ord", "w1rd", "wo1d", "wor1", "2rd", "w2d", "wo2", "1o1d", "1or1", "w1r1", "1o2", "2r1", "3d", "w3", "4"]`
-
-Example
 Example 1:
 
 ```
-Input : s = "internationalization", abbr = "i12iz4n"
-Output : true
+Input: "1 + 1"
+Output: 2
 ```
 
 Example 2:
 
 ```
-Input : s = "apple", abbr = "a2e"
-Output : false
+Input: " 2-1 + 2 "
+Output: 3
 ```
 
-Notice
-- Notice that only the above abbreviations are valid abbreviations of the string word. Any other string is not a valid abbreviation of word.
+Example 3:
+
+```
+Input: "(1+(4+5+2)-3)+(6+8)"
+Output: 23
+```
+
+Note:
+- You may assume that the given expression is always valid.
+- Do not use the eval built-in library function.
 
 ## Answer
-### Method 1 - Two Pointer - :rabbit: 330ms (70%)
+### Method 1 - Recursion - :rabbit: 5ms (70%)
 
 ```java
-public class Solution {
-    /**
-     * @param word: a non-empty string
-     * @param abbr: an abbreviation
-     * @return: true if string matches with the given abbr or false
-     */
-    public boolean validWordAbbreviation(String word, String abbr) {
-        // write your code here
-        if (word == null || word.length() == 0) return false;
-        
-        int i = 0, j = 0;
-        int lenw = word.length(), lena = abbr.length();
-        
-        while (i < lena) {
-            char c = abbr.charAt(i);
-            if (c > '0' && c <= '9') {     // ignore num start with `0`
-                int res = 0;
-                while (i < lena && Character.isDigit(abbr.charAt(i))) {
-                    res = res * 10 + abbr.charAt(i) - '0';
-                    i++;
+class Solution {
+    int idx = 0, len = 0;
+    public int calculate(String s) {
+        len = s.length();
+        return dfs(s);
+    }
+    
+    private int dfs(String s) {
+        int sum = 0, tmp = 0;
+        int sign = 1;
+        while (idx < len) {
+            char c = s.charAt(idx++);
+            if (c == '(') {
+                tmp = dfs(s);
+                sum += tmp * sign;
+            } else if (c == ')') {
+                return sum;
+            } else if (c == '+') {
+                sign = 1;
+            } else if (c == '-') {
+                sign = -1;
+            } else if (Character.isDigit(c)) {
+                tmp = c - '0';
+                while (idx < len && Character.isDigit(s.charAt(idx))) {
+                    tmp = tmp * 10 + s.charAt(idx++) - '0';
                 }
-                j = j + res;
-            } else {
-                if (j >= lenw || c != word.charAt(j++)) {
-                    //System.out.println(i+","+j);
-                    return false;
-                }
-                i++;
+                sum += tmp * sign;
             }
         }
         
-        return i == lena && j == lenw;
+        return sum;
     }
 }
 ```
 
+```java
 class Solution {
     // 2ms
     int idx = 0;
@@ -98,6 +103,9 @@ class Solution {
         return res;
     }
 }
+```
+
+```java
 class Solution {
     // ========== Method 3: Recursion + No stack ==========
     // 2ms (99.77%)
@@ -130,7 +138,11 @@ class Solution {
     }
 
 }
+```
 
+### Method 2 - One Stack - :rabbit: 13ms (54.05%)
+
+```java
 class Solution {
     // ========== Method 2: One stack ==========
     // 13ms (54.05%)
@@ -166,7 +178,11 @@ class Solution {
     }
 
 }
+```
 
+### Method 3 - Two Stacks - :turtle: 18ms (32.65%)
+
+```java
 class Solution {
     // ========== Method 1: Naive ==========
     // 18ms (32.65%)
@@ -225,8 +241,10 @@ class Solution {
         numStack.push(rightnum);
     }
 }
+```
+### Old Post
 
-
+```java
 /**
  * @author weltond
  * @project LeetCode
@@ -433,3 +451,4 @@ class OperatorLevel {
         return op;
     }
 }
+```
