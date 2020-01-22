@@ -2,7 +2,6 @@
 
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------: 
-| [849](https://www.lintcode.com/problem/basic-calculator-iii/description) | [Basic Calculator III](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/849-basic-calculator-iii.md) | Hard | Simulate / Stack / Math
 | [121](https://www.lintcode.com/problem/word-ladder-ii/description?_from=ladder&&fromId=130) | [Word Ladder II](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/121-Word-Ladder-II.md) | DFS / BFS
 | [512](https://www.lintcode.com/problem/decode-ways/description?_from=ladder&&fromId=14) | [Decode Ways](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/512-Decode-Ways.md) | Medium | DFS / DP
 | [362](https://www.lintcode.com/problem/sliding-window-maximum/description?_from=ladder&&fromId=130) | [Sliding Window Maximum](https://github.com/weltond/DataStructure/blob/master/LeetCode/queue/Lc239SlidingWindowMaximum.java) | Hard | Two Pointers / Deque
@@ -37,6 +36,7 @@
 
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [849](https://www.lintcode.com/problem/basic-calculator-iii/description) | [Basic Calculator III](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/849-basic-calculator-iii.md) | Hard | Simulate / Stack / Math
 | [386](https://www.lintcode.com/problem/longest-substring-with-at-most-k-distinct-characters/description) | [Longest Substring At Most K Distinct Chars](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/386-longest-substring-with-at-most-k-distinct-characters.md) | Medium | HashTable / Two pointer
 | [780](https://www.lintcode.com/problem/remove-invalid-parentheses/description?_from=ladder&&fromId=130) | [Remove Invalid Parenthese](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/Lc301RemoveInvalidParenthesis.java) | Hard | DFS / String
 | [86](https://www.lintcode.com/problem/binary-search-tree-iterator/description) | [Binary Search Tree Iterator](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/86-Binary-Search-Tree-Iterator.md) | Hard | BST / Stack
