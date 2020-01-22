@@ -29,7 +29,7 @@ Note:
 ### Method 3 :rabbit: 19ms (50.00%)
 
 - Like [282. Expression Add Operators](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/282-Expression-Add-Operators.md)
-- calculate sum at each number. Unlike method 1, it DOESNOT need post-processing.
+- calculate sum at each number. Unlike method 2, it DOESNOT need post-processing.
 
 ```java
 class Solution {
@@ -81,6 +81,8 @@ class Solution {
 ```
 
 ### Method 2 :rocket: 7ms (97.58%)
+- Get previous value after seeing a symbol. So it needs **post-processing**.
+
 ```java
 class Solution {
     public int calculate(String s) {
@@ -146,7 +148,7 @@ class Solution {
 ```
 ### Method 1 :rabbit: 13ms(81.21%)
 
-- Get previous value after seeing a symbol. So it needs **post-processing**.
+
 
 ```java
 class Solution {
