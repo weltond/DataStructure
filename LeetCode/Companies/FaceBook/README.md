@@ -1,7 +1,7 @@
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
 | [227](https://leetcode.com/problems/basic-calculator-ii/) | [Basic Calculator II](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/227-Basic-Calculator-II.md) | Medium | String
-| [224](https://leetcode.com/problems/basic-calculator/) | [Basic Calculator](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/LC224BasicCalculator.java) | Hard | Stack / Math
+| [224](https://leetcode.com/problems/basic-calculator/) | [Basic Calculator](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/224-Basic-Calculator.md) | Hard | Stack / Math
 | [1249](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/) | [Min Remove to Make Valid Parentheses](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/1249-minimum-remove-to-make-valid-parentheses.md) | Medium | String / Stack
 | [636](https://leetcode.com/problems/exclusive-time-of-functions/) | [Exclusive Time of Functions](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/636-Exclusive-Time-of-Functions.md) | Medium | Stack
 | [238](https://leetcode.com/problems/product-of-array-except-self/) | [Product of Array Except Self](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc238ProductOfArrayExceptSelf.java) | Medium | Array
