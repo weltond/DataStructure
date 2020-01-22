@@ -34,10 +34,50 @@ Note:
 ## Answer
 ### Method 1 - Recursion - :rabbit: 5ms (70%)
 
-#### Approach 2 - Using Local variables ONLY -
+#### Approach 2 - Using Local variables ONLY - :turtle: 200ms (5.03%)
 
 ```java
-
+class Solution {
+    
+    public int calculate(String s) {
+        return dfs(s);
+    }
+    
+    private int dfs(String s) {
+        int sum = 0, tmp = 0, idx = 0;
+        int sign = 1, len = s.length();
+        while (idx < len) {
+            char c = s.charAt(idx++);
+            if (c == '(') {
+                idx--;
+                int j = idx, cnt = 0;
+                // find the corresponding ending ')'
+                for (; idx < len; idx++) {
+                    char ch = s.charAt(idx);
+                    if (ch == '(') cnt++;
+                    else if (ch == ')') cnt--;
+                    if (cnt == 0) break;
+                }
+                tmp = dfs(s.substring(j + 1, idx));
+                sum += tmp * sign;
+            //} else if (c == ')') {
+            //     return sum;
+            } else if (c == '+') {
+                sign = 1;
+            } else if (c == '-') {
+                sign = -1;
+            } else if (Character.isDigit(c)) {
+                tmp = c - '0';
+                while (idx < len && Character.isDigit(s.charAt(idx))) {
+                    tmp = tmp * 10 + s.charAt(idx++) - '0';
+                }
+                sum += tmp * sign;
+            }
+        }
+        
+        return sum;
+    }
+}
 ```
 
 #### Approach 1 - Using global variables -
