@@ -1,7 +1,8 @@
 # 2020 Facebook OA
 
 | LintCode No. | Problem | Difficulty | Tag 
-| :-------- | :-------: | :---------: | :------:
+| :-------- | :-------: | :---------: | :------: 
+| [849](https://www.lintcode.com/problem/basic-calculator-iii/description) | [Basic Calculator III] (https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/849-basic-calculator-iii.md) | Hard | Simulate / Stack / Math
 | [121](https://www.lintcode.com/problem/word-ladder-ii/description?_from=ladder&&fromId=130) | [Word Ladder II](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/121-Word-Ladder-II.md) | DFS / BFS
 | [512](https://www.lintcode.com/problem/decode-ways/description?_from=ladder&&fromId=14) | [Decode Ways](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/512-Decode-Ways.md) | Medium | DFS / DP
 | [362](https://www.lintcode.com/problem/sliding-window-maximum/description?_from=ladder&&fromId=130) | [Sliding Window Maximum](https://github.com/weltond/DataStructure/blob/master/LeetCode/queue/Lc239SlidingWindowMaximum.java) | Hard | Two Pointers / Deque
