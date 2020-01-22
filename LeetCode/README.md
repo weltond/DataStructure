@@ -210,7 +210,6 @@
 | [373](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/) | [Find K Pairs With Smallest Sums](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/Lc373FindKPiarsWithSmallestSums.java) | Medium | Heap
 |  [767](https://leetcode.com/problems/reorganize-string/) | [Reorganize String](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/767-Reorganize-String.md) | Medium | String / Heap / Greedy / Sort
 |  23 | [Merge K Sorted Lists](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc23MergeKSortedLists.java) | 
-|  224 | [Basic Calculator](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/LC224BasicCalculator.java) | |
 |  [76](https://leetcode.com/problems/minimum-window-substring/) | [Minimum Window Substring](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc76MinimumWindowSubstring.java) | Hard | HashTable / Two Pointers / Window
 |  91 | [DecodeWays](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc91DecodeWays.java) | |
 |  450 | [Delete Node In BST](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/LC450DeleteNodeInBST_2.java) | |
@@ -357,7 +356,7 @@
 | [328](https://leetcode.com/problems/odd-even-linked-list/) | [Odd Even Linked List](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc328OddEvenLinkedList.java) | Medium | Linked List
 | [72](https://leetcode.com/problems/edit-distance/) | [Edit Distance](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc72EditDistance.java) | Hard | DP / String
 | [791](https://leetcode.com/problems/custom-sort-string/) | [Custom Sort String](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc791CustomSortString.java) | Medium | String
-| [224](https://leetcode.com/problems/basic-calculator/) | [Basic Calculator](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/LC224BasicCalculator.java) | Hard | Stack / Math
+| [224](https://leetcode.com/problems/basic-calculator/) | [Basic Calculator](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/224-Basic-Calculator.md) | Hard | Stack / Math
 | [277](https://leetcode.com/problems/basic-calculator-ii/) | [Basic Calculator II](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc227BasicCalculatorII.java) | Medium | String
 | [991](https://leetcode.com/problems/broken-calculator/) | [Broken Calculator](https://github.com/weltond/DataStructure/blob/master/LeetCode/greedy/Lc991BrokenCalculator.java) | Medium | Math / Greedy
 | [572](https://leetcode.com/problems/subtree-of-another-tree/) | [Subtree of Another Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc572SubtreeOfAnotherTree.java) | Easy | 
