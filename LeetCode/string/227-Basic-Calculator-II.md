@@ -25,6 +25,58 @@ Note:
 - Do not use the eval built-in library function.
 
 ## Answer
+
+### Method 3 :rabbit: 19ms (50.00%)
+
+```java
+class Solution {
+    public int calculate(String s) {
+        int sum = 0;
+        int tmp = 0, pre = 0;
+        
+        int idx = 0, len = s.length(), sign = 1;
+        char symbol = ' ';
+        while (idx < len) {
+            char c = s.charAt(idx++);
+            if (Character.isDigit(c)) {
+                tmp = c - '0';
+                while (idx < len && Character.isDigit(s.charAt(idx))) {
+                    tmp = tmp * 10 + s.charAt(idx++) - '0';
+                }
+                
+                if (symbol == '*') {
+                    sum = sum - pre + pre * tmp;
+                    pre = pre * tmp;
+                }
+                    
+                else if (symbol == '/') {
+                    sum = sum - pre + pre / tmp;
+                    pre = pre / tmp;
+                }
+                    
+                
+                else {
+                    sum += tmp * sign; 
+                    pre = sign == 1 ? tmp : -tmp;
+                }
+            } else if (c == '+') {
+                symbol = ' ';
+                sign = 1;
+            } else if (c == '-') {
+                symbol = ' ';
+                sign = -1;
+            } else if (c == '*') {
+                symbol = '*';
+            } else if (c == '/') {
+                symbol = '/';
+            }
+        }
+        
+        return sum;
+    }
+}
+```
+
 ### Method 2 :rocket: 7ms (97.58%)
 ```java
 class Solution {
