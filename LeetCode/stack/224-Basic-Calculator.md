@@ -34,6 +34,14 @@ Note:
 ## Answer
 ### Method 1 - Recursion - :rabbit: 5ms (70%)
 
+#### Approach 2 - Using Local variables ONLY -
+
+```java
+
+```
+
+#### Approach 1 - Using global variables -
+
 ```java
 class Solution {
     int idx = 0, len = 0;
