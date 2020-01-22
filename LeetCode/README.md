@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [727]() | [Basic Calculator III](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/727-Basic-Calculator-III.md) | Hard | Stack / Recursion / Math
 | [1249](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/) | [Min Remove to Make Valid Parentheses](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/1249-minimum-remove-to-make-valid-parentheses.md) | Medium | String / Stack
 | [340]() | [Longest Substring At Most K Distinct Chars](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/340-longest-substring-with-at-most-k-distinct-characters.md) | Hard | HashTable / Two Pointers
 | [378](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/) | [Kth Smallest in Sorted Matrix](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/378-kth-smallest-element-in-a-sorted-matrix.md) | Medium | Binary Search / Heap
