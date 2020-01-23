@@ -1,5 +1,6 @@
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [LintCode 789](https://www.lintcode.com/problem/the-maze-iii/description) | [The Maze III](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/789-The-Maze-III.md) | Hard | BFS
 | [505]() | [The Maze II](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/505-The-Maze-II.md) | Medium | DFS / BFS
 | [490]() | [The Maze](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/490-The-Maze.md) | Medium | BFS
 | [727]() | [Basic Calculator III](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/727-Basic-Calculator-III.md) | Hard | Stack / Recursion / Math
