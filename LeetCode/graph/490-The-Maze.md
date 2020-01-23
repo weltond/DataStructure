@@ -1,71 +1,109 @@
-## [637. Valid Word Abbreviation](https://www.lintcode.com/problem/valid-word-abbreviation/description?_from=ladder&&fromId=14)
+## [490. The Maze]()
 
 ![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
 
-Given a non-empty string word and an abbreviation abbr, return whether the string matches with the given abbreviation.
+There is a ball in a maze with empty spaces and walls. The ball can go through empty spaces by rolling up, down, left or right, but it won't stop rolling until hitting a wall. When the ball stops, it could choose the next direction.
 
-A string such as `"word"` contains only the following valid abbreviations:
+Given the ball's start position, the destination and the maze, determine whether the ball could stop at the destination.
 
-`["word", "1ord", "w1rd", "wo1d", "wor1", "2rd", "w2d", "wo2", "1o1d", "1or1", "w1r1", "1o2", "2r1", "3d", "w3", "4"]`
+The maze is represented by a binary 2D array. 1 means the wall and 0 means the empty space. You may assume that the borders of the maze are all walls. The start and destination coordinates are represented by row and column indexes.
 
-Example
 Example 1:
 
 ```
-Input : s = "internationalization", abbr = "i12iz4n"
-Output : true
+Input:
+map = 
+[
+ [0,0,1,0,0],
+ [0,0,0,0,0],
+ [0,0,0,1,0],
+ [1,1,0,1,1],
+ [0,0,0,0,0]
+]
+start = [0,4]
+end = [3,2]
+Output:
+false
 ```
 
 Example 2:
 
 ```
-Input : s = "apple", abbr = "a2e"
-Output : false
+Input:
+map = 
+[[0,0,1,0,0],
+ [0,0,0,0,0],
+ [0,0,0,1,0],
+ [1,1,0,1,1],
+ [0,0,0,0,0]
+]
+start = [0,4]
+end = [4,4]
+Output:
+true
 ```
 
 Notice
-- Notice that only the above abbreviations are valid abbreviations of the string word. Any other string is not a valid abbreviation of word.
+
+- There is only one ball and one destination in the maze.
+- Both the ball and the destination exist on an empty space, and they will not be at the same position initially.
+- The given maze does not contain border (like the red rectangle in the example pictures), but you could assume the border of the maze are all walls.
+- The maze contains at least 2 empty spaces, and both the width and height of the maze won't exceed 100.
 
 ## Answer
-### Method 1 - Two Pointer - :rabbit: 330ms (70%)
+### Method 1 - DFS - :rocket: 369ms (95.80%)
+
+- We need to use a **boolean array** instead of **changing the visited coordinate to a different value**. Because we want the next lvl to go to the first visited value as well so that the next lvl won't use wrong coordinate as start.
 
 ```java
 public class Solution {
     /**
-     * @param word: a non-empty string
-     * @param abbr: an abbreviation
-     * @return: true if string matches with the given abbr or false
+     * @param maze: the maze
+     * @param start: the start
+     * @param destination: the destination
+     * @return: whether the ball could stop at the destination
      */
-    public boolean validWordAbbreviation(String word, String abbr) {
+     boolean[][] visited;
+    public boolean hasPath(int[][] maze, int[] start, int[] destination) {
         // write your code here
-        if (word == null || word.length() == 0) return false;
+        visited = new boolean[maze.length][maze[0].length];
+        return dfs(maze, start[0], start[1], destination);
+    }
+    
+    private boolean dfs(int[][] maze, int x, int y, int[] end) {
+        //if (x >= maze.length || y >= maze[0].length || x < 0 || y < 0 || maze[x][y] == 2) return false;
+        if (visited[x][y]) return false;
+        if (x == end[0] && y == end[1]) return true;
         
-        int i = 0, j = 0;
-        int lenw = word.length(), lena = abbr.length();
+        int[] dir = {0, 1, 0, -1, 0};
+
+        visited[x][y] = true;
         
-        while (i < lena) {
-            char c = abbr.charAt(i);
-            if (c > '0' && c <= '9') {     // ignore num start with `0`
-                int res = 0;
-                while (i < lena && Character.isDigit(abbr.charAt(i))) {
-                    res = res * 10 + abbr.charAt(i) - '0';
-                    i++;
-                }
-                j = j + res;
-            } else {
-                if (j >= lenw || c != word.charAt(j++)) {
-                    //System.out.println(i+","+j);
-                    return false;
-                }
-                i++;
+        //maze[x][y] = 2;   // CANNOT use this! Think of WHY.
+        
+        for (int i = 0; i < 4; i++) {
+            int nx = x + dir[i];
+            int ny = y + dir[i + 1];
+            int cx = nx, cy = ny;
+            if (nx >= maze.length || ny >= maze[0].length || nx < 0 || ny < 0 || maze[nx][ny] != 0) continue;
+            
+            while (nx >= 0 && ny >= 0 && nx < maze.length && ny < maze[0].length && maze[nx][ny] == 0) {
+                cx = nx;
+                cy = ny;
+                nx = nx + dir[i];
+                ny = ny + dir[i + 1];
             }
+            //System.out.println(cx+","+cy);
+            if (dfs(maze, cx, cy, end)) return true;
         }
-        
-        return i == lena && j == lenw;
+        return false;
     }
 }
 ``` 
 
+### Old Post
+
+```java
 // =============== Method 2: BFS ======================
 public class Solution {
     public boolean hasPath(int[][] maze, int[] start, int[] destination) {
@@ -156,3 +194,4 @@ public class Solution {
         return false;
     }
 }
+```
