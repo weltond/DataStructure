@@ -51,6 +51,49 @@ Notice
 - The maze contains at least 2 empty spaces, and both the width and height of the maze won't exceed 100.
 
 ## Answer
+### Method 2 - BFS - :turtle: 453ms (24.80%)
+
+```java
+public class Solution {
+    /**
+     * @param maze: the maze
+     * @param start: the start
+     * @param destination: the destination
+     * @return: whether the ball could stop at the destination
+     */
+    public boolean hasPath(int[][] maze, int[] start, int[] destination) {
+        // write your code here
+        boolean[][] visited = new boolean[maze.length][maze[0].length];
+        Queue<int[]> q = new LinkedList();
+        q.offer(start);
+        int[] dir = {0, 1, 0, -1, 0};
+        while (!q.isEmpty()) {
+            int size = q.size();
+            
+            for (int k = 0; k < size; k++) {
+                int[] cur = q.poll();
+                int x = cur[0], y = cur[1];
+                visited[x][y] = true;
+                for (int i = 0; i < 4; i++) {
+                    int nx = x + dir[i], ny = y + dir[i + 1];
+                    while (nx >= 0 && ny >= 0 && nx < maze.length && ny < maze[0].length && maze[nx][ny] == 0) {
+                        nx = nx + dir[i];
+                        ny = ny + dir[i + 1];
+                    }
+                    int cx = nx - dir[i], cy = ny - dir[i + 1];
+                    if (visited[cx][cy]) continue;
+                    if (cx == destination[0] && cy == destination[1]) return true;
+                    
+                    q.offer(new int[]{cx, cy});
+                }
+            }
+        }
+        
+        return false;
+    }
+}
+```
+
 ### Method 1 - DFS - :rocket: 369ms (95.80%)
 
 - We need to use a **boolean array** instead of **changing the visited coordinate to a different value**. Because we want the next lvl to go to the first visited value as well so that the next lvl won't use wrong coordinate as start.
