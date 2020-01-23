@@ -340,7 +340,7 @@
 | [49](https://leetcode.com/problems/group-anagrams/) | [Group Anagram](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc49GroupAnagram.java) | Medium | HashTable / String
 | [48](https://leetcode.com/problems/rotate-image/) | [Rotate Image](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc48RotateImage.java) | Medium | Array
 | [490]() | [The Maze](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/490-The-Maze.md) | Medium | BFS
-| [505]() | [The Maze II](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/Lc505TheMazeII.java) | Medium | DFS / BFS
+| [505]() | [The Maze II](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/505-The-Maze-II.md) | Medium | DFS / BFS
 | [682](https://leetcode.com/problems/baseball-game/) | [Baseball Game](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/Lc682BaseballGame.java) | Easy | Stack
 | [103](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/) | [Binary Tree Zigzag Level Traversal](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc103BTZigzagLevelOrder.java) | Medium | Tree / Stack / BFS
 | [295](https://leetcode.com/problems/find-median-from-data-stream/) | [Find Median from Data Stream](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/Lc295FindMedianFromStream.java) | Hard | Heap / Design
