@@ -53,9 +53,18 @@ Notice
 
 
 
-### Method 1 - BFS - :turtle: 319ms (33.20%)
+### Method 1 - BFS - 
+#### Approach 2 - with pruning - :rabbit: 298ms (72.20%)
 
-- O(mn*max(m,n)), O(mn)
+```java
+if (res > step + cnt - 1)
+    q.offer(new int[]{cx, cy, step + cnt - 1});
+```
+
+#### Approach 1 - without pruning - :turtle: 319ms (33.20%)
+
+- O(mn*max(m,n))?  
+- O(mn)
 
 ```java
 public class Solution {
@@ -109,7 +118,7 @@ public class Solution {
 
 ### Old post
 
-```
+```java
 // ==================== Method 3: Dijkstra ==========================
 // Time = O(mnlog(mn)), space = O(mn)
 public class Solution {
