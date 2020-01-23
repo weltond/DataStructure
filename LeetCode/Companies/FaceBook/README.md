@@ -1,7 +1,6 @@
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
 | [505]() | [The Maze II](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/505-The-Maze-II.md) | Medium | DFS / BFS
-| [505]() | [The Maze II](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/Lc505TheMazeII.java) | Medium | DFS / BFS
 | [490]() | [The Maze](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/490-The-Maze.md) | Medium | BFS
 | [727]() | [Basic Calculator III](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/727-Basic-Calculator-III.md) | Hard | Stack / Recursion / Math
 | [227](https://leetcode.com/problems/basic-calculator-ii/) | [Basic Calculator II](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/227-Basic-Calculator-II.md) | Medium | String
