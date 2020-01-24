@@ -18,8 +18,13 @@ Output: [1,4,6]
 Explanation: By calling next repeatedly until hasNext returns false, 
              the order of elements returned by next should be: [1,4,6].
 ```
+
 ## Answer
+
 ### Method 1 - Stack - :rabbit: 3ms (68.87%)
+
+- Notice here we should process within `next()` function because the input would be `[[]]` that so that **stack** have an empty list `[]` after constructor.
+
 ```java
 /**
  * // This is the interface that allows for creating nested lists.
