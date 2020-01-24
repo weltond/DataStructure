@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [232](https://leetcode.com/problems/implement-queue-using-stacks/) | [Implement Queue using Stacks](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/232-implement-queue-using-stacks.md) | Easy | Design / Stack
 | [460](https://leetcode.com/problems/lfu-cache/) | [LFU Cache](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/460-lfu-cache.md) | Hard | Design
 | [271]() | [Encode and Decode String](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/271-encode-and-decode-strings.md) | Medium | String
 | [727]() | [Basic Calculator III](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/727-Basic-Calculator-III.md) | Hard | Stack / Recursion / Math
