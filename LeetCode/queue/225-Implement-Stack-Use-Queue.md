@@ -1,98 +1,60 @@
-// https://leetcode.com/problems/implement-stack-using-queues/
+// 
+## [225. Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/)
 
-## [637. Valid Word Abbreviation](https://www.lintcode.com/problem/valid-word-abbreviation/description?_from=ladder&&fromId=14)
+![](https://github.com/weltond/DataStructure/blob/master/easy.PNG)
 
-![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
+Implement the following operations of a stack using queues.
 
-Given a non-empty string word and an abbreviation abbr, return whether the string matches with the given abbreviation.
+- push(x) -- Push element x onto stack.
+- pop() -- Removes the element on top of the stack.
+- top() -- Get the top element.
+- empty() -- Return whether the stack is empty.
 
-A string such as `"word"` contains only the following valid abbreviations:
-
-`["word", "1ord", "w1rd", "wo1d", "wor1", "2rd", "w2d", "wo2", "1o1d", "1or1", "w1r1", "1o2", "2r1", "3d", "w3", "4"]`
-
-Example
-Example 1:
-
-```
-Input : s = "internationalization", abbr = "i12iz4n"
-Output : true
-```
-
-Example 2:
+Example:
 
 ```
-Input : s = "apple", abbr = "a2e"
-Output : false
+MyStack stack = new MyStack();
+
+stack.push(1);
+stack.push(2);  
+stack.top();   // returns 2
+stack.pop();   // returns 2
+stack.empty(); // returns false
 ```
 
-Notice
-- Notice that only the above abbreviations are valid abbreviations of the string word. Any other string is not a valid abbreviation of word.
+Notes:
+
+- You must use only standard operations of a queue -- which means only push to back, peek/pop from front, size, and is empty operations are valid.
+- Depending on your language, queue may not be supported natively. You may simulate a queue by using a list or deque (double-ended queue), as long as you use only standard operations of a queue.
+- You may assume that all operations are valid (for example, no pop or top operations will be called on an empty stack).
 
 ## Answer
-### Method 1 - Two Pointer - :rabbit: 330ms (70%)
+### Method 1 - Two Queues - :rocket: 1ms (100%)
+
+#### Approach 2 
+
+- update when `push()` is called.
 
 ```java
-public class Solution {
-    /**
-     * @param word: a non-empty string
-     * @param abbr: an abbreviation
-     * @return: true if string matches with the given abbr or false
-     */
-    public boolean validWordAbbreviation(String word, String abbr) {
-        // write your code here
-        if (word == null || word.length() == 0) return false;
-        
-        int i = 0, j = 0;
-        int lenw = word.length(), lena = abbr.length();
-        
-        while (i < lena) {
-            char c = abbr.charAt(i);
-            if (c > '0' && c <= '9') {     // ignore num start with `0`
-                int res = 0;
-                while (i < lena && Character.isDigit(abbr.charAt(i))) {
-                    res = res * 10 + abbr.charAt(i) - '0';
-                    i++;
-                }
-                j = j + res;
-            } else {
-                if (j >= lenw || c != word.charAt(j++)) {
-                    //System.out.println(i+","+j);
-                    return false;
-                }
-                i++;
-            }
-        }
-        
-        return i == lena && j == lenw;
-    }
-}
-```
 class MyStack {
-    // 43ms (97.98%)
-    Queue<Integer> q1;
-    Queue<Integer> q2;   // always push to empty q2
-    //int cnt;
+    Deque<Integer> q1;
+    Deque<Integer> q2;
     /** Initialize your data structure here. */
     public MyStack() {
-        //cnt = 0;
         q1 = new LinkedList();
         q2 = new LinkedList();
     }
     
     /** Push element x onto stack. */
     public void push(int x) {
-        // always push to empty q2
         q2.offer(x);
-        
         while (!q1.isEmpty()) {
             q2.offer(q1.poll());
         }
         
-        // Swap q1 and q2 to make q2 always empty
-        Queue tmp = q2;
-        q2 = q1;
-        q1= tmp;
-        
+        Deque<Integer> tmp = q1;
+        q1 = q2;
+        q2 = tmp;
     }
     
     /** Removes the element on top of the stack and returns that element. */
@@ -119,3 +81,64 @@ class MyStack {
  * int param_3 = obj.top();
  * boolean param_4 = obj.empty();
  */
+```
+
+#### Approach 1
+
+- update when `pop()` is called.
+
+```java
+class MyStack {
+
+    Queue<Integer> q1, q2;
+    /** Initialize your data structure here. */
+    public MyStack() {
+        q1 = new LinkedList();
+        q2 = new LinkedList();
+    }
+    
+    /** Push element x onto stack. */
+    public void push(int x) {
+        q1.offer(x);
+    }
+    
+    /** Removes the element on top of the stack and returns that element. */
+    public int pop() {
+        int val = top();
+        
+        q1.poll();
+        
+        Queue tmp = q1;
+        q1 = q2;
+        q2 = tmp;
+        
+        return val;
+    }
+    
+    /** Get the top element. */
+    public int top() {
+        int size = q1.size();
+        while (size != 1) {
+            q2.offer(q1.poll());
+            size--;
+        }
+        
+        return q1.peek();
+    }
+    
+    /** Returns whether the stack is empty. */
+    public boolean empty() {
+        return q1.isEmpty() && q2.isEmpty();
+    }
+}
+
+/**
+ * Your MyStack object will be instantiated and called as such:
+ * MyStack obj = new MyStack();
+ * obj.push(x);
+ * int param_2 = obj.pop();
+ * int param_3 = obj.top();
+ * boolean param_4 = obj.empty();
+ */
+```
+
