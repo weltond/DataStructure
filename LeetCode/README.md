@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [225](https://leetcode.com/problems/implement-stack-using-queues/) | [Implement Stack Using Queues](https://github.com/weltond/DataStructure/blob/master/LeetCode/queue/225-Implement-Stack-Use-Queue.md) | Easy | Stack | Design
 | [232](https://leetcode.com/problems/implement-queue-using-stacks/) | [Implement Queue using Stacks](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/232-implement-queue-using-stacks.md) | Easy | Design / Stack
 | [460](https://leetcode.com/problems/lfu-cache/) | [LFU Cache](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/460-lfu-cache.md) | Hard | Design
 | [271]() | [Encode and Decode String](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/271-encode-and-decode-strings.md) | Medium | String
@@ -376,7 +377,6 @@
 | [430](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/) | [Flatten a Multilevel Doubly LinkedList](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc430FlattenMultiDoublyLinkedList.java) | Medium | Linked List / DFS
 | [226](https://leetcode.com/problems/invert-binary-tree/) | [Invert Binary Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc226InvertBinaryTree.java) | Easy | Tree / DFS / BFS
 | [1028](https://leetcode.com/problems/recover-a-tree-from-preorder-traversal/) | [Recover Tree from Preorder Traversal](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc1028RecoverTreeFromPreorder.java) | Hard | Tree / DFS
-| [225](https://leetcode.com/problems/implement-stack-using-queues/) | [Implement Stack Using Queues](https://github.com/weltond/DataStructure/blob/master/LeetCode/queue/Lc225ImplementStackUseQueue.java) | Easy | Stack | Design
 | [105](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | [Construct BT from Preorder and Inorder](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc105ConstructBTfromPreAndInorder.java) | Medium | Array / Tree / DFS
 | [106](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/) | [Construct BT from PostOrder and Inorder](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc106ConstructBTfromInAndPost.java) | Medium | Array / Tree / DFS
 | [889](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/) | [Construct BT from PreOrder and PostOrder](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc889ConstructBTfromPreAndPost.java) | Medium | Tree
