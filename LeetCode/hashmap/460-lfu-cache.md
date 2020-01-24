@@ -37,6 +37,16 @@ cache.get(4);       // returns 4
 ## Answer
 ### Method 1 - Own LinkedList - :rabbit: 31ms (70.66%)
 
+- Idea:
+  - Create two maps. One saves `<key, node>` pair for o(1) access to the node saving the value. One saves `<freq, LRULinkedList>` pair for quick access to each frequent list that is designed with `head` and `tail` LRU cache.
+  - `MyLinkedList` is pretty much like **LRU Cache** without `get()` method.
+  - `put()` method is like **LRU** with extra step to keep `minFreq` as `1` and save the `node` to corresponding **LRU LinkedList**.
+  - `get()`
+    - Get its freq linkedlist.
+    - remove the node from that linkedlist
+    - add it to the `freq+1` linkedlist
+    - update `min freq` if that linkedlist is empty **AND** that freq is the minFreq.
+
 ```java
 class LFUCache {
 
