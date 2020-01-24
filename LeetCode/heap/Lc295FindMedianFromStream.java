@@ -1,4 +1,46 @@
 // https://leetcode.com/problems/find-median-from-data-stream/
+class MedianFinder {
+
+    PriorityQueue<Integer> minpq, maxpq;
+    /** initialize your data structure here. */
+    public MedianFinder() {
+        minpq = new PriorityQueue<>();
+        maxpq = new PriorityQueue<Integer>((o1, o2) -> o2 - o1);
+    }
+    
+    // rules:
+    //   1. 1) if empty add to minpq.
+    //      2) if not empty, if val < minpq.top, move to maxpq. otherwise to minpq.
+    //   2. if minpq has 2 more elements than maxpq or vice versa, remove minpq top and insert into maxpq or vice versa. So that the minpq and maxpq are a sorted array
+    //   3. always get result from minpq if odd total size, or minpq + maxpq if even total size.
+    public void addNum(int num) {
+        if (minpq.isEmpty() || num > minpq.peek()) {
+            minpq.offer(num);
+        } else {
+            maxpq.offer(num);
+        }
+        
+        int minSize = minpq.size(), maxSize = maxpq.size();
+        
+        if(minSize - 2 == maxSize) {
+            maxpq.offer(minpq.poll());
+        }
+        if (maxSize - 2 == minSize) {
+            minpq.offer(maxpq.poll());
+        }
+    }
+    
+    public double findMedian() {
+        return minpq.size() == maxpq.size() ? (minpq.peek() + maxpq.peek()) / 2.0 : minpq.size() > maxpq.size() ? minpq.peek() : maxpq.peek();
+    }
+}
+
+/**
+ * Your MedianFinder object will be instantiated and called as such:
+ * MedianFinder obj = new MedianFinder();
+ * obj.addNum(num);
+ * double param_2 = obj.findMedian();
+ */
 
 class MedianFinder {
     // ============= Method 1: Heap ================
