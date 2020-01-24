@@ -30,6 +30,11 @@ Notes:
 ## Answer
 ### Method 1 - Two Stacks - :rocket: 1ms (100%)
 
+- `s1` stack is used to store recently `pushed` values.
+- `s2` stack is used to perform as a queue.
+  - if `s2` is empty, push all element in `s1` into `s2`.
+  - if not empty, just simply return `top`.
+
 ```java
 class MyQueue {
 
