@@ -1,69 +1,47 @@
-// https://leetcode.com/problems/longest-palindrome/
+## [409. Longest Palindrome](https://leetcode.com/problems/longest-palindrome/)
 
-## [637. Valid Word Abbreviation](https://www.lintcode.com/problem/valid-word-abbreviation/description?_from=ladder&&fromId=14)
+![](https://github.com/weltond/DataStructure/blob/master/easy.PNG)
 
-![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
+Given a string which consists of lowercase or uppercase letters, find the length of the longest palindromes that can be built with those letters.
 
-Given a non-empty string word and an abbreviation abbr, return whether the string matches with the given abbreviation.
+This is case sensitive, for example "Aa" is not considered a palindrome here.
 
-A string such as `"word"` contains only the following valid abbreviations:
+Note:
+- Assume the length of given string will not exceed 1,010.
 
-`["word", "1ord", "w1rd", "wo1d", "wor1", "2rd", "w2d", "wo2", "1o1d", "1or1", "w1r1", "1o2", "2r1", "3d", "w3", "4"]`
-
-Example
-Example 1:
+Example:
 
 ```
-Input : s = "internationalization", abbr = "i12iz4n"
-Output : true
-```
+Input:
+"abccccdd"
 
-Example 2:
+Output:
+7
 
+Explanation:
+One longest palindrome that can be built is "dccaccd", whose length is 7.
 ```
-Input : s = "apple", abbr = "a2e"
-Output : false
-```
-
-Notice
-- Notice that only the above abbreviations are valid abbreviations of the string word. Any other string is not a valid abbreviation of word.
 
 ## Answer
-### Method 1 - Two Pointer - :rabbit: 330ms (70%)
+### Method 1 - HashSet - :rabbit: 4ms (54.27%)
+
+- Use hashset to to remove seen chars. And the hashset size should be **less than 2** so that a string can form a palindrome.
 
 ```java
-public class Solution {
-    /**
-     * @param word: a non-empty string
-     * @param abbr: an abbreviation
-     * @return: true if string matches with the given abbr or false
-     */
-    public boolean validWordAbbreviation(String word, String abbr) {
-        // write your code here
-        if (word == null || word.length() == 0) return false;
+class Solution {
+    public int longestPalindrome(String s) {
+        if (s == null) return 0;
+        Set<Character> set = new HashSet();
+        int res = 0, len = s.length(), i = 0;
         
-        int i = 0, j = 0;
-        int lenw = word.length(), lena = abbr.length();
-        
-        while (i < lena) {
-            char c = abbr.charAt(i);
-            if (c > '0' && c <= '9') {     // ignore num start with `0`
-                int res = 0;
-                while (i < lena && Character.isDigit(abbr.charAt(i))) {
-                    res = res * 10 + abbr.charAt(i) - '0';
-                    i++;
-                }
-                j = j + res;
-            } else {
-                if (j >= lenw || c != word.charAt(j++)) {
-                    //System.out.println(i+","+j);
-                    return false;
-                }
-                i++;
-            }
+        while (i < len) {
+            char c = s.charAt(i++);
+            if (set.contains(c)) set.remove(c);
+            else set.add(c);
         }
         
-        return i == lena && j == lenw;
+        
+        return Math.min(len, len - set.size() + 1);
     }
 }
 ```
