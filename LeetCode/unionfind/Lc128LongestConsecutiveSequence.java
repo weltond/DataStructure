@@ -1,5 +1,30 @@
 // https://leetcode.com/problems/longest-consecutive-sequence/
+
 // UNION FIND????????
+class Solution {
+    public int longestConsecutive(int[] nums) {
+        Set<Integer> set = new HashSet();
+        int res = 0;
+        for (int i : nums) {
+            set.add(i);
+        }
+        
+        for (int i = 0; i < nums.length; i++) {
+            int cnt = 1;
+            if (!set.contains(nums[i] - 1)) {
+                int j = nums[i] + 1;
+                while (set.contains(j)) {
+                    j++;
+                    cnt++;
+                }
+                
+                res = Math.max(res, cnt);
+            }
+        }
+        return res;
+    }
+}
+
 class Solution {
     public int longestConsecutive(int[] nums) {
         return m3(nums);
