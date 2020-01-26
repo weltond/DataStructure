@@ -23,6 +23,29 @@ One longest palindrome that can be built is "dccaccd", whose length is 7.
 ```
 
 ## Answer
+### Method 2 -
+
+```java
+class Solution {
+    // 1ms (100%)
+    public int longestPalindrome(String s) {
+        int[] cnt = new int[128];
+        for (char c: s.toCharArray()) {
+            cnt[c]++;
+        }
+        
+        int ans = 0;
+        for (int v : cnt) {
+            ans += v / 2 * 2;   // "aaaaa" -> "aaaa"
+            if (ans % 2 == 0 && v % 2 == 1) {   // if v % 2 == 1 then this letter can be added as a unique center. We also check ans % 2 == 0 to make sure there isn't a unique center added yet.
+                ans++;
+            }
+        }
+        return ans;
+    }
+}
+```
+
 ### Method 1 - HashSet - :rabbit: 4ms (54.27%)
 
 - Use hashset to to remove seen chars. And the hashset size should be **less than 2** so that a string can form a palindrome.
@@ -46,21 +69,4 @@ class Solution {
 }
 ```
 
-class Solution {
-    // 1ms (100%)
-    public int longestPalindrome(String s) {
-        int[] cnt = new int[128];
-        for (char c: s.toCharArray()) {
-            cnt[c]++;
-        }
-        
-        int ans = 0;
-        for (int v : cnt) {
-            ans += v / 2 * 2;   // "aaaaa" -> "aaaa"
-            if (ans % 2 == 0 && v % 2 == 1) {   // if v % 2 == 1 then this letter can be added as a unique center. We also check ans % 2 == 0 to make sure there isn't a unique center added yet.
-                ans++;
-            }
-        }
-        return ans;
-    }
-}
+
