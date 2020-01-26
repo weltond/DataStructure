@@ -23,7 +23,7 @@ One longest palindrome that can be built is "dccaccd", whose length is 7.
 ```
 
 ## Answer
-### Method 2 -
+### Method 2 - Math - :rocket: 1ms (100%)
 
 ```java
 class Solution {
