@@ -1,5 +1,7 @@
 ## [1296. Divide Array in Sets of K Consecutive Numbers](https://leetcode.com/problems/divide-array-in-sets-of-k-consecutive-numbers/)
 
+![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
+
 Given an array of integers nums and a positive integer k, find whether it's possible to divide this array into sets of k consecutive numbers
 Return True if its possible otherwise return False.
 
