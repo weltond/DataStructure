@@ -2,6 +2,7 @@
 
 - [PriorityQueue(Heap)](#priorityqueue)
 - [Sliding Window](#sliding-window)
+- [DFS/BFS](#dfs/bfs)
 - [Divide and Conquer](#divide-and-conquer)
 
 ## PriorityQueue
@@ -27,6 +28,7 @@ The same letters are at least distance 3 from each other.
     - Else, if current `char` freq is still greater than `1`, save it to a tmp **List** that will be pushed into the priorityqueue after `k` loops.
 
 
+
 ## [1296. Divide Array in Sets of K Consecutive Numbers](https://github.com/weltond/DataStructure/blob/master/LeetCode/greedy/1296-divide-array-in-sets-of-k-consecutive-numbers.md)
 
 Given an array of integers nums and a positive integer k, find whether it's possible to divide this array into sets of k consecutive numbers
@@ -41,6 +43,10 @@ Output: true
 Explanation: Array can be divided into [1,2,3,4] and [3,4,5,6].
 ```
 
+#### Solution
+- PriorityQueue
+  - **HashMap** store `<element, freq>`. **PriorityQueue** store element.
+  - For each `poll`, get its freq, then for `k` loop, increase the polled element by 1 and get each freq. If the element doesn't contain or its freq is not equal polled freq. return false.
 
 
 ## Sliding Window
@@ -63,6 +69,53 @@ Explanation: T = "eceb"
   - we can update `res` when 'cnt <= k'.
   - Once 'cnt > k`, move `start` pointer and update `cnt` when `start` is the only char in the window.
   
+  
+## DFS/BFS
+
+## [787. Cheapest Flights Within K Stops](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/787-Cheapest-Flights-Within-K-Stops.md)
+
+There are n cities connected by m flights. Each fight starts from city u and arrives at v with a price w.
+
+Now given all the cities and flights, together with starting city src and the destination dst, 
+your task is to find the cheapest price from src to dst with up to k stops. If there is no such route, output -1.
+
+Example 1:
+
+```
+Input: 
+n = 3, edges = [[0,1,100],[1,2,100],[0,2,500]]
+src = 0, dst = 2, k = 1
+Output: 200
+Explanation: 
+The graph looks like this:
+
+The cheapest price from city 0 to city 2 with at most 1 stop costs 200, as marked red in the picture.
+```
+
+#### Solution
+- DFS (slow)
+  - Try every connected city and calculate result when meet destination.
+- BFS
+- Dijkstra
+  - PriorityQueue, sort based on total cost from start point.
+
+### [698. Partition to K Equal Sum Subsets](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/698-Partition-to-K-Equal-Sum-Subsets.md)
+
+Given an array of integers nums and a positive integer k, find whether it's possible to divide this array into k non-empty subsets whose sums are all equal.
+
+Example 1:
+
+```
+Input: nums = [4, 3, 2, 3, 5, 2, 1], k = 4
+Output: True
+Explanation: It's possible to divide it into 4 subsets (5), (1, 4), (2,3), (2,3) with equal sums.
+```
+
+#### Solution
+- DFS
+  - Try every possible subset.
+  - pruning when visited or current sum is less than requirement.
+
 ## Divide and Conquer
 ### [395. Longest Substring with At Least K Repeating Characters](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/395-Longest-Substring-with-At-Least%20K-Repeating-Characters.md)
 
