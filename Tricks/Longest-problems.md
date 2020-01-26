@@ -1,7 +1,13 @@
 # Longest Related Problems
 
-- [HashSet](#hashset
+- [DP](#dp)
+- [HashSet](#hashset)
 - [Sliding Window](#sliding-window)
+
+## DP
+### [1143. Longest Common Subsequence]
+#### DP
+- it's obvious that `dp[i][j]` represents longest common subsequence of string s1 starting from 0 - i and string s2 from 0 - j. 
 
 ## HashSet
 ### [409. Longest Palindrome](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/409-Longest-Palindrome.md) 
