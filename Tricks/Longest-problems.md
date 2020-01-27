@@ -8,6 +8,11 @@
 * [Two Pointers](#two-pointers)
 
 ## DP
+### [5. Longest Palindromic Substring](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/5-Longest-Palindromic-Substring.md) 
+#### DP
+#### Expand Around Center
+#### Manacher
+
 ### [300. Longest Increasing Subsequence]()
 #### DP
 - DP for dummies
