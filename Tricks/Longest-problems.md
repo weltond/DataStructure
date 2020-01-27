@@ -11,6 +11,10 @@
 
 #### Segement Tree
 
+### [329. Longest Increasing Path in a Matrix]()
+#### DFS + Memo
+- simple idea, go to next recursion if its neighbors are less than it. 
+- We don't need to initial the `memo` array since for each element, their return result should be at least **1**.
 
 ### [1143. Longest Common Subsequence]()
 #### DP
