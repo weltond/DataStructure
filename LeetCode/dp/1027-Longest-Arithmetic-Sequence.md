@@ -32,6 +32,9 @@ Note:
 - `0 <= A[i] <= 10000`
 ## Answer
 ### Method 1 - DP
+
+- Need to maintain max current `dp[i][diff]`. Say `[6,3,6,9,12]`. Because we iterate `j` from current `i-1` to `0`.
+
 #### Approach 2 :rabbit: 363ms (50.82%)
 ```java
 class Solution {
