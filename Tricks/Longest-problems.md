@@ -3,6 +3,7 @@
 - [DP](#dp)
 - [HashSet](#hashset)
 - [Sliding Window](#sliding-window)
+- [Divide and Conquer](#divide-and-conquer)
 
 ## DP
 ### [673. Number of Longest Increasing Subsequence](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/673-Number-of-Longest-Increasing-Subsequence.md)
@@ -11,7 +12,7 @@
 
 #### Segement Tree
 
-### [329. Longest Increasing Path in a Matrix]()
+### [329. Longest Increasing Path in a Matrix](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/Lc329LongestIncreasingPathInAMatrix.java)
 #### DFS + Memo
 - simple idea, go to next recursion if its neighbors are less than it. 
 - We don't need to initial the `memo` array since for each element, their return result should be at least **1**.
@@ -45,3 +46,12 @@
   - Use array to store each char's **position** instead of frequency.
   - A `start` pointer points to the last seen char's position of current char. **start = Math.max(start, position[c])**
   - update res and store current position into array.
+  
+## Divide and Conquer
+### [395. Longest Substring with At Least K Repeating Characters](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/395-Longest-Substring-with-At-Least%20K-Repeating-Characters.md)
+
+#### Divide and Conquer
+  - Basic idea is that the substring must be divided by those chars that appears less than `k` times in the string.
+  - First find the freq for every char in the string. (**SHOULD CALCULATE FOR EVERY NEW SUBSTRING**)
+  - Iterate the string and find the first char that appears less than `k` times.
+  - Divide and conquer
