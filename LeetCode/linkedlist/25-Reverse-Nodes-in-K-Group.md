@@ -57,6 +57,7 @@ class Solution {
 ```
 ### Method 1 - Recursion
 #### Approach 4
+- Notice we should use `k` as stop reversing indicator instead of using `head == end`.
 
 ```java
 /**
