@@ -20,6 +20,45 @@ Output: 1->2->5
  *     ListNode(int x) { val = x; }
  * }
  */
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public ListNode deleteDuplicates(ListNode head) {
+        if (head == null) return null;
+        
+        ListNode dummy = new ListNode(-1);
+        ListNode pre = dummy;
+        
+        while (head != null) {
+            ListNode tmp = head;
+            int val = tmp.val;
+            int cnt = 0;
+            while (tmp.next != null && tmp.next.val == val) {
+                cnt++;
+                tmp = tmp.next;
+            }
+            
+            if (cnt == 0) {
+                //System.out.println(head.val+","+cnt);
+                pre.next = head;
+                pre = head;
+            }
+            
+            tmp = tmp.next;
+            head.next = null;   //[1,2,2]
+            head = tmp;
+        }
+        
+        return dummy.next;
+    }
+}
+
 class Solution {
     public ListNode deleteDuplicates(ListNode head) {
         if (head == null || head.next == null) return head;
