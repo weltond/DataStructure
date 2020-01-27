@@ -37,10 +37,34 @@ P     I
 ```
 
 ## Answer
-### Method 2 -
+### Method 2 - :rocket: 3ms (97.01%)
 
 ```java
+class Solution {
+    public String convert(String s, int numRows) {
 
+        if (s == null) return "";
+        int len = s.length();
+        if (len == 0 || numRows < 2 || numRows >= len) return s;
+        
+        char[] arr = s.toCharArray();
+        int idx = 0;
+        
+        int grandIndex = numRows * 2 - 2;
+        
+        for (int i = 0; i < numRows; i++) {
+            for (int j = i, sum = 2 * i; j < len;) {
+                arr[idx++] = s.charAt(j);
+                if (sum < grandIndex) {
+                    sum = grandIndex - sum;
+                }
+                j += sum;
+            }
+        }
+        
+        return String.valueOf(arr);
+    }
+}
 ```
 
 ### Method 1 - :turtle: 29ms (16.60%)
