@@ -5,7 +5,14 @@
 - [Sliding Window](#sliding-window)
 
 ## DP
-### [1143. Longest Common Subsequence]
+### [673. Number of Longest Increasing Subsequence](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/673-Number-of-Longest-Increasing-Subsequence.md)
+#### DP
+- 2 dp arrays. One storing Longest Increasing subsequence. One stores number of lis.
+
+#### Segement Tree
+
+
+### [1143. Longest Common Subsequence]()
 #### DP
 - it's obvious that `dp[i][j]` represents longest common subsequence of string s1 starting from 0 - i and string s2 from 0 - j. 
 
