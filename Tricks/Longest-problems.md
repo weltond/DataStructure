@@ -1,11 +1,18 @@
 # Longest Related Problems
 
-- [DP](#dp)
-- [HashSet](#hashset)
-- [Sliding Window](#sliding-window)
-- [Divide and Conquer](#divide-and-conquer)
+* [DP](#dp)
+* [HashSet](#hashset)
+* [Sliding Window](#sliding-window)
+* [Divide and Conquer](#divide-and-conquer)
 
 ## DP
+### [516. Longest Palindromic Subsequence]()
+#### DP
+- Common dp template for palindrome.
+- `dp[i][j]` represent LPS of string from `i` to `j` (both inclusive).
+  - if `c[i] == c[j]`, `dp[i][j] = dp[i+1][j-1]`
+  - else, `dp[i][j] = max(dp[i+1][j], dp[i][j-1])`.
+  
 ### [673. Number of Longest Increasing Subsequence](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/673-Number-of-Longest-Increasing-Subsequence.md)
 #### DP
 - 2 dp arrays. One storing Longest Increasing subsequence. One stores number of lis.
