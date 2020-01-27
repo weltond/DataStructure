@@ -56,6 +56,45 @@ class Solution {
 }
 ```
 ### Method 1 - Recursion
+#### Approach 4
+
+```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public ListNode reverseKGroup(ListNode head, int k) {
+        if (head == null) return null;
+        
+        ListNode end = getLast(head, k);
+        if (end == null) return head;
+        ListNode nh = reverseKGroup(end.next, k);
+        //System.out.println(nh.val);
+        while (k-- > 0) {
+            ListNode next = head.next;
+            head.next = nh;
+            nh = head;
+            head = next;
+        }
+        return end;
+    }
+    
+    private ListNode getLast(ListNode head, int k) {
+        while (--k > 0) {
+            if (head == null ) return null;
+            head = head.next;
+        }
+        
+        return head;
+    }
+}
+```
+
 #### Approach 3
 :rocket: 0ms 
 - like **Approach 1**
