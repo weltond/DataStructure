@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [6](https://leetcode.com/problems/zigzag-conversion/) | [ZigZag Conversion](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/6-zigzag-conversion.md) | Medium | String
 |[687](https://leetcode.com/problems/longest-univalue-path/) | [Longest Univalue Path](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/687-longest-univalue-path.md) | Easy | Tree / Recursion
 | [409](https://leetcode.com/problems/longest-palindrome/) | [Longest Palindrome](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/409-Longest-Palindrome.md) | Easy | Hash Table
 | [225](https://leetcode.com/problems/implement-stack-using-queues/) | [Implement Stack Using Queues](https://github.com/weltond/DataStructure/blob/master/LeetCode/queue/225-Implement-Stack-Use-Queue.md) | Easy | Queue / Design
