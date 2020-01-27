@@ -21,3 +21,9 @@
   - checking new head next is null or not
   - `k % len == 0`. (**Preferred**).
   
+### [82.](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc82RemoveDupfromSortedListII.java) 
+#### Iteration
+- Take care of edge case like `[1,1,2]` or `[1,2,2]`.
+- Use dummy node
+#### Recursion
+- Less code than iteration
