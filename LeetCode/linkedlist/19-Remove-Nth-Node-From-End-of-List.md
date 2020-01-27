@@ -17,6 +17,39 @@ Follow up:
 - Could you do this in one pass?
 ## Answer
 ### Method 1 - :rocket: 0ms
+#### Approach 3
+
+```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        ListNode h = head, tmp = head;
+        
+        while (tmp != null && n-- > 0) {
+            tmp = tmp.next;
+        }
+        
+        if (tmp == null) return head.next;
+        
+        while (tmp != null && tmp.next != null) {
+            h = h.next;
+            tmp = tmp.next;
+        }
+        
+        h.next = h.next.next;
+        
+        return head;
+    }
+}
+```
+
 #### Approach 2
 ```java
 /**
