@@ -5,6 +5,7 @@
 * [Sliding Window](#sliding-window)
 * [Divide and Conquer](#divide-and-conquer)
 * [Trie](#trie)
+* [Two Pointers](#two-pointers)
 
 ## DP
 ### [300. Longest Increasing Subsequence]()
@@ -90,3 +91,6 @@
 #### Trie
 #### Vertical Scan
 #### Divide and Conquer
+
+## Two Pointers
+### [524. Longest Word in Dictionary through Deleting](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc524LongestWordInDictThroughDelete.java)
