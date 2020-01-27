@@ -25,6 +25,10 @@
 
 #### Segement Tree
 
+### [32 Longest Valid Parentheses](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/32-Longest-Valid-Parentheses.md) 
+#### DP
+#### Stack
+
 ### [329. Longest Increasing Path in a Matrix](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/Lc329LongestIncreasingPathInAMatrix.java)
 #### DFS + Memo
 - simple idea, go to next recursion if its neighbors are less than it. 
