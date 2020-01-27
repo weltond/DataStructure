@@ -312,7 +312,7 @@
 | [309](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/) | [Best Time to Buy and Sell Stock with CoolDown](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc309BestTimeToSellStockWithCoolDown.java) | Medium | DP
 |[53](https://leetcode.com/problems/maximum-subarray/) | [Maximum Subarray](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc53MaximumSubarray.java) | Easy | Array / DP / Divide and Conquer
 | [139](https://leetcode.com/problems/word-break/) | [Word Break](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc139WordBreak.java) | Medium | DP
-| [5](https://leetcode.com/problems/longest-palindromic-substring/) | [Longest Palindromic Substring](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc5LongestPalindromicSubstring.java) | Medium | String / DP
+| [5](https://leetcode.com/problems/longest-palindromic-substring/) | [Longest Palindromic Substring](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/5-Longest-Palindromic-Substring.md) | Medium | String / DP
 |[516](https://leetcode.com/problems/longest-palindromic-subsequence/) | [Longest Palindromic Subsequence](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc516LongestPalindromicSubsequence.java) | Medium | DP
 |[647](https://leetcode.com/problems/palindromic-substrings/) | [Palindromic Substrings](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc647PalindromicSubstrings.java) | Medium | String / DP
 |[322](https://leetcode.com/problems/coin-change/) | [Coin Change](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc322CoinChange.java) | Medium | DP
