@@ -7,6 +7,10 @@
 * [Trie](#trie)
 
 ## DP
+### [300. Longest Increasing Subsequence]()
+#### DP
+- DP for dummies
+
 ### [516. Longest Palindromic Subsequence]()
 #### DP
 - Common dp template for palindrome.
@@ -14,6 +18,7 @@
   - if `c[i] == c[j]`, `dp[i][j] = dp[i+1][j-1]`
   - else, `dp[i][j] = max(dp[i+1][j], dp[i][j-1])`.
   
+
 ### [673. Number of Longest Increasing Subsequence](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/673-Number-of-Longest-Increasing-Subsequence.md)
 #### DP
 - 2 dp arrays. One storing Longest Increasing subsequence. One stores number of lis.
@@ -28,6 +33,11 @@
 ### [1143. Longest Common Subsequence]()
 #### DP
 - it's obvious that `dp[i][j]` represents longest common subsequence of string s1 starting from 0 - i and string s2 from 0 - j. 
+
+### [1027. Longest Arithmetic Sequence](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/1027-Longest-Arithmetic-Sequence.md) 
+#### DP
+- `dp[i][diff]` represents longest `diff` from i-th to 0-th of a sequence.
+- Need to be care to maintain max `dp[i][diff]` since this scenario could happen when input is `[6,3,6,9,12]`.
 
 ## HashSet
 ### [409. Longest Palindrome](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/409-Longest-Palindrome.md) 
