@@ -4,6 +4,7 @@
 * [HashSet](#hashset)
 * [Sliding Window](#sliding-window)
 * [Divide and Conquer](#divide-and-conquer)
+* [Trie](#trie)
 
 ## DP
 ### [516. Longest Palindromic Subsequence]()
@@ -62,3 +63,10 @@
   - First find the freq for every char in the string. (**SHOULD CALCULATE FOR EVERY NEW SUBSTRING**)
   - Iterate the string and find the first char that appears less than `k` times.
   - Divide and conquer
+
+## Trie
+### [720. Longest Word In Dictionary](https://github.com/weltond/DataStructure/blob/master/LeetCode/trie/720-longest-word-in-dictionary.md)
+- Idea is simple, use trie to store all words and iterate if every substring is stored in the trie.
+- Two things can make the code length smaller
+  - Iterate from `z` to `a` so that it is guranteed that if length is same, the lexi smaller will be returned last.
+  - Save each word at the end of trie point so that we don't need a stringbuilder to reconstruct the result.
