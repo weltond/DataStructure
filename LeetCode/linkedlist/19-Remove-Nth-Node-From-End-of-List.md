@@ -17,6 +17,9 @@ Follow up:
 - Could you do this in one pass?
 ## Answer
 ### Method 1 - :rocket: 0ms
+
+- Take care of the situation when `n` equals to the size of the linkedlist.
+
 #### Approach 3
 
 ```java
