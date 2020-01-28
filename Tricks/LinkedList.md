@@ -56,3 +56,14 @@ private ListNode findMid(ListNode head) {
 - Recursion should return the head.
 - Because of this, when there is a node has child, recurse it and it will return a head.
 - In order to connect the child to parent, we should iterate the child to find the last element and then connect it to cur's next.
+
+### [445. Add Two Numbers II](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/445-add-two-numbers-ii.md)
+#### Recursion
+- Get each list length
+- Recursive calculate add when their length diff is `0`.
+- Base case is reaching the end of the list. (It is guruanteed that both reach the end at the same time becuase we use `diff` to keep track of the length)
+
+#### Stack
+- Use two stacks to store each list value
+
+
