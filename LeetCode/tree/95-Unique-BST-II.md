@@ -27,7 +27,50 @@ The above output corresponds to the 5 unique BST's shown below:
 ```
 
 ## Answer
-### Method 1 - Two Pointer - :rabbit: 330ms (70%)
+### Method 1 - Recursion - :rocket: 1ms (100%)
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public List<TreeNode> generateTrees(int n) {
+        if (n == 0) return new LinkedList();
+        
+        return dfs(1, n);
+    }
+    
+    private List<TreeNode> dfs(int start, int end) {
+        List<TreeNode> res = new ArrayList();
+        if (start > end) {
+            res.add(null);
+            return res;
+        }
+        
+        for (int i = start; i <= end; i++) {
+            List<TreeNode> l = dfs(start, i - 1);
+            List<TreeNode> r = dfs(i + 1, end);
+            
+            for (TreeNode left : l) {
+                for (TreeNode right : r) {
+                    TreeNode root = new TreeNode(i);
+                    root.left = left;
+                    root.right = right;
+                    res.add(root);
+                }
+            }
+        }
+        
+        return res;
+    }
+}
+```
 
 ### Wrong Solution
 
