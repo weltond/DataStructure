@@ -15,6 +15,56 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public TreeNode sortedListToBST(ListNode head) {
+        if (head == null) return null;
+        
+        ListNode mid = findMid(head);
+        
+        TreeNode root = new TreeNode(mid.val);
+        
+        // base case, one element
+        if (mid == head) {
+            return root;
+        }
+        
+        root.left = sortedListToBST(head);
+        root.right = sortedListToBST(mid.next);
+        
+        return root;
+    }
+    
+    private ListNode findMid(ListNode head) {
+        ListNode pre = null, slow = head, fast = head;
+        
+        while (fast != null && fast.next != null) {
+            pre = slow;
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        
+        if (pre != null) pre.next = null;
+        
+        return slow;
+    }
+}
 class Solution {
     // 1ms (100%)
     public TreeNode sortedListToBST(ListNode head) {
