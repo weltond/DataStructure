@@ -1,6 +1,24 @@
 # LinkedList Related Problems
 *
 
+## Find Mid
+
+```java
+private ListNode findMid(ListNode head) {
+        ListNode pre = null, slow = head, fast = head;
+        
+        while (fast != null && fast.next != null) {
+            pre = slow;
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        
+        if (pre != null) pre.next = null;
+        
+        return slow;
+    }
+```
+
 ## 
 ### [19. Remove Nth Node From End of List](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/19-Remove-Nth-Node-From-End-of-List.md)
 - We can use dummy node to deliminate null pointers when **head** could be changed.
