@@ -401,7 +401,7 @@
 | [300](https://leetcode.com/problems/longest-increasing-subsequence/) | [Longest Increasing Subsequence](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc300LongestIncreasingSubsequence.java) | Medium | DP / Binary Search
 | [146](https://leetcode.com/problems/lru-cache/) | [LRU Cache](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc146LRUCache.java) | Hard | Design
 | [794](https://leetcode.com/problems/valid-tic-tac-toe-state/) | [Valid Tic-Tac-Toe](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/Lc794ValidTicTacToeState.java) | Medium | Math / Recursion?
-| [95](https://leetcode.com/problems/unique-binary-search-trees-ii/) | [Unique BST II](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc95UniqueBSTII.java) | Medium | DP / Tree
+| [95](https://leetcode.com/problems/unique-binary-search-trees-ii/) | [Unique BST II](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/95-Unique-BST-II.md) | Medium | DP / Tree
 | [230](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | [Kth Smallest Element in a BST](https://github.com/weltond/DataStructure/blob/bb06bc9cae43f33951932ecb3722fb614e51a638/LeetCode/tree/Lc230KthSmallestElementInBST.java) | Medium | Binary Search / Tree
 | [658](https://leetcode.com/problems/find-k-closest-elements/) | [Find K Closest Elements](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/Lc658FindKClosestElements.java) | Medium | Binary Search
 | [35](https://leetcode.com/problems/search-insert-position/) | [Search Insert Position](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/Lc35SearchInsertPosition.java) | Easy | Array / Binary Search
