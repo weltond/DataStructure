@@ -1,5 +1,7 @@
 # LinkedList Related Problems
-*
+* Recursion
+* Iteration
+* Two Pointers
 
 ## Find Mid
 
@@ -19,7 +21,6 @@ private ListNode findMid(ListNode head) {
     }
 ```
 
-## 
 ### [19. Remove Nth Node From End of List](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/19-Remove-Nth-Node-From-End-of-List.md)
 - We can use dummy node to deliminate null pointers when **head** could be changed.
 
@@ -49,3 +50,6 @@ private ListNode findMid(ListNode head) {
 ### [109. Convert Sorted List to Binary Search Tree]()
 #### Find Middle
 #### Inorder Simulation
+
+### [430. Flatten a Multilevel Doubly LinkedList](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/430-Flatten-MultiDoubly-LinkedList.md)
+#### Recursion
