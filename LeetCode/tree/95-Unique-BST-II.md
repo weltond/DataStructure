@@ -2,29 +2,29 @@
 
 ![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
 
-Given a non-empty string word and an abbreviation abbr, return whether the string matches with the given abbreviation.
+Given an integer n, generate all structurally unique BST's (binary search trees) that store values 1 ... n.
 
-A string such as `"word"` contains only the following valid abbreviations:
-
-`["word", "1ord", "w1rd", "wo1d", "wor1", "2rd", "w2d", "wo2", "1o1d", "1or1", "w1r1", "1o2", "2r1", "3d", "w3", "4"]`
-
-Example
-Example 1:
+Example:
 
 ```
-Input : s = "internationalization", abbr = "i12iz4n"
-Output : true
-```
+Input: 3
+Output:
+[
+  [1,null,3,2],
+  [3,2,null,1],
+  [3,1,null,null,2],
+  [2,1,3],
+  [1,null,2,null,3]
+]
+Explanation:
+The above output corresponds to the 5 unique BST's shown below:
 
-Example 2:
-
+   1         3     3      2      1
+    \       /     /      / \      \
+     3     2     1      1   3      2
+    /     /       \                 \
+   2     1         2                 3
 ```
-Input : s = "apple", abbr = "a2e"
-Output : false
-```
-
-Notice
-- Notice that only the above abbreviations are valid abbreviations of the string word. Any other string is not a valid abbreviation of word.
 
 ## Answer
 ### Method 1 - Two Pointer - :rabbit: 330ms (70%)
