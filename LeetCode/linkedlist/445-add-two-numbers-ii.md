@@ -17,6 +17,77 @@ Output: 7 -> 8 -> 0 -> 7
 ```
 
 ## Answer
+### Method 2 - Recursion - :rocket: 2ms (99.63%)
+
+- Get each length first
+- Recursion and add values when the length diff is `0`.
+
+```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    int carry = 0;
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        int len1 = getLen(l1), len2 = getLen(l2);
+        ListNode res = null;
+        
+        // always use the smaller size as reference
+        if (len1 < len2) {
+            res = add(l1, l2, len2 - len1);
+        } else {
+            res = add(l2, l1, len1 - len2);
+        }
+        
+        if (carry != 0) {
+            ListNode old = res;
+            res = new ListNode(carry);
+            res.next = old;
+        }
+        return res;
+    }
+    
+    // recursion based on diff. l1 is always less than or equal to l2 
+    private ListNode add(ListNode l1, ListNode l2, int diff) {
+        if (l1.next == null && l2.next == null) {
+            int sum = l1.val + l2.val;
+            carry = sum / 10;
+            return new ListNode(sum % 10);
+        }
+        
+        ListNode res, next;
+        int sum = 0;
+        if (diff == 0) {
+            next = add(l1.next, l2.next, 0);
+            sum = carry + l1.val + l2.val;  // sum should be added after recursion.
+        } else {
+            next = add(l1, l2.next, diff - 1);
+            sum = carry + l2.val;
+        }
+        
+        res = new ListNode(sum % 10);
+        carry = sum / 10;
+        res.next = next;
+        
+        return res;
+    }
+    
+    private int getLen(ListNode head) {
+        int len = 0;
+        while (head != null) {
+            head = head.next;
+            len++;
+        }
+        return len;
+    }
+}
+```
+
 ### Method 1 - Two Stacks - :rabbit: 3ms
 
 ```java
