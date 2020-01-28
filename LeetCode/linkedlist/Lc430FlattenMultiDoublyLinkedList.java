@@ -19,6 +19,50 @@ class Node {
     public Node prev;
     public Node next;
     public Node child;
+};
+*/
+class Solution {
+    public Node flatten(Node head) {
+        Node cur = head;
+        while (cur != null) {
+            if (cur.child == null) {
+                cur = cur.next;
+            } else {
+                Node ret = flatten(cur.child);
+                cur.child = null;
+                
+                Node next = cur.next;
+                cur.next = ret;
+                if (ret != null) ret.prev = cur;
+                
+                Node pre = null;
+                while (ret != null) {
+                    pre = ret;
+                    ret = ret.next;
+                }
+                
+                if (pre != null) {
+                    pre.next = next;
+                }
+                if (next != null) {
+                    next.prev = pre;
+                }
+                
+                cur = next;
+            }
+        }
+        
+        return head;
+    }
+}
+
+/*
+// Definition for a Node.
+class Node {
+    public int val;
+    public Node prev;
+    public Node next;
+    public Node child;
 
     public Node() {}
 
