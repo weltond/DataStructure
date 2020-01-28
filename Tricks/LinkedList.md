@@ -53,3 +53,6 @@ private ListNode findMid(ListNode head) {
 
 ### [430. Flatten a Multilevel Doubly LinkedList](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/430-Flatten-MultiDoubly-LinkedList.md)
 #### Recursion
+- Recursion should return the head.
+- Because of this, when there is a node has child, recurse it and it will return a head.
+- In order to connect the child to parent, we should iterate the child to find the last element and then connect it to cur's next.
