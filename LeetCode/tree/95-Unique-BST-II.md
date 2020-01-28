@@ -29,43 +29,62 @@ Notice
 ## Answer
 ### Method 1 - Two Pointer - :rabbit: 330ms (70%)
 
+### Wrong Solution
+
+- **Wrong** because it doesn't take the BST property into consideration.
+- The results of the following codes are: `[[1,null,2,null,3],[1,null,3,2],[2,1,null,null,3],[2,null,3,1],[3,1,null,null,2],[3,2,null,1]]`, which has two wrong solution `[2,null,3,1],[3,1,null,null,2]` while it should be `[2,1,3]`.
+
 ```java
-public class Solution {
-    /**
-     * @param word: a non-empty string
-     * @param abbr: an abbreviation
-     * @return: true if string matches with the given abbr or false
-     */
-    public boolean validWordAbbreviation(String word, String abbr) {
-        // write your code here
-        if (word == null || word.length() == 0) return false;
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    boolean[] used;
+    public List<TreeNode> generateTrees(int n) {
+        used = new boolean[n + 1];
         
-        int i = 0, j = 0;
-        int lenw = word.length(), lena = abbr.length();
-        
-        while (i < lena) {
-            char c = abbr.charAt(i);
-            if (c > '0' && c <= '9') {     // ignore num start with `0`
-                int res = 0;
-                while (i < lena && Character.isDigit(abbr.charAt(i))) {
-                    res = res * 10 + abbr.charAt(i) - '0';
-                    i++;
-                }
-                j = j + res;
-            } else {
-                if (j >= lenw || c != word.charAt(j++)) {
-                    //System.out.println(i+","+j);
-                    return false;
-                }
-                i++;
+        return dfs(n,0);
+    }
+    
+    private List<TreeNode> dfs(int n, int lvl) {
+        List<TreeNode> res = new ArrayList();
+        for (int i = 1; i <= n; i++) {
+            if (used[i]) continue;
+            used[i] = true;
+            
+            
+            List<TreeNode> ret = dfs(n, lvl + 1);
+            if (ret.size() == 0) {
+                res.add(new TreeNode(i));
+                used[i] = false;
+                continue;
             }
+            for (TreeNode node : ret) {
+                TreeNode root = new TreeNode(i);
+                if (node.val < i) {
+                    root.left = node;
+                } else {
+                    root.right = node;
+                }
+                res.add(root);
+            }
+            System.out.println("==");
+            used[i] = false;
         }
         
-        return i == lena && j == lenw;
+        return res;
     }
 }
 ```
+### Old Post
 
+```java
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -110,3 +129,4 @@ class Solution {
         return all;
     }
 }
+```
