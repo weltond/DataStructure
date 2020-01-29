@@ -32,6 +32,7 @@
 # BFS
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [598](https://www.lintcode.com/problem/zombie-in-matrix/description?_from=ladder&&fromId=14) | [Zombie in Matrix](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/598-zombie-in-matrix.md) | Medium | BFS
 | [663](https://www.lintcode.com/problem/walls-and-gates/description?_from=ladder&&fromId=14) | [Walls and Gates](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/663-walls-and-gates.md) | Medium | BFS
 
 # Tree & Divide and Conquer
