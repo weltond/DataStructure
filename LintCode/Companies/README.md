@@ -22,6 +22,7 @@
 # Basic Algo & Data structure High Frequency II
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [639]() | [Word Abbreviation](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/639-Word-Abbreviation.md) | Hard | String / Sort
 | [648](https://www.lintcode.com/problem/unique-word-abbreviation/description?_from=ladder&&fromId=14) | [Unique Word Abbreviation](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/648-Unique-Word-Abbreviation.md) | Medium | HashTable
 | [124](https://www.lintcode.com/problem/longest-consecutive-sequence/description) | [Longest Consecutive Sequence](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/124-Longest-Consecutive-Sequence.md) | Medium | Array / HashSet
 | [526](https://www.lintcode.com/problem/load-balancer/description?_from=ladder&&fromId=14) | [Load Balancer](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/526-Load-Balancer.md) | Medium | Design / Hash Table
