@@ -32,6 +32,7 @@
 # BFS
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [663](https://www.lintcode.com/problem/walls-and-gates/description?_from=ladder&&fromId=14) | [Walls and Gates](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/663-walls-and-gates.md) | Medium | BFS
 
 # Tree & Divide and Conquer
 | LintCode No. | Problem | Difficulty | Tag 
