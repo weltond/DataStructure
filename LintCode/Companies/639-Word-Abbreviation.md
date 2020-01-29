@@ -1,6 +1,6 @@
 ## [639. Word Abbreviation](https://www.lintcode.com/problem/word-abbreviation/description?_from=ladder&&fromId=14)
 
-![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
+![](https://github.com/weltond/DataStructure/blob/master/hard.PNG)
 
 Given an array of n distinct non-empty strings, you need to generate minimal possible abbreviations for every word following rules below.
 
