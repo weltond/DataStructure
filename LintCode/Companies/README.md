@@ -41,7 +41,7 @@
 # Tree & Divide and Conquer
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
-| [582](https://www.lintcode.com/problem/word-break-ii/description?_from=ladder&&fromId=14) | [Word Break II](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/582-word-break-ii.md) | DP / Backtracking / DFS
+| [582](https://www.lintcode.com/problem/word-break-ii/description?_from=ladder&&fromId=14) | [Word Break II](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/582-word-break-ii.md) | Hard | DP / Backtracking / DFS
 | [448](https://www.lintcode.com/problem/inorder-successor-in-bst/description?_from=ladder&&fromId=14) | [Inorder Successor in BST](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/448-inorder-successor-in-bst.md) | Medium | BST / DFS
 | [649](https://www.lintcode.com/problem/binary-tree-upside-down/description?_from=ladder&&fromId=14) | [Binary Tree Upside Down](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/649-binary-tree-upside-down.md) | Medium | Tree / DFS
 | [650](https://www.lintcode.com/problem/find-leaves-of-binary-tree/description) | [Find Leaves of Binary Tree](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/650-find-leaves-of-binary-tree.md) | Medium | DFS / Tree
