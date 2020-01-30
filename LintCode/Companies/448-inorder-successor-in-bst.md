@@ -36,7 +36,45 @@ Notice
 - It's guaranteed `p` is one node in the given tree. (You can directly compare the memory address to find `p`)
 
 ## Answer
-### Method 1 - BST - :rocket: 1811ms (99.60%)
+### Method 2 - BFS - :rocket: 1808ms (99.80%)
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+
+
+public class Solution {
+    /*
+     * @param root: The root of the BST.
+     * @param p: You need find the successor node of p.
+     * @return: Successor of p.
+     */
+     
+     TreeNode pre = new TreeNode(Integer.MAX_VALUE);
+    public TreeNode inorderSuccessor(TreeNode root, TreeNode p) {
+        TreeNode suc = null;
+        while (root != null) {
+            if (root.val > p.val) {
+                suc = root;
+                root = root.left;
+            } else {
+                root = root.right;
+            }
+        }
+        
+        return suc;
+    }
+}
+```
+
+### Method 1 - DFS - :rocket: 1811ms (99.60%)
 
 - O(h)
 - cur > p -> go right
