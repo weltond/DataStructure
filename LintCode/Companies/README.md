@@ -50,4 +50,5 @@
 # DFS
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [425](https://www.lintcode.com/problem/letter-combinations-of-a-phone-number/description?_from=ladder&&fromId=14) | [Letter Combination of Phone](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/425-letter-combinations-of-a-phone-number.md) | Medium | String / Recursion / Backtracking
 | [652](https://www.lintcode.com/problem/factorization/description?_from=ladder&&fromId=14) | [Factorization](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/652-factorization.md) | Medium | DFS / Backtracking
