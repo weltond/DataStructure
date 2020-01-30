@@ -50,4 +50,4 @@
 # DFS
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
-
+| [652](https://www.lintcode.com/problem/factorization/description?_from=ladder&&fromId=14) | [Factorization](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/652-factorization.md) | Medium | DFS / Backtracking
