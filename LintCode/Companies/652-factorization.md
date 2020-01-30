@@ -27,10 +27,47 @@ Notice
 - The solution set must not contain duplicate combination.
 
 ## Answer
-### Method 1 - DFS - 
+### Method 1 - DFS - :turtle: 1208ms (37.40%)
 
 ```java
-
+public class Solution {
+    /**
+     * @param n: An integer
+     * @return: a list of combination
+     */
+    public List<List<Integer>> getFactors(int n) {
+        List<List<Integer>> res = new ArrayList();
+        dfs(n, 2, new ArrayList(),  res);
+        
+        // for (List<Integer> l : res) {
+        //     Collections.sort(l);
+        // }
+        return res;
+    }
+    
+    private void dfs(int n, int start, List<Integer> list, List<List<Integer>> res) {
+        if (n == 1) {
+            // remove 1 * n situation
+            if (list.size() > 1)
+                res.add(new ArrayList(list));
+            return;
+        }
+        
+        for (int i = start; i <= n; i++) {
+            if (i > n / i) break;
+            if (n % i == 0) {
+                list.add(i);
+                dfs(n / i, i, list, res);
+                list.remove(list.size() - 1);
+            }
+        }
+        
+        list.add(n);
+        dfs(1, start, list, res);
+        list.remove(list.size() - 1);
+        
+    }
+}
 ```
 
 ### TLE - 75% passed
