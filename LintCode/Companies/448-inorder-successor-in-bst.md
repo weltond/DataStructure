@@ -42,7 +42,54 @@ Notice
 - cur > p -> go right
 - cur < p -> go left, update pre.
 - cur = p -> find it's right's left most node
+
+#### Appraoch 2
+
+- We can keep going right when we find the node. Because all the nodes on its right is larger then it. So it will always update the `pre` node.
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+
+
+public class Solution {
+    /*
+     * @param root: The root of the BST.
+     * @param p: You need find the successor node of p.
+     * @return: Successor of p.
+     */
+     
+     TreeNode pre = new TreeNode(Integer.MAX_VALUE);
+    public TreeNode inorderSuccessor(TreeNode root, TreeNode p) {
+        // 1. cur > p -> go right
+        // 2. cur < p -> go left, update pre.
+        // 3. cur = p -> find it's right's left most node
+        dfs(root, p);
         
+        return pre.val == Integer.MAX_VALUE ? null : pre;
+    }
+    
+    private void dfs(TreeNode root, TreeNode p) {
+        if (root == null) return;
+        if (root.val > p.val) {
+            pre = root; // should assign before recursion
+            dfs(root.left, p);
+        } else {
+            dfs(root.right, p);
+        }
+    }
+}
+```
+
+#### Approach 1
+
 ```java
 /**
  * Definition for a binary tree node.
