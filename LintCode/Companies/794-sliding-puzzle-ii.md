@@ -1,6 +1,6 @@
 ## [794. Sliding Puzzle II](https://www.lintcode.com/problem/sliding-puzzle-ii/description)
 
-![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
+![](https://github.com/weltond/DataStructure/blob/master/hard.PNG)
 
 On a 3x3 board, there are 8 tiles represented by the integers 1 through 8, and an empty square represented by 0.
 
