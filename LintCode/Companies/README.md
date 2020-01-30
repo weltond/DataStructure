@@ -32,6 +32,7 @@
 # BFS
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [794](https://www.lintcode.com/problem/sliding-puzzle-ii/description) | [Sliding Puzzle II](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/794-sliding-puzzle-ii.md) | Hard | BFS / A*
 | [796](https://www.lintcode.com/problem/open-the-lock/description?_from=ladder&&fromId=14) | [Open the Lock](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/796-open-the-lock.md) | Hard | BFS / String
 | [477]() | [Surrounded Regions](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/477-surrounded-regions.md) | Medium | BFS / DFS
 | [598](https://www.lintcode.com/problem/zombie-in-matrix/description?_from=ladder&&fromId=14) | [Zombie in Matrix](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/598-zombie-in-matrix.md) | Medium | BFS
