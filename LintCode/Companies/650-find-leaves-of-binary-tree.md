@@ -33,7 +33,53 @@ Explanation:
 ```
 
 ## Answer
-### Method 1 - Two Pointer - :rabbit: 330ms (70%)
+### Method 2 - DFS - :rabbit: 2468ms (33.40%)
+
+```java
+/**
+ * Definition of TreeNode:
+ * public class TreeNode {
+ *     public int val;
+ *     public TreeNode left, right;
+ *     public TreeNode(int val) {
+ *         this.val = val;
+ *         this.left = this.right = null;
+ *     }
+ * }
+ */
+
+
+public class Solution {
+    /*
+     * @param root: the root of binary tree
+     * @return: collect and remove all leaves
+     */
+    public List<List<Integer>> findLeaves(TreeNode root) {
+        // write your code here
+        List<List<Integer>> res = new LinkedList();
+        
+        getDepth(root, res);
+        
+        return res;
+    }
+    
+    private int getDepth(TreeNode root, List<List<Integer>> res) {
+        if (root == null) return 0;
+        
+        int idx = Math.max(getDepth(root.left, res), getDepth(root.right, res));
+        
+        if (idx == res.size()) {
+            res.add(new ArrayList());    
+        }
+        
+        res.get(idx).add(root.val);
+        
+        return idx + 1;
+    }
+}
+```
+
+### Method 1 - DFS + HashMap - :turtle: 3309ms (6.20%)
 
 ```java
 /**
