@@ -41,7 +41,7 @@
 # Tree & Divide and Conquer
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
-
+| [661](https://www.lintcode.com/problem/convert-bst-to-greater-tree/description?_from=ladder&&fromId=14) | [Convert BST to Greater Tree](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/661-convert-bst-to-greater-tree.md) | Easy | Tree / DFS
 
 # DFS
 | LintCode No. | Problem | Difficulty | Tag 
