@@ -1,6 +1,6 @@
 ## [653. Expression Add Operators](https://www.lintcode.com/problem/expression-add-operators/description?_from=ladder&&fromId=14)
 
-![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
+![](https://github.com/weltond/DataStructure/blob/master/hard.PNG)
 
 Given a string that contains only digits `0`-`9` and a target value, return all possibilities to add binary operators (not unary) `+`, `-`, or `*` between the digits so they evaluate to the target value.
 
