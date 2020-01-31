@@ -25,6 +25,47 @@ Notice
 ## Answer
 ### Method 1 - Two Pointer - :turtle: 252ms (17.00%)
 
+#### Approach 2
+
+- use `nums[end+1]`, **no need to do post-processing**.
+```java
+public class Solution {
+    /**
+     * @param nums:  a sorted integer array without duplicates
+     * @return: the summary of its ranges
+     */
+    public List<String> summaryRanges(int[] nums) {
+        List<String> res = new ArrayList();
+        
+        if (nums == null) return res;
+        int start = 0, end = 0;
+        
+        while (end < nums.length) {
+            while (end + 1 < nums.length && nums[end] == nums[end + 1] - 1) {
+                end++;
+            }
+            
+            StringBuilder sb = new StringBuilder();
+            if (end != start) {
+
+                sb.append(nums[start]).append("->").append(nums[end]);
+            } else {
+                sb.append(nums[start]);
+            }
+            res.add(sb.toString());
+            end++;
+            start = end;
+        }
+        
+        return res;
+    }
+}
+```
+
+#### Approach 1
+
+- Use `nums[end-1]`, have to **post-processing**.
+
 ```java
 public class Solution {
     /**
