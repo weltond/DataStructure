@@ -66,6 +66,62 @@ public class Codec {
 ```
 
 ### Method 1 - DFS - :rocket: 5ms (93.59%)
+#### Approach 4
+
+- Use `left` and `right` position of BST property.
+
+```java
+/**
+ * Definition of TreeNode:
+ * public class TreeNode {
+ *     public int val;
+ *     public TreeNode left, right;
+ *     public TreeNode(int val) {
+ *         this.val = val;
+ *         this.left = this.right = null;
+ *     }
+ * }
+ */
+
+public class Solution {
+    public String serialize(TreeNode root) {
+        StringBuilder sb = new StringBuilder();
+        ser(root, sb);
+        
+        return sb.toString();
+    }
+    
+    public void ser(TreeNode root, StringBuilder sb) {
+        if (root == null) return;
+        
+        sb.append(root.val).append(",");
+        ser(root.left, sb);
+        ser(root.right, sb);
+    }
+
+    
+    public TreeNode deserialize(String data) {
+       String[] strs = data.split(",");
+       return der(strs, 0, strs.length - 1);
+    }
+    
+    public TreeNode der(String[] data, int left, int right) {
+        if (left > right) return null;
+        
+        int val = Integer.parseInt(data[left]);
+        TreeNode root = new TreeNode(val);
+
+        int split = left + 1;
+        while (split < data.length && Integer.parseInt(data[split]) < val) {
+            split++;
+        }
+        root.left = der(data, left + 1, split - 1);
+        root.right = der(data, split, right);
+        
+        return root;
+    }
+}
+```
 
 #### Approach 3
 
