@@ -39,7 +39,53 @@ Notice
 - The last four operations won't be called when stack is empty.
 
 ## Answer
-### Method 1 - Stack - :turtle: 202ms (19.25%)
+
+### Method 2 - 2 Stacks - :rocket: 151ms (100%)
+
+```java
+class MaxStack {
+    Stack<Integer> stack;
+    Stack<Integer> maxStack;
+
+    public MaxStack() {
+        stack = new Stack();
+        maxStack = new Stack();
+    }
+
+    public void push(int x) {
+        int max = maxStack.isEmpty() ? x : maxStack.peek();
+        maxStack.push(max > x ? max : x);
+        stack.push(x);
+    }
+
+    public int pop() {
+        return stack.pop();
+    }
+
+    public int top() {
+        return stack.peek();
+    }
+
+    public int peekMax() {
+        return maxStack.peek();
+    }
+
+    public int popMax() {
+        int max = peekMax();
+        maxStack.pop();
+
+        Stack<Integer> buffer = new Stack();
+        while (top() != max) buffer.push(pop());
+        
+        pop();
+        
+        while (!buffer.isEmpty()) push(buffer.pop());
+        return max;
+    }
+}
+```
+
+### Method 1 - Stack + Map - :turtle: 202ms (19.25%)
 
 ```java
 class MaxStack {
