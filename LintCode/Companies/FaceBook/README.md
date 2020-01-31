@@ -36,6 +36,7 @@
 
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [1315](https://www.lintcode.com/problem/summary-ranges/description?_from=ladder&&fromId=130) | [Summary Ranges](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/1315-summary-ranges.md) | Medium | Array
 | [849](https://www.lintcode.com/problem/basic-calculator-iii/description) | [Basic Calculator III](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/849-basic-calculator-iii.md) | Hard | Simulate / Stack / Math
 | [386](https://www.lintcode.com/problem/longest-substring-with-at-most-k-distinct-characters/description) | [Longest Substring At Most K Distinct Chars](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/386-longest-substring-with-at-most-k-distinct-characters.md) | Medium | HashTable / Two pointer
 | [780](https://www.lintcode.com/problem/remove-invalid-parentheses/description?_from=ladder&&fromId=130) | [Remove Invalid Parenthese](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/Lc301RemoveInvalidParenthesis.java) | Hard | DFS / String
