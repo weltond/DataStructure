@@ -1,6 +1,6 @@
 ## [634. Word Squares](https://www.lintcode.com/problem/word-squares/description?_from=ladder&&fromId=14)
 
-![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
+![](https://github.com/weltond/DataStructure/blob/master/hard.PNG)
 
 Given a set of words without duplicates, find all word squares you can build from them.
 
