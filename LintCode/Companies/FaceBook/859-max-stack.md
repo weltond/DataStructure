@@ -1,6 +1,6 @@
 ## [859. Max Stack](https://www.lintcode.com/problem/max-stack/description?_from=ladder&&fromId=130)
 
-![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
+![](https://github.com/weltond/DataStructure/blob/master/hard.PNG)
 
 Design a max stack that supports push, pop, top, peekMax and popMax.
 
