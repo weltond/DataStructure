@@ -10,7 +10,25 @@ Example 2:
 Input: [1,3,5,6], 2
 Output: 1
 */
-
+class Solution {
+    public int searchInsert(int[] nums, int target) {
+        if (nums == null || nums.length == 0) return 0;
+        
+        int l = 0, r = nums.length - 1;
+        
+        while (l < r) {
+            int m = l + (r - l) / 2;
+            if (nums[m] == target) return m;
+            else if (nums[m] < target) {
+                l = m + 1;
+            } else {
+                r = m;
+            }
+        }
+        
+        return nums[l] < target ? l + 1: l;
+    }
+}
 class Solution {
     // 0ms
     public int searchInsert(int[] nums, int target) {
