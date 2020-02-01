@@ -10,6 +10,9 @@ Output: ["255.255.11.135", "255.255.111.35"]
 
 ## Answer
 ### Method 1 - Backtracking - :rocket: 1ms (100%)
+
+- Think about why we **cannot(?)** apply **Memoization** here.
+
 #### Approach 2
 
 - Like [Word Break II]().
