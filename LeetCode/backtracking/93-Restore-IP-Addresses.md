@@ -10,6 +10,61 @@ Output: ["255.255.11.135", "255.255.111.35"]
 
 ## Answer
 ### Method 1 - Backtracking - :rocket: 1ms (100%)
+#### Approach 2
+
+- Like [Word Break II]().
+- Notice: the base case should verify if `lvl == 4` first, **NOT** `s.length() == 0` first!
+
+```java
+class Solution {
+    // Map<Integer, List<String>> map = new HashMap();
+    public List<String> restoreIpAddresses(String s) {
+        return dfs(s, 0);
+    }
+    
+    private List<String> dfs(String s, int lvl) {
+        //if (map.containsKey(lvl)) return map.get(lvl);
+        
+        List<String> res = new ArrayList();
+        int len = s.length();
+
+        if (lvl == 4) {
+            if (len == 0) {
+                res.add("");
+            }
+            return res;
+        }
+        
+        len = Math.min(len, 3); // 
+        
+        for (int i = 1; i <= len; i++) {
+            String sub = s.substring(0, i);
+            
+            if (i > 1 && sub.charAt(0) == '0') continue;
+            if (i == 3 && Integer.parseInt(sub) > 255) continue;
+
+            List<String> ret = dfs(s.substring(i), lvl + 1);
+            
+            if (ret.isEmpty()) {
+                continue;
+            }
+
+            for (String next : ret) {
+                res.add(sub + (next.equals("") ? "" : "." + next));
+            }
+        }
+        
+        //map.put(lvl, res);
+        
+        return res;
+    }
+}
+```
+
+#### Approach 1 
+
+- Void return
+
 ```java
 class Solution {
     // ============ Method 1 : Backtracking ============
