@@ -1,5 +1,7 @@
 ## [135. Candy](https://leetcode.com/problems/candy/)
 
+![](https://github.com/weltond/DataStructure/blob/master/hard.PNG)
+
 There are N children standing in a line. Each child is assigned a rating value.
 
 You are giving candies to these children subjected to the following requirements:
