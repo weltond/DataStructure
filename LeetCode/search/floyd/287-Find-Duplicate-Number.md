@@ -1,4 +1,4 @@
-## [637. Valid Word Abbreviation](https://www.lintcode.com/problem/valid-word-abbreviation/description?_from=ladder&&fromId=14)
+## [287. Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
 
 ![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
 
@@ -6,19 +6,25 @@ Given an array nums containing n + 1 integers where each integer is between 1 an
 
 Example 1:
 
-
+```
 Input: [1,3,4,2,2]
 Output: 2
+```
+
 Example 2:
 
+```
 Input: [3,1,3,4,2]
 Output: 3
+```
+
 Note:
 
-You must not modify the array (assume the array is read only).
-You must use only constant, O(1) extra space.
-Your runtime complexity should be less than O(n2).
-There is only one duplicate number in the array, but it could be repeated more than once.
+- You must not modify the array (assume the array is read only).
+- You must use only constant, O(1) extra space.
+- Your runtime complexity should be less than O(n2).
+- There is only one duplicate number in the array, but it could be repeated more than once.
+
 ## Answer
 ### Method 1 - Two Pointer - :rabbit: 330ms (70%)
 
