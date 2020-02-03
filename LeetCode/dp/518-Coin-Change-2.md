@@ -94,6 +94,17 @@ class Solution {
 }
 ```
 
+**Important**: If we write this:
+
+```java
+for (int i = 1; i <= amount; i++) {
+            for (int j = 0; j < coins.length; j++) {
+                dp[i] = (j == 0 ? 0 : dp[i]) + (i - coins[j] < 0 ? 0 : dp[i - coins[j]]);
+            }
+        }
+```
+Then above is **WRONG** solution. And it is for [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/).
+
 #### Approach 1 - 2D Array - :rabbit: 8ms (32.35%)
 
 ```java
