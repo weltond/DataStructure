@@ -2,6 +2,7 @@
 
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [287](https://leetcode.com/problems/find-the-duplicate-number/) | [Find the Duplicate Number](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/floyd/287-Find-Duplicate-Number.md) | Medium | Array / Two Pointers / Binary Search
 | [722](https://leetcode.com/problems/remove-comments/) | [Remove Comments](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/722-remove-comments.md) | Medium | String
 | [518](https://leetcode.com/problems/coin-change-2/) | [Coin Change 2](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/518-Coin-Change-2.md) | Medium | DP | [39](https://leetcode.com/problems/combination-sum/) | [Combination Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc39CombinationSum.java) | Medium | Array / Backtracking
 |[40](https://leetcode.com/problems/combination-sum-ii/) | [Combination Sum II](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc40CombinationSumII.java) | Medium | Array / Backtracking
