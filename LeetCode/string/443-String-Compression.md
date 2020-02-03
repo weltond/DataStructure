@@ -56,6 +56,38 @@ Note:
 - `1 <= len(chars) <= 1000.`
 ## Answer
 ### Method 1 - :rocket:1ms (96.81%)
+
+```java
+class Solution {
+    public int compress(char[] chars) {
+        int start = 0;  // position to fill in.
+        
+        int cur = 0;
+        
+        while (cur < chars.length) {
+            char tmp = chars[cur];
+            chars[start++] = tmp;
+            
+            int cnt = 0;
+            while (cur < chars.length && chars[cur] == tmp) {
+                cur++;
+                cnt++;
+            }
+            
+            if (cnt == 1) continue;
+            
+            char[] val = (cnt + "").toCharArray();
+            
+            for (int i = 0; i < val.length; i++) {
+                chars[start++] = val[i];
+            }
+        }
+        
+        return start;
+    }
+}
+```
+
 ```java
 class Solution {
     public int compress(char[] chars) {
