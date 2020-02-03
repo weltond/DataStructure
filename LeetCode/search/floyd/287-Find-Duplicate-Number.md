@@ -26,9 +26,45 @@ Note:
 - There is only one duplicate number in the array, but it could be repeated more than once.
 
 ## Answer
-### Method 1 - Two Pointer - :rabbit: 330ms (70%)
+### Method 1 - Binary Search - :rabbit: 1ms (64.71%)
+
+- O(nlogn)
+- Binary search to find the position with the given requirement that the max val of the input array is `nums.length`.
+  - Take `mid` as the reference number. Count how many numbers in the input array is smaller than mid.
+    - if `cnt > mid`, it means the result lies in `left - mid`.
+    - if `cnt <= mid`, it means the result lies in `mid + 1 - right`.
 
 ```java
+class Solution {
+    public int findDuplicate(int[] nums) {
+        int l = 0, r = nums.length;
+        
+        while (l < r) {
+            int mid = l + (r - l) / 2;
+            int cnt = getCnt(nums, mid);
+            if (cnt > mid) {
+                r = mid;
+            } else {
+                l = mid + 1;
+            }
+        }
+        
+        return l;
+    }
+    
+    private int getCnt(int[] nums, int val) {
+        int cnt = 0;
+        int i = 0;
+        while (i < nums.length) {
+            if (nums[i] <= val) {
+                cnt++;
+            }
+            i++;
+        }
+        
+        return cnt;
+    }
+}
 
 ```
 ### Old Post
