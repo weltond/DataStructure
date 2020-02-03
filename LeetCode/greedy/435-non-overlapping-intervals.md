@@ -35,7 +35,7 @@ Note:
 - Intervals like [1,2] and [2,3] have borders "touching" but they don't overlap each other.
 
 ## Answer
-### Method 1 - Greedy - :rocke: 1ms (100%)
+### Method 1 - Greedy - :rocket: 1ms (100%)
 #### Approach 2 - Sort by end
 - the interval with early start might be very long and incompatible with many intervals. But if we choose the interval that ends early, we'll have more space left to accommodate more intervals.
 
