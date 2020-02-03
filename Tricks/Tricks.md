@@ -79,6 +79,7 @@ dfs(int start, int end, int depth) {
 }
 ```
   - 6.5 Combination Sum IV: Given array Non-duplicate. Find number of combinations that add up to target.
+    - **Compare with Coin change 2**
     - DFS + Memoization
     - DP. dp[i] represents how many combinations to get to sum i.
 ```java
