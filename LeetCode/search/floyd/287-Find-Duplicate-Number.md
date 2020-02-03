@@ -31,8 +31,8 @@ Note:
 - O(nlogn)
 - Binary search to find the position with the given requirement that the max val of the input array is `nums.length`.
   - Take `mid` as the reference number. Count how many numbers in the input array is smaller than mid.
-    - if `cnt > mid`, it means the result lies in `left - mid`.
-    - if `cnt <= mid`, it means the result lies in `mid + 1 - right`.
+    - if `cnt > mid`, it means the result lies in `left ~~~ mid`.
+    - if `cnt <= mid`, it means the result lies in `mid + 1 ~~~ right`.
 
 ```java
 class Solution {
