@@ -29,12 +29,14 @@ Explanation: You can allocate to the first, second and third child with 1, 2, 1 
 ## Answer
 ### Method 2 - Greedy -
 **One Pass**
+
 ```java
 //TO DO...
 ```
 
 ### Method 1 - Greedy - :rocket: 2ms (100%)
 **Scan for two directions**
+
 ```java
 class Solution {
     // 2ms (100%)
