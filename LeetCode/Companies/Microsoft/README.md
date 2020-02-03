@@ -12,3 +12,7 @@
 | [443](https://leetcode.com/problems/string-compression/) | [String Compression](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/443-String-Compression.md) | Easy | String
 | [78](https://leetcode.com/problems/subsets/) | [Subsets](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/17-Subsets.md) | Medium | Array / Backtracking / Bit Manipulation
 |[90](https://leetcode.com/problems/subsets-ii/) | [Subsets II](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc90SubsetsII.java) | Medium | Array / Backtracking
+| [435](https://leetcode.com/problems/non-overlapping-intervals/) | [Non-Overlapping Intervals](https://github.com/weltond/DataStructure/blob/master/LeetCode/greedy/435-non-overlapping-intervals.md) | Medium | Greedy
+| [56](https://leetcode.com/problems/merge-intervals/) | [Merge Intervals](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/56-Merge-Intervals.md) | Medium | Array / Sort
+|[986](https://leetcode.com/problems/interval-list-intersections/) | [Interval List Intersections](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc986IntervalListIntersections.java) | Medium | Two Pointers
+| [57](https://leetcode.com/problems/insert-interval/) |[Insert Interval](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc57InsertInterval.java) | Hard | Array / Sort
