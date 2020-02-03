@@ -26,6 +26,38 @@ Note:
 - There is only one duplicate number in the array, but it could be repeated more than once.
 
 ## Answer
+### Method 2 - Floyd - :rocket: 0ms 
+
+- Detect cycle. `[1,3,4,2,2]`
+  - `1 -> 3 -> 2 -> 4 -> 2`
+
+```java
+
+class Solution {
+    public int findDuplicate(int[] nums) {
+        int slow = nums[0];
+        int fast = nums[0];
+        
+        // Like LinkedList slow and fast pointer
+        // slow move 1 step, fast move 2 steps
+        do {
+            slow = nums[slow];
+            fast = nums[nums[fast]];
+        } while (slow != fast);
+        
+        // once detect a cycle
+        // reset the slow
+        // slow and fast each move 1 step
+        slow = nums[0];
+        while (slow != fast) {
+            slow = nums[slow];
+            fast = nums[fast];
+        }
+        return slow;
+    }
+}
+```
+
 ### Method 1 - Binary Search - :rabbit: 1ms (64.71%)
 
 - O(nlogn)
