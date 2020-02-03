@@ -1,6 +1,34 @@
 // https://leetcode.com/problems/rotate-image/
 class Solution {
     public void rotate(int[][] matrix) {
+        // swap each row
+        for (int i = 0; i < matrix.length; i++) {
+            swap(matrix[i], 0, matrix.length - 1);
+        }
+        
+        // swap (i,j) and (len-1-j, len-1-i)
+        for (int i = 0; i < matrix.length - 1; i++) {
+            for (int j = 0; j < matrix.length - i; j++) {
+                int tmp = matrix[i][j];
+                matrix[i][j] = matrix[matrix.length - 1- j][matrix.length - 1 - i];
+                matrix[matrix.length - 1- j][matrix.length - 1 - i] = tmp;
+            }
+        }
+    }
+    
+    private void swap(int[] row, int i, int j) {
+        while (i < j) {
+            int tmp = row[i];
+            row[i] = row[j];
+            row[j] = tmp;
+            i++;
+            j--;
+        }
+    }
+}
+
+class Solution {
+    public void rotate(int[][] matrix) {
         if (matrix == null || matrix.length == 0) return;
         
         int n = matrix.length;
