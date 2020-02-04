@@ -1,6 +1,11 @@
-// https://leetcode.com/problems/valid-tic-tac-toe-state/
+## [794. Valid Tic-Tac-Toe State](https://leetcode.com/problems/valid-tic-tac-toe-state/)
 
-/**
+![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
+
+A Tic-Tac-Toe board is given as a string array board. Return True if and only if it is possible to reach this board position during the course of a valid tic-tac-toe game.
+
+The board is a 3 x 3 array, and consists of characters " ", "X", and "O".  The " " character represents an empty square.
+
 Here are the rules of Tic-Tac-Toe:
 
 Players take turns placing characters into empty squares (" ").
@@ -26,7 +31,49 @@ Output: false
 Example 4:
 Input: board = ["XOX", "O O", "XOX"]
 Output: true
-*/
+Note:
+
+board is a length-3 array of strings, where each string board[i] has length 3.
+Each board[i][j] is a character in the set {" ", "X", "O"}.
+## Answer
+### Method 1 - Two Pointer - :rabbit: 330ms (70%)
+
+```java
+public class Solution {
+    /**
+     * @param word: a non-empty string
+     * @param abbr: an abbreviation
+     * @return: true if string matches with the given abbr or false
+     */
+    public boolean validWordAbbreviation(String word, String abbr) {
+        // write your code here
+        if (word == null || word.length() == 0) return false;
+        
+        int i = 0, j = 0;
+        int lenw = word.length(), lena = abbr.length();
+        
+        while (i < lena) {
+            char c = abbr.charAt(i);
+            if (c > '0' && c <= '9') {     // ignore num start with `0`
+                int res = 0;
+                while (i < lena && Character.isDigit(abbr.charAt(i))) {
+                    res = res * 10 + abbr.charAt(i) - '0';
+                    i++;
+                }
+                j = j + res;
+            } else {
+                if (j >= lenw || c != word.charAt(j++)) {
+                    //System.out.println(i+","+j);
+                    return false;
+                }
+                i++;
+            }
+        }
+        
+        return i == lena && j == lenw;
+    }
+}
+```
 
 class Solution {
     // 0ms
