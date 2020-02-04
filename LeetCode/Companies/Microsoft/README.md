@@ -2,7 +2,7 @@
 
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
-| 51 | [N-Queens](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc51NQueens.java) | Hard | Backtracking
+| [51](https://leetcode.com/problems/n-queens/) | [N-Queens](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc51NQueens.java) | Hard | Backtracking
 | [52](https://leetcode.com/problems/n-queens-ii/) | [N-Queens II](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc52NQueensII.java) | Hard | Backtracking
 | [918](https://leetcode.com/problems/maximum-sum-circular-subarray/) | [Maximum Sum Circular Subarray](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/918-maximum-sum-circular-subarray.md) | Medium | Array / Kadane's
 | [44](https://leetcode.com/problems/wildcard-matching/) | [Wildcard Matching](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/44-Wildcard-Matching.md) | Hard | String / DP / Backtracking / Greedy
