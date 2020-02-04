@@ -25,6 +25,7 @@ class Solution {
     private List<List<String>> ret;
     private char[][] nQueens;
     private boolean[] colUsed;
+    // consider the whole line as a single value.
     private boolean[] diagonals45Used;
     private boolean[] diagonals135Used;
     private int n;
