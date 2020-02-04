@@ -231,7 +231,7 @@
 |  109 | [Convert Sorted List To BST](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc109ConvertSortedListToBST.java) | |
 | [124](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | [Binary Tree Max Path Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc124BinaryTreeMaxPathSum.java) | Hard | Tree / DFS
 |  [973](https://leetcode.com/problems/k-closest-points-to-origin/) | [K Closest Points to Origin](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/973-k-closest-points-to-origin.md) | Easy | Math / Divide and Conquer / Sort
-| 51 | [N-Queens](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc51NQueens.java) | Hard | Backtracking
+| [51](https://leetcode.com/problems/n-queens/) | [N-Queens](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc51NQueens.java) | Hard | Backtracking
 |[36](https://leetcode.com/problems/valid-sudoku/) | [Valid Sudoku](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc36ValidSudoku.java) | Medium | Hash Table
 |  37 | [Sudoku Solver](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc37SudokuSolver.java) | Hard | Hash Table / Backtracking
 | 79 | [Word Search](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc79WordSearch.java) | Medium | Array / Backtracking 
