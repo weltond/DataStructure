@@ -105,6 +105,8 @@ for (int i = 1; i <= amount; i++) {
 ```
 Then above is **WRONG** solution. And it is for [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/).
 
+See this [post](https://leetcode.com/problems/coin-change-2/discuss/141076/Logical-Thinking-with-Clear-Java-Code).
+
 #### Approach 1 - 2D Array - :rabbit: 8ms (32.35%)
 
 ```java
