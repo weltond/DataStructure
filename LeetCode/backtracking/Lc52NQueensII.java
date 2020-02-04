@@ -21,6 +21,45 @@ Explanation: There are two distinct solutions to the 4-queens puzzle as shown be
   ".Q.."]
 ]
 */
+class Solution {
+    /**   col + row               col - row
+            0   1   2   3           0   1   2   3
+            -------------------------------------
+        0 | 0   1   2   3           0   1   2   3
+        1 | 1   2   3   4           -1  0   1   2   
+        2 | 2   3   4   5           -2  -1  0   1        
+        3 | 3   4   5   6           -3  -2  -1  0            
+        */
+    boolean[] cols, diag, antidiag;
+    public int totalNQueens(int n) {
+        cols = new boolean[n];
+        diag = new boolean[2 * n - 1];
+        antidiag = new boolean[2 * n - 1];
+        
+        return bt(n, 0);
+    }
+    
+    private int bt(int n, int row) {
+        if (row == n) return 1;
+        
+        int res = 0;
+        
+        for (int col = 0; col < n; col++) {
+            int dIdx = row + col;
+            int aIdx = row - col + n - 1;
+            
+            if (cols[col] || diag[dIdx] || antidiag[aIdx]) continue;
+            
+            cols[col] = diag[dIdx] = antidiag[aIdx] = true;
+            
+            res += bt(n, row + 1);
+            
+            cols[col] = diag[dIdx] = antidiag[aIdx] = false;
+        }
+        
+        return res;
+    }
+}
 
 class Solution {
     
