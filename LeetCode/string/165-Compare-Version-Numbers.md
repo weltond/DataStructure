@@ -48,6 +48,9 @@ Note:
 
 ## Answer
 ### Method 1 - API - :rabbit: 1ms (91.96%)
+
+- Notice: we **CANNOT** use length as comparison at the end.
+
 ```java
 class Solution {
     public int compareVersion(String version1, String version2) {
