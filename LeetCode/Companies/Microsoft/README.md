@@ -2,6 +2,7 @@
 
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [918](https://leetcode.com/problems/maximum-sum-circular-subarray/) | [Maximum Sum Circular Subarray](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/918-maximum-sum-circular-subarray.md) | Medium | Array / Kadane's
 | [44](https://leetcode.com/problems/wildcard-matching/) | [Wildcard Matching](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/44-Wildcard-Matching.md) | Hard | String / DP / Backtracking / Greedy
 | [165](https://leetcode.com/problems/compare-version-numbers/) | [Compare Version Numbers](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/165-Compare-Version-Numbers.md) | Medium | String
 | [794](https://leetcode.com/problems/valid-tic-tac-toe-state/) | [Valid Tic-Tac-Toe](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/794-Valid-Tic-Tac-Toe-State.md) | Medium | Math / Recursion?
