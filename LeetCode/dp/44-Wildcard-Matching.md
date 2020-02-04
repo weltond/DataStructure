@@ -90,11 +90,48 @@ class Solution {
             return dfs(s, p, i + 1, j + 1);
         }
         
-        // if current doesn't match, return 1.
+        // if current doesn't match, return 1. Because it means * doesn't match this situation but might match other situations.
         return 1;
     }
 }
 ```
+
+```java
+class Solution {
+    public boolean isMatch(String s, String p) {
+        return dfs(s, p, 0, 0) > 1;
+    }
+    
+    private int dfs(String s, String p, int i, int j) {
+        int lens = s.length(), lenp = p.length();
+        if (lens == i && lenp == j) return 2;
+        else if (lens == i && p.charAt(j) != '*') {
+            return 0;
+        } else if (lenp == j) return 1;
+        
+        if (s.equals(p)) return 2;
+        
+         
+        if (p.charAt(j) == '*') {
+            
+            while (j + 1< lenp && p.charAt(j + 1) == '*') {
+                j++;
+            }
+            
+            for (int k = 0; k <= lens - i; k++) {
+                int res = (dfs(s, p, i + k, j + 1));
+                
+                if (res == 2 || res == 0) return res;
+            }
+        } else if (i < lens && (s.charAt(i) == p.charAt(j) || p.charAt(j) == '?')) {
+            return dfs(s, p, i + 1, j + 1);
+        }
+        
+        return 1;
+    }
+}
+```
+
 #### Appraoch 3 - :turtle: 43ms (10.03%)
 ```java
 class Solution {
