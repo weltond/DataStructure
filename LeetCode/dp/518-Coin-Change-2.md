@@ -42,10 +42,10 @@ You can assume that
 ### Method 2 - DP
 #### Approach 2 - 1D Array 
 
+~~We can iterate either from left to right OR top to bottom.~~
+
 ```
 input: 5 [5,1,2]
-
-We can iterate either from left to right OR top to bottom.
 
 However, if 1D Array, it's better to iterate from left to right!
 
