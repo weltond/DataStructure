@@ -1,4 +1,51 @@
 // https://leetcode.com/problems/permutations/submissions/
+
+// 0ms
+class Solution {
+    public List<List<Integer>> permute(int[] nums) {
+        List<List<Integer>> res = new ArrayList();
+        
+        if (nums == null) return res;
+        
+        dfs(nums, 0, res);
+        
+        return res;
+    }
+    
+    private void dfs(int[] nums, int lvl, List<List<Integer>> res) {
+        if (lvl == nums.length) {
+            List<Integer> l = new ArrayList();
+            for (int i : nums) {
+                l.add(i);
+            }
+            res.add(l);
+            return;
+        }
+        
+        for (int i = lvl; i < nums.length; i++) {
+            
+            // if (i != lvl) {
+            //     swap(nums, i, i - 1);    
+            // }
+            swap(nums, lvl, i);
+            
+            dfs(nums, lvl + 1, res);
+            
+            // if (i != lvl) {
+            //     swap(nums, i, i - 1);
+            // }
+            swap(nums, lvl, i);
+        }
+    }
+    
+    private void swap(int[] nums, int i, int j) {
+        int t = nums[i];
+        nums[i] = nums[j];
+        nums[j] = t;
+    }
+}
+
+// 1ms
 class Solution {
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> res = new ArrayList();
