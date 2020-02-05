@@ -2,6 +2,7 @@
 
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+|  [450](https://leetcode.com/problems/delete-node-in-a-bst/) | [Delete Node In BST](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/450-Delete-Node-In-BST.md) | Medium | Tree
 | [51](https://leetcode.com/problems/n-queens/) | [N-Queens](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc51NQueens.java) | Hard | Backtracking
 | [52](https://leetcode.com/problems/n-queens-ii/) | [N-Queens II](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc52NQueensII.java) | Hard | Backtracking
 | [918](https://leetcode.com/problems/maximum-sum-circular-subarray/) | [Maximum Sum Circular Subarray](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/918-maximum-sum-circular-subarray.md) | Medium | Array / Kadane's
