@@ -2,6 +2,7 @@
 
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [MS] | [Starting Index of Subarray](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/starting-index-of-subarray.md) | | Array
 | [1154](https://leetcode.com/problems/day-of-the-year/) | [Day of the Year](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/1154-day-of-the-year.md) | Easy | Math / String
 | [1185](https://leetcode.com/problems/day-of-the-week/) | [Day of the Week](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/1185-day-of-the-week.md) | Easy | Array
 | [MS](https://leetcode.com/discuss/interview-question/354150/Microsoft-or-Onsite-or-Group-Pairs)| [Group Pairs](https://github.com/weltond/DataStructure/blob/master/LeetCode/unionfind/group-pairs.md) | | Union Find
