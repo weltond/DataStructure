@@ -1,71 +1,102 @@
-## [637. Valid Word Abbreviation](https://www.lintcode.com/problem/valid-word-abbreviation/description?_from=ladder&&fromId=14)
+## [450. Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/)
 
 ![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
 
-Given a non-empty string word and an abbreviation abbr, return whether the string matches with the given abbreviation.
+Given a root node reference of a BST and a key, delete the node with the given key in the BST. Return the root node reference (possibly updated) of the BST.
 
-A string such as `"word"` contains only the following valid abbreviations:
+Basically, the deletion can be divided into two stages:
 
-`["word", "1ord", "w1rd", "wo1d", "wor1", "2rd", "w2d", "wo2", "1o1d", "1or1", "w1r1", "1o2", "2r1", "3d", "w3", "4"]`
+- Search for a node to remove.
+- If the node is found, delete the node.
 
-Example
-Example 1:
+Note: Time complexity should be O(height of tree).
 
-```
-Input : s = "internationalization", abbr = "i12iz4n"
-Output : true
-```
-
-Example 2:
+Example:
 
 ```
-Input : s = "apple", abbr = "a2e"
-Output : false
-```
+root = [5,3,6,2,4,null,7]
+key = 3
 
-Notice
-- Notice that only the above abbreviations are valid abbreviations of the string word. Any other string is not a valid abbreviation of word.
+    5
+   / \
+  3   6
+ / \   \
+2   4   7
+
+Given key to delete is 3. So we find the node with value 3 and delete it.
+
+One valid answer is [5,4,6,2,null,null,7], shown in the following BST.
+
+    5
+   / \
+  4   6
+ /     \
+2       7
+
+Another valid answer is [5,2,6,null,4,null,7].
+
+    5
+   / \
+  2   6
+   \   \
+    4   7
+```
 
 ## Answer
-### Method 1 - Two Pointer - :rabbit: 330ms (70%)
+### Method 1 - Delete Directly - :rocket: 0ms
 
 ```java
-public class Solution {
-    /**
-     * @param word: a non-empty string
-     * @param abbr: an abbreviation
-     * @return: true if string matches with the given abbr or false
-     */
-    public boolean validWordAbbreviation(String word, String abbr) {
-        // write your code here
-        if (word == null || word.length() == 0) return false;
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public TreeNode deleteNode(TreeNode root, int key) {
+        if (root == null) return null;
         
-        int i = 0, j = 0;
-        int lenw = word.length(), lena = abbr.length();
-        
-        while (i < lena) {
-            char c = abbr.charAt(i);
-            if (c > '0' && c <= '9') {     // ignore num start with `0`
-                int res = 0;
-                while (i < lena && Character.isDigit(abbr.charAt(i))) {
-                    res = res * 10 + abbr.charAt(i) - '0';
-                    i++;
-                }
-                j = j + res;
-            } else {
-                if (j >= lenw || c != word.charAt(j++)) {
-                    //System.out.println(i+","+j);
-                    return false;
-                }
-                i++;
+        if (root.val < key) {
+            root.right = deleteNode(root.right, key);
+        } else if (root.val > key) {
+            root.left = deleteNode(root.left, key);
+        } else {
+            // no right
+            if (root.right == null) return root.left;
+            // no left
+            if (root.left == null) return root.right;
+            
+            // has two children
+            TreeNode n = root, cur = root.right;
+            while (cur.left != null) {
+                n = cur;
+                cur = cur.left;
             }
+            
+            // if right child has left child, if not, do not assign right.
+            if (n != root) {
+                n.left = cur.right;   // reassign 
+                cur.right = root.right;
+            } 
+
+            cur.left = root.left;
+            root.left = null;
+            root.right = null;
+            
+            return cur;
         }
         
-        return i == lena && j == lenw;
+        return root;
     }
 }
 ```
 
+### Old Post
+
+```java
 package com.weltond.tree;
 
 /**
@@ -169,3 +200,4 @@ class Solution {
         return root;
     }
 }
+```
