@@ -2,6 +2,7 @@
 
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [MS](https://leetcode.com/discuss/interview-question/446026/Microsoft-or-Onsite-or-Minimum-jumps-with-boosters) | [Min jump with Boosters](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/min-jump-with-boosters.md) | Medium | DP
 | [MS](https://leetcode.com/discuss/interview-question/402692/Microsoft-or-On-Campus-Interview-or-Starting-Index-Of-Subarray) | [Starting Index of Subarray](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/starting-index-of-subarray.md) | | Array
 | [1154](https://leetcode.com/problems/day-of-the-year/) | [Day of the Year](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/1154-day-of-the-year.md) | Easy | Math / String
 | [1185](https://leetcode.com/problems/day-of-the-week/) | [Day of the Week](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/1185-day-of-the-week.md) | Easy | Array
