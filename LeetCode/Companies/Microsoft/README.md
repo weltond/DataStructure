@@ -2,6 +2,7 @@
 
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [1154](https://leetcode.com/problems/day-of-the-year/) | [Day of the Year](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/1154-day-of-the-year.md) | Easy | Math / String
 | [1185](https://leetcode.com/problems/day-of-the-week/) | [Day of the Week](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/1185-day-of-the-week.md) | Easy | Array
 | [MS](https://leetcode.com/discuss/interview-question/354150/Microsoft-or-Onsite-or-Group-Pairs)| [Group Pairs](https://github.com/weltond/DataStructure/blob/master/LeetCode/unionfind/group-pairs.md) | | Union Find
 | [59](https://leetcode.com/problems/spiral-matrix-ii/) | [Spiral Matrix II](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/59-Spiral-Matrix-II.md) | Medium | Array
