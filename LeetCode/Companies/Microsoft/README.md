@@ -2,6 +2,7 @@
 
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [MS](https://leetcode.com/discuss/interview-question/354150/Microsoft-or-Onsite-or-Group-Pairs)| [Group Pairs](https://github.com/weltond/DataStructure/blob/master/LeetCode/unionfind/group-pairs.md) | | Union Find
 | [59](https://leetcode.com/problems/spiral-matrix-ii/) | [Spiral Matrix II](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/59-Spiral-Matrix-II.md) | Medium | Array
 | [54](https://leetcode.com/problems/spiral-matrix/) | [Spiral Matrix](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/54-Spiral-Matrix.md) | Medium | Array
 | [885](https://leetcode.com/problems/spiral-matrix-iii/) | [Spiral Matrix III](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/885-spiral-matrix-iii.md) | Medium | Math / Array
