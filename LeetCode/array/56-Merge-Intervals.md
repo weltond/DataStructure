@@ -57,8 +57,37 @@ class Solution {
     }
 }
 ```
-### Method 1 - Sorting - :rabbit: 37ms (35.82%)
+### Method 1 - Sorting - 
+#### Approach 2 - Array - :rocket: 5ms (95.76%)
+
+```java
+class Solution {
+    public int[][] merge(int[][] intervals) {
+        if (intervals == null || intervals.length == 0) return intervals;
+        
+        int[][] res = new int[intervals.length][2];
+        
+        Arrays.sort(intervals, (o1,o2)->o1[0]-o2[0]);
+        
+        int idx = 0;
+        for (int i = 0; i < intervals.length; i++) {
+            if (i == 0 || intervals[i][0] > res[idx - 1][1]) {
+                res[idx++] = intervals[i];
+            } else {
+                res[idx - 1][1] = Math.max(res[idx - 1][1], intervals[i][1]);
+            }
+            
+        }
+        
+        return Arrays.copyOf(res, idx);
+    }
+}
+```
+
+#### Approach 1 - List - :rabbit: 37ms (35.82%)
+
 - Time: O(nlogn)
+
 ```java
 class Solution {
     public int[][] merge(int[][] intervals) {
