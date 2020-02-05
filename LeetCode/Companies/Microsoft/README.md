@@ -2,6 +2,9 @@
 
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [59](https://leetcode.com/problems/spiral-matrix-ii/) | [Spiral Matrix II](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/59-Spiral-Matrix-II.md) | Medium | Array
+| [54](https://leetcode.com/problems/spiral-matrix/) | [Spiral Matrix](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/54-Spiral-Matrix.md) | Medium | Array
+| [885](https://leetcode.com/problems/spiral-matrix-iii/) | [Spiral Matrix III](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/885-spiral-matrix-iii.md) | Medium | Math / Array
 |  [450](https://leetcode.com/problems/delete-node-in-a-bst/) | [Delete Node In BST](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/450-Delete-Node-In-BST.md) | Medium | Tree
 | [51](https://leetcode.com/problems/n-queens/) | [N-Queens](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc51NQueens.java) | Hard | Backtracking
 | [52](https://leetcode.com/problems/n-queens-ii/) | [N-Queens II](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc52NQueensII.java) | Hard | Backtracking
