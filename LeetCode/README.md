@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [402](https://leetcode.com/problems/remove-k-digits/) | [Remove k digits](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/402-remove-k-digits.md) | Medium | Greedy / Stack
 | [1185](https://leetcode.com/problems/day-of-the-week/) | [Day of the Week](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/1185-day-of-the-week.md) | Easy | Array
 | [885](https://leetcode.com/problems/spiral-matrix-iii/) | [Spiral Matrix III](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/885-spiral-matrix-iii.md) | Medium | Math / Array
 | [918](https://leetcode.com/problems/maximum-sum-circular-subarray/) | [Maximum Sum Circular Subarray](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/918-maximum-sum-circular-subarray.md) | Medium | Array / Kadane's
