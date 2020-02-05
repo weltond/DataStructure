@@ -29,7 +29,7 @@ class Solution {
             // }
             swap(nums, lvl, i);
             
-            dfs(nums, lvl + 1, res);
+            dfs(nums, lvl + 1, res);  // lvl + 1, NOT i+1
             
             // if (i != lvl) {
             //     swap(nums, i, i - 1);
