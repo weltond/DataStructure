@@ -64,6 +64,9 @@ public static void main(String[] args) {
 #### Approach 1
 
 ```java
+public class Solution {
+Map<Integer,Integer> parentMap;
+public static void main(String[] args) {
     List<int[]> input = new ArrayList<int[]>();
     input.add(new int[] { 1, 3 });
     input.add(new int[] { 7, 10 });
