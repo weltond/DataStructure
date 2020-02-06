@@ -48,6 +48,69 @@ class Solution {
  * }
  */
 class Solution {
+    public ListNode reverseBetween(ListNode head, int m, int n) {
+        if (head == null || m == n) return head;
+        
+        ListNode dummy = new ListNode(0);
+        ListNode pre = dummy;
+        pre.next = head;
+        
+        while (--m > 0) {
+            pre = head;
+            head = head.next;
+            n--;
+        }
+        
+        ListNode last = head, first = pre;
+        while (n-- > 0) {
+            ListNode next = head.next;
+            head.next = pre;
+            pre = head;
+            head = next;
+        }
+        
+        last.next = head;
+        first.next = pre;
+        
+        return dummy.next;
+        
+//         ListNode tmp = head, prev = null;
+        
+//         while (--m > 0) {
+//             prev = tmp;
+//             tmp = tmp.next;
+//             n--;
+//         }
+//         //System.out.println(n);
+//         ListNode next = null, pre = null, last = tmp;
+//         while (n-- > 0) {
+//             //System.out.println(n+","+tmp.val);
+//             next = tmp.next;
+//             tmp.next = pre;
+//             pre = tmp;
+//             tmp = next;
+            
+//         }
+//         //System.out.println(tmp.val+","+pre.val);
+//         //System.out.println(prev.val);
+//         last.next = tmp;
+//         if (prev == null) return pre;
+//         else {
+//             prev.next = pre;
+//             return head;
+//         }
+    }
+}
+
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+class Solution {
     // 0ms
     public ListNode reverseBetween(ListNode head, int m, int n) {
         if (head == null) return null;
