@@ -32,6 +32,74 @@ Note:
 // TO DO...
 ```
 ### Method 1 - Brute Force - :rocket: 2ms (84.22%)
+
+```java
+class Solution {
+    public String reverseWords(String s) {
+        if (s == null || s.length() == 0) return s;
+        
+        s = s.trim();
+        
+        int i = 0, j = s.length() - 1;
+        
+        if (j < i) return ""; 
+        
+        char[] arr = s.toCharArray();
+        while (i < j) {
+            char c = arr[i];
+            arr[i++] = arr[j];
+            arr[j--] = c;
+        }
+        
+        return reverse(arr);
+    }
+    
+    private String reverse(char[] arr) {
+        int i = 0, j = 0;
+        
+        while (j < arr.length) {
+            int tmp = j;
+            while (tmp < arr.length && arr[tmp] != ' ') {
+                tmp++;
+            }
+            
+            //if (tmp == arr.length) break;
+            
+            // move to the right position.
+            int it = i;
+            for (int k = 0; k < tmp - j; k++) {
+                arr[it++] = arr[j + k];
+            }
+            //System.out.println(new String(arr));
+            // swap
+            j = it - 1;
+            while (i < j) {
+                char c = arr[i];
+                arr[i++] = arr[j];
+                arr[j--] = c;
+            }
+            
+            //next start
+            i = it + 1;
+            
+            // clear chars from it - tmp  
+            for (int k = it; k < tmp; k++) {
+                arr[k] = ' ';
+            }
+            
+            // find next word
+            while (tmp < arr.length && arr[tmp] == ' ') {
+                tmp++;
+            }
+            
+            j = tmp;
+        }
+        
+        return new String(arr, 0, i - 1);
+    }
+}
+```
+
 ```java
 public class Solution {
     // 2ms (84.22%)
