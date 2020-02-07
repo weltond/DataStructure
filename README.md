@@ -19,10 +19,6 @@ Keep learning!**
   - [unionfind](https://github.com/weltond/DataStructure/tree/master/LeetCode/unionfind)
   - [greedy](https://github.com/weltond/DataStructure/tree/master/LeetCode/greedy)
   - [sampling](https://github.com/weltond/DataStructure/tree/master/LeetCode/Sampling)
-  
-## [JKSJ](https://github.com/weltond/DataStructure/tree/master/DataStructure_JKSJ)
-## [Head First Design Pattern Code](https://github.com/weltond/DataStructure/tree/master/Head-First-Design-Patterns-master)
-## [My Summary](https://github.com/weltond/DataStructure/tree/master/MySummary)
 
 ## System Design
   - [System Design Interview](https://github.com/weltond/system-design-interview)
@@ -40,4 +36,10 @@ Keep learning!**
   - [Scalability Trade-offs](https://www.slideshare.net/jboner/scalability-availability-stability-patterns/12-Scalability_Tradeoffs)
   - [RESTful API Design](https://hackernoon.com/restful-api-design-step-by-step-guide-2f2c9f9fcdbf)
 
-## [BQ](https://career.guru99.com/top-10-behavioral-interview-questions-with-answers/)
+## [Head First Design Pattern Code](https://github.com/weltond/DataStructure/tree/master/Head-First-Design-Patterns-master)
+## [My Summary](https://github.com/weltond/DataStructure/tree/master/MySummary)
+## [BQ](https://career.guru99.com/top-10-behavioral-interview-questions-with-answers/) 
+## [JKSJ](https://github.com/weltond/DataStructure/tree/master/DataStructure_JKSJ)
+
+
+
