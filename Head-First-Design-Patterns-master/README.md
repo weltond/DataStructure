@@ -17,3 +17,6 @@ Code for the book Head First Design Patterns by Eric Freeman &amp; Elizabeth Fre
 * [Proxy](https://github.com/rowin1/Head-First-Design-Patterns/tree/master/java/proxy)
 
 * [Model-View-Controller](https://github.com/rowin1/Head-First-Design-Patterns/tree/master/java/compound/combined/djview)
+
+## Useful Links
+- [CSDN](https://blog.csdn.net/longyulu/article/details/9159589)
