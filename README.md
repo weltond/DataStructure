@@ -28,6 +28,7 @@ Keep learning!**
   - [System Design Interview](https://github.com/weltond/system-design-interview)
   - [System Design Primer](https://github.com/weltond/system-design-primer)
   - [Interview Bit](https://www.interviewbit.com/courses/system-design/topics/interview-questions/#problems)
+  - [Jiuzhang Solutions](https://www.jiuzhang.com/solutions/?search=map)
   - [A beginner Guide to Scaling to 11 Milion+ Users on Amazon's AWS](http://highscalability.com/blog/2016/1/11/a-beginners-guide-to-scaling-to-11-million-users-on-amazons.html) 
   - [Anatomy of a System Design Interview](https://hackernoon.com/anatomy-of-a-system-design-interview-4cb57d75a53f) 
   - [Develop SOA](https://lethain.com/lessons-from-developing-software-oriented-architectures/)
