@@ -36,7 +36,10 @@ Keep learning!**
   - [Scalability Trade-offs](https://www.slideshare.net/jboner/scalability-availability-stability-patterns/12-Scalability_Tradeoffs)
   - [RESTful API Design](https://hackernoon.com/restful-api-design-step-by-step-guide-2f2c9f9fcdbf)
 
-## [Head First Design Pattern Code](https://github.com/weltond/DataStructure/tree/master/Head-First-Design-Patterns-master)
+## OO Design
+- [Head First Design Pattern Code](https://github.com/weltond/DataStructure/tree/master/Head-First-Design-Patterns-master)
+- [CSDN](https://blog.csdn.net/longyulu/article/details/9159589)
+
 ## [My Summary](https://github.com/weltond/DataStructure/tree/master/MySummary)
 ## [BQ](https://career.guru99.com/top-10-behavioral-interview-questions-with-answers/) 
 ## [JKSJ](https://github.com/weltond/DataStructure/tree/master/DataStructure_JKSJ)
