@@ -1,11 +1,11 @@
 **My data structure learning progress!
 Keep learning!**
 
-## :rocket: Table Of Content
-- [Learn Git Commands](https://github.com/weltond/DataStructure/tree/master/Learn%20Git)
+# :rocket: Table Of Content
+## [Learn Git Commands](https://github.com/weltond/DataStructure/tree/master/Learn%20Git)
   - [Git Commands](https://github.com/weltond/DataStructure/blob/master/Learn%20Git/git_commands.txt)
   - [MarkDown](https://github.com/weltond/DataStructure/blob/master/Learn%20Git/MarkDown.md)
-- [LeetCode](https://github.com/weltond/DataStructure/tree/master/LeetCode)
+## [LeetCode](https://github.com/weltond/DataStructure/tree/master/LeetCode)
   - [Amazon](https://github.com/weltond/DataStructure/tree/master/LeetCode/Amazon)
   - [array](https://github.com/weltond/DataStructure/tree/master/LeetCode/array)
   - [backtracking](https://github.com/weltond/DataStructure/tree/master/LeetCode/backtracking)
@@ -20,11 +20,11 @@ Keep learning!**
   - [greedy](https://github.com/weltond/DataStructure/tree/master/LeetCode/greedy)
   - [sampling](https://github.com/weltond/DataStructure/tree/master/LeetCode/Sampling)
   
-- [JKSJ](https://github.com/weltond/DataStructure/tree/master/DataStructure_JKSJ)
-- [Head First Design Pattern Code](https://github.com/weltond/DataStructure/tree/master/Head-First-Design-Patterns-master)
-- [My Summary](https://github.com/weltond/DataStructure/tree/master/MySummary)
+## [JKSJ](https://github.com/weltond/DataStructure/tree/master/DataStructure_JKSJ)
+## [Head First Design Pattern Code](https://github.com/weltond/DataStructure/tree/master/Head-First-Design-Patterns-master)
+## [My Summary](https://github.com/weltond/DataStructure/tree/master/MySummary)
 
-- System Design
+## System Design
   - [System Design Interview](https://github.com/weltond/system-design-interview)
   - [System Design Primer](https://github.com/weltond/system-design-primer)
   - [Interview Bit](https://www.interviewbit.com/courses/system-design/topics/interview-questions/#problems)
@@ -40,4 +40,4 @@ Keep learning!**
   - [Scalability Trade-offs](https://www.slideshare.net/jboner/scalability-availability-stability-patterns/12-Scalability_Tradeoffs)
   - [RESTful API Design](https://hackernoon.com/restful-api-design-step-by-step-guide-2f2c9f9fcdbf)
 
-- [BQ](https://career.guru99.com/top-10-behavioral-interview-questions-with-answers/)
+## [BQ](https://career.guru99.com/top-10-behavioral-interview-questions-with-answers/)
