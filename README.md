@@ -30,6 +30,7 @@ Keep learning!**
   - [Develop SOA](https://lethain.com/lessons-from-developing-software-oriented-architectures/)
   - [Brief Intro of System Design Blog written by Chinese](https://tianpan.co/notes/85-improving-availability-with-failover)
   - [Medium](medium.com)
+    - [CAP & MongoDB vs Cassandra vs RDBMS](https://medium.com/@bikas.katwal10/mongodb-vs-cassandra-vs-rdbms-where-do-they-stand-in-the-cap-theorem-1bae779a7a15)
     - [Rate Limiter](https://medium.com/@saisandeepmopuri/system-design-rate-limiter-and-data-modelling-9304b0d18250)
     - [Shard Pinterest MySQL](https://medium.com/pinterest-engineering/sharding-pinterest-how-we-scaled-our-mysql-fleet-3f341e96ca6f)
     - [Design a Game Leader Board Service](https://medium.com/@npsinghmrj/designing-a-game-leaderboard-service-part-1-e1362ac48a35)
