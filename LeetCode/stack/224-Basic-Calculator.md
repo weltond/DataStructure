@@ -33,6 +33,45 @@ Note:
 
 ## Answer
 ### Method 1 - Recursion - :rabbit: 5ms (70%)
+#### Approach 3 - Use local variable - :rocket: 3ms (95.46%)
+
+```java
+class Solution {
+    int len = 0;
+    public int calculate(String s) {
+        len = s.length();
+        return dfs(s, new int[]{0});
+    }
+    
+    private int dfs(String s, int[] idx) {
+        int res = 0, sign = 1;
+        while (idx[0] < len) {
+            char c = s.charAt(idx[0]++);
+            if (Character.isDigit(c)) {
+                int val = c - '0';
+                
+                while (idx[0] < len && Character.isDigit(s.charAt(idx[0]))) {
+                    val = val * 10 + s.charAt(idx[0]++) - '0';
+                }
+                
+                res += val * sign;
+                
+            } else if (c == '+') {
+                sign = 1;
+            } else if (c == '-') {
+                sign = -1; 
+            } else if (c == '(') {
+                int ret = dfs(s, idx);
+                res += ret * sign;
+            } else if (c == ')') {
+                return res;
+            }
+        }
+        
+        return res;
+    }
+}
+```
 
 #### Approach 2 - Using Local variables ONLY - :turtle: 200ms (5.03%)
 
