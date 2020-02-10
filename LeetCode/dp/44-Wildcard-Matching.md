@@ -58,6 +58,44 @@ Output: false
 ```
 ### Method 1 - DFS + Memo
 #### Approach 4 - :rocket: 3ms (81.87%)
+
+```java
+class Solution {
+    public boolean isMatch(String s, String p) {
+        return dfs(s, p, 0, 0) == 2;
+    }
+    
+    private int dfs(String s, String p, int i, int j) {
+        int lens = s.length(), lenp = p.length();
+        if (i == lens && j == lenp) return 2;
+        else if (i == lens) {
+            while (j < lenp && p.charAt(j) == '*') {
+                j++;
+            }
+            return j == lenp ? 2 : 0;
+        } else if (j == lenp) {
+            return 1;
+        }
+        
+        if (s.charAt(i) == p.charAt(j) || p.charAt(j) == '?') {
+            return dfs(s, p, i + 1, j + 1);
+        } else if (p.charAt(j) == '*') {
+            while (j < lenp && p.charAt(j) == '*') {
+                j++;
+            }
+            
+            for (int k = i; k <= lens; k++) {
+                int ret = dfs(s, p, k, j);
+                
+                if (ret == 2 || ret == 0) return ret;
+            }
+        }
+        
+        return 1;
+    }
+}
+```
+
 ```java
 class Solution {
     // ===== DFS =====
