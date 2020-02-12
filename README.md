@@ -20,6 +20,8 @@ Keep learning!**
   - [greedy](https://github.com/weltond/DataStructure/tree/master/LeetCode/greedy)
   - [sampling](https://github.com/weltond/DataStructure/tree/master/LeetCode/Sampling)
 
+## Data Stucture
+- [Youtube Viedo](https://leetcode.com/discuss/general-discussion/494279/data-structure-and-algorithm-study-guide)
 ## System Design
   - [System Design Interview](https://github.com/weltond/system-design-interview)
   - [System Design Primer](https://github.com/weltond/system-design-primer)
