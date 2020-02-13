@@ -43,6 +43,9 @@ Keep learning!**
 - [Head First Design Pattern Code](https://github.com/weltond/DataStructure/tree/master/Head-First-Design-Patterns-master)
 - [CSDN](https://blog.csdn.net/longyulu/article/details/9159589)
 
+## Resume
+- [Resume Genius](https://resumegenius.com/resume-samples/software-engineer-resume-example)
+
 ## [My Summary](https://github.com/weltond/DataStructure/tree/master/MySummary)
 ## [BQ](https://career.guru99.com/top-10-behavioral-interview-questions-with-answers/) 
 ## [JKSJ](https://github.com/weltond/DataStructure/tree/master/DataStructure_JKSJ)
