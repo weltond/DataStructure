@@ -1,5 +1,7 @@
 ## [187. Repeated DNA Sequences](https://leetcode.com/problems/repeated-dna-sequences/)
 
+![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
+
 All DNA is composed of a series of nucleotides abbreviated as A, C, G, and T, for example: "ACGAATTCCG". When studying DNA, it is sometimes useful to identify repeated sequences within the DNA.
 
 Write a function to find all the 10-letter-long sequences (substrings) that occur more than once in a DNA molecule.
@@ -11,7 +13,43 @@ Input: s = "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT"
 Output: ["AAAAACCCCC", "CCCCCAAAAA"]
 ```
 ## Answer
-### Method 1 - Bit - :turtle: 23ms (28.86%)
+### Method 1 - Bit - 
+
+#### Approach 2 :rocket: 13ms (96.57%)
+
+```java
+class Solution {
+    // 4 letters, only 2 bits can represent them
+    
+    public List<String> findRepeatedDnaSequences(String s) {
+        Set<Integer> words = new HashSet();
+        List<String> res = new ArrayList();
+        Set<Integer> seenWords = new HashSet();
+        
+        char[] map = new char[26];
+        map['C' - 'A'] = 1;
+        map['G' - 'A'] = 2;
+        map['T' - 'A'] = 3;
+        
+        for (int i = 0, len = s.length(); i < len - 9; i++) {
+            int v = 0;
+            for (int k = i; k < i + 10; k++) {
+                v <<= 2;    // move 2 bits (1 letter) right
+                v |= map[s.charAt(k) - 'A'];    // concate 10 letter together.
+            }
+            
+            if (!words.add(v) && seenWords.add(v)) {
+                res.add(s.substring(i, i + 10));
+            }
+        }
+        
+        return res;
+    }
+}
+```
+
+#### Approach 1 :turtle: 23ms (28.86%)
+
 ```java
 class Solution {
     // ======== Method 1: Bit ==========
