@@ -46,41 +46,72 @@ Notice
 - The read function may be called multiple times.
 
 ## Answer
-### Method 1 - Two Pointer - :rabbit: 330ms (70%)
+### Method 2 - 
 
 ```java
-public class Solution {
+public class Solution extends Reader4 {
     /**
-     * @param word: a non-empty string
-     * @param abbr: an abbreviation
-     * @return: true if string matches with the given abbr or false
+     * @param buf destination buffer
+     * @param n maximum number of characters to read
+     * @return the number of characters read
      */
-    public boolean validWordAbbreviation(String word, String abbr) {
-        // write your code here
-        if (word == null || word.length() == 0) return false;
-        
-        int i = 0, j = 0;
-        int lenw = word.length(), lena = abbr.length();
-        
-        while (i < lena) {
-            char c = abbr.charAt(i);
-            if (c > '0' && c <= '9') {     // ignore num start with `0`
-                int res = 0;
-                while (i < lena && Character.isDigit(abbr.charAt(i))) {
-                    res = res * 10 + abbr.charAt(i) - '0';
-                    i++;
+    char[] buffer = new char[4];
+    int head = 0, tail = 0;
+
+    public int read(char[] buf, int n) {
+        // Write your code here
+        int i = 0;
+        while (i < n) {
+            if (head == tail) {               // queue is empty
+                head = 0;
+                tail = read4(buffer);         // enqueue
+                if (tail == 0) {
+                    break;
                 }
-                j = j + res;
-            } else {
-                if (j >= lenw || c != word.charAt(j++)) {
-                    //System.out.println(i+","+j);
-                    return false;
-                }
-                i++;
+            }
+            while (i < n && head < tail) {
+                buf[i++] = buffer[head++];    // dequeue
+            }
+        }
+        return i;
+    }
+}
+```
+
+### Method 1 -
+
+```java
+public class Solution extends Reader4 {
+    private char[] buf4 = new char[4];
+    private int buf4Index = 4;
+    private int buf4Size = 4;
+    
+    private boolean readNext(char[] buf, int index) {
+        if (buf4Index >= buf4Size) {
+            buf4Size = read4(buf4);
+            buf4Index = 0;
+            if (buf4Size == 0) {
+                return false;
+            }
+        }
+
+        buf[index] = buf4[buf4Index++];
+        return true;
+    }
+    
+    /**
+     * @param buf Destination buffer
+     * @param n   Maximum number of characters to read
+     * @return    The number of characters read
+     */
+    public int read(char[] buf, int n) {
+        for (int i = 0; i < n; i++) {
+            if (!readNext(buf, i)) {
+                return i;
             }
         }
         
-        return i == lena && j == lenw;
+        return n;
     }
 }
 ```
