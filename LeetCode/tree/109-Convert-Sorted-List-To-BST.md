@@ -1,71 +1,138 @@
-## [637. Valid Word Abbreviation](https://www.lintcode.com/problem/valid-word-abbreviation/description?_from=ladder&&fromId=14)
+## [109. Convert Sorted List to BST](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/)
 
 ![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
+Given a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.
 
-Given a non-empty string word and an abbreviation abbr, return whether the string matches with the given abbreviation.
+For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
 
-A string such as `"word"` contains only the following valid abbreviations:
-
-`["word", "1ord", "w1rd", "wo1d", "wor1", "2rd", "w2d", "wo2", "1o1d", "1or1", "w1r1", "1o2", "2r1", "3d", "w3", "4"]`
-
-Example
-Example 1:
+Example:
 
 ```
-Input : s = "internationalization", abbr = "i12iz4n"
-Output : true
-```
+Given the sorted linked list: [-10,-3,0,5,9],
 
-Example 2:
+One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST:
 
+      0
+     / \
+   -3   9
+   /   /
+ -10  5
 ```
-Input : s = "apple", abbr = "a2e"
-Output : false
-```
-
-Notice
-- Notice that only the above abbreviations are valid abbreviations of the string word. Any other string is not a valid abbreviation of word.
 
 ## Answer
-### Method 1 - Two Pointer - :rabbit: 330ms (70%)
+
+### Method 2 - In-order - :rocket: 0ms 
 
 ```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
 public class Solution {
-    /**
-     * @param word: a non-empty string
-     * @param abbr: an abbreviation
-     * @return: true if string matches with the given abbr or false
-     */
-    public boolean validWordAbbreviation(String word, String abbr) {
-        // write your code here
-        if (word == null || word.length() == 0) return false;
-        
-        int i = 0, j = 0;
-        int lenw = word.length(), lena = abbr.length();
-        
-        while (i < lena) {
-            char c = abbr.charAt(i);
-            if (c > '0' && c <= '9') {     // ignore num start with `0`
-                int res = 0;
-                while (i < lena && Character.isDigit(abbr.charAt(i))) {
-                    res = res * 10 + abbr.charAt(i) - '0';
-                    i++;
-                }
-                j = j + res;
-            } else {
-                if (j >= lenw || c != word.charAt(j++)) {
-                    //System.out.println(i+","+j);
-                    return false;
-                }
-                i++;
-            }
+    private ListNode current;
+
+    private int getListLength(ListNode head) {
+        int size = 0;
+
+        while (head != null) {
+            size++;
+            head = head.next;
         }
-        
-        return i == lena && j == lenw;
+
+        return size;
+    }
+
+    public TreeNode sortedListToBST(ListNode head) {
+        int size;
+
+        current = head;
+        size = getListLength(head);
+
+        return sortedListToBSTHelper(size);
+    }
+
+    public TreeNode sortedListToBSTHelper(int size) {
+        if (size <= 0) {
+            return null;
+        }
+
+        TreeNode left = sortedListToBSTHelper(size / 2);
+        TreeNode root = new TreeNode(current.val);
+        current = current.next;
+        TreeNode right = sortedListToBSTHelper(size - 1 - size / 2);
+
+        root.left = left;
+        root.right = right;
+
+        return root;
     }
 }
 ```
 
+### Method 1 - Find Mid - :rocket: 0ms
+
+```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public TreeNode sortedListToBST(ListNode head) {
+        // write your code here
+        if (head == null) return null;
+        if (head.next == null) {
+            return new TreeNode(head.val);
+        }
+        
+        ListNode slow = head, fast = head, pre = null;
+        
+        while (fast != null && fast.next != null) {
+            pre = slow;
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        
+        pre.next = null;
+        
+        TreeNode root = new TreeNode(slow.val);
+        
+        root.left = sortedListToBST(head);
+        root.right = sortedListToBST(slow.next);
+        
+        return root;
+    }
+}
+```
+
+### Old Post
+
+```java
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -236,3 +303,4 @@ class Solution {
         return root;
     }
 }
+```
