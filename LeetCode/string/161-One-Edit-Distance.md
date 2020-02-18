@@ -28,7 +28,45 @@ s=t ,so they aren't one edit distance apart
 ```
 
 ## Answer
-### Method 1 - Recursion - :turtle: 300ms (11.20%)
+
+### Method 2 - String - :rocket: 184ms (99.60%)
+
+```java
+public class Solution {
+    /**
+     * @param s: a string
+     * @param t: a string
+     * @return: true if they are both one edit distance apart or false
+     */
+    public boolean isOneEditDistance(String s, String t) {
+        // write your code here
+        if (s == null || t == null || s.equals(t)) return false;
+        
+        int lens = s.length(), lent = t.length();
+        
+        if (Math.abs(lens - lent) >= 2) return false;
+        
+        // s is always the shorter one
+        if (lens > lent) {
+            return isOneEditDistance(t, s);
+        }   
+        
+        for (int i = 0; i < lens; i++) {
+            if (s.charAt(i) != t.charAt(i)) {
+                if (lens == lent) {
+                    return s.substring(i + 1).equals(t.substring(i + 1));
+                }
+                
+                return s.substring(i).equals(t.substring(i + 1));
+            }
+        }
+        
+        return true;
+    }
+}
+```
+
+### Method 1 - DP Style - :turtle: 300ms (11.20%)
 
 ```java
 public class Solution {
