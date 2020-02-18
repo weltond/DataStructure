@@ -33,6 +33,9 @@ Note:
 
 ## Answer
 ### Method 1 - Recursion - :rabbit: 5ms (70%)
+
+- Note: `idx++` should be assigned before `if` statement, otherwise, recursion will cause **TLE** because `idx` is not increased.
+
 #### Approach 3 - Use local variable - :rocket: 3ms (95.46%)
 
 ```java
