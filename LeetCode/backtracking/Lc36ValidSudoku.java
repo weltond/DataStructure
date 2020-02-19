@@ -1,4 +1,60 @@
 // https://leetcode.com/problems/valid-sudoku/
+public class Solution {
+    /**
+     * @param board: the sudoku puzzle
+     * @return: nothing
+     */
+    boolean[][] col, row, cube;
+    public void solveSudoku(int[][] board) {
+        // write your code here
+        col = new boolean[9][9];
+        row = new boolean[9][9];
+        cube = new boolean[9][9];
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                if (board[i][j] != 0) {
+                    int val = board[i][j] - 1;
+                    int cIdx = (i / 3) * 3 + j / 3;
+                    
+                    col[j][val] = row[i][val] = cube[cIdx][val] = true;
+                }
+            }
+        }
+        dfs(board);
+    }
+    
+    private boolean dfs(int[][] board) {
+        int r = 0, c = 0;
+        boolean finish = true;
+        
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                if (board[i][j] == 0) {
+                    r = i;
+                    c = j;
+                    finish = false;
+                    break;
+                }
+            }
+            if (!finish) break;
+        }
+        if (finish) return true;
+        
+        int cubeIdx = (r / 3) * 3 + c / 3;
+        for (int k = 0; k < 9; k++) {
+            if (row[r][k] || col[c][k] || cube[cubeIdx][k]) continue;
+            
+            board[r][c] = k + 1;
+            row[r][k] = col[c][k] = cube[cubeIdx][k] = true;
+            if (dfs(board)) return true;
+            board[r][c] = 0;
+            row[r][k] = col[c][k] = cube[cubeIdx][k] = false;
+        }
+        
+        return false;
+    }
+}
+
 class Solution {
     // ========== Method 3: Array =============
     // 12ms
