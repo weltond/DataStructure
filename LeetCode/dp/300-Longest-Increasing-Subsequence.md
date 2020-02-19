@@ -24,6 +24,10 @@ LIS subsequence depends on all its subproblem results.
 
 ### Method 2 - DP with Binary Search
 - Time: O(nlogn)
+- 使用一个辅助空间B数组。
+- B[i]存储Dp值为i的最小的数字。（有多个位置，以这些位置为结尾的LIS长度都为i， 则这些数字中最小的一个存在B[i]中）
+-  则B数组严格递增。且下标表示LIS长度，也是严格递增，可以在B数组中进行二分查找。
+- 对于每个位置i，我们要找，所有小于A[i], 且Dp值最大的那个。这个操作在B数组中二分查找。
 
 #### Approach 2
 
