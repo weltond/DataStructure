@@ -27,6 +27,29 @@ Output: 23
  *     TreeNode(int x) { val = x; }
  * }
  */
+public class Solution {
+    /**
+     * @param root: the root node
+     * @param L: an integer
+     * @param R: an integer
+     * @return: the sum
+     */
+    public int rangeSumBST(TreeNode root, int L, int R) {
+        // write your code here.
+    
+        if (root == null) return 0;
+        
+
+        if (root.val < L) {
+            return rangeSumBST(root.right, L, R);
+        } else if (root.val > R) {
+            return rangeSumBST(root.left, L, R);
+        } else {
+            return rangeSumBST(root.left, L, R) + rangeSumBST(root.right, L, R) + root.val;
+        }
+    }
+}
+
 class Solution {
     // ========== Method 1: DFS =============
     // Approach 1: 0ms
