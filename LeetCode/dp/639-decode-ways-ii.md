@@ -1,6 +1,6 @@
 ## [639. Decode Ways II](https://leetcode.com/problems/decode-ways-ii/)
 
-![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
+![](https://github.com/weltond/DataStructure/blob/master/hard.PNG)
 
 A message containing letters from A-Z is being encoded to numbers using the following mapping way:
 
