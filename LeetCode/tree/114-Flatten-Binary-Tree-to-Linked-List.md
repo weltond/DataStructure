@@ -51,7 +51,7 @@ class Solution {
     }
 }
 ```
-### Method 1 - Pre order
+### Method 1 - Post order
 #### Approach 2
 ```java
 /**
