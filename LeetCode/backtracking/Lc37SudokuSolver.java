@@ -8,6 +8,60 @@ Each of the digits 1-9 must occur exactly once in each column.
 Each of the the digits 1-9 must occur exactly once in each of the 9 3x3 sub-boxes of the grid.
 Empty cells are indicated by the character '.'.
 */
+
+// 942ms (98.80%)
+public class Solution {
+    /**
+     * @param board: the sudoku puzzle
+     * @return: nothing
+     */
+    boolean[][] col, row, cube;
+    public void solveSudoku(int[][] board) {
+        // write your code here
+        col = new boolean[9][9];
+        row = new boolean[9][9];
+        cube = new boolean[9][9];
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                if (board[i][j] != 0) {
+                    int val = board[i][j] - 1;
+                    int cIdx = (i / 3) * 3 + j / 3;
+                    
+                    col[j][val] = row[i][val] = cube[cIdx][val] = true;
+                }
+            }
+        }
+        dfs(board);
+    }
+    
+    private boolean dfs(int[][] board) {
+        int r = 0, c = 0;
+        
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                if (board[i][j] != 0) {
+                    continue;
+                }
+                r = i;
+                c = j;
+                int cubeIdx = (r / 3) * 3 + c / 3;
+                for (int k = 0; k < 9; k++) {
+                    if (row[r][k] || col[c][k] || cube[cubeIdx][k]) continue;
+                    
+                    board[r][c] = k + 1;
+                    row[r][k] = col[c][k] = cube[cubeIdx][k] = true;
+                    if (dfs(board)) return true;
+                    board[r][c] = 0;
+                    row[r][k] = col[c][k] = cube[cubeIdx][k] = false;
+                }
+                
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
 public class Solution {
     /**
      * @param board: the sudoku puzzle
