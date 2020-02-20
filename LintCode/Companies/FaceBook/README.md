@@ -2,9 +2,6 @@
 
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------: 
-| [1095](https://www.lintcode.com/problem/maximum-swap/description) | [Maximum Gap](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/1095-maximum-swap.md) | Medium | Math
-| [1089](https://www.lintcode.com/problem/valid-parenthesis-string/description) | [Valid Parenthesis String](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/1089-valid-parenthesis-string.md) | Medium | String
-| [860](https://www.lintcode.com/problem/number-of-distinct-islands/description) | [Number of Distinct Islands](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/860-number-of-distinct-islands.md) | Medium | DFS / Hash / BFS
 | [121](https://www.lintcode.com/problem/word-ladder-ii/description?_from=ladder&&fromId=130) | [Word Ladder II](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/121-Word-Ladder-II.md) | DFS / BFS
 | [512](https://www.lintcode.com/problem/decode-ways/description?_from=ladder&&fromId=14) | [Decode Ways](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/512-Decode-Ways.md) | Medium | DFS / DP
 | [362](https://www.lintcode.com/problem/sliding-window-maximum/description?_from=ladder&&fromId=130) | [Sliding Window Maximum](https://github.com/weltond/DataStructure/blob/master/LeetCode/queue/Lc239SlidingWindowMaximum.java) | Hard | Two Pointers / Deque
@@ -39,13 +36,15 @@
 
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [1095](https://www.lintcode.com/problem/maximum-swap/description) | [Maximum Gap](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/1095-maximum-swap.md) | Medium | Math
+| [1089](https://www.lintcode.com/problem/valid-parenthesis-string/description) | [Valid Parenthesis String](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/1089-valid-parenthesis-string.md) | Medium | String
+| [860](https://www.lintcode.com/problem/number-of-distinct-islands/description) | [Number of Distinct Islands](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/860-number-of-distinct-islands.md) | Medium | DFS / Hash / BFS
 | [859](https://www.lintcode.com/problem/max-stack/description?_from=ladder&&fromId=130) | [Max Stack](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/859-max-stack.md) | Hard | Design
 | [1315](https://www.lintcode.com/problem/summary-ranges/description?_from=ladder&&fromId=130) | [Summary Ranges](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/1315-summary-ranges.md) | Medium | Array
 | [849](https://www.lintcode.com/problem/basic-calculator-iii/description) | [Basic Calculator III](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/849-basic-calculator-iii.md) | Hard | Simulate / Stack / Math
 | [386](https://www.lintcode.com/problem/longest-substring-with-at-most-k-distinct-characters/description) | [Longest Substring At Most K Distinct Chars](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/386-longest-substring-with-at-most-k-distinct-characters.md) | Medium | HashTable / Two pointer
 | [780](https://www.lintcode.com/problem/remove-invalid-parentheses/description?_from=ladder&&fromId=130) | [Remove Invalid Parenthese](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/Lc301RemoveInvalidParenthesis.java) | Hard | DFS / String
 | [86](https://www.lintcode.com/problem/binary-search-tree-iterator/description) | [Binary Search Tree Iterator](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/86-Binary-Search-Tree-Iterator.md) | Hard | BST / Stack
-
 | [529](https://www.lintcode.com/problem/geohash/description?_from=ladder&&fromId=130) | [Geohash](https://github.com/weltond/DataStructure/tree/master/LintCode/Design/529%20Geohash) | Medium | Math
 | [1261](https://www.lintcode.com/problem/longest-substring-with-at-least-k-repeating-characters/description?_from=ladder&&fromId=130) | [Longest Substring with At Least K Repeating Chars](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/395-Longest-Substring-with-At-Least%20K-Repeating-Characters.md) | Medium | String / Divide and Conquer
 | [450](https://www.lintcode.com/problem/reverse-nodes-in-k-group/description?_from=ladder&&fromId=130) | [Reverse Nodes in k-Group](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/450-Reverse-Nodes-in-k-Group.md) | Hard | LinkedList
