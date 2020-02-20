@@ -33,6 +33,7 @@ x player wins!
 ```
 
 ## Answer
+### [Method 2](https://evelynn.gitbooks.io/google-interview/design_tic-tac-toe.html)
 ### Method 1 - OOD
 
 ```java
