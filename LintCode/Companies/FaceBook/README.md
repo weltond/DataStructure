@@ -3,6 +3,7 @@
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------: 
 | [1089](https://www.lintcode.com/problem/valid-parenthesis-string/description) | [Valid Parenthesis String](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/1089-valid-parenthesis-string.md) | Medium | String
+| [860](https://www.lintcode.com/problem/number-of-distinct-islands/description) | [Number of Distinct Islands](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/860-number-of-distinct-islands.md) | Medium | DFS / Hash / BFS
 | [121](https://www.lintcode.com/problem/word-ladder-ii/description?_from=ladder&&fromId=130) | [Word Ladder II](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/121-Word-Ladder-II.md) | DFS / BFS
 | [512](https://www.lintcode.com/problem/decode-ways/description?_from=ladder&&fromId=14) | [Decode Ways](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/512-Decode-Ways.md) | Medium | DFS / DP
 | [362](https://www.lintcode.com/problem/sliding-window-maximum/description?_from=ladder&&fromId=130) | [Sliding Window Maximum](https://github.com/weltond/DataStructure/blob/master/LeetCode/queue/Lc239SlidingWindowMaximum.java) | Hard | Two Pointers / Deque
