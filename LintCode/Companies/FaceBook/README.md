@@ -2,7 +2,7 @@
 
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------: 
-| [121](https://www.lintcode.com/problem/word-ladder-ii/description?_from=ladder&&fromId=130) | [Word Ladder II](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/121-Word-Ladder-II.md) | DFS / BFS
+| [121](https://www.lintcode.com/problem/word-ladder-ii/description?_from=ladder&&fromId=130) | [Word Ladder II](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/121-Word-Ladder-II.md) | Hard | DFS / BFS
 | [512](https://www.lintcode.com/problem/decode-ways/description?_from=ladder&&fromId=14) | [Decode Ways](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/512-Decode-Ways.md) | Medium | DFS / DP
 | [362](https://www.lintcode.com/problem/sliding-window-maximum/description?_from=ladder&&fromId=130) | [Sliding Window Maximum](https://github.com/weltond/DataStructure/blob/master/LeetCode/queue/Lc239SlidingWindowMaximum.java) | Hard | Two Pointers / Deque
 | [653](https://www.lintcode.com/problem/expression-add-operators/description) | [Expression Add Operators](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/282-Expression-Add-Operators.md) | Hard | DFS / D&C
