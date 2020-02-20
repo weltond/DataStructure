@@ -33,7 +33,98 @@ x player wins!
 ```
 
 ## Answer
-### [Method 2](https://evelynn.gitbooks.io/google-interview/design_tic-tac-toe.html)
+### [Method 2](https://evelynn.gitbooks.io/google-interview/design_tic-tac-toe.html) :turtle: 807ms (6.40%)
+
+```java
+class TicTacToe {
+
+    char[][] board;
+    int[] rows, cols;
+    int diag, anti;
+    int currentPlayer;
+    boolean isEnd;
+
+    /** Initialize your data structure here. */
+    public TicTacToe() {
+        rows = new int[3];
+        cols = new int[3];
+        currentPlayer = 1;
+        board = new char[3][3];
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                board[i][j] = '.';
+            }
+        }
+    }
+    
+    private boolean isFull() {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (board[i][j] == '.') return false;
+            }
+        }
+        return true;
+    }
+    
+    private void changePlayer() {
+        currentPlayer = 0 - currentPlayer;
+    }
+    
+    public boolean move(int row, int col) throws AlreadyTakenException, GameEndException {
+        if (isEnd) {
+            throw new GameEndException();
+        }
+        if (board[row][col] != '.') {
+            throw new AlreadyTakenException();
+        }
+        
+        int toAdd = currentPlayer == 1 ? 1 : -1;
+        
+        rows[row] += toAdd;
+        cols[col] += toAdd;
+        if (row == col) diag += toAdd;
+        if (row == 2 - col) anti += toAdd;
+        
+        board[row][col] = currentPlayer == 1 ? 'x' : 'o';
+        // print();
+        if (Math.abs(rows[row]) == 3 || Math.abs(cols[col]) == 3 || Math.abs(diag) == 3 || Math.abs(anti) == 3) {
+            isEnd = true;
+            return true;
+        }
+        
+        changePlayer();
+        return false;
+    }
+    
+    public void print() {
+        for (int i = 0; i < 3; i++) {
+            for(int j=0;j<3;j++){
+                System.out.print(board[i][j]+" ");
+            }
+            System.out.println();
+        }
+        System.out.println("---------------");
+    }
+    
+}
+
+class AlreadyTakenException extends Exception {
+    public AlreadyTakenException() {
+        super("This place has been taken");
+    }
+}
+    
+class GameEndException extends Exception {
+    public GameEndException() {
+        super("Game has ended");
+    }
+}
+    
+class Board {
+    
+}
+```
+
 ### Method 1 - OOD
 
 ```java
