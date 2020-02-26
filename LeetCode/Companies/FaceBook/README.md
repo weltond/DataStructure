@@ -1,5 +1,6 @@
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [3](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [Longest Substring Wihout Repeating Chars](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/3-longest-substring-without-repeating-characters.md) | Medium | HashTable / Two Pointers/ Sliding Window
 | [378](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/) | [Kth Smallest in Sorted Matrix](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/378-kth-smallest-element-in-a-sorted-matrix.md) | Medium | Binary Search / Heap
 | [LintCode 789](https://www.lintcode.com/problem/the-maze-iii/description) | [The Maze III](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/789-The-Maze-III.md) | Hard | BFS
 | [505]() | [The Maze II](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/505-The-Maze-II.md) | Medium | DFS / BFS
