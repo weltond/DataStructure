@@ -1,5 +1,6 @@
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [844](https://leetcode.com/problems/backspace-string-compare/) | [Backspace String Compare](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/844-backspace-string-compare.md) | Easy | String / Two Pointer / Stack
 | [694]() | [Number of Distinct Islands](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/694-Number-Of-Distinct-Islands.md) | Medium | DFS
 | [3](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [Longest Substring Wihout Repeating Chars](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/3-longest-substring-without-repeating-characters.md) | Medium | HashTable / Two Pointers/ Sliding Window
 | [378](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/) | [Kth Smallest in Sorted Matrix](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/378-kth-smallest-element-in-a-sorted-matrix.md) | Medium | Binary Search / Heap
