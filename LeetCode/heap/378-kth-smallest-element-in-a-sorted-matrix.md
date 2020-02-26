@@ -23,6 +23,39 @@ Note:
 ## Answer
 ### Method 3 - Binary Search - :rocket: 1ms (85.71%)
 
+```
+方法一：二分答案
+Time O(logRange * nlogn)
+Space O(1)
+解析：
+函数countLessEqual(int[][] matrix, int value)的作用：统计matrix矩阵中小于等于value的数有多少个，时间复杂度为 nlogn（n行，每行的复杂度为logn)
+总共调用 logRange 次 countLessEqual，所以总的时间复杂度为 logRange * nlogn
+又因为 Range 的最大值为 Integer.MAX_VALUE - Integer.MIN_VALUE = 2^31 -1 - (-2^31) = 2^32 - 1，故 logRange 最大也不超过32, 可视为常数
+
+方法二：在方法一的基础上，对countLessEqual函数的改进
+Time O(logRange * n)
+Space O(1)
+解析：
+sorted matrix 的两个性质：(1) 每一行是升序 (2) 每一列是升序
+方法一的countLessEqual函数，只利用了性质(1)对行做二分，那能不能把性质(2)也利用起来呢?
+答案是可以的，过程如下：
+以矩阵右上角的点做为起点，
+如果该点 <= value, 那么这一行的数都 <= value，计入cnt，i++
+如果该点 > value，那么这一列都是 > value , 舍弃这一列，j--
+对更新后的点重复上述操作，时间复杂度优化到O(n)
+
+方法三：minHeap
+Time O(klogn)
+Space O(n)
+
+以k的三个量级O(1) O(n) O(n^2), 比较方法二与方法三
+
+k = O(1)	k = O(n)	k = O(n^2)
+方法二（n）	n	n	n
+方法三 （klogn）	logn	n * logn	n^2 * logn
+可见，当k为常数量级的时候，方法三是有优势的，此外都是方法二更优
+```
+
 ```java
 class Solution {
     public int kthSmallest(int[][] matrix, int k) {
