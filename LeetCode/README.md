@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [694]() | [Number of Distinct Islands](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/694-Number-Of-Distinct-Islands.md) | Medium | DFS
 | [3](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [Longest Substring Wihout Repeating Chars](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/3-longest-substring-without-repeating-characters.md) | Medium | HashTable / Two Pointers/ Sliding Window
 | [639](https://leetcode.com/problems/decode-ways-ii/) | [Decode Ways II](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/639-decode-ways-ii.md) | Hard | DP 
 | [494](https://leetcode.com/problems/target-sum/) | [Target Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/494-target-sum.md) | Medium | DP / DFS
