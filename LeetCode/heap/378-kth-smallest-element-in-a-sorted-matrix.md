@@ -56,6 +56,51 @@ k = O(1)	k = O(n)	k = O(n^2)
 可见，当k为常数量级的时候，方法三是有优势的，此外都是方法二更优
 ```
 
+- Method 2 - 0ms (100%)
+
+```java
+public class Solution {
+    /**
+     * @param matrix: List[List[int]]
+     * @param k: a integer
+     * @return: return a integer
+     */
+    public int kthSmallest(int[][] matrix, int k) {
+        // write your code here
+        int n = matrix.length;
+        
+        int lo = matrix[0][0], hi = matrix[n - 1][n - 1];
+        
+        while (lo < hi) {
+            int mid = lo + (hi - lo) / 2;
+            
+            if (countLessEqual(matrix, mid) >= k) {
+                hi = mid;
+            } else {
+                lo = mid + 1;
+            }
+        }
+        
+        return lo;
+    }
+    
+    private int countLessEqual(int[][] arr, int target) {
+        int cnt = 0, n = arr.length;
+        int i = 0, j = n - 1;
+        
+        while (i < n && j >= 0) {
+            if (arr[i][j] <= target) {
+                cnt += j + 1;
+                i++;
+            } else {
+                j--;
+            }
+        }
+        
+        return cnt;
+    }
+}
+```
 
 - Method 1 - 1ms (85.39%)
 
