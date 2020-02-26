@@ -47,7 +47,7 @@ Follow up:
 - Can you solve it in O(N) time and O(1) space?
 
 ## Answer
-### Method 1 - Two Pointer - :rabbit: 330ms (70%)
+### Method 1 - Two Pointer - :rocket: 0ms 
 
 #### Approach 2
 
