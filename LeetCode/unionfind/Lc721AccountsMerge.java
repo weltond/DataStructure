@@ -1,5 +1,91 @@
 // https://leetcode.com/problems/accounts-merge/
 
+public class Solution {
+    /**
+     * @param accounts: List[List[str]]
+     * @return: return a List[List[str]]
+     */
+    public List<List<String>> accountsMerge(List<List<String>> accounts) {
+        // write your code here
+        List<List<String>> res = new ArrayList();
+        if (accounts == null | accounts.size() == 0) return res;
+        
+        UF uf = new UF();
+        
+        Map<String, String> names = new HashMap();
+        
+        // Union Together
+        for (List<String> list : accounts) {
+            String name = list.get(0);
+            
+            int size = list.size();
+            
+            String pre = list.get(1);
+            names.put(pre, name);
+            // emails
+            for (int i = 2; i < size; i++) {
+                String email = list.get(i);
+                names.put(email, name);
+                uf.union(email, pre);
+
+                
+                pre = email;
+            }
+        }
+        
+        // Get distict parent emails
+        Map<String, List<String>> map = new HashMap();
+        for (String email : names.keySet()) {
+            String par = uf.getParent(email);
+            map.computeIfAbsent(par, o -> new ArrayList()).add(email);
+        }
+
+        
+        // Connect together.
+        for (String email : map.keySet()) {
+            String name = names.get(email);
+            List<String> list = new ArrayList();
+            list.add(name);
+            List<String> ems = map.get(email);
+            Collections.sort(ems);
+            for (String next : ems) {
+                list.add(next);
+            }
+            res.add(new ArrayList(list));
+        }
+        
+        return res;
+    }
+}
+
+class UF {
+    Map<String, String> parent;
+    public UF() {
+        parent = new HashMap();
+    }
+    
+    public String getParent(String s) {
+        if (!parent.containsKey(s)) {
+            parent.put(s, s);
+            return s;
+        }
+        
+        if (!parent.get(s).equals(s)) {
+            parent.put(s, getParent(parent.get(s)));
+        }
+        
+        return parent.get(s);
+    }
+    
+    public void union(String s1, String s2) {
+        String p1 = getParent(s1), p2 = getParent(s2);
+        
+        if (p1.equals(p2)) return;
+        
+        parent.put(p2, p1);
+    }
+}
+
 class Solution {
     
     // ========== Method 1: Union Find ===========
