@@ -30,7 +30,7 @@ The input is always valid. You may assume that evaluating the queries will resul
 - `a/e = 2` -> `e` as parent with `ratio = 1`.
 - When `find()` parent, keep updating ratios.
 
-```
+```java
 class Solution {
     // ============ Sol 2: UNION FIND ============
     // 1ms, beat 100%
