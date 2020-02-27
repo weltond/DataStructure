@@ -1,69 +1,35 @@
-## [637. Valid Word Abbreviation](https://www.lintcode.com/problem/valid-word-abbreviation/description?_from=ladder&&fromId=14)
+## [399. Evaluate Division](https://leetcode.com/problems/evaluate-division/)
 
 ![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
 
-Given a non-empty string word and an abbreviation abbr, return whether the string matches with the given abbreviation.
+Equations are given in the format `A / B = k`, where `A` and `B` are variables represented as strings, and k is a real number (floating point number). Given some queries, return the answers. If the answer does not exist, return `-1.0`.
 
-A string such as `"word"` contains only the following valid abbreviations:
-
-`["word", "1ord", "w1rd", "wo1d", "wor1", "2rd", "w2d", "wo2", "1o1d", "1or1", "w1r1", "1o2", "2r1", "3d", "w3", "4"]`
-
-Example
-Example 1:
+Example:
 
 ```
-Input : s = "internationalization", abbr = "i12iz4n"
-Output : true
+Given a / b = 2.0, b / c = 3.0.
+queries are: a / c = ?, b / a = ?, a / e = ?, a / a = ?, x / x = ? .
+return [6.0, 0.5, -1.0, 1.0, -1.0 ].
 ```
 
-Example 2:
+The input is: `vector<pair<string, string>>` equations, `vector<double>&` values, `vector<pair<string, string>>` queries , where `equations.size() == values.size()`, and the values are **positive**. This represents the equations. Return `vector<double>`.
+
+According to the example above:
 
 ```
-Input : s = "apple", abbr = "a2e"
-Output : false
+equations = [ ["a", "b"], ["b", "c"] ],
+values = [2.0, 3.0],
+queries = [ ["a", "c"], ["b", "a"], ["a", "e"], ["a", "a"], ["x", "x"] ]. 
 ```
 
-Notice
-- Notice that only the above abbreviations are valid abbreviations of the string word. Any other string is not a valid abbreviation of word.
+The input is always valid. You may assume that evaluating the queries will result in no division by zero and there is no contradiction.
 
 ## Answer
-### Method 1 - Two Pointer - :rabbit: 330ms (70%)
+### Method 1 - Union Find - :rocket: 1ms (100%)
 
-```java
-public class Solution {
-    /**
-     * @param word: a non-empty string
-     * @param abbr: an abbreviation
-     * @return: true if string matches with the given abbr or false
-     */
-    public boolean validWordAbbreviation(String word, String abbr) {
-        // write your code here
-        if (word == null || word.length() == 0) return false;
-        
-        int i = 0, j = 0;
-        int lenw = word.length(), lena = abbr.length();
-        
-        while (i < lena) {
-            char c = abbr.charAt(i);
-            if (c > '0' && c <= '9') {     // ignore num start with `0`
-                int res = 0;
-                while (i < lena && Character.isDigit(abbr.charAt(i))) {
-                    res = res * 10 + abbr.charAt(i) - '0';
-                    i++;
-                }
-                j = j + res;
-            } else {
-                if (j >= lenw || c != word.charAt(j++)) {
-                    //System.out.println(i+","+j);
-                    return false;
-                }
-                i++;
-            }
-        }
-        
-        return i == lena && j == lenw;
-    }
-}
+- `a/e = 2` -> `e` as parent with `ratio = 1`.
+- When `find()` parent, keep updating ratios.
+
 ```
 class Solution {
     // ============ Sol 2: UNION FIND ============
@@ -129,9 +95,15 @@ class Solution {
     
     return ans;
   }
-    
+}
+```
+
+### Method 2 - Graph - :turtle: 35ms 
+
+```java
     // ============ Sol 1: GRAPH ==============
     // 35ms
+class Solution {
     Map<String, HashMap<String, Double>> map = new HashMap();
     
     public double[] calcEquation(String[][] equations, double[] values, String[][] queries) {
@@ -186,3 +158,4 @@ class Solution {
         return -1.0;
     }
 }
+```
