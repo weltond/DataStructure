@@ -36,6 +36,7 @@
 
 | LintCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [402](https://www.lintcode.com/problem/continuous-subarray-sum/description) | [Continuous Subarray Sum](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/402-continuous-subarray-sum.md) | Medium | Array
 | [1095](https://www.lintcode.com/problem/maximum-swap/description) | [Maximum Gap](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/1095-maximum-swap.md) | Medium | Math
 | [1089](https://www.lintcode.com/problem/valid-parenthesis-string/description) | [Valid Parenthesis String](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/1089-valid-parenthesis-string.md) | Medium | String
 | [860](https://www.lintcode.com/problem/number-of-distinct-islands/description) | [Number of Distinct Islands](https://github.com/weltond/DataStructure/blob/master/LintCode/Companies/FaceBook/860-number-of-distinct-islands.md) | Medium | DFS / Hash / BFS
