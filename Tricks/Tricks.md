@@ -274,3 +274,4 @@ return dp[target];
 17. 中序遍历树的时候，用BFS或者DFS都会有`O(n)`的extra space，用**Morris Traversal**可以只用`O(1)`的空间。
 18. Use **PQ** to deal with [621. Task Schedule](https://github.com/weltond/DataStructure/blob/master/LeetCode/greedy/621-Task-Scheduler.md), [767. Reorganize String](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/767-Reorganize-String.md), [358. Rearrange String K Distance Apart](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/358-Rearrage-String-K-Distance-Apart.md) and etc.
 19. 写最大堆得时候，尽量用`Collections.reverseOrder`而不是`(o1,o2)->o2-o1`，因为输入的Integer有可能是`Integer.MIN_VALUE`or`Integer.MAX_VALUE`.
+20. Multiple of K: [523.Continuous Subarray Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/523-Continuous-Subarray-Sum.md)
