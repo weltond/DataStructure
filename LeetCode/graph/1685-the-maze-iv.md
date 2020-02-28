@@ -12,7 +12,9 @@ output:t=2
 ```
 
 ## Answer
-### Wrong - BFS - TLE (92% pass)
+### Method 1 - BFS - :rabbit: 409ms (68.97%)
+
+- Tricky part: `maps[cx][cy] = '#'`. Set it to `#` immediately to avoid to many same coordinates enque that will cause **TLE** for some test cases.
 
 ```java
 public class Solution {
@@ -53,6 +55,7 @@ public class Solution {
                 for (int k = 0; k < 4; k++) {
                     int cx = cur[0] + dir[k], cy = cur[1] + dir[k + 1], cost = cur[2] + 1;
                     if (cx < maps.length && cx >= 0 && cy < maps[0].length && cy >= 0 && maps[cx][cy] != '#' && !seen[cx][cy]) {
+                        maps[cx][cy] = '#'; // IMPORTANT to avoid TLE!
                         q.offer(new int[]{cx, cy, cost});
                     }
                 }
