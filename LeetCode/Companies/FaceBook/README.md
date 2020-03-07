@@ -10,7 +10,7 @@
 | [789](https://www.lintcode.com/problem/the-maze-iii/description) | [(LintCode) The Maze III](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/789-The-Maze-III.md) | Hard | BFS
 | [505]() | [The Maze II](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/505-The-Maze-II.md) | Medium | DFS / BFS
 | [490]() | [The Maze](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/490-The-Maze.md) | Medium | BFS
-| [727]() | [Basic Calculator III](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/727-Basic-Calculator-III.md) | Hard | Stack / Recursion / Math
+| [727]() | [(LintCode) Basic Calculator III](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/727-Basic-Calculator-III.md) | Hard | Stack / Recursion / Math
 | [227](https://leetcode.com/problems/basic-calculator-ii/) | [Basic Calculator II](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/227-Basic-Calculator-II.md) | Medium | String
 | [224](https://leetcode.com/problems/basic-calculator/) | [Basic Calculator](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/224-Basic-Calculator.md) | Hard | Stack / Math
 | [1249](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/) | [Min Remove to Make Valid Parentheses](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/1249-minimum-remove-to-make-valid-parentheses.md) | Medium | String / Stack
