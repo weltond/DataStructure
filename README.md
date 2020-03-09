@@ -56,6 +56,8 @@ Keep learning!**
 - [MultiThreading](https://www.cnblogs.com/wyt007/p/9486752.html)
   - [.Net Standard from Microsoft](https://docs.microsoft.com/zh-cn/dotnet/standard/async-in-depth)
   - [C# Programming Guide](https://docs.microsoft.com/zh-cn/dotnet/csharp/programming-guide/concepts/async/task-asynchronous-programming-model)
+  - [blog](https://www.cnblogs.com/wyt007/p/9486752.html)
   - [blog](https://www.cnblogs.com/peterzb/archive/2009/06/10/1500273.html)
   - [blog](https://www.cnblogs.com/yizhu2000/archive/2008/01/03/1011958.html#basics)
+- [Design Pattern in C#](https://www.cnblogs.com/abcdwxc/archive/2007/10/30/942834.html)
   
