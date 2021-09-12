@@ -42,7 +42,7 @@ class Solution {
     }
     
     
-    // ============== Method 1: DFS + Memo ===============
+    // ============== Method 1: DFS + Memo (1d array)===============
     // 1ms (86.36%)
     public int combinationSum4(int[] nums, int target) {
         if (nums == null || nums.length == 0) return 0; 
@@ -94,4 +94,33 @@ class Solution {
 //             dfs(nums, rem - nums[i], res);
 //         }
 //     }
+}
+
+// ============== DFS + Memo (2d array) ===========
+class Solution {
+    public int combinationSum4(int[] nums, int target) {
+        int[][] map = new int[nums.length][target + 1];
+        for (int i = 0; i < nums.length; i++) {
+            Arrays.fill(map[i], -1);
+        }
+        return dp(nums, 0, target, map);
+    }
+    
+    private int dp(int[] a, int start, int remain, int[][] map) {
+        if (map[start][remain] != -1) {
+            return map[start][remain];
+        }
+        
+        if (remain == 0) return 1;
+        
+        int sum = 0;
+        for (int i = 0; i < a.length; i++) {                 // <===== start from 0, as [1,2,1] and [1,1,2] are different
+            if (remain - a[i] < 0) continue;
+            sum += dp(a, i, remain - a[i], map);
+        }
+        
+        map[start][remain] = sum;
+        //System.out.println("start:"+start+",remain:"+remain+"->"+sum);
+        return sum;
+    }
 }
