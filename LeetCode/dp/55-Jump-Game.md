@@ -73,7 +73,7 @@ If we have a Greedy Approach here then we will take the path 1+99+1 as we select
 
 But if we take DP Approach then we start from back and find the cost of reaching end from that specific node. So when we reach the first node we will have two options
 
-`. 99+1 path
+1. 99+1 path
 2. 5+1 path
 
 Now we simply have to decide between (1+(99+1)) and (20+(5+1)) path
