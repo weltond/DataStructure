@@ -25,7 +25,7 @@ Explanation: You will always arrive at index 3 no matter what. Its maximum
 #### Dynamic Programming
 Looking from the end and at each point ahead checking the best possible way to reach the end
 
-```java
+```c++
     bool canJump(vector<int>& nums) {
         int n = nums.size();
         vector<bool> jump(n,false);
@@ -52,7 +52,7 @@ Looking from the end and at each point ahead checking the best possible way to r
 
 Looking from the start and selecting the locally optimum in the hope of reaching global optimum
 
-```java
+```c++
     bool canJump(vector<int>& nums) {
       int n = nums.size(), farest = 0;
       for(int i = 0;i < n; i++)
