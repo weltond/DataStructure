@@ -20,6 +20,64 @@ Explanation: You will always arrive at index 3 no matter what. Its maximum
              jump length is 0, which makes it impossible to reach the last index.
 ```
 
+## Idea
+### Difference Between DP and Greedy
+#### Dynamic Programming
+Looking from the end and at each point ahead checking the best possible way to reach the end
+
+```java
+    bool canJump(vector<int>& nums) {
+        int n = nums.size();
+        vector<bool> jump(n,false);
+        jump[n-1]=true;
+        
+        for(int i=n-2;i>=0;i--)
+        {
+            for(int j=0;j<=nums[i] && i+j<n;j++)
+            {
+                if(jump[i+j]==true) 
+                {
+                    jump[i]=true; 
+                    break;
+                }
+            }
+        }
+        
+        return jump[0];
+    }
+```
+
+#### Greedy
+[Reference](https://leetcode.com/problems/jump-game/discuss/20923/leetcode.com/problems/jump-game/discuss/20900/Simplest-O(N)-solution-with-constant-space/20948)
+
+Looking from the start and selecting the locally optimum in the hope of reaching global optimum
+
+```java
+    bool canJump(vector<int>& nums) {
+      int n = nums.size(), farest = 0;
+      for(int i = 0;i < n; i++)
+      {
+        if(farest < i) return false;
+        farest = max(i + nums[i], farest);
+      }
+      
+      return true;
+    }
+```
+
+Example
+
+![img](https://assets.leetcode.com/users/sohammehta/image_1539664091.png)
+
+If we have a Greedy Approach here then we will take the path 1+99+1 as we select local optimum from the beggining
+
+But if we take DP Approach then we start from back and find the cost of reaching end from that specific node. So when we reach the first node we will have two options
+
+`. 99+1 path
+2. 5+1 path
+
+Now we simply have to decide between (1+(99+1)) and (20+(5+1)) path
+
 ## [Answer](https://leetcode.com/problems/jump-game/solution/)
 ### Method 4 - Greedy - :rocket: 1ms (99.46%)
 ```java
