@@ -8,6 +8,33 @@ Your function should return length = 7, with the first seven elements of nums be
 
 It doesn't matter what values are set beyond the returned length.
 */
+
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        int i = 1, idx = 1; // i is last pos waiting for filling it, idx is current running index
+        
+        while (idx < nums.length) {
+            int count = 1;
+            while (idx < nums.length && nums[idx] == nums[idx - 1]) {
+                count++;
+                
+                if (count < 3) {
+                    nums[i++] = nums[idx++];    
+                } else {
+                    idx++;
+                }
+            }
+            
+            if (idx < nums.length) {
+                nums[i++] = nums[idx++];
+            }
+            
+        }
+        
+        return i;
+    }
+}
+
 class Solution {
     // 1ms (97.94%)
     public int removeDuplicates(int[] a) {
