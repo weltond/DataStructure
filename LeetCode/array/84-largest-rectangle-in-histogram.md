@@ -43,6 +43,8 @@ class Solution {
 }
 ```
 ### Method 2 - Pruning - :rocket: 3ms (89.36%)
+> Update: Below approach causes TLE now (2021-10-03)
+
 - Time: O(n^2)
 ```java
 class Solution {
