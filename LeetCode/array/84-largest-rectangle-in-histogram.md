@@ -14,6 +14,8 @@ Output: 10
 
 ## Answer
 ### Method 3 - Stack
+> https://www.geeksforgeeks.org/largest-rectangle-under-histogram/
+
 - Time: O(n)
 ```java
 class Solution {
