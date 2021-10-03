@@ -30,13 +30,15 @@ class Solution {
         h = Arrays.copyOf(heights, heights.length + 1);
         
         while (i < h.length) {
+            // push to stack until currnet is smaller than stack's top one
+            // we treat it as right index
             if (stack.isEmpty() || h[stack.peek()] <= h[i]) {
                 stack.push(i++);
             } else {
-                int idx = stack.pop();
+                int idx = stack.pop();  // to calculate the size for this bar
                 // consider [0, 3, 2, 5]
                 // i-stack.peek()-1 means the length that has a height equal or greater than current height.
-                res = Math.max(res, h[idx] * (stack.isEmpty() ? i: i - stack.peek() - 1));
+                res = Math.max(res, h[idx] * (stack.isEmpty() ? i: i - stack.peek() - 1));  // stack.peek() is the left index
             }
         }
         
