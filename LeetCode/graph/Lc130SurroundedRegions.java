@@ -21,6 +21,52 @@ Surrounded regions shouldn’t be on the border, which means that any 'O' on the
 Any 'O' that is not on the border and it is not connected to an 'O' on the border will be flipped to 'X'. 
 Two cells are connected if they are adjacent cells connected horizontally or vertically.
 */
+
+// 1ms 99.76%
+class Solution {
+    public void solve(char[][] b) {
+        // Set for first and last row
+        for (int c = 0; c < b[0].length; c++) {
+            if (b[0][c] == 'O') {
+                dfs(b, 0, c);
+            }
+            if (b[b.length - 1][c] == 'O'){
+                dfs(b, b.length - 1, c);
+            }
+        }
+        
+        // Set for first and last column
+        for (int r = 0; r < b.length; r++) {
+            if (b[r][0] == 'O') dfs(b, r, 0);
+            if (b[r][b[0].length - 1] == 'O') dfs(b, r, b[0].length - 1);
+        }
+        
+        // Set all
+        for (int i = 0; i < b.length; i++) {
+            for (int j = 0; j < b[0].length; j++) {
+                if (b[i][j] == 'z') b[i][j] = 'O';
+                else if (b[i][j] == 'O') b[i][j] = 'X';
+            }
+        }
+    }
+    
+    private void dfs(char[][] b, int x, int y) {
+        if (x < 0 || y < 0 || x >= b.length || y >= b[0].length || b[x][y] == 'z') return;
+        
+        int[] dir = {0, 1, 0, -1, 0};
+        
+        if (b[x][y] != 'X') {
+            b[x][y] = 'z';
+            
+            for (int k = 0; k < 4; k++) {
+                dfs(b, x + dir[k], y + dir[k+1]);
+            }
+        }
+
+    }
+}
+
+
 class Solution {
     public void solve(char[][] board) {
         if (board == null || board.length <= 1) return;
