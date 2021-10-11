@@ -14,6 +14,12 @@ class Solution {
     public int singleNumber(int[] A) {
         int ones = 0, twos = 0;
         for(int i = 0; i < A.length; i++){
+            /*
+             IF the set "ones" does not have i
+                Add i to the set "ones" if and only if its not there in set "twos"
+            ELSE
+                Remove it from the set "ones"
+            */
             ones = (ones ^ A[i]) & ~twos;
             twos = (twos ^ A[i]) & ~ones;
         }
