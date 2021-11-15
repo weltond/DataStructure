@@ -39,7 +39,7 @@ P     I
 ## Answer
 ### Method 2 - :rocket: 3ms (97.01%)
 
-
+The idea is to find the regularity and process line by line. Unlike `Method 1` which process column by column.
 
 ```java
 class Solution {
