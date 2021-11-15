@@ -39,6 +39,8 @@ P     I
 ## Answer
 ### Method 2 - :rocket: 3ms (97.01%)
 
+
+
 ```java
 class Solution {
     public String convert(String s, int numRows) {
@@ -68,6 +70,8 @@ class Solution {
 ```
 
 ### Method 1 - :turtle: 29ms (16.60%)
+
+The idea is to create a container for each row while processing. At the end, generate output from left to right, top to down.
 
 ```java
 class Solution {
