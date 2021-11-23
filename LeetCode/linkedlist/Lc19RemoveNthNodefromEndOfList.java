@@ -13,33 +13,39 @@ After removing the second node from the end, the linked list becomes 1->2->3->5.
  *     ListNode(int x) { val = x; }
  * }
  */
+
+// 0ms (100%)
 class Solution {
-    // 0ms
+    // 1->2->3->4->5
     public ListNode removeNthFromEnd(ListNode head, int n) {
-        if (head == null) return null;
-        
-        ListNode tmp = head;
-        while (--n > 0) {
-            tmp = tmp.next;
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+
+        ListNode end = head, prev = dummy;
+
+        while (n > 0) {
+            n--;
+            end = end.next;
         }
-        
-        ListNode cur = head, prev = null;
-        
-        while (tmp.next != null) {
+        // end is 3.
+
+        // start from begining, until end is null
+        ListNode cur = head;
+
+        while (end != null) {
             prev = cur;
             cur = cur.next;
-            tmp = tmp.next;
+            end = end.next;
         }
-        
-        if (prev == null) return head.next;
-        
-        prev.next = cur.next;
-        cur = null;
-        
-        return head;
+
+        // cur should be 4, prev is 3. end is null
+        prev.next = prev.next.next;
+
+        return dummy.next;
     }
 }
 
+// 1ms (25%)
 class Solution {
     // 1->2->3->4->5, n = 2 ===> 1->2->3->5
     public ListNode removeNthFromEnd(ListNode head, int n) {
@@ -73,5 +79,32 @@ class Solution {
         }
 
         return len;
+    }
+}
+
+class Solution {
+    // 0ms
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        if (head == null) return null;
+        
+        ListNode tmp = head;
+        while (--n > 0) {
+            tmp = tmp.next;
+        }
+        
+        ListNode cur = head, prev = null;
+        
+        while (tmp.next != null) {
+            prev = cur;
+            cur = cur.next;
+            tmp = tmp.next;
+        }
+        
+        if (prev == null) return head.next;
+        
+        prev.next = cur.next;
+        cur = null;
+        
+        return head;
     }
 }
