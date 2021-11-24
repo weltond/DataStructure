@@ -28,6 +28,45 @@ Output: 1->2->5
  *     ListNode(int x) { val = x; }
  * }
  */
+
+// 1ms (35.87%)
+class Solution {
+    public ListNode deleteDuplicates(ListNode head) {
+        ListNode dummy = new ListNode(-301);
+        dummy.next = head;
+        
+        ListNode cur = head, prev = dummy;
+
+        while (cur != null) {
+            
+            ListNode nextNode = getNextDisctinct(cur);
+            
+            prev.next = nextNode;
+            prev = nextNode;
+            cur = nextNode == null ? null : nextNode.next;
+        }
+
+        return dummy.next;
+    }
+
+    private ListNode getNextDisctinct(ListNode head) {
+        
+        while (head != null) {
+            boolean hasDup = false;
+            while (head != null && head.next != null && head.val == head.next.val) {
+                hasDup = true;
+                head = head.next;
+            }
+
+            if (!hasDup) return head;
+
+            head = head.next;
+        }
+
+        return head;
+    }
+}
+
 class Solution {
     public ListNode deleteDuplicates(ListNode head) {
         if (head == null) return null;
