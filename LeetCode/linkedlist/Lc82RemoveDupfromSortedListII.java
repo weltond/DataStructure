@@ -32,18 +32,18 @@ Output: 1->2->5
 // 1ms (35.87%)
 class Solution {
     public ListNode deleteDuplicates(ListNode head) {
-        ListNode dummy = new ListNode(-301);
+        ListNode dummy = new ListNode(-301);    // dummy node because new head might change
         dummy.next = head;
         
-        ListNode cur = head, prev = dummy;
+        ListNode cur = head, prev = dummy;  // prev is the last distinct node
 
         while (cur != null) {
             
-            ListNode nextNode = getNextDisctinct(cur);
+            ListNode nextNode = getNextDisctinct(cur);  // get next distinct node
             
-            prev.next = nextNode;
-            prev = nextNode;
-            cur = nextNode == null ? null : nextNode.next;
+            prev.next = nextNode;  // prev connect to the above distinct node
+            prev = nextNode;    // update prev to above distinct node
+            cur = nextNode == null ? null : nextNode.next;  // move to next node and restart. Need to check if nextNode is null or not.
         }
 
         return dummy.next;
@@ -83,10 +83,10 @@ class Solution {
                 tmp = tmp.next;
             }
             
+            // head is a distinct node
             if (cnt == 0) {
-                //System.out.println(head.val+","+cnt);
-                pre.next = head;
-                pre = head;
+                pre.next = head; // connect prev to head 
+                pre = head; // update prev
             }
             
             tmp = tmp.next;
