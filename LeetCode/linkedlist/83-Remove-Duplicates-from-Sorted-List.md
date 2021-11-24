@@ -48,7 +48,7 @@ class Solution {
 }
 ```
 ### Method 1 - Iteration - :rocket: 0ms
-#### Approach 2
+#### Approach 3
 ```java
 /**
  * Definition for singly-linked list.
@@ -70,6 +70,27 @@ class Solution {
             }
         }
         
+        return head;
+    }
+}
+```
+#### Approach 2
+```java
+class Solution {
+    public ListNode deleteDuplicates(ListNode head) {
+        ListNode prev = head;
+        ListNode cur = head;
+
+        while (cur != null) {
+            prev = cur;
+            while (cur.next != null && cur.val == cur.next.val) {
+                cur = cur.next;
+            }
+            // cur is the last occurence
+            prev.next = cur.next;
+            cur = cur.next;
+        }
+
         return head;
     }
 }
