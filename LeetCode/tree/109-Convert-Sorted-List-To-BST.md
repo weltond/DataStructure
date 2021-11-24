@@ -112,12 +112,14 @@ class Solution {
         
         ListNode slow = head, fast = head, pre = null;
         
+        // slow is mid, prev is the node before mid.
         while (fast != null && fast.next != null) {
             pre = slow;
             slow = slow.next;
             fast = fast.next.next;
         }
         
+        // disconnect mid and its left
         pre.next = null;
         
         TreeNode root = new TreeNode(slow.val);
