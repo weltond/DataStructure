@@ -74,7 +74,7 @@ class Solution {
     }
 }
 ```
-#### Approach 2
+#### Approach 2 🐢 1ms (30.8%)
 ```java
 class Solution {
     public ListNode deleteDuplicates(ListNode head) {
