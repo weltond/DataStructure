@@ -44,6 +44,7 @@ class Solution {
         ListNode preMid = h1;
         ListNode preCur = h1.next;
 
+        // 1->2->3->  4->5->6
         // 2. reverse the second half to 1->2->3->6->5->4
         while (preCur.next != null) {
             ListNode tmp = preCur.next;
@@ -53,17 +54,64 @@ class Solution {
         }
 
         // 3. Start reorder one by one
-        h1 = head;
-        h2 = preMid.next;
+        h1 = head;          // 1
+        h2 = preMid.next;   // 6, preMid = 3
         while (h1 != preMid) {
-            preMid.next = h2.next;
-            h2.next = h1.next;
-            h1.next = h2;
+            preMid.next = h2.next;  
+            h2.next = h1.next;     
+            h1.next = h2;           
             
-            h1 = h2.next;
-            h2 = preMid.next;
+            h1 = h2.next;           
+            h2 = preMid.next;       
         }
         
+    }
+}
+```
+
+- 3ms 🐢(30.28%)
+```java
+class Solution {
+    // 1->2->3->4->5
+    public void reorderList(ListNode head) {
+        if (head == null || head.next == null) return;
+
+        // go to mid
+        ListNode slow = head, fast = head;
+
+        while (fast.next != null && fast.next.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        // reverse after mid to get a new linked list
+        // slow is 3. tmp is 4
+        ListNode tmp = slow.next;
+        slow.next = null;   // disconnect mid and rest
+        ListNode prev = null;
+        while (tmp != null) {
+            ListNode next = tmp.next;
+            tmp.next = prev;
+            prev = tmp;
+            tmp = next;
+        }   // 1->2->3->null
+            // 5->4->null
+
+        slow = prev;
+
+        ListNode cur = head;
+        // now slow is new head. 
+        // merge two linked lists
+        while (slow != null) {
+            ListNode next1 = cur.next;
+            ListNode next2 = slow.next;
+
+            cur.next = slow;
+            slow.next = next1;
+
+            cur = next1;
+            slow = next2;
+        }
     }
 }
 ```
