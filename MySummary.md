@@ -15,6 +15,52 @@ Table of Contents
 ## Honorable Problems
 - Median of two sorted arrays: find kth element of two sorted array where k = n/2. Recursive findKth(A[], indexA, B[], indexB, k)
 
+# LinkedList
+## Get mid
+### 1
+```java
+ListNode slow = head, fast = head;
+ListNode prev = null;
+
+while (fast != null && fast.next != null) {
+  prev = slow;
+  slow = slow.next;
+  fast = fast.next.next;
+}
+```
+- `1->2->3->4`
+  - prev: 2
+  - slow: 3
+  - fast: null
+  
+- `1->2->3->4->5`
+  - prev: 2
+  - slow: 3
+  - fast: 5
+
+### 2
+```java
+if (head == null) {}
+
+ListNode slow = head, fast = head;
+ListNode prev = null;
+
+while (fast.next != null && fast.next.next != null) {
+  prev = slow;
+  slow = slow.next;
+  fast = fast.next.next;
+}
+```
+- `1->2->3->4`
+  - prev: 1
+  - slow: 2
+  - fast: 3
+  
+- `1->2->3->4->5`
+  - prev: 2
+  - slow: 3
+  - fast: 5
+  
 # String
 ## Functions
 - s.toCharArray()
