@@ -77,3 +77,5 @@ Alias:
    git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 2. Git Configuration File: cat .git/config
 
+# Undo a git push
+https://stackoverflow.com/questions/1270514/undoing-a-git-push
