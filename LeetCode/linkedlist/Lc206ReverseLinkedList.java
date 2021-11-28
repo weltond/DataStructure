@@ -8,6 +8,31 @@
  *     ListNode(int x) { val = x; }
  * }
  */
+// ===== Recursion 2 ======
+// Recursion func return each node that needed to be reversed
+class Solution {
+    private ListNode newHead;
+
+    public ListNode reverseList(ListNode head) {
+        recursion(head);
+
+        return newHead;
+    }
+
+    private ListNode recursion(ListNode head) {
+        if (head == null || head.next == null) {
+            newHead = head;
+            return head;
+        }
+        
+        ListNode prev = recursion(head.next);  
+        
+        prev.next = head;
+        head.next = null;
+        return head;
+    }
+}
+
 class Solution {
     // ====== Method 2: Iterative =======
     // 0ms
