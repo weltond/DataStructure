@@ -45,6 +45,39 @@ class Solution {
         return true;
     }
     
+    public boolean isPalindrome(ListNode head) {
+        // find mid and reverse the list after mid
+        ListNode slow = head, fast = head;
+
+        // second mid if length is even
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        // reverse list after mid
+        ListNode prev = null;
+        while (slow != null) {
+            ListNode next = slow.next;
+            slow.next = prev;
+
+            prev = slow;
+            slow = next;
+        }   // now, prev is the last node
+
+
+        // compare
+        while (prev != null) {
+            if (head.val != prev.val) return false;
+
+            head = head.next;
+            prev = prev.next;
+        }
+
+        return true;
+
+    }
+    
     // ======== Method 1: Cut in half ========
     // Not Efficient: 1ms
     public boolean isPalindrome(ListNode head) {
