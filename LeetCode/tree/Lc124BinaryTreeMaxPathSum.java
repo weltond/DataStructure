@@ -35,6 +35,29 @@ Output: 42
  * }
  */
 class Solution {
+    int res = Integer.MIN_VALUE;
+    public int maxPathSum(TreeNode root) {
+        dfs(root);
+
+        return res;
+    }
+
+    private int dfs(TreeNode root) {
+        if (root == null) return 0;
+
+        int left = dfs(root.left);
+        int right = dfs(root.right);
+
+        int fork = left + right + root.val;
+        int single =  Math.max(left, right) + root.val;
+
+        res = Math.max(res, Math.max(fork, single));
+
+        return Math.max(0, single);
+    }
+}
+
+class Solution {
     public int maxPathSum(TreeNode root) {
         if (root == null) return 0;
         
