@@ -103,7 +103,7 @@ class Solution {
     private TreeNode dfs(TreeNode root, TreeNode p, TreeNode q) {
         if (root == null) return null;
         
-        if (root.val == p.val || root.val == q.val) return root.val == p.val ? p : q;
+        if (root == p || root == q) return root;
         
         TreeNode l = dfs(root.left, p, q);
         TreeNode r = dfs(root.right, p, q);
