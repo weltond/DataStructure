@@ -11,6 +11,52 @@
  * }
  */
 public class Codec {
+    // input: [1,2,3,null,null,4,5]
+    
+    StringBuilder sb = new StringBuilder();
+    // Encodes a tree to a single string.
+    public String serialize(TreeNode root) {
+        dfs(root);
+        //System.out.println(sb.toString());    // ===> 1,2,null,null,3,4,null,null,5,null,null,
+        return sb.toString();
+    }
+
+    private void dfs(TreeNode root) {
+        if (root == null) {
+            sb.append("null").append(",");
+            return;
+        }
+
+        sb.append(root.val).append(",");
+
+        dfs(root.left);
+        dfs(root.right);
+    }
+
+    // Decodes your encoded data to tree.
+    public TreeNode deserialize(String data) {
+        String[] list = data.split(",");
+
+        return dfs(list);
+    }
+
+    int idx = 0;
+    private TreeNode dfs(String[] list) {
+        if (list[idx].equals("null")) {
+            idx++;
+            return null;
+        }
+
+        int val = Integer.valueOf(list[idx++]);
+        TreeNode root = new TreeNode(val);
+        root.left = dfs(list);
+        root.right = dfs(list);
+
+        return root;
+    }
+}
+
+public class Codec {
     /**
     1
    / \
