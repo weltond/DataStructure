@@ -1,6 +1,7 @@
 ## [107. Binary Tree Level Order Traversal II](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/)
 
-## Description
+![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
+
 Given the root of a binary tree, return the bottom-up level order traversal of its nodes' values. (i.e., from left to right, level by level from leaf to root).
 
  
