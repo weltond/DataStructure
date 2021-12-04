@@ -38,6 +38,7 @@ class Node {
 };
 */
 // ======== BFS (1ms 67.6%) ============
+// Not prefered as it DOESN'T use constant extra space.
 class Solution {
     public Node connect(Node root) {
         Deque<Node> q = new LinkedList<>();
