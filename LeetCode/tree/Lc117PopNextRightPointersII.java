@@ -37,6 +37,32 @@ class Node {
     }
 };
 */
+// ======== BFS (1ms 67.6%) ============
+class Solution {
+    public Node connect(Node root) {
+        Deque<Node> q = new LinkedList<>();
+        if (root == null) return null;
+
+        q.offer(root);
+
+        while (!q.isEmpty()) {
+            int size = q.size();
+            Node prev = null;
+            for (int i = 0; i < size; i++) {
+                Node node = q.poll();
+
+                if (prev != null) prev.next = node;
+                prev = node;
+
+                if (node.left != null) q.offer(node.left);
+                if (node.right != null) q.offer(node.right);
+            }
+        }
+
+        return root;
+    }
+}
+
 class Solution {
     // ========== Method 1: DFS ============
     // 0ms (100%)
