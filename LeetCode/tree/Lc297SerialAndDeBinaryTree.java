@@ -10,6 +10,7 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
+// 5ms (100%)
 public class Codec {
     // input: [1,2,3,null,null,4,5]
     
@@ -48,6 +49,59 @@ public class Codec {
         }
 
         int val = Integer.valueOf(list[idx++]);
+        TreeNode root = new TreeNode(val);
+        root.left = dfs(list);
+        root.right = dfs(list);
+
+        return root;
+    }
+}
+
+// 18ms (45.47%)
+public class Codec {
+    // Encodes a tree to a single string.
+    public String serialize(TreeNode root) {
+        String s = dfs(root);
+
+        return s;
+    }
+
+    private String dfs(TreeNode root) {
+        if (root == null) {
+            return "/";
+        }
+
+        if (root.left == null && root.right == null) return root.val + "";
+
+        String left = dfs(root.left);
+        String right = dfs(root.right);
+
+        return root.val + "'," + left + "," + right;
+    }
+
+    // Decodes your encoded data to tree.
+    public TreeNode deserialize(String data) {
+        String[] list = data.split(",");
+
+        return dfs(list);
+    }
+
+    int idx = 0;
+    private TreeNode dfs(String[] list) {
+        // null
+        if (list[idx].equals("/")) {
+            idx++;
+            return null;
+        }
+
+        // leaf
+        if (!list[idx].endsWith("'")) {
+            int val = Integer.valueOf(list[idx++]);
+            return new TreeNode(val);
+        }
+
+        // non-leaf
+        int val = Integer.valueOf(list[idx++].split("'")[0]);
         TreeNode root = new TreeNode(val);
         root.left = dfs(list);
         root.right = dfs(list);
