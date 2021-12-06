@@ -30,7 +30,7 @@ Note:
 
 ## Answer
 ### Method 1 - Stack - :rabbit: 16ms (71.90%)
-
+- Given the hint: "**average** **O(1)** time and **O(h)** space", meaning we can sometimes use O(n) or O(h) time to get next node. We all know that, once you get a Node, in order to get the smallest, you need to get its left-most node. So we can have a pointer points to the left-most node. But how do we find its parent? ===> **STACK**.
 - Use stack to store nodes.
 - At first, push all the left nodes into stack.
 - Then, after popping top (which is current smallest one), go to its right, and store all of its left children if exists.
