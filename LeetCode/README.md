@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [111](https://leetcode.com/problems/minimum-depth-of-binary-tree/)|[Minimum Depth of a binary tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/111-minimum-depth-of-binary-tree.md) | Easy | Tree
 | [113](https://leetcode.com/problems/path-sum-ii/description/)|[Path Sum II](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/113-path-sum-ii.md)|Medium | Tree
 | [107](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/) | [Binary Tree Level Order Traversal II](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/107-binary-tree-level-order-traversal-ii.md)|Medium|Tree
 | [102](https://leetcode.com/problems/binary-tree-level-order-traversal/description/)| [Binary Tree Level order traversal](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/102-binary-tree-level-order-traversal.md) | Medium | Tree / BFS
