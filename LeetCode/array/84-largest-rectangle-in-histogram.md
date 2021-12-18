@@ -14,6 +14,7 @@ Output: 10
 
 ## Answer
 ### Method 3 - Stack
+#### Approach 2 🚀
 > https://www.geeksforgeeks.org/largest-rectangle-under-histogram/
 
 - Time: O(n)
@@ -42,6 +43,41 @@ class Solution {
             }
         }
         
+        return res;
+    }
+}
+```
+
+#### Approach 1 - Monolonic Stack 🐢 62ms (15.23%)
+```java
+class Solution {
+    public int largestRectangleArea(int[] heights) {
+        // push idx into stack in order to calculate width
+        // height can be easily fetched by heights[idx]
+        Deque<Integer> stack = new LinkedList<>();
+        int idx = 0;
+        int res = 0;
+
+        // we are actually caculating the area from current's left.
+        // so we need to add a dummy point at the end to calculate the last item
+        while (idx <= heights.length) {
+            int val = idx == heights.length ? 0 : heights[idx]; // dummy point to calculate last item.
+            while (!stack.isEmpty() && val < heights[stack.peek()]) {
+                int prevIdx = stack.pop();
+                int height = heights[prevIdx];
+
+                int width = idx;    
+
+                if (!stack.isEmpty()) {
+                    width = idx - stack.peek() - 1;
+                }
+                
+                res = Math.max(res, width * height);
+            }
+
+            stack.push(idx++);
+        }
+
         return res;
     }
 }
