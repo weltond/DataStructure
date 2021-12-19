@@ -86,6 +86,50 @@ class Solution {
 
 ```java
 class Solution {
+    int idx = 0;
+    public String decodeString(String s) {
+        return dfs(s);
+    }
+
+    private String dfs(String s) {
+        char[] chars = s.toCharArray();
+        StringBuilder sb = new StringBuilder();
+
+        int repeat = 0;
+        String tmp = "";
+        while (idx < chars.length) {
+            char c = chars[idx];
+            //System.out.println(c);
+            if (c == '[') {
+                idx++;
+                tmp = dfs(s);
+
+                for (int i = 0; i < repeat; i++) {
+                    sb.append(tmp);
+                }
+
+                repeat = 0;
+            } else if (c == ']') {
+                return sb.toString();
+            } else if (Character.isDigit(c)) {
+                while (idx < chars.length && Character.isDigit(chars[idx])) {
+                    repeat = repeat * 10 + chars[idx] - '0';
+                    idx++;
+                }
+                idx--;
+            } else {
+                sb.append(c);
+            }
+            idx++;
+        }
+
+        return sb.toString();
+    }
+}
+```
+
+```java
+class Solution {
     int i = 0;
     public String decodeString(String s) {
         if (s == null || s.length() == 0) return s;
