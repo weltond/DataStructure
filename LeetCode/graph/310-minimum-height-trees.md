@@ -46,9 +46,76 @@ Output: [3, 4]
 - The height of a rooted tree is the number of edges on the longest downward path between the root and a leaf.
 
 ## Answer
+- For the graph with odd no. of nodes, only the node at the middle of the graph when made the root, will give a minimum height tree.
+- For the graph with even no. of nodes, both the middle nodes when made the root give a minimum height tree.
 
-### Method 1 - BFS - 
+We use **Topological Sort**.
 
+- We create an array called indegree which keeps the count of the no. of edges approaching each node in the tree.
+- We start with the nodes having the minimum indegree (ie; indegree=1, i.e the leaf nodes) and we go on removing them i.e decrementing the indegree of nodes that're connected to them, until we reach the middle nodes.
+- So we can have only one root or at max two roots for minimum height depending on tree structure as explained above.
+- For the implementation, we are going to use a BFS like approach.
+- To begin with, all leaf node are pushed into the queue, then they are removed from the tree, next new leaf node is pushed in the queue, this procedure keeps on going until we have only 1 or 2 node in our tree, which represent the result.
+
+### Method 1 - BFS - 🐰 (25ms 51.48%)
+#### Approach 2
+```java
+class Solution {
+    public List<Integer> findMinHeightTrees(int n, int[][] edges) {
+        if (n == 1) return Collections.singletonList(0);
+
+        int[] indegree = new int[n];
+
+        // initial graph that saves edges info
+        List<Set<Integer>> graph = new ArrayList();
+        for (int i = 0; i < n; i++) {
+            graph.add(new HashSet<>());
+        }
+
+        // use indegree array to get identify leaf
+        for (int i = 0; i < edges.length; i++) {
+            indegree[edges[i][0]]++;
+            indegree[edges[i][1]]++;
+            graph.get(edges[i][0]).add(edges[i][1]);
+            graph.get(edges[i][1]).add(edges[i][0]);
+        }
+
+        // Use queue to save leaf
+        Deque<Integer> q = new LinkedList<>();
+        for (int i = 0; i < n; i++) {
+            if (indegree[i] == 1) {
+                q.offer(i);
+                indegree[i]--;
+            }
+        }
+
+        // answer is the middle node of the tree
+        // count can only be 1 or 2 nodes.
+        List<Integer> ans = new LinkedList<>();
+
+        // queue stores leaves.
+        while(!q.isEmpty()) {
+            int size = q.size();
+            ans.clear();    // remove previous leaves from the final answer.
+            for (int i = 0; i < size; i++) {
+                int cur = q.poll();
+                ans.add(cur);
+                for (int next : graph.get(cur)) {
+                    indegree[next]--;   // remove edge connection
+
+                    // put into queue if it is a leaf
+                    if (indegree[next] == 1) {
+                        q.offer(next);
+                    }
+                }
+            }
+        }
+
+        return ans;
+    }
+}
+```
+#### Approach 1
 ```java
 class Solution {
     public List<Integer> findMinHeightTrees(int n, int[][] edges) {
