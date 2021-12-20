@@ -1,5 +1,66 @@
 class Solution {
     public String minWindow(String s, String t) {
+        int start = 0, realStart = 0, minSize = Integer.MAX_VALUE, idx = 0;
+
+        Map<Character, Integer> map = buildMap(t);
+        int remainCnt = map.size(); // remain count is NOT length of t, but size of map!!
+
+        char[] chars = s.toCharArray();
+
+        while (idx < chars.length) {
+            char c = chars[idx];
+
+            // found char in t
+            if (map.containsKey(c)) {
+                if (map.get(c) == 1) {
+                    remainCnt--;
+                }
+                
+                map.put(c, map.get(c) - 1);
+            }
+
+            // if chars in t has all been found
+            while (remainCnt == 0 && start < chars.length) {
+                // update min size
+                if (idx - start + 1 < minSize) {
+                    minSize = idx - start + 1;
+                    realStart = start;
+                }
+
+                char k = chars[start++];
+                if (map.containsKey(k)) {
+                    int charRemain = map.get(k);
+
+                    if (charRemain == 0) {
+                        remainCnt += 1;
+                    }
+                    
+                    map.put(k, charRemain + 1);
+                }
+            }
+
+            idx++;
+        }
+
+        return minSize == Integer.MAX_VALUE ? "" : s.substring(realStart, realStart + minSize);
+    }
+
+    private Map<Character, Integer> buildMap(String t) {
+        char[] chars = t.toCharArray();
+        int idx = 0;
+        Map<Character, Integer> map = new HashMap<>();
+
+        while (idx < chars.length) {
+            char c = chars[idx++];
+            map.put(c, map.getOrDefault(c, 0) + 1);    
+        }
+
+        return map;
+    }
+}
+
+class Solution {
+    public String minWindow(String s, String t) {
         if (s == null || t == null || t.length() == 0 || s.length() == 0) return "";
         
         Map<Character, Integer> map = new HashMap();
