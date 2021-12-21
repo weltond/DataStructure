@@ -1,5 +1,27 @@
 // https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/
 
+// Gitbook template: https://app.gitbook.com/s/1yBzuwxqO90h7a4SnmnK/basic-algorithms/binary-search#154.-find-minimum-in-rotated-sorted-array-ii
+class Solution {
+    public int findMin(int[] nums) {
+        int l = 0, r = nums.length - 1;
+        while (l < r - 1) {
+            // de-dup
+            while (l < r && nums[l] == nums[l + 1]) {
+                l++;
+            }
+            while (l < r && nums[r] == nums[r - 1]) {
+                r--;
+            }
+
+            int m = l + (r - l) / 2;
+            if (nums[m] > nums[r]) l = m;
+            else r = m;
+        }
+
+        return Math.min(nums[l], nums[r]);
+    }
+}
+
 // ============ Template II ===============
 class Solution {
     public int findMin(int[] nums) {
