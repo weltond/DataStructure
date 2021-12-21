@@ -9,6 +9,47 @@
 
 // input: 113111111111, Looking for target 3.
 
+// recommended (Template #3) 
+// https://app.gitbook.com/s/1yBzuwxqO90h7a4SnmnK/basic-algorithms/binary-search#81.-search-in-rotated-sorted-array-ii
+class Solution {
+    public boolean search(int[] nums, int target) {
+        int l = 0, r = nums.length - 1;
+        while (l < r - 1) {
+            int m = l + (r - l) / 2;
+            if (nums[m] == target) return true;
+
+            // de-dup
+            while (l < r && nums[l] == nums[l + 1]) {
+                l++;
+            }
+            while (l < r && nums[r] == nums[r - 1]) {
+                r--;
+            }
+
+            // right side of m is sorted
+            if (nums[m] < nums[r]) {
+                // target lies between m ~ r
+                if (nums[m] <= target && target <= nums[r]) {
+                    l = m;
+                } else {
+                    r = m;
+                }
+            }
+            // left side of m is sorted
+            else if (nums[l] < nums[m]) {
+                // target lies between l ~ m
+                if (nums[l] <= target && target <= nums[m]) {
+                    r = m;
+                } else {
+                    l = m;
+                }
+            }
+        }
+
+        return nums[l] == target || nums[r] == target;
+    }
+}
+
 class Solution {
     public boolean search(int[] nums, int target) {
         if (nums == null || nums.length == 0) return false;
