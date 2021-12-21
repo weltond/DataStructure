@@ -1,4 +1,36 @@
 // https://leetcode.com/problems/search-in-rotated-sorted-array/
+// recommended (Template 3)
+class Solution {
+    public int search(int[] nums, int target) {
+        int l = 0, r = nums.length - 1;
+        while (l < r - 1) {
+            int m = l + (r - l) / 2;
+            if (nums[m] == target) return m;
+
+            // right side of m is sorted
+            if (nums[m] < nums[r]) {
+                // target lies from m ~ r
+                if (nums[r] >= target && target >= nums[m]) {   // equal!!
+                    l = m;
+                } else {
+                    r = m;
+                }
+            } 
+            // left side of l is sorted
+            else if (nums[m] > nums[l]) {
+                // target lies from l ~ m
+                if (nums[l] <= target && target <= nums[m]) { // equal!!
+                    r = m;
+                } else {
+                    l = m;
+                }
+            }
+        }
+
+        return nums[l] == target ? l : nums[r] == target ? r : -1;
+    }
+}
+
 public class Solution {
     /**
      * @param A: an integer rotated sorted array
