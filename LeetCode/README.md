@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [1254](https://leetcode.com/problems/number-of-closed-islands/) | [Number of Closed Islands](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/1254-number-of-closed-islands.md) | Medium | Array / BFS / DFS / Union Find
 | [111](https://leetcode.com/problems/minimum-depth-of-binary-tree/)|[Minimum Depth of a binary tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/111-minimum-depth-of-binary-tree.md) | Easy | Tree
 | [113](https://leetcode.com/problems/path-sum-ii/description/)|[Path Sum II](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/113-path-sum-ii.md)|Medium | Tree
 | [107](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/) | [Binary Tree Level Order Traversal II](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/107-binary-tree-level-order-traversal-ii.md)|Medium|Tree
