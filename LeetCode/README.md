@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [990](https://leetcode.com/problems/satisfiability-of-equality-equations/) | [Satisfiability of Equality Equations](https://github.com/weltond/DataStructure/blob/master/LeetCode/unionfind/990-satisfiability-of-equality-equations.md) | Medium | HashMap / UnionFind
 | [1905](https://leetcode.com/problems/count-sub-islands/description/) | [Count Sub Islands](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/1905-count-sub-islands.md) | Medium | Array / BFS / DFS / Union Find
 | [1254](https://leetcode.com/problems/number-of-closed-islands/) | [Number of Closed Islands](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/1254-number-of-closed-islands.md) | Medium | Array / BFS / DFS / Union Find
 | [111](https://leetcode.com/problems/minimum-depth-of-binary-tree/)|[Minimum Depth of a binary tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/111-minimum-depth-of-binary-tree.md) | Easy | Tree
