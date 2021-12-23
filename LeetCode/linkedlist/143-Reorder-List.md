@@ -69,6 +69,51 @@ class Solution {
 }
 ```
 
+- 1ms 🚀 (99.88%)
+```java
+class Solution {
+    // 1->2->3->4->null
+    public void reorderList(ListNode head) {
+        ListNode slow = head, fast = head, prev = null;
+        while (fast != null && fast.next != null) {
+            prev = slow;
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+    
+        // count of node is odd. move to next
+        // 1->2->3 4->5
+        if (fast != null) {
+            prev = slow;
+            slow = slow.next;
+        }
+        
+        // slow is 3
+        // disconnect 2->3
+        prev.next = null;
+        
+        // reverse 3->4->null
+        prev = null;
+        while (slow != null) {
+            ListNode next = slow.next;
+            slow.next = prev;
+            prev = slow;
+            slow = next;
+        }
+        
+        // merge 1->2->null and 4->3->null
+        // latter list is longer
+        while (prev != null) {
+            ListNode next1 = head.next, next2 = prev.next;
+            head.next = prev;
+            prev.next = next1;
+            
+            head = next1;
+            prev = next2;
+        }
+    }
+}
+```
 - 3ms 🐢(30.28%)
 ```java
 class Solution {
