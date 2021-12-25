@@ -43,6 +43,8 @@ Constraints:
 
 ## Answers
 ### Method 1 - Dijkstra - 30ms (93.07%) 🚀
+Use Max Heap because require get max prob. So we want to process node with larger prob first (greedy).
+
 ```java
 class Solution {
     public double maxProbability(int n, int[][] edges, double[] succProb, int start, int end) {
