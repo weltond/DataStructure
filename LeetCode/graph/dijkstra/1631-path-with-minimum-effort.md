@@ -39,7 +39,7 @@ Explanation: This route does not require any effort.
 - 1 <= rows, columns <= 100
 - 1 <= heights[i][j] <= 106
 ## Answer
-### Method 1 - Dijkstra - 48ms (69.23%) :rabbit
+### Method 1 - Dijkstra - 48ms (69.23%) 🐰
 
 [note](https://app.gitbook.com/s/1yBzuwxqO90h7a4SnmnK/advanced-algorithms/dijkstra#1631.-path-with-minimum-effort)
 
