@@ -1,6 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
-| [1631. Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort/description/) | [Path with Minimum Effort](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/dijkstra/1631-path-with-minimum-effort.md) | Medium | Binary Search / DFS / Union Find / Heap / BFS
+| [1631](https://leetcode.com/problems/path-with-minimum-effort/description/) | [Path with Minimum Effort](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/dijkstra/1631-path-with-minimum-effort.md) | Medium | Binary Search / DFS / Union Find / Heap / BFS
 | [743](https://leetcode.com/problems/network-delay-time/) | [Network Delay Time](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/dijkstra/743-network-delay-time.md) | Medium | DFS / BFS / Graph / Heap / Shortest Path
 | [990](https://leetcode.com/problems/satisfiability-of-equality-equations/) | [Satisfiability of Equality Equations](https://github.com/weltond/DataStructure/blob/master/LeetCode/unionfind/990-satisfiability-of-equality-equations.md) | Medium | HashMap / UnionFind
 | [1905](https://leetcode.com/problems/count-sub-islands/description/) | [Count Sub Islands](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/1905-count-sub-islands.md) | Medium | Array / BFS / DFS / Union Find
