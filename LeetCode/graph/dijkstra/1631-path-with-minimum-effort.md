@@ -40,6 +40,9 @@ Explanation: This route does not require any effort.
 - 1 <= heights[i][j] <= 106
 ## Answer
 ### Method 1 - Dijkstra
+
+[note](https://app.gitbook.com/s/1yBzuwxqO90h7a4SnmnK/advanced-algorithms/dijkstra#1631.-path-with-minimum-effort)
+
 ```java
 class Solution {
     public int minimumEffortPath(int[][] heights) {
