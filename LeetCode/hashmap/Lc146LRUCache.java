@@ -1,4 +1,128 @@
 // https://leetcode.com/problems/lru-cache/
+
+// OOD Style
+class LRUCache {
+    private Map<Integer, Node> map;
+    private DoubleList cache;
+    private int cap;
+
+    public LRUCache(int capacity) {
+        map = new HashMap<>();
+        cache = new DoubleList();
+        cap = capacity;
+    }
+    
+    public int get(int key) {
+        if (!map.containsKey(key)) return -1;
+
+        Node node = makeRecent(key);
+
+        return node.val;
+    }
+    
+    public void put(int key, int value) {
+        // remove least recently used only when:
+        //  1. key not exists
+        //  2. cache reaches cap
+        if (!map.containsKey(key) && this.cap == this.cache.getSize()) {
+            this.removeLeastRecentUsed();
+        }
+
+        this.addOrUpdateRecent(key, value);
+    }
+
+    /* Encapsule operations */
+    private Node makeRecent(int key) {
+        Node node = map.get(key);
+
+        this.cache.removeNode(node);
+        this.cache.addLast(node);
+
+        return node;
+    }
+
+    private void addOrUpdateRecent(int key, int val) {
+        Node node = map.get(key);
+        if (node == null) {
+            node = new Node(key, val);
+            this.cache.addLast(node);
+        } else {
+            this.makeRecent(key);
+            node.val = val;
+        }
+
+        map.put(key, node);
+    }
+
+    private void removeLeastRecentUsed() {
+        Node first = this.cache.removeFirst();
+
+        if (first == null) return;
+
+        map.remove(first.key);
+    }
+}
+
+class DoubleList {
+    Node head, tail;
+    int size;
+    public DoubleList() {
+        this.size = 0;
+
+        head = new Node(0, 0);
+        tail = new Node(0, 0);
+
+        head.next = tail;
+        tail.prev = head;
+    }
+
+    // node must exists
+    public void removeNode(Node node) {
+        node.prev.next = node.next;
+        node.next.prev = node.prev;
+
+        node.next = null;
+        node.prev = null;
+        this.size--;
+    }
+
+    // Add latest node to the last
+    public void addLast(Node node) {
+        node.next = tail;
+        node.prev = tail.prev;
+
+        tail.prev.next = node;
+        tail.prev = node;
+
+        this.size++;
+    }
+
+    // remove least recent used node from head
+    public Node removeFirst() {
+        if (head.next == tail) return null;
+
+        Node first = head.next;
+
+        removeNode(first);
+
+        return first;
+    }
+
+    public int getSize() {
+        return this.size;
+    }
+}
+
+class Node {
+    int key, val;
+    Node prev, next;
+    public Node(int key, int val) {
+        this.key = key;
+        this.val = val;
+    }
+}
+
+
 class LRUCache {
     Node head, tail;
     int k;
