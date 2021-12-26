@@ -47,6 +47,184 @@ cache.get(4);       // returns 4
     - add it to the `freq+1` linkedlist
     - update `min freq` if that linkedlist is empty **AND** that freq is the minFreq.
 
+#### Approach 2 OOD style - 🚀 49ms (91.56%)
+```java
+class LFUCache {
+    Map<Integer, Node> keyToNode;
+    Map<Integer, DoubleList> freqToCache;
+    int minFreq;
+    int cap;
+
+    public LFUCache(int capacity) {
+        keyToNode = new HashMap<>();
+        freqToCache = new HashMap<>();
+        cap = capacity;
+        minFreq = Integer.MAX_VALUE;
+    }
+    
+    public int get(int key) {
+        if (!keyToNode.containsKey(key)) return -1;
+
+        Node node = makeRecent(key);
+
+        return node.val;
+    }
+    
+    public void put(int key, int value) {
+        if (!keyToNode.containsKey(key)) {
+            // LRU cache is full
+            if (this.cap <= 0) {
+                // unable to remove least frequent used
+                // usually it is because initial cap is 0
+                if (!removeLeastFreqUsed()) {
+                    return;
+                }
+                this.cap = 0;
+            } else {
+                this.cap -= 1;
+            }
+
+            addNew(key, value);
+        } else {
+            updateRecentAndFreq(key, value);
+        }
+    }
+
+    /* Encapsulate operations */
+    private Node makeRecent(int key) {
+        Node node = keyToNode.get(key);
+        int freq = node.getFreq();
+        // System.out.println(node.key + ", " + node.val+":"+freq);
+        DoubleList oldCache = freqToCache.get(freq);
+
+        // remove from current freqToCache
+        oldCache.removeNode(node);
+        if (oldCache.getSize() == 0) {
+            freqToCache.remove(freq);
+
+            // update minFreq
+            if (minFreq >= freq) {
+                minFreq = freq + 1; // freq + 1
+            }
+        }
+
+        // add to a higher freq cache
+        DoubleList newCache = 
+            freqToCache.computeIfAbsent(freq + 1, o -> new DoubleList());
+        newCache.addLast(node);
+
+        // update freq for the node
+        node.inc();
+
+        return node;
+    }
+
+    private void addNew(int key, int val) {
+        Node node = new Node(key, val);
+        node.inc();
+
+        // update minFreq since this is a new node
+        minFreq = 1;
+
+        // create Cache if it not exist for minFreq
+        freqToCache.computeIfAbsent(minFreq, o -> new DoubleList()).addLast(node);
+
+        // add node to keyToNode
+        keyToNode.put(key, node);
+    }
+
+    private void updateRecentAndFreq(int key, int val) {
+        Node node = keyToNode.get(key);
+        node.val = val;
+
+        this.get(key);
+    }
+
+    private boolean removeLeastFreqUsed() {
+        // get cache which stores nodes with min freq
+        DoubleList cache = freqToCache.get(minFreq);
+
+        if (cache == null) return false;
+
+        removeLeastRecentUsed(cache);
+
+        return true;
+    }
+
+    private void removeLeastRecentUsed(DoubleList cache) {
+        Node first = cache.removeFirst();
+
+        if (first == null) return;
+
+        keyToNode.remove(first.key);
+    }
+}
+
+class DoubleList {
+    Node head, tail;
+    int size;
+
+    public DoubleList() {
+        head = new Node(0, 0);
+        tail = new Node(0, 0);
+        head.next = tail;
+        tail.prev = head;
+        size = 0;
+    }
+
+    // node must exists
+    public void removeNode(Node node) {
+        node.prev.next = node.next;
+        node.next.prev = node.prev;
+
+        node.next = null;
+        node.prev = null;
+        size--;
+    }
+
+    public void addLast(Node node) {
+        node.next = tail;
+        node.prev = tail.prev;
+
+        tail.prev.next = node;
+        tail.prev = node;
+
+        size++;
+    }
+
+    public Node removeFirst() {
+        if (head.next == tail) return null;
+
+        Node first = head.next;
+        this.removeNode(first);
+
+        return first;
+    }
+
+    public int getSize() {
+        return this.size;
+    }
+}
+
+class Node {
+    int key, val, freq;
+    Node prev, next;
+    public Node(int key, int val) {
+        this.key = key;
+        this.val = val;
+    }
+
+    public void inc() {
+        this.freq++;
+    }
+
+    public int getFreq() {
+        return this.freq;
+    }
+}
+```
+
+#### Approach 1
 ```java
 class LFUCache {
 
