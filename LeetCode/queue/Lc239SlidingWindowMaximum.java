@@ -56,6 +56,33 @@ class Solution {
 }
 
 class Solution {
+    public int[] maxSlidingWindow(int[] nums, int k) {
+        Deque<Integer> q = new LinkedList<>();
+        int[] res = new int[nums.length - k + 1];
+        int idx = 0;
+        for (int i = 0; i < nums.length; i++) {
+            int val = nums[i];
+
+            if (!q.isEmpty() && i - q.peek() >= k) {
+                q.poll();
+            }
+
+            // monotonic queue, remove from last.
+            while (!q.isEmpty() && val >= nums[q.getLast()]) {
+                q.removeLast();
+            }
+            q.offer(i);
+
+            if (i >= k - 1) {
+                res[idx++] = nums[q.peek()];
+            }
+        }
+
+        return res;
+    }
+}
+
+class Solution {
     // 12ms 
     public int[] maxSlidingWindow(int[] nums, int k) {
         if (nums == null || nums.length == 0) return new int[]{};
