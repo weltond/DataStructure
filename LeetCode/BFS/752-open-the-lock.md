@@ -1,4 +1,4 @@
-## [113. Path Sum II](https://leetcode.com/problems/path-sum-ii/description/)
+## [752. Open the Lock](https://leetcode.com/problems/open-the-lock/description/)
 
 ![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
 
