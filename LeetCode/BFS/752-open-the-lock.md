@@ -45,6 +45,98 @@ Constraints:
 
 ## Answer
 ### Method 1 - BFS
+#### Approach 2 - Two way BFS - 49ms (93.32%) 🚀
+Use `HashSet` to replace `Queue`.
+
+```java
+class Solution {
+    public int openLock(String[] deadends, String target) {
+        Set<String> visited = new HashSet<>();
+        Set<String> deadend = new HashSet<>();
+
+        Set<String> q1 = new HashSet<>();
+        Set<String> q2 = new HashSet<>();
+        q1.add("0000");
+        q2.add(target);
+
+        visited.add("0000");
+        for (String s : deadends) {
+            deadend.add(s);
+        }
+
+        int res = 0;
+        while (!q1.isEmpty() && !q2.isEmpty()) {
+            // Use tmp to store next level
+            Set<String> tmp = new HashSet<>();
+
+            // optimize: always process the q with smaller size
+            // if (q1.size() > q2.size()) {
+            //     tmp = q1;
+            //     q1 = q2;
+            //     q2 = tmp;
+            // }
+
+            // process q1
+            for (String cur : q1) {
+                if (deadend.contains(cur)) continue;
+
+                // result should be in q2
+                if (q2.contains(cur)) {
+                    return res;
+                }
+
+                visited.add(cur);
+
+                for (int j = 0; j < 4; j++){
+                    String up = plusOne(cur, j);
+                    if (!visited.contains(up)) {
+                        tmp.add(up);
+                        //visited.add(up); // DON't add to visited, since we are expecting items be added to q2 as well.
+                    }
+
+                    String down = minusOne(cur, j);
+                    if (!visited.contains(down)) {
+                        tmp.add(down);
+                        //visited.add(down);
+                    }
+                }
+            }
+
+            // swith q1 and q2. next round is to query q2
+            q1 = q2;
+            q2 = tmp;
+
+            res++;
+        }
+
+        return -1;
+    }
+
+    private String plusOne(String s, int pos) {
+        char[] chars = s.toCharArray();
+        if (chars[pos] == '9') {
+            chars[pos] = '0';
+        } else {
+            chars[pos] += 1;
+        }
+
+        return new String(chars);
+    }
+
+    private String minusOne(String s, int pos) {
+        char[] chars = s.toCharArray();
+        if (chars[pos] == '0') {
+            chars[pos] = '9';
+        } else {
+            chars[pos] -= 1;
+        }
+
+        return new String(chars);
+    }
+}
+```
+
+#### Approach 1 - 76ms (79%) 🐰
 ```java
 class Solution {
     public int openLock(String[] deadends, String target) {
