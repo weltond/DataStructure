@@ -9,6 +9,36 @@
  *     Interval(int s, int e) { start = s; end = e; }
  * }
  */
+
+// 6ms (28.08%)
+class Solution {
+    public int[][] intervalIntersection(int[][] firstList, int[][] secondList) {
+        int idx1 = 0, idx2 = 0, idx = 0;
+        int[][] res = new int[firstList.length + secondList.length][2];
+        
+
+        while (idx1 < firstList.length && idx2 < secondList.length) {
+            int[] a = firstList[idx1];
+            int[] b = secondList[idx2];
+
+            // no overlap: a[1] < b[0] || b[1] < a[0]
+            // overlap: 
+            if (a[1] >= b[0] && b[1] >= a[0]) {
+                res[idx++] = new int[]{Math.max(a[0], b[0]), Math.min(a[1], b[1])};
+            }
+
+            // move to next
+            if (a[1] < b[1]) {
+                idx1++;
+            } else {
+                idx2++;
+            }
+        }
+
+        return Arrays.copyOf(res, idx);
+    }
+}
+
 class Solution {
     public int[][] intervalIntersection(int[][] a, int[][] b) {
         int i = 0, j = 0;
