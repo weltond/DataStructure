@@ -47,16 +47,16 @@ class Solution {
         int left = dfs(root.left);
         int right = dfs(root.right);
         // 1. path can be a tree 
-        int fork = left + right + root.val;
+        int includeCur = left + right + root.val;
         // 2. path can be single line
-        int single =  Math.max(left, right) + root.val;
+        int notIncludeCur =  Math.max(left, right) + root.val;
            
-        res = Math.max(res, Math.max(fork, single));
+        res = Math.max(res, Math.max(includeCur, notIncludeCur));
            
         // We should only return single line path to 
         //    its parent. If single path is negative,
         //    return 0 meaning we don't chose the path.
-        return Math.max(0, single);
+        return Math.max(0, notIncludeCur);
     }
 }
 
