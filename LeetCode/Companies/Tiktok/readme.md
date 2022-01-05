@@ -6,3 +6,5 @@
 - [1428. Leftmost Column with at Least a One]()
 - [124. Binary Tree Maximum Path Sum]()
 - [79. Word Search]()
+- [1047. Remove All Adjacent Duplicates in a String]()
+- [Design Youtube]()
