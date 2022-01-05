@@ -34,7 +34,38 @@ Note:
 
 ## Answer
 ### Method 1 - Naive - :1ms (42.07%)
+#### Approach 4
+```java
+class Solution {
+    public boolean isAlienSorted(String[] words, String order) {
+        int[] map = new int[26];
+        int priority = 0;
+        for (int i = 0, size = order.length(); i < size; i++) {
+            map[order.charAt(i) - 'a'] = priority++;
+        }
 
+        String prev = words[0];
+        int idx = 1;
+        while (idx < words.length) {
+            String cur = words[idx];
+            int ic = 0, ip = 0, csize = cur.length(), psize = prev.length();
+            while (ic < csize && ip < psize && cur.charAt(ic) == prev.charAt(ip)) {
+                ic++;
+                ip++;
+            } 
+
+            if (ip < psize && (ic == csize || map[cur.charAt(ic) - 'a'] < map[prev.charAt(ip) - 'a'])) {
+                return false;
+            }
+            
+            idx++;
+            prev = cur;
+        }
+
+        return true;
+    }
+}
+```
 #### Approach 3
 
 ```java
