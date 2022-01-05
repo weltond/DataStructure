@@ -1,6 +1,6 @@
 # Phone Interview
 - [54. Spiral Matrix](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/54-Spiral-Matrix.md)
-- [50. Power n]()
+- [50. Power (x,n)](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/Pow.java)
 - [28. Implemet Strstr()]()
 - [953. Verifying an Alien Dictionary]()
 - [1428. Leftmost Column with at Least a One]()
