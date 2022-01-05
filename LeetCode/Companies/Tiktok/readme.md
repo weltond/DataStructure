@@ -4,3 +4,5 @@
 - [28. Implemet Strstr()]()
 - [953. Verifying an Alien Dictionary]()
 - [1428. Leftmost Column with at Least a One]()
+- [124. Binary Tree Maximum Path Sum]()
+- [79. Word Search]()
