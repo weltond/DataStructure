@@ -2,7 +2,7 @@
 - [54. Spiral Matrix](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/54-Spiral-Matrix.md)
 - [50. Power (x,n)](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/Pow.java)
 - [28. Implemet Strstr()](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc28ImplementStrStr.java)
-- [953. Verifying an Alien Dictionary]()
+- [953. Verifying an Alien Dictionary](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/953-Verifying-an-Alien-Dictionary.md)
 - [1428. Leftmost Column with at Least a One]()
 - [124. Binary Tree Maximum Path Sum]()
 - [79. Word Search]()
