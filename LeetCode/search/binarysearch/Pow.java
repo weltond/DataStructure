@@ -50,7 +50,7 @@ class Solution {
     public double helper(double x, int n) {
         // base case
         if (n == 0) return 1;
-        if (n == 1 || x == 1) return x;
+        if (n == 1 || x == 1) return x;     // add x == 1 here, significant speed up the tests. 0ms
 
         double half = helper(x, n/2);
         
