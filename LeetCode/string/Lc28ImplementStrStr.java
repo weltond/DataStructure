@@ -1,5 +1,40 @@
 // https://leetcode.com/problems/implement-strstr/
 
+public int strStr(String haystack, String needle) {
+        if (needle.isBlank()) return 0;
+
+        int idx = 0, hsize = haystack.length(), nsize = needle.length();
+        char nstart = needle.charAt(0);
+
+        while (idx < hsize - nsize + 1) {
+            char h = haystack.charAt(idx++);
+            if (nstart == h) {
+                if (compare(haystack, needle, idx)) {
+                    return idx - 1;
+                }
+            }
+        }
+
+        return -1;
+    }
+
+    private boolean compare(String h, String n, int idx) {
+        int hsize = h.length(), nsize = n.length();
+        int nidx = 1;
+
+        while (idx < hsize && nidx < nsize) {
+            char ch = h.charAt(idx);
+            char cn = n.charAt(nidx);
+
+            if (ch != cn) break;
+
+            idx++;
+            nidx++;
+        }
+
+        return nidx == nsize;
+    }
+
 class Solution {
     public int strStr(String haystack, String needle) {
         if (needle == null || needle.length() == 0) return 0;
