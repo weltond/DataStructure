@@ -4,7 +4,7 @@
 - [28. Implemet Strstr()](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc28ImplementStrStr.java)
 - [953. Verifying an Alien Dictionary](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/953-Verifying-an-Alien-Dictionary.md)
 - [1428. Leftmost Column with at Least a One]()
-- [124. Binary Tree Maximum Path Sum]()
+- [124. Binary Tree Maximum Path Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc124BinaryTreeMaxPathSum.java)
 - [79. Word Search]()
 - [1047. Remove All Adjacent Duplicates in a String]()
 - [Design Youtube]()
