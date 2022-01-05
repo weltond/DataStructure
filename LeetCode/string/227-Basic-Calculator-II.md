@@ -148,7 +148,9 @@ class Solution {
 ```
 ### Method 1 :rabbit: 13ms(81.21%)
 
-
+1. Get current value
+2. Check its previous sign
+3. calculate result and push to stack.
 
 ```java
 class Solution {
@@ -176,7 +178,7 @@ class Solution {
                     stack.push(stack.pop() / tmp);
                 }
                 
-                tmp = 0;
+                tmp = 0;    // reset when sees sign
                 if (i < len)
                     sign = s.charAt(i);
             }
