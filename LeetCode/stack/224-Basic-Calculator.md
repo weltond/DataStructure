@@ -40,6 +40,41 @@ Note:
 
 ```java
 class Solution {
+    int idx = 0, size = 0;
+    public int calculate(String s) {
+        size = s.length();
+
+        return dfs(s);
+    }
+
+    private int dfs(String s) {
+        int sum = 0, sign = 1;
+        while (idx < size) {
+            char c = s.charAt(idx++);
+            if (c == '(') {
+                int ret = dfs(s);
+                sum += ret * sign;
+            } else if (c == ')') {
+                return sum;
+            } else if (c == '+') {
+                sign = 1;
+            } else if (c == '-') {
+                sign = -1;
+            } else if (Character.isDigit(c)) {
+                int val = c - '0';
+                while (idx < size && Character.isDigit(s.charAt(idx))) {
+                    val = val * 10 + s.charAt(idx++) - '0';
+                }
+
+                sum += val * sign;
+            }
+        }
+
+        return sum;
+    }
+}
+
+class Solution {
     int len = 0;
     public int calculate(String s) {
         len = s.length();
