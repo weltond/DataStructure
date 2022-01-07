@@ -69,6 +69,7 @@ class Solution {
             }
         }
         
+        // base case, no operator
         if (ret.size() == 0) {
             ret.add(Integer.valueOf(input));  // digits only
         }
