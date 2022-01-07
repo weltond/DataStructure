@@ -23,8 +23,17 @@ Explanation:
 */
 
 class Solution {
-    // ============ Method1: Recursion + Memoization ==============
+    // ============ Method1: D&C + Memoization ==============
     // 1ms (100%)
+    // divide by each operator
+    // 2 + 4 * 5 ===>
+    //  a. (2) + (4 * 5)
+    //  b. (2 + 4) * (5)
+    /** 
+     * diffWaysToCompute(2 + 4 * 5) = 
+     *      1. diffWaysToCompute(2) & diffWaysToCompute(4 * 5)
+     *      2. diffWaysToCompute(2 + 4) & diffWaysToCompute(5)
+     * */ 
     Map<String, List<Integer>> map = new HashMap();
     public List<Integer> diffWaysToCompute(String input) {
         if (map.containsKey(input)) return map.get(input);
