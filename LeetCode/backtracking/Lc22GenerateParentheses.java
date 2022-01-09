@@ -1,4 +1,41 @@
 // https://leetcode.com/problems/generate-parentheses/
+class Solution {
+    public List<String> generateParenthesis(int n) {
+        List<String> res = new ArrayList<>();
+
+        bt(n, 0, 0, new StringBuilder(), res);
+
+        return res;
+    }
+
+
+    private void bt(int n, int leftAdded, int rightAdded, StringBuilder sb, List<String> res) {
+        // base case, all added
+        if (leftAdded == n && rightAdded == n) {
+            res.add(sb.toString());
+
+            return;
+        }
+
+        // still can add (
+        if (leftAdded < n) {
+            sb.append('(');
+
+            bt(n, leftAdded + 1, rightAdded, sb, res);
+
+            sb.deleteCharAt(sb.length() - 1);
+        }
+
+        // when we can add )
+        if (rightAdded < leftAdded) {
+            sb.append(')');
+
+            bt(n, leftAdded, rightAdded + 1, sb, res);
+
+            sb.deleteCharAt(sb.length() - 1);
+        }
+    }
+}
 
 class Solution {
     // ============== DFS ================
