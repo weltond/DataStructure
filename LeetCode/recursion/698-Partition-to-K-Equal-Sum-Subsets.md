@@ -38,7 +38,7 @@ class Solution {
         
     }
     
-    // subSum:  target val (sum / k)
+    // subSum:  remaining val to meet (sum / k)
     // start:   index of nums
     // k:       k buckets
     // sum:     target val (sum / k)
