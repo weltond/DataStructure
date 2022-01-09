@@ -13,6 +13,37 @@
     ]
 */
 class Solution {
+    public List<List<Integer>> subsetsWithDup(int[] nums) {
+        List<List<Integer>> res = new ArrayList<>();
+
+        Arrays.sort(nums);
+
+        dfs(nums, 0, new ArrayList(), res);
+
+        return res;
+    }
+
+    private void dfs(int[] nums, int idx, List<Integer> list, List<List<Integer>> res) {
+        if (idx == nums.length) {
+            res.add(new ArrayList<>(list));
+            return;
+        }
+
+        list.add(nums[idx]);
+
+        dfs(nums, idx + 1, list, res);
+
+        list.remove(list.size() - 1);
+
+        // skip adding "" if there are duplicate
+        idx++;
+        while (idx < nums.length && nums[idx] == nums[idx - 1]) idx++;
+
+        dfs(nums, idx, list, res);
+    }
+}
+
+class Solution {
     // on each level, add or not add
     // output is :      [[1,2,2],[1,2],[1],[2,2],[2],[]]
     //     if not skip: [[1,2,2],[1,2],[1,2],[1],[2,2],[2],[2],[]]
