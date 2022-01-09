@@ -18,6 +18,7 @@ Note:
 ## Answer
 ### Method 1 - DFS - :rocket: 1ms (100%)
 
+#### Approach 2
 From the view of bucket, every bucket iterates through items in `nums`, and decide if the item can be fit into current bucket.
 
 ```java
@@ -56,6 +57,58 @@ class Solution {
             used[i] = false;
         }
         
+        return false;
+    }
+}
+```
+
+#### Approach 1 - 22204ms (5.02%) 🐢
+
+From the view of `nums`. Put every item into k bucket.
+
+```java
+class Solution {
+    class C {
+        int x;
+    }
+    public boolean canPartitionKSubsets(int[] nums, int k) {
+        if (k > nums.length) return false;
+
+        int sum = 0;
+        for (int i : nums) {
+            sum += i;
+        }
+
+        if (sum % k != 0) return false;
+
+        int target = sum / k;
+        
+        
+        return bt(nums, target, new int[k], 0);
+    }
+
+    private boolean bt(int[] nums, int target, int[] bucket, int idx) {
+        if (idx == nums.length) {
+            // check if all bucket sum equal target
+            for (int i = 0; i < bucket.length; i++) {
+                if (bucket[i] != target) return false;
+            }
+
+            return true;
+        }
+
+        // brute force all nums[index] into bucket
+        for (int i = 0; i < bucket.length; i++) {
+            //prune
+            if (bucket[i] + nums[idx] > target) continue;
+
+            bucket[i] += nums[idx];
+
+            if (bt(nums, target, bucket, idx + 1)) return true;
+
+            bucket[i] -= nums[idx];
+        }
+
         return false;
     }
 }
