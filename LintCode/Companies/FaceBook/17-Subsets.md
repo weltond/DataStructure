@@ -117,6 +117,14 @@ public class Solution {
 
 ### Method 1 - DFS - 
 
+- 1
+                   
+                1 /              \ ""
+                
+             2 /    \ ""       2/    \ ""
+              
+           3/  \"" 3/ \""    3/ \""  3/  \""
+                 
 ```java
 class Solution {
     public List<List<Integer>> subsets(int[] nums) {
@@ -141,6 +149,14 @@ class Solution {
 }
 ```
 
+- 2
+
+                **1,2,3**
+            1/    2|     3\
+           **2,3    3  **     
+         2/  \3   3|
+        ** 3  ** 
+        3|
 ```java
 class Solution {
     public List<List<Integer>> subsets(int[] nums) {
