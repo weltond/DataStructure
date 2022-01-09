@@ -46,7 +46,7 @@ class Solution {
         
         for (int col = 0; col < n; col++) {
             int dIdx = row + col;
-            int aIdx = row - col + n - 1;
+            int aIdx = row - col + n - 1; // to make index positive
             
             if (cols[col] || diag[dIdx] || antidiag[aIdx]) continue;
             
