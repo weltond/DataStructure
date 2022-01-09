@@ -18,6 +18,8 @@ Note:
 ## Answer
 ### Method 1 - DFS - :rocket: 1ms (100%)
 
+From the view of bucket, every bucket iterates through items in `nums`, and decide if the item can be fit into current bucket.
+
 ```java
 class Solution {
     public boolean canPartitionKSubsets(int[] nums, int k) {
