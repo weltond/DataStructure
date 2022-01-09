@@ -39,15 +39,21 @@ class Solution {
     }
     
     private boolean dfs(int[] nums, int subSum, int start, int k, int sum, boolean[] used) {
+        // base case, all bucket matches requirement
         if (k == 0) return true;
         
         if (subSum == 0) {
+            // current bucket is full, move to next bucket.
             return dfs(nums, sum, 0, k - 1, sum, used);
         }
         
         
         for (int i = start; i < nums.length; i++) {
+            // nums[i] has been used
+            // current bucket cannot have nums[i]
             if (used[i] || subSum < nums[i]) continue;
+            
+            // put nums[i] into current bucket.
             used[i] = true;
             
             if (dfs(nums, subSum - nums[i], i + 1, k, sum, used)) {
