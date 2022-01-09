@@ -62,15 +62,66 @@ class Solution {
 }
 ```
 
-#### Approach 1 - 22204ms (5.02%) 🐢
+#### Approach 1 
 
 From the view of `nums`. Put every item into k bucket.
+
+- optimize - 21ms (21.1%)
+
+Sort array and put item from `nums` to bucket in descending order, in order to prune faster.
 
 ```java
 class Solution {
     class C {
         int x;
     }
+    public boolean canPartitionKSubsets(int[] nums, int k) {
+        if (k > nums.length) return false;
+
+        int sum = 0;
+        for (int i : nums) {
+            sum += i;
+        }
+
+        if (sum % k != 0) return false;
+
+        int target = sum / k;
+        
+        Arrays.sort(nums);
+        
+        return bt(nums, target, new int[k], nums.length - 1);
+    }
+
+    private boolean bt(int[] nums, int target, int[] bucket, int idx) {
+        if (idx == -1) {
+            // check if all bucket sum equal target
+            for (int i = 0; i < bucket.length; i++) {
+                if (bucket[i] != target) return false;
+            }
+
+            return true;
+        }
+
+        // brute force all nums[index] into bucket
+        for (int i = 0; i < bucket.length; i++) {
+            if (bucket[i] + nums[idx] > target) continue;
+
+            bucket[i] += nums[idx];
+
+            if (bt(nums, target, bucket, idx - 1)) return true;
+
+            bucket[i] -= nums[idx];
+        }
+
+        return false;
+    }
+}
+```
+
+- No optimize - 22204ms (5.02%) 🐢
+- 
+```java
+class Solution {
     public boolean canPartitionKSubsets(int[] nums, int k) {
         if (k > nums.length) return false;
 
