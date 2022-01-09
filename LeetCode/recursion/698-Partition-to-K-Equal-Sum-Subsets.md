@@ -38,6 +38,11 @@ class Solution {
         
     }
     
+    // subSum:  target val (sum / k)
+    // start:   index of nums
+    // k:       k buckets
+    // sum:     target val (sum / k)
+    // used:    indicate if num in nums has been used or not
     private boolean dfs(int[] nums, int subSum, int start, int k, int sum, boolean[] used) {
         // base case, all bucket matches requirement
         if (k == 0) return true;
