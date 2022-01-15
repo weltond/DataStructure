@@ -48,6 +48,36 @@ class Solution {
 }
 ```
 ### Method 1 - Iteration - :rocket: 0ms
+#### Approach 4 - Best Edition
+Just like Leetcode 26. Remove Duplicate from array.
+
+```java
+class Solution {
+    public ListNode deleteDuplicates(ListNode head) {
+        if (head == null) return null;
+        
+        ListNode slow = head, fast = head;
+
+        while (fast != null) {
+            if (slow.val != fast.val) {
+                // nums[slow] = nums[fast];
+                slow.next = fast;
+                // slow++;
+                slow = slow.next;
+            }
+
+            // fast++;
+            fast = fast.next;
+        }
+
+        // IMPORTANT! Disconnect rest duplicate
+        slow.next = null;
+
+        return head;
+    }
+}
+
+```
 #### Approach 3
 ```java
 /**
