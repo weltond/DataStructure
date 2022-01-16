@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [669]() | [Trim a BST](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/669-trim-a-binary-search-tree.md) | Medium | Tree
 | [752](https://leetcode.com/problems/open-the-lock/description/) | [Open the Lock](https://github.com/weltond/DataStructure/blob/master/LeetCode/BFS/752-open-the-lock.md) |Medium | BFS / Array / Hash / String
 | [1514](https://leetcode.com/problems/path-with-maximum-probability/description/) | [Path with Maximum Probability](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/dijkstra/1514-path-with-maximum-probability.md) | Medium | Graph / Heap / Shortest Path
 | [1631](https://leetcode.com/problems/path-with-minimum-effort/description/) | [Path with Minimum Effort](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/dijkstra/1631-path-with-minimum-effort.md) | Medium | Binary Search / DFS / Union Find / Heap / BFS
