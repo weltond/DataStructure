@@ -4,6 +4,8 @@
 | [1570](https://leetcode.com/problems/dot-product-of-two-sparse-vectors/) | [Dot Product of two Sparse Vectors](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/1570-dot-product-of-two-sparse-vectors.md) | Medium | Array / Hash / Two Pointer / Design
 | [426](https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/) | [Convert Binary Search Tree to Sorted Doubly Linked List](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/426-Convert-BST-to-Sorted-Doubly-LinkedList.md) | Medium | Tree / Stack / DFS / BST / Doubly LinkedList
 | [498](https://leetcode.com/problems/diagonal-traverse/) | [Diagonal Traverse](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/498-diagonal-traverse.md) | Medium | Array / Simulation
+| [236]() | [Lowest Common Ancestor of a BT](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/236-LCA-of-Binary-Tree.md) | Medium | Tree / HashTable
+| [1650](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/) | [Lowest Common Ancestor of a Binary Tree III]()| Medium | Tree / HashTable
 
 # 2019
 | No. | Problem | Difficulty | Tag 
