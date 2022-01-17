@@ -6,6 +6,7 @@
 | [498](https://leetcode.com/problems/diagonal-traverse/) | [Diagonal Traverse](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/498-diagonal-traverse.md) | Medium | Array / Simulation
 | [236]() | [Lowest Common Ancestor of a BT](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/236-LCA-of-Binary-Tree.md) | Medium | Tree / HashTable
 | [1650](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/) | [LCA of a Binary Tree III](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/1650-lowest-common-ancestor-of-a-binary-tree-iii.md) | Medium | Tree / HashTable
+| [235](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | [LCA of a BST](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/235-LCA-of-BST.md) | Easy | Tree / DFS / BST
 
 # 2019
 | No. | Problem | Difficulty | Tag 
