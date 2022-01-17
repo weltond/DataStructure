@@ -2,6 +2,7 @@
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
 | [1570](https://leetcode.com/problems/dot-product-of-two-sparse-vectors/) | [Dot Product of two Sparse Vectors](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/1570-dot-product-of-two-sparse-vectors.md) | Medium | Array / Hash / Two Pointer / Design
+| [426](https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/) | [Convert Binary Search Tree to Sorted Doubly Linked List](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/426-Convert-BST-to-Sorted-Doubly-LinkedList.md) | Medium | Tree / Stack / DFS / BST / Doubly LinkedList
 
 # 2019
 | No. | Problem | Difficulty | Tag 
