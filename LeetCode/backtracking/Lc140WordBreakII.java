@@ -1,4 +1,56 @@
 // https://leetcode.com/problems/word-break-ii/
+class Solution {
+    Map<String, List<String>> map = new HashMap();
+    
+    public List<String> wordBreak(String s, List<String> wordDict) {
+        Set<String> set = new HashSet();
+        
+        for (String word : wordDict)
+            set.add(word);
+        
+        return dfs(s, set);
+    }
+    
+    private List<String> dfs(String s, Set<String> set) {
+        int size = s.length();
+        
+        List<String> res = new ArrayList();
+        
+        // cannot simply return empty res
+        // otherwise we won't know whether it is because no res or reach end
+        if (size == 0) {
+            res.add("");
+            return res;
+        }
+        
+        if (map.containsKey(s)) return map.get(s);
+        
+        for (int i = 1; i <= size; i++) {
+            String sub = s.substring(0, i);
+            if (set.contains(sub)) {
+                List<String> children = dfs(s.substring(i), set);
+                
+                // cannot depend on children size.
+                // otherwise it will always add sub even though there should be no output
+                // if (children.size() == 0) {
+                //     res.add(sub);
+                // }
+                
+                for (String child : children) {
+                    StringBuilder sb = new StringBuilder();
+                    sb.append(sub);
+                    sb.append(child == "" ? "" : " " + child);
+                    
+                    res.add(sb.toString());
+                }
+            }
+        }
+        
+        map.put(s, res);
+        
+        return res;
+    }
+}
 
 class Solution {
     /**
