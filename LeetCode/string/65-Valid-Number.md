@@ -61,7 +61,7 @@ class Solution {
             } 
             
             // 'e'
-            else if (c == 'e') {
+            else if (c == 'e' || c == 'E') {
                 if (hasE || !hasNum) return false;
                 hasE = true;
                 numAfterE = false;
