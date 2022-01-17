@@ -12,6 +12,16 @@
  * }
  */
 
+/**
+input:
+1->2->3->4
+5->6->7->3->4
+
+solution:
+"merge" two list together
+1->2->3->4->5->6->7->3->4
+5->6->7->3->4->1->2->3->4
+*/
 public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         ListNode h1 = headA, h2 = headB;
