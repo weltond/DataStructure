@@ -15,6 +15,7 @@
 | [124](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | [Binary Tree Maximum Path Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc124BinaryTreeMaxPathSum.java) | Hard | DP / Tree / DFS
 | [139](https://leetcode.com/problems/word-break/) | [Word Break](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc139WordBreak.java) | Medium | HashTable / DP / Trie / Memoization
 | [140](https://leetcode.com/problems/word-break-ii/) | [Word Break II](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc140WordBreakII.java) | Hard  | HashTable / DP / Backtracking / Trie / Memoization
+| [680](https://leetcode.com/problems/valid-palindrome-ii/) | [Valid Palindrome II](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/680-Valid-Palindrome-II.md) | Easy | Two Pointers / String / Greedy
 
 # 2019
 | No. | Problem | Difficulty | Tag 
