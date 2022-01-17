@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [1650](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/) | [LCA of a BT III](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/1650-lowest-common-ancestor-of-a-binary-tree-iii.md) | Medium | Tree / HashTable
 | [498](https://leetcode.com/problems/diagonal-traverse/) | [Diagonal Traverse](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/498-diagonal-traverse.md) | Medium | Array / Simulation
 | [1570](https://leetcode.com/problems/dot-product-of-two-sparse-vectors/) | [Dot Product of two Sparse Vectors](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/1570-dot-product-of-two-sparse-vectors.md) | Medium | Array / Hash / Two Pointer / Design
 | [543]() | [Diameter of Binary Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/543-diameter-of-binary-tree.md)|Easy | Tree
