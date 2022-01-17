@@ -52,6 +52,41 @@ class Solution {
 }
 ```
 ### Method 1 - Post order
+#### Approach 3
+
+```java
+class Solution {
+    public void flatten(TreeNode root) {
+        if (root == null) return;
+
+        flatten(root.left);
+        flatten(root.right);
+
+        /** Post order */
+        // 1. left and right has been flatten to a list
+        TreeNode right = root.right;
+        TreeNode left = root.left;
+
+        // 2. connect if left is not null
+        if (root.left != null) {
+            TreeNode last = root.left;
+
+            // find the right most node of root's left
+            while (last.right != null) {
+                last = last.right;
+            }
+
+            // connect the right most node and old root's right
+            last.right = right;
+
+            // make root's right to left
+            root.right = left;
+            root.left = null;
+        }
+    }
+}
+```
+
 #### Approach 2
 ```java
 /**
