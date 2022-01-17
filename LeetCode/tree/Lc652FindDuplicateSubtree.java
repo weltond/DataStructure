@@ -39,40 +39,36 @@ class Solution {
         
         return uid;
     }
-    
-    // ======== Method 1: DFS ==========
-    // 20ms
-    List<TreeNode> ans;
-    Map<String, Integer> map;
-    
+}
+
+class Solution {
+    List<TreeNode> res = new ArrayList<>();
+
+    // <tree_structure, freq>
+    Map<String, Integer> map = new HashMap<>();
     public List<TreeNode> findDuplicateSubtrees(TreeNode root) {
-        if (root == null) return new ArrayList();
-        
-        map = new HashMap();
-        ans = new ArrayList();
-        
         dfs(root);
-        
-        return ans;
+
+        return res;
     }
-    
+
     private String dfs(TreeNode root) {
         if (root == null) return "#";
-        
+
         String left = dfs(root.left);
         String right = dfs(root.right);
-        
-        StringBuilder sb = new StringBuilder();
-        sb.append(root.val).append(",").append(left).append(",").append(right);
-        
-        String ret = sb.toString();
-        if (map.containsKey(ret) && map.get(ret) == 1) {
-            //System.out.println(root.val + ", " + map.get(ret));
-            ans.add(root);
+
+        String subTree = left + "," + right + "," + root.val;
+
+        int freq = map.getOrDefault(subTree, 0);
+
+        // only add once
+        if (freq == 1) {
+            res.add(root);
         }
-        
-        map.put(ret, map.getOrDefault(ret, 0) + 1);
-        
-        return sb.toString();
+
+        map.put(subTree, freq + 1);
+
+        return subTree;
     }
 }
