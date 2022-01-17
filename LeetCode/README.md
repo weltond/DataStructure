@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [498](https://leetcode.com/problems/diagonal-traverse/) | [Diagonal Traverse](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/498-diagonal-traverse.md) | Medium | Array / Simulation
 | [1570](https://leetcode.com/problems/dot-product-of-two-sparse-vectors/) | [Dot Product of two Sparse Vectors](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/1570-dot-product-of-two-sparse-vectors.md) | Medium | Array / Hash / Two Pointer / Design
 | [543]() | [Diameter of Binary Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/543-diameter-of-binary-tree.md)|Easy | Tree
 | [669]() | [Trim a BST](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/669-trim-a-binary-search-tree.md) | Medium | Tree
