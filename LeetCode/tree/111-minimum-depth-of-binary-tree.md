@@ -57,6 +57,25 @@ class Solution {
 }
 ```
 ### Method 1 - DFS 🐰 5ms (66.6%)
+#### Approach 3
+
+```java
+class Solution {
+    public int minDepth(TreeNode root) {
+        if (root == null) return 0;
+        
+        if (root.left == null) {
+            return minDepth(root.right) + 1;
+        }
+
+        if (root.right == null) {
+            return minDepth(root.left) + 1;
+        }
+        
+        return Math.min(minDepth(root.left), minDepth(root.right)) + 1;
+    }
+}
+```
 
 #### Approach 2
 ```java
