@@ -100,6 +100,72 @@ public class Solution {
 
 ### Method 1 - Inorder - :rabbit: 201ms (49.60%)
 
+Use in-order since this is BST.
+
+Use `prev` Node to keep track of nodes in sorted ascending. After traversing, `prev` will be the **tail** node.
+
+Use `dummy` node to keep track of the **head**.
+
+Once traversal completes, connect `head` and `tail`.
+
+```java
+/*
+// Definition for a Node.
+class Node {
+    public int val;
+    public Node left;
+    public Node right;
+
+    public Node() {}
+
+    public Node(int _val) {
+        val = _val;
+    }
+
+    public Node(int _val,Node _left,Node _right) {
+        val = _val;
+        left = _left;
+        right = _right;
+    }
+};
+*/
+
+class Solution {
+    Node prev;
+    public Node treeToDoublyList(Node root) {
+        if (root == null) return null;
+        
+        Node dummy = new Node(0);
+        prev = dummy;
+        
+        // connect them
+        dfs(root);
+        
+        // handle head and tail
+        Node head = dummy.right, tail = prev;
+        
+        head.left = tail;
+        tail.right = head;
+        
+        return dummy.right;
+    }
+    
+    // in-order.
+    // use prev to keep track of BST in sorted
+    private void dfs(Node root) {
+        if (root == null) return;
+        
+        dfs(root.left);
+        
+        root.left = prev;
+        prev.right = root;
+        prev = root;
+        
+        dfs(root.right);
+    }
+}
+```
+
 ```java
 /**
  * Definition of TreeNode:
