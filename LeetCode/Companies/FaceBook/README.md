@@ -9,6 +9,7 @@
 | [235](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | [LCA of a BST](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/235-LCA-of-BST.md) | Easy | Tree / DFS / BST
 | [1644](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-ii/)| [LCA of a Binary Tree II](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/1644-lowest-common-ancestor-of-a-binary-tree-ii.md) | Medium | Tree / DFS
 | [1676](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iv/) | [LCA of Binary Tree IV](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/1676-lowest-common-ancestor-of-a-binary-tree-iv.md) | Medium | Tree / DFS
+| [111](https://leetcode.com/problems/minimum-depth-of-binary-tree/) | [Minimum Depth of Binary Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/111-minimum-depth-of-binary-tree.md) | Easy | Tree / DFS / BFS
 
 
 # 2019
