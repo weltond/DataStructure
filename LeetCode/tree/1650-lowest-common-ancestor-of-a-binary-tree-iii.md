@@ -89,3 +89,25 @@ class Solution {
 ### Method 1 
 1. Store the path from p to the root
 2. Traverse the path from q to the root, the first common point of the two paths is the LCA.
+
+```java
+class Solution {
+    public Node lowestCommonAncestor(Node p, Node q) {
+        Map<Node,Node> map = new HashMap();
+        
+        Node a = p;
+        while (a != null) {
+            map.put(a, a.parent);
+            a = a.parent;
+        }
+        
+        Node b = q;
+        while (b != null) {
+            if (map.containsKey(b)) return b;
+            b = b.parent;
+        }
+        
+        return null;
+    }
+}
+```
