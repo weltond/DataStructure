@@ -50,3 +50,11 @@ Constraints:
 - All Node.val are unique.
 - p != q
 - p and q exist in the tree.
+
+## Answers
+
+Like [Intersection of Two LinkedList](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc160IntersectionOfTwoLinkedList.java)
+
+```java
+
+```
