@@ -1,3 +1,9 @@
+# 2022
+| No. | Problem | Difficulty | Tag 
+| :--------: | :-------: | :---------: | :------:
+| [1570](https://leetcode.com/problems/dot-product-of-two-sparse-vectors/) | [Dot Product of two Sparse Vectors](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/1570-dot-product-of-two-sparse-vectors.md) | Medium | Array / Hash / Two Pointer / Design
+
+# 2019
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
 | [399](https://leetcode.com/problems/evaluate-division/) | [Evaluate Division](https://github.com/weltond/DataStructure/blob/master/LeetCode/unionfind/399-Evaluate-Division.md) | Medium | Union Find / Graph
