@@ -53,8 +53,34 @@ Constraints:
 
 ## Answers
 
-Like [Intersection of Two LinkedList](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc160IntersectionOfTwoLinkedList.java)
+Like [Intersection of Two LinkedList](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc160IntersectionOfTwoLinkedList.java). `parent` is next node. And out goal is to find the intersection.
 
 ```java
+class Solution {
+    public Node lowestCommonAncestor(Node p, Node q) {
+        Node a = p, b = q;
+        
+        while (a != null || b != null) {
+            a = a == null ? q : a.parent;
+            b = b == null ? p : b.parent;
+            
+            if (a == b) return a;
+        }
+        
+        return null;
+    }
+}
 
+class Solution {
+    public Node lowestCommonAncestor(Node p, Node q) {
+        Node a = p, b = q;
+        
+        while (a != b) {
+            a = a == null ? q : a.parent;
+            b = b == null ? p : b.parent;
+        }
+        
+        return a;
+    }
+}
 ```
