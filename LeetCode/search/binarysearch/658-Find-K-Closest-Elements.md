@@ -45,7 +45,7 @@ class Solution {
         while (left < right) {
             int mid = left + (right - left) / 2;
             if (x - arr[mid] > arr[mid + k] - x) left = mid + 1;
-            else right = mid;
+            else right = mid; // cannot be mid - 1. because current mid might be included?
         }
 
         for (int i = left; i < left + k && i < arr.length; i++) {
