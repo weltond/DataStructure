@@ -1,6 +1,7 @@
 # 2022
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [20](https://leetcode.com/problems/valid-parentheses/) | [Valid Parenthese](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/Lc20ValidParentheses.java) | Easy | String / Stack
 | [1570](https://leetcode.com/problems/dot-product-of-two-sparse-vectors/) | [Dot Product of two Sparse Vectors](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/1570-dot-product-of-two-sparse-vectors.md) | Medium | Array / Hash / Two Pointer / Design
 | [426](https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/) | [Convert Binary Search Tree to Sorted Doubly Linked List](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/426-Convert-BST-to-Sorted-Doubly-LinkedList.md) | Medium | Tree / Stack / DFS / BST / Doubly LinkedList
 | [498](https://leetcode.com/problems/diagonal-traverse/) | [Diagonal Traverse](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/498-diagonal-traverse.md) | Medium | Array / Simulation
