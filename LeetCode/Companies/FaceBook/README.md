@@ -17,7 +17,7 @@
 | [140](https://leetcode.com/problems/word-break-ii/) | [Word Break II](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc140WordBreakII.java) | Hard  | HashTable / DP / Backtracking / Trie / Memoization
 | [680](https://leetcode.com/problems/valid-palindrome-ii/) | [Valid Palindrome II](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/680-Valid-Palindrome-II.md) | Easy | Two Pointers / String / Greedy
 | [65](https://leetcode.com/problems/valid-number/) |[Valid Number](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/65-Valid-Number.md) | Hard | String
-
+|[658](https://leetcode.com/problems/find-k-closest-elements/) | [Find K Closest Elements](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/Lc658FindKClosestElements.java) |Medium | Array / Two Pointers / Binary Search / Heap
 # 2019
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
