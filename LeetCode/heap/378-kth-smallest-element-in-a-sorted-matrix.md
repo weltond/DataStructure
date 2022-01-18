@@ -74,7 +74,42 @@ k = O(1)	k = O(n)	k = O(n^2)
 ```
 
 - Method 2 - 0ms (100%)
+```java
+class Solution {
+    public int kthSmallest(int[][] matrix, int k) {
+        int row = matrix.length, col = matrix[0].length;
+        int lo = matrix[0][0], hi = matrix[row - 1][col - 1];
+        
+        while (lo < hi) {
+            int mid = lo + (hi - lo) / 2;
 
+            int cnt = countLessEqual(matrix, mid);
+            
+            if (cnt < k) lo = mid + 1;
+            else hi = mid;
+        }
+        
+        return lo;
+    }
+    
+    private int countLessEqual(int[][] arr, int target) {
+        int cnt = 0, n = arr.length;
+        int i = n - 1, j = 0;
+        
+        while (i >= 0 && j < arr[0].length) {
+            if (arr[i][j] <= target) {
+                j++;    // move to next column
+                cnt += i + 1;   // the whole column is less than target. The count should be the hight of row.
+            } else {
+                i--;
+                
+            }
+        }
+        
+        return cnt;
+    }
+}
+```
 ```java
 public class Solution {
     /**
