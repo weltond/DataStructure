@@ -60,3 +60,28 @@ class Solution {
         return res;
     }
 }
+
+// Method 1 - Two Pointers - O(n) - 8ms (44.62%)
+class Solution {
+    public List<Integer> findClosestElements(int[] arr, int k, int x) {
+        int low = 0, high = arr.length - 1;
+        
+        while (high - low >= k) {
+            int v1 = Math.abs(arr[low] - x), v2 = Math.abs(arr[high] - x);
+            
+            if (v1 > v2) {
+                low++;
+            } else {
+                high--;
+            }
+        }
+        
+        List<Integer> res = new ArrayList();
+        
+        for (int i = low; i <= high; i++) {
+            res.add(arr[i]);
+        }
+        
+        return res;
+    }
+}
