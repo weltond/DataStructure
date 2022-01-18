@@ -92,6 +92,7 @@ class Solution {
         return lo;
     }
     
+    // start counting from bot-left corner.
     private int countLessEqual(int[][] arr, int target) {
         int cnt = 0, n = arr.length;
         int i = n - 1, j = 0;
