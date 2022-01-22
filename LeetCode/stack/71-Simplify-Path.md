@@ -42,6 +42,12 @@ Input: "/a//b////c/d//././/.."
 Output: "/a/b/c"
 ```
 
+**Constraints**:
+
+- 1 <= path.length <= 3000
+- `path` consists of English letters, digits, period '.', slash '/' or '_'.
+- `path` is a valid absolute Unix path.
+
 ## Answer
 ### Method 2 - O(1) space - :rocket: 4ms (90.44%)
 
