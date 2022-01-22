@@ -15,7 +15,47 @@ Input: "race a car"
 Output: false
 ```
 ## Answer
-### Method 1 - Brute Force - :rabbit: 4ms (83.17%)
+
+### Method 1 - Two Pointer - :rabbit: 4ms (83.17%)
+Corner cases:
+
+`"0P"`, `"8V8K;G;K;V;"`
+
+#### Approach 2
+
+```java
+class Solution {
+    public boolean isPalindrome(String s) {
+        int len = s.length();
+        int left = 0, right = len - 1;
+        s = s.toLowerCase();
+        
+        while (left < right) {
+            char c1 = s.charAt(left);
+            char c2 = s.charAt(right);
+            
+            if (!Character.isLetterOrDigit(c1)) {
+                left++;
+                continue;
+            }
+            
+            if (!Character.isLetterOrDigit(c2)) {
+                right--;
+                continue;
+            }
+
+            if (c1 != c2) return false;
+            
+            left++;
+            right--;
+        }
+        
+        return true;
+    }
+}
+```
+
+#### Approach 1
 ```java
 class Solution {
     // 4ms (83.17%)
