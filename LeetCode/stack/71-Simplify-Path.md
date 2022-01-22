@@ -52,6 +52,8 @@ Output: "/a/b/c"
 - `path` is a valid absolute Unix path.
 
 ## Answer
+Corner case: "/../"
+
 ### Method 2 - O(1) space - :rocket: 4ms (90.44%)
 
 ```java
