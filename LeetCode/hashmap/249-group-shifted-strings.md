@@ -35,3 +35,55 @@ Output: [["a"]]
 
 ## Answers
 
+### Method 1 - HashMap - 4ms (44%) 🐰
+
+Use hashmap to store the list for every `key` in the map, where `key` is the pivot for the same pattern.
+
+**Time**: O(N * K)
+
+**Space**: O(N * K)
+
+where N is the length of `strings`, K is the maximum length of a string in `strings`.
+
+```java
+class Solution {
+    public List<List<String>> groupStrings(String[] strings) {
+        // <pivot_string, origin_string>
+        Map<String, List<String>> map = new HashMap();
+        
+        for (String s : strings) {
+            char pivot = s.charAt(0);
+            
+            // "bcd" -> "abc"
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0, len = s.length(); i < len; i++) {
+                char c = shift(s.charAt(i), pivot);
+                sb.append(c);
+            }
+            
+            // map["abc"] = {"abc","bcd"}
+            map.computeIfAbsent(sb.toString(), (o) -> new ArrayList()).add(s);
+        }
+        
+        // get result
+        List<List<String>> res = new ArrayList();
+        
+        // Iterate map - Approach 1
+        // for (Map.Entry<String, List<String>> it : map.entrySet()) {
+        //     List<String> list = it.getValue();
+        //     res.add(list);
+        // }
+        
+        // Iterate map - Approach 2
+        for (List<String> group : map.values()) {
+            res.add(group);
+        }
+        
+        return res;
+    }
+    
+    private char shift(char origin, char pivot) {
+        return (char) ((origin - pivot + 26) % 26 + 'a');   // need "+26" to take care of negative value
+    }
+}
+```
