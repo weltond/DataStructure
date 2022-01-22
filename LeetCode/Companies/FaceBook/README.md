@@ -1,6 +1,7 @@
 # 2022
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [71](https://leetcode.com/problems/simplify-path/) | [Simplify Path](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/71-Simplify-Path.md) | Medium | Stack / String
 | [166](https://leetcode.com/problems/fraction-to-recurring-decimal/) | [Fraction to Recurring Decimal](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/166-fraction-to-recurring-decimal.md) | Medium | HashTable / String / Math
 | [408](https://leetcode.com/problems/valid-word-abbreviation/) | [Valid Word Abbreviation](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/408-valid-word-abbreviation.md) | Easy | String / Two Pointers
 | [20](https://leetcode.com/problems/valid-parentheses/) | [Valid Parenthese](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/Lc20ValidParentheses.java) | Easy | String / Stack
