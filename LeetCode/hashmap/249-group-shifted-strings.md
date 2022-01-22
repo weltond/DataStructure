@@ -1,4 +1,4 @@
-## [249. Group Shifted Strings](https://leetcode.com/problems/group-shifted-strings/)
+## [249. Group Shifted Strings (Premium)](https://leetcode.com/problems/group-shifted-strings/)
 
 ![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
 
