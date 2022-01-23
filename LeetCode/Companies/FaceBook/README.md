@@ -1,6 +1,7 @@
 # 2022
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| 🔒 [314](https://leetcode.com/problems/binary-tree-vertical-order-traversal/) | [Binary Tree Vertical Order Traversal](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/314-binary-tree-vertical-order-traversal.md) | Medium | Tree / HashTable / DFS / BFS
 | 🔒 [249](https://leetcode.com/problems/group-shifted-strings/) | [Group Shifted Strings](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/249-group-shifted-strings.md) | Medium | Array / HashMap / String
 | [125](https://leetcode.com/problems/valid-palindrome/) | [Valid Palindrome](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/125-Valid-Palindrome.md) | Easy | Two Pointer / String
 | [71](https://leetcode.com/problems/simplify-path/) | [Simplify Path](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/71-Simplify-Path.md) | Medium | Stack / String
