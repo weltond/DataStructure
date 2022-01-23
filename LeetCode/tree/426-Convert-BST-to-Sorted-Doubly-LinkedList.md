@@ -1,4 +1,4 @@
-## [426. Convert Binary Search Tree to Sorted Doubly Linked List](https://www.cnblogs.com/grandyang/p/9615871.html)
+## 🔒 [426. Convert Binary Search Tree to Sorted Doubly Linked List](https://www.cnblogs.com/grandyang/p/9615871.html)
 
 ![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
 
@@ -23,6 +23,8 @@ The figure below shows the transformed BST. The solid line indicates the success
 
 Example 1:
 
+![image](https://user-images.githubusercontent.com/9000286/150660402-4093d8c5-898d-4d63-be32-fed78a0ee519.png)
+
 ```
 Input: {4,2,5,1,3}
         4
@@ -35,6 +37,9 @@ Explanation:
 Left: reverse output
 Right: positive sequence output
 ```
+![image](https://user-images.githubusercontent.com/9000286/150660408-d85df7a9-c863-4a1a-ae66-2c313fb96ae1.png)
+
+![image](https://user-images.githubusercontent.com/9000286/150660411-d4b993f6-7493-4018-ba32-bb366a1aecea.png)
 
 Example 2:
 
