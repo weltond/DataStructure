@@ -45,7 +45,7 @@ Output: [[4],[9,5],[3,0,1],[8,2],[7]]
 
 ### Method 1 - 4ms (56.16%)
 
-Pretty much the same as []() but the `compareTo()` method is a bit difference, as this one needs to sort by **idx (from left to right)**, while the other one needs to sort by **value**.
+Pretty much the same as [987. Vertical Ordr Traversal](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/987-Vertical-Order-Traversal.md) but the `compareTo()` method is a bit difference, as this one needs to sort by **idx (from left to right)**, while the other one needs to sort by **value**.
 
 ```java
 /**
