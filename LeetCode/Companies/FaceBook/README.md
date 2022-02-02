@@ -1,6 +1,7 @@
 # 2022
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [415](https://leetcode.com/problems/add-strings/) | [Add Strings](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/415-Add-Strings.md) | Easy | Math / String / Simulation
 | [347](https://leetcode.com/problems/top-k-frequent-elements/) | [Top K Frequent Elements](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/347-Top-K-Frequent-Elements.md) | Medium | Array / HashTable / Heap / Bucket Sort / QuickSelect / D&Q
 | [301](https://leetcode.com/problems/remove-invalid-parentheses/) | [Remove Invalid Parentheses](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/301-remove-invalid-parentheses.md) | Hard | String / Backtracking / BFS
 | 🔒 [339](https://leetcode.com/problems/nested-list-weight-sum/)| [Nested List Weight Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/339-nested-list-weight-sum.md) | Medium | BFS / DFS
