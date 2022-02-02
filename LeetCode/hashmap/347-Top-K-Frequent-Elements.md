@@ -28,6 +28,45 @@ Note:
 
 ```java
 class Solution {
+    public int[] topKFrequent(int[] nums, int k) {
+        Map<Integer, Integer> map = new HashMap();
+        for (int i = 0; i < nums.length; i++) {
+            map.put(nums[i], map.getOrDefault(nums[i], 0) + 1);
+        }
+
+        List[] bucket = new List[nums.length + 1];
+        
+        for (int i : map.keySet()) {
+            int freq = map.get(i);
+            
+            if (bucket[freq] == null) {
+                bucket[freq] = new ArrayList();
+            }
+            
+            bucket[freq].add(i);
+        }
+        
+
+        int[] res = new int[k];
+        
+        int idx = 0;
+        
+        for (int i = bucket.length - 1; i >= 0 && k > 0; i--) {
+            if (bucket[i] == null) continue;
+            
+            List<Integer> list = bucket[i];
+            
+            for (int val : list) {
+                res[idx++] = val;
+                k--;
+            }
+        }
+        
+        return res;
+    }
+}
+
+class Solution {
     public List<Integer> topKFrequent(int[] nums, int k) {
         List<Integer> res = new LinkedList();
         Map<Integer, Integer> map = new HashMap();
