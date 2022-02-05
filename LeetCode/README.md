@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [1762](Buildings With an Ocean View) | [https://leetcode.com/problems/buildings-with-an-ocean-view/](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/1762-buildings-with-an-ocean-view.md) | Medium | Array / Stack / Monotonic Stack 
 | 🔒 [317](https://leetcode.com/problems/shortest-distance-from-all-buildings/) | [Shortest Distance from All Buildings](https://github.com/weltond/DataStructure/blob/master/LeetCode/BFS/317-shortest-distance-from-all-buildings.md) | Hard | Array / BFS / Matrix
 | 🔒 [339](https://leetcode.com/problems/nested-list-weight-sum/)| [Nested List Weight Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/339-nested-list-weight-sum.md) | Medium | BFS / DFS
 | 🔒 [314](https://leetcode.com/problems/binary-tree-vertical-order-traversal/) | [Binary Tree Vertical Order Traversal](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/314-binary-tree-vertical-order-traversal.md) | Medium | Tree / HashTable / DFS / BFS
