@@ -1,6 +1,7 @@
 # 2022
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [1762](https://leetcode.com/problems/buildings-with-an-ocean-view/) | [Buildings With an Ocean View](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/1762-buildings-with-an-ocean-view.md) | Medium | Array / Stack / Monotonic Stack 
 | 🔒 [317](https://leetcode.com/problems/shortest-distance-from-all-buildings/) | [Shortest Distance from All Buildings](https://github.com/weltond/DataStructure/blob/master/LeetCode/BFS/317-shortest-distance-from-all-buildings.md) | Hard | Array / BFS / Matrix
 | [528](https://leetcode.com/problems/random-pick-with-weight/) | [Random Pick With Weight](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/Lc528RandomPickWithWeight.java) | Medium | BinarySearch / Prefix Sum / Randomized / Math
 | [523]() | [Continuous Subarray Sum](https://github.com/weltond/DataStructure/blob/0aaafcb19599c21cdd91f4fef061d5696322b57e/LeetCode/dp/523-Continuous-Subarray-Sum.md) | Medium 
