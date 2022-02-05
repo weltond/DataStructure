@@ -16,9 +16,11 @@ The total travel distance is the sum of the distances between the houses of the 
 
 The distance is calculated using Manhattan Distance, where `distance(p1, p2) = |p2.x - p1.x| + |p2.y - p1.y|`.
 
- 
+
 
 Example 1:
+
+<img width="207" alt="image" src="https://user-images.githubusercontent.com/9000286/152659200-bb83f874-ee8a-472c-8f38-2e8982b76231.png">
 
 ```
 Input: grid = [[1,0,2,0,1],[0,0,0,0,0],[0,0,1,0,0]]
