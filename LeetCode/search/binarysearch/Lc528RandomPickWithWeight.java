@@ -69,6 +69,23 @@ class Solution {
         this.wsum = w;
     }
     
+    Random rand = new Random();
+    public int pickIndex() {
+        int val = rand.nextInt(sum[sum.length - 1]) + 1;    // 1 - sum (inclusive)
+        
+        int left = 0, right = sum.length - 1;
+        
+        while (left < right - 1) {
+            int mid = left + (right - left) / 2;
+            
+            if (sum[mid] == val) return mid;
+            else if (sum[mid] < val) left = mid;
+            else right = mid;
+        }
+        
+        return sum[left] >= val ? left : right;
+    }
+    
     public int pickIndex() {
         int val = new Random().nextInt(wsum[wsum.length - 1]) + 1;
         int left = 0, right = wsum.length - 1;
