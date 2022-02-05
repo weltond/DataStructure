@@ -22,6 +22,33 @@ Note:
 
 ## Answer
 ### Method 2 - Math - :rocket: 2ms (99.78%)
+`(a[i] - a[j]) % k == 0` ==> `a[i] % k == a[j] % k` where `i` range from 0 to len, `j` range from 0 to `i-1`.
+
+Use `HashMap` to store <sum, index>`. It differs from [560. Subarray equals K](https://app.gitbook.com/s/1yBzuwxqO90h7a4SnmnK/data-structure/array#560.-subarray-sum-equals-k) because #560 use map to get **freq**, while here we store **index**. Thus we cannot update `sum` if it already exists.
+`
+```java
+class Solution {
+    public boolean checkSubarraySum(int[] nums, int k) {
+        Map<Integer, Integer> map = new HashMap();
+        
+        map.put(0, -1);
+        
+        int sum = 0;
+        for (int i = 0; i < nums.length; i++) {
+            sum += nums[i];
+            
+            if (map.containsKey(sum % k)) {
+                if (i - map.get(sum % k) >= 2) return true;
+            } else {
+                map.put(sum % k, i);
+            }
+        }
+        
+        return false;
+    }
+}
+```
+
 - Time: O(n)
 - Running sum from first element to index i : sum_i. If we mod k, it will be some format like : `sum_i = k * x + modk_1`
 - Running sum from first element to index j : sum_j. If we mod k, it will be some format like : `sum_j = k * y + modk_2`
