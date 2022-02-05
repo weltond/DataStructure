@@ -42,6 +42,10 @@ Note:
 - Like Quick sort.
 - Continously find the k-th position.
 
+Time: O(N). Worst is O(N^2). Average N + N/2 + N/4 + ... = 2N = O(N)
+
+Space: O(1)
+
 ```java
 class Solution {
     public int[][] kClosest(int[][] points, int K) {
