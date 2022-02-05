@@ -41,6 +41,8 @@ Note:
 ### Method 3 - Binary Search
 we would iterate through every point during each binary search loop to check if our target distance contains exactly **k** points.
 
+If it contains less than **k** points, we will increase our target distance, and vice versa, until we find a target distance that contains exactly **k** points.
+
 Time: Average O(N) = N + N/2 + N/4 +...
 
 Space: O(N)
