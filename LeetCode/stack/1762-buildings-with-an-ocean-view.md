@@ -43,6 +43,10 @@ Explanation: Only building 3 has an ocean view.
 
 ### Method 1 - Monotonic Stack - 45ms (17.22%) 🐢
 
+Time: O(N)
+
+Space: O(N)
+
 ```java
 class Solution {
     public int[] findBuildings(int[] h) {
