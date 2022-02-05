@@ -96,6 +96,9 @@ class Solution {
 ```
 
 ### Method 1 - PQ - :turtle: 37ms (14.44%)
+Time: O(Nlogk)
+
+Space: O(k)
 
 ```java
 class Solution {
