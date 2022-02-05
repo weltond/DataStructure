@@ -1,6 +1,7 @@
 # 2022
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [953]() | [Verifying an Alien Dictionary](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/953-Verifying-an-Alien-Dictionary.md) | Easy | HashMap / String
 | [1762](https://leetcode.com/problems/buildings-with-an-ocean-view/) | [Buildings With an Ocean View](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/1762-buildings-with-an-ocean-view.md) | Medium | Array / Stack / Monotonic Stack 
 | 🔒 [317](https://leetcode.com/problems/shortest-distance-from-all-buildings/) | [Shortest Distance from All Buildings](https://github.com/weltond/DataStructure/blob/master/LeetCode/BFS/317-shortest-distance-from-all-buildings.md) | Hard | Array / BFS / Matrix
 | [528](https://leetcode.com/problems/random-pick-with-weight/) | [Random Pick With Weight](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/Lc528RandomPickWithWeight.java) | Medium | BinarySearch / Prefix Sum / Randomized / Math
