@@ -39,6 +39,11 @@ Note:
 ## Answer
 
 ### Method 3 - Binary Search
+we would iterate through every point during each binary search loop to check if our target distance contains exactly **k** points.
+
+Time: Average O(N) = N + N/2 + N/4 +...
+
+Space: O(N)
 
 ```java
 class Solution {
