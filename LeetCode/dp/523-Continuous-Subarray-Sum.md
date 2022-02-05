@@ -24,7 +24,7 @@ Note:
 ### Method 2 - Math - :rocket: 2ms (99.78%)
 `(a[i] - a[j]) % k == 0` ==> `a[i] % k == a[j] % k` where `i` range from 0 to len, `j` range from 0 to `i-1`.
 
-Use `HashMap` to store <sum, index>`. It differs from [560. Subarray equals K](https://app.gitbook.com/s/1yBzuwxqO90h7a4SnmnK/data-structure/array#560.-subarray-sum-equals-k) because #560 use map to get **freq**, while here we store **index**. Thus we cannot update `sum` if it already exists.
+Use `HashMap` to store `<sum, index>`. It differs from [560. Subarray equals K](https://app.gitbook.com/s/1yBzuwxqO90h7a4SnmnK/data-structure/array#560.-subarray-sum-equals-k) because #560 use map to get **freq**, while here we store **index**. Thus we cannot update `sum` if it already exists.
 `
 ```java
 class Solution {
