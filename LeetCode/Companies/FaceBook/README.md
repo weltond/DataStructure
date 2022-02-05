@@ -1,6 +1,7 @@
 # 2022
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [973](https://leetcode.com/problems/k-closest-points-to-origin/) | [K Closest Points to Origin](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/973-k-closest-points-to-origin.md) | Medium | Array / D&C / Sorting / Heap / QuickSelect
 | [636](https://leetcode.com/problems/exclusive-time-of-functions/) | [Exclusive Time of Functions](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/636-Exclusive-Time-of-Functions.md) | Medium | Array / Stack
 | [953]() | [Verifying an Alien Dictionary](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/953-Verifying-an-Alien-Dictionary.md) | Easy | HashMap / String
 | [1762](https://leetcode.com/problems/buildings-with-an-ocean-view/) | [Buildings With an Ocean View](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/1762-buildings-with-an-ocean-view.md) | Medium | Array / Stack / Monotonic Stack 
