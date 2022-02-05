@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| 🔒 [317](https://leetcode.com/problems/shortest-distance-from-all-buildings/) | [Shortest Distance from All Buildings](https://github.com/weltond/DataStructure/blob/master/LeetCode/BFS/317-shortest-distance-from-all-buildings.md) | Hard | Array / BFS / Matrix
 | 🔒 [339](https://leetcode.com/problems/nested-list-weight-sum/)| [Nested List Weight Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/339-nested-list-weight-sum.md) | Medium | BFS / DFS
 | 🔒 [314](https://leetcode.com/problems/binary-tree-vertical-order-traversal/) | [Binary Tree Vertical Order Traversal](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/314-binary-tree-vertical-order-traversal.md) | Medium | Tree / HashTable / DFS / BFS
 | 🔒 [249](https://leetcode.com/problems/group-shifted-strings/) | [Group Shifted Strings](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/249-group-shifted-strings.md) | Medium | Array / HashMap / String
