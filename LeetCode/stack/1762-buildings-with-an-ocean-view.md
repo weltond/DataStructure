@@ -41,6 +41,44 @@ Explanation: Only building 3 has an ocean view.
 
 ## Answers
 
+### Method 2 - Monotonic Stack (optimize) - 5ms (75.45%) 🐰
+
+Time: O(N)
+
+Space: O(1)
+
+```java
+class Solution {
+    public int[] findBuildings(int[] h) {
+        int maxHeight = -1;
+        
+        List<Integer> list = new ArrayList();
+        
+        for (int i = h.length - 1; i >= 0; i--) {
+            int val = h[i];
+            
+            // If there is no building higher (or equal) than the current one to its right
+            // push it in the list
+            if (maxHeight < val) {
+                list.add(i);
+                
+                // update max building till now
+                maxHeight = val;
+            }
+        }
+        
+        int[] res = new int[list.size()];
+        
+        int idx = res.length - 1;
+        for (int val : list) {
+            res[idx--] = val;
+        }
+        
+        return res;
+    }
+}
+```
+
 ### Method 1 - Monotonic Stack - 45ms (17.22%) 🐢
 
 Time: O(N)
