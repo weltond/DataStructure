@@ -47,6 +47,10 @@ The diagonal "[1, 2]" has different elements.
 
 ### Method 3 - Array property 2ms (41.86%) 
 
+Time: O(M*N)
+
+Space: O(M+N)
+
 ```java
 class Solution {
     /*
@@ -77,6 +81,10 @@ class Solution {
 ```
 ### Method 2 - Compare with Top-left neighbor
 
+Time: O(M*N)
+
+Space: O(1)
+
 ```java
 class Solution {
     public boolean isToeplitzMatrix(int[][] matrix) {
@@ -90,6 +98,10 @@ class Solution {
 ```
 
 ### Method 1 - Group by Category
+
+Time: O(M*N)
+
+Space: O(M + N)
 
 ```java
 class Solution {
