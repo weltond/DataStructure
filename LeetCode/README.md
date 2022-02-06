@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [766](https://leetcode.com/problems/toeplitz-matrix/) | [Toeplitz Matrix](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/766-toeplitz-matrix.md) | Easy | Array / Matrix
 | [1762](https://leetcode.com/problems/buildings-with-an-ocean-view/) | [Buildings With an Ocean View](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/1762-buildings-with-an-ocean-view.md) | Medium | Array / Stack / Monotonic Stack 
 | 🔒 [317](https://leetcode.com/problems/shortest-distance-from-all-buildings/) | [Shortest Distance from All Buildings](https://github.com/weltond/DataStructure/blob/master/LeetCode/BFS/317-shortest-distance-from-all-buildings.md) | Hard | Array / BFS / Matrix
 | 🔒 [339](https://leetcode.com/problems/nested-list-weight-sum/)| [Nested List Weight Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/339-nested-list-weight-sum.md) | Medium | BFS / DFS
