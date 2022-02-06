@@ -1,6 +1,7 @@
 # 2022
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [791](https://leetcode.com/problems/custom-sort-string/) | [Custom Sort String](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/791-custom-sort-string.md) | Medium | String
 | [670](https://leetcode.com/problems/maximum-swap/) | [Maximum Swap](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/670-Maximum-Swap.md) | Medium | Math / Greedy
 | [973](https://leetcode.com/problems/k-closest-points-to-origin/) | [K Closest Points to Origin](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/973-k-closest-points-to-origin.md) | Medium | Array / D&C / Sorting / Heap / QuickSelect
 | [636](https://leetcode.com/problems/exclusive-time-of-functions/) | [Exclusive Time of Functions](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/636-Exclusive-Time-of-Functions.md) | Medium | Array / Stack
