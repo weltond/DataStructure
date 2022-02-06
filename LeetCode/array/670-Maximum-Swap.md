@@ -1,23 +1,45 @@
-// https://leetcode.com/problems/maximum-swap/
+## [71. Simplify Path](https://leetcode.com/problems/maximum-swap/)
 
-/**
+![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
+
+
+You are given an integer num. You can swap two digits at most once to get the maximum valued number.
+
+Return the maximum valued number you can get.
+
+ 
+
 Example 1:
-Input: 2736
+
+```
+Input: num = 2736
 Output: 7236
 Explanation: Swap the number 2 and the number 7.
+```
+
 Example 2:
-Input: 9973
+
+```
+Input: num = 9973
 Output: 9973
 Explanation: No swap.
-*/
-class Solution {
-    // ============= Method 1: Greedy ============
-    // 0ms O(n)
-    /**
-    Intuition:
+``` 
 
-    At each digit of the input number in order, if there is a larger digit that occurs later, we know that the best swap must occur with the digit we are currently considering.
-    */
+**Constraints**:
+
+- 0 <= num <= 108
+
+## Answers
+
+### Method 1 - Greedy - 1ms
+
+At each digit of the input number in order, if there is a larger digit that occurs later, we know that the best swap must occur with the digit we are currently considering.
+
+Time: O(n)
+
+```java
+class Solution {
+
     public int maximumSwap(int num) {
         char[] arr = Integer.toString(num).toCharArray();
         int[] last = new int[10];
@@ -42,3 +64,4 @@ class Solution {
         return num;
     }
 }
+```
