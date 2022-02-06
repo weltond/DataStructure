@@ -79,7 +79,7 @@ class Solution {
     }
 }
 ```
-### Method 2 - Compare with Top-left neighbor
+### Method 2 - Compare with Top-left neighbor - 1ms (85.1%)
 
 Time: O(M*N)
 
