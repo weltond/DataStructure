@@ -1,4 +1,4 @@
-## [71. Simplify Path](https://leetcode.com/problems/maximum-swap/)
+## [670. Maximum Swap](https://leetcode.com/problems/maximum-swap/)
 
 ![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
 
