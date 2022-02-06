@@ -10,6 +10,8 @@ A matrix is Toeplitz if every diagonal from top-left to bottom-right has the sam
 
 Example 1:
 
+<img width="166" alt="image" src="https://user-images.githubusercontent.com/9000286/152667186-976d9909-44a4-4c61-a68a-cf36cd65c3fd.png">
+
 ```
 Input: matrix = [[1,2,3,4],[5,1,2,3],[9,5,1,2]]
 Output: true
