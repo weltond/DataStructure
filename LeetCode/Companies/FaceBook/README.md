@@ -1,6 +1,7 @@
 # 2022
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [1091](https://leetcode.com/problems/shortest-path-in-binary-matrix/) | [Shortest Path in Binary Matrix](https://github.com/weltond/DataStructure/blob/master/LeetCode/BFS/1091-shortest-path-in-binary-matrix.md) | Medium | Array / BFS
 | [1047](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/) | [Remove All Adjacent Duplicates in String](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/1047-remove-all-adjacent-duplicates-in-string.md) | Easy | String / Stack
 | [938](https://leetcode.com/problems/range-sum-of-bst/) | [Range Sum of BST](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/938-Range-Sum-of-BST.md) | Easy | Tree / Recursion
 | [721](https://leetcode.com/problems/accounts-merge/) | [Accounts Merge](https://github.com/weltond/DataStructure/blob/master/LeetCode/unionfind/Lc721AccountsMerge.java) | Medium | Array / DFS / BFS / UF
