@@ -189,15 +189,15 @@ Because we might find more than one option for each cell, we need to check wheth
 
 Let N be the number of cells in the grid.
 
-Time complexity : O(N \log N)O(NlogN).
+Time complexity : O(NlogN).
 
-The difference between this approach and the previous one is that adding and removing items from a priority queue is O(\log N)O(logN), as opposed to O(1)O(1). Given that we are adding/ removing O(N)O(N) items, this gives a time complexity of O(N \log N)O(NlogN).
+The difference between this approach and the previous one is that adding and removing items from a priority queue is O(logN), as opposed to O(1). Given that we are adding/ removing O(N) items, this gives a time complexity of O(N \log N)O(NlogN).
 
-Space complexity : O(N)O(N).
+Space complexity : O(N).
 
 Same as the previous approaches.
 
-Interestingly, there are ways to reduce the time complexity back down to O(N)O(N). The simplest is to recognize that there will be at most 3 unique estimates on the priority queue at any one time, and so to maintain 3 lists instead of a priority queue. Adding and removing from lists is O(1)O(1), bringing the total time complexity back down to O(N)O(N).
+Interestingly, there are ways to reduce the time complexity back down to O(N). The simplest is to recognize that there will be at most 3 unique estimates on the priority queue at any one time, and so to maintain 3 lists instead of a priority queue. Adding and removing from lists is O(1), bringing the total time complexity back down to O(N).
 
 ```java
 class Solution {
