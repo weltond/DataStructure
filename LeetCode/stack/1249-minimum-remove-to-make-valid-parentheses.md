@@ -80,3 +80,43 @@ class Solution {
     }
 }
 ```
+
+### Wrong 
+
+Wrong when input s is `"())()((("`.
+
+Output is `"))(("` while it should be `"()()"`
+
+```java
+class Solution {
+    public String minRemoveToMakeValid(String s) {
+        char[] arr = s.toCharArray();
+        
+        int left = 0, right = 0;
+        for (char c : arr) {
+            if (c == '(') {
+                left++;
+            }
+            
+            if (c == ')') {
+                if (left == 0) right++;
+                else left--;
+            }
+        }
+        
+        StringBuilder sb = new StringBuilder();
+        
+        for (char c : arr) {
+            if (c == '(' && left > 0) {
+                left--; // skip (
+            } else if (c == ')' && right > 0) {
+                right--;    // skip )
+            } else {
+                sb.append(c);
+            }
+        }
+        
+        return sb.toString();
+    }
+}
+```
