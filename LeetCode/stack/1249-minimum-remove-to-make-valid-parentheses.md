@@ -83,6 +83,83 @@ class Solution {
 
 ### Wrong 
 
+#### 2 TLE
+
+Like [301. Remove Invalid Parenthese](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/301-remove-invalid-parentheses.md). It causes TLE.
+
+```java
+class Solution {
+    String res;
+    public String minRemoveToMakeValid(String s) {
+        char[] arr = s.toCharArray();
+        
+        int left = 0, right = 0;
+        for (char c : arr) {
+            if (c == '(') {
+                left++;
+            }
+            
+            if (c == ')') {
+                if (left == 0) right++;
+                else left--;
+            }
+        }
+        
+        dfs(s, 0, left, right);
+        
+        return res;
+    }
+    
+    private boolean dfs(String s, int idx, int left, int right) {
+        if (left == 0 && right == 0) {
+            
+            if (isValid(s)) {
+                res = s;
+                
+                return true;
+            }
+            
+            return false;
+        }
+        
+        for (int i = idx, len = s.length(); i < len; i++) {
+            char c = s.charAt(i);
+            
+            if (c == '(' || c == ')') {
+                StringBuilder sb = new StringBuilder(s);
+                if (c == '(' && left > 0) {
+                    sb.deleteCharAt(i);
+                    if (dfs(sb.toString(), i, left - 1, right)) {
+                        return true;
+                    }
+                } else if (c == ')' && right > 0) {
+                    sb.deleteCharAt(i);
+                    if (dfs(sb.toString(), i, left, right - 1)) {
+                        return true;
+                    }
+                }
+            }
+        }
+        
+        return false;
+    }
+    
+    private boolean isValid(String s) {
+        int cnt = 0;
+        for (char c : s.toCharArray()) {
+            if (c == '(') cnt++;
+            if (c == ')') {
+                if (cnt <= 0) return false;
+                cnt--;
+            }
+        }
+        
+        return cnt == 0;
+    }
+}
+```
+
+#### 1 - Wrong res
 Wrong when input s is `"())()((("`.
 
 Output is `"))(("` while it should be `"()()"`
