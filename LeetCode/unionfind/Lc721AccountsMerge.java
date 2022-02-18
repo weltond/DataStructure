@@ -1,5 +1,6 @@
 // https://leetcode.com/problems/accounts-merge/
 
+// UF Time: O(NKlogNK), Space: O(NK)
 public class Solution {
     /**
      * @param accounts: List[List[str]]
