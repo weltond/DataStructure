@@ -1,6 +1,7 @@
 # 2022
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [346](https://leetcode.com/problems/moving-average-from-data-stream/) | [Moving Average from Data Stream](https://github.com/weltond/DataStructure/blob/master/LeetCode/queue/346-moving-average-from-data-stream.md) | Easy | Array / Design / Queue / Stream
 | [766](https://leetcode.com/problems/toeplitz-matrix/) | [Toeplitz Matrix](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/766-toeplitz-matrix.md) | Easy | Array / Matrix
 | [791](https://leetcode.com/problems/custom-sort-string/) | [Custom Sort String](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/791-custom-sort-string.md) | Medium | String
 | [670](https://leetcode.com/problems/maximum-swap/) | [Maximum Swap](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/670-Maximum-Swap.md) | Medium | Math / Greedy
