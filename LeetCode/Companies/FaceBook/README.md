@@ -1,6 +1,7 @@
 # 2022
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [938](https://leetcode.com/problems/range-sum-of-bst/) | [Range Sum of BST](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/938-Range-Sum-of-BST.md) | Easy | Tree / Recursion
 | [721](https://leetcode.com/problems/accounts-merge/) | [Accounts Merge](https://github.com/weltond/DataStructure/blob/master/LeetCode/unionfind/Lc721AccountsMerge.java) | Medium | Array / DFS / BFS / UF
 | [346](https://leetcode.com/problems/moving-average-from-data-stream/) | [Moving Average from Data Stream](https://github.com/weltond/DataStructure/blob/master/LeetCode/queue/346-moving-average-from-data-stream.md) | Easy | Array / Design / Queue / Stream
 | [766](https://leetcode.com/problems/toeplitz-matrix/) | [Toeplitz Matrix](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/766-toeplitz-matrix.md) | Easy | Array / Matrix
