@@ -86,6 +86,26 @@ class Solution {
         return res - root.val;
     }
     
+    // 0ms
+    public int rangeSumBST(TreeNode root, int low, int high) {
+        if (root == null) return 0;
+        
+        
+        if (low <= root.val && root.val <= high) {
+            return root.val + rangeSumBST(root.left, low, high) + rangeSumBST(root.right, low, high);
+        }
+        
+        if (root.val > high) {
+            return rangeSumBST(root.left, low, high);
+        }
+        
+        if (root.val < low) {
+            return rangeSumBST(root.right, low, high);
+        }
+        
+        return -1;
+    }
+    
     // Approach 2: 1ms(61.11%)
     public int rangeSumBST(TreeNode root, int L, int R) {
         if (root == null) {
