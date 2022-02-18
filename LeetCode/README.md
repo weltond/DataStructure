@@ -248,7 +248,7 @@
 | [951](https://leetcode.com/problems/flip-equivalent-binary-trees/) | [Flip Equivalent Binary Trees](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc951FlipEquivalentBinaryTrees.java) | Medium | Tree
 | [783](https://leetcode.com/problems/minimum-distance-between-bst-nodes/) | [Min Distance Between BST Nodes](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc783MinDistanceBetweenBSTnodes.java) | Easy | Tree / Recursion
 | [958](https://leetcode.com/problems/check-completeness-of-a-binary-tree/) | [Check Completeness of Binary Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc958CheckCompletenessOfBinaryTree.java) | Medium | Tree / BFS
-| [938](https://leetcode.com/problems/range-sum-of-bst/) | [Range Sum of BST](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc938RangeSumofBST.java) | Easy | Tree / Recursion
+| [938](https://leetcode.com/problems/range-sum-of-bst/) | [Range Sum of BST](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/938-Range-Sum-of-BST.md) | Easy | Tree / Recursion
 | [979](https://leetcode.com/problems/distribute-coins-in-binary-tree/) | [Distribute Coins in Binary Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc979DistributeCoinsInBinaryTree.java) | Medium | Tree / DFS
 | [993](https://leetcode.com/problems/cousins-in-binary-tree/) | [Cousins in Binary Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc993CousinsInBinaryTree.java) | Easy | Tree / BFS / DFS
 | [998](https://leetcode.com/problems/maximum-binary-tree-ii/) | [Maximum Binary Tree II](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc998MaximumBinaryTreeII.java) | Medium | Tree
