@@ -1,6 +1,7 @@
 # 2022
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [827](https://leetcode.com/problems/making-a-large-island/) | [Making a Large Island](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/827-making-a-large-island.md) | Hard | DFS / BFS / Union Find / Array
 | [1891](https://leetcode.com/problems/cutting-ribbons/) | [Cutting Ribbons](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/1891-cutting-ribbons.md) | Medium | Array / Binary Search
 | [1011](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/) | [Capacity to Ship Packages within D Days](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/1011-capacity-to-ship-packages-within-d-days.md) | Medium | Array / Binary Search / Greedy
 | [1249](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/) | [Minimum Remove to Make Valid Parentheses](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/1249-minimum-remove-to-make-valid-parentheses.md) | Medium | String / Stack
