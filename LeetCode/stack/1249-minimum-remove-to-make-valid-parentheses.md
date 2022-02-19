@@ -52,6 +52,8 @@ Constraints:
 
 A key observation you might have made from the previous algorithm is that for all invalid ")", we know immediately that they are invalid (they are the ones we were putting in the set). It is the "(" that we don't know about until the end (as they are what was left on the stack at the end). We could be building up a string builder in that first loop that has all of the invalid ")" removed. This would be half the problem solved in the first loop, in O(n)O(n) time.
 #### Approach 2 - Shortened
+Time: O(N), Space: O(N)
+
 ```java
 class Solution {
 
@@ -90,6 +92,7 @@ class Solution {
 }
 ```
 #### Approach 1 - StringBuilder
+Time: O(N), Space: O(N)
 
 ```java
 class Solution {
@@ -118,6 +121,7 @@ class Solution {
 }
 ```
 ### Method 1 - Stack - :rocket: 10ms (97.33%)
+Time: O(4N), Space: O(N)
 
 - Use stack to store the index. If `(`, push positive index, if `)`, push negative index if stack's top is not positive (`(`).
 
