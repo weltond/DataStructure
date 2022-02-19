@@ -1,6 +1,7 @@
 # 2022
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [1011](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/) | [Capacity to Ship Packages within D Days](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/1011-capacity-to-ship-packages-within-d-days.md) | Medium | Array / Binary Search / Greedy
 | [1249](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/) | [Minimum Remove to Make Valid Parentheses](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/1249-minimum-remove-to-make-valid-parentheses.md) | Medium | String / Stack
 | [1091](https://leetcode.com/problems/shortest-path-in-binary-matrix/) | [Shortest Path in Binary Matrix](https://github.com/weltond/DataStructure/blob/master/LeetCode/BFS/1091-shortest-path-in-binary-matrix.md) | Medium | Array / BFS
 | [1047](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/) | [Remove All Adjacent Duplicates in String](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/1047-remove-all-adjacent-duplicates-in-string.md) | Easy | String / Stack
