@@ -292,6 +292,8 @@ class Solution {
         
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[0].length; j++) {
+            
+                // only count if the empty land can be reached by all building
                 if (reachBuilding[i][j] == totalBuilding && grid[i][j] < 0) {
                     res = Math.max(res, grid[i][j]);
                 }
@@ -324,11 +326,13 @@ class Solution {
                 for (int k = 0; k < 4; k++) {
                     int nx = cx + dir[k], ny = cy + dir[k + 1];
                     
+                    // out of bound; visited; building or block
                     if (nx < 0 || ny < 0 || nx >= grid.length || ny >= grid[0].length || visited[nx][ny] || grid[nx][ny] > 0) continue;
                     
                     grid[nx][ny] += -step;
                     visited[nx][ny] = true;
                     
+                    // here, the empty land can be reached by a building.
                     reachBuilding[nx][ny] += 1;
                     
                     q.offer(new int[]{nx, ny});
