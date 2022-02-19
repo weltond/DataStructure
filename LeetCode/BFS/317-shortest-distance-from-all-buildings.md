@@ -372,3 +372,75 @@ class Solution {
     }
 };
 ```
+
+## Wrong Solution
+
+Failed case : `[[1,0,1,0,1]]`. Output: 2, Expected: -1
+
+```java
+class Solution {
+    int[] dir = {0, 1, 0, -1, 0};
+    int res = Integer.MIN_VALUE;
+    
+    public int shortestDistance(int[][] grid) {
+        
+        
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[0].length; j++) {
+                if (grid[i][j] == 1) {
+                    if (!bfs(grid, i, j)) return -1;    // building cannot be reached
+                }
+            }
+        }
+        
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[0].length; j++) {
+                if (grid[i][j] < 0) {
+                    res = Math.max(res, grid[i][j]);
+                }
+            }
+        }
+        return res == Integer.MIN_VALUE ? -1 : Math.abs(res);
+    }
+    
+    private boolean bfs(int[][] grid, int x, int y) {
+        Deque<int[]> q = new LinkedList();
+        
+        q.offer(new int[]{x, y});
+        
+        int step = 0;
+        
+        boolean[][] visited = new boolean[grid.length][grid[0].length];
+        
+        boolean buildingCanBeReached = false;
+        
+        visited[x][y] = true;
+        
+        while (!q.isEmpty()) {
+            step++;
+            
+            int size = q.size();
+            for (int i = 0; i < size; i++) {
+                int[] cur = q.poll();
+                int cx = cur[0], cy = cur[1];
+                
+                for (int k = 0; k < 4; k++) {
+                    int nx = cx + dir[k], ny = cy + dir[k + 1];
+                    
+                    if (nx < 0 || ny < 0 || nx >= grid.length || ny >= grid[0].length || visited[nx][ny] || grid[nx][ny] > 0) continue;
+                    
+                    grid[nx][ny] += -step;
+                    visited[nx][ny] = true;
+                    buildingCanBeReached = true;
+                    
+                    q.offer(new int[]{nx, ny});
+                }
+            }
+        }
+        
+        return buildingCanBeReached;
+    }
+    
+    
+}
+```
