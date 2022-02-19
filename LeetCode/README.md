@@ -1,6 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
-| {827](https://leetcode.com/problems/making-a-large-island/) | [Making a Large Island](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/827-making-a-large-island.md) | Hard | DFS / BFS / Union Find / Array
+| [827](https://leetcode.com/problems/making-a-large-island/) | [Making a Large Island](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/827-making-a-large-island.md) | Hard | DFS / BFS / Union Find / Array
 | [1891](https://leetcode.com/problems/cutting-ribbons/) | [Cutting Ribbons](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/1891-cutting-ribbons.md) | Medium | Array / Binary Search
 | [1011](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/) | [Capacity to Ship Packages within D Days](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/1011-capacity-to-ship-packages-within-d-days.md) | Medium | Array / Binary Search / Greedy
 | [1091](https://leetcode.com/problems/shortest-path-in-binary-matrix/) | [Shortest Path in Binary Matrix](https://github.com/weltond/DataStructure/blob/master/LeetCode/BFS/1091-shortest-path-in-binary-matrix.md) | Medium | Array / BFS
