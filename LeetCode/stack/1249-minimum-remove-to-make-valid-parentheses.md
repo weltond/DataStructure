@@ -121,7 +121,7 @@ class Solution {
 }
 ```
 ### Method 1 - Stack - :rocket: 10ms (97.33%)
-Time: O(4N), Space: O(N)
+Time: O(N), Space: O(N)
 
 - Use stack to store the index. If `(`, push positive index, if `)`, push negative index if stack's top is not positive (`(`).
 
