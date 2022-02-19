@@ -48,7 +48,76 @@ Constraints:
 - `1 <= s.length <= 10^5`
 - `s[i]` is one of  `'('` , `')'` and lowercase English letters.
 ## Answer
-### Method 1 - Stack - :turtle: 51ms (13.50%)
+### Method 2 - Two Pass 
+
+A key observation you might have made from the previous algorithm is that for all invalid ")", we know immediately that they are invalid (they are the ones we were putting in the set). It is the "(" that we don't know about until the end (as they are what was left on the stack at the end). We could be building up a string builder in that first loop that has all of the invalid ")" removed. This would be half the problem solved in the first loop, in O(n)O(n) time.
+#### Approach 2 - Shortened
+```java
+class Solution {
+
+    public String minRemoveToMakeValid(String s) {
+
+        // Pass 1: Remove all invalid ")"
+        StringBuilder sb = new StringBuilder();
+        int openSeen = 0;
+        int balance = 0;
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (c == '(') {
+                openSeen++;
+                balance++;
+            } if (c == ')') {
+                if (balance == 0) continue;
+                balance--;
+            }
+            sb.append(c);
+        }
+
+        // Pass 2: Remove the rightmost "("
+        StringBuilder result = new StringBuilder();
+        int openToKeep = openSeen - balance;
+        for (int i = 0; i < sb.length(); i++) {
+            char c = sb.charAt(i);
+            if (c == '(') {
+                openToKeep--;
+                if (openToKeep < 0) continue;
+            }
+            result.append(c);
+        }
+
+        return result.toString();
+    }
+}
+```
+#### Approach 1 - StringBuilder
+
+```java
+class Solution {
+
+    private StringBuilder removeInvalidClosing(CharSequence string, char open, char close) {
+        StringBuilder sb = new StringBuilder();
+        int balance = 0;
+        for (int i = 0; i < string.length(); i++) {
+            char c = string.charAt(i);
+            if (c == open) {
+                balance++;
+            } if (c == close) {
+                if (balance == 0) continue;
+                balance--;
+            }
+            sb.append(c);
+        }  
+        return sb;
+    }
+
+    public String minRemoveToMakeValid(String s) {
+        StringBuilder result = removeInvalidClosing(s, '(', ')');
+        result = removeInvalidClosing(result.reverse(), ')', '(');
+        return result.reverse().toString();
+    }
+}
+```
+### Method 1 - Stack - :rocket: 10ms (97.33%)
 
 - Use stack to store the index. If `(`, push positive index, if `)`, push negative index if stack's top is not positive (`(`).
 
