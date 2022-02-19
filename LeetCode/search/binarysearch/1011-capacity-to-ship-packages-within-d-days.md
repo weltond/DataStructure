@@ -72,6 +72,15 @@ The right bound is sum(A).
 
 ```java
 class Solution {
+   /*
+   input: [1,2,3,4,5,6,7,8,9,10]    5
+   output:
+     10,55->32
+     10,32->21
+     10,21->15
+     10,15->12
+     13,15->14
+   */
     public int shipWithinDays(int[] weights, int days) {
         int right = 0, left = weights[0];
         
