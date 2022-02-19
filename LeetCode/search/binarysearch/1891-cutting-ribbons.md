@@ -58,7 +58,7 @@ Explanation: You cannot obtain k ribbons of the same positive integer length.
 
 ### Method 1 - Binary Search - 37ms (71.71%)
 
-Note the difference with [](). 
+Note the difference with [1011.Capacity to ship Packages within D days](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/1011-capacity-to-ship-packages-within-d-days.md). 
 
 Here we use `mid = (right + left + 1) / 2`; `left = mid; right = mid - 1` and return when `need >= k` rather than `need > k`.
 
