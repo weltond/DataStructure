@@ -56,6 +56,8 @@ Explanation:
 ## Answers
 ### Method 1 - Binary Search - 14ms (43.12%)
 
+**Same as [Split Array Largest Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/410-Split-Array-Largest-Sum.md)**.
+
 Given the number of bags,
 
 return the minimum capacity of each bag,
