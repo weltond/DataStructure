@@ -29,6 +29,8 @@ where the largest sum among the two subarrays is only 18.
 ```
 
 ### Method 1 - Binary Search - :rocket: 0ms 
+**Same as [1011. Capacity to ship Packages within D Days](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/1011-capacity-to-ship-packages-within-d-days.md).**
+
 Idea:
 - If m = 1, the res is the sum of the array.
 - If m = n, the res is the max num of the array.
