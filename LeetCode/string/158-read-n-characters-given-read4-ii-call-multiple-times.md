@@ -114,7 +114,7 @@ public class Solution extends Reader4 {
         int index = 0;  // # of chars we read
         
         while (index < n) {
-            // read4 if buf4Index is 0.
+            // call read4() only when buf4Index is 0.
             if (buf4Index == 0) {
                 buf4Size = read4(buf4);
             }
