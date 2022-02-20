@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [157](https://leetcode.com/problems/read-n-characters-given-read4/)| [Read N Characters Given Read4](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/157-read-n-characters-given-read4.md) | Easy | String / Simulation
 | 🔒 [158](https://leetcode.com/problems/read-n-characters-given-read4-ii-call-multiple-times/) | [Read N Characters Given Read4 II - Call multiple times](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/158-read-n-characters-given-read4-ii-call-multiple-times.md) | Hard | String / Simulation 
 | [1428](https://leetcode.com/problems/leftmost-column-with-at-least-a-one/) | [Leftmost Column with at least a One](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/1428-leftmost-column-with-at-least-a-one.md) | Medium | Array / Binary Search / Matrix
 | [827](https://leetcode.com/problems/making-a-large-island/) | [Making a Large Island](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/827-making-a-large-island.md) | Hard | DFS / BFS / Union Find / Array
