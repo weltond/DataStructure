@@ -42,7 +42,7 @@ Constraints:
 - grid[i][j] is either 0 or 1.
 
 ## Answers
-### Approach 1 - DFS
+### Approach 1 - DFS - 160ms (65.40%)
 - Explanation
 
 Only 2 steps:
