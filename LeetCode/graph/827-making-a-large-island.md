@@ -55,6 +55,10 @@ Only 2 steps:
 2. Space O(N^2)
 
 ```java
+/**
+input: [[1,0,1],[0,1,1],[1,0,0]]
+output: map: {2=1, 3=3, 4=1}
+*/
 class Solution {
     int[] dir = {0, 1, 0, -1, 0};
     public int largestIsland(int[][] grid) {
