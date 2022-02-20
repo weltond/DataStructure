@@ -89,6 +89,8 @@ Explanation: After calling your read method, buf should contain "abcdABCD1234". 
 ## Answers
 ### Method 1 - 0ms
 
+Solution of [158.Read N Characters Given Read4 II - Multiple read]() also applies to this one.
+
 ```java
 /**
  * The read4 API is defined in the parent class Reader4.
