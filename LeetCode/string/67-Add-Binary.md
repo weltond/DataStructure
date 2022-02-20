@@ -28,10 +28,57 @@ Output: "10101"
 
 
 ## Answers
-### Approach 2 - Bit - Facebook -
+### Approach 2 - Bit - Facebook - 20ms (5.80%)
+Here XOR is a key as well, because it's a sum of two binaries without taking carry into account.
+
+To find current carry is quite easy as well, it's AND of two input numbers, shifted one bit to the left.
+
+<img width="236" alt="image" src="https://user-images.githubusercontent.com/9000286/154856526-b5f2c3e1-55ba-4155-a52d-8d5d741d6576.png">
 
 ```java
+import java.math.BigInteger;
+class Solution {
+    public String addBinary(String a, String b) {
+        // radix is 2
+        BigInteger i = new BigInteger(a, 2), j = new BigInteger(b, 2);
+        BigInteger zero = new BigInteger("0", 2);
+        System.out.println(i+","+j);
+        BigInteger carry, answer;
 
+        while (j.compareTo(zero) != 0) {
+            answer = i.xor(j);
+            carry = i.and(j).shiftLeft(1);
+            
+            i = answer;
+            j = carry;
+        }
+        
+        return i.toString(2);
+    }
+}
+```
+
+- Use long. Wrong because `a` or `b` may out of scope.
+
+```java
+class Solution {
+    public String addBinary(String a, String b) {
+        // radix is 2
+        Long i = Long.parseLong(a, 2), j = Long.parseLong(b, 2);
+        
+        System.out.println(i+","+j);
+
+        while (j != 0) {
+            long answer = i ^ j;
+            long carry = (i & j) << 1;
+            
+            i = answer;
+            j = carry;
+        }
+        
+        return Long.toString(i, 2);
+    }
+}
 ```
 
 ### Approach 1 - Add - 🚀 1ms (100%)
