@@ -23,7 +23,7 @@ buf4[] is a destination, not a source. The results from read4 will be copied to 
 
 Below is a high-level example of how read4 works:
 
-<img width="163" alt="image" src="https://user-images.githubusercontent.com/9000286/154860188-02cad697-a588-44aa-b3e5-df6261a2e6ec.png">
+<img width="363" alt="image" src="https://user-images.githubusercontent.com/9000286/154860188-02cad697-a588-44aa-b3e5-df6261a2e6ec.png">
 
 ```
 File file("abcde"); // File is "abcde", initially file pointer (fp) points to 'a'
