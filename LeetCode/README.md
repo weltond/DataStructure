@@ -387,7 +387,7 @@
 | [63](https://leetcode.com/problems/unique-paths-ii/) | [Unique Paths II](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/Lc63UniquePathsII.java) | Medium | Array / DP
 | [207](https://leetcode.com/problems/course-schedule/) | [Course Schedule](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/Lc207CourseSchedule.java) | Medium | DFS / BFS / Graph / Topological
 | [210](https://leetcode.com/problems/course-schedule-ii/) | [Course Schedule II](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/Lc210CourseScheduleII.java) | Medium | DFS / BFS / Graph / Topological
-| [238](https://leetcode.com/problems/product-of-array-except-self/) | [Product of Array Except Self](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/Lc238ProductOfArrayExceptSelf.java) | Medium | Array
+| [238](https://leetcode.com/problems/product-of-array-except-self/) | [Product of Array Except Self](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/238-Product-Of-Array-ExceptSelf.md) | Medium | Array
 | [2](https://leetcode.com/problems/add-two-numbers/) | [Add Two Numbers](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc2AddTwoNumbers.java) | Medium | LinkedList / Math
 | [17](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | [Letter Combinations of a Phone Number](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc17LettersCombinationsofPhone.java) | Medium | String / Backtracking
 | [140](https://leetcode.com/problems/word-break-ii/) | [Word Break II](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc140WordBreakII.java) | Hard | DP / Backtracking
