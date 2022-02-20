@@ -51,7 +51,41 @@ Constraints:
 - mat[i] is sorted in non-decreasing order.
 
 ## Answers
+### Method 2 - Optimize
+we didn't need to finish searching all the rows? One example of this was row 3 on the example in the animation. At the point shown in the image below, it was clear that row 3 could not possibly be better than the minimum we'd found so far.
+
+<img width="263" alt="image" src="https://user-images.githubusercontent.com/9000286/154827734-2ae33cd8-91dc-497a-b8f4-4f32ecd21c06.png">
+
+Therefore, an optimization we could have made was to keep track of the minimum index so far, and then abort the search on any rows where we have discovered a 0 at, or to the right of, that minimum index.
+
+Time: O(N + M), Space: O(1)
+
+```java
+class Solution {
+    public int leftMostColumnWithOne(BinaryMatrix binaryMatrix) {
+        int rows = binaryMatrix.dimensions().get(0);
+        int cols = binaryMatrix.dimensions().get(1);
+
+        // Set pointers to the top-right corner.
+        int currentRow = 0;
+        int currentCol = cols - 1;
+    
+        // Repeat the search until it goes off the grid.
+        while (currentRow < rows && currentCol >= 0) {
+            if (binaryMatrix.get(currentRow, currentCol) == 0) {
+                currentRow++;
+            } else {
+                currentCol--; 
+            }
+        }
+    
+        // If we never left the last column, this is because it was all 0's.
+        return (currentCol == cols - 1) ? -1 : currentCol + 1;
+    }
+}
+```
 ### Method 1 - Binary Search - 🚀 0ms
+Time: O(NlogM), Space: O(1)
 
 ```java
 /**
