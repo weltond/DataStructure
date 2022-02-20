@@ -1,6 +1,7 @@
 # 2022
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [67](https://leetcode.com/problems/add-binary/) | [Add Binary](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/67-Add-Binary.md) | Easy | Math / String
 | [1428](https://leetcode.com/problems/leftmost-column-with-at-least-a-one/) | [Leftmost Column with at least a One](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/1428-leftmost-column-with-at-least-a-one.md) | Medium | Array / Binary Search / Matrix
 | [827](https://leetcode.com/problems/making-a-large-island/) | [Making a Large Island](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/827-making-a-large-island.md) | Hard | DFS / BFS / Union Find / Array
 | [1891](https://leetcode.com/problems/cutting-ribbons/) | [Cutting Ribbons](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/1891-cutting-ribbons.md) | Medium | Array / Binary Search
