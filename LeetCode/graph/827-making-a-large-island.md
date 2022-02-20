@@ -42,6 +42,99 @@ Constraints:
 - grid[i][j] is either 0 or 1.
 
 ## Answers
+### Approach 1 - DFS
+- Explanation
+
+Only 2 steps:
+
+1. Explore every island using DFS, count its area, give it an island index and save the result to a {index: area} map.
+2. Loop every cell == 0, check its connected islands and calculate total islands area.
+
+- Complexity
+1. Time O(N^2)
+2. Space O(N^2)
+
+```java
+class Solution {
+    int[] dir = {0, 1, 0, -1, 0};
+    public int largestIsland(int[][] grid) {
+        Map<Integer, Integer> map = new HashMap();  // <index, count>
+        
+        int n = grid.length;
+        int index = 2;
+        
+        int res = 0;
+        
+        // iterate through all 1's and store connected 1 in map with the same index.
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (grid[i][j] == 1) {
+                    int islands = dfs(grid, i, j, index);
+                    map.put(index++, islands);
+                    
+                    // update res in case no zero
+                    res = Math.max(res, islands);
+                }
+            }
+        }
+
+        // change 0 to 1
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (grid[i][j] == 0) {
+                    Set<Integer> seen = new HashSet();  // stores used index
+                    
+                    int local = 1;
+                    for (int[] neighbor : getNeighbors(grid, i, j)) {
+                        int x = neighbor[0], y = neighbor[1];
+                        index = grid[x][y];
+                        
+                        // skip connected
+                        if (seen.contains(index)) continue;
+                        
+                        seen.add(index);
+                        int count = map.get(index);
+                        local += count;
+                    }
+                    
+                    res = Math.max(res, local);
+                }
+            }
+        }
+        
+        return res;
+    }
+    
+    private List<int[]> getNeighbors(int[][] grid, int i, int j) {
+        List<int[]> list = new ArrayList();
+        
+        for (int k = 0; k < 4; k++) {
+            int nx = i + dir[k], ny = j + dir[k + 1];
+            
+            if (nx >= 0 && ny >= 0 && nx < grid.length && ny < grid.length && grid[nx][ny] > 1) {
+                list.add(new int[]{nx, ny});
+            }
+        }
+        
+        return list;
+    }
+    
+    private int dfs(int[][] grid, int i, int j, int index) {
+        if (i < 0 || j < 0 || i >= grid.length || j >= grid[0].length || grid[i][j] != 1) return 0;
+        
+        int res = 1;
+        grid[i][j] = index;
+        
+        for (int k = 0; k < 4; k++) {
+            int nx = i + dir[k], ny = j + dir[k + 1];
+        
+            res += dfs(grid, nx, ny, index);
+        }
+        
+        return res;
+    }
+}
+```
 
 ## Wrong Answers - TLE
 
