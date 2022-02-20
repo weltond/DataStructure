@@ -91,6 +91,48 @@ sol.read(buf, 1); // We have reached the end of file, no more characters can be 
 - 1 <= queries[i] <= 500
 
 ## Answers
+### Approach 2 - 1ms
+More intuitive.
+
+```java
+/**
+ * The read4 API is defined in the parent class Reader4.
+ *     int read4(char[] buf4); 
+ */
+
+public class Solution extends Reader4 {
+    /**
+     * @param buf Destination buffer
+     * @param n   Number of characters to read
+     * @return    The number of actual characters read
+     */
+    char[] buf4 = new char[4];
+    int buf4Index = 0;
+    int buf4Size = 0;
+    
+    public int read(char[] buf, int n) {
+        int index = 0;  // # of chars we read
+        
+        while (index < n) {
+            // read4 if buf4Index is 0.
+            if (buf4Index == 0) {
+                buf4Size = read4(buf4);
+            }
+            
+            if (buf4Size == 0) break;
+            
+            while (index < n && buf4Index < buf4Size) {
+                buf[index++] = buf4[buf4Index++];
+            }
+            
+            // reset buf4Index
+            if (buf4Index == buf4Size) buf4Index = 0;
+        }
+        
+        return index;
+    }
+}
+```
 
 ### Approach 1 - 1ms (72.73%)
 
