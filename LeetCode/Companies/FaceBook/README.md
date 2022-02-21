@@ -1,6 +1,7 @@
 # 2022
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [270](https://leetcode.com/problems/closest-binary-search-tree-value/) | [Closest BST value](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/270-Closest-Binary-Search-Tree-Value.md) | Easy | Binary Search / DFS / BFS
 | [157](https://leetcode.com/problems/read-n-characters-given-read4/)| [Read N Characters Given Read4](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/157-read-n-characters-given-read4.md) | Easy | String / Simulation
 | 🔒 [158](https://leetcode.com/problems/read-n-characters-given-read4-ii-call-multiple-times/) | [Read N Characters Given Read4 II - Call multiple times](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/158-read-n-characters-given-read4-ii-call-multiple-times.md) | Hard | String / Simulation 
 | [67](https://leetcode.com/problems/add-binary/) | [Add Binary](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/67-Add-Binary.md) | Easy | Math / String
