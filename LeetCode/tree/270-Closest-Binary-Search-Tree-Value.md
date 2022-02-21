@@ -32,10 +32,78 @@ Binary tree {3,2,4,1},  denote the following structure:
 1
 ```
 
+Example 3
+<img width="155" alt="image" src="https://user-images.githubusercontent.com/9000286/154870776-f1fa68aa-814e-4e98-afbe-2b36a04367d8.png">
+
+```
+Input: root = [4,2,5,1,3], target = 3.714286
+Output: 4
+```
+
 - Notice: Given target value is a floating point. You are guaranteed to have only one unique value in the BST that is closest to the target.
 
 ## Answer
+### Method 2 - BFS 
+Time: O(H), Space: O(1)
 
+```java
+class Solution {
+  public int closestValue(TreeNode root, double target) {
+    int val, closest = root.val;
+    while (root != null) {
+      val = root.val;
+      closest = Math.abs(val - target) < Math.abs(closest - target) ? val : closest;
+      root =  target < root.val ? root.left : root.right;
+    }
+    return closest;
+  }
+}
+```
+### Method 1 - DFS - 0ms
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    int closest ;
+    public int closestValue(TreeNode root, double target) {
+        if (root == null) return 0;
+        
+        closest = root.val;
+        
+        dfs(root, target);
+        
+        return closest;
+    }
+    
+    private void dfs(TreeNode root, double target) {
+        if (root == null) return;
+        
+        closest = Math.abs(closest - target) > Math.abs(target - root.val) ? root.val : closest;
+
+        if (root.val > target) {
+            dfs(root.left, target);
+        } else if (root.val < target) {
+            dfs(root.right, target);
+        }
+    }
+    
+}
+```
+## Old Post
 ### Method 2 - DFS - :turtle: 302ms (39.80%)
 - O(n)
 ```java
