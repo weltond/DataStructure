@@ -40,7 +40,8 @@ Output: [-4,2,6,3,1,5,7]
 
 ## Answers
 
-### Approach 2
+### Method 1 - Recursion - 3ms (92.84%)
+#### Approach 2
 ```java
 /**
  * Definition for a binary tree node.
@@ -103,7 +104,7 @@ class Solution {
     }
 }
 ```
-### Approach 1
+#### Approach 1
 
 ```java
 public class Solution {
