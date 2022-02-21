@@ -1,7 +1,7 @@
 # 2022
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
-| [536](https://leetcode.com/problems/construct-binary-tree-from-string/) | [Construct Binary tree from String](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/536-construct-binary-tree-from-string.md) | Medium | String / Tree / DFS / Binary Tree
+| 🔒[536](https://leetcode.com/problems/construct-binary-tree-from-string/) | [Construct Binary tree from String](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/536-construct-binary-tree-from-string.md) | Medium | String / Tree / DFS / Binary Tree
 | [708](https://leetcode.com/problems/insert-into-a-cyclic-sorted-list/)| [Insert into a Cyclic Sorted List](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/708insert-into-a-sorted-circular-linked-list.md) | Medium | LinkedList
 | [398](https://leetcode.com/problems/random-pick-index/) | [Random Pick Index](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/398-random-pick-index.md) | Medium | HashMap / Math / Reservoir Sampling / Randomized
 | [270](https://leetcode.com/problems/closest-binary-search-tree-value/) | [Closest BST value](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/270-Closest-Binary-Search-Tree-Value.md) | Easy | Binary Search / DFS / BFS
