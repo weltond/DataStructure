@@ -45,6 +45,8 @@ This can be interpreted as
 - And so on
 - Not picking the nth number from the list of (n) numbers. Hence picking any of the remaining (n-1) numbers.
 
+Time: O(N), Space: O(1)
+
 ```java
 class Solution {
 
