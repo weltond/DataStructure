@@ -1,4 +1,4 @@
-## [536. Construct Binary Tree from String](https://leetcode.com/problems/construct-binary-tree-from-string/)
+## 🔒[536. Construct Binary Tree from String](https://leetcode.com/problems/construct-binary-tree-from-string/)
 
 ![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
 
