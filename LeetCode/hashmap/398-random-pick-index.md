@@ -34,7 +34,51 @@ solution.pick(3); // It should return either index 2, 3, or 4 randomly. Each ind
 - At most 104 calls will be made to pick.
 
 ## Answers
+### Method 2 - Reservoir Sampling
+Reservoir sampling is a technique which is used to generate numbers randomly when we have a large pool of numbers. As mentioned in the note for this question, the array size can be large, hence it is a reasonable choice to use Reservoir Sampling. Consider an array of size nn from which we need to chose a number randomly. Consider these numbers to be coming in the form of a stream, hence at each step, we have to take the decision of whether or not to choose a given number, such that the overall probability of each number being chosen is same (1/n in this case). If we have a total of nn numbers and we pick the ith number, this implies that we do not pick any number further from index (i + 1) to n. In terms of probability, this can be represented as
+ <img width="183" alt="image" src="https://user-images.githubusercontent.com/9000286/154871988-cb1c188c-9b6a-450a-ac15-4c0e821ea4f6.png">
 
+This can be interpreted as
+
+- Pick the ith number from the list of i numbers
+- Not picking the (i+1)th number from the list of (i+1) numbers. Hence picking any of the remaining i number
+- And so on
+- Not picking the nth number from the list of (n) numbers. Hence picking any of the remaining (n-1) numbers.
+
+```java
+class Solution {
+
+    private int[] nums;
+    private Random rand;
+    
+    public Solution(int[] nums) {
+        this.nums = nums;
+        this.rand = new Random();
+    }
+    
+    public int pick(int target) {
+        int n = this.nums.length;
+        int count = 0;
+        int idx = 0;
+        for (int i = 0; i < n; ++i) {
+            // if nums[i] is equal to target, i is a potential candidate
+            // which needs to be chosen uniformly at random
+            if (this.nums[i] == target) {
+                // increment the count of total candidates
+                // available to be chosen uniformly at random
+                count++;
+                // we pick the current number with probability 1 / count (reservoir sampling)
+                if (rand.nextInt(count) == 0) {
+                    idx = i;
+                }
+            }
+        }
+        return idx;
+    }
+}
+```
+
+  
 ### Method 1 - HashMap - 106ms (50.95%)
 
 Cache result using hashmap.
