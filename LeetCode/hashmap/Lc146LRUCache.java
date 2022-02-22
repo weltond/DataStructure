@@ -122,6 +122,44 @@ class Node {
     }
 }
 
+// ======= LinkedHashMap =======
+class LRUCache {
+    private int cap;
+    LinkedHashMap<Integer, Integer> cache = new LinkedHashMap<>();
+
+    public LRUCache(int capacity) {
+        this.cap = capacity;
+    }
+    
+    public int get(int key) {
+        if (!cache.containsKey(key)) return -1;
+
+        makeRecent(key);
+
+        return cache.get(key);
+    }
+    
+    public void put(int key, int value) {
+        // remove least recently used only when:
+        //  1. key not exists
+        //  2. cache reaches cap
+
+        if (!cache.containsKey(key)&& cache.size() >= this.cap) {
+            int oldestKey = cache.keySet().iterator().next();
+            cache.remove(oldestKey);
+        }
+
+        cache.put(key, value);
+        makeRecent(key);
+    }
+
+    private void makeRecent(int key) {
+        int val = cache.get(key);
+
+        cache.remove(key);
+        cache.put(key, val);
+    }
+}
 
 class LRUCache {
     Node head, tail;
