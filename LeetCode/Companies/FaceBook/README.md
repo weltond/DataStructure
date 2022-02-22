@@ -1,6 +1,7 @@
 # 2022
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [10](https://leetcode.com/problems/regular-expression-matching/) | [Regular Expression Matching](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/10-Regular-Expression-Matching.md) | Hard | String / DP / Backtracking
 | [297](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | [Seriallize and DeSerialize Binary Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc297SerialAndDeBinaryTree.java) | Hard | Tree / Design
 | [449](https://leetcode.com/problems/serialize-and-deserialize-bst/) | [Serialize and Deseiralize BST](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/449-serialize-and-deserialize-bst.md) | Medium | Tree
 | [621](https://leetcode.com/problems/task-scheduler/) | [Task Scheduler](https://github.com/weltond/DataStructure/blob/master/LeetCode/greedy/621-Task-Scheduler.md) | Medium | Greedy / Array / Queue
