@@ -1,6 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
-| [311](https://leetcode.com/problems/sparse-matrix-multiplication/) | [Sparse Matrix Multiplication](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/311-sparse-matrix-multiplication.md) | Medium | Array / HashTable
+| 🔒[311](https://leetcode.com/problems/sparse-matrix-multiplication/) | [Sparse Matrix Multiplication](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/311-sparse-matrix-multiplication.md) | Medium | Array / HashTable
 | 🔒 [536](https://leetcode.com/problems/construct-binary-tree-from-string/) | [Construct Binary tree from String](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/536-construct-binary-tree-from-string.md) | Medium | String / Tree / DFS / Binary Tree
 | [398](https://leetcode.com/problems/random-pick-index/) | [Random Pick Index](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/398-random-pick-index.md) | Medium | HashMap / Math / Reservoir Sampling / Randomized
 | [157](https://leetcode.com/problems/read-n-characters-given-read4/)| [Read N Characters Given Read4](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/157-read-n-characters-given-read4.md) | Easy | String / Simulation
