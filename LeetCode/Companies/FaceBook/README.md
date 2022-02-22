@@ -1,6 +1,7 @@
 # 2022
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [621](https://leetcode.com/problems/task-scheduler/) | [Task Scheduler](https://github.com/weltond/DataStructure/blob/master/LeetCode/greedy/621-Task-Scheduler.md) | Medium | Greedy / Array / Queue
 | [227](https://leetcode.com/problems/basic-calculator-ii/) | [Basic Calculator II](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/227-Basic-Calculator-II.md) | Medium | String
 | [727](https://leetcode.com/problems/basic-calculator-iii/) | [Basic Calculator III](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/727-Basic-Calculator-III.md) | Hard | Stack / Recursion / Math
 | [146](https://leetcode.com/problems/lru-cache/) | [LRU Cache](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc146LRUCache.java) | Hard | Design
