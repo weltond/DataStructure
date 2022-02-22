@@ -21,6 +21,44 @@ Among all possible differences, the maximum value of 7 is obtained by |8 - 1| = 
  *     TreeNode(int x) { val = x; }
  * }
  */
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public int maxAncestorDiff(TreeNode root) {
+        return dfs(root, root.val, root.val);
+    }
+    
+    private int dfs(TreeNode root, int min, int max) {
+        // if encounter leaves, return the max-min along the path
+        if (root == null) {
+            return max - min;
+        }
+        
+        // else, update max and min
+        // and return the max of left and right subtrees
+        min = Math.min(min, root.val);
+        max = Math.max(max, root.val);
+        
+        int left = dfs(root.left, min, max);
+        int right = dfs(root.right, min, max);
+        
+        return Math.max(left, right);
+    }
+}
+
 class Solution {
     // ============== Method 1: Post order ==============
     // 1ms (34.48%)
