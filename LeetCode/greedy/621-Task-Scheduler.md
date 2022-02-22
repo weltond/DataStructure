@@ -22,6 +22,7 @@ Note:
 
 ## Answer
 ### Method 2 - Greedy - :rocket: 2ms (100%)
+<img width="498" alt="image" src="https://user-images.githubusercontent.com/9000286/155218917-605c7bd4-b864-49a0-9642-85311d536c40.png">
 
 ```java
 class Solution {
