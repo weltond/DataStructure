@@ -1,6 +1,7 @@
 # 2022
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [146](https://leetcode.com/problems/lru-cache/) | [LRU Cache](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc146LRUCache.java) | Hard | Design
 | [340](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/) | [Longest Substring At Most K Distinct Chars](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/340-longest-substring-with-at-most-k-distinct-characters.md) | Hard | HashTable / Two Pointers
 | [1026](https://leetcode.com/problems/maximum-difference-between-node-and-ancestor/) | [Maximum Diff between Node and Ancestor](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc1026MaxDiffBetweenNodeandAncestor.java) | Medium | Tree / DFS
 | [269](https://leetcode.com/problems/alien-dictionary/) | [Alien Dictionary](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/269-alien-dictionary.md) | Hard | Graph / DFS / BFS / TopologicalSort
