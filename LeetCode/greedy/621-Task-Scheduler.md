@@ -27,28 +27,25 @@ Note:
 ```java
 class Solution {
     public int leastInterval(char[] tasks, int n) {
-        if (tasks == null || tasks.length == 0) return 0;
-        
-        int maxcnt = 0;
-        char[] arr = new char[26];
+        int[] arr = new int[26];
         
         // get max freq
-        for (int i = 0; i < tasks.length; i++ ){
-            arr[tasks[i] - 'A']++;
-        }
-        for (int i = 0; i < 26; i++) {
-            maxcnt = Math.max(maxcnt, arr[i]);
-        }
-        
-        // calc how many same freq chars
-        int cnt = 0;
-        for (int i = 0; i < 26; i++) {
-            if (arr[i] == maxcnt) cnt++;
+        int maxCnt = 0;
+        for (char c : tasks) {
+            arr[c - 'A']++;
+            
+            maxCnt = Math.max(maxCnt, arr[c - 'A']);
         }
         
-        // AAABBB
-        // A x x A x x A
-        int res = (maxcnt - 1) * (n + 1) + cnt;
+        // check how many chars has the max freq.
+        int sameMax = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == maxCnt) {
+                sameMax++;
+            }
+        }
+        
+        int res = (maxCnt - 1) * (n + 1) + sameMax;
         
         return Math.max(res, tasks.length);
     }
