@@ -61,41 +61,40 @@ public class Solution {
 
 #### Approach 1
 ```java
-public class Solution {
-    /**
-     * @param s: A string
-     * @param k: An integer
-     * @return: An integer
-     */
+class Solution {
     public int lengthOfLongestSubstringKDistinct(String s, int k) {
-        if (s == null || s.length() == 0 || k == 0) return 0;
+        int left = 0, right = 0, len = s.length(), res = 0, cnt = 0;
         
-        // write your code here
-        int cnt = 0;
         Map<Character, Integer> map = new HashMap();
-        int start = 0, end = 0, res = 0, len = s.length();
         
-        while (end < len) {
-            char c = s.charAt(end);
+        while (right < len) {
+            char c = s.charAt(right);
+            
             if (map.containsKey(c)) {
                 int f = map.get(c);
-                if (f == 0) cnt++;  // here, notice f = 0 also means distinct in current window.
+                
+                if (f == 0) cnt++;  // means c appears before but was excluded later. Case: "aa", k = 0
+                
                 map.put(c, f + 1);
+                 
             } else {
                 cnt++;
                 map.put(c, 1);
             }
-            
-            if (cnt <= k) {
-                res = Math.max(res, end - start + 1);
+            if (cnt <= k) {      // cnt <= k to cover the case where len < k
+                res = Math.max(res, right - left + 1);
             }
-            while (cnt > k) {
-                char c2 = s.charAt(start++);
+            
+            while (cnt > k) {   // CANNOT be cnt == k. Case "aa", k=1
+                char c2 = s.charAt(left++);
                 int freq = map.get(c2);
+                
                 if (freq == 1) cnt--;
+                
                 map.put(c2, freq - 1);
             }
-            end++;
+            
+            right++;
         }
         
         return res;
