@@ -1,6 +1,8 @@
 # 2022
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [227](https://leetcode.com/problems/basic-calculator-ii/) | [Basic Calculator II](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/227-Basic-Calculator-II.md) | Medium | String
+| [727](https://leetcode.com/problems/basic-calculator-iii/) | [Basic Calculator III](https://github.com/weltond/DataStructure/blob/master/LeetCode/recursion/727-Basic-Calculator-III.md) | Hard | Stack / Recursion / Math
 | [146](https://leetcode.com/problems/lru-cache/) | [LRU Cache](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/Lc146LRUCache.java) | Hard | Design
 | [340](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/) | [Longest Substring At Most K Distinct Chars](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/340-longest-substring-with-at-most-k-distinct-characters.md) | Hard | HashTable / Two Pointers
 | [1026](https://leetcode.com/problems/maximum-difference-between-node-and-ancestor/) | [Maximum Diff between Node and Ancestor](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc1026MaxDiffBetweenNodeandAncestor.java) | Medium | Tree / DFS
