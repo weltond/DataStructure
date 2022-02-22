@@ -59,7 +59,7 @@ public class Solution {
 }
 ```
 
-#### Approach 1
+#### Approach 1 - 6ms (91.03%)
 ```java
 class Solution {
     public int lengthOfLongestSubstringKDistinct(String s, int k) {
