@@ -1,6 +1,7 @@
 # 2022
 | No. | Problem | Difficulty | Tag 
 | :--------: | :-------: | :---------: | :------:
+| [340](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/) | [Longest Substring At Most K Distinct Chars](https://github.com/weltond/DataStructure/blob/master/LeetCode/hashmap/340-longest-substring-with-at-most-k-distinct-characters.md) | Hard | HashTable / Two Pointers
 | [1026](https://leetcode.com/problems/maximum-difference-between-node-and-ancestor/) | [Maximum Diff between Node and Ancestor](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc1026MaxDiffBetweenNodeandAncestor.java) | Medium | Tree / DFS
 | [269](https://leetcode.com/problems/alien-dictionary/) | [Alien Dictionary](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/269-alien-dictionary.md) | Hard | Graph / DFS / BFS / TopologicalSort
 | 🔒[311](https://leetcode.com/problems/sparse-matrix-multiplication/) | [Sparse Matrix Multiplication](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/311-sparse-matrix-multiplication.md) | Medium | Array / HashTable
