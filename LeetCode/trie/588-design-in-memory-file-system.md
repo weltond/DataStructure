@@ -20,7 +20,7 @@ The answer should in **lexicographic order.**
 
 Example 1:
 
-<img width="510" alt="image" src="https://user-images.githubusercontent.com/9000286/155653316-5cf7cecd-e73f-48ea-9ffa-6a064f88ac96.png">
+<img width="710" alt="image" src="https://user-images.githubusercontent.com/9000286/155653316-5cf7cecd-e73f-48ea-9ffa-6a064f88ac96.png">
 
 ```
 Input
@@ -50,7 +50,7 @@ fileSystem.readContentFromFile("/a/b/c/d"); // return "hello"
 ## Answers
 ### Method 2 - Using unified Dir and File List
 
-<img width="567" alt="image" src="https://user-images.githubusercontent.com/9000286/155653694-8b804e2f-633f-4bb9-82f8-4c7920a9df20.png">
+<img width="767" alt="image" src="https://user-images.githubusercontent.com/9000286/155653694-8b804e2f-633f-4bb9-82f8-4c7920a9df20.png">
 
 A problem with the current design could occur if we want to list only the directories(and not the files), on any given path. 
 
