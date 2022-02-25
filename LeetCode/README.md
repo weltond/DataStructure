@@ -1,6 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
-| [588](https://leetcode.com/problems/design-in-memory-file-system/) | [Design in-memory File System](https://github.com/weltond/DataStructure/blob/master/LeetCode/trie/588-design-in-memory-file-system.md) | Hard | HashTable / String / Design / Trie
+| 🔒[588](https://leetcode.com/problems/design-in-memory-file-system/) | [Design in-memory File System](https://github.com/weltond/DataStructure/blob/master/LeetCode/trie/588-design-in-memory-file-system.md) | Hard | HashTable / String / Design / Trie
 | [269](https://leetcode.com/problems/alien-dictionary/) | [Alien Dictionary](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/269-alien-dictionary.md) | Hard | Graph / DFS / BFS / TopologicalSort
 | 🔒[311](https://leetcode.com/problems/sparse-matrix-multiplication/) | [Sparse Matrix Multiplication](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/311-sparse-matrix-multiplication.md) | Medium | Array / HashTable
 | 🔒 [536](https://leetcode.com/problems/construct-binary-tree-from-string/) | [Construct Binary tree from String](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/536-construct-binary-tree-from-string.md) | Medium | String / Tree / DFS / Binary Tree
