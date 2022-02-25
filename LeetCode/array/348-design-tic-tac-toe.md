@@ -112,7 +112,7 @@ public class TicTacToe {
 }
 
 ```
-### Approach 1 - Not Optimized - :rocket: 0ms 
+### Approach 1 - Not Optimized - :rocket: 2ms (100%)
 
 ```java
 class TicTacToe {
