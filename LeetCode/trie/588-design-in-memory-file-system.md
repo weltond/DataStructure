@@ -51,6 +51,15 @@ fileSystem.readContentFromFile("/a/b/c/d"); // return "hello"
 
 ### Method 1 - 69ms (52.14%)
 
+<img width="328" alt="image" src="https://user-images.githubusercontent.com/9000286/155653378-9d0060d4-67dc-46d9-a82a-0a52f6ba1cd8.png">
+
+Time: `m`is length of input string. `n` is depth of last dir level. `k` is number of entries in the last dir. 
+- `ls`: O(m + n + klogk)
+- `mkdir`: O(m + n)
+- `addContentToFile` and `readContentFromFile`: O(m + n)
+
+East to extend commands.
+
 ```java
 class FileSystem {
     // <path, ls>
