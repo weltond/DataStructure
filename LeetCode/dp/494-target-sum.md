@@ -28,7 +28,52 @@ Note:
 - Your output answer is guaranteed to be fitted in a 32-bit integer.
 
 ## Answer
-### Method 1 - DFS + Memo - :rabbit: 143ms (43.63%)
+### Method 1 - DFS + Memo - :rabbit: 23ms (68.63%)
+Time: O(t*n), t is the sum of `nums`.
+
+Space: O(t*n)
+
+We cannot use `memo[lvl][target + total]` because `target` might be a negative val that is larger than `total`. 
+
+```java
+class Solution {
+    int[][] memo;
+    int total;
+    
+    public int findTargetSumWays(int[] nums, int target) {
+        // Sum of the nums.
+        // It is used to take care of negative value.
+        total = Arrays.stream(nums).sum();  
+        
+        memo = new int[nums.length][total * 2  + 1];
+        for (int i = 0; i < memo.length; i++) {
+            Arrays.fill(memo[i], -1);
+        }
+        
+        int res = dfs(nums, target, 0, 0);
+        
+        return res;
+    }
+    
+    private int dfs(int[] nums, int target, int sum, int lvl) {
+        if (lvl == nums.length) {
+            if (target == sum) return 1;
+            return 0;
+        }
+
+        if (memo[lvl][sum + total] != -1) return memo[lvl][sum + total];
+        
+        int plus = dfs(nums, target, sum + nums[lvl], lvl + 1);
+        
+        int minus = dfs(nums, target, sum - nums[lvl], lvl + 1);
+        
+        
+        memo[lvl][sum + total] = plus + minus;
+        
+        return plus + minus;
+    }
+}
+```
 
 ```java
 public class Solution {
