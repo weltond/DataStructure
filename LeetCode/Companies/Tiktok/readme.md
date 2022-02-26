@@ -4,7 +4,7 @@
 - [773.]
 - [642.]
 - [773.]
-- [286.]
+- [286. Walls and Gates](https://github.com/weltond/DataStructure/blob/master/LeetCode/BFS/286-walls-and-gates.md)
 - [76.]
 - [33.]
 - [399.]
