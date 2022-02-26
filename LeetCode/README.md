@@ -295,7 +295,7 @@
 |  37 | [Sudoku Solver](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc37SudokuSolver.java) | Hard | Hash Table / Backtracking
 | 79 | [Word Search](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc79WordSearch.java) | Medium | Array / Backtracking 
 | 200 | [Numbser of Islands](https://github.com/weltond/DataStructure/blob/master/LeetCode/Amazon/Lc200NumberOfIslands.java) | Medium | DFS / BFS / Union Find
-| [39](https://leetcode.com/problems/combination-sum/) | [Combination Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc39CombinationSum.java) | Medium | Array / Backtracking
+| [39](https://leetcode.com/problems/combination-sum/) | [Combination Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/39-Combination-Sum.md) | Medium | Array / Backtracking
 |[40](https://leetcode.com/problems/combination-sum-ii/) | [Combination Sum II](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc40CombinationSumII.java) | Medium | Array / Backtracking
 |[77](https://leetcode.com/problems/combinations/) | [Combinations](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc77Combinations.java) | Medium | Backtracking
 |[46](https://leetcode.com/problems/permutations/) | [Permutations](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc46Permutations.java) | Medium | Backtracking
