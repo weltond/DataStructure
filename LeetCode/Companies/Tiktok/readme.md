@@ -10,7 +10,8 @@
 - [399.]
 - [215.]
 - [494.]
-- 
+- [39. Combination Sum]()
+- [105.]()
 # Phone Interview
 - [54. Spiral Matrix](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/54-Spiral-Matrix.md)
 - [50. Power (x,n)](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/Pow.java)
