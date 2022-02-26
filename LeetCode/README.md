@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [286](https://leetcode.com/problems/walls-and-gates/) | [Walls and Gates](https://github.com/weltond/DataStructure/blob/master/LeetCode/BFS/286-walls-and-gates.md) | Medium | Array / BFS
 | 🔒[642](https://leetcode.com/problems/design-search-autocomplete-system/) | [Design Search Autocompete System](https://github.com/weltond/DataStructure/blob/master/LeetCode/trie/642-design-search-autocomplete-system.md) | Hard | Trie / String / Design / Data Stream
 | [348](https://leetcode.com/problems/design-tic-tac-toe/) | [Design Tic Tac Toe](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/348-design-tic-tac-toe.md) | Medium | Array / HashTable / Design
 | 🔒[588](https://leetcode.com/problems/design-in-memory-file-system/) | [Design in-memory File System](https://github.com/weltond/DataStructure/blob/master/LeetCode/trie/588-design-in-memory-file-system.md) | Hard | HashTable / String / Design / Trie
