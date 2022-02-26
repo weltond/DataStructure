@@ -1,6 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
-| [642](https://leetcode.com/problems/design-search-autocomplete-system/) | [Design Search Autocompete System](https://github.com/weltond/DataStructure/blob/master/LeetCode/trie/642-design-search-autocomplete-system.md) | Hard | Trie / String / Design / Data Stream
+| 🔒[642](https://leetcode.com/problems/design-search-autocomplete-system/) | [Design Search Autocompete System](https://github.com/weltond/DataStructure/blob/master/LeetCode/trie/642-design-search-autocomplete-system.md) | Hard | Trie / String / Design / Data Stream
 | [348](https://leetcode.com/problems/design-tic-tac-toe/) | [Design Tic Tac Toe](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/348-design-tic-tac-toe.md) | Medium | Array / HashTable / Design
 | 🔒[588](https://leetcode.com/problems/design-in-memory-file-system/) | [Design in-memory File System](https://github.com/weltond/DataStructure/blob/master/LeetCode/trie/588-design-in-memory-file-system.md) | Hard | HashTable / String / Design / Trie
 | [269](https://leetcode.com/problems/alien-dictionary/) | [Alien Dictionary](https://github.com/weltond/DataStructure/blob/master/LeetCode/graph/269-alien-dictionary.md) | Hard | Graph / DFS / BFS / TopologicalSort
