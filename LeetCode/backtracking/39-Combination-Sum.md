@@ -1,4 +1,4 @@
-## [71. Simplify Path](https://leetcode.com/problems/combination-sum/)
+## [39. Combination Sum](https://leetcode.com/problems/combination-sum/)
 
 ![](https://github.com/weltond/DataStructure/blob/master/medium.PNG)
 
