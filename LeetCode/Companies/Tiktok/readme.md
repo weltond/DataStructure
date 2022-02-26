@@ -10,7 +10,7 @@
 - [399.]
 - [215.]
 - [494.]
-- [39. Combination Sum]()
+- [39. Combination Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/39-Combination-Sum.md)
 - [105.]()
 - [642. Design Search AutoComplete System](https://github.com/weltond/DataStructure/blob/master/LeetCode/trie/642-design-search-autocomplete-system.md)
 # Phone Interview
