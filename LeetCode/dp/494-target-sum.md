@@ -60,3 +60,31 @@ public class Solution {
     }
 }
 ```
+
+#### Approach 1 - DFS - 496ms (34.84%)
+Time: O(2^n) because it is a binary tree.
+
+Space: O(n), hight of the tree.
+
+```java
+class Solution {
+    public int findTargetSumWays(int[] nums, int target) {
+        int res = dfs(nums, target, 0);
+        
+        return res;
+    }
+    
+    private int dfs(int[] nums, int target, int lvl) {
+        if (lvl == nums.length) {
+            if (target == 0) return 1;
+            return 0;
+        }
+        
+        int plus = dfs(nums, target - nums[lvl], lvl + 1);
+        
+        int minus = dfs(nums, target + nums[lvl], lvl + 1);
+        
+        return plus + minus;
+    }
+}
+```
