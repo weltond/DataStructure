@@ -12,6 +12,7 @@
 - [494.]
 - [39. Combination Sum]()
 - [105.]()
+- [642. Design Search AutoComplete System](https://github.com/weltond/DataStructure/blob/master/LeetCode/trie/642-design-search-autocomplete-system.md)
 # Phone Interview
 - [54. Spiral Matrix](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/54-Spiral-Matrix.md)
 - [50. Power (x,n)](https://github.com/weltond/DataStructure/blob/master/LeetCode/search/binarysearch/Pow.java)
