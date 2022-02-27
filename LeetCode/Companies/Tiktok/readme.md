@@ -2,7 +2,6 @@
 - [200.]
 - [227.]
 - [773.]
-- [642.]
 - [773.]
 - [286. Walls and Gates](https://github.com/weltond/DataStructure/blob/master/LeetCode/BFS/286-walls-and-gates.md)
 - [76. Minimum Window Substring](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/76-Minimum-Window-Substring.md)
