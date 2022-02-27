@@ -33,6 +33,7 @@ class Solution {
             while (left <= right && nums[left] >= pivot) left++;
             while (left <= right && nums[right] <= pivot) right--;
             
+            // Corner case: [99,99] 1
             if (left <= right) 
                 swap(nums, left++, right--);
         }
