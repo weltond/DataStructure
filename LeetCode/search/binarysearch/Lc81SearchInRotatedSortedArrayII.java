@@ -49,7 +49,44 @@ class Solution {
         return nums[l] == target || nums[r] == target;
     }
 }
-
+class Solution {
+    public boolean search(int[] nums, int target) {
+        int l = 0, r = nums.length - 1;
+        
+        // de-dup
+        while (l < r && nums[l] == nums[l + 1]) {
+            l++;
+        }
+        while (l < r && nums[r] == nums[r - 1]) {
+            r--;
+        }
+        
+        while (l < r - 1) {
+            int m = l + (r - l) / 2;
+            
+            // left is sorted
+            if (nums[m] > nums[r]) {
+                // target is between l and m
+                if (nums[l] <= target && target <= nums[m]) {
+                    r = m;
+                } else {
+                    l = m;
+                }
+            } 
+            // right is sorted
+            else {
+                // 
+                if (nums[m] <= target && target <= nums[r]) {
+                    l = m;
+                } else {
+                    r = m;
+                }
+            } 
+        }
+        
+        return nums[l] == target || nums[r] == target ;
+    }
+}
 class Solution {
     public boolean search(int[] nums, int target) {
         if (nums == null || nums.length == 0) return false;
