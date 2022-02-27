@@ -284,7 +284,7 @@
 | [373](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/) | [Find K Pairs With Smallest Sums](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/Lc373FindKPiarsWithSmallestSums.java) | Medium | Heap
 |  [767](https://leetcode.com/problems/reorganize-string/) | [Reorganize String](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/767-Reorganize-String.md) | Medium | String / Heap / Greedy / Sort
 |  23 | [Merge K Sorted Lists](https://github.com/weltond/DataStructure/blob/master/LeetCode/linkedlist/Lc23MergeKSortedLists.java) | 
-|  [76](https://leetcode.com/problems/minimum-window-substring/) | [Minimum Window Substring](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc76MinimumWindowSubstring.java) | Hard | HashTable / Two Pointers / Window
+|  [76](https://leetcode.com/problems/minimum-window-substring/) | [Minimum Window Substring](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/76-Minimum-Window-Substring.md) | Hard | HashTable / Two Pointers / Window
 |  91 | [DecodeWays](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/Lc91DecodeWays.java) | |
 |  [450](https://leetcode.com/problems/delete-node-in-a-bst/) | [Delete Node In BST](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/450-Delete-Node-In-BST.md) | Medium | Tree
 |  109 | [Convert Sorted List To BST](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/109-Convert-Sorted-List-To-BST.md) | Medium | LinkedList / DFS
