@@ -98,7 +98,64 @@ class Solution {
 }
 ```
 
-### Method 2 - Graph - :turtle: 35ms 
+### Method 2 - Graph - :turtle: 4ms (12.43%)
+
+```java
+class Solution {
+    // <dividend, <divisor, ratio>>
+    // <divisor, <dividend, 1 / ratio>>
+    Map<String, Map<String, Double>> map = new HashMap();
+    public double[] calcEquation(List<List<String>> equations, double[] values, List<List<String>> queries) {
+        int idx = 0;
+        for(List<String> equation : equations) {
+            String dividend = equation.get(0), divisor = equation.get(1);
+            double ratio = values[idx++];
+            
+            // what if same equation exists?
+            map.computeIfAbsent(dividend, o -> new HashMap()).put(divisor, ratio);
+            
+            map.computeIfAbsent(divisor, o -> new HashMap()).put(dividend, 1.0 / ratio);
+        }
+        System.out.println(map);
+        idx = 0;
+        double[] res = new double[queries.size()];
+        for (List<String> query : queries) {
+            String dividend = query.get(0), divisor = query.get(1);
+            if (!map.containsKey(dividend)) {
+                res[idx++] = -1.0;
+                continue;
+            }
+            
+            res[idx++] = dfs(map, dividend, divisor, new HashSet());
+            
+        }
+        
+        return res;
+    }
+    
+    private double dfs(Map<String, Map<String, Double>> map, String dividend, String divisor, Set<String> visited) {
+        if (dividend.equals(divisor)) return 1.0;
+        
+        if (!map.containsKey(dividend)) return -1.0;
+        if (visited.contains(dividend)) return -1.0;
+        
+        visited.add(dividend);
+        
+        Map<String, Double> ratioMap = map.get(dividend);
+        for (String div : ratioMap.keySet()) {
+            Double ratio = ratioMap.get(div);
+
+            Double rec = dfs(map, div, divisor, visited);
+            
+            if (rec != -1.0) {
+                return ratio * rec;
+            }
+        }
+        
+        return -1.0;
+    }
+}
+```
 
 ```java
     // ============ Sol 1: GRAPH ==============
