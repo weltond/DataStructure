@@ -5,7 +5,7 @@
 - [642.]
 - [773.]
 - [286. Walls and Gates](https://github.com/weltond/DataStructure/blob/master/LeetCode/BFS/286-walls-and-gates.md)
-- [76.]
+- [76. Minimum Window Substring](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/76-Minimum-Window-Substring.md)
 - [33.]
 - [399. Evaluate Division](https://github.com/weltond/DataStructure/blob/master/LeetCode/unionfind/399-Evaluate-Division.md)
 - [215. Kth Largest Element in an Array](https://github.com/weltond/DataStructure/blob/master/LeetCode/heap/215-Kth-Largest-Element-In-Array.md)
