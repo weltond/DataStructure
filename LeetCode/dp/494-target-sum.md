@@ -29,6 +29,9 @@ Note:
 
 ## Answer
 ### Method 2 - DP
+`dp[i][j]` refers to the number of assignments which can lead to a sum of `j` up to the ith index.
+
+So `dp[i][sum+nums[i]] = dp[i][sum+nums[i]] + dp[i-1][sum]` and `dp[i][sum-nums[i]]=dp[i][sum-nums[i]]+dp[i-1][sum]`
 #### Approach 2 - 1D array
 Time: O(t*n)
 
