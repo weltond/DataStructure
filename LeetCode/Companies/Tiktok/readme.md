@@ -11,7 +11,7 @@
 - [215.]
 - [494. Target Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/494-target-sum.md)
 - [39. Combination Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/39-Combination-Sum.md)
-- [105.]()
+- [105. Construct BT from Preorder and Inordr Traversal](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc105ConstructBTfromPreAndInorder.java)
 - [642. Design Search AutoComplete System](https://github.com/weltond/DataStructure/blob/master/LeetCode/trie/642-design-search-autocomplete-system.md)
 # Phone Interview
 - [54. Spiral Matrix](https://github.com/weltond/DataStructure/blob/master/LeetCode/array/54-Spiral-Matrix.md)
