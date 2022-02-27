@@ -31,6 +31,37 @@ class Solution {
     }
 }
 
+class Solution {
+    public int search(int[] nums, int target) {
+        int l = 0, r = nums.length - 1;
+        
+        while (l < r - 1) {
+            int m = l + (r - l) / 2;
+            
+            // left is sorted
+            if (nums[m] > nums[r]) {
+                // target is between l and m
+                if (nums[l] <= target && target <= nums[m]) {
+                    r = m;
+                } else {
+                    l = m;
+                }
+            } 
+            // right is sorted
+            else {
+                // 
+                if (nums[m] <= target && target <= nums[r]) {
+                    l = m;
+                } else {
+                    r = m;
+                }
+            }
+        }
+        
+        return nums[l] == target ? l : (nums[r] == target ? r : -1) ;
+    }
+}
+
 public class Solution {
     /**
      * @param A: an integer rotated sorted array
