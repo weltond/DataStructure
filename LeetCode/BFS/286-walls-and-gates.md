@@ -42,6 +42,8 @@ Constraints:
 ### Method 1 - BFS - 11ms (65.28%)
 This approach put all GATE into queue one time, so we don't have to do BFS for every GATE from start, and it is guruanteed that each EMPTY is shortest.
 
+Difference with below [Wrong Answer]() is this approach enques **ALL gates** instead of one by one.
+
 Time: O(m*n), Space: O(m*n)
 
 ```java
