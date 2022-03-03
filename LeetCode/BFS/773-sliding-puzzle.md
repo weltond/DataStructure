@@ -12,6 +12,8 @@ Given the puzzle board board, return the least number of moves required so that 
 
 Example 1:
 
+<img width="125" alt="image" src="https://user-images.githubusercontent.com/9000286/156499389-1f4ed9bc-2c79-46cf-8de8-87d480844a20.png">
+
 ```
 Input: board = [[1,2,3],[4,0,5]]
 Output: 1
@@ -20,6 +22,8 @@ Explanation: Swap the 0 and the 5 in one move.
 
 Example 2:
 
+<img width="122" alt="image" src="https://user-images.githubusercontent.com/9000286/156499412-0d6fb192-af95-4a20-b03f-e05d75735e68.png">
+
 ```
 Input: board = [[1,2,3],[5,4,0]]
 Output: -1
@@ -27,6 +31,8 @@ Explanation: No number of moves will make the board solved.
 ```
 
 Example 3:
+
+<img width="123" alt="image" src="https://user-images.githubusercontent.com/9000286/156499443-f3c939a1-020f-4341-93c7-6fd7f03d783b.png">
 
 ```
 Input: board = [[4,1,2],[5,0,3]]
