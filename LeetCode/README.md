@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [91](https://leetcode.com/problems/decode-ways/solution/) | [Decode Ways](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/91-decode-ways.md) | Medium | String / DP
 | [773](https://leetcode.com/problems/sliding-puzzle/) | [Sliding Puzzle](https://github.com/weltond/DataStructure/blob/master/LeetCode/BFS/773-sliding-puzzle.md) | Hard | Array / BFS / Matrix
 | [286](https://leetcode.com/problems/walls-and-gates/) | [Walls and Gates](https://github.com/weltond/DataStructure/blob/master/LeetCode/BFS/286-walls-and-gates.md) | Medium | Array / BFS
 | 🔒[642](https://leetcode.com/problems/design-search-autocomplete-system/) | [Design Search Autocompete System](https://github.com/weltond/DataStructure/blob/master/LeetCode/trie/642-design-search-autocomplete-system.md) | Hard | Trie / String / Design / Data Stream
