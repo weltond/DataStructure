@@ -49,3 +49,33 @@ class Solution {
     }
 }
 ```
+
+```java
+class Solution {
+    public int rob(int[] nums) {
+        if (nums.length == 0)
+            return 0;
+
+        if (nums.length == 1)
+            return nums[0];
+
+        int max1 = rob(nums, 0, nums.length - 2);
+        int max2 = rob(nums, 1, nums.length - 1);
+        return Math.max(max1, max2);
+    }
+    
+    private int rob(int[] nums, int start, int end) {
+        int[] rob = new int[nums.length];
+        int[] notRob = new int[nums.length];
+        
+        rob[start] = nums[start];
+        
+        for (int i = start + 1; i <= end; i++) {
+            rob[i] = nums[i] + notRob[i - 1];
+            notRob[i] = Math.max(rob[i - 1], notRob[i - 1]);
+        }
+        
+        return Math.max(rob[end], notRob[end]);
+    }
+}
+```
