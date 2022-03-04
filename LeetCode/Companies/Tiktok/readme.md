@@ -20,6 +20,6 @@
 - [1428. Leftmost Column with at Least a One]()
 - [124. Binary Tree Maximum Path Sum](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/Lc124BinaryTreeMaxPathSum.java)
 - [79. Word Search](https://github.com/weltond/DataStructure/blob/master/LeetCode/backtracking/Lc79WordSearch.java)
-- [1047. Remove All Adjacent Duplicates in a String]()
+- [1047. Remove All Adjacent Duplicates in a String](https://github.com/weltond/DataStructure/blob/master/LeetCode/stack/1047-remove-all-adjacent-duplicates-in-string.md)
 - [Design Youtube]()
 - [227. Basic Calculator II]()
