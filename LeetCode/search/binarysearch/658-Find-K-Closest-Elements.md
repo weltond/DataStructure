@@ -56,6 +56,44 @@ class Solution {
 }
 ```
 
+Corner cases: 
+- [1], 1, 1
+- [1,2,3,4,5], 4, 3
+- [1,1,1,10,10,10], 1, 9
+- [0,2,2,3,4,6,7,8,9,9], 4, 5
+ 
+```java
+class Solution {
+    public List<Integer> findClosestElements(int[] arr, int k, int x) {
+        
+        int left = 0, right = arr.length - k;
+        
+        while (left < right - 1) {
+            int mid = left + (right - left) / 2;
+            
+            if (x - arr[mid] > arr[mid + k] - x) left = mid;
+            else right = mid;
+        }
+
+        
+        int start = 0;
+        if (left + k < arr.length && x - arr[left] > arr[left + k] - x) {
+            start = right;
+        } else {
+            start = left;
+        }
+        
+        List<Integer> res = new LinkedList();
+        
+        for (int i = start; i < start + k && i < arr.length; i++) {
+            res.add(arr[i]);
+        }
+        return res;
+    }
+
+}
+```
+
 ### Method 1 - Two Pointers - O(n) - 8ms (44.62%)
 
 ```java
