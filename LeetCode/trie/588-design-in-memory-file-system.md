@@ -62,12 +62,6 @@ East to extend commands.
 
 ```java
 class FileSystem {
-    // <path, ls>
-    Map<String, List<String>> pathMap = new HashMap();  
-    
-    // <file_path, content>
-    Map<String, String> contentMap = new HashMap();
-    
     Dir root;
     public FileSystem() {
         root = new Dir();
