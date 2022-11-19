@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [191](https://leetcode.com/problems/number-of-1-bits/)|[Number of 1 Bits](https://github.com/weltond/DataStructure/blob/master/LeetCode/bit/191-number-of-1-bit)
 | 🔒[253](https://leetcode.com/problems/meeting-rooms-ii/) | [Meeting Room II](https://github.com/weltond/DataStructure/blob/master/LeetCode/queue/253-meeting-room-ii.md) | Medium | Array / Greedy / Sort / Heap
 | [91](https://leetcode.com/problems/decode-ways/solution/) | [Decode Ways](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/91-decode-ways.md) | Medium | String / DP
 | [773](https://leetcode.com/problems/sliding-puzzle/) | [Sliding Puzzle](https://github.com/weltond/DataStructure/blob/master/LeetCode/BFS/773-sliding-puzzle.md) | Hard | Array / BFS / Matrix
