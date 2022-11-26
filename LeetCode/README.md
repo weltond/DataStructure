@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+|[28](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | [Find the index of the first Occurence in a String](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/28-find-the-index-of-the-first-occurrence-in-a-string.md) | Medium | String / Two Pointers
 | [191](https://leetcode.com/problems/number-of-1-bits/)|[Number of 1 Bits](https://github.com/weltond/DataStructure/blob/master/LeetCode/bit/191-number-of-1-bit)
 | 🔒[253](https://leetcode.com/problems/meeting-rooms-ii/) | [Meeting Room II](https://github.com/weltond/DataStructure/blob/master/LeetCode/queue/253-meeting-room-ii.md) | Medium | Array / Greedy / Sort / Heap
 | [91](https://leetcode.com/problems/decode-ways/solution/) | [Decode Ways](https://github.com/weltond/DataStructure/blob/master/LeetCode/dp/91-decode-ways.md) | Medium | String / DP
