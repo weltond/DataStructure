@@ -1,6 +1,80 @@
 // https://leetcode.com/problems/accounts-merge/
 
 // UF Time: O(NKlogNK), Space: O(NK)
+
+// 117ms (21.91%)
+class Solution {
+    public List<List<String>> accountsMerge(List<List<String>> accounts) {
+        UF uf = new UF();
+        Map<String, String> names = new HashMap();
+        
+        for (List<String> account : accounts) {
+            String name = account.get(0);
+            String prev = account.get(1);
+            names.put(prev, name);
+            for (int i = 2, len = account.size(); i < len; i++) {
+                String cur = account.get(i);
+                uf.union(prev, cur);
+                names.put(cur, name);
+                prev = cur;
+            }
+        }
+        
+        Map<String, List<String>> emails = new HashMap();
+        for (String email : names.keySet()) {
+            String parent = uf.find(email);
+            emails.computeIfAbsent(parent, o -> new ArrayList()).add(email);
+        }
+        
+        List<List<String>> res = new ArrayList();
+        for (String email : emails.keySet()) {
+            String name = names.get(email);
+            List<String> es = emails.get(email);
+            Collections.sort(es);
+            
+            es.add(0, name);
+            res.add(new ArrayList(es));
+        }
+        
+        return res;
+    }
+    
+    
+}
+class UF {
+    Map<String, String> parent = new HashMap();
+    public UF() {
+        
+    }
+    
+    public String find(String s) {
+        // initialization
+        if (!parent.containsKey(s)) {
+            parent.put(s, s);
+            return s;
+        }
+        
+        // if s's parent is not itself
+        if (!s.equals(parent.get(s))) {
+            parent.put(s, find(parent.get(s)));
+        }
+        
+        return parent.get(s);
+    }
+    
+    public void union(String s1, String s2) {
+        String p1 = find(s1);
+        String p2 = find(s2);
+        if (p1.equals(p2)) return;
+        
+        parent.put(p2, p1);
+    }
+}
+
+
+
+
+
 public class Solution {
     /**
      * @param accounts: List[List[str]]
