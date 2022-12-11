@@ -67,6 +67,71 @@ class Solution {
         
     }
 }
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode rotateRight(ListNode head, int k) {
+        ListNode cur = head;
+        int len = getLen(head);
+        if (len == 0 || k == 0) return head;
+        int step = k % len;
+        while (step > 0 && cur != null) {
+            cur = cur.next;
+            step--;
+        }
+        
+        // k is larger than length
+        if (cur == null) {
+            // not gonna happen
+            return null;
+        } 
+        // k is smaller than length
+        else {
+            // nothing to change
+            if (cur == head) {
+                return head;
+            }
+            // Go to the right k node
+            ListNode newHead = head;
+            ListNode prev = null;
+            while (cur != null) {
+                prev = newHead;
+                cur = cur.next;
+                newHead = newHead.next;
+            }
+            // disconnect prev to make it as tail
+            prev.next = null;
+            // go to old tail and connect to old head
+            ListNode node = newHead;
+            while (node != null && node.next != null) {
+                node = node.next;
+            }
+            node.next = head;
+
+            // return new head
+            return newHead;
+        }
+    }
+
+    private int getLen(ListNode node) {
+        int n = 0;
+        while (node != null) {
+            n++;
+            node = node.next;
+        }
+
+        return n;
+
+    }
+}
 
 class Solution {
     // ============ Method 2 ===============
