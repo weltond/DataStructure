@@ -56,6 +56,73 @@ class Solution {
 }
 ```
 ### Method 1 - Recursion
+#### Approach 5 - 🚀 0ms
+
+```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode reverseKGroup(ListNode head, int k) {
+        if (k == 0 || head == null) return head;
+
+        // get length
+        ListNode cur = head;
+        int size = 0;
+        while(cur != null) {
+            cur = cur.next;
+            size++;
+        }
+
+        int chunks = size / k;
+        return reverseK(head, chunks, k);
+    }
+
+    /**
+        Recursive method to reverse each chunk and connect them.
+        head: Head of each chunk
+        chunk: Number of chunks that needs to be reversed
+        k: k nodes to reverse
+     */
+    private ListNode reverseK(ListNode head, int chunk, int k) {
+        // do not reverse if not enough nodes in chunk
+        if (chunk == 0) {
+            return head;   
+        }
+
+        ListNode[] pair = reverse(head, k);
+        ListNode newHead = pair[0], startNode = pair[1];
+
+        head.next = reverseK(startNode, chunk - 1, k);
+
+        return newHead;
+    }
+
+    private ListNode[] reverse(ListNode node, int k) {
+        ListNode prev = null;
+
+        while(node != null && k > 0) {
+            ListNode next = node.next;
+            node.next = prev;
+            prev = node;
+            node = next;
+            k--;
+        }
+
+        // prev is the new head
+        // node is next node to start reverse
+        return new ListNode[]{prev, node};
+    }
+}
+```
+
 #### Approach 4
 - Notice we should use `k` as stop reversing indicator instead of using `head == end`.
 
