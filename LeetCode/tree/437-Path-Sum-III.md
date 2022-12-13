@@ -37,6 +37,35 @@ An obvious hint is **must go downwards**, clearly we can take advantage of pre s
 Notice we need to **reset PreSum hashmap** once return back to parent.
 
 ```java
+class Solution {
+    // sum of nodes might greater than Integer.MAX_VALUE
+    public int pathSum(TreeNode root, int targetSum) {
+        Map<Long, Integer> map = new HashMap(); // <sum, cnt>
+        map.put(0L, 1);
+        return dfs(root, targetSum, 0, map);
+    }
+
+    private int dfs(TreeNode root, int target, long sum, Map<Long, Integer> map) {
+        if (root == null) return 0;
+
+        long cur = sum + root.val;
+
+        int res = map.getOrDefault(cur - target, 0);
+
+        int count = map.getOrDefault(cur, 0);
+        map.put(cur, count + 1);
+
+        res += dfs(root.left, target, cur, map) + dfs(root.right, target, cur, map);
+
+        count = map.getOrDefault(cur, 0);
+        map.put(cur, count - 1);
+
+        return res;
+    }
+}
+```
+
+```java
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -54,7 +83,7 @@ class Solution {
         
         map.put(0, 1);  // for the first matching.
         
-        return dfs(root, 0, sum, map);
+        return dfs(root, sum, 0, map);
     }
     
     private int dfs(TreeNode root, int target, int curSum, Map<Integer, Integer> preSum) {
