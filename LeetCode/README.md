@@ -1,5 +1,6 @@
 | LeetCode No. | Problem | Difficulty | Tag 
 | :-------- | :-------: | :---------: | :------:
+| [662](https://leetcode.com/problems/maximum-width-of-binary-tree/description/) | [Maximum Width of Binary Tree](https://github.com/weltond/DataStructure/blob/master/LeetCode/tree/662-maximum-width-of-binary-tree.md) | Medium | Tree / DFS / BFS
 | [1585](https://leetcode.com/problems/min-cost-to-connect-all-points/) | [Min Cost to Connect All Points](https://github.com/weltond/DataStructure/blob/master/LeetCode/unionfind/1584-min-cost-to-connect-all-points.md) | Medium | UnionFind / Graph / Minimum Spanning Tree|
 |[28](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | [Find the index of the first Occurence in a String](https://github.com/weltond/DataStructure/blob/master/LeetCode/string/28-find-the-index-of-the-first-occurrence-in-a-string.md) | Medium | String / Two Pointers
 | [191](https://leetcode.com/problems/number-of-1-bits/)|[Number of 1 Bits](https://github.com/weltond/DataStructure/blob/master/LeetCode/bit/191-number-of-1-bit)
