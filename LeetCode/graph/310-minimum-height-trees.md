@@ -115,12 +115,16 @@ class Solution {
     }
 }
 ```
+- 🚀 25ms (94.51%)
 ```java
 class Solution {
     public List<Integer> findMinHeightTrees(int n, int[][] edges) {
-        if (n == 1) {
+        // EDGE cases!
+        if (n <= 2) {
             List<Integer> ans = new ArrayList();
-            ans.add(0);
+            for (int i = 0; i < n; i++) {
+                ans.add(i);
+            }
             return ans;
         }
         int[] degree = new int[n];
@@ -140,12 +144,12 @@ class Solution {
             }
         }
         List<Integer> ans = new ArrayList();
+        int cnt = 0;
         while (!q.isEmpty()) {
             int size = q.size();
-            ans.clear();
+            cnt += size;
             for (int i = 0; i < size; i++) {
                 int val = q.poll();
-                ans.add(val);
                 degree[val]--;
                 List<Integer> l =  map.get(val);
                 for (int k : l) {
@@ -155,7 +159,11 @@ class Solution {
                     }
                 }
             }
-            
+            if (n - cnt <= 2) break;
+        }
+
+        while (!q.isEmpty()) {
+            ans.add(q.poll());
         }
         return ans;
     }
