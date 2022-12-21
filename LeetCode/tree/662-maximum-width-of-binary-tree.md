@@ -104,9 +104,10 @@ class Solution {
  * }
  */
 class Solution {
-    int res = 1;
+    int res = 1;    // initialization to 1 to include case where only 1 node
     Map<Integer, Integer> map = new HashMap();  // <lvl, min val>
     public int widthOfBinaryTree(TreeNode root) {
+        // corner case is needed here
         if (root == null) return 0;
         
         dfs(root, 0, 0);
