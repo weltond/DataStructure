@@ -43,7 +43,8 @@ Explanation: The maximum width exists in the second level with length 2 (3,2).
 - -100 <= Node.val <= 100
 
 ## Answer
-### Methdo 1 - :rabbit: 3ms (68.5%)
+### Method 1 - DFS
+#### Approach 1 :rabbit: 3ms (68.5%)
 ```java
 /**
  * Definition for a binary tree node.
@@ -81,6 +82,49 @@ class Solution {
 
         dfs(root.left, pos * 2, lvl + 1);
         dfs(root.right, pos * 2 + 1, lvl + 1);
+    }
+}
+```
+
+#### Approach 2 - 🚀 1ms (100%)
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    int res = 1;
+    Map<Integer, Integer> map = new HashMap();  // <lvl, min val>
+    public int widthOfBinaryTree(TreeNode root) {
+        if (root == null) return 0;
+        
+        dfs(root, 0, 0);
+
+        return res;
+    }
+
+    private void dfs(TreeNode root, int idx, int lvl) {
+        if (root== null) return;
+
+        if (!map.containsKey(lvl)) {
+            map.put(lvl, idx);
+        } else {
+            res = Math.max(idx - map.get(lvl) + 1, res);
+        }
+
+        dfs(root.left, idx * 2, lvl + 1);
+        dfs(root.right, idx * 2 + 1, lvl + 1);
     }
 }
 ```
