@@ -1,5 +1,123 @@
 // https://leetcode.com/problems/lru-cache/
 
+// 64ms (86.4%)
+class LRUCache {
+    MyList list = new MyList();
+    Map<Integer, MyListNode> map = new HashMap();
+    int cap;
+    int cnt = 0;
+    public LRUCache(int capacity) {
+        cap = capacity;
+    }
+    
+    public int get(int key) {
+        if (!map.containsKey(key)) return -1;
+
+        MyListNode node = map.get(key);
+        moveNodeToHead(node);
+
+        return node.val;
+    }
+    
+    public void put(int key, int val) {
+        MyListNode node = map.getOrDefault(key, null);
+
+        if (node == null) {
+            node = new MyListNode(key, val);
+            if (cnt >= cap) {
+                MyListNode nodeToEvict = list.evictFromTail();
+                if (nodeToEvict != null) {
+                    map.remove(nodeToEvict.key);
+                }
+            }
+            list.insertToHead(node);
+            cnt++;
+        } else {
+            node.val = val;
+            moveNodeToHead(node);
+        }
+
+        map.put(key, node);
+        // list.print();
+    }
+
+    public void moveNodeToHead(MyListNode node) {
+        list.removeFromList(node);
+        list.insertToHead(node);
+    }
+}
+
+class MyList {
+    MyListNode head, tail;
+
+    public MyList() {
+        head = new MyListNode(0, 0);
+        tail = new MyListNode(0, 0);
+        head.next = tail;
+        tail.prev = head;
+    }
+    public void print() {
+        MyListNode cur = head.next;
+        while (cur != null && cur != tail) {
+            System.out.print(cur.key + ", " + cur.val + " ");
+            cur = cur.next;
+        }
+        System.out.println();
+    }
+    // Always insert to head
+    public void insertToHead(MyListNode node) {
+        MyListNode next = head.next;
+
+        head.next = node;
+        node.prev = head;
+
+        node.next = next;
+
+        next.prev = node;
+    }
+
+    public void removeFromList(MyListNode node) {
+        node.prev.next = node.next;
+        node.next.prev = node.prev;
+
+        node.next = null;
+        node.prev = null;
+    }
+
+    // Always evict node before tail
+    public MyListNode evictFromTail() {
+        if (tail.prev == head) return null;  // no element
+
+        MyListNode nodeToRemove = tail.prev;
+        nodeToRemove.prev.next = tail;
+        tail.prev = nodeToRemove.prev;
+
+        nodeToRemove.next = null;
+        nodeToRemove.prev = null;
+
+        return nodeToRemove;
+    }
+}
+
+class MyListNode {
+    int key;
+    int val;
+    MyListNode next;
+    MyListNode prev;
+
+    public MyListNode(int key, int val) {
+        this.key = key;
+        this.val = val;
+    }
+}
+
+/**
+ * Your LRUCache object will be instantiated and called as such:
+ * LRUCache obj = new LRUCache(capacity);
+ * int param_1 = obj.get(key);
+ * obj.put(key,value);
+ */
+
 // OOD Style
 class LRUCache {
     private Map<Integer, Node> map;
