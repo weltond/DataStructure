@@ -6,6 +6,49 @@ class Solution {
     
     
     // =============== Method 1: Monotonic Queue ==============
+    // 36.9ms (76.9%)
+    class Solution {
+    public int[] maxSlidingWindow(int[] nums, int k) {
+        MonotonicQueue q = new MonotonicQueue();
+        int[] res = new int[nums.length - k + 1];
+        for (int i = 0; i < nums.length; i++) {
+            q.push(nums[i]);
+            if (i >= k - 1) {
+                res[i - k + 1] = q.getMax();
+                // move sliding window
+                // pop the prev kth element if it is to be out of window
+                q.pop(nums[i - k + 1]);
+            }
+        }
+
+        return res;
+    }
+}
+
+class MonotonicQueue{
+    Deque<Integer> q = new LinkedList();
+
+    // push val to the tail after polling all values smaller than it
+    public void push(int val) {
+        while (!q.isEmpty() && q.peekLast() < val) {
+            q.pollLast();
+        }
+
+        q.addLast(val);
+    }
+
+    public int getMax() {
+        return q.peekFirst();
+    }
+
+    // pop element if n is going to be moved out due to window size
+    public void pop(int val) {
+        if (val == getMax()) {
+            q.pollFirst();
+        }
+    }
+}
+    
     // 8ms (89.03%)
     public int[] maxSlidingWindow(int[] nums, int k) {
         if (nums == null || nums.length == 0) return new int[]{};
